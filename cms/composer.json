@@ -1,0 +1,68 @@
+{
+    "name": "percipioglobal/craft",
+    "description": "Percipio's Craft CMS scaffolding for projects",
+    "version": "0.1.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "project"
+    ],
+    "license": "MIT",
+    "homepage": "https://percipio.london/",
+    "type": "project",
+    "support": {
+        "email": "support@percipio.london",
+        "issues": "https://github.com/percipioglobal/craft/issues",
+        "source": "https://github.com/percipioglobal/craft",
+        "docs": "https://github.com/percipioglobal/craft"
+    },
+    "minimum-stability": "beta",
+    "require": {
+        "angellco/spoon": "^3.3.3",
+        "craftcms/aws-s3": "^1.2",
+        "craftcms/cms": "^3.5.0",
+        "craftcms/feed-me": "^4.2.0",
+        "craftcms/redactor": "^2.1.0",
+        "craftcms/mailgun": "1.4.3",
+        "hybridinteractive/craft-position-fieldtype": "^1.0.0",
+        "hybridinteractive/craft-width-fieldtype": "^1.0.3",
+        "nystudio107/craft-imageoptimize": "^1.0.0",
+        "nystudio107/craft-fastcgicachebust": "^1.0.0",
+        "nystudio107/craft-minify": "^1.2.5",
+        "nystudio107/craft-typogrify": "^1.1.4",
+        "nystudio107/craft-retour": "^3.0.0",
+        "nystudio107/craft-seomatic": "^3.2.0",
+        "nystudio107/craft-webperf": "^1.0.0",
+        "nystudio107/craft-twigpack": "^1.1.0",
+        "nystudio107/dotenvy": "^1.1.0",
+        "percipioglobal/craft-notifications": "^1.1.1",
+        "percipioglobal/craft-password-policy": "^1.0.0",
+        "vlucas/phpdotenv": "^3.4.0",
+        "yiisoft/yii2-redis": "^2.0.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "modules\\sitemodule\\": "modules/sitemodule/src/"
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "optimize-autoloader": true,
+        "platform": {
+            "php": "7.0"
+        }
+    },
+    "scripts": {
+        "craft-update": [
+            "@php craft install/check && @php craft migrate/all || return 0",
+            "@php craft install/check && @php craft project-config/sync || return 0",
+            "@php craft install/check && @php craft clear-caches/all || return 0"
+        ],
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('example.env', '.env');\""
+        ],
+        "post-update-cmd": "@craft-update",
+        "post-install-cmd": "@craft-update"
+    }
+}
