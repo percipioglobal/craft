@@ -1,85 +1,88 @@
-dateModified: 1566064218
+dateModified: 1591205565
 email:
-  fromEmail: support@percipio.london
-  fromName: admin
+  fromEmail: $SYSTEM_EMAIL
+  fromName: $SENDER_NAME
+  replyToEmail: $REPLY_TO
   transportType: craft\mail\transportadapters\Sendmail
 fieldGroups:
-  d08a0d16-0e00-49e6-9cd4-465fa2d65d7d:
-    name: Errors
   94b4d5ac-d7ea-4241-a6cb-92b39f482f99:
     name: Common
+  d08a0d16-0e00-49e6-9cd4-465fa2d65d7d:
+    name: Errors
 fields:
   a5cb77be-c4d9-4d3e-88fb-d5384ca13941:
-    name: 'Error Image'
-    handle: errorImage
-    instructions: ''
-    searchable: true
-    translationMethod: site
-    translationKeyFormat: null
-    type: craft\fields\Assets
-    settings:
-      useSingleFolder: ''
-      defaultUploadLocationSource: 'volume:5c642d7e-b16b-4836-9575-668d75d242e5'
-      defaultUploadLocationSubpath: ''
-      singleUploadLocationSource: 'volume:5c642d7e-b16b-4836-9575-668d75d242e5'
-      singleUploadLocationSubpath: ''
-      restrictFiles: '1'
-      allowedKinds:
-        - image
-      sources:
-        - 'volume:5c642d7e-b16b-4836-9575-668d75d242e5'
-      source: null
-      targetSiteId: null
-      viewMode: large
-      limit: '1'
-      selectionLabel: ''
-      localizeRelations: false
-      validateRelatedElements: ''
     contentColumnType: string
     fieldGroup: d08a0d16-0e00-49e6-9cd4-465fa2d65d7d
+    handle: errorImage
+    instructions: ''
+    name: 'Error Image'
+    searchable: true
+    settings:
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:5c642d7e-b16b-4836-9575-668d75d242e5'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      restrictFiles: '1'
+      selectionLabel: ''
+      singleUploadLocationSource: 'volume:5c642d7e-b16b-4836-9575-668d75d242e5'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources:
+        - 'volume:5c642d7e-b16b-4836-9575-668d75d242e5'
+      targetSiteId: null
+      useSingleFolder: ''
+      validateRelatedElements: ''
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
   b8ba7115-3804-4c06-8a96-501963d1fc5c:
-    name: 'Error Headline'
+    contentColumnType: text
+    fieldGroup: d08a0d16-0e00-49e6-9cd4-465fa2d65d7d
     handle: errorHeadline
     instructions: ''
+    name: 'Error Headline'
     searchable: true
-    translationMethod: none
-    translationKeyFormat: null
-    type: craft\fields\PlainText
     settings:
-      placeholder: ''
-      code: ''
-      multiline: ''
-      initialRows: '4'
       charLimit: ''
+      code: ''
       columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  e6d658aa-c335-4f15-bbcd-59fe05d9e913:
     contentColumnType: text
     fieldGroup: d08a0d16-0e00-49e6-9cd4-465fa2d65d7d
-  e6d658aa-c335-4f15-bbcd-59fe05d9e913:
-    name: 'Error Text'
     handle: errorText
     instructions: ''
+    name: 'Error Text'
     searchable: true
-    translationMethod: none
-    translationKeyFormat: null
-    type: craft\fields\PlainText
     settings:
-      placeholder: ''
-      code: ''
-      multiline: '1'
-      initialRows: '4'
       charLimit: ''
+      code: ''
       columnType: text
-    contentColumnType: text
-    fieldGroup: d08a0d16-0e00-49e6-9cd4-465fa2d65d7d
+      initialRows: '4'
+      multiline: '1'
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
 plugins:
-  minify:
-    edition: standard
+  aws-s3:
     enabled: true
-    schemaVersion: 1.0.0
+    schemaVersion: '1.2'
   fastcgi-cache-bust:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+  feed-me:
+    enabled: true
+    schemaVersion: 2.1.2
   image-optimize:
     edition: standard
     enabled: true
@@ -128,6 +131,29 @@ plugins:
                   - ''
       lowerQualityRetinaImageVariants: false
       transformClass: nystudio107\imageoptimizesharp\imagetransforms\SharpImageTransform
+  mailgun:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  minify:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  notifications:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  password-policy:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  position-fieldtype:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  redactor:
+    enabled: true
+    schemaVersion: 2.3.0
   retour:
     edition: standard
     enabled: true
@@ -137,7 +163,11 @@ plugins:
     edition: standard
     enabled: true
     licenseKey: null
-    schemaVersion: 3.0.8
+    schemaVersion: 3.0.9
+  spoon:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.5.0
   twigpack:
     edition: standard
     enabled: true
@@ -151,79 +181,83 @@ plugins:
     enabled: true
     licenseKey: null
     schemaVersion: 1.0.1
+  width-fieldtype:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
 sections:
   54e60257-f31a-44aa-960e-bbd364197e28:
-    name: Homepage
-    handle: homepage
-    type: single
     enableVersioning: false
+    entryTypes:
+      fb3a8f31-d1cc-4c13-903b-a501f7e51f54:
+        handle: homepage
+        hasTitleField: false
+        name: Homepage
+        sortOrder: 1
+        titleFormat: '{section.name|raw}'
+        titleLabel: null
+    handle: homepage
+    name: Homepage
     propagationMethod: all
     siteSettings:
       5da841b1-ca0d-46ff-8bb1-04d6c889ac54:
         enabledByDefault: true
         hasUrls: true
-        uriFormat: __home__
         template: index
-    entryTypes:
-      fb3a8f31-d1cc-4c13-903b-a501f7e51f54:
-        name: Homepage
-        handle: homepage
-        hasTitleField: false
-        titleLabel: null
-        titleFormat: '{section.name|raw}'
-        sortOrder: 1
+        uriFormat: __home__
+    type: single
   a72bfe0c-3389-4f9f-8ec1-ab318ec10b29:
-    name: Errors
-    handle: errors
-    type: channel
     enableVersioning: false
+    entryTypes:
+      faceb3ed-6771-453c-9c2a-aa330847f6db:
+        handle: errors
+        hasTitleField: true
+        name: Errors
+        sortOrder: 1
+        titleFormat: null
+        titleLabel: Title
+    handle: errors
+    name: Errors
     propagationMethod: all
     siteSettings:
       5da841b1-ca0d-46ff-8bb1-04d6c889ac54:
         enabledByDefault: true
         hasUrls: false
-        uriFormat: null
         template: null
-    entryTypes:
-      faceb3ed-6771-453c-9c2a-aa330847f6db:
-        name: Errors
-        handle: errors
-        hasTitleField: true
-        titleLabel: Title
-        titleFormat: null
-        sortOrder: 1
+        uriFormat: null
+    type: channel
 siteGroups:
   f89601e9-4ba9-4a48-9e99-350aa9914912:
     name: Default
 sites:
   5da841b1-ca0d-46ff-8bb1-04d6c889ac54:
-    name: Default
-    handle: default
-    language: en-US
-    hasUrls: true
     baseUrl: $SITE_URL
-    sortOrder: 1
+    handle: default
+    hasUrls: true
+    language: en-US
+    name: Default
     primary: true
     siteGroup: f89601e9-4ba9-4a48-9e99-350aa9914912
+    sortOrder: 1
 system:
   edition: pro
-  name: Craft
   live: true
-  schemaVersion: 3.4.10
+  name: Craft
+  schemaVersion: 3.5.0
   timeZone: America/New_York
 users:
-  requireEmailVerification: true
   allowPublicRegistration: false
   defaultGroup: null
-  photoVolumeUid: null
   photoSubpath: ''
+  photoVolumeUid: null
+  requireEmailVerification: true
 volumes:
   5c642d7e-b16b-4836-9575-668d75d242e5:
-    name: Site
     handle: site
-    type: craft\volumes\Local
     hasUrls: true
-    url: '@assetsUrl/assets/site'
+    name: Site
     settings:
       path: '@webroot/assets/site'
     sortOrder: 1
+    type: craft\volumes\Local
+    url: '@assetsUrl/assets/site'
