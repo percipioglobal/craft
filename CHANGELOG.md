@@ -1,5 +1,18 @@
 # percipioglobal/craft Change Log
 
+## 1.0.3 - 03-06-2020
+
+### Added
+- Added Eager Beaver Plugin
+
+### Changed
+- Updated projact.yaml to install the plugins
+- Updated `seed_db.sql`
+
+### Fixed
+- Fixed `craft` executable permissions
+- Fixed schema version in project config.
+
 ## 1.0.2 - 03-06-2020
 ### Fixed
 - Fixed scripts file permissions
