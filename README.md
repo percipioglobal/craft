@@ -62,8 +62,8 @@ You'll need Docker desktop for your platform installed to run the project in loc
 
 The CP login credentials are initially set as follows:
 
-Login: `` \
-Password: ``
+Login: `support@percipio.london` \
+Password: `letmein`
 
 **N.B.:** Without authorization & credentials (which are private), the `./docker_pull_db.sh` will not work. It's provided here for instructional purposes
 
