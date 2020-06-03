@@ -8,7 +8,7 @@
         "craftcms",
         "project"
     ],
-    "license": "Unlicense",
+    "license": "MIT",
     "homepage": "https://craftcms.com/",
     "type": "project",
     "support": {
