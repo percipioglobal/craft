@@ -27,6 +27,7 @@
         "craftcms/mailgun": "1.4.3",
         "hybridinteractive/craft-position-fieldtype": "^1.0.0",
         "hybridinteractive/craft-width-fieldtype": "^1.0.3",
+        "nystudio107/craft-eagerbeaver": "^1.0.0",
         "nystudio107/craft-imageoptimize": "^1.0.0",
         "nystudio107/craft-fastcgicachebust": "^1.0.0",
         "nystudio107/craft-minify": "^1.2.5",
