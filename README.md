@@ -24,6 +24,12 @@ The project is based on [Craft CMS](https://craftcms.com) using a unique `templa
 ...and probably a bunch of other stuff too.
 
 The following Craft CMS plugins are used on this site:
+* [AWS S3](https://github.com/craftcms/aws-s3) - adding Amazon S3 volume type 
+* [Feed Me](https://github.com/craftcms/feed-me) - to import entries and entry data from XML, RSS or ATOM feeds.
+* [Redactor](https://github.com/craftcms/redactor) - Edit rich text content using Redactor by Imperavi.
+* [Mailgun](https://github.com/craftcms/mailgun) - Mailgun mailer adapter for Craft CMS
+* [Width Fieldtype](https://github.com/hybridinteractive/craft-width-fieldtype) - adds the posibility to choose from predefined widths
+* [Position Fieldtype](https://github.com/hybridinteractive/craft-position-fieldtype) - Adds a position fieldtype
 * [FastCGI Cache Bust](https://github.com/nystudio107/craft-fastcgicachebust) - to bust the FastCGI cache whenever entries are modified
 * [ImageOptimize](https://github.com/nystudio107/craft-imageoptimize) - for the optimized images and `srcset`s used on the site
 * [Minify](https://github.com/nystudio107/craft-minify) - to minify the HTML and inline JS/CSS
