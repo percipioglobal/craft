@@ -1,6 +1,6 @@
 {
-    "name": "craftcms/craft",
-    "description": "nystudio107 Craft 3.4 CMS scaffolding project",
+    "name": "percipioglobal/craft",
+    "description": "Percipio Global Ltd. Craft 3.5 CMS scaffolding project",
     "version": "1.0.0",
     "keywords": [
         "craft",
@@ -19,8 +19,9 @@
         "docs": "https://craftcms.com/docs",
         "rss": "https://craftcms.com/changelog.rss"
     },
+    "minimum-stability": "beta",
     "require": {
-        "craftcms/cms": "^3.4.0",
+        "craftcms/cms": "^3.5.0",
         "vlucas/phpdotenv": "^3.4.0"
     },
     "autoload": {
