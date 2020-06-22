@@ -1,0 +1,59 @@
+{# Margin Position #}
+{% macro position(content) %}
+    {% spaceless %}
+        {%- switch content.position -%}
+
+            {%- case "center" -%}
+                mx-auto
+
+            {%- case "left" -%}
+                mr-auto
+
+            {%- case "right" -%}
+                ml-auto
+
+        {%- endswitch -%}
+    {% endspaceless %}
+{% endmacro %}
+
+{# File Icons #}
+{% macro file_icon(type, icon = 'no-icon', classes = null) %}
+    {% spaceless %}
+        {% if icon != 'no-icon' %}
+            <span class="icon {{ classes -}}">
+                <i class="{{ icon }}"></i>
+            </span>
+        {% else %}
+            <span class="icon {{ classes -}}">
+                {%- switch type | lower -%}
+
+                {% case 'pdf' %}
+                    <i class="fal fa-file-pdf"></i>
+
+                {% case 'xlsx' or 'xls' %}
+                    <i class="fal fa-file-spreadsheet"></i>
+
+                {% case 'docx' or 'doc' %}
+                    <i class="fal fa-file-word"></i>
+
+                {% case 'pptx' or 'ppt' %}
+                    <i class="fal fa-presentation"></i>
+
+                {% case 'zip' %}
+                    <i class="fal fa-file-archive"></i>
+
+                {% endswitch %}
+            </span>
+        {% endif %}
+    {% endspaceless %}
+{% endmacro %}
+
+{# figcaption #}
+
+{% macro caption(content) %}
+    {% spaceless %}
+        <figcaption class="font-primary text-center text-sm text-gray-500 italic p-4 border-b border-gray-300">
+        {{- content -}}
+        </figcaption>
+    {% endspaceless %}
+{% endmacro %}
