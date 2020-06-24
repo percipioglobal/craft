@@ -1,3 +1,10 @@
+{# Date #}
+{% macro formatDate(date) %}
+    {% spaceless %}
+        {{- date | date('d.m.Y') -}}
+    {% endspaceless %}
+{% endmacro %}
+
 {# Logos #}
 {% macro logo(type = 'logo') %}
     {% spaceless %}
