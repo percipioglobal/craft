@@ -39,6 +39,8 @@
         "nystudio107/dotenvy": "^1.1.0",
         "percipioglobal/craft-notifications": "^1.1.1",
         "percipioglobal/craft-password-policy": "^1.0.0",
+        "sebastianlenz/linkfield": "^2.0@beta",
+        "verbb/super-table": "^2.1.0",
         "vlucas/phpdotenv": "^3.4.0",
         "yiisoft/yii2-redis": "^2.0.6"
     },
