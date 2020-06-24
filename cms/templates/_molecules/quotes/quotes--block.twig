@@ -1,0 +1,16 @@
+{% import '_macros/atoms' as atom %}
+
+{%- minify -%}
+    {%- if block.quoteType == 'pullQuote' -%}<aside class="clearfix inline-block w-full md:w-1/3 {{ block.position == 'left' ? 'float-left md:mr-12 md:-ml-16' : 'float-right md:ml-12 md:-mr-16' -}}">{%- endif -%}
+        <blockquote {{ block.quoteSource.target ? 'cite="'~ block.quoteSource.target ~ '"' : '' }} class="{{- block.type == 'pullQuote' ? 'inline-block border-t border-b py-4 py-8' : 'border-l-4 px-4 md:px-12 mx-auto w-full md:w-3/4' }} border-gray-400 my-16">
+            <p class="{{- block.type == 'pullQuote' ? 'text-base' : 'text-deca' }} italic text-gray-800">
+                {{- atom.text(block.quote) -}}
+            </p>
+            {%- if block.quoteSource.getUrl() -%}
+            <footer class="mt-4">
+                <a href="{{- block.quoteSource.getUrl() -}}" class="text-gray-500 text-base hover:text-gray-700 trans-link">&mdash; {{ block.quoteSource.getText() -}}</a>
+            </footer>
+            {%- endif -%}
+        </blockquote>
+    {{- block.quoteType == 'pullQuote' ? '</aside>' : '' -}}
+{%- endminify -%}
