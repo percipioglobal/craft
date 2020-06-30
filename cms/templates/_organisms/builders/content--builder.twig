@@ -54,6 +54,12 @@
                     {%- include '_organisms/cards/cards--highlight' ignore missing with {
                         content: block,
                     } -%}
+
+                {%- case "resourceList" -%}
+            
+                    {%- include '_organisms/lists/list--resources' ignore missing with {
+                        content: block,
+                    } -%}
                 
             {%- endswitch -%}
                 
