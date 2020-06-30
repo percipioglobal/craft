@@ -1,5 +1,13 @@
 # percipioglobal/craft Change Log
 
+## 1.1.1 - 30-06-2020
+
+### Changed
+- Updated readme with Craft CLI execution command information
+
+### Fixed
+- Made sure the `project.yaml` and `seed_db.sql` are synced
+
 ## 1.1.0 - 30-06-2020
 
 ### Added
