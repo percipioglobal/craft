@@ -104,6 +104,10 @@ To use Xdebug with VSCode install the [PHP Debug extension](https://marketplace.
 }
 ```
 
+## Running Craft CLI commands
+
+Since we are using docker to run our project, we need to execute the craft CLI commands prepended with the docker command `docker-compose exec php`, eg: `docker-compose exec php ./craft project-config/sync`.
+
 
 Below is the entire intact, unmodified `README.md` from Pixel & Tonic's [craftcms/craft](https://github.com/craftcms/craft):
 
