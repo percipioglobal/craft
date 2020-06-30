@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.5.5-10.3.23-MariaDB-1:10.3.23+maria~bionic)
 # Database: project
-# Generation Time: 2020-06-30 09:56:01 +0000
+# Generation Time: 2020-06-30 15:27:49 +0000
 # ************************************************************
 
 
@@ -692,8 +692,6 @@ VALUES
 	(36,9,17,20,0,1,'2020-06-29 11:29:40','2020-06-29 11:29:40','e08d4c99-16ec-41c2-90ca-ddfc97e597a2'),
 	(52,7,24,21,1,2,'2020-06-29 11:46:15','2020-06-29 11:46:15','49e1518c-21ed-4eb6-9d0a-e85db557465d'),
 	(53,7,24,22,1,1,'2020-06-29 11:46:15','2020-06-29 11:46:15','83a4d982-6f87-45fd-9494-fe3484b016a0'),
-	(55,11,26,29,0,1,'2020-06-29 12:02:42','2020-06-29 12:02:42','8235ab77-2298-4157-81b7-e8f44a33e247'),
-	(56,11,26,30,0,2,'2020-06-29 12:02:42','2020-06-29 12:02:42','76c9b6a0-74b1-4aa7-b499-51f5495a1b06'),
 	(64,12,32,32,0,1,'2020-06-29 13:29:28','2020-06-29 13:29:28','18a27656-3029-44b0-92d2-29fb1e14d9c7'),
 	(65,12,32,29,0,2,'2020-06-29 13:29:28','2020-06-29 13:29:28','3de5c602-ed37-4700-88ce-f5b847699673'),
 	(66,12,32,31,0,3,'2020-06-29 13:29:28','2020-06-29 13:29:28','37a9e999-5fa8-4552-9ae6-4803142235ec'),
@@ -705,11 +703,6 @@ VALUES
 	(108,16,50,44,1,3,'2020-06-29 15:00:00','2020-06-29 15:00:00','92871884-7e54-440b-ad2c-015fc85bdcb7'),
 	(109,16,50,45,1,2,'2020-06-29 15:00:00','2020-06-29 15:00:00','79abfdbb-f861-4d52-92f1-3464ac44355b'),
 	(110,16,50,46,1,1,'2020-06-29 15:00:00','2020-06-29 15:00:00','5d840474-880a-48cb-adfd-e0090be7704b'),
-	(114,10,54,29,0,1,'2020-06-29 15:03:46','2020-06-29 15:03:46','f3c81509-c3e5-4180-b7b6-9a7011f0055c'),
-	(115,10,54,31,0,2,'2020-06-29 15:03:46','2020-06-29 15:03:46','80c4721a-7458-4981-a934-ee3353c75b45'),
-	(116,10,54,30,0,3,'2020-06-29 15:03:46','2020-06-29 15:03:46','0c21d381-31eb-4794-b3e6-4bda2b44b591'),
-	(117,10,55,28,0,1,'2020-06-29 15:03:46','2020-06-29 15:03:46','e7f17072-2e03-4526-b1ed-22a34df0d9a1'),
-	(157,19,73,37,0,1,'2020-06-30 09:19:40','2020-06-30 09:19:40','c4630e9d-bcc8-4c39-88dc-2fe5d6aeb208'),
 	(179,6,83,18,1,2,'2020-06-30 09:32:03','2020-06-30 09:32:03','2d747d3e-b5e1-4407-aedc-cceb094f7440'),
 	(180,6,83,19,1,1,'2020-06-30 09:32:03','2020-06-30 09:32:03','0166f92d-1931-4cfe-b746-edda861c6dfe'),
 	(181,1,84,5,0,3,'2020-06-30 09:32:03','2020-06-30 09:32:03','5c3c2d87-a1f1-4ada-b112-37440a637416'),
@@ -741,7 +734,14 @@ VALUES
 	(207,17,97,23,0,2,'2020-06-30 09:47:33','2020-06-30 09:47:33','5f9869a6-2e50-40a5-a115-4848ee7bd51a'),
 	(208,22,98,53,0,3,'2020-06-30 09:52:33','2020-06-30 09:52:33','23c0659b-5545-4b52-9a81-6f5d5dcf6509'),
 	(209,22,98,51,0,1,'2020-06-30 09:52:33','2020-06-30 09:52:33','a81bebde-7036-4c3b-a967-c78aca66e89f'),
-	(210,22,98,52,0,2,'2020-06-30 09:52:33','2020-06-30 09:52:33','fe8591e1-a746-47c0-899c-e2244d1025b5');
+	(210,22,98,52,0,2,'2020-06-30 09:52:33','2020-06-30 09:52:33','fe8591e1-a746-47c0-899c-e2244d1025b5'),
+	(211,11,99,29,0,1,'2020-06-30 15:19:55','2020-06-30 15:19:55','3aade431-e026-46ad-8907-c94cf68fc60d'),
+	(212,11,99,30,0,2,'2020-06-30 15:19:55','2020-06-30 15:19:55','0f014147-88a2-420f-9616-48a86ea4511f'),
+	(213,10,100,29,0,1,'2020-06-30 15:19:55','2020-06-30 15:19:55','7660c7e9-b5aa-4458-9388-fa2d8f211f18'),
+	(214,10,100,31,0,2,'2020-06-30 15:19:55','2020-06-30 15:19:55','f78856dc-1bfe-4b62-a4c5-ff44e342d1b7'),
+	(215,10,100,30,0,3,'2020-06-30 15:19:55','2020-06-30 15:19:55','5054fa8a-25d3-447b-ac98-54cf49ad590a'),
+	(216,10,101,28,0,1,'2020-06-30 15:19:55','2020-06-30 15:19:55','45665c36-c8cc-4543-8053-2ba527b279f7'),
+	(217,19,102,37,0,1,'2020-06-30 15:19:55','2020-06-30 15:19:55','41948e36-2753-4b39-9217-8382e3271297');
 
 /*!40000 ALTER TABLE `fieldlayoutfields` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -824,13 +824,9 @@ VALUES
 	(16,8,'Content',2,'2020-06-24 12:05:10','2020-06-24 12:05:10','0ae46c0a-5069-4d6b-a3c2-8b041f5bcc64'),
 	(17,9,'Social Media',1,'2020-06-29 11:29:40','2020-06-29 11:29:40','67380c82-7788-4595-93af-874b995518a0'),
 	(24,7,'Content',1,'2020-06-29 11:46:15','2020-06-29 11:46:15','c7dc43f6-9934-4abb-ac94-0b4901415cbf'),
-	(26,11,'Metadata',1,'2020-06-29 12:02:42','2020-06-29 12:02:42','fcec4303-16dc-48a8-bae5-74b3e44c485b'),
 	(32,12,'Metadata',1,'2020-06-29 13:29:28','2020-06-29 13:29:28','c36f755d-77f5-4628-94c6-6065080cc20c'),
 	(49,15,'Placeholder Images',1,'2020-06-29 14:57:11','2020-06-29 14:57:11','5617fde4-8520-4fa3-afbe-35fc5f1b53f4'),
 	(50,16,'Content',1,'2020-06-29 15:00:00','2020-06-29 15:00:00','e0a7aa92-86fb-477b-a27b-7e727272d4de'),
-	(54,10,'Metadata',1,'2020-06-29 15:03:46','2020-06-29 15:03:46','4bd55046-8e15-4d9d-9cfd-fcf1b2855f55'),
-	(55,10,'Optimized Images',2,'2020-06-29 15:03:46','2020-06-29 15:03:46','38f4f8d3-763b-4267-bff9-4bd18332ae7b'),
-	(73,19,'Optimized Images',1,'2020-06-30 09:19:40','2020-06-30 09:19:40','955a3458-0909-44db-96bd-b07ad5417c3b'),
 	(83,6,'Content',1,'2020-06-30 09:32:03','2020-06-30 09:32:03','e3378f02-c911-4870-9dc2-dbde40e09ab9'),
 	(84,1,'Content',1,'2020-06-30 09:32:03','2020-06-30 09:32:03','2ca11218-7053-4fd4-a2f3-f0bb320582fb'),
 	(85,2,'Content',1,'2020-06-30 09:32:04','2020-06-30 09:32:04','f707cadd-3081-4d6a-b1e4-02468c56b02e'),
@@ -846,7 +842,11 @@ VALUES
 	(95,18,'Metadata',3,'2020-06-30 09:47:01','2020-06-30 09:47:01','403aaee5-d619-4774-a4c8-1b15b610fdf9'),
 	(96,17,'Settings',1,'2020-06-30 09:47:33','2020-06-30 09:47:33','bc34a217-b829-4d7f-a6f7-5b124f68a6ad'),
 	(97,17,'Metadata',2,'2020-06-30 09:47:33','2020-06-30 09:47:33','a61f07f6-81db-4451-a622-6e4223fc4d39'),
-	(98,22,'Organisational Information',1,'2020-06-30 09:52:33','2020-06-30 09:52:33','9ba493a2-949c-4870-986e-bc09d1b36dbd');
+	(98,22,'Organisational Information',1,'2020-06-30 09:52:33','2020-06-30 09:52:33','9ba493a2-949c-4870-986e-bc09d1b36dbd'),
+	(99,11,'Metadata',1,'2020-06-30 15:19:55','2020-06-30 15:19:55','622dcbfa-39d6-4e7c-907d-98adc449b0d1'),
+	(100,10,'Metadata',1,'2020-06-30 15:19:55','2020-06-30 15:19:55','10d20d3e-18d5-4485-a4eb-336304f3b256'),
+	(101,10,'Optimized Images',2,'2020-06-30 15:19:55','2020-06-30 15:19:55','23846c8b-f7e9-4997-aa8f-8a6c2ed9c413'),
+	(102,19,'Optimized Images',1,'2020-06-30 15:19:55','2020-06-30 15:19:55','e9321c44-750a-4c55-8d60-ffeac4ef96c3');
 
 /*!40000 ALTER TABLE `fieldlayouttabs` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -1042,7 +1042,7 @@ LOCK TABLES `info` WRITE;
 
 INSERT INTO `info` (`id`, `version`, `schemaVersion`, `maintenance`, `configMap`, `fieldVersion`, `dateCreated`, `dateUpdated`, `uid`)
 VALUES
-	(1,'3.5.0-beta.3','3.5.2',0,'{\"dateModified\":\"@config/project.yaml\",\"email\":\"@config/project.yaml\",\"fieldGroups\":\"@config/project.yaml\",\"fields\":\"@config/project.yaml\",\"globalSets\":\"@config/project.yaml\",\"matrixBlockTypes\":\"@config/project.yaml\",\"plugins\":\"@config/project.yaml\",\"sections\":\"@config/project.yaml\",\"siteGroups\":\"@config/project.yaml\",\"sites\":\"@config/project.yaml\",\"superTableBlockTypes\":\"@config/project.yaml\",\"system\":\"@config/project.yaml\",\"users\":\"@config/project.yaml\",\"volumes\":\"@config/project.yaml\",\"spoonBlockTypes\":\"@config/project.yaml\"}','zbxbaobplfyj','2020-06-03 15:54:07','2020-06-30 09:50:12','c8953b7a-9a69-461e-9700-4f9e698b4bbd');
+	(1,'3.5.0-beta.3','3.5.2',0,'{\"dateModified\":\"@config/project.yaml\",\"email\":\"@config/project.yaml\",\"fieldGroups\":\"@config/project.yaml\",\"fields\":\"@config/project.yaml\",\"globalSets\":\"@config/project.yaml\",\"matrixBlockTypes\":\"@config/project.yaml\",\"plugins\":\"@config/project.yaml\",\"sections\":\"@config/project.yaml\",\"siteGroups\":\"@config/project.yaml\",\"sites\":\"@config/project.yaml\",\"spoonBlockTypes\":\"@config/project.yaml\",\"superTableBlockTypes\":\"@config/project.yaml\",\"system\":\"@config/project.yaml\",\"users\":\"@config/project.yaml\",\"volumes\":\"@config/project.yaml\"}','zbxbaobplfyj','2020-06-03 15:54:07','2020-06-30 15:19:55','c8953b7a-9a69-461e-9700-4f9e698b4bbd');
 
 /*!40000 ALTER TABLE `info` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -1435,20 +1435,6 @@ VALUES
 	(205,'plugin:spoon','m200204_132923_FixBlockTypeSorting','2020-06-03 17:32:42','2020-06-03 17:32:42','2020-06-03 17:32:42','0fcc7ba9-95d1-4540-8a27-e6742a90efcc'),
 	(206,'craft','m200522_191453_clear_template_caches','2020-06-24 08:57:02','2020-06-24 08:57:02','2020-06-24 08:57:02','2b54636b-f8cc-4338-9f2c-280add186d75'),
 	(207,'craft','m200606_231117_migration_tracks','2020-06-24 08:57:02','2020-06-24 08:57:02','2020-06-24 08:57:02','a3353710-2706-4f34-a8be-33969391744e'),
-	(208,'plugin:super-table','Install','2020-06-24 09:21:08','2020-06-24 09:21:08','2020-06-24 09:21:08','43bc16af-523a-41b1-ba11-302847702f5d'),
-	(209,'plugin:super-table','m180210_000000_migrate_content_tables','2020-06-24 09:21:08','2020-06-24 09:21:08','2020-06-24 09:21:08','dc9854df-3127-4dfc-8f26-8677cbf76247'),
-	(210,'plugin:super-table','m180211_000000_type_columns','2020-06-24 09:21:08','2020-06-24 09:21:08','2020-06-24 09:21:08','098f7a8b-d31c-464d-ad7e-8e7ee346f756'),
-	(211,'plugin:super-table','m180219_000000_sites','2020-06-24 09:21:08','2020-06-24 09:21:08','2020-06-24 09:21:08','33b1d102-41ea-490e-89de-34c948fa07c4'),
-	(212,'plugin:super-table','m180220_000000_fix_context','2020-06-24 09:21:08','2020-06-24 09:21:08','2020-06-24 09:21:08','f510f25f-1696-4e9b-a208-4e8c457dfbfa'),
-	(213,'plugin:super-table','m190117_000000_soft_deletes','2020-06-24 09:21:08','2020-06-24 09:21:08','2020-06-24 09:21:08','dc3d9acf-418e-427c-b8d0-418245fafd16'),
-	(214,'plugin:super-table','m190117_000001_context_to_uids','2020-06-24 09:21:08','2020-06-24 09:21:08','2020-06-24 09:21:08','14d5761b-541b-4cce-85bd-917754d67fe2'),
-	(215,'plugin:super-table','m190120_000000_fix_supertablecontent_tables','2020-06-24 09:21:08','2020-06-24 09:21:08','2020-06-24 09:21:08','c7004767-5054-4de8-a508-3c8373c6b8d1'),
-	(216,'plugin:super-table','m190131_000000_fix_supertable_missing_fields','2020-06-24 09:21:08','2020-06-24 09:21:08','2020-06-24 09:21:08','cb4122f8-24e0-4e75-9ab5-302c85da8c3a'),
-	(217,'plugin:super-table','m190227_100000_fix_project_config','2020-06-24 09:21:08','2020-06-24 09:21:08','2020-06-24 09:21:08','f5b642c1-712e-4db7-8777-0080d1ff6cec'),
-	(218,'plugin:super-table','m190511_100000_fix_project_config','2020-06-24 09:21:08','2020-06-24 09:21:08','2020-06-24 09:21:08','5f156e5e-4d75-44fe-9e1a-492ca245bc9d'),
-	(219,'plugin:super-table','m190520_000000_fix_project_config','2020-06-24 09:21:08','2020-06-24 09:21:08','2020-06-24 09:21:08','b16569ad-cb28-47bf-ab48-97af0d587b88'),
-	(220,'plugin:super-table','m190714_000000_propagation_method','2020-06-24 09:21:08','2020-06-24 09:21:08','2020-06-24 09:21:08','2c34dc92-27f2-4730-bad4-d7938c9ef929'),
-	(221,'plugin:super-table','m191127_000000_fix_width','2020-06-24 09:21:08','2020-06-24 09:21:08','2020-06-24 09:21:08','f3ce6cc2-f265-4772-b9b8-5a7bea4edcf9'),
 	(222,'plugin:typedlinkfield','Install','2020-06-24 09:21:11','2020-06-24 09:21:11','2020-06-24 09:21:11','f8c77ca0-c477-4db7-b397-16ff5f1376b0'),
 	(223,'plugin:typedlinkfield','m190417_202153_migrateDataToTable','2020-06-24 09:21:11','2020-06-24 09:21:11','2020-06-24 09:21:11','ebe7738e-922d-4e8b-867a-a9c2aec89b4b');
 
@@ -1502,26 +1488,25 @@ LOCK TABLES `plugins` WRITE;
 
 INSERT INTO `plugins` (`id`, `handle`, `version`, `schemaVersion`, `licenseKeyStatus`, `licensedEdition`, `installDate`, `dateCreated`, `dateUpdated`, `uid`)
 VALUES
-	(1,'aws-s3','1.2.8','1.2','unknown',NULL,'2020-06-03 17:29:06','2020-06-03 17:29:06','2020-06-30 08:37:13','e7a25f97-e6c6-4c88-982f-2c53dfadc061'),
-	(2,'fastcgi-cache-bust','1.0.9','1.0.0','unknown',NULL,'2020-06-03 17:29:06','2020-06-03 17:29:06','2020-06-30 08:37:13','76ab2217-f3ad-46d1-9861-a4141160dd67'),
-	(3,'feed-me','4.2.3','2.1.2','unknown',NULL,'2020-06-03 17:29:06','2020-06-03 17:29:06','2020-06-30 08:37:13','cc6e476a-e4ae-4f2d-aa33-96cf23e64bb6'),
-	(4,'image-optimize','1.6.14','1.0.0','invalid',NULL,'2020-06-03 17:29:06','2020-06-03 17:29:06','2020-06-30 08:37:13','6b9a8f2f-c21f-4455-8445-fd1f88e6e651'),
-	(5,'minify','1.2.10','1.0.0','unknown',NULL,'2020-06-03 17:29:07','2020-06-03 17:29:07','2020-06-30 08:37:13','f90892e9-67a5-4e30-8479-026ec17a881c'),
-	(6,'mailgun','1.4.3','1.0.0','unknown',NULL,'2020-06-03 17:29:07','2020-06-03 17:29:07','2020-06-30 08:37:13','a6f81e66-59c5-475d-9880-b9f5885ee126'),
-	(7,'redactor','2.6.1','2.3.0','unknown',NULL,'2020-06-03 17:29:07','2020-06-03 17:29:07','2020-06-30 08:37:13','3feb520e-58d2-4a98-8e0b-21160d7fda1d'),
-	(8,'retour','3.1.39','3.0.9','invalid',NULL,'2020-06-03 17:29:07','2020-06-03 17:29:07','2020-06-30 08:37:13','99ada9be-cbe7-49c6-8176-b1e3f5c58e0e'),
-	(9,'seomatic','3.3.8','3.0.9','invalid',NULL,'2020-06-03 17:29:07','2020-06-03 17:29:07','2020-06-30 08:37:13','dc8072cd-5037-4bff-a6f1-82649bcaa003'),
-	(10,'twigpack','1.2.2','1.0.0','unknown',NULL,'2020-06-03 17:29:08','2020-06-03 17:29:08','2020-06-30 08:37:13','8a87e082-6d91-4cf0-afe3-f4e694327d58'),
-	(11,'typogrify','1.1.18','1.0.0','unknown',NULL,'2020-06-03 17:29:08','2020-06-03 17:29:08','2020-06-30 08:37:13','996f1b25-4fa7-4351-aaa5-42883dcda503'),
-	(12,'webperf','1.0.18','1.0.1','invalid',NULL,'2020-06-03 17:29:08','2020-06-03 17:29:08','2020-06-30 08:37:13','c3808de6-4817-4eff-a80f-c198b77a04b7'),
-	(13,'notifications','1.1.1','1.0.0','unknown',NULL,'2020-06-03 17:32:30','2020-06-03 17:32:30','2020-06-30 08:37:13','200f861c-6c16-45ec-9b1b-1afc1405ecad'),
-	(14,'password-policy','1.0.4','1.0.0','unknown',NULL,'2020-06-03 17:32:35','2020-06-03 17:32:35','2020-06-30 08:37:13','354170bf-181f-41e1-8c97-4c500e2907dd'),
-	(15,'position-fieldtype','1.0.16','1.0.0','unknown',NULL,'2020-06-03 17:32:38','2020-06-03 17:32:38','2020-06-30 08:37:13','5cbc98b2-36bd-4362-b6be-913860bfe571'),
-	(16,'spoon','3.5.2','3.5.0','invalid',NULL,'2020-06-03 17:32:41','2020-06-03 17:32:41','2020-06-30 08:37:13','625751ec-385a-454f-aed5-331222bc4dfe'),
-	(17,'width-fieldtype','1.0.7','1.0.0','unknown',NULL,'2020-06-03 17:32:45','2020-06-03 17:32:45','2020-06-30 08:37:13','1b0e1157-330c-46b6-a65d-c1b5333e5d85'),
-	(18,'eager-beaver','1.0.4','1.0.0','unknown',NULL,'2020-06-24 08:57:37','2020-06-24 08:57:37','2020-06-30 08:37:13','d643af87-22a8-415f-b751-a93a34fcc7ce'),
-	(19,'super-table','2.5.1','2.2.1','unknown',NULL,'2020-06-24 09:21:07','2020-06-24 09:21:07','2020-06-30 08:37:13','4b94c8c3-8701-41ad-b826-339c8302ee93'),
-	(20,'typedlinkfield','2.0.0-beta.9','2.0.0','unknown',NULL,'2020-06-24 09:21:11','2020-06-24 09:21:11','2020-06-30 08:37:13','55cedef8-552e-4981-beb2-146ff64c2d89');
+	(1,'aws-s3','1.2.8','1.2','unknown',NULL,'2020-06-03 17:29:06','2020-06-03 17:29:06','2020-06-30 15:20:13','e7a25f97-e6c6-4c88-982f-2c53dfadc061'),
+	(2,'fastcgi-cache-bust','1.0.9','1.0.0','unknown',NULL,'2020-06-03 17:29:06','2020-06-03 17:29:06','2020-06-30 15:20:13','76ab2217-f3ad-46d1-9861-a4141160dd67'),
+	(3,'feed-me','4.2.3','2.1.2','unknown',NULL,'2020-06-03 17:29:06','2020-06-03 17:29:06','2020-06-30 15:20:13','cc6e476a-e4ae-4f2d-aa33-96cf23e64bb6'),
+	(4,'image-optimize','1.6.14','1.0.0','invalid',NULL,'2020-06-03 17:29:06','2020-06-03 17:29:06','2020-06-30 15:20:13','6b9a8f2f-c21f-4455-8445-fd1f88e6e651'),
+	(5,'minify','1.2.10','1.0.0','unknown',NULL,'2020-06-03 17:29:07','2020-06-03 17:29:07','2020-06-30 15:20:13','f90892e9-67a5-4e30-8479-026ec17a881c'),
+	(6,'mailgun','1.4.3','1.0.0','unknown',NULL,'2020-06-03 17:29:07','2020-06-03 17:29:07','2020-06-30 15:20:13','a6f81e66-59c5-475d-9880-b9f5885ee126'),
+	(7,'redactor','2.6.1','2.3.0','unknown',NULL,'2020-06-03 17:29:07','2020-06-03 17:29:07','2020-06-30 15:20:13','3feb520e-58d2-4a98-8e0b-21160d7fda1d'),
+	(8,'retour','3.1.39','3.0.9','invalid',NULL,'2020-06-03 17:29:07','2020-06-03 17:29:07','2020-06-30 15:20:13','99ada9be-cbe7-49c6-8176-b1e3f5c58e0e'),
+	(9,'seomatic','3.3.8','3.0.9','invalid',NULL,'2020-06-03 17:29:07','2020-06-03 17:29:07','2020-06-30 15:20:13','dc8072cd-5037-4bff-a6f1-82649bcaa003'),
+	(10,'twigpack','1.2.2','1.0.0','unknown',NULL,'2020-06-03 17:29:08','2020-06-03 17:29:08','2020-06-30 15:20:13','8a87e082-6d91-4cf0-afe3-f4e694327d58'),
+	(11,'typogrify','1.1.18','1.0.0','unknown',NULL,'2020-06-03 17:29:08','2020-06-03 17:29:08','2020-06-30 15:20:13','996f1b25-4fa7-4351-aaa5-42883dcda503'),
+	(12,'webperf','1.0.18','1.0.1','invalid',NULL,'2020-06-03 17:29:08','2020-06-03 17:29:08','2020-06-30 15:20:13','c3808de6-4817-4eff-a80f-c198b77a04b7'),
+	(13,'notifications','1.1.1','1.0.0','unknown',NULL,'2020-06-03 17:32:30','2020-06-03 17:32:30','2020-06-30 15:20:13','200f861c-6c16-45ec-9b1b-1afc1405ecad'),
+	(14,'password-policy','1.0.4','1.0.0','unknown',NULL,'2020-06-03 17:32:35','2020-06-03 17:32:35','2020-06-30 15:20:13','354170bf-181f-41e1-8c97-4c500e2907dd'),
+	(15,'position-fieldtype','1.0.16','1.0.0','unknown',NULL,'2020-06-03 17:32:38','2020-06-03 17:32:38','2020-06-30 15:20:13','5cbc98b2-36bd-4362-b6be-913860bfe571'),
+	(16,'spoon','3.5.2','3.5.0','invalid',NULL,'2020-06-03 17:32:41','2020-06-03 17:32:41','2020-06-30 15:20:13','625751ec-385a-454f-aed5-331222bc4dfe'),
+	(17,'width-fieldtype','1.0.7','1.0.0','unknown',NULL,'2020-06-03 17:32:45','2020-06-03 17:32:45','2020-06-30 15:20:13','1b0e1157-330c-46b6-a65d-c1b5333e5d85'),
+	(18,'eager-beaver','1.0.4','1.0.0','unknown',NULL,'2020-06-24 08:57:37','2020-06-24 08:57:37','2020-06-30 15:20:13','d643af87-22a8-415f-b751-a93a34fcc7ce'),
+	(20,'typedlinkfield','2.0.0-beta.9','2.0.0','unknown',NULL,'2020-06-24 09:21:11','2020-06-24 09:21:11','2020-06-30 15:20:13','55cedef8-552e-4981-beb2-146ff64c2d89');
 
 /*!40000 ALTER TABLE `plugins` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -2991,9 +2976,6 @@ VALUES
 	('plugins.spoon.edition','\"standard\"'),
 	('plugins.spoon.enabled','true'),
 	('plugins.spoon.schemaVersion','\"3.5.0\"'),
-	('plugins.super-table.edition','\"standard\"'),
-	('plugins.super-table.enabled','true'),
-	('plugins.super-table.schemaVersion','\"2.2.1\"'),
 	('plugins.twigpack.edition','\"standard\"'),
 	('plugins.twigpack.enabled','true'),
 	('plugins.twigpack.schemaVersion','\"1.0.0\"'),
@@ -3583,7 +3565,7 @@ VALUES
 	('volumes.14e48735-7707-43d5-a6f1-90cc18da80f1.settings.subfolder','\"teasers\"'),
 	('volumes.14e48735-7707-43d5-a6f1-90cc18da80f1.sortOrder','2'),
 	('volumes.14e48735-7707-43d5-a6f1-90cc18da80f1.type','\"craft\\\\awss3\\\\Volume\"'),
-	('volumes.14e48735-7707-43d5-a6f1-90cc18da80f1.url','\"https://s3.$S3.amazonaws/$S3_BUCKET/\"'),
+	('volumes.14e48735-7707-43d5-a6f1-90cc18da80f1.url','\"$S3_CLOUDFRONT_URL\"'),
 	('volumes.17ffd720-73f0-4e0c-9878-ea089fcc6863.fieldLayouts.c1a12ccb-e2da-48c0-91fb-8620810d76de.tabs.0.fields.6962a9b1-b802-4295-82b1-398470a9f54c.required','false'),
 	('volumes.17ffd720-73f0-4e0c-9878-ea089fcc6863.fieldLayouts.c1a12ccb-e2da-48c0-91fb-8620810d76de.tabs.0.fields.6962a9b1-b802-4295-82b1-398470a9f54c.sortOrder','1'),
 	('volumes.17ffd720-73f0-4e0c-9878-ea089fcc6863.fieldLayouts.c1a12ccb-e2da-48c0-91fb-8620810d76de.tabs.0.fields.870c07d7-9341-4f1f-825b-25c76239bc0d.required','false'),
@@ -3614,7 +3596,7 @@ VALUES
 	('volumes.17ffd720-73f0-4e0c-9878-ea089fcc6863.settings.subfolder','\"sliders/\"'),
 	('volumes.17ffd720-73f0-4e0c-9878-ea089fcc6863.sortOrder','3'),
 	('volumes.17ffd720-73f0-4e0c-9878-ea089fcc6863.type','\"craft\\\\awss3\\\\Volume\"'),
-	('volumes.17ffd720-73f0-4e0c-9878-ea089fcc6863.url','\"https://s3.$S3.amazonaws/$S3_BUCKET/\"'),
+	('volumes.17ffd720-73f0-4e0c-9878-ea089fcc6863.url','\"$S3_CLOUDFRONT_URL\"'),
 	('volumes.5c642d7e-b16b-4836-9575-668d75d242e5.handle','\"branding\"'),
 	('volumes.5c642d7e-b16b-4836-9575-668d75d242e5.hasUrls','true'),
 	('volumes.5c642d7e-b16b-4836-9575-668d75d242e5.name','\"Branding\"'),
@@ -3652,7 +3634,7 @@ VALUES
 	('volumes.918b50e1-632c-4e92-a8c5-55eeb7b8571e.settings.subfolder','\"coverphotos/\"'),
 	('volumes.918b50e1-632c-4e92-a8c5-55eeb7b8571e.sortOrder','6'),
 	('volumes.918b50e1-632c-4e92-a8c5-55eeb7b8571e.type','\"craft\\\\awss3\\\\Volume\"'),
-	('volumes.918b50e1-632c-4e92-a8c5-55eeb7b8571e.url','\"https://s3.$S3.amazonaws/$S3_BUCKET/\"'),
+	('volumes.918b50e1-632c-4e92-a8c5-55eeb7b8571e.url','\"$S3_CLOUDFRONT_URL\"'),
 	('volumes.b011a3f9-88a2-4819-aad0-ca04487dfac8.fieldLayouts.e64c00c8-31b0-4afa-b497-4a3f2e0d8011.tabs.0.fields.502c51a1-5b82-4368-90e1-aa68b1d4e479.required','false'),
 	('volumes.b011a3f9-88a2-4819-aad0-ca04487dfac8.fieldLayouts.e64c00c8-31b0-4afa-b497-4a3f2e0d8011.tabs.0.fields.502c51a1-5b82-4368-90e1-aa68b1d4e479.sortOrder','1'),
 	('volumes.b011a3f9-88a2-4819-aad0-ca04487dfac8.fieldLayouts.e64c00c8-31b0-4afa-b497-4a3f2e0d8011.tabs.0.fields.6962a9b1-b802-4295-82b1-398470a9f54c.required','false'),
@@ -3702,7 +3684,7 @@ VALUES
 	('volumes.dbb9d34a-ed00-430b-a6cd-e61927f7b2d5.settings.subfolder','\"content/\"'),
 	('volumes.dbb9d34a-ed00-430b-a6cd-e61927f7b2d5.sortOrder','5'),
 	('volumes.dbb9d34a-ed00-430b-a6cd-e61927f7b2d5.type','\"craft\\\\awss3\\\\Volume\"'),
-	('volumes.dbb9d34a-ed00-430b-a6cd-e61927f7b2d5.url','\"https://s3.$S3.amazonaws/$S3_BUCKET/\"');
+	('volumes.dbb9d34a-ed00-430b-a6cd-e61927f7b2d5.url','\"$S3_CLOUDFRONT_URL\"');
 
 /*!40000 ALTER TABLE `projectconfig` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -3803,6 +3785,7 @@ VALUES
 	('3949564b','@app/web/assets/utilities/dist'),
 	('3fb9de3d','@bower/jquery/dist'),
 	('4058fb73','@app/web/assets/cp/dist'),
+	('4466ee0d','@app/web/assets/login/dist'),
 	('462fa110','@nystudio107/imageoptimize/assetbundles/optimizedimagesfield/dist'),
 	('467f3357','@app/web/assets/recententries/dist'),
 	('47a351d9','@lib/vue'),
@@ -3819,6 +3802,7 @@ VALUES
 	('609fb2e5','@lib/jquery-ui'),
 	('60c33258','@nystudio107/seomatic/assetbundles/seomatic/dist'),
 	('6392b0ef','@craft/web/assets/editsection/dist'),
+	('63af9e90','@app/web/assets/updateswidget/dist'),
 	('654becfd','@craft/web/assets/plugins/dist'),
 	('68902306','@app/web/assets/updater/dist'),
 	('6a48f2ac','@lib/axios'),
@@ -3853,6 +3837,7 @@ VALUES
 	('a801e96d','@craft/web/assets/matrix/dist'),
 	('a8790d13','@lib/picturefill'),
 	('abfbe344','@lib/fileupload'),
+	('acd1550b','@app/web/assets/matrix/dist'),
 	('ad5b3b58','@lib/prismjs'),
 	('afdd31d1','@lib/jquery-touch-events'),
 	('b0910ced','@lib/fileupload'),
@@ -3867,6 +3852,7 @@ VALUES
 	('c9943c68','@lib/timepicker'),
 	('cb6e657','@nystudio107/seomatic/assetbundles/seomatic/dist'),
 	('d2fed3c1','@lib/timepicker'),
+	('d72fd87e','@craft/web/assets/updater/dist'),
 	('daf41785','@app/web/assets/plugins/dist'),
 	('deec9e21','@craft/web/assets/recententries/dist'),
 	('e056dc4f','@craft/web/assets/updateswidget/dist'),
@@ -4210,7 +4196,7 @@ VALUES
 	(1,1,'yEUOfx3opTkqI9GGmCBOFusnzrNbiINpyD-Jzhk2DxiOIwsret9sWMYb2M9XEINz92qqSp4XjCqcpF5MEvDfqlDUyfE0NP9ZO0j0','2020-06-03 15:54:07','2020-06-03 15:55:17','49043464-1bfa-4834-a5da-b2de82575acc'),
 	(2,1,'D-DhJAArttzXlKe64LUS9n2u5ugNCWb9imxWziV6iKbJddCwUAz79KWxmg1ZR4DanfCCpv6m2Eputt2UkqU3RiyOYxaQ3eRayn89','2020-06-03 16:40:24','2020-06-03 18:49:31','d68c53b0-81b9-4298-ac31-9b7773314400'),
 	(3,1,'8ZcStOLp4GGp2I4O_Ff2ED9_Q50cPutLaRfDGlWdOo0yhGCLtG0oCCZjoTYm8_yoj130TmZiwcs3pIM7kZfYaFknANIZiebKEtlw','2020-06-04 20:50:25','2020-06-04 20:53:27','aca9ea13-fe0a-4c6d-89a3-200a9767cf5f'),
-	(7,1,'eqCDcWHCmhd2a5YT7QxhA1e0fLK1IzWPPNx0KQoIEWh-tBJS7EXfpsf2mEXm4uiyQ1UA8eSmo1qfH3ntGcRcNMB8N8Jpgfqi9TI9','2020-06-30 08:19:26','2020-06-30 09:52:37','a5e0ff1b-03a8-465b-9335-ad8b918fc4ea');
+	(8,1,'j2bmgIo2FSuZdDIsbNY6JQWUm8M6GjPIdIGO147vETnyjMn7khB1miL9x14O-X0ZFcD67lb2A2XgKJ47RgNkcsRlYhTSaet4pLIZ','2020-06-30 15:20:08','2020-06-30 15:20:13','978ad934-5040-4bc8-8bfa-da3f3bacb04a');
 
 /*!40000 ALTER TABLE `sessions` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -4857,7 +4843,7 @@ LOCK TABLES `users` WRITE;
 
 INSERT INTO `users` (`id`, `username`, `photoId`, `firstName`, `lastName`, `email`, `password`, `admin`, `locked`, `suspended`, `pending`, `lastLoginDate`, `lastLoginAttemptIp`, `invalidLoginWindowStart`, `invalidLoginCount`, `lastInvalidLoginDate`, `lockoutDate`, `hasDashboard`, `verificationCode`, `verificationCodeIssuedDate`, `unverifiedEmail`, `passwordResetRequired`, `lastPasswordChangeDate`, `dateCreated`, `dateUpdated`, `uid`)
 VALUES
-	(1,'support@percipio.london',NULL,NULL,NULL,'support@percipio.london','$2y$13$SlPvIaHyGUzDZEMgvmfTyO1BkYsnkBpWBiBCZ12wfJEWoC8EVYS4O',1,0,0,0,'2020-06-30 08:19:26',NULL,NULL,NULL,NULL,NULL,1,NULL,NULL,NULL,0,'2020-06-03 15:54:07','2020-06-03 15:54:07','2020-06-30 08:19:26','86d53cdb-c5a3-4bbe-ad68-42f46444170a');
+	(1,'support@percipio.london',NULL,NULL,NULL,'support@percipio.london','$2y$13$SlPvIaHyGUzDZEMgvmfTyO1BkYsnkBpWBiBCZ12wfJEWoC8EVYS4O',1,0,0,0,'2020-06-30 15:20:08',NULL,NULL,NULL,NULL,NULL,1,NULL,NULL,NULL,0,'2020-06-03 15:54:07','2020-06-03 15:54:07','2020-06-30 15:20:08','86d53cdb-c5a3-4bbe-ad68-42f46444170a');
 
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -4936,11 +4922,11 @@ LOCK TABLES `volumes` WRITE;
 INSERT INTO `volumes` (`id`, `fieldLayoutId`, `name`, `handle`, `type`, `hasUrls`, `url`, `settings`, `sortOrder`, `dateCreated`, `dateUpdated`, `dateDeleted`, `uid`)
 VALUES
 	(1,NULL,'Branding','branding','craft\\awss3\\Volume',1,'$CLOUDFRONT_URL','{\"addSubfolderToRootUrl\":\"1\",\"autoFocalPoint\":\"\",\"bucket\":\"$S3_BUCKET\",\"bucketSelectionMode\":\"manual\",\"cfDistributionId\":\"$CLOUDFRONT_DISTRIBUTION_ID\",\"cfPrefix\":\"$CLOUDFRONT_PATH_PREFIX\",\"expires\":\"3 months\",\"keyId\":\"$S3_KEY_ID\",\"makeUploadsPublic\":\"1\",\"region\":\"$S3_REGION\",\"secret\":\"$S3_SECRET\",\"storageClass\":\"\",\"subfolder\":\"branding/\"}',1,'2020-06-03 17:29:09','2020-06-29 11:48:55',NULL,'5c642d7e-b16b-4836-9575-668d75d242e5'),
-	(2,11,'Teasers','teasers','craft\\awss3\\Volume',1,'https://s3.$S3.amazonaws/$S3_BUCKET/','{\"addSubfolderToRootUrl\":\"1\",\"autoFocalPoint\":\"\",\"bucket\":\"$S3_BUCKET\",\"bucketSelectionMode\":\"manual\",\"cfDistributionId\":\"$CLOUDFRONT_DISTRIBUTION_ID\",\"cfPrefix\":\"$CLOUDFRONT_PATH_PREFIX\",\"expires\":\"3 months\",\"keyId\":\"$S3_KEY_ID\",\"makeUploadsPublic\":\"1\",\"region\":\"$S3_REGION\",\"secret\":\"$S3_SECRET\",\"storageClass\":\"\",\"subfolder\":\"teasers\"}',2,'2020-06-24 11:55:23','2020-06-29 12:02:42',NULL,'14e48735-7707-43d5-a6f1-90cc18da80f1'),
-	(3,10,'Sliders','sliders','craft\\awss3\\Volume',1,'https://s3.$S3.amazonaws/$S3_BUCKET/','{\"addSubfolderToRootUrl\":\"1\",\"autoFocalPoint\":\"\",\"bucket\":\"$S3_BUCKET\",\"bucketSelectionMode\":\"manual\",\"cfDistributionId\":\"$CLOUDFRONT_DISTRIBUTION_ID\",\"cfPrefix\":\"$CLOUDFRONT_PATH_PREFIX\",\"expires\":\"3 months\",\"keyId\":\"$S3_KEY_ID\",\"makeUploadsPublic\":\"1\",\"region\":\"$S3_REGION\",\"secret\":\"$S3_SECRET\",\"storageClass\":\"\",\"subfolder\":\"sliders/\"}',3,'2020-06-29 11:55:59','2020-06-29 11:58:49',NULL,'17ffd720-73f0-4e0c-9878-ea089fcc6863'),
+	(2,11,'Teasers','teasers','craft\\awss3\\Volume',1,'$S3_CLOUDFRONT_URL','{\"addSubfolderToRootUrl\":\"1\",\"autoFocalPoint\":\"\",\"bucket\":\"$S3_BUCKET\",\"bucketSelectionMode\":\"manual\",\"cfDistributionId\":\"$CLOUDFRONT_DISTRIBUTION_ID\",\"cfPrefix\":\"$CLOUDFRONT_PATH_PREFIX\",\"expires\":\"3 months\",\"keyId\":\"$S3_KEY_ID\",\"makeUploadsPublic\":\"1\",\"region\":\"$S3_REGION\",\"secret\":\"$S3_SECRET\",\"storageClass\":\"\",\"subfolder\":\"teasers\"}',2,'2020-06-24 11:55:23','2020-06-30 15:19:55',NULL,'14e48735-7707-43d5-a6f1-90cc18da80f1'),
+	(3,10,'Sliders','sliders','craft\\awss3\\Volume',1,'$S3_CLOUDFRONT_URL','{\"addSubfolderToRootUrl\":\"1\",\"autoFocalPoint\":\"\",\"bucket\":\"$S3_BUCKET\",\"bucketSelectionMode\":\"manual\",\"cfDistributionId\":\"$CLOUDFRONT_DISTRIBUTION_ID\",\"cfPrefix\":\"$CLOUDFRONT_PATH_PREFIX\",\"expires\":\"3 months\",\"keyId\":\"$S3_KEY_ID\",\"makeUploadsPublic\":\"1\",\"region\":\"$S3_REGION\",\"secret\":\"$S3_SECRET\",\"storageClass\":\"\",\"subfolder\":\"sliders/\"}',3,'2020-06-29 11:55:59','2020-06-30 15:19:55',NULL,'17ffd720-73f0-4e0c-9878-ea089fcc6863'),
 	(4,12,'Documents','documents','craft\\awss3\\Volume',1,'$CLOUDFRONT_URL','{\"addSubfolderToRootUrl\":\"1\",\"autoFocalPoint\":\"\",\"bucket\":\"$S3_BUCKET\",\"bucketSelectionMode\":\"manual\",\"cfDistributionId\":\"$CLOUDFRONT_DISTRIBUTION_ID\",\"cfPrefix\":\"$CLOUDFRONT_PATH_PREFIX\",\"expires\":\"3 months\",\"keyId\":\"$S3_KEY_ID\",\"makeUploadsPublic\":\"1\",\"region\":\"$S3_REGION\",\"secret\":\"$S3_SECRET\",\"storageClass\":\"\",\"subfolder\":\"documents/\"}',4,'2020-06-29 12:58:40','2020-06-29 13:26:58',NULL,'b011a3f9-88a2-4819-aad0-ca04487dfac8'),
-	(5,19,'Articles','article','craft\\awss3\\Volume',1,'https://s3.$S3.amazonaws/$S3_BUCKET/','{\"addSubfolderToRootUrl\":\"1\",\"autoFocalPoint\":\"\",\"bucket\":\"$S3_BUCKET\",\"bucketSelectionMode\":\"manual\",\"cfDistributionId\":\"$CLOUDFRONT_DISTRIBUTION_ID\",\"cfPrefix\":\"$CLOUDFRONT_PATH_PREFIX\",\"expires\":\"3 months\",\"keyId\":\"$S3_KEY_ID\",\"makeUploadsPublic\":\"1\",\"region\":\"$S3_REGION\",\"secret\":\"$S3_SECRET\",\"storageClass\":\"\",\"subfolder\":\"content/\"}',5,'2020-06-29 13:01:12','2020-06-29 15:04:08',NULL,'dbb9d34a-ed00-430b-a6cd-e61927f7b2d5'),
-	(6,NULL,'Cover Photos','coverPhotos','craft\\awss3\\Volume',1,'https://s3.$S3.amazonaws/$S3_BUCKET/','{\"addSubfolderToRootUrl\":\"1\",\"autoFocalPoint\":\"\",\"bucket\":\"$S3_BUCKET\",\"bucketSelectionMode\":\"manual\",\"cfDistributionId\":\"$CLOUDFRONT_DISTRIBUTION_ID\",\"cfPrefix\":\"$CLOUDFRONT_PATH_PREFIX\",\"expires\":\"3 months\",\"keyId\":\"$S3_KEY_ID\",\"makeUploadsPublic\":\"1\",\"region\":\"$S3_REGION\",\"secret\":\"$S3_SECRET\",\"storageClass\":\"\",\"subfolder\":\"coverphotos/\"}',6,'2020-06-29 13:24:15','2020-06-29 13:24:15',NULL,'918b50e1-632c-4e92-a8c5-55eeb7b8571e');
+	(5,19,'Articles','article','craft\\awss3\\Volume',1,'$S3_CLOUDFRONT_URL','{\"addSubfolderToRootUrl\":\"1\",\"autoFocalPoint\":\"\",\"bucket\":\"$S3_BUCKET\",\"bucketSelectionMode\":\"manual\",\"cfDistributionId\":\"$CLOUDFRONT_DISTRIBUTION_ID\",\"cfPrefix\":\"$CLOUDFRONT_PATH_PREFIX\",\"expires\":\"3 months\",\"keyId\":\"$S3_KEY_ID\",\"makeUploadsPublic\":\"1\",\"region\":\"$S3_REGION\",\"secret\":\"$S3_SECRET\",\"storageClass\":\"\",\"subfolder\":\"content/\"}',5,'2020-06-29 13:01:12','2020-06-30 15:19:55',NULL,'dbb9d34a-ed00-430b-a6cd-e61927f7b2d5'),
+	(6,NULL,'Cover Photos','coverPhotos','craft\\awss3\\Volume',1,'$S3_CLOUDFRONT_URL','{\"addSubfolderToRootUrl\":\"1\",\"autoFocalPoint\":\"\",\"bucket\":\"$S3_BUCKET\",\"bucketSelectionMode\":\"manual\",\"cfDistributionId\":\"$CLOUDFRONT_DISTRIBUTION_ID\",\"cfPrefix\":\"$CLOUDFRONT_PATH_PREFIX\",\"expires\":\"3 months\",\"keyId\":\"$S3_KEY_ID\",\"makeUploadsPublic\":\"1\",\"region\":\"$S3_REGION\",\"secret\":\"$S3_SECRET\",\"storageClass\":\"\",\"subfolder\":\"coverphotos/\"}',6,'2020-06-29 13:24:15','2020-06-30 15:19:55',NULL,'918b50e1-632c-4e92-a8c5-55eeb7b8571e');
 
 /*!40000 ALTER TABLE `volumes` ENABLE KEYS */;
 UNLOCK TABLES;
