@@ -35,11 +35,13 @@
         "nystudio107/craft-retour": "^3.0.0",
         "nystudio107/craft-seomatic": "^3.2.0",
         "nystudio107/craft-webperf": "^1.0.0",
-        "nystudio107/craft-twigpack": "^1.1.0",
+        "nystudio107/craft-twigpack": "^1.2.0",
         "nystudio107/dotenvy": "^1.1.0",
         "percipioglobal/craft-notifications": "^1.1.1",
         "percipioglobal/craft-password-policy": "^1.0.0",
+        "putyourlightson/craft-blitz-recommendations": "^1.1",
         "sebastianlenz/linkfield": "^2.0@beta",
+        "verbb/navigation": "^1.3.21",
         "verbb/super-table": "^2.1.0",
         "vlucas/phpdotenv": "^3.4.0",
         "yiisoft/yii2-redis": "^2.0.6"
@@ -53,7 +55,7 @@
         "sort-packages": true,
         "optimize-autoloader": true,
         "platform": {
-            "php": "7.0"
+            "php": "7.2"
         }
     },
     "scripts": {
