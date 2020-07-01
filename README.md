@@ -43,6 +43,7 @@ The following Craft CMS plugins are used on this site:
 * [Notifications](https://github.com/percipioglobal/craft-notifictions) - for handling system notifications
 * [Super Table](https://github.com/verbb/super-table) - Field Type to create powerful tables
 * [Spoon](https://github.com/angell-co/Spoon) - Organising our matrix fields
+* [Navigation](https://github.com/verbb/navigation) - Managing Navigation Menus
 
 ## Using percipioglobal/craft
 
