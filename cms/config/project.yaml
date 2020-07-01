@@ -1,4 +1,4 @@
-dateModified: 1593510748
+dateModified: 1593595240
 email:
   fromEmail: $SYSTEM_EMAIL
   fromName: $SENDER_NAME
@@ -749,6 +749,100 @@ fields:
             -
               - format
               - jpg
+    translationKeyFormat: null
+    translationMethod: none
+    type: nystudio107\imageoptimize\fields\OptimizedImages
+  9806bc10-174e-4280-b2a8-c684b99a3139:
+    contentColumnType: text
+    fieldGroup: 1dd95078-7c8a-4ef7-8a16-e33a5341dadb
+    handle: optimizeProfileImages
+    instructions: ''
+    name: 'Optimize Profile Images'
+    searchable: false
+    settings:
+      displayDominantColorPalette: '1'
+      displayLazyLoadPlaceholderImages: '1'
+      displayOptimizedImageVariants: '1'
+      ignoreFilesOfType:
+        - image/svg
+        - image/gif
+      variants:
+        -
+          __assoc__:
+            -
+              - width
+              - '760'
+            -
+              - useAspectRatio
+              - '1'
+            -
+              - aspectRatioX
+              - '1'
+            -
+              - aspectRatioY
+              - '1'
+            -
+              - retinaSizes
+              -
+                - '1'
+            -
+              - quality
+              - '82'
+            -
+              - format
+              - ''
+        -
+          __assoc__:
+            -
+              - width
+              - '380'
+            -
+              - useAspectRatio
+              - '1'
+            -
+              - aspectRatioX
+              - '1'
+            -
+              - aspectRatioY
+              - '1'
+            -
+              - retinaSizes
+              -
+                - '1'
+                - '2'
+                - '3'
+            -
+              - quality
+              - '60'
+            -
+              - format
+              - ''
+        -
+          __assoc__:
+            -
+              - width
+              - '100'
+            -
+              - useAspectRatio
+              - '1'
+            -
+              - aspectRatioX
+              - '1'
+            -
+              - aspectRatioY
+              - '1'
+            -
+              - retinaSizes
+              -
+                - '1'
+                - '2'
+                - '3'
+            -
+              - quality
+              - '60'
+            -
+              - format
+              - ''
     translationKeyFormat: null
     translationMethod: none
     type: nystudio107\imageoptimize\fields\OptimizedImages
@@ -1976,6 +2070,48 @@ matrixBlockTypes:
     handle: resourceList
     name: 'Resource List'
     sortOrder: 7
+navigation:
+  navs:
+    46faf86d-bfa5-4356-bef1-0af3b2a87332:
+      handle: secondaryNavigation
+      instructions: ''
+      maxNodes: ''
+      name: 'Secondary Navigation'
+      propagateNodes: false
+      sortOrder: 2
+      structure:
+        maxLevels: null
+        uid: d1c943c2-c8e9-4cef-b4bc-8198f38cb4a7
+    b51f4d5a-4d35-43f1-af05-72e206874892:
+      handle: footerNavigation
+      instructions: ''
+      maxNodes: ''
+      name: 'Footer Navigation'
+      propagateNodes: false
+      sortOrder: 3
+      structure:
+        maxLevels: null
+        uid: 64636e72-d294-403e-8d49-5d0fa315b254
+    d8cef538-a756-4496-b7f6-0e0bb61c14c2:
+      handle: primaryNavigation
+      instructions: ''
+      maxNodes: ''
+      name: 'Primary Navigation'
+      propagateNodes: false
+      sortOrder: 1
+      structure:
+        maxLevels: null
+        uid: e67873d8-91f5-4516-88f0-13121fbb9c81
+    e0745046-9bad-4922-8da8-7f677ba84909:
+      handle: legalNavigation
+      instructions: ''
+      maxNodes: ''
+      name: 'Legal Navigation'
+      propagateNodes: false
+      sortOrder: 4
+      structure:
+        maxLevels: null
+        uid: 0725db91-17f3-4efb-881f-ec3192620a1c
 plugins:
   aws-s3:
     eager-beaver:
@@ -2050,6 +2186,13 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+  navigation:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.17
+    settings:
+      bypassProjectConfig: false
+      pluginName: Navigation
   notifications:
     edition: standard
     enabled: true
@@ -2079,6 +2222,10 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 3.5.0
+  super-table:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.2.1
   twigpack:
     edition: standard
     enabled: true
@@ -2202,21 +2349,14 @@ sections:
             tabs:
               -
                 fields:
-                  c439e251-a130-434d-a716-aab4d0651420:
-                    required: false
-                    sortOrder: 1
-                name: Settings
-                sortOrder: 1
-              -
-                fields:
-                  35a1d959-d78e-4445-891c-7bb671c48281:
+                  1c23eb9d-03fe-46ea-9bee-ff46e8bd15a3:
                     required: false
                     sortOrder: 1
                   6a3feb81-50ce-467a-8aca-b5d4cc12aed0:
                     required: false
                     sortOrder: 2
                 name: Metadata
-                sortOrder: 2
+                sortOrder: 1
         handle: landingsPage
         hasTitleField: true
         name: 'Landings Page'
@@ -2236,6 +2376,12 @@ sections:
                 sortOrder: 1
               -
                 fields:
+                  1c23eb9d-03fe-46ea-9bee-ff46e8bd15a3:
+                    required: false
+                    sortOrder: 1
+                  6a3feb81-50ce-467a-8aca-b5d4cc12aed0:
+                    required: false
+                    sortOrder: 2
                   c439e251-a130-434d-a716-aab4d0651420:
                     required: false
                     sortOrder: 1
@@ -2278,7 +2424,10 @@ sections:
         hasUrls: true
         template: _organisms/_page
         uriFormat: '{parent.uri ?? parent.uri}/{slug}'
-    type: channel
+    structure:
+      maxLevels: 3
+      uid: 75bd198d-0fe4-4a7c-8ab4-da021aa50354
+    type: structure
 siteGroups:
   f89601e9-4ba9-4a48-9e99-350aa9914912:
     name: Default
@@ -2954,13 +3103,14 @@ system:
   live: true
   name: Craft
   schemaVersion: 3.5.2
-  timeZone: America/New_York
+  timeZone: Europe/London
 users:
   allowPublicRegistration: false
-  defaultGroup: null
+  defaultGroup: ''
   photoSubpath: ''
-  photoVolumeUid: null
+  photoVolumeUid: 2cfafcad-5b14-408b-ba81-afd942b8b3cb
   requireEmailVerification: true
+  suspendByDefault: false
 volumes:
   14e48735-7707-43d5-a6f1-90cc18da80f1:
     fieldLayouts:
@@ -3040,6 +3190,37 @@ volumes:
     sortOrder: 3
     type: craft\awss3\Volume
     url: $S3_CLOUDFRONT_URL
+  2cfafcad-5b14-408b-ba81-afd942b8b3cb:
+    fieldLayouts:
+      e8b47e71-94ef-4b05-85a2-f9578c687105:
+        tabs:
+          -
+            fields:
+              9806bc10-174e-4280-b2a8-c684b99a3139:
+                required: false
+                sortOrder: 1
+            name: 'Image Optimizations'
+            sortOrder: 1
+    handle: profiles
+    hasUrls: true
+    name: 'Profile Images'
+    settings:
+      addSubfolderToRootUrl: '1'
+      autoFocalPoint: ''
+      bucket: $S3_BUCKET
+      bucketSelectionMode: manual
+      cfDistributionId: $CLOUDFRONT_DISTRIBUTION_ID
+      cfPrefix: $CLOUDFRONT_PATH_PREFIX
+      expires: '3 months'
+      keyId: $S3_KEY_ID
+      makeUploadsPublic: '1'
+      region: $S3_REGION
+      secret: $S3_SECRET
+      storageClass: ''
+      subfolder: profile-images/
+    sortOrder: 7
+    type: craft\awss3\Volume
+    url: $CLOUDFRONT_URL
   5c642d7e-b16b-4836-9575-668d75d242e5:
     handle: branding
     hasUrls: true
@@ -3062,7 +3243,7 @@ volumes:
     type: craft\awss3\Volume
     url: $CLOUDFRONT_URL
   918b50e1-632c-4e92-a8c5-55eeb7b8571e:
-    handle: coverPhotos
+    handle: covers
     hasUrls: true
     name: 'Cover Photos'
     settings:

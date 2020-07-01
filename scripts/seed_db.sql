@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.5.5-10.3.23-MariaDB-1:10.3.23+maria~bionic)
 # Database: project
-# Generation Time: 2020-06-30 15:27:49 +0000
+# Generation Time: 2020-07-01 09:34:28 +0000
 # ************************************************************
 
 
@@ -236,6 +236,16 @@ CREATE TABLE `changedattributes` (
   CONSTRAINT `changedattributes_userId_fk` FOREIGN KEY (`userId`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+LOCK TABLES `changedattributes` WRITE;
+/*!40000 ALTER TABLE `changedattributes` DISABLE KEYS */;
+
+INSERT INTO `changedattributes` (`elementId`, `siteId`, `attribute`, `dateUpdated`, `propagated`, `userId`)
+VALUES
+	(12,2,'fieldLayoutId','2020-07-01 09:03:05',0,1),
+	(12,2,'typeId','2020-07-01 09:03:05',0,1);
+
+/*!40000 ALTER TABLE `changedattributes` ENABLE KEYS */;
+UNLOCK TABLES;
 
 
 # Dump of table changedfields
@@ -261,6 +271,17 @@ CREATE TABLE `changedfields` (
   CONSTRAINT `changedfields_userId_fk` FOREIGN KEY (`userId`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+LOCK TABLES `changedfields` WRITE;
+/*!40000 ALTER TABLE `changedfields` DISABLE KEYS */;
+
+INSERT INTO `changedfields` (`elementId`, `siteId`, `fieldId`, `dateUpdated`, `propagated`, `userId`)
+VALUES
+	(12,2,4,'2020-07-01 09:07:05',0,1),
+	(12,2,23,'2020-07-01 09:07:05',0,1),
+	(12,2,25,'2020-07-01 09:07:05',0,1);
+
+/*!40000 ALTER TABLE `changedfields` ENABLE KEYS */;
+UNLOCK TABLES;
 
 
 # Dump of table content
@@ -288,6 +309,7 @@ CREATE TABLE `content` (
   `field_organisationName` text DEFAULT NULL,
   `field_organisationEmail` varchar(255) DEFAULT NULL,
   `field_organisationPhone` text DEFAULT NULL,
+  `field_optimizeProfileImages` text DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `content_elementId_siteId_unq_idx` (`elementId`,`siteId`),
   KEY `content_siteId_idx` (`siteId`),
@@ -299,15 +321,25 @@ CREATE TABLE `content` (
 LOCK TABLES `content` WRITE;
 /*!40000 ALTER TABLE `content` DISABLE KEYS */;
 
-INSERT INTO `content` (`id`, `elementId`, `siteId`, `title`, `dateCreated`, `dateUpdated`, `uid`, `field_errorHeadline`, `field_errorText`, `field_description`, `field_optimizeTeasers`, `field_optimizeSlider`, `field_author`, `field_caption`, `field_optimizeCovers`, `field_optimizeArticles`, `field_organisationName`, `field_organisationEmail`, `field_organisationPhone`)
+INSERT INTO `content` (`id`, `elementId`, `siteId`, `title`, `dateCreated`, `dateUpdated`, `uid`, `field_errorHeadline`, `field_errorText`, `field_description`, `field_optimizeTeasers`, `field_optimizeSlider`, `field_author`, `field_caption`, `field_optimizeCovers`, `field_optimizeArticles`, `field_organisationName`, `field_organisationEmail`, `field_organisationPhone`, `field_optimizeProfileImages`)
 VALUES
-	(1,1,2,NULL,'2020-06-03 15:54:07','2020-06-03 15:54:07','39166b83-c796-424d-b070-1a7421ccf523',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
-	(2,2,2,'Homepage','2020-06-03 17:29:09','2020-06-03 17:29:09','df47cb25-eca1-4b37-b89b-2ae866120aed',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
-	(3,3,2,NULL,'2020-06-29 11:29:40','2020-06-29 11:29:40','185f90cd-4eca-4ea4-be17-68eb0477aa08',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
-	(4,4,2,NULL,'2020-06-29 14:57:11','2020-06-29 14:57:11','172f0753-1cf5-4187-a91e-ca3187367c90',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
-	(5,5,2,NULL,'2020-06-29 15:08:20','2020-06-30 09:52:33','eaacca52-7f6b-4f7f-bd84-99ede739f438',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
-	(6,6,2,NULL,'2020-06-29 15:58:06','2020-06-29 15:58:42','9d994d0e-b89c-4436-b9af-53d2e7a9de73',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
-	(7,10,2,NULL,'2020-06-30 09:21:44','2020-06-30 09:21:44','a72f051a-0905-4beb-848c-133e307795cb',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+	(1,1,2,NULL,'2020-06-03 15:54:07','2020-07-01 09:04:42','39166b83-c796-424d-b070-1a7421ccf523',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+	(2,2,2,'Homepage','2020-06-03 17:29:09','2020-06-03 17:29:09','df47cb25-eca1-4b37-b89b-2ae866120aed',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+	(3,3,2,NULL,'2020-06-29 11:29:40','2020-06-29 11:29:40','185f90cd-4eca-4ea4-be17-68eb0477aa08',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+	(4,4,2,NULL,'2020-06-29 14:57:11','2020-06-29 14:57:11','172f0753-1cf5-4187-a91e-ca3187367c90',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+	(5,5,2,NULL,'2020-06-29 15:08:20','2020-06-30 09:52:33','eaacca52-7f6b-4f7f-bd84-99ede739f438',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+	(6,6,2,NULL,'2020-06-29 15:58:06','2020-06-29 15:58:42','9d994d0e-b89c-4436-b9af-53d2e7a9de73',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+	(7,10,2,NULL,'2020-06-30 09:21:44','2020-06-30 09:21:44','a72f051a-0905-4beb-848c-133e307795cb',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+	(9,12,2,'Privacy Policy','2020-07-01 09:01:21','2020-07-01 09:07:05','61c77b46-cc58-4482-b3fb-ff740127a1dc',NULL,NULL,NULL,'{\"optimizedImageUrls\":[],\"optimizedWebPImageUrls\":[],\"variantSourceWidths\":[],\"variantHeights\":[],\"focalPoint\":null,\"originalImageWidth\":null,\"originalImageHeight\":null,\"placeholder\":\"\",\"placeholderSvg\":\"\",\"colorPalette\":[],\"lightness\":null,\"placeholderWidth\":null,\"placeholderHeight\":null}',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+	(11,15,2,'Privacy Policy','2020-07-01 09:03:04','2020-07-01 09:03:04','375fceb5-35c4-4585-b053-0508a8abb4e5',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+	(13,20,2,'About Us','2020-07-01 09:08:18','2020-07-01 09:08:18','2f4f3d86-41a8-47bd-86fb-1a618c032b52',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+	(14,22,2,'About Us','2020-07-01 09:08:18','2020-07-01 09:08:18','589fee8b-3354-4b48-a288-b39160850a32',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+	(16,29,2,'Contact Us','2020-07-01 09:10:22','2020-07-01 09:10:22','9652057d-2e7d-49d4-bf4c-47da03c51588',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+	(17,31,2,'Contact Us','2020-07-01 09:10:23','2020-07-01 09:10:23','884b9285-ca49-40ea-8c67-53c49f208529',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+	(18,33,2,NULL,'2020-07-01 09:11:21','2020-07-01 09:11:21','3225f13f-4fba-443b-b2bf-7c828b70215d',NULL,NULL,NULL,'{\"optimizedImageUrls\":[],\"optimizedWebPImageUrls\":[],\"variantSourceWidths\":[],\"variantHeights\":[],\"focalPoint\":null,\"originalImageWidth\":null,\"originalImageHeight\":null,\"placeholder\":\"\",\"placeholderSvg\":\"\",\"colorPalette\":[],\"lightness\":null,\"placeholderWidth\":null,\"placeholderHeight\":null}',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+	(19,34,2,'About Us','2020-07-01 09:28:18','2020-07-01 09:28:18','6ff7d769-c4dc-4c8f-8123-2d5cadb0cdb8',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+	(20,35,2,'Contact Us','2020-07-01 09:28:29','2020-07-01 09:28:29','4a9b1852-8719-4a01-a2f1-4067999acca0',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+	(21,36,2,'Privacy Policy','2020-07-01 09:29:48','2020-07-01 09:29:48','66b72f4e-78ce-40d8-9a29-00dfa9c94982',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 
 /*!40000 ALTER TABLE `content` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -382,7 +414,8 @@ LOCK TABLES `drafts` WRITE;
 INSERT INTO `drafts` (`id`, `sourceId`, `creatorId`, `name`, `notes`, `trackChanges`, `dateLastMerged`)
 VALUES
 	(1,NULL,1,'First draft','',0,NULL),
-	(2,NULL,1,'First draft',NULL,0,NULL);
+	(2,NULL,1,'First draft',NULL,0,NULL),
+	(6,NULL,1,'First draft',NULL,0,NULL);
 
 /*!40000 ALTER TABLE `drafts` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -442,7 +475,7 @@ LOCK TABLES `elements` WRITE;
 
 INSERT INTO `elements` (`id`, `draftId`, `revisionId`, `fieldLayoutId`, `type`, `enabled`, `archived`, `dateCreated`, `dateUpdated`, `dateDeleted`, `uid`)
 VALUES
-	(1,NULL,NULL,NULL,'craft\\elements\\User',1,0,'2020-06-03 15:54:07','2020-06-03 15:54:07',NULL,'fe3121f0-5063-4c2a-926e-a7dde6da61ad'),
+	(1,NULL,NULL,NULL,'craft\\elements\\User',1,0,'2020-06-03 15:54:07','2020-07-01 09:04:42',NULL,'fe3121f0-5063-4c2a-926e-a7dde6da61ad'),
 	(2,NULL,NULL,NULL,'craft\\elements\\Entry',1,0,'2020-06-03 17:29:09','2020-06-03 17:29:09',NULL,'a737f0a2-5a98-4b7b-9234-d12f967af4c5'),
 	(3,NULL,NULL,9,'craft\\elements\\GlobalSet',1,0,'2020-06-29 11:29:40','2020-06-29 11:29:40',NULL,'881e6056-d468-4b69-a65a-0ca344beb931'),
 	(4,NULL,NULL,15,'craft\\elements\\GlobalSet',1,0,'2020-06-29 14:57:11','2020-06-29 14:57:11',NULL,'4c7c8600-153d-41a9-87d3-49edfe31f8b5'),
@@ -451,7 +484,27 @@ VALUES
 	(7,NULL,NULL,1,'craft\\elements\\MatrixBlock',1,0,'2020-06-29 15:58:35','2020-06-29 15:58:35','2020-06-29 15:58:43','a7cb3067-4bb1-45b4-93d4-5d1f6ef9b3e0'),
 	(8,NULL,NULL,1,'craft\\elements\\MatrixBlock',1,0,'2020-06-29 15:58:42','2020-06-29 15:58:42',NULL,'e393eddb-3492-4483-967d-f0c107128d4a'),
 	(9,NULL,NULL,3,'craft\\elements\\MatrixBlock',1,0,'2020-06-29 15:58:43','2020-06-29 15:58:43',NULL,'bf8de847-6369-44dc-b334-b1107f90492d'),
-	(10,2,NULL,8,'craft\\elements\\Entry',1,0,'2020-06-30 09:21:44','2020-06-30 09:21:44',NULL,'3e8cb33d-c3af-478f-91ec-e65c68be14af');
+	(10,2,NULL,8,'craft\\elements\\Entry',1,0,'2020-06-30 09:21:44','2020-06-30 09:21:44',NULL,'3e8cb33d-c3af-478f-91ec-e65c68be14af'),
+	(12,NULL,NULL,18,'craft\\elements\\Entry',1,0,'2020-07-01 09:01:21','2020-07-01 09:03:04',NULL,'cca3822f-59b2-4788-8351-c6583e21bc2e'),
+	(14,NULL,NULL,2,'craft\\elements\\MatrixBlock',1,0,'2020-07-01 09:03:04','2020-07-01 09:07:05',NULL,'599f86fb-bf37-4180-a439-1f94fdf523c1'),
+	(15,NULL,2,18,'craft\\elements\\Entry',1,0,'2020-07-01 09:03:04','2020-07-01 09:03:04',NULL,'beb1fd1d-264e-48ce-8028-a7120d03f18a'),
+	(16,NULL,NULL,2,'craft\\elements\\MatrixBlock',1,0,'2020-07-01 09:03:04','2020-07-01 09:03:04',NULL,'6c7e3677-3081-495f-8b10-9756fd43543d'),
+	(18,NULL,NULL,2,'craft\\elements\\MatrixBlock',1,0,'2020-07-01 09:08:16','2020-07-01 09:08:16','2020-07-01 09:08:17','0f2f1dfc-6a56-4963-9038-fc7eb5a7a314'),
+	(20,NULL,NULL,18,'craft\\elements\\Entry',1,0,'2020-07-01 09:08:17','2020-07-01 09:08:17',NULL,'3aefc4a3-66c6-49b0-b12a-1762f2c6aeb5'),
+	(21,NULL,NULL,2,'craft\\elements\\MatrixBlock',1,0,'2020-07-01 09:08:18','2020-07-01 09:08:17',NULL,'5b4116c8-8f8e-4e5b-8582-bcbc249ab801'),
+	(22,NULL,3,18,'craft\\elements\\Entry',1,0,'2020-07-01 09:08:17','2020-07-01 09:08:17',NULL,'1700e2b2-a443-40e8-8160-63d640b19a6a'),
+	(23,NULL,NULL,2,'craft\\elements\\MatrixBlock',1,0,'2020-07-01 09:08:18','2020-07-01 09:08:17',NULL,'35214d77-9081-4714-aba5-24ba75b42d46'),
+	(25,NULL,NULL,2,'craft\\elements\\MatrixBlock',1,0,'2020-07-01 09:10:04','2020-07-01 09:10:04','2020-07-01 09:10:11','b225865b-3774-4555-b38a-73fb8fd6d813'),
+	(26,NULL,NULL,2,'craft\\elements\\MatrixBlock',1,0,'2020-07-01 09:10:11','2020-07-01 09:10:11','2020-07-01 09:10:18','3d342a32-982a-4cef-9aa2-fe92c40916a3'),
+	(27,NULL,NULL,2,'craft\\elements\\MatrixBlock',1,0,'2020-07-01 09:10:18','2020-07-01 09:10:18','2020-07-01 09:10:22','268a7045-adad-43ba-9ee7-5a330775efa9'),
+	(29,NULL,NULL,18,'craft\\elements\\Entry',1,0,'2020-07-01 09:10:22','2020-07-01 09:10:22',NULL,'3ffa6c79-84a9-48de-b40e-3dffa5e6bdc4'),
+	(30,NULL,NULL,2,'craft\\elements\\MatrixBlock',1,0,'2020-07-01 09:10:23','2020-07-01 09:10:22',NULL,'88d38b28-b652-4114-aa8b-a4d59728b9c8'),
+	(31,NULL,4,18,'craft\\elements\\Entry',1,0,'2020-07-01 09:10:22','2020-07-01 09:10:22',NULL,'9c75160d-bf42-4509-ba25-90c328ed9988'),
+	(32,NULL,NULL,2,'craft\\elements\\MatrixBlock',1,0,'2020-07-01 09:10:23','2020-07-01 09:10:22',NULL,'951765c9-66e4-4d32-95b6-e9619632b1f7'),
+	(33,6,NULL,17,'craft\\elements\\Entry',1,0,'2020-07-01 09:11:21','2020-07-01 09:11:21',NULL,'46031593-bf87-4957-ae0a-5453899fae2c'),
+	(34,NULL,NULL,NULL,'verbb\\navigation\\elements\\Node',1,0,'2020-07-01 09:28:18','2020-07-01 09:28:18',NULL,'0121e921-ff8c-4931-825f-f265be4ac781'),
+	(35,NULL,NULL,NULL,'verbb\\navigation\\elements\\Node',1,0,'2020-07-01 09:28:29','2020-07-01 09:28:29',NULL,'82f68a1c-4af9-4c8a-bbc0-16e8349b75e1'),
+	(36,NULL,NULL,NULL,'verbb\\navigation\\elements\\Node',1,0,'2020-07-01 09:29:48','2020-07-01 09:29:48',NULL,'584af954-88c9-4144-901c-1a8eaf906766');
 
 /*!40000 ALTER TABLE `elements` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -496,7 +549,27 @@ VALUES
 	(7,7,2,NULL,NULL,1,'2020-06-29 15:58:35','2020-06-29 15:58:35','4d8d4836-e039-4903-854b-ac0a87a8c16d'),
 	(8,8,2,NULL,NULL,1,'2020-06-29 15:58:42','2020-06-29 15:58:42','38379712-4fb9-4ec6-9b14-0317063a80d5'),
 	(9,9,2,NULL,NULL,1,'2020-06-29 15:58:43','2020-06-29 15:58:43','f748df66-106c-40ed-a230-07ae9a57645e'),
-	(10,10,2,'__temp_uxtwjjhyabfypkdyqlghkhvinsnxedjzkuom','news/__temp_uxtwjjhyabfypkdyqlghkhvinsnxedjzkuom',1,'2020-06-30 09:21:44','2020-06-30 09:21:44','4a3a15a6-50da-4885-b7c2-4b22606a54d8');
+	(10,10,2,'__temp_uxtwjjhyabfypkdyqlghkhvinsnxedjzkuom','news/__temp_uxtwjjhyabfypkdyqlghkhvinsnxedjzkuom',1,'2020-06-30 09:21:44','2020-06-30 09:21:44','4a3a15a6-50da-4885-b7c2-4b22606a54d8'),
+	(12,12,2,'privacy-policy','privacy-policy',1,'2020-07-01 09:01:21','2020-07-01 09:07:00','3bbc997a-c998-46cc-83a8-0944d0b7b99d'),
+	(14,14,2,NULL,NULL,1,'2020-07-01 09:03:04','2020-07-01 09:03:04','ed3bb612-ece8-450d-a860-4e2385a3c392'),
+	(15,15,2,'privacy-policy','privacy-policy',1,'2020-07-01 09:03:04','2020-07-01 09:03:04','54d831cc-4722-4611-bda4-18b573867b1f'),
+	(16,16,2,NULL,NULL,1,'2020-07-01 09:03:04','2020-07-01 09:03:04','75a63da3-53d6-44f3-b8a1-4979c49cc436'),
+	(18,18,2,NULL,NULL,1,'2020-07-01 09:08:16','2020-07-01 09:08:16','40ff5c6f-2184-4c81-81c8-dde5815fddcf'),
+	(20,20,2,'about-us','about-us',1,'2020-07-01 09:08:17','2020-07-01 09:10:47','9d462901-50ae-4601-afcf-5cffd2f12283'),
+	(21,21,2,NULL,NULL,1,'2020-07-01 09:08:18','2020-07-01 09:08:18','937288da-e240-45c9-9e08-4f2bf0f1cacb'),
+	(22,22,2,'about-us','about-us',1,'2020-07-01 09:08:18','2020-07-01 09:08:18','1c40a489-54a3-4bcb-92a2-64066dac5f71'),
+	(23,23,2,NULL,NULL,1,'2020-07-01 09:08:18','2020-07-01 09:08:18','5c1c8ab1-b393-4f88-a3d5-1e799d112149'),
+	(25,25,2,NULL,NULL,1,'2020-07-01 09:10:04','2020-07-01 09:10:04','cc0a3b02-addd-46b4-8d8c-591b9cca41e3'),
+	(26,26,2,NULL,NULL,1,'2020-07-01 09:10:11','2020-07-01 09:10:11','828ea1e7-48cb-4685-aa45-64871eb4c5f5'),
+	(27,27,2,NULL,NULL,1,'2020-07-01 09:10:18','2020-07-01 09:10:18','232caf21-a9c4-4f7d-acc4-250805a44597'),
+	(29,29,2,'contact-us','contact-us',1,'2020-07-01 09:10:22','2020-07-01 09:10:47','d09a8f96-c3ee-4ff9-b1bd-72a23f7a6e17'),
+	(30,30,2,NULL,NULL,1,'2020-07-01 09:10:23','2020-07-01 09:10:23','b74e5dd2-6c22-4a8b-87d5-9bd76e05f6ec'),
+	(31,31,2,'contact-us','contact-us',1,'2020-07-01 09:10:23','2020-07-01 09:10:23','72eee208-74ce-4a39-842c-4c8d13a0c48e'),
+	(32,32,2,NULL,NULL,1,'2020-07-01 09:10:23','2020-07-01 09:10:23','018cb4f1-99df-45be-8843-b8aef0e2433b'),
+	(33,33,2,'__temp_rwmfjceiaqhuhodxiwhjanwmjmtixcbvanpd','__temp_rwmfjceiaqhuhodxiwhjanwmjmtixcbvanpd',1,'2020-07-01 09:11:21','2020-07-01 09:11:21','cec3d5de-22f3-4d8d-b9f3-6776371ad297'),
+	(34,34,2,NULL,NULL,1,'2020-07-01 09:28:18','2020-07-01 09:28:18','38f5607e-d366-47e7-9a99-e5adc0a834a2'),
+	(35,35,2,NULL,NULL,1,'2020-07-01 09:28:29','2020-07-01 09:28:29','03f7f586-bf9c-4b8c-853c-a426318331c5'),
+	(36,36,2,NULL,NULL,1,'2020-07-01 09:29:48','2020-07-01 09:29:48','ceb1246f-618b-4143-ad5d-b4dd36b6f16a');
 
 /*!40000 ALTER TABLE `elements_sites` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -540,7 +613,14 @@ INSERT INTO `entries` (`id`, `sectionId`, `parentId`, `typeId`, `authorId`, `pos
 VALUES
 	(2,2,NULL,2,NULL,'2020-06-03 17:29:00',NULL,NULL,'2020-06-03 17:29:09','2020-06-03 17:29:09','e461e6b4-4a0b-4239-ac4c-a8ba30f85de4'),
 	(6,3,NULL,3,1,'2020-06-29 15:58:00',NULL,NULL,'2020-06-29 15:58:06','2020-06-29 15:58:06','deb4636d-4d15-4b24-b5ca-6beffffd9d41'),
-	(10,3,NULL,3,1,'2020-06-30 09:21:00',NULL,NULL,'2020-06-30 09:21:44','2020-06-30 09:21:44','609010db-298d-431f-a637-511a4d281899');
+	(10,3,NULL,3,1,'2020-06-30 09:21:00',NULL,NULL,'2020-06-30 09:21:44','2020-06-30 09:21:44','609010db-298d-431f-a637-511a4d281899'),
+	(12,4,NULL,5,1,'2020-07-01 09:00:00',NULL,NULL,'2020-07-01 09:01:21','2020-07-01 09:03:04','4d0a00ae-e817-47b4-b4fb-56d86bb665f1'),
+	(15,4,NULL,5,1,'2020-07-01 09:00:00',NULL,NULL,'2020-07-01 09:03:04','2020-07-01 09:03:04','3d3385e1-7960-4141-9547-234069208c43'),
+	(20,4,NULL,5,1,'2020-07-01 09:07:00',NULL,NULL,'2020-07-01 09:08:18','2020-07-01 09:08:18','0ac579d7-1a49-49ca-aabf-69a7b4e5a598'),
+	(22,4,NULL,5,1,'2020-07-01 09:07:00',NULL,NULL,'2020-07-01 09:08:18','2020-07-01 09:08:18','13328854-4d9e-41b8-a221-bc57497cebbe'),
+	(29,4,NULL,5,1,'2020-07-01 09:09:00',NULL,NULL,'2020-07-01 09:10:22','2020-07-01 09:10:22','f21e93ed-11c1-4d38-91cb-4fa5af1f6885'),
+	(31,4,NULL,5,1,'2020-07-01 09:09:00',NULL,NULL,'2020-07-01 09:10:23','2020-07-01 09:10:23','e610b5de-4a74-481f-94b3-cc36c0118418'),
+	(33,4,NULL,4,1,'2020-07-01 09:11:00',NULL,NULL,'2020-07-01 09:11:21','2020-07-01 09:11:21','c8fab1da-a96d-4743-a9c7-88a131b661d8');
 
 /*!40000 ALTER TABLE `entries` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -725,13 +805,6 @@ VALUES
 	(198,20,91,48,1,3,'2020-06-30 09:32:06','2020-06-30 09:32:06','a42ca88c-fc33-43fa-8575-d269f2ad8b02'),
 	(199,20,91,49,1,1,'2020-06-30 09:32:06','2020-06-30 09:32:06','21bd22ba-caa8-4ecd-b544-a6fffde592c0'),
 	(200,21,92,50,1,1,'2020-06-30 09:32:06','2020-06-30 09:32:06','f37f3c64-9d21-4b55-a47d-baf2f5ecfaad'),
-	(201,18,93,4,0,1,'2020-06-30 09:47:01','2020-06-30 09:47:01','f349f043-c160-4b99-b0ff-11a5b42c8566'),
-	(202,18,94,42,0,1,'2020-06-30 09:47:01','2020-06-30 09:47:01','fdb24664-3de3-4d3f-858a-d3e7d5c2322f'),
-	(203,18,95,25,0,1,'2020-06-30 09:47:01','2020-06-30 09:47:01','1bc2e3af-4ec9-4871-ace2-d13547330e29'),
-	(204,18,95,23,0,2,'2020-06-30 09:47:01','2020-06-30 09:47:01','3ab4d31c-79d3-4377-a56e-e6694c638f0b'),
-	(205,17,96,42,0,1,'2020-06-30 09:47:33','2020-06-30 09:47:33','5977fe33-0ee1-494e-a758-2bea362935a7'),
-	(206,17,97,24,0,1,'2020-06-30 09:47:33','2020-06-30 09:47:33','be7c6d8a-e4ab-4db6-aebc-58d7197c303f'),
-	(207,17,97,23,0,2,'2020-06-30 09:47:33','2020-06-30 09:47:33','5f9869a6-2e50-40a5-a115-4848ee7bd51a'),
 	(208,22,98,53,0,3,'2020-06-30 09:52:33','2020-06-30 09:52:33','23c0659b-5545-4b52-9a81-6f5d5dcf6509'),
 	(209,22,98,51,0,1,'2020-06-30 09:52:33','2020-06-30 09:52:33','a81bebde-7036-4c3b-a967-c78aca66e89f'),
 	(210,22,98,52,0,2,'2020-06-30 09:52:33','2020-06-30 09:52:33','fe8591e1-a746-47c0-899c-e2244d1025b5'),
@@ -741,7 +814,13 @@ VALUES
 	(214,10,100,31,0,2,'2020-06-30 15:19:55','2020-06-30 15:19:55','f78856dc-1bfe-4b62-a4c5-ff44e342d1b7'),
 	(215,10,100,30,0,3,'2020-06-30 15:19:55','2020-06-30 15:19:55','5054fa8a-25d3-447b-ac98-54cf49ad590a'),
 	(216,10,101,28,0,1,'2020-06-30 15:19:55','2020-06-30 15:19:55','45665c36-c8cc-4543-8053-2ba527b279f7'),
-	(217,19,102,37,0,1,'2020-06-30 15:19:55','2020-06-30 15:19:55','41948e36-2753-4b39-9217-8382e3271297');
+	(217,19,102,37,0,1,'2020-06-30 15:19:55','2020-06-30 15:19:55','41948e36-2753-4b39-9217-8382e3271297'),
+	(218,18,103,4,0,1,'2020-07-01 09:02:06','2020-07-01 09:02:06','2884a164-3ea9-4aff-94aa-bd2064425ed6'),
+	(219,18,104,25,0,1,'2020-07-01 09:02:06','2020-07-01 09:02:06','2af88fd3-e067-4c77-a584-12ac3df3cd78'),
+	(220,18,104,23,0,2,'2020-07-01 09:02:06','2020-07-01 09:02:06','c462d74f-c7fa-4b41-9a29-2a4beabd613c'),
+	(223,17,106,25,0,1,'2020-07-01 09:12:13','2020-07-01 09:12:13','26706638-7fce-4da3-b378-a065fdf8ecb2'),
+	(224,17,106,23,0,2,'2020-07-01 09:12:13','2020-07-01 09:12:13','11a12348-2743-4b21-8bb0-63ef85ebd54b'),
+	(227,23,109,54,0,1,'2020-07-01 09:19:40','2020-07-01 09:19:40','fcc69c11-f9f6-4ef4-be9c-6c2919546d1f');
 
 /*!40000 ALTER TABLE `fieldlayoutfields` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -790,7 +869,8 @@ VALUES
 	(19,'craft\\elements\\Asset','2020-06-29 15:04:08','2020-06-30 09:19:40',NULL,'71520570-0884-48d3-8b9b-a5ac2fe8e8e4'),
 	(20,'craft\\elements\\MatrixBlock','2020-06-30 09:28:02','2020-06-30 09:28:02',NULL,'9078b0df-811f-4c76-b011-5d7d75e21f16'),
 	(21,'craft\\elements\\MatrixBlock','2020-06-30 09:32:06','2020-06-30 09:32:06',NULL,'088a9888-4f4a-4c24-9756-170fa037079f'),
-	(22,'craft\\elements\\GlobalSet','2020-06-30 09:52:33','2020-06-30 09:52:33',NULL,'0fb7a1e2-da23-40b8-95ba-78b6fe2379d6');
+	(22,'craft\\elements\\GlobalSet','2020-06-30 09:52:33','2020-06-30 09:52:33',NULL,'0fb7a1e2-da23-40b8-95ba-78b6fe2379d6'),
+	(23,'craft\\elements\\Asset','2020-07-01 09:17:16','2020-07-01 09:17:16',NULL,'e8b47e71-94ef-4b05-85a2-f9578c687105');
 
 /*!40000 ALTER TABLE `fieldlayouts` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -837,16 +917,15 @@ VALUES
 	(90,14,'Content',1,'2020-06-30 09:32:06','2020-06-30 09:32:06','3e6a228e-c73c-4300-81b9-0d6b1a1c5f86'),
 	(91,20,'Content',1,'2020-06-30 09:32:06','2020-06-30 09:32:06','1ae9aba8-af8b-420b-99d2-4d27b8b68969'),
 	(92,21,'Content',1,'2020-06-30 09:32:06','2020-06-30 09:32:06','5672dce6-8226-4376-bf2e-a15f85447e4e'),
-	(93,18,'Content',1,'2020-06-30 09:47:01','2020-06-30 09:47:01','aab701dd-dc03-4981-8bfc-f14fbc54affa'),
-	(94,18,'Settings',2,'2020-06-30 09:47:01','2020-06-30 09:47:01','73ea3ae1-d82e-4378-aba3-abe796eba369'),
-	(95,18,'Metadata',3,'2020-06-30 09:47:01','2020-06-30 09:47:01','403aaee5-d619-4774-a4c8-1b15b610fdf9'),
-	(96,17,'Settings',1,'2020-06-30 09:47:33','2020-06-30 09:47:33','bc34a217-b829-4d7f-a6f7-5b124f68a6ad'),
-	(97,17,'Metadata',2,'2020-06-30 09:47:33','2020-06-30 09:47:33','a61f07f6-81db-4451-a622-6e4223fc4d39'),
 	(98,22,'Organisational Information',1,'2020-06-30 09:52:33','2020-06-30 09:52:33','9ba493a2-949c-4870-986e-bc09d1b36dbd'),
 	(99,11,'Metadata',1,'2020-06-30 15:19:55','2020-06-30 15:19:55','622dcbfa-39d6-4e7c-907d-98adc449b0d1'),
 	(100,10,'Metadata',1,'2020-06-30 15:19:55','2020-06-30 15:19:55','10d20d3e-18d5-4485-a4eb-336304f3b256'),
 	(101,10,'Optimized Images',2,'2020-06-30 15:19:55','2020-06-30 15:19:55','23846c8b-f7e9-4997-aa8f-8a6c2ed9c413'),
-	(102,19,'Optimized Images',1,'2020-06-30 15:19:55','2020-06-30 15:19:55','e9321c44-750a-4c55-8d60-ffeac4ef96c3');
+	(102,19,'Optimized Images',1,'2020-06-30 15:19:55','2020-06-30 15:19:55','e9321c44-750a-4c55-8d60-ffeac4ef96c3'),
+	(103,18,'Content',1,'2020-07-01 09:02:06','2020-07-01 09:02:06','e0fb3519-8ce8-4585-8fc6-92aa09c067f0'),
+	(104,18,'Metadata',2,'2020-07-01 09:02:06','2020-07-01 09:02:06','93e1c536-fb80-433b-b98c-c7f99a1f16ce'),
+	(106,17,'Metadata',1,'2020-07-01 09:12:13','2020-07-01 09:12:13','63e695f5-5695-4fec-975a-2d61155d3d12'),
+	(109,23,'Image Optimizations',1,'2020-07-01 09:19:40','2020-07-01 09:19:40','0cc19e84-16b7-40b5-85d5-0ca9b3a26138');
 
 /*!40000 ALTER TABLE `fieldlayouttabs` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -936,7 +1015,8 @@ VALUES
 	(50,NULL,'Cards','cards','matrixBlockType:47c98ad7-c9a9-402c-9171-9fd14eb7e8f4','Select entries to be displayed on the page',0,'site',NULL,'craft\\fields\\Entries','{\"allowSelfRelations\":\"\",\"limit\":\"2\",\"localizeRelations\":false,\"selectionLabel\":\"Add a card to highlight\",\"source\":null,\"sources\":[\"section:9de367ab-77b8-47bb-bbc3-63e79a202c3e\",\"section:ef841ba4-7bcd-4ef5-9c12-96377bf7fba2\"],\"targetSiteId\":null,\"validateRelatedElements\":\"\",\"viewMode\":null}','2020-06-30 09:32:06','2020-06-30 09:32:06','6c47b7b0-71d0-4acb-92d5-6d8624f711fb'),
 	(51,5,'Organisation Name','organisationName','global','Enter your organisation name',1,'none',NULL,'craft\\fields\\PlainText','{\"byteLimit\":null,\"charLimit\":null,\"code\":\"\",\"columnType\":null,\"initialRows\":\"4\",\"multiline\":\"\",\"placeholder\":\"\"}','2020-06-30 09:48:25','2020-06-30 09:48:25','76099428-f3d4-42a7-9bb8-08f425b41461'),
 	(52,5,'Organisation Email','organisationEmail','global','enter your organisation email address',0,'none',NULL,'craft\\fields\\Email','{\"placeholder\":\"\"}','2020-06-30 09:49:07','2020-06-30 09:49:27','e0ee7443-387e-4be3-a64f-3c5ae52be354'),
-	(53,5,'Organisation Phone','organisationPhone','global','Enter your organisation\'s phone number',1,'none',NULL,'craft\\fields\\PlainText','{\"byteLimit\":null,\"charLimit\":null,\"code\":\"\",\"columnType\":null,\"initialRows\":\"4\",\"multiline\":\"\",\"placeholder\":\"\"}','2020-06-30 09:50:12','2020-06-30 09:50:12','54daa4d7-b5cf-4458-9e19-67155be19343');
+	(53,5,'Organisation Phone','organisationPhone','global','Enter your organisation\'s phone number',1,'none',NULL,'craft\\fields\\PlainText','{\"byteLimit\":null,\"charLimit\":null,\"code\":\"\",\"columnType\":null,\"initialRows\":\"4\",\"multiline\":\"\",\"placeholder\":\"\"}','2020-06-30 09:50:12','2020-06-30 09:50:12','54daa4d7-b5cf-4458-9e19-67155be19343'),
+	(54,7,'Optimize Profile Images','optimizeProfileImages','global','',0,'none',NULL,'nystudio107\\imageoptimize\\fields\\OptimizedImages','{\"displayDominantColorPalette\":\"1\",\"displayLazyLoadPlaceholderImages\":\"1\",\"displayOptimizedImageVariants\":\"1\",\"ignoreFilesOfType\":[\"image/svg\",\"image/gif\"],\"variants\":[{\"width\":\"760\",\"useAspectRatio\":\"1\",\"aspectRatioX\":\"1\",\"aspectRatioY\":\"1\",\"retinaSizes\":[\"1\"],\"quality\":\"82\",\"format\":\"\"},{\"width\":\"380\",\"useAspectRatio\":\"1\",\"aspectRatioX\":\"1\",\"aspectRatioY\":\"1\",\"retinaSizes\":[\"1\",\"2\",\"3\"],\"quality\":\"60\",\"format\":\"\"},{\"width\":\"100\",\"useAspectRatio\":\"1\",\"aspectRatioX\":\"1\",\"aspectRatioY\":\"1\",\"retinaSizes\":[\"1\",\"2\",\"3\"],\"quality\":\"60\",\"format\":\"\"}]}','2020-07-01 09:15:06','2020-07-01 09:15:06','9806bc10-174e-4280-b2a8-c684b99a3139');
 
 /*!40000 ALTER TABLE `fields` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -1042,7 +1122,7 @@ LOCK TABLES `info` WRITE;
 
 INSERT INTO `info` (`id`, `version`, `schemaVersion`, `maintenance`, `configMap`, `fieldVersion`, `dateCreated`, `dateUpdated`, `uid`)
 VALUES
-	(1,'3.5.0-beta.3','3.5.2',0,'{\"dateModified\":\"@config/project.yaml\",\"email\":\"@config/project.yaml\",\"fieldGroups\":\"@config/project.yaml\",\"fields\":\"@config/project.yaml\",\"globalSets\":\"@config/project.yaml\",\"matrixBlockTypes\":\"@config/project.yaml\",\"plugins\":\"@config/project.yaml\",\"sections\":\"@config/project.yaml\",\"siteGroups\":\"@config/project.yaml\",\"sites\":\"@config/project.yaml\",\"spoonBlockTypes\":\"@config/project.yaml\",\"superTableBlockTypes\":\"@config/project.yaml\",\"system\":\"@config/project.yaml\",\"users\":\"@config/project.yaml\",\"volumes\":\"@config/project.yaml\"}','zbxbaobplfyj','2020-06-03 15:54:07','2020-06-30 15:19:55','c8953b7a-9a69-461e-9700-4f9e698b4bbd');
+	(1,'3.5.0-beta.3','3.5.2',0,'{\"dateModified\":\"@config/project.yaml\",\"email\":\"@config/project.yaml\",\"fieldGroups\":\"@config/project.yaml\",\"fields\":\"@config/project.yaml\",\"globalSets\":\"@config/project.yaml\",\"matrixBlockTypes\":\"@config/project.yaml\",\"plugins\":\"@config/project.yaml\",\"sections\":\"@config/project.yaml\",\"siteGroups\":\"@config/project.yaml\",\"sites\":\"@config/project.yaml\",\"spoonBlockTypes\":\"@config/project.yaml\",\"superTableBlockTypes\":\"@config/project.yaml\",\"system\":\"@config/project.yaml\",\"users\":\"@config/project.yaml\",\"volumes\":\"@config/project.yaml\",\"navigation\":\"@config/project.yaml\"}','iskgqoiedelo','2020-06-03 15:54:07','2020-07-01 09:15:06','c8953b7a-9a69-461e-9700-4f9e698b4bbd');
 
 /*!40000 ALTER TABLE `info` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -1114,7 +1194,13 @@ INSERT INTO `matrixblocks` (`id`, `ownerId`, `fieldId`, `typeId`, `sortOrder`, `
 VALUES
 	(7,6,4,1,1,0,'2020-06-29 15:58:36','2020-06-29 15:58:36','5decc9e1-6ef3-41dc-8eed-418ef997c34f'),
 	(8,6,4,1,1,NULL,'2020-06-29 15:58:43','2020-06-29 15:58:43','e709a36a-b399-4a69-8ed4-c9b978eeaa95'),
-	(9,6,4,3,2,NULL,'2020-06-29 15:58:43','2020-06-29 15:58:43','bbd77073-3576-42d3-9943-8bec5ca0a462');
+	(9,6,4,3,2,NULL,'2020-06-29 15:58:43','2020-06-29 15:58:43','bbd77073-3576-42d3-9943-8bec5ca0a462'),
+	(14,12,4,2,1,NULL,'2020-07-01 09:03:04','2020-07-01 09:03:04','3e708068-c6b7-45e2-b7bb-18e5669d24e6'),
+	(16,15,4,2,1,NULL,'2020-07-01 09:03:04','2020-07-01 09:03:04','d1216a7e-488e-4deb-86f3-d9f3e8e468da'),
+	(21,20,4,2,1,NULL,'2020-07-01 09:08:18','2020-07-01 09:08:18','9aba7fce-46fb-4cfa-928c-7f424e0f8ab9'),
+	(23,22,4,2,1,NULL,'2020-07-01 09:08:18','2020-07-01 09:08:18','688dc420-af81-45ce-897d-87f0858c41b3'),
+	(30,29,4,2,1,NULL,'2020-07-01 09:10:23','2020-07-01 09:10:23','f71db415-a2a4-4fae-82ec-7a2cb2eeecf9'),
+	(32,31,4,2,1,NULL,'2020-07-01 09:10:23','2020-07-01 09:10:23','fc6afb81-60bc-4291-b8b7-5a7782fac16b');
 
 /*!40000 ALTER TABLE `matrixblocks` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -1200,7 +1286,17 @@ INSERT INTO `matrixcontent_contentbuilder` (`id`, `elementId`, `siteId`, `dateCr
 VALUES
 	(1,7,2,'2020-06-29 15:58:36','2020-06-29 15:58:36','c3bbd3c2-5d18-4d1c-b45b-20bb8d1ba50d',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 	(2,8,2,'2020-06-29 15:58:43','2020-06-29 15:58:43','3fd1ee5d-eedd-4450-ac7c-cf2756e1a9fd',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
-	(3,9,2,'2020-06-29 15:58:43','2020-06-29 15:58:43','f01baf1e-4958-4168-83f6-c2b3e1b00f08',NULL,NULL,NULL,'blockQuote',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+	(3,9,2,'2020-06-29 15:58:43','2020-06-29 15:58:43','f01baf1e-4958-4168-83f6-c2b3e1b00f08',NULL,NULL,NULL,'blockQuote',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+	(4,14,2,'2020-07-01 09:03:04','2020-07-01 09:07:05','6035bf64-f3c1-4c49-8939-447b155a8354',NULL,NULL,'<p>Privacy Policy goes here</p>',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+	(5,16,2,'2020-07-01 09:03:04','2020-07-01 09:03:04','97821463-1afd-4e68-9fd4-7961c04c5c82',NULL,NULL,'<p>Privacy Policy goes here</p>',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+	(6,18,2,'2020-07-01 09:08:16','2020-07-01 09:08:16','4004f172-d536-48bd-b6e7-750cc11f2e12',NULL,NULL,'<p>About Content</p>',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+	(8,21,2,'2020-07-01 09:08:18','2020-07-01 09:08:18','71ee4e66-863b-4977-aa13-3a5bc05271b2',NULL,NULL,'<p>About Content</p>',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+	(9,23,2,'2020-07-01 09:08:18','2020-07-01 09:08:18','a0bbd3f4-3618-46cc-9125-31e985118025',NULL,NULL,'<p>About Content</p>',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+	(10,25,2,'2020-07-01 09:10:04','2020-07-01 09:10:04','08ebe682-a7d2-461a-ba30-5e246a81ff72',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+	(11,26,2,'2020-07-01 09:10:11','2020-07-01 09:10:11','cfd42271-f769-4a77-894f-348dfbb87f4e',NULL,NULL,'<p>Contact C</p>',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+	(12,27,2,'2020-07-01 09:10:18','2020-07-01 09:10:18','0ac892df-a3ce-4a0e-b649-c8b5ee3a86a0',NULL,NULL,'<p>Contact Content</p>',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+	(14,30,2,'2020-07-01 09:10:23','2020-07-01 09:10:23','8d641715-9a91-4ac4-ae99-a4db6950f033',NULL,NULL,'<p>Contact Content</p>',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+	(15,32,2,'2020-07-01 09:10:23','2020-07-01 09:10:23','7cc87532-afed-44ce-a581-cd70934454a4',NULL,NULL,'<p>Contact Content</p>',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 
 /*!40000 ALTER TABLE `matrixcontent_contentbuilder` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -1436,9 +1532,125 @@ VALUES
 	(206,'craft','m200522_191453_clear_template_caches','2020-06-24 08:57:02','2020-06-24 08:57:02','2020-06-24 08:57:02','2b54636b-f8cc-4338-9f2c-280add186d75'),
 	(207,'craft','m200606_231117_migration_tracks','2020-06-24 08:57:02','2020-06-24 08:57:02','2020-06-24 08:57:02','a3353710-2706-4f34-a8be-33969391744e'),
 	(222,'plugin:typedlinkfield','Install','2020-06-24 09:21:11','2020-06-24 09:21:11','2020-06-24 09:21:11','f8c77ca0-c477-4db7-b397-16ff5f1376b0'),
-	(223,'plugin:typedlinkfield','m190417_202153_migrateDataToTable','2020-06-24 09:21:11','2020-06-24 09:21:11','2020-06-24 09:21:11','ebe7738e-922d-4e8b-867a-a9c2aec89b4b');
+	(223,'plugin:typedlinkfield','m190417_202153_migrateDataToTable','2020-06-24 09:21:11','2020-06-24 09:21:11','2020-06-24 09:21:11','ebe7738e-922d-4e8b-867a-a9c2aec89b4b'),
+	(224,'plugin:navigation','Install','2020-07-01 08:08:52','2020-07-01 08:08:52','2020-07-01 08:08:52','3a6f38b2-b090-423d-be77-49d758457116'),
+	(225,'plugin:navigation','m180826_000000_propagate_nav_setting','2020-07-01 08:08:52','2020-07-01 08:08:52','2020-07-01 08:08:52','ed89484b-7436-4bdd-91c7-5f5b8fa1dde8'),
+	(226,'plugin:navigation','m180827_000000_propagate_nav_setting_additional','2020-07-01 08:08:52','2020-07-01 08:08:52','2020-07-01 08:08:52','0612feef-697a-4a0b-92ba-a4dec6425fdf'),
+	(227,'plugin:navigation','m181110_000000_add_elementSiteId','2020-07-01 08:08:52','2020-07-01 08:08:52','2020-07-01 08:08:52','62540a74-7e26-48a4-862c-2bd6c430fb48'),
+	(228,'plugin:navigation','m181123_000000_populate_elementSiteIds','2020-07-01 08:08:52','2020-07-01 08:08:52','2020-07-01 08:08:52','34e011a8-2c1c-49be-ac99-ea75cb2f58f3'),
+	(229,'plugin:navigation','m190203_000000_add_instructions','2020-07-01 08:08:52','2020-07-01 08:08:52','2020-07-01 08:08:52','ccee4470-998d-44ad-bf59-d8f2dacc51e2'),
+	(230,'plugin:navigation','m190209_000000_project_config','2020-07-01 08:08:52','2020-07-01 08:08:52','2020-07-01 08:08:52','0a3219e2-585c-4108-8431-5a2a3dd3cd42'),
+	(231,'plugin:navigation','m190223_000000_permissions','2020-07-01 08:08:52','2020-07-01 08:08:52','2020-07-01 08:08:52','95fee7c0-758c-4949-ac82-fd0fb7ffe6b6'),
+	(232,'plugin:navigation','m190307_000000_update_field_content','2020-07-01 08:08:52','2020-07-01 08:08:52','2020-07-01 08:08:52','66e043c8-256d-45e3-96e2-3010cd46cd78'),
+	(233,'plugin:navigation','m190310_000000_migrate_elementSiteId','2020-07-01 08:08:52','2020-07-01 08:08:52','2020-07-01 08:08:52','9f186b98-4c49-412a-900d-cbcdd3a6cc66'),
+	(234,'plugin:navigation','m190314_000000_soft_deletes','2020-07-01 08:08:52','2020-07-01 08:08:52','2020-07-01 08:08:52','7df374a1-e46c-45cb-bae2-ef022dc007cd'),
+	(235,'plugin:navigation','m190315_000000_project_config','2020-07-01 08:08:52','2020-07-01 08:08:52','2020-07-01 08:08:52','0fafe805-a2d9-437c-a2b3-ec4c7a8a01db'),
+	(236,'plugin:navigation','m191127_000000_fix_nav_handle','2020-07-01 08:08:52','2020-07-01 08:08:52','2020-07-01 08:08:52','c0a3d721-2f43-47e8-bb6b-b48d930f528a'),
+	(237,'plugin:navigation','m191230_102505_add_fieldLayoutId','2020-07-01 08:08:52','2020-07-01 08:08:52','2020-07-01 08:08:52','ae434123-46db-4f16-8d7f-d5e1f5fbf086'),
+	(238,'plugin:navigation','m200108_000000_add_attributes','2020-07-01 08:08:52','2020-07-01 08:08:52','2020-07-01 08:08:52','415df2cb-232c-48c9-abf9-b55c18525466'),
+	(239,'plugin:navigation','m200108_100000_add_url_suffix','2020-07-01 08:08:52','2020-07-01 08:08:52','2020-07-01 08:08:52','83d63120-bfe8-41da-a9fe-8c06f856c661'),
+	(240,'plugin:navigation','m200108_200000_add_max_nodes','2020-07-01 08:08:52','2020-07-01 08:08:52','2020-07-01 08:08:52','5215ae43-2463-4861-af57-f5ddf0e4676f'),
+	(241,'plugin:navigation','m200205_000000_add_data','2020-07-01 08:08:52','2020-07-01 08:08:52','2020-07-01 08:08:52','459ffb8d-6c57-42c3-8072-982711437d06'),
+	(242,'plugin:super-table','Install','2020-07-01 08:32:55','2020-07-01 08:32:55','2020-07-01 08:32:55','d540fa74-8aaa-4ce1-80ef-38dbf6650207'),
+	(243,'plugin:super-table','m180210_000000_migrate_content_tables','2020-07-01 08:32:55','2020-07-01 08:32:55','2020-07-01 08:32:55','a8601325-ebdc-46b5-be1e-b55f4c6a4063'),
+	(244,'plugin:super-table','m180211_000000_type_columns','2020-07-01 08:32:55','2020-07-01 08:32:55','2020-07-01 08:32:55','026cdca8-2622-4172-9bf9-7fdd58acc794'),
+	(245,'plugin:super-table','m180219_000000_sites','2020-07-01 08:32:55','2020-07-01 08:32:55','2020-07-01 08:32:55','e7db5037-7a5f-4c00-96b2-59f521893967'),
+	(246,'plugin:super-table','m180220_000000_fix_context','2020-07-01 08:32:55','2020-07-01 08:32:55','2020-07-01 08:32:55','8e79eed7-4730-4d00-9acc-09513c9dad81'),
+	(247,'plugin:super-table','m190117_000000_soft_deletes','2020-07-01 08:32:55','2020-07-01 08:32:55','2020-07-01 08:32:55','3fcdc566-bae5-4159-aec2-217254982a50'),
+	(248,'plugin:super-table','m190117_000001_context_to_uids','2020-07-01 08:32:55','2020-07-01 08:32:55','2020-07-01 08:32:55','9cb2afba-c0f8-4417-bcfa-aba404b62558'),
+	(249,'plugin:super-table','m190120_000000_fix_supertablecontent_tables','2020-07-01 08:32:55','2020-07-01 08:32:55','2020-07-01 08:32:55','db11b8b8-a7af-47a3-ae64-46e4cc4846f7'),
+	(250,'plugin:super-table','m190131_000000_fix_supertable_missing_fields','2020-07-01 08:32:55','2020-07-01 08:32:55','2020-07-01 08:32:55','c1bb2dd3-106e-430a-9f98-b6924a62d31e'),
+	(251,'plugin:super-table','m190227_100000_fix_project_config','2020-07-01 08:32:55','2020-07-01 08:32:55','2020-07-01 08:32:55','6b77a16c-82ec-4190-9a81-3145e7880363'),
+	(252,'plugin:super-table','m190511_100000_fix_project_config','2020-07-01 08:32:55','2020-07-01 08:32:55','2020-07-01 08:32:55','06213385-7a64-4407-8405-f7b173ac99e4'),
+	(253,'plugin:super-table','m190520_000000_fix_project_config','2020-07-01 08:32:55','2020-07-01 08:32:55','2020-07-01 08:32:55','407f361a-550b-40f4-96c9-f7234b3a367c'),
+	(254,'plugin:super-table','m190714_000000_propagation_method','2020-07-01 08:32:55','2020-07-01 08:32:55','2020-07-01 08:32:55','59c15ee5-a833-45b4-bd97-48f8141a70f2'),
+	(255,'plugin:super-table','m191127_000000_fix_width','2020-07-01 08:32:55','2020-07-01 08:32:55','2020-07-01 08:32:55','ead5d86d-3106-4660-a0c6-630d62ce2007');
 
 /*!40000 ALTER TABLE `migrations` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+# Dump of table navigation_navs
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `navigation_navs`;
+
+CREATE TABLE `navigation_navs` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `structureId` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `handle` varchar(255) NOT NULL,
+  `instructions` text DEFAULT NULL,
+  `sortOrder` smallint(6) unsigned DEFAULT NULL,
+  `propagateNodes` tinyint(1) DEFAULT 0,
+  `maxNodes` int(11) DEFAULT NULL,
+  `fieldLayoutId` int(11) DEFAULT NULL,
+  `dateCreated` datetime NOT NULL,
+  `dateUpdated` datetime NOT NULL,
+  `dateDeleted` datetime DEFAULT NULL,
+  `uid` char(36) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`),
+  KEY `navigation_navs_handle_idx` (`handle`),
+  KEY `navigation_navs_structureId_idx` (`structureId`),
+  KEY `navigation_navs_fieldLayoutId_idx` (`fieldLayoutId`),
+  KEY `navigation_navs_dateDeleted_idx` (`dateDeleted`),
+  CONSTRAINT `navigation_navs_fieldLayoutId_fk` FOREIGN KEY (`fieldLayoutId`) REFERENCES `fieldlayouts` (`id`) ON DELETE SET NULL,
+  CONSTRAINT `navigation_navs_structureId_fk` FOREIGN KEY (`structureId`) REFERENCES `structures` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+LOCK TABLES `navigation_navs` WRITE;
+/*!40000 ALTER TABLE `navigation_navs` DISABLE KEYS */;
+
+INSERT INTO `navigation_navs` (`id`, `structureId`, `name`, `handle`, `instructions`, `sortOrder`, `propagateNodes`, `maxNodes`, `fieldLayoutId`, `dateCreated`, `dateUpdated`, `dateDeleted`, `uid`)
+VALUES
+	(1,1,'Primary Navigation','primaryNavigation','',1,0,NULL,NULL,'2020-07-01 08:31:47','2020-07-01 08:59:45',NULL,'d8cef538-a756-4496-b7f6-0e0bb61c14c2'),
+	(2,2,'Secondary Navigation','secondaryNavigation','',2,0,NULL,NULL,'2020-07-01 08:59:08','2020-07-01 08:59:08',NULL,'46faf86d-bfa5-4356-bef1-0af3b2a87332'),
+	(3,3,'Footer Navigation','footerNavigation','',3,0,NULL,NULL,'2020-07-01 09:00:09','2020-07-01 09:00:09',NULL,'b51f4d5a-4d35-43f1-af05-72e206874892'),
+	(4,4,'Legal Navigation','legalNavigation','',4,0,NULL,NULL,'2020-07-01 09:00:29','2020-07-01 09:00:29',NULL,'e0745046-9bad-4922-8da8-7f677ba84909');
+
+/*!40000 ALTER TABLE `navigation_navs` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+# Dump of table navigation_nodes
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `navigation_nodes`;
+
+CREATE TABLE `navigation_nodes` (
+  `id` int(11) NOT NULL,
+  `elementId` int(11) DEFAULT NULL,
+  `navId` int(11) NOT NULL,
+  `parentId` int(11) DEFAULT NULL,
+  `url` varchar(255) DEFAULT NULL,
+  `type` varchar(255) DEFAULT NULL,
+  `classes` varchar(255) DEFAULT NULL,
+  `urlSuffix` varchar(255) DEFAULT NULL,
+  `customAttributes` text DEFAULT NULL,
+  `data` text DEFAULT NULL,
+  `newWindow` tinyint(1) DEFAULT 0,
+  `deletedWithNav` tinyint(1) DEFAULT NULL,
+  `dateCreated` datetime NOT NULL,
+  `dateUpdated` datetime NOT NULL,
+  `uid` char(36) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`),
+  KEY `navigation_nodes_navId_idx` (`navId`),
+  KEY `navigation_nodes_elementId_fk` (`elementId`),
+  CONSTRAINT `navigation_nodes_elementId_fk` FOREIGN KEY (`elementId`) REFERENCES `elements` (`id`) ON DELETE SET NULL,
+  CONSTRAINT `navigation_nodes_id_fk` FOREIGN KEY (`id`) REFERENCES `elements` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `navigation_nodes_navId_fk` FOREIGN KEY (`navId`) REFERENCES `navigation_navs` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+LOCK TABLES `navigation_nodes` WRITE;
+/*!40000 ALTER TABLE `navigation_nodes` DISABLE KEYS */;
+
+INSERT INTO `navigation_nodes` (`id`, `elementId`, `navId`, `parentId`, `url`, `type`, `classes`, `urlSuffix`, `customAttributes`, `data`, `newWindow`, `deletedWithNav`, `dateCreated`, `dateUpdated`, `uid`)
+VALUES
+	(34,20,2,NULL,NULL,'craft\\elements\\Entry',NULL,NULL,'[]','[]',0,NULL,'2020-07-01 09:28:18','2020-07-01 09:28:18','e33eb5fe-2d47-427f-8bc6-886d303a2143'),
+	(35,29,2,NULL,NULL,'craft\\elements\\Entry',NULL,NULL,'[]','[]',0,NULL,'2020-07-01 09:28:29','2020-07-01 09:28:29','4d2a752e-e7cd-4fa0-b16e-e8c8e2d0ce0a'),
+	(36,12,4,NULL,NULL,'craft\\elements\\Entry',NULL,NULL,'[]','[]',0,NULL,'2020-07-01 09:29:48','2020-07-01 09:29:48','08312948-459d-46e9-a348-36e150be3935');
+
+/*!40000 ALTER TABLE `navigation_nodes` ENABLE KEYS */;
 UNLOCK TABLES;
 
 
@@ -1488,25 +1700,27 @@ LOCK TABLES `plugins` WRITE;
 
 INSERT INTO `plugins` (`id`, `handle`, `version`, `schemaVersion`, `licenseKeyStatus`, `licensedEdition`, `installDate`, `dateCreated`, `dateUpdated`, `uid`)
 VALUES
-	(1,'aws-s3','1.2.8','1.2','unknown',NULL,'2020-06-03 17:29:06','2020-06-03 17:29:06','2020-06-30 15:20:13','e7a25f97-e6c6-4c88-982f-2c53dfadc061'),
-	(2,'fastcgi-cache-bust','1.0.9','1.0.0','unknown',NULL,'2020-06-03 17:29:06','2020-06-03 17:29:06','2020-06-30 15:20:13','76ab2217-f3ad-46d1-9861-a4141160dd67'),
-	(3,'feed-me','4.2.3','2.1.2','unknown',NULL,'2020-06-03 17:29:06','2020-06-03 17:29:06','2020-06-30 15:20:13','cc6e476a-e4ae-4f2d-aa33-96cf23e64bb6'),
-	(4,'image-optimize','1.6.14','1.0.0','invalid',NULL,'2020-06-03 17:29:06','2020-06-03 17:29:06','2020-06-30 15:20:13','6b9a8f2f-c21f-4455-8445-fd1f88e6e651'),
-	(5,'minify','1.2.10','1.0.0','unknown',NULL,'2020-06-03 17:29:07','2020-06-03 17:29:07','2020-06-30 15:20:13','f90892e9-67a5-4e30-8479-026ec17a881c'),
-	(6,'mailgun','1.4.3','1.0.0','unknown',NULL,'2020-06-03 17:29:07','2020-06-03 17:29:07','2020-06-30 15:20:13','a6f81e66-59c5-475d-9880-b9f5885ee126'),
-	(7,'redactor','2.6.1','2.3.0','unknown',NULL,'2020-06-03 17:29:07','2020-06-03 17:29:07','2020-06-30 15:20:13','3feb520e-58d2-4a98-8e0b-21160d7fda1d'),
-	(8,'retour','3.1.39','3.0.9','invalid',NULL,'2020-06-03 17:29:07','2020-06-03 17:29:07','2020-06-30 15:20:13','99ada9be-cbe7-49c6-8176-b1e3f5c58e0e'),
-	(9,'seomatic','3.3.8','3.0.9','invalid',NULL,'2020-06-03 17:29:07','2020-06-03 17:29:07','2020-06-30 15:20:13','dc8072cd-5037-4bff-a6f1-82649bcaa003'),
-	(10,'twigpack','1.2.2','1.0.0','unknown',NULL,'2020-06-03 17:29:08','2020-06-03 17:29:08','2020-06-30 15:20:13','8a87e082-6d91-4cf0-afe3-f4e694327d58'),
-	(11,'typogrify','1.1.18','1.0.0','unknown',NULL,'2020-06-03 17:29:08','2020-06-03 17:29:08','2020-06-30 15:20:13','996f1b25-4fa7-4351-aaa5-42883dcda503'),
-	(12,'webperf','1.0.18','1.0.1','invalid',NULL,'2020-06-03 17:29:08','2020-06-03 17:29:08','2020-06-30 15:20:13','c3808de6-4817-4eff-a80f-c198b77a04b7'),
-	(13,'notifications','1.1.1','1.0.0','unknown',NULL,'2020-06-03 17:32:30','2020-06-03 17:32:30','2020-06-30 15:20:13','200f861c-6c16-45ec-9b1b-1afc1405ecad'),
-	(14,'password-policy','1.0.4','1.0.0','unknown',NULL,'2020-06-03 17:32:35','2020-06-03 17:32:35','2020-06-30 15:20:13','354170bf-181f-41e1-8c97-4c500e2907dd'),
-	(15,'position-fieldtype','1.0.16','1.0.0','unknown',NULL,'2020-06-03 17:32:38','2020-06-03 17:32:38','2020-06-30 15:20:13','5cbc98b2-36bd-4362-b6be-913860bfe571'),
-	(16,'spoon','3.5.2','3.5.0','invalid',NULL,'2020-06-03 17:32:41','2020-06-03 17:32:41','2020-06-30 15:20:13','625751ec-385a-454f-aed5-331222bc4dfe'),
-	(17,'width-fieldtype','1.0.7','1.0.0','unknown',NULL,'2020-06-03 17:32:45','2020-06-03 17:32:45','2020-06-30 15:20:13','1b0e1157-330c-46b6-a65d-c1b5333e5d85'),
-	(18,'eager-beaver','1.0.4','1.0.0','unknown',NULL,'2020-06-24 08:57:37','2020-06-24 08:57:37','2020-06-30 15:20:13','d643af87-22a8-415f-b751-a93a34fcc7ce'),
-	(20,'typedlinkfield','2.0.0-beta.9','2.0.0','unknown',NULL,'2020-06-24 09:21:11','2020-06-24 09:21:11','2020-06-30 15:20:13','55cedef8-552e-4981-beb2-146ff64c2d89');
+	(1,'aws-s3','1.2.8','1.2','unknown',NULL,'2020-06-03 17:29:06','2020-06-03 17:29:06','2020-07-01 08:33:06','e7a25f97-e6c6-4c88-982f-2c53dfadc061'),
+	(2,'fastcgi-cache-bust','1.0.9','1.0.0','unknown',NULL,'2020-06-03 17:29:06','2020-06-03 17:29:06','2020-07-01 08:33:06','76ab2217-f3ad-46d1-9861-a4141160dd67'),
+	(3,'feed-me','4.2.3','2.1.2','unknown',NULL,'2020-06-03 17:29:06','2020-06-03 17:29:06','2020-07-01 08:33:06','cc6e476a-e4ae-4f2d-aa33-96cf23e64bb6'),
+	(4,'image-optimize','1.6.14','1.0.0','invalid',NULL,'2020-06-03 17:29:06','2020-06-03 17:29:06','2020-07-01 08:33:06','6b9a8f2f-c21f-4455-8445-fd1f88e6e651'),
+	(5,'minify','1.2.10','1.0.0','unknown',NULL,'2020-06-03 17:29:07','2020-06-03 17:29:07','2020-07-01 08:33:06','f90892e9-67a5-4e30-8479-026ec17a881c'),
+	(6,'mailgun','1.4.3','1.0.0','unknown',NULL,'2020-06-03 17:29:07','2020-06-03 17:29:07','2020-07-01 08:33:06','a6f81e66-59c5-475d-9880-b9f5885ee126'),
+	(7,'redactor','2.6.1','2.3.0','unknown',NULL,'2020-06-03 17:29:07','2020-06-03 17:29:07','2020-07-01 08:33:06','3feb520e-58d2-4a98-8e0b-21160d7fda1d'),
+	(8,'retour','3.1.39','3.0.9','invalid',NULL,'2020-06-03 17:29:07','2020-06-03 17:29:07','2020-07-01 08:33:06','99ada9be-cbe7-49c6-8176-b1e3f5c58e0e'),
+	(9,'seomatic','3.3.8','3.0.9','invalid',NULL,'2020-06-03 17:29:07','2020-06-03 17:29:07','2020-07-01 08:33:06','dc8072cd-5037-4bff-a6f1-82649bcaa003'),
+	(10,'twigpack','1.2.3','1.0.0','unknown',NULL,'2020-06-03 17:29:08','2020-06-03 17:29:08','2020-07-01 08:33:07','8a87e082-6d91-4cf0-afe3-f4e694327d58'),
+	(11,'typogrify','1.1.18','1.0.0','unknown',NULL,'2020-06-03 17:29:08','2020-06-03 17:29:08','2020-07-01 08:33:07','996f1b25-4fa7-4351-aaa5-42883dcda503'),
+	(12,'webperf','1.0.18','1.0.1','invalid',NULL,'2020-06-03 17:29:08','2020-06-03 17:29:08','2020-07-01 08:33:07','c3808de6-4817-4eff-a80f-c198b77a04b7'),
+	(13,'notifications','1.1.1','1.0.0','unknown',NULL,'2020-06-03 17:32:30','2020-06-03 17:32:30','2020-07-01 08:33:06','200f861c-6c16-45ec-9b1b-1afc1405ecad'),
+	(14,'password-policy','1.0.4','1.0.0','unknown',NULL,'2020-06-03 17:32:35','2020-06-03 17:32:35','2020-07-01 08:33:06','354170bf-181f-41e1-8c97-4c500e2907dd'),
+	(15,'position-fieldtype','1.0.16','1.0.0','unknown',NULL,'2020-06-03 17:32:38','2020-06-03 17:32:38','2020-07-01 08:33:06','5cbc98b2-36bd-4362-b6be-913860bfe571'),
+	(16,'spoon','3.5.2','3.5.0','invalid',NULL,'2020-06-03 17:32:41','2020-06-03 17:32:41','2020-07-01 08:33:07','625751ec-385a-454f-aed5-331222bc4dfe'),
+	(17,'width-fieldtype','1.0.7','1.0.0','unknown',NULL,'2020-06-03 17:32:45','2020-06-03 17:32:45','2020-07-01 08:33:07','1b0e1157-330c-46b6-a65d-c1b5333e5d85'),
+	(18,'eager-beaver','1.0.4','1.0.0','unknown',NULL,'2020-06-24 08:57:37','2020-06-24 08:57:37','2020-07-01 08:33:06','d643af87-22a8-415f-b751-a93a34fcc7ce'),
+	(20,'typedlinkfield','2.0.0-beta.9','2.0.0','unknown',NULL,'2020-06-24 09:21:11','2020-06-24 09:21:11','2020-07-01 08:33:07','55cedef8-552e-4981-beb2-146ff64c2d89'),
+	(21,'navigation','1.3.21','1.0.17','invalid',NULL,'2020-07-01 08:08:51','2020-07-01 08:08:51','2020-07-01 08:33:06','b9a30535-9bda-4b5d-9b03-31a6d71d7ca6'),
+	(22,'super-table','2.5.1','2.2.1','unknown',NULL,'2020-07-01 08:32:55','2020-07-01 08:32:55','2020-07-01 08:33:07','6f5da9db-fd5d-4753-a1c0-56272ef57e34');
 
 /*!40000 ALTER TABLE `plugins` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -1528,7 +1742,7 @@ LOCK TABLES `projectconfig` WRITE;
 
 INSERT INTO `projectconfig` (`path`, `value`)
 VALUES
-	('dateModified','1593510748'),
+	('dateModified','1593595240'),
 	('email.fromEmail','\"$SYSTEM_EMAIL\"'),
 	('email.fromName','\"$SENDER_NAME\"'),
 	('email.replyToEmail','\"$REPLY_TO\"'),
@@ -2077,6 +2291,66 @@ VALUES
 	('fields.97956e7f-3294-43b2-9d6a-e717706432bc.translationKeyFormat','null'),
 	('fields.97956e7f-3294-43b2-9d6a-e717706432bc.translationMethod','\"none\"'),
 	('fields.97956e7f-3294-43b2-9d6a-e717706432bc.type','\"nystudio107\\\\imageoptimize\\\\fields\\\\OptimizedImages\"'),
+	('fields.9806bc10-174e-4280-b2a8-c684b99a3139.contentColumnType','\"text\"'),
+	('fields.9806bc10-174e-4280-b2a8-c684b99a3139.fieldGroup','\"1dd95078-7c8a-4ef7-8a16-e33a5341dadb\"'),
+	('fields.9806bc10-174e-4280-b2a8-c684b99a3139.handle','\"optimizeProfileImages\"'),
+	('fields.9806bc10-174e-4280-b2a8-c684b99a3139.instructions','\"\"'),
+	('fields.9806bc10-174e-4280-b2a8-c684b99a3139.name','\"Optimize Profile Images\"'),
+	('fields.9806bc10-174e-4280-b2a8-c684b99a3139.searchable','false'),
+	('fields.9806bc10-174e-4280-b2a8-c684b99a3139.settings.displayDominantColorPalette','\"1\"'),
+	('fields.9806bc10-174e-4280-b2a8-c684b99a3139.settings.displayLazyLoadPlaceholderImages','\"1\"'),
+	('fields.9806bc10-174e-4280-b2a8-c684b99a3139.settings.displayOptimizedImageVariants','\"1\"'),
+	('fields.9806bc10-174e-4280-b2a8-c684b99a3139.settings.ignoreFilesOfType.0','\"image/svg\"'),
+	('fields.9806bc10-174e-4280-b2a8-c684b99a3139.settings.ignoreFilesOfType.1','\"image/gif\"'),
+	('fields.9806bc10-174e-4280-b2a8-c684b99a3139.settings.variants.0.__assoc__.0.0','\"width\"'),
+	('fields.9806bc10-174e-4280-b2a8-c684b99a3139.settings.variants.0.__assoc__.0.1','\"760\"'),
+	('fields.9806bc10-174e-4280-b2a8-c684b99a3139.settings.variants.0.__assoc__.1.0','\"useAspectRatio\"'),
+	('fields.9806bc10-174e-4280-b2a8-c684b99a3139.settings.variants.0.__assoc__.1.1','\"1\"'),
+	('fields.9806bc10-174e-4280-b2a8-c684b99a3139.settings.variants.0.__assoc__.2.0','\"aspectRatioX\"'),
+	('fields.9806bc10-174e-4280-b2a8-c684b99a3139.settings.variants.0.__assoc__.2.1','\"1\"'),
+	('fields.9806bc10-174e-4280-b2a8-c684b99a3139.settings.variants.0.__assoc__.3.0','\"aspectRatioY\"'),
+	('fields.9806bc10-174e-4280-b2a8-c684b99a3139.settings.variants.0.__assoc__.3.1','\"1\"'),
+	('fields.9806bc10-174e-4280-b2a8-c684b99a3139.settings.variants.0.__assoc__.4.0','\"retinaSizes\"'),
+	('fields.9806bc10-174e-4280-b2a8-c684b99a3139.settings.variants.0.__assoc__.4.1.0','\"1\"'),
+	('fields.9806bc10-174e-4280-b2a8-c684b99a3139.settings.variants.0.__assoc__.5.0','\"quality\"'),
+	('fields.9806bc10-174e-4280-b2a8-c684b99a3139.settings.variants.0.__assoc__.5.1','\"82\"'),
+	('fields.9806bc10-174e-4280-b2a8-c684b99a3139.settings.variants.0.__assoc__.6.0','\"format\"'),
+	('fields.9806bc10-174e-4280-b2a8-c684b99a3139.settings.variants.0.__assoc__.6.1','\"\"'),
+	('fields.9806bc10-174e-4280-b2a8-c684b99a3139.settings.variants.1.__assoc__.0.0','\"width\"'),
+	('fields.9806bc10-174e-4280-b2a8-c684b99a3139.settings.variants.1.__assoc__.0.1','\"380\"'),
+	('fields.9806bc10-174e-4280-b2a8-c684b99a3139.settings.variants.1.__assoc__.1.0','\"useAspectRatio\"'),
+	('fields.9806bc10-174e-4280-b2a8-c684b99a3139.settings.variants.1.__assoc__.1.1','\"1\"'),
+	('fields.9806bc10-174e-4280-b2a8-c684b99a3139.settings.variants.1.__assoc__.2.0','\"aspectRatioX\"'),
+	('fields.9806bc10-174e-4280-b2a8-c684b99a3139.settings.variants.1.__assoc__.2.1','\"1\"'),
+	('fields.9806bc10-174e-4280-b2a8-c684b99a3139.settings.variants.1.__assoc__.3.0','\"aspectRatioY\"'),
+	('fields.9806bc10-174e-4280-b2a8-c684b99a3139.settings.variants.1.__assoc__.3.1','\"1\"'),
+	('fields.9806bc10-174e-4280-b2a8-c684b99a3139.settings.variants.1.__assoc__.4.0','\"retinaSizes\"'),
+	('fields.9806bc10-174e-4280-b2a8-c684b99a3139.settings.variants.1.__assoc__.4.1.0','\"1\"'),
+	('fields.9806bc10-174e-4280-b2a8-c684b99a3139.settings.variants.1.__assoc__.4.1.1','\"2\"'),
+	('fields.9806bc10-174e-4280-b2a8-c684b99a3139.settings.variants.1.__assoc__.4.1.2','\"3\"'),
+	('fields.9806bc10-174e-4280-b2a8-c684b99a3139.settings.variants.1.__assoc__.5.0','\"quality\"'),
+	('fields.9806bc10-174e-4280-b2a8-c684b99a3139.settings.variants.1.__assoc__.5.1','\"60\"'),
+	('fields.9806bc10-174e-4280-b2a8-c684b99a3139.settings.variants.1.__assoc__.6.0','\"format\"'),
+	('fields.9806bc10-174e-4280-b2a8-c684b99a3139.settings.variants.1.__assoc__.6.1','\"\"'),
+	('fields.9806bc10-174e-4280-b2a8-c684b99a3139.settings.variants.2.__assoc__.0.0','\"width\"'),
+	('fields.9806bc10-174e-4280-b2a8-c684b99a3139.settings.variants.2.__assoc__.0.1','\"100\"'),
+	('fields.9806bc10-174e-4280-b2a8-c684b99a3139.settings.variants.2.__assoc__.1.0','\"useAspectRatio\"'),
+	('fields.9806bc10-174e-4280-b2a8-c684b99a3139.settings.variants.2.__assoc__.1.1','\"1\"'),
+	('fields.9806bc10-174e-4280-b2a8-c684b99a3139.settings.variants.2.__assoc__.2.0','\"aspectRatioX\"'),
+	('fields.9806bc10-174e-4280-b2a8-c684b99a3139.settings.variants.2.__assoc__.2.1','\"1\"'),
+	('fields.9806bc10-174e-4280-b2a8-c684b99a3139.settings.variants.2.__assoc__.3.0','\"aspectRatioY\"'),
+	('fields.9806bc10-174e-4280-b2a8-c684b99a3139.settings.variants.2.__assoc__.3.1','\"1\"'),
+	('fields.9806bc10-174e-4280-b2a8-c684b99a3139.settings.variants.2.__assoc__.4.0','\"retinaSizes\"'),
+	('fields.9806bc10-174e-4280-b2a8-c684b99a3139.settings.variants.2.__assoc__.4.1.0','\"1\"'),
+	('fields.9806bc10-174e-4280-b2a8-c684b99a3139.settings.variants.2.__assoc__.4.1.1','\"2\"'),
+	('fields.9806bc10-174e-4280-b2a8-c684b99a3139.settings.variants.2.__assoc__.4.1.2','\"3\"'),
+	('fields.9806bc10-174e-4280-b2a8-c684b99a3139.settings.variants.2.__assoc__.5.0','\"quality\"'),
+	('fields.9806bc10-174e-4280-b2a8-c684b99a3139.settings.variants.2.__assoc__.5.1','\"60\"'),
+	('fields.9806bc10-174e-4280-b2a8-c684b99a3139.settings.variants.2.__assoc__.6.0','\"format\"'),
+	('fields.9806bc10-174e-4280-b2a8-c684b99a3139.settings.variants.2.__assoc__.6.1','\"\"'),
+	('fields.9806bc10-174e-4280-b2a8-c684b99a3139.translationKeyFormat','null'),
+	('fields.9806bc10-174e-4280-b2a8-c684b99a3139.translationMethod','\"none\"'),
+	('fields.9806bc10-174e-4280-b2a8-c684b99a3139.type','\"nystudio107\\\\imageoptimize\\\\fields\\\\OptimizedImages\"'),
 	('fields.a5cb77be-c4d9-4d3e-88fb-d5384ca13941.contentColumnType','\"string\"'),
 	('fields.a5cb77be-c4d9-4d3e-88fb-d5384ca13941.fieldGroup','\"d08a0d16-0e00-49e6-9cd4-465fa2d65d7d\"'),
 	('fields.a5cb77be-c4d9-4d3e-88fb-d5384ca13941.handle','\"errorImage\"'),
@@ -2908,6 +3182,38 @@ VALUES
 	('matrixBlockTypes.e2c376a5-8341-40da-993a-68704f00171e.handle','\"resourceList\"'),
 	('matrixBlockTypes.e2c376a5-8341-40da-993a-68704f00171e.name','\"Resource List\"'),
 	('matrixBlockTypes.e2c376a5-8341-40da-993a-68704f00171e.sortOrder','7'),
+	('navigation.navs.46faf86d-bfa5-4356-bef1-0af3b2a87332.handle','\"secondaryNavigation\"'),
+	('navigation.navs.46faf86d-bfa5-4356-bef1-0af3b2a87332.instructions','\"\"'),
+	('navigation.navs.46faf86d-bfa5-4356-bef1-0af3b2a87332.maxNodes','\"\"'),
+	('navigation.navs.46faf86d-bfa5-4356-bef1-0af3b2a87332.name','\"Secondary Navigation\"'),
+	('navigation.navs.46faf86d-bfa5-4356-bef1-0af3b2a87332.propagateNodes','false'),
+	('navigation.navs.46faf86d-bfa5-4356-bef1-0af3b2a87332.sortOrder','2'),
+	('navigation.navs.46faf86d-bfa5-4356-bef1-0af3b2a87332.structure.maxLevels','null'),
+	('navigation.navs.46faf86d-bfa5-4356-bef1-0af3b2a87332.structure.uid','\"d1c943c2-c8e9-4cef-b4bc-8198f38cb4a7\"'),
+	('navigation.navs.b51f4d5a-4d35-43f1-af05-72e206874892.handle','\"footerNavigation\"'),
+	('navigation.navs.b51f4d5a-4d35-43f1-af05-72e206874892.instructions','\"\"'),
+	('navigation.navs.b51f4d5a-4d35-43f1-af05-72e206874892.maxNodes','\"\"'),
+	('navigation.navs.b51f4d5a-4d35-43f1-af05-72e206874892.name','\"Footer Navigation\"'),
+	('navigation.navs.b51f4d5a-4d35-43f1-af05-72e206874892.propagateNodes','false'),
+	('navigation.navs.b51f4d5a-4d35-43f1-af05-72e206874892.sortOrder','3'),
+	('navigation.navs.b51f4d5a-4d35-43f1-af05-72e206874892.structure.maxLevels','null'),
+	('navigation.navs.b51f4d5a-4d35-43f1-af05-72e206874892.structure.uid','\"64636e72-d294-403e-8d49-5d0fa315b254\"'),
+	('navigation.navs.d8cef538-a756-4496-b7f6-0e0bb61c14c2.handle','\"primaryNavigation\"'),
+	('navigation.navs.d8cef538-a756-4496-b7f6-0e0bb61c14c2.instructions','\"\"'),
+	('navigation.navs.d8cef538-a756-4496-b7f6-0e0bb61c14c2.maxNodes','\"\"'),
+	('navigation.navs.d8cef538-a756-4496-b7f6-0e0bb61c14c2.name','\"Primary Navigation\"'),
+	('navigation.navs.d8cef538-a756-4496-b7f6-0e0bb61c14c2.propagateNodes','false'),
+	('navigation.navs.d8cef538-a756-4496-b7f6-0e0bb61c14c2.sortOrder','1'),
+	('navigation.navs.d8cef538-a756-4496-b7f6-0e0bb61c14c2.structure.maxLevels','null'),
+	('navigation.navs.d8cef538-a756-4496-b7f6-0e0bb61c14c2.structure.uid','\"e67873d8-91f5-4516-88f0-13121fbb9c81\"'),
+	('navigation.navs.e0745046-9bad-4922-8da8-7f677ba84909.handle','\"legalNavigation\"'),
+	('navigation.navs.e0745046-9bad-4922-8da8-7f677ba84909.instructions','\"\"'),
+	('navigation.navs.e0745046-9bad-4922-8da8-7f677ba84909.maxNodes','\"\"'),
+	('navigation.navs.e0745046-9bad-4922-8da8-7f677ba84909.name','\"Legal Navigation\"'),
+	('navigation.navs.e0745046-9bad-4922-8da8-7f677ba84909.propagateNodes','false'),
+	('navigation.navs.e0745046-9bad-4922-8da8-7f677ba84909.sortOrder','4'),
+	('navigation.navs.e0745046-9bad-4922-8da8-7f677ba84909.structure.maxLevels','null'),
+	('navigation.navs.e0745046-9bad-4922-8da8-7f677ba84909.structure.uid','\"0725db91-17f3-4efb-881f-ec3192620a1c\"'),
 	('plugins.aws-s3.eager-beaver.enabled','true'),
 	('plugins.aws-s3.eager-beaver.schemaVersion','\"1.0.0\"'),
 	('plugins.aws-s3.enabled','true'),
@@ -2954,6 +3260,11 @@ VALUES
 	('plugins.minify.edition','\"standard\"'),
 	('plugins.minify.enabled','true'),
 	('plugins.minify.schemaVersion','\"1.0.0\"'),
+	('plugins.navigation.edition','\"standard\"'),
+	('plugins.navigation.enabled','true'),
+	('plugins.navigation.schemaVersion','\"1.0.17\"'),
+	('plugins.navigation.settings.bypassProjectConfig','false'),
+	('plugins.navigation.settings.pluginName','\"Navigation\"'),
 	('plugins.notifications.edition','\"standard\"'),
 	('plugins.notifications.enabled','true'),
 	('plugins.notifications.schemaVersion','\"1.0.0\"'),
@@ -2976,6 +3287,9 @@ VALUES
 	('plugins.spoon.edition','\"standard\"'),
 	('plugins.spoon.enabled','true'),
 	('plugins.spoon.schemaVersion','\"3.5.0\"'),
+	('plugins.super-table.edition','\"standard\"'),
+	('plugins.super-table.enabled','true'),
+	('plugins.super-table.schemaVersion','\"2.2.1\"'),
 	('plugins.twigpack.edition','\"standard\"'),
 	('plugins.twigpack.enabled','true'),
 	('plugins.twigpack.schemaVersion','\"1.0.0\"'),
@@ -3054,16 +3368,12 @@ VALUES
 	('sections.a72bfe0c-3389-4f9f-8ec1-ab318ec10b29.siteSettings.5da841b1-ca0d-46ff-8bb1-04d6c889ac54.uriFormat','null'),
 	('sections.a72bfe0c-3389-4f9f-8ec1-ab318ec10b29.type','\"channel\"'),
 	('sections.ef841ba4-7bcd-4ef5-9c12-96377bf7fba2.enableVersioning','true'),
-	('sections.ef841ba4-7bcd-4ef5-9c12-96377bf7fba2.entryTypes.13d83534-d33c-4c02-8e9a-8214c5419071.fieldLayouts.29456920-ac69-416e-9b72-d9e7baa46e32.tabs.0.fields.c439e251-a130-434d-a716-aab4d0651420.required','false'),
-	('sections.ef841ba4-7bcd-4ef5-9c12-96377bf7fba2.entryTypes.13d83534-d33c-4c02-8e9a-8214c5419071.fieldLayouts.29456920-ac69-416e-9b72-d9e7baa46e32.tabs.0.fields.c439e251-a130-434d-a716-aab4d0651420.sortOrder','1'),
-	('sections.ef841ba4-7bcd-4ef5-9c12-96377bf7fba2.entryTypes.13d83534-d33c-4c02-8e9a-8214c5419071.fieldLayouts.29456920-ac69-416e-9b72-d9e7baa46e32.tabs.0.name','\"Settings\"'),
+	('sections.ef841ba4-7bcd-4ef5-9c12-96377bf7fba2.entryTypes.13d83534-d33c-4c02-8e9a-8214c5419071.fieldLayouts.29456920-ac69-416e-9b72-d9e7baa46e32.tabs.0.fields.1c23eb9d-03fe-46ea-9bee-ff46e8bd15a3.required','false'),
+	('sections.ef841ba4-7bcd-4ef5-9c12-96377bf7fba2.entryTypes.13d83534-d33c-4c02-8e9a-8214c5419071.fieldLayouts.29456920-ac69-416e-9b72-d9e7baa46e32.tabs.0.fields.1c23eb9d-03fe-46ea-9bee-ff46e8bd15a3.sortOrder','1'),
+	('sections.ef841ba4-7bcd-4ef5-9c12-96377bf7fba2.entryTypes.13d83534-d33c-4c02-8e9a-8214c5419071.fieldLayouts.29456920-ac69-416e-9b72-d9e7baa46e32.tabs.0.fields.6a3feb81-50ce-467a-8aca-b5d4cc12aed0.required','false'),
+	('sections.ef841ba4-7bcd-4ef5-9c12-96377bf7fba2.entryTypes.13d83534-d33c-4c02-8e9a-8214c5419071.fieldLayouts.29456920-ac69-416e-9b72-d9e7baa46e32.tabs.0.fields.6a3feb81-50ce-467a-8aca-b5d4cc12aed0.sortOrder','2'),
+	('sections.ef841ba4-7bcd-4ef5-9c12-96377bf7fba2.entryTypes.13d83534-d33c-4c02-8e9a-8214c5419071.fieldLayouts.29456920-ac69-416e-9b72-d9e7baa46e32.tabs.0.name','\"Metadata\"'),
 	('sections.ef841ba4-7bcd-4ef5-9c12-96377bf7fba2.entryTypes.13d83534-d33c-4c02-8e9a-8214c5419071.fieldLayouts.29456920-ac69-416e-9b72-d9e7baa46e32.tabs.0.sortOrder','1'),
-	('sections.ef841ba4-7bcd-4ef5-9c12-96377bf7fba2.entryTypes.13d83534-d33c-4c02-8e9a-8214c5419071.fieldLayouts.29456920-ac69-416e-9b72-d9e7baa46e32.tabs.1.fields.35a1d959-d78e-4445-891c-7bb671c48281.required','false'),
-	('sections.ef841ba4-7bcd-4ef5-9c12-96377bf7fba2.entryTypes.13d83534-d33c-4c02-8e9a-8214c5419071.fieldLayouts.29456920-ac69-416e-9b72-d9e7baa46e32.tabs.1.fields.35a1d959-d78e-4445-891c-7bb671c48281.sortOrder','1'),
-	('sections.ef841ba4-7bcd-4ef5-9c12-96377bf7fba2.entryTypes.13d83534-d33c-4c02-8e9a-8214c5419071.fieldLayouts.29456920-ac69-416e-9b72-d9e7baa46e32.tabs.1.fields.6a3feb81-50ce-467a-8aca-b5d4cc12aed0.required','false'),
-	('sections.ef841ba4-7bcd-4ef5-9c12-96377bf7fba2.entryTypes.13d83534-d33c-4c02-8e9a-8214c5419071.fieldLayouts.29456920-ac69-416e-9b72-d9e7baa46e32.tabs.1.fields.6a3feb81-50ce-467a-8aca-b5d4cc12aed0.sortOrder','2'),
-	('sections.ef841ba4-7bcd-4ef5-9c12-96377bf7fba2.entryTypes.13d83534-d33c-4c02-8e9a-8214c5419071.fieldLayouts.29456920-ac69-416e-9b72-d9e7baa46e32.tabs.1.name','\"Metadata\"'),
-	('sections.ef841ba4-7bcd-4ef5-9c12-96377bf7fba2.entryTypes.13d83534-d33c-4c02-8e9a-8214c5419071.fieldLayouts.29456920-ac69-416e-9b72-d9e7baa46e32.tabs.1.sortOrder','2'),
 	('sections.ef841ba4-7bcd-4ef5-9c12-96377bf7fba2.entryTypes.13d83534-d33c-4c02-8e9a-8214c5419071.handle','\"landingsPage\"'),
 	('sections.ef841ba4-7bcd-4ef5-9c12-96377bf7fba2.entryTypes.13d83534-d33c-4c02-8e9a-8214c5419071.hasTitleField','true'),
 	('sections.ef841ba4-7bcd-4ef5-9c12-96377bf7fba2.entryTypes.13d83534-d33c-4c02-8e9a-8214c5419071.name','\"Landings Page\"'),
@@ -3074,6 +3384,10 @@ VALUES
 	('sections.ef841ba4-7bcd-4ef5-9c12-96377bf7fba2.entryTypes.58be0817-ea24-401b-98eb-4a60d7e7e34b.fieldLayouts.ab0a57c7-97b7-45bd-bba3-2b0d1c0a782c.tabs.0.fields.e691301b-7484-40be-a3d4-c3bc590de959.sortOrder','1'),
 	('sections.ef841ba4-7bcd-4ef5-9c12-96377bf7fba2.entryTypes.58be0817-ea24-401b-98eb-4a60d7e7e34b.fieldLayouts.ab0a57c7-97b7-45bd-bba3-2b0d1c0a782c.tabs.0.name','\"Content\"'),
 	('sections.ef841ba4-7bcd-4ef5-9c12-96377bf7fba2.entryTypes.58be0817-ea24-401b-98eb-4a60d7e7e34b.fieldLayouts.ab0a57c7-97b7-45bd-bba3-2b0d1c0a782c.tabs.0.sortOrder','1'),
+	('sections.ef841ba4-7bcd-4ef5-9c12-96377bf7fba2.entryTypes.58be0817-ea24-401b-98eb-4a60d7e7e34b.fieldLayouts.ab0a57c7-97b7-45bd-bba3-2b0d1c0a782c.tabs.1.fields.1c23eb9d-03fe-46ea-9bee-ff46e8bd15a3.required','false'),
+	('sections.ef841ba4-7bcd-4ef5-9c12-96377bf7fba2.entryTypes.58be0817-ea24-401b-98eb-4a60d7e7e34b.fieldLayouts.ab0a57c7-97b7-45bd-bba3-2b0d1c0a782c.tabs.1.fields.1c23eb9d-03fe-46ea-9bee-ff46e8bd15a3.sortOrder','1'),
+	('sections.ef841ba4-7bcd-4ef5-9c12-96377bf7fba2.entryTypes.58be0817-ea24-401b-98eb-4a60d7e7e34b.fieldLayouts.ab0a57c7-97b7-45bd-bba3-2b0d1c0a782c.tabs.1.fields.6a3feb81-50ce-467a-8aca-b5d4cc12aed0.required','false'),
+	('sections.ef841ba4-7bcd-4ef5-9c12-96377bf7fba2.entryTypes.58be0817-ea24-401b-98eb-4a60d7e7e34b.fieldLayouts.ab0a57c7-97b7-45bd-bba3-2b0d1c0a782c.tabs.1.fields.6a3feb81-50ce-467a-8aca-b5d4cc12aed0.sortOrder','2'),
 	('sections.ef841ba4-7bcd-4ef5-9c12-96377bf7fba2.entryTypes.58be0817-ea24-401b-98eb-4a60d7e7e34b.fieldLayouts.ab0a57c7-97b7-45bd-bba3-2b0d1c0a782c.tabs.1.fields.c439e251-a130-434d-a716-aab4d0651420.required','false'),
 	('sections.ef841ba4-7bcd-4ef5-9c12-96377bf7fba2.entryTypes.58be0817-ea24-401b-98eb-4a60d7e7e34b.fieldLayouts.ab0a57c7-97b7-45bd-bba3-2b0d1c0a782c.tabs.1.fields.c439e251-a130-434d-a716-aab4d0651420.sortOrder','1'),
 	('sections.ef841ba4-7bcd-4ef5-9c12-96377bf7fba2.entryTypes.58be0817-ea24-401b-98eb-4a60d7e7e34b.fieldLayouts.ab0a57c7-97b7-45bd-bba3-2b0d1c0a782c.tabs.1.name','\"Settings\"'),
@@ -3103,7 +3417,9 @@ VALUES
 	('sections.ef841ba4-7bcd-4ef5-9c12-96377bf7fba2.siteSettings.5da841b1-ca0d-46ff-8bb1-04d6c889ac54.hasUrls','true'),
 	('sections.ef841ba4-7bcd-4ef5-9c12-96377bf7fba2.siteSettings.5da841b1-ca0d-46ff-8bb1-04d6c889ac54.template','\"_organisms/_page\"'),
 	('sections.ef841ba4-7bcd-4ef5-9c12-96377bf7fba2.siteSettings.5da841b1-ca0d-46ff-8bb1-04d6c889ac54.uriFormat','\"{parent.uri ?? parent.uri}/{slug}\"'),
-	('sections.ef841ba4-7bcd-4ef5-9c12-96377bf7fba2.type','\"channel\"'),
+	('sections.ef841ba4-7bcd-4ef5-9c12-96377bf7fba2.structure.maxLevels','3'),
+	('sections.ef841ba4-7bcd-4ef5-9c12-96377bf7fba2.structure.uid','\"75bd198d-0fe4-4a7c-8ab4-da021aa50354\"'),
+	('sections.ef841ba4-7bcd-4ef5-9c12-96377bf7fba2.type','\"structure\"'),
 	('siteGroups.f89601e9-4ba9-4a48-9e99-350aa9914912.name','\"Default\"'),
 	('sites.5da841b1-ca0d-46ff-8bb1-04d6c889ac54.baseUrl','\"$SITE_URL\"'),
 	('sites.5da841b1-ca0d-46ff-8bb1-04d6c889ac54.handle','\"default\"'),
@@ -3535,12 +3851,13 @@ VALUES
 	('system.live','true'),
 	('system.name','\"Craft\"'),
 	('system.schemaVersion','\"3.5.2\"'),
-	('system.timeZone','\"America/New_York\"'),
+	('system.timeZone','\"Europe/London\"'),
 	('users.allowPublicRegistration','false'),
-	('users.defaultGroup','null'),
+	('users.defaultGroup','\"\"'),
 	('users.photoSubpath','\"\"'),
-	('users.photoVolumeUid','null'),
+	('users.photoVolumeUid','\"2cfafcad-5b14-408b-ba81-afd942b8b3cb\"'),
 	('users.requireEmailVerification','true'),
+	('users.suspendByDefault','false'),
 	('volumes.14e48735-7707-43d5-a6f1-90cc18da80f1.fieldLayouts.c341cf32-8aa7-456c-9a0f-7f06c63a1575.tabs.0.fields.6962a9b1-b802-4295-82b1-398470a9f54c.required','false'),
 	('volumes.14e48735-7707-43d5-a6f1-90cc18da80f1.fieldLayouts.c341cf32-8aa7-456c-9a0f-7f06c63a1575.tabs.0.fields.6962a9b1-b802-4295-82b1-398470a9f54c.sortOrder','1'),
 	('volumes.14e48735-7707-43d5-a6f1-90cc18da80f1.fieldLayouts.c341cf32-8aa7-456c-9a0f-7f06c63a1575.tabs.0.fields.dcdd5839-4bb5-4669-8d82-d46ec4da660a.required','false'),
@@ -3597,6 +3914,32 @@ VALUES
 	('volumes.17ffd720-73f0-4e0c-9878-ea089fcc6863.sortOrder','3'),
 	('volumes.17ffd720-73f0-4e0c-9878-ea089fcc6863.type','\"craft\\\\awss3\\\\Volume\"'),
 	('volumes.17ffd720-73f0-4e0c-9878-ea089fcc6863.url','\"$S3_CLOUDFRONT_URL\"'),
+	('volumes.2cfafcad-5b14-408b-ba81-afd942b8b3cb.fieldLayouts.e8b47e71-94ef-4b05-85a2-f9578c687105.tabs.0.fields.9806bc10-174e-4280-b2a8-c684b99a3139.required','false'),
+	('volumes.2cfafcad-5b14-408b-ba81-afd942b8b3cb.fieldLayouts.e8b47e71-94ef-4b05-85a2-f9578c687105.tabs.0.fields.9806bc10-174e-4280-b2a8-c684b99a3139.sortOrder','1'),
+	('volumes.2cfafcad-5b14-408b-ba81-afd942b8b3cb.fieldLayouts.e8b47e71-94ef-4b05-85a2-f9578c687105.tabs.0.name','\"Image Optimizations\"'),
+	('volumes.2cfafcad-5b14-408b-ba81-afd942b8b3cb.fieldLayouts.e8b47e71-94ef-4b05-85a2-f9578c687105.tabs.0.sortOrder','1'),
+	('volumes.2cfafcad-5b14-408b-ba81-afd942b8b3cb.handle','\"profiles\"'),
+	('volumes.2cfafcad-5b14-408b-ba81-afd942b8b3cb.hasUrls','true'),
+	('volumes.2cfafcad-5b14-408b-ba81-afd942b8b3cb.name','\"Profile Images\"'),
+	('volumes.2cfafcad-5b14-408b-ba81-afd942b8b3cb.settings.addSubfolderToRootUrl','\"1\"'),
+	('volumes.2cfafcad-5b14-408b-ba81-afd942b8b3cb.settings.autoFocalPoint','\"\"'),
+	('volumes.2cfafcad-5b14-408b-ba81-afd942b8b3cb.settings.bucket','\"$S3_BUCKET\"'),
+	('volumes.2cfafcad-5b14-408b-ba81-afd942b8b3cb.settings.bucketSelectionMode','\"manual\"'),
+	('volumes.2cfafcad-5b14-408b-ba81-afd942b8b3cb.settings.cfDistributionId','\"$CLOUDFRONT_DISTRIBUTION_ID\"'),
+	('volumes.2cfafcad-5b14-408b-ba81-afd942b8b3cb.settings.cfPrefix','\"$CLOUDFRONT_PATH_PREFIX\"'),
+	('volumes.2cfafcad-5b14-408b-ba81-afd942b8b3cb.settings.expires','\"3 months\"'),
+	('volumes.2cfafcad-5b14-408b-ba81-afd942b8b3cb.settings.keyId','\"$S3_KEY_ID\"'),
+	('volumes.2cfafcad-5b14-408b-ba81-afd942b8b3cb.settings.makeUploadsPublic','\"1\"');
+
+INSERT INTO `projectconfig` (`path`, `value`)
+VALUES
+	('volumes.2cfafcad-5b14-408b-ba81-afd942b8b3cb.settings.region','\"$S3_REGION\"'),
+	('volumes.2cfafcad-5b14-408b-ba81-afd942b8b3cb.settings.secret','\"$S3_SECRET\"'),
+	('volumes.2cfafcad-5b14-408b-ba81-afd942b8b3cb.settings.storageClass','\"\"'),
+	('volumes.2cfafcad-5b14-408b-ba81-afd942b8b3cb.settings.subfolder','\"profile-images/\"'),
+	('volumes.2cfafcad-5b14-408b-ba81-afd942b8b3cb.sortOrder','7'),
+	('volumes.2cfafcad-5b14-408b-ba81-afd942b8b3cb.type','\"craft\\\\awss3\\\\Volume\"'),
+	('volumes.2cfafcad-5b14-408b-ba81-afd942b8b3cb.url','\"$CLOUDFRONT_URL\"'),
 	('volumes.5c642d7e-b16b-4836-9575-668d75d242e5.handle','\"branding\"'),
 	('volumes.5c642d7e-b16b-4836-9575-668d75d242e5.hasUrls','true'),
 	('volumes.5c642d7e-b16b-4836-9575-668d75d242e5.name','\"Branding\"'),
@@ -3616,7 +3959,7 @@ VALUES
 	('volumes.5c642d7e-b16b-4836-9575-668d75d242e5.sortOrder','1'),
 	('volumes.5c642d7e-b16b-4836-9575-668d75d242e5.type','\"craft\\\\awss3\\\\Volume\"'),
 	('volumes.5c642d7e-b16b-4836-9575-668d75d242e5.url','\"$CLOUDFRONT_URL\"'),
-	('volumes.918b50e1-632c-4e92-a8c5-55eeb7b8571e.handle','\"coverPhotos\"'),
+	('volumes.918b50e1-632c-4e92-a8c5-55eeb7b8571e.handle','\"covers\"'),
 	('volumes.918b50e1-632c-4e92-a8c5-55eeb7b8571e.hasUrls','true'),
 	('volumes.918b50e1-632c-4e92-a8c5-55eeb7b8571e.name','\"Cover Photos\"'),
 	('volumes.918b50e1-632c-4e92-a8c5-55eeb7b8571e.settings.addSubfolderToRootUrl','\"1\"'),
@@ -3766,9 +4109,11 @@ VALUES
 	('102975c8','@lib/element-resize-detector'),
 	('13e30b0b','@app/web/assets/matrixsettings/dist'),
 	('16d5b844','@nystudio107/imageoptimize/assetbundles/imageoptimize/dist'),
+	('1aab32ba','@craft/web/assets/edituser/dist'),
 	('1ac31c9','@craft/web/assets/dashboard/dist'),
 	('1e66d2a5','@craft/web/assets/matrixsettings/dist'),
 	('210af3c9','@craft/web/assets/editentry/dist'),
+	('2223b9e2','@app/web/assets/utilities/dist'),
 	('22295f64','@app/web/assets/feed/dist'),
 	('233cdb52','@modules/sitemodule/assetbundles/sitemodule/dist'),
 	('24d33194','@bower/jquery/dist'),
@@ -3807,6 +4152,7 @@ VALUES
 	('68902306','@app/web/assets/updater/dist'),
 	('6a48f2ac','@lib/axios'),
 	('6d3d3251','@app/web/assets/craftsupport/dist'),
+	('6eecbdc9','@app/web/assets/fieldsettings/dist'),
 	('71221d05','@lib/axios'),
 	('73faccaf','@app/web/assets/updater/dist'),
 	('7568717e','@angellco/spoon/assetbundles/dist'),
@@ -3819,7 +4165,9 @@ VALUES
 	('8027eefa','@lib/fabric'),
 	('80e22717','@craft/web/assets/fields/dist'),
 	('8355b53f','@app/web/assets/dashboard/dist'),
+	('84329b71','@app/web/assets/fields/dist'),
 	('89ccdfc2','@craft/web/assets/admintable/dist'),
+	('8b988faa','@verbb/navigation/resources/dist'),
 	('8e0bd56d','@lib/garnishjs'),
 	('91690a3a','@lenz/linkfield/assets/field/resources'),
 	('95613ac4','@lib/garnishjs'),
@@ -3827,8 +4175,10 @@ VALUES
 	('983f5a96','@app/web/assets/dashboard/dist'),
 	('98498189','@rias/widthfieldtype/assetbundles/widthfieldtype/dist'),
 	('9b4d0153','@lib/fabric'),
+	('9ca87a4e','@app/web/assets/updates/dist'),
 	('9f5874d8','@app/web/assets/fields/dist'),
 	('a0da3d14','@craft/web/assets/utilities/dist'),
+	('a2b5eb5e','@craft/web/assets/userpermissions/dist'),
 	('a2ed4dac','@nystudio107/imageoptimize/assetbundles/optimizedimagesfield/dist'),
 	('a65947b1','@modules/sitemodule/assetbundles/sitemodule/dist'),
 	('a6dc2d42','@lib/d3'),
@@ -3854,10 +4204,12 @@ VALUES
 	('d2fed3c1','@lib/timepicker'),
 	('d72fd87e','@craft/web/assets/updater/dist'),
 	('daf41785','@app/web/assets/plugins/dist'),
+	('dd90716f','@app/web/assets/admintable/dist'),
 	('deec9e21','@craft/web/assets/recententries/dist'),
 	('e056dc4f','@craft/web/assets/updateswidget/dist'),
 	('e5a4878b','@lib/datepicker-i18n'),
 	('e76dcf3e','@lib/selectize'),
+	('e9798814','@craft/web/assets/generalsettings/dist'),
 	('ed018bb4','@lib/xregexp'),
 	('ed15ff16','@craft/web/assets/fieldsettings/dist'),
 	('f21754f8','@nystudio107/imageoptimize/assetbundles/imageoptimize/dist'),
@@ -3964,7 +4316,7 @@ LOCK TABLES `retour_stats` WRITE;
 
 INSERT INTO `retour_stats` (`id`, `dateCreated`, `dateUpdated`, `uid`, `siteId`, `redirectSrcUrl`, `referrerUrl`, `remoteIp`, `userAgent`, `exceptionMessage`, `exceptionFilePath`, `exceptionFileLine`, `hitCount`, `hitLastTime`, `handledByRetour`)
 VALUES
-	(1,'2020-06-29 11:29:04','2020-06-29 11:29:04','3f0ef16a-b2f0-4a7b-80ad-3ab4fe01eb60',2,'/favicon.ico','http://localhost:8000/','172.19.0.1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36','Template not found: favicon.ico','/var/www/project/cms/vendor/craftcms/cms/src/controllers/TemplatesController.php',90,1,'2020-06-29 11:29:04',0);
+	(1,'2020-06-29 11:29:04','2020-07-01 08:05:14','3f0ef16a-b2f0-4a7b-80ad-3ab4fe01eb60',2,'/favicon.ico','http://localhost:8000/','172.19.0.1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36','Template not found: favicon.ico','/var/www/project/cms/vendor/craftcms/cms/src/controllers/TemplatesController.php',90,2,'2020-07-01 08:05:14',0);
 
 /*!40000 ALTER TABLE `retour_stats` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -3988,6 +4340,17 @@ CREATE TABLE `revisions` (
   CONSTRAINT `revisions_sourceId_fk` FOREIGN KEY (`sourceId`) REFERENCES `elements` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+LOCK TABLES `revisions` WRITE;
+/*!40000 ALTER TABLE `revisions` DISABLE KEYS */;
+
+INSERT INTO `revisions` (`id`, `sourceId`, `creatorId`, `num`, `notes`)
+VALUES
+	(2,12,1,2,NULL),
+	(3,20,1,1,NULL),
+	(4,29,1,1,NULL);
+
+/*!40000 ALTER TABLE `revisions` ENABLE KEYS */;
+UNLOCK TABLES;
 
 
 # Dump of table searchindex
@@ -4010,18 +4373,39 @@ LOCK TABLES `searchindex` WRITE;
 
 INSERT INTO `searchindex` (`elementId`, `attribute`, `fieldId`, `siteId`, `keywords`)
 VALUES
-	(1,'username',0,2,' support percipio london '),
-	(1,'firstname',0,2,''),
-	(1,'lastname',0,2,''),
-	(1,'fullname',0,2,''),
 	(1,'email',0,2,' support percipio london '),
-	(1,'slug',0,2,''),
+	(1,'fullname',0,2,''),
+	(1,'lastname',0,2,''),
+	(1,'firstname',0,2,''),
 	(2,'slug',0,2,' homepage '),
 	(2,'title',0,2,' homepage '),
 	(3,'slug',0,2,''),
 	(3,'field',20,2,''),
 	(4,'slug',0,2,''),
-	(5,'slug',0,2,'');
+	(5,'slug',0,2,''),
+	(12,'title',0,2,' privacy policy '),
+	(12,'slug',0,2,' privacy policy '),
+	(12,'field',23,2,''),
+	(14,'slug',0,2,''),
+	(14,'field',8,2,' privacy policy goes here '),
+	(1,'username',0,2,' support percipio london '),
+	(1,'slug',0,2,''),
+	(20,'slug',0,2,' about us '),
+	(20,'title',0,2,' about us '),
+	(20,'field',23,2,''),
+	(21,'slug',0,2,''),
+	(21,'field',8,2,' about content '),
+	(29,'slug',0,2,' contact us '),
+	(29,'title',0,2,' contact us '),
+	(29,'field',23,2,''),
+	(30,'slug',0,2,''),
+	(30,'field',8,2,' contact content '),
+	(34,'slug',0,2,''),
+	(34,'title',0,2,' about us '),
+	(35,'slug',0,2,''),
+	(35,'title',0,2,' contact us '),
+	(36,'slug',0,2,''),
+	(36,'title',0,2,' privacy policy ');
 
 /*!40000 ALTER TABLE `searchindex` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -4061,7 +4445,7 @@ VALUES
 	(1,NULL,'Errors','errors','channel',0,'all',NULL,'2020-06-03 17:29:08','2020-06-03 17:29:08',NULL,'a72bfe0c-3389-4f9f-8ec1-ab318ec10b29'),
 	(2,NULL,'Homepage','homepage','single',0,'all',NULL,'2020-06-03 17:29:08','2020-06-03 17:29:08',NULL,'54e60257-f31a-44aa-960e-bbd364197e28'),
 	(3,NULL,'News','news','channel',1,'all','[{\"label\":\"Primary entry page\",\"urlFormat\":\"{url}\",\"refresh\":\"1\"}]','2020-06-24 11:35:07','2020-06-24 11:35:07',NULL,'9de367ab-77b8-47bb-bbc3-63e79a202c3e'),
-	(4,NULL,'Pages','pages','channel',1,'all','[{\"label\":\"Primary entry page\",\"urlFormat\":\"{url}\",\"refresh\":\"1\"}]','2020-06-24 12:10:23','2020-06-24 12:10:23',NULL,'ef841ba4-7bcd-4ef5-9c12-96377bf7fba2');
+	(4,5,'Pages','pages','structure',1,'all','[{\"label\":\"Primary entry page\",\"urlFormat\":\"{url}\",\"refresh\":\"1\"}]','2020-06-24 12:10:23','2020-07-01 09:06:54',NULL,'ef841ba4-7bcd-4ef5-9c12-96377bf7fba2');
 
 /*!40000 ALTER TABLE `sections` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -4149,7 +4533,7 @@ VALUES
 	(2,'2020-06-03 17:29:08','2020-06-03 17:29:08','786e6401-1171-489f-b535-3fc8e1aed907','1.0.46','__GLOBAL_BUNDLE__',1,'__GLOBAL_BUNDLE__','__GLOBAL_BUNDLE__','__GLOBAL_BUNDLE__',NULL,'',2,'[]','2020-06-03 17:29:08','{\"language\":null,\"mainEntityOfPage\":\"WebSite\",\"seoTitle\":\"\",\"siteNamePosition\":\"before\",\"seoDescription\":\"\",\"seoKeywords\":\"\",\"seoImage\":\"\",\"seoImageWidth\":\"\",\"seoImageHeight\":\"\",\"seoImageDescription\":\"\",\"canonicalUrl\":\"{seomatic.helper.safeCanonicalUrl()}\",\"robots\":\"all\",\"ogType\":\"website\",\"ogTitle\":\"{seomatic.meta.seoTitle}\",\"ogSiteNamePosition\":\"none\",\"ogDescription\":\"{seomatic.meta.seoDescription}\",\"ogImage\":\"{seomatic.meta.seoImage}\",\"ogImageWidth\":\"{seomatic.meta.seoImageWidth}\",\"ogImageHeight\":\"{seomatic.meta.seoImageHeight}\",\"ogImageDescription\":\"{seomatic.meta.seoImageDescription}\",\"twitterCard\":\"summary\",\"twitterCreator\":\"{seomatic.site.twitterHandle}\",\"twitterTitle\":\"{seomatic.meta.seoTitle}\",\"twitterSiteNamePosition\":\"none\",\"twitterDescription\":\"{seomatic.meta.seoDescription}\",\"twitterImage\":\"{seomatic.meta.seoImage}\",\"twitterImageWidth\":\"{seomatic.meta.seoImageWidth}\",\"twitterImageHeight\":\"{seomatic.meta.seoImageHeight}\",\"twitterImageDescription\":\"{seomatic.meta.seoImageDescription}\"}','{\"siteName\":\"Craft\",\"identity\":{\"siteType\":\"Organization\",\"siteSubType\":\"LocalBusiness\",\"siteSpecificType\":\"\",\"computedType\":\"Organization\",\"genericName\":\"\",\"genericAlternateName\":\"\",\"genericDescription\":\"\",\"genericUrl\":\"\",\"genericImage\":\"\",\"genericImageWidth\":\"\",\"genericImageHeight\":\"\",\"genericImageIds\":[],\"genericTelephone\":\"\",\"genericEmail\":\"\",\"genericStreetAddress\":\"\",\"genericAddressLocality\":\"\",\"genericAddressRegion\":\"\",\"genericPostalCode\":\"\",\"genericAddressCountry\":\"\",\"genericGeoLatitude\":\"\",\"genericGeoLongitude\":\"\",\"personGender\":\"\",\"personBirthPlace\":\"\",\"organizationDuns\":\"\",\"organizationFounder\":\"\",\"organizationFoundingDate\":\"\",\"organizationFoundingLocation\":\"\",\"organizationContactPoints\":[],\"corporationTickerSymbol\":\"\",\"localBusinessPriceRange\":\"\",\"localBusinessOpeningHours\":[],\"restaurantServesCuisine\":\"\",\"restaurantMenuUrl\":\"\",\"restaurantReservationsUrl\":\"\"},\"creator\":{\"siteType\":\"Organization\",\"siteSubType\":\"\",\"siteSpecificType\":\"\",\"computedType\":\"Organization\",\"genericName\":\"Percipio GLobal Ltd.\",\"genericAlternateName\":\"Percipio\",\"genericDescription\":\"\",\"genericUrl\":\"https://percipio.london/\",\"genericImage\":\"\",\"genericImageWidth\":\"1042\",\"genericImageHeight\":\"1042\",\"genericImageIds\":[],\"genericTelephone\":\"+442081444048\",\"genericEmail\":\"hello@percipio.london\",\"genericStreetAddress\":\"Unit 122, 372 Old Street\",\"genericAddressLocality\":\"Hackney\",\"genericAddressRegion\":\"London\",\"genericPostalCode\":\"EC1V 9LT\",\"genericAddressCountry\":\"UK\",\"genericGeoLatitude\":\"51.527255\",\"genericGeoLongitude\":\"-0.079916\",\"personGender\":\"\",\"personBirthPlace\":\"\",\"organizationDuns\":\"\",\"organizationFounder\":\"Jamie Taylor\",\"organizationFoundingDate\":\"2014-06-12\",\"organizationFoundingLocation\":\"Hackney, London\",\"organizationContactPoints\":[],\"corporationTickerSymbol\":\"\",\"localBusinessPriceRange\":\"\",\"localBusinessOpeningHours\":[],\"restaurantServesCuisine\":\"\",\"restaurantMenuUrl\":\"\",\"restaurantReservationsUrl\":\"\"},\"twitterHandle\":\"\",\"facebookProfileId\":\"\",\"facebookAppId\":\"\",\"googleSiteVerification\":\"\",\"bingSiteVerification\":\"\",\"pinterestSiteVerification\":\"\",\"sameAsLinks\":{\"twitter\":{\"siteName\":\"Twitter\",\"handle\":\"twitter\",\"url\":\"\"},\"facebook\":{\"siteName\":\"Facebook\",\"handle\":\"facebook\",\"url\":\"\"},\"wikipedia\":{\"siteName\":\"Wikipedia\",\"handle\":\"wikipedia\",\"url\":\"\"},\"linkedin\":{\"siteName\":\"LinkedIn\",\"handle\":\"linkedin\",\"url\":\"\"},\"googleplus\":{\"siteName\":\"Google+\",\"handle\":\"googleplus\",\"url\":\"\"},\"youtube\":{\"siteName\":\"YouTube\",\"handle\":\"youtube\",\"url\":\"\"},\"instagram\":{\"siteName\":\"Instagram\",\"handle\":\"instagram\",\"url\":\"\"},\"pinterest\":{\"siteName\":\"Pinterest\",\"handle\":\"pinterest\",\"url\":\"\"},\"github\":{\"siteName\":\"GitHub\",\"handle\":\"github\",\"url\":\"\"},\"vimeo\":{\"siteName\":\"Vimeo\",\"handle\":\"vimeo\",\"url\":\"\"}},\"siteLinksSearchTarget\":\"\",\"siteLinksQueryInput\":\"\",\"additionalSitemapUrls\":[],\"additionalSitemapUrlsDateUpdated\":null,\"additionalSitemaps\":[]}','{\"sitemapUrls\":true,\"sitemapAssets\":true,\"sitemapFiles\":true,\"sitemapAltLinks\":true,\"sitemapChangeFreq\":\"weekly\",\"sitemapPriority\":0.5,\"sitemapLimit\":null,\"structureDepth\":null,\"sitemapImageFieldMap\":[{\"property\":\"title\",\"field\":\"title\"},{\"property\":\"caption\",\"field\":\"\"},{\"property\":\"geo_location\",\"field\":\"\"},{\"property\":\"license\",\"field\":\"\"}],\"sitemapVideoFieldMap\":[{\"property\":\"title\",\"field\":\"title\"},{\"property\":\"description\",\"field\":\"\"},{\"property\":\"thumbnailLoc\",\"field\":\"\"},{\"property\":\"duration\",\"field\":\"\"},{\"property\":\"category\",\"field\":\"\"}]}','{\"MetaTagContainergeneral\":{\"data\":{\"generator\":{\"charset\":\"\",\"content\":\"SEOmatic\",\"httpEquiv\":\"\",\"name\":\"generator\",\"property\":null,\"include\":true,\"key\":\"generator\",\"environment\":null,\"dependencies\":{\"config\":[\"generatorEnabled\"]}},\"keywords\":{\"charset\":\"\",\"content\":\"{seomatic.meta.seoKeywords}\",\"httpEquiv\":\"\",\"name\":\"keywords\",\"property\":null,\"include\":true,\"key\":\"keywords\",\"environment\":null,\"dependencies\":null},\"description\":{\"charset\":\"\",\"content\":\"{seomatic.meta.seoDescription}\",\"httpEquiv\":\"\",\"name\":\"description\",\"property\":null,\"include\":true,\"key\":\"description\",\"environment\":null,\"dependencies\":null},\"referrer\":{\"charset\":\"\",\"content\":\"no-referrer-when-downgrade\",\"httpEquiv\":\"\",\"name\":\"referrer\",\"property\":null,\"include\":true,\"key\":\"referrer\",\"environment\":null,\"dependencies\":null},\"robots\":{\"charset\":\"\",\"content\":\"none\",\"httpEquiv\":\"\",\"name\":\"robots\",\"property\":null,\"include\":true,\"key\":\"robots\",\"environment\":{\"live\":{\"content\":\"{seomatic.meta.robots}\"},\"staging\":{\"content\":\"none\"},\"local\":{\"content\":\"none\"}},\"dependencies\":null}},\"name\":\"General\",\"description\":\"General Meta Tags\",\"class\":\"nystudio107\\\\seomatic\\\\models\\\\MetaTagContainer\",\"handle\":\"general\",\"include\":true,\"dependencies\":[],\"clearCache\":false},\"MetaTagContaineropengraph\":{\"data\":{\"fb:profile_id\":{\"charset\":\"\",\"content\":\"{seomatic.site.facebookProfileId}\",\"httpEquiv\":\"\",\"name\":\"\",\"property\":\"fb:profile_id\",\"include\":true,\"key\":\"fb:profile_id\",\"environment\":null,\"dependencies\":null},\"fb:app_id\":{\"charset\":\"\",\"content\":\"{seomatic.site.facebookAppId}\",\"httpEquiv\":\"\",\"name\":\"\",\"property\":\"fb:app_id\",\"include\":true,\"key\":\"fb:app_id\",\"environment\":null,\"dependencies\":null},\"og:locale\":{\"charset\":\"\",\"content\":\"{{ craft.app.language |replace({\\\"-\\\": \\\"_\\\"}) }}\",\"httpEquiv\":\"\",\"name\":\"\",\"property\":\"og:locale\",\"include\":true,\"key\":\"og:locale\",\"environment\":null,\"dependencies\":null},\"og:locale:alternate\":{\"charset\":\"\",\"content\":\"\",\"httpEquiv\":\"\",\"name\":\"\",\"property\":\"og:locale:alternate\",\"include\":true,\"key\":\"og:locale:alternate\",\"environment\":null,\"dependencies\":null},\"og:site_name\":{\"charset\":\"\",\"content\":\"{seomatic.site.siteName}\",\"httpEquiv\":\"\",\"name\":\"\",\"property\":\"og:site_name\",\"include\":true,\"key\":\"og:site_name\",\"environment\":null,\"dependencies\":null},\"og:type\":{\"charset\":\"\",\"content\":\"{seomatic.meta.ogType}\",\"httpEquiv\":\"\",\"name\":\"\",\"property\":\"og:type\",\"include\":true,\"key\":\"og:type\",\"environment\":null,\"dependencies\":null},\"og:url\":{\"charset\":\"\",\"content\":\"{seomatic.meta.canonicalUrl}\",\"httpEquiv\":\"\",\"name\":\"\",\"property\":\"og:url\",\"include\":true,\"key\":\"og:url\",\"environment\":null,\"dependencies\":null},\"og:title\":{\"siteName\":\"{seomatic.site.siteName}\",\"siteNamePosition\":\"{seomatic.meta.ogSiteNamePosition}\",\"separatorChar\":\"{seomatic.config.separatorChar}\",\"charset\":\"\",\"content\":\"{seomatic.meta.ogTitle}\",\"httpEquiv\":\"\",\"name\":\"\",\"property\":\"og:title\",\"include\":true,\"key\":\"og:title\",\"environment\":null,\"dependencies\":null},\"og:description\":{\"charset\":\"\",\"content\":\"{seomatic.meta.ogDescription}\",\"httpEquiv\":\"\",\"name\":\"\",\"property\":\"og:description\",\"include\":true,\"key\":\"og:description\",\"environment\":null,\"dependencies\":null},\"og:image\":{\"charset\":\"\",\"content\":\"{seomatic.meta.ogImage}\",\"httpEquiv\":\"\",\"name\":\"\",\"property\":\"og:image\",\"include\":true,\"key\":\"og:image\",\"environment\":null,\"dependencies\":null},\"og:image:width\":{\"charset\":\"\",\"content\":\"{seomatic.meta.ogImageWidth}\",\"httpEquiv\":\"\",\"name\":\"\",\"property\":\"og:image:width\",\"include\":true,\"key\":\"og:image:width\",\"environment\":null,\"dependencies\":{\"tag\":[\"og:image\"]}},\"og:image:height\":{\"charset\":\"\",\"content\":\"{seomatic.meta.ogImageHeight}\",\"httpEquiv\":\"\",\"name\":\"\",\"property\":\"og:image:height\",\"include\":true,\"key\":\"og:image:height\",\"environment\":null,\"dependencies\":{\"tag\":[\"og:image\"]}},\"og:image:alt\":{\"charset\":\"\",\"content\":\"{seomatic.meta.ogImageDescription}\",\"httpEquiv\":\"\",\"name\":\"\",\"property\":\"og:image:alt\",\"include\":true,\"key\":\"og:image:alt\",\"environment\":null,\"dependencies\":{\"tag\":[\"og:image\"]}},\"og:see_also\":{\"charset\":\"\",\"content\":\"\",\"httpEquiv\":\"\",\"name\":\"\",\"property\":\"og:see_also\",\"include\":true,\"key\":\"og:see_also\",\"environment\":null,\"dependencies\":null}},\"name\":\"Facebook\",\"description\":\"Facebook OpenGraph Meta Tags\",\"class\":\"nystudio107\\\\seomatic\\\\models\\\\MetaTagContainer\",\"handle\":\"opengraph\",\"include\":true,\"dependencies\":[],\"clearCache\":false},\"MetaTagContainertwitter\":{\"data\":{\"twitter:card\":{\"charset\":\"\",\"content\":\"{seomatic.meta.twitterCard}\",\"httpEquiv\":\"\",\"name\":\"twitter:card\",\"property\":null,\"include\":true,\"key\":\"twitter:card\",\"environment\":null,\"dependencies\":null},\"twitter:site\":{\"charset\":\"\",\"content\":\"@{seomatic.site.twitterHandle}\",\"httpEquiv\":\"\",\"name\":\"twitter:site\",\"property\":null,\"include\":true,\"key\":\"twitter:site\",\"environment\":null,\"dependencies\":{\"site\":[\"twitterHandle\"]}},\"twitter:creator\":{\"charset\":\"\",\"content\":\"@{seomatic.meta.twitterCreator}\",\"httpEquiv\":\"\",\"name\":\"twitter:creator\",\"property\":null,\"include\":true,\"key\":\"twitter:creator\",\"environment\":null,\"dependencies\":{\"meta\":[\"twitterCreator\"]}},\"twitter:title\":{\"siteName\":\"{seomatic.site.siteName}\",\"siteNamePosition\":\"{seomatic.meta.twitterSiteNamePosition}\",\"separatorChar\":\"{seomatic.config.separatorChar}\",\"charset\":\"\",\"content\":\"{seomatic.meta.twitterTitle}\",\"httpEquiv\":\"\",\"name\":\"twitter:title\",\"property\":null,\"include\":true,\"key\":\"twitter:title\",\"environment\":null,\"dependencies\":null},\"twitter:description\":{\"charset\":\"\",\"content\":\"{seomatic.meta.twitterDescription}\",\"httpEquiv\":\"\",\"name\":\"twitter:description\",\"property\":null,\"include\":true,\"key\":\"twitter:description\",\"environment\":null,\"dependencies\":null},\"twitter:image\":{\"charset\":\"\",\"content\":\"{seomatic.meta.twitterImage}\",\"httpEquiv\":\"\",\"name\":\"twitter:image\",\"property\":null,\"include\":true,\"key\":\"twitter:image\",\"environment\":null,\"dependencies\":null},\"twitter:image:width\":{\"charset\":\"\",\"content\":\"{seomatic.meta.twitterImageWidth}\",\"httpEquiv\":\"\",\"name\":\"twitter:image:width\",\"property\":null,\"include\":true,\"key\":\"twitter:image:width\",\"environment\":null,\"dependencies\":{\"tag\":[\"twitter:image\"]}},\"twitter:image:height\":{\"charset\":\"\",\"content\":\"{seomatic.meta.twitterImageHeight}\",\"httpEquiv\":\"\",\"name\":\"twitter:image:height\",\"property\":null,\"include\":true,\"key\":\"twitter:image:height\",\"environment\":null,\"dependencies\":{\"tag\":[\"twitter:image\"]}},\"twitter:image:alt\":{\"charset\":\"\",\"content\":\"{seomatic.meta.twitterImageDescription}\",\"httpEquiv\":\"\",\"name\":\"twitter:image:alt\",\"property\":null,\"include\":true,\"key\":\"twitter:image:alt\",\"environment\":null,\"dependencies\":{\"tag\":[\"twitter:image\"]}}},\"name\":\"Twitter\",\"description\":\"Twitter Card Meta Tags\",\"class\":\"nystudio107\\\\seomatic\\\\models\\\\MetaTagContainer\",\"handle\":\"twitter\",\"include\":true,\"dependencies\":{\"site\":[\"twitterHandle\"]},\"clearCache\":false},\"MetaTagContainermiscellaneous\":{\"data\":{\"google-site-verification\":{\"charset\":\"\",\"content\":\"{seomatic.site.googleSiteVerification}\",\"httpEquiv\":\"\",\"name\":\"google-site-verification\",\"property\":null,\"include\":true,\"key\":\"google-site-verification\",\"environment\":null,\"dependencies\":{\"site\":[\"googleSiteVerification\"]}},\"bing-site-verification\":{\"charset\":\"\",\"content\":\"{seomatic.site.bingSiteVerification}\",\"httpEquiv\":\"\",\"name\":\"msvalidate.01\",\"property\":null,\"include\":true,\"key\":\"bing-site-verification\",\"environment\":null,\"dependencies\":{\"site\":[\"bingSiteVerification\"]}},\"pinterest-site-verification\":{\"charset\":\"\",\"content\":\"{seomatic.site.pinterestSiteVerification}\",\"httpEquiv\":\"\",\"name\":\"p:domain_verify\",\"property\":null,\"include\":true,\"key\":\"pinterest-site-verification\",\"environment\":null,\"dependencies\":{\"site\":[\"pinterestSiteVerification\"]}}},\"name\":\"Miscellaneous\",\"description\":\"Miscellaneous Meta Tags\",\"class\":\"nystudio107\\\\seomatic\\\\models\\\\MetaTagContainer\",\"handle\":\"miscellaneous\",\"include\":true,\"dependencies\":[],\"clearCache\":false},\"MetaLinkContainergeneral\":{\"data\":{\"canonical\":{\"crossorigin\":\"\",\"href\":\"{seomatic.meta.canonicalUrl}\",\"hreflang\":\"\",\"media\":\"\",\"rel\":\"canonical\",\"sizes\":\"\",\"type\":\"\",\"include\":true,\"key\":\"canonical\",\"environment\":null,\"dependencies\":null},\"home\":{\"crossorigin\":\"\",\"href\":\"{{ seomatic.helper.siteUrl(\\\"/\\\") }}\",\"hreflang\":\"\",\"media\":\"\",\"rel\":\"home\",\"sizes\":\"\",\"type\":\"\",\"include\":true,\"key\":\"home\",\"environment\":null,\"dependencies\":null},\"author\":{\"crossorigin\":\"\",\"href\":\"{{ seomatic.helper.siteUrl(\\\"/humans.txt\\\") }}\",\"hreflang\":\"\",\"media\":\"\",\"rel\":\"author\",\"sizes\":\"\",\"type\":\"text/plain\",\"include\":true,\"key\":\"author\",\"environment\":null,\"dependencies\":{\"frontend_template\":[\"humans\"]}},\"publisher\":{\"crossorigin\":\"\",\"href\":\"{seomatic.site.googlePublisherLink}\",\"hreflang\":\"\",\"media\":\"\",\"rel\":\"publisher\",\"sizes\":\"\",\"type\":\"\",\"include\":true,\"key\":\"publisher\",\"environment\":null,\"dependencies\":{\"site\":[\"googlePublisherLink\"]}}},\"name\":\"General\",\"description\":\"Link Tags\",\"class\":\"nystudio107\\\\seomatic\\\\models\\\\MetaLinkContainer\",\"handle\":\"general\",\"include\":true,\"dependencies\":[],\"clearCache\":false},\"MetaScriptContainergeneral\":{\"data\":{\"googleAnalytics\":{\"name\":\"Google Analytics\",\"description\":\"Google Analytics gives you the digital analytics tools you need to analyze data from all touchpoints in one place, for a deeper understanding of the customer experience. You can then share the insights that matter with your whole organization. [Learn More](https://www.google.com/analytics/analytics/)\",\"templatePath\":\"_frontend/scripts/googleAnalytics.twig\",\"templateString\":\"{% if trackingId.value is defined and trackingId.value %}\\n(function(i,s,o,g,r,a,m){i[\'GoogleAnalyticsObject\']=r;i[r]=i[r]||function(){\\n(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),\\nm=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)\\n})(window,document,\'script\',\'{{ analyticsUrl.value }}\',\'ga\');\\nga(\'create\', \'{{ trackingId.value |raw }}\', \'auto\'{% if linker.value %}, {allowLinker: true}{% endif %});\\n{% if ipAnonymization.value %}\\nga(\'set\', \'anonymizeIp\', true);\\n{% endif %}\\n{% if displayFeatures.value %}\\nga(\'require\', \'displayfeatures\');\\n{% endif %}\\n{% if ecommerce.value %}\\nga(\'require\', \'ecommerce\');\\n{% endif %}\\n{% if enhancedEcommerce.value %}\\nga(\'require\', \'ec\');\\n{% endif %}\\n{% if enhancedLinkAttribution.value %}\\nga(\'require\', \'linkid\');\\n{% endif %}\\n{% if enhancedLinkAttribution.value %}\\nga(\'require\', \'linker\');\\n{% endif %}\\n{% set pageView = (sendPageView.value and not seomatic.helper.isPreview) %}\\n{% if pageView %}\\nga(\'send\', \'pageview\');\\n{% endif %}\\n{% endif %}\\n\",\"position\":1,\"bodyTemplatePath\":null,\"bodyTemplateString\":null,\"bodyPosition\":2,\"vars\":{\"trackingId\":{\"title\":\"Google Analytics Tracking ID\",\"instructions\":\"Only enter the ID, e.g.: `UA-XXXXXX-XX`, not the entire script code. [Learn More](https://support.google.com/analytics/answer/1032385?hl=e)\",\"type\":\"string\",\"value\":\"\"},\"sendPageView\":{\"title\":\"Automatically send Google Analytics PageView\",\"instructions\":\"Controls whether the Google Analytics script automatically sends a PageView to Google Analytics when your pages are loaded.\",\"type\":\"bool\",\"value\":true},\"ipAnonymization\":{\"title\":\"Google Analytics IP Anonymization\",\"instructions\":\"When a customer of Analytics requests IP address anonymization, Analytics anonymizes the address as soon as technically feasible at the earliest possible stage of the collection network.\",\"type\":\"bool\",\"value\":false},\"displayFeatures\":{\"title\":\"Display Features\",\"instructions\":\"The display features plugin for analytics.js can be used to enable Advertising Features in Google Analytics, such as Remarketing, Demographics and Interest Reporting, and more. [Learn More](https://developers.google.com/analytics/devguides/collection/analyticsjs/display-features)\",\"type\":\"bool\",\"value\":false},\"ecommerce\":{\"title\":\"Ecommerce\",\"instructions\":\"Ecommerce tracking allows you to measure the number of transactions and revenue that your website generates. [Learn More](https://developers.google.com/analytics/devguides/collection/analyticsjs/ecommerce)\",\"type\":\"bool\",\"value\":false},\"enhancedEcommerce\":{\"title\":\"Enhanced Ecommerce\",\"instructions\":\"The enhanced ecommerce plug-in for analytics.js enables the measurement of user interactions with products on ecommerce websites across the user\'s shopping experience, including: product impressions, product clicks, viewing product details, adding a product to a shopping cart, initiating the checkout process, transactions, and refunds. [Learn More](https://developers.google.com/analytics/devguides/collection/analyticsjs/enhanced-ecommerce)\",\"type\":\"bool\",\"value\":false},\"enhancedLinkAttribution\":{\"title\":\"Enhanced Link Attribution\",\"instructions\":\"Enhanced Link Attribution improves the accuracy of your In-Page Analytics report by automatically differentiating between multiple links to the same URL on a single page by using link element IDs. [Learn More](https://developers.google.com/analytics/devguides/collection/analyticsjs/enhanced-link-attribution)\",\"type\":\"bool\",\"value\":false},\"linker\":{\"title\":\"Linker\",\"instructions\":\"The linker plugin simplifies the process of implementing cross-domain tracking as described in the Cross-domain Tracking guide for analytics.js. [Learn More](https://developers.google.com/analytics/devguides/collection/analyticsjs/linker)\",\"type\":\"bool\",\"value\":false},\"analyticsUrl\":{\"title\":\"Google Analytics Script URL\",\"instructions\":\"The URL to the Google Analytics tracking script. Normally this should not be changed, unless you locally cache it.\",\"type\":\"string\",\"value\":\"https://www.google-analytics.com/analytics.js\"}},\"dataLayer\":[],\"include\":false,\"key\":\"googleAnalytics\",\"environment\":{\"staging\":{\"include\":false},\"local\":{\"include\":false}},\"dependencies\":null},\"gtag\":{\"name\":\"Google gtag.js\",\"description\":\"The global site tag (gtag.js) is a JavaScript tagging framework and API that allows you to send event data to AdWords, DoubleClick, and Google Analytics. Instead of having to manage multiple tags for different products, you can use gtag.js and more easily benefit from the latest tracking features and integrations as they become available. [Learn More](https://developers.google.com/gtagjs/)\",\"templatePath\":\"_frontend/scripts/gtagHead.twig\",\"templateString\":\"{% set gtagProperty = googleAnalyticsId.value ?? googleAdWordsId.value ?? dcFloodlightId.value ?? null %}\\n{% if gtagProperty %}\\nwindow.dataLayer = window.dataLayer || [{% if dataLayer is defined and dataLayer %}{{ dataLayer |json_encode() |raw }}{% endif %}];\\nfunction gtag(){dataLayer.push(arguments)};\\ngtag(\'js\', new Date());\\n{% set pageView = (sendPageView.value and not seomatic.helper.isPreview) %}\\n{% if googleAnalyticsId.value %}\\n{%- set gtagConfig = \\\"{\\\"\\n    ~ \\\"\'send_page_view\': #{pageView ? \'true\' : \'false\'},\\\"\\n    ~ \\\"\'anonymize_ip\': #{ipAnonymization.value ? \'true\' : \'false\'},\\\"\\n    ~ \\\"\'link_attribution\': #{enhancedLinkAttribution.value ? \'true\' : \'false\'},\\\"\\n    ~ \\\"\'allow_display_features\': #{displayFeatures.value ? \'true\' : \'false\'}\\\"\\n    ~ \\\"}\\\"\\n-%}\\ngtag(\'config\', \'{{ googleAnalyticsId.value }}\', {{ gtagConfig }});\\n{% endif %}\\n{% if googleAdWordsId.value %}\\n{%- set gtagConfig = \\\"{\\\"\\n    ~ \\\"\'send_page_view\': #{pageView ? \'true\' : \'false\'}\\\"\\n    ~ \\\"}\\\"\\n-%}\\ngtag(\'config\', \'{{ googleAdWordsId.value }}\', {{ gtagConfig }});\\n{% endif %}\\n{% if dcFloodlightId.value %}\\n{%- set gtagConfig = \\\"{\\\"\\n    ~ \\\"\'send_page_view\': #{pageView ? \'true\' : \'false\'}\\\"\\n    ~ \\\"}\\\"\\n-%}\\ngtag(\'config\', \'{{ dcFloodlightId.value }}\', {{ gtagConfig }});\\n{% endif %}\\n{% endif %}\\n\",\"position\":1,\"bodyTemplatePath\":\"_frontend/scripts/gtagBody.twig\",\"bodyTemplateString\":\"{% set gtagProperty = googleAnalyticsId.value ?? googleAdWordsId.value ?? dcFloodlightId.value ?? null %}\\n{% if gtagProperty %}\\n<script async src=\\\"{{ gtagScriptUrl.value }}?id={{ gtagProperty }}\\\"></script>\\n{% endif %}\\n\",\"bodyPosition\":2,\"vars\":{\"googleAnalyticsId\":{\"title\":\"Google Analytics Tracking ID\",\"instructions\":\"Only enter the ID, e.g.: `UA-XXXXXX-XX`, not the entire script code. [Learn More](https://support.google.com/analytics/answer/1032385?hl=e)\",\"type\":\"string\",\"value\":\"\"},\"googleAdWordsId\":{\"title\":\"AdWords Conversion ID\",\"instructions\":\"Only enter the ID, e.g.: `AW-XXXXXXXX`, not the entire script code. [Learn More](https://developers.google.com/adwords-remarketing-tag/)\",\"type\":\"string\",\"value\":\"\"},\"dcFloodlightId\":{\"title\":\"DoubleClick Floodlight ID\",\"instructions\":\"Only enter the ID, e.g.: `DC-XXXXXXXX`, not the entire script code. [Learn More](https://support.google.com/dcm/partner/answer/7568534)\",\"type\":\"string\",\"value\":\"\"},\"sendPageView\":{\"title\":\"Automatically send PageView\",\"instructions\":\"Controls whether the `gtag.js` script automatically sends a PageView to Google Analytics, AdWords, and DoubleClick Floodlight when your pages are loaded.\",\"type\":\"bool\",\"value\":true},\"ipAnonymization\":{\"title\":\"Google Analytics IP Anonymization\",\"instructions\":\"In some cases, you might need to anonymize the IP addresses of hits sent to Google Analytics. [Learn More](https://developers.google.com/analytics/devguides/collection/gtagjs/ip-anonymization)\",\"type\":\"bool\",\"value\":false},\"displayFeatures\":{\"title\":\"Google Analytics Display Features\",\"instructions\":\"The display features plugin for gtag.js can be used to enable Advertising Features in Google Analytics, such as Remarketing, Demographics and Interest Reporting, and more. [Learn More](https://developers.google.com/analytics/devguides/collection/gtagjs/display-features)\",\"type\":\"bool\",\"value\":false},\"enhancedLinkAttribution\":{\"title\":\"Google Analytics Enhanced Link Attribution\",\"instructions\":\"Enhanced link attribution improves click track reporting by automatically differentiating between multiple link clicks that have the same URL on a given page. [Learn More](https://developers.google.com/analytics/devguides/collection/gtagjs/enhanced-link-attribution)\",\"type\":\"bool\",\"value\":false},\"gtagScriptUrl\":{\"title\":\"Google gtag.js Script URL\",\"instructions\":\"The URL to the Google gtag.js tracking script. Normally this should not be changed, unless you locally cache it. The JavaScript `dataLayer` will automatically be set to the `dataLayer` Twig template variable.\",\"type\":\"string\",\"value\":\"https://www.googletagmanager.com/gtag/js\"}},\"dataLayer\":[],\"include\":false,\"key\":\"gtag\",\"environment\":{\"staging\":{\"include\":false},\"local\":{\"include\":false}},\"dependencies\":null},\"googleTagManager\":{\"name\":\"Google Tag Manager\",\"description\":\"Google Tag Manager is a tag management system that allows you to quickly and easily update tags and code snippets on your website. Once the Tag Manager snippet has been added to your website or mobile app, you can configure tags via a web-based user interface without having to alter and deploy additional code. [Learn More](https://support.google.com/tagmanager/answer/6102821?hl=en)\",\"templatePath\":\"_frontend/scripts/googleTagManagerHead.twig\",\"templateString\":\"{% if googleTagManagerId.value is defined and googleTagManagerId.value and not seomatic.helper.isPreview %}\\n{{ dataLayerVariableName.value }} = [{% if dataLayer is defined and dataLayer %}{{ dataLayer |json_encode() |raw }}{% endif %}];\\n(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({\'gtm.start\':\\nnew Date().getTime(),event:\'gtm.js\'});var f=d.getElementsByTagName(s)[0],\\nj=d.createElement(s),dl=l!=\'dataLayer\'?\'&l=\'+l:\'\';j.async=true;j.src=\\n\'{{ googleTagManagerUrl.value }}?id=\'+i+dl;f.parentNode.insertBefore(j,f);\\n})(window,document,\'script\',\'{{ dataLayerVariableName.value }}\',\'{{ googleTagManagerId.value }}\');\\n{% endif %}\\n\",\"position\":1,\"bodyTemplatePath\":\"_frontend/scripts/googleTagManagerBody.twig\",\"bodyTemplateString\":\"{% if googleTagManagerId.value is defined and googleTagManagerId.value and not seomatic.helper.isPreview %}\\n<noscript><iframe src=\\\"{{ googleTagManagerNoScriptUrl.value }}?id={{ googleTagManagerId.value }}\\\"\\nheight=\\\"0\\\" width=\\\"0\\\" style=\\\"display:none;visibility:hidden\\\"></iframe></noscript>\\n{% endif %}\\n\",\"bodyPosition\":2,\"vars\":{\"googleTagManagerId\":{\"title\":\"Google Tag Manager ID\",\"instructions\":\"Only enter the ID, e.g.: `GTM-XXXXXX`, not the entire script code. [Learn More](https://developers.google.com/tag-manager/quickstart)\",\"type\":\"string\",\"value\":\"\"},\"dataLayerVariableName\":{\"title\":\"DataLayer Variable Name\",\"instructions\":\"The name to use for the JavaScript DataLayer variable. The value of this variable will be set to the `dataLayer` Twig template variable.\",\"type\":\"string\",\"value\":\"dataLayer\"},\"googleTagManagerUrl\":{\"title\":\"Google Tag Manager Script URL\",\"instructions\":\"The URL to the Google Tag Manager script. Normally this should not be changed, unless you locally cache it.\",\"type\":\"string\",\"value\":\"https://www.googletagmanager.com/gtm.js\"},\"googleTagManagerNoScriptUrl\":{\"title\":\"Google Tag Manager Script &lt;noscript&gt; URL\",\"instructions\":\"The URL to the Google Tag Manager `&lt;noscript&gt;`. Normally this should not be changed, unless you locally cache it.\",\"type\":\"string\",\"value\":\"https://www.googletagmanager.com/ns.html\"}},\"dataLayer\":[],\"include\":false,\"key\":\"googleTagManager\",\"environment\":{\"staging\":{\"include\":false},\"local\":{\"include\":false}},\"dependencies\":null},\"facebookPixel\":{\"name\":\"Facebook Pixel\",\"description\":\"The Facebook pixel is an analytics tool that helps you measure the effectiveness of your advertising. You can use the Facebook pixel to understand the actions people are taking on your website and reach audiences you care about. [Learn More](https://www.facebook.com/business/help/651294705016616)\",\"templatePath\":\"_frontend/scripts/facebookPixelHead.twig\",\"templateString\":\"{% if facebookPixelId.value is defined and facebookPixelId.value %}\\n!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?\\nn.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;\\nn.push=n;n.loaded=!0;n.version=\'2.0\';n.queue=[];t=b.createElement(e);t.async=!0;\\nt.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,\\ndocument,\'script\',\'{{ facebookPixelUrl.value }}\');\\nfbq(\'init\', \'{{ facebookPixelId.value }}\');\\n{% set pageView = (sendPageView.value and not seomatic.helper.isPreview) %}\\n{% if pageView %}\\nfbq(\'track\', \'PageView\');\\n{% endif %}\\n{% endif %}\\n\",\"position\":1,\"bodyTemplatePath\":\"_frontend/scripts/facebookPixelBody.twig\",\"bodyTemplateString\":\"{% if facebookPixelId.value is defined and facebookPixelId.value %}\\n<noscript><img height=\\\"1\\\" width=\\\"1\\\" style=\\\"display:none\\\"\\nsrc=\\\"{{ facebookPixelNoScriptUrl.value }}?id={{ facebookPixelId.value }}&ev=PageView&noscript=1\\\" /></noscript>\\n{% endif %}\\n\",\"bodyPosition\":2,\"vars\":{\"facebookPixelId\":{\"title\":\"Facebook Pixel ID\",\"instructions\":\"Only enter the ID, e.g.: `XXXXXXXXXX`, not the entire script code. [Learn More](https://developers.facebook.com/docs/facebook-pixel/api-reference)\",\"type\":\"string\",\"value\":\"\"},\"sendPageView\":{\"title\":\"Automatically send Facebook Pixel PageView\",\"instructions\":\"Controls whether the Facebook Pixel script automatically sends a PageView to Facebook Analytics when your pages are loaded.\",\"type\":\"bool\",\"value\":true},\"facebookPixelUrl\":{\"title\":\"Facebook Pixel Script URL\",\"instructions\":\"The URL to the Facebook Pixel script. Normally this should not be changed, unless you locally cache it.\",\"type\":\"string\",\"value\":\"https://connect.facebook.net/en_US/fbevents.js\"},\"facebookPixelNoScriptUrl\":{\"title\":\"Facebook Pixel Script &lt;noscript&gt; URL\",\"instructions\":\"The URL to the Facebook Pixel `&lt;noscript&gt;`. Normally this should not be changed, unless you locally cache it.\",\"type\":\"string\",\"value\":\"https://www.facebook.com/tr\"}},\"dataLayer\":[],\"include\":false,\"key\":\"facebookPixel\",\"environment\":{\"staging\":{\"include\":false},\"local\":{\"include\":false}},\"dependencies\":null},\"linkedInInsight\":{\"name\":\"LinkedIn Insight\",\"description\":\"The LinkedIn Insight Tag is a lightweight JavaScript tag that powers conversion tracking, retargeting, and web analytics for LinkedIn ad campaigns.\",\"templatePath\":\"_frontend/scripts/linkedInInsightHead.twig\",\"templateString\":\"{% if dataPartnerId.value is defined and dataPartnerId.value %}\\n_linkedin_data_partner_id = \\\"{{ dataPartnerId.value }}\\\";\\n{% endif %}\\n\",\"position\":1,\"bodyTemplatePath\":\"_frontend/scripts/linkedInInsightBody.twig\",\"bodyTemplateString\":\"{% if dataPartnerId.value is defined and dataPartnerId.value %}\\n<script type=\\\"text/javascript\\\">\\n(function(){var s = document.getElementsByTagName(\\\"script\\\")[0];\\n    var b = document.createElement(\\\"script\\\");\\n    b.type = \\\"text/javascript\\\";b.async = true;\\n    b.src = \\\"{{ linkedInInsightUrl.value }}\\\";\\n    s.parentNode.insertBefore(b, s);})();\\n</script>\\n<noscript>\\n<img height=\\\"1\\\" width=\\\"1\\\" style=\\\"display:none;\\\" alt=\\\"\\\" src=\\\"{{ linkedInInsightNoScriptUrl.value }}?pid={{ dataPartnerId.value }}&fmt=gif\\\" />\\n</noscript>\\n{% endif %}\\n\",\"bodyPosition\":3,\"vars\":{\"dataPartnerId\":{\"title\":\"LinkedIn Data Partner ID\",\"instructions\":\"Only enter the ID, e.g.: `XXXXXXXXXX`, not the entire script code. [Learn More](https://www.linkedin.com/help/lms/answer/65513/adding-the-linkedin-insight-tag-to-your-website?lang=en)\",\"type\":\"string\",\"value\":\"\"},\"linkedInInsightUrl\":{\"title\":\"LinkedIn Insight Script URL\",\"instructions\":\"The URL to the LinkedIn Insight script. Normally this should not be changed, unless you locally cache it.\",\"type\":\"string\",\"value\":\"https://snap.licdn.com/li.lms-analytics/insight.min.js\"},\"linkedInInsightNoScriptUrl\":{\"title\":\"LinkedIn Insight &lt;noscript&gt; URL\",\"instructions\":\"The URL to the LinkedIn Insight `&lt;noscript&gt;`. Normally this should not be changed, unless you locally cache it.\",\"type\":\"string\",\"value\":\"https://dc.ads.linkedin.com/collect/\"}},\"dataLayer\":[],\"include\":false,\"key\":\"linkedInInsight\",\"environment\":{\"staging\":{\"include\":false},\"local\":{\"include\":false}},\"dependencies\":null},\"hubSpot\":{\"name\":\"HubSpot\",\"description\":\"If you\'re not hosting your entire website on HubSpot, or have pages on your website that are not hosted on HubSpot, you\'ll need to install the HubSpot tracking code on your non-HubSpot pages in order to capture those analytics.\",\"templatePath\":null,\"templateString\":null,\"position\":1,\"bodyTemplatePath\":\"_frontend/scripts/hubSpotBody.twig\",\"bodyTemplateString\":\"{% if hubSpotId.value is defined and hubSpotId.value %}\\n<script type=\\\"text/javascript\\\" id=\\\"hs-script-loader\\\" async defer src=\\\"{{ hubSpotUrl.value }}{{ hubSpotId.value }}.js\\\"></script>\\n{% endif %}\\n\",\"bodyPosition\":3,\"vars\":{\"hubSpotId\":{\"title\":\"HubSpot ID\",\"instructions\":\"Only enter the ID, e.g.: `XXXXXXXXXX`, not the entire script code. [Learn More](https://knowledge.hubspot.com/articles/kcs_article/reports/install-the-hubspot-tracking-code)\",\"type\":\"string\",\"value\":\"\"},\"hubSpotUrl\":{\"title\":\"HubSpot Script URL\",\"instructions\":\"The URL to the HubSpot script. Normally this should not be changed, unless you locally cache it.\",\"type\":\"string\",\"value\":\"//js.hs-scripts.com/\"}},\"dataLayer\":[],\"include\":false,\"key\":\"hubSpot\",\"environment\":{\"staging\":{\"include\":false},\"local\":{\"include\":false}},\"dependencies\":null}},\"position\":1,\"name\":\"General\",\"description\":\"Script Tags\",\"class\":\"nystudio107\\\\seomatic\\\\models\\\\MetaScriptContainer\",\"handle\":\"general\",\"include\":true,\"dependencies\":[],\"clearCache\":false},\"MetaJsonLdContainergeneral\":{\"data\":{\"mainEntityOfPage\":{\"issn\":null,\"about\":null,\"abstract\":null,\"accessMode\":null,\"accessModeSufficient\":null,\"accessibilityAPI\":null,\"accessibilityControl\":null,\"accessibilityFeature\":null,\"accessibilityHazard\":null,\"accessibilitySummary\":null,\"accountablePerson\":null,\"acquireLicensePage\":null,\"aggregateRating\":null,\"alternativeHeadline\":null,\"associatedMedia\":null,\"audience\":null,\"audio\":null,\"author\":{\"id\":\"{seomatic.site.identity.genericUrl}#identity\"},\"award\":null,\"character\":null,\"citation\":null,\"comment\":null,\"commentCount\":null,\"conditionsOfAccess\":null,\"contentLocation\":null,\"contentRating\":null,\"contentReferenceTime\":null,\"contributor\":null,\"copyrightHolder\":{\"id\":\"{seomatic.site.identity.genericUrl}#identity\"},\"copyrightYear\":null,\"correction\":null,\"creativeWorkStatus\":null,\"creator\":{\"id\":\"{seomatic.site.creator.genericUrl}#creator\"},\"dateCreated\":null,\"dateModified\":null,\"datePublished\":null,\"discussionUrl\":null,\"editor\":null,\"educationalAlignment\":null,\"educationalUse\":null,\"encoding\":null,\"encodingFormat\":null,\"exampleOfWork\":null,\"expires\":null,\"funder\":null,\"genre\":null,\"hasPart\":null,\"headline\":null,\"inLanguage\":\"{seomatic.meta.language}\",\"interactionStatistic\":null,\"interactivityType\":null,\"isAccessibleForFree\":null,\"isBasedOn\":null,\"isFamilyFriendly\":null,\"isPartOf\":null,\"keywords\":null,\"learningResourceType\":null,\"license\":null,\"locationCreated\":null,\"mainEntity\":null,\"maintainer\":null,\"material\":null,\"materialExtent\":null,\"mentions\":null,\"offers\":null,\"position\":null,\"producer\":null,\"provider\":null,\"publication\":null,\"publisher\":null,\"publisherImprint\":null,\"publishingPrinciples\":null,\"recordedAt\":null,\"releasedEvent\":null,\"review\":null,\"schemaVersion\":null,\"sdDatePublished\":null,\"sdLicense\":null,\"sdPublisher\":null,\"sourceOrganization\":null,\"spatial\":null,\"spatialCoverage\":null,\"sponsor\":null,\"temporal\":null,\"temporalCoverage\":null,\"text\":null,\"thumbnailUrl\":null,\"timeRequired\":null,\"translationOfWork\":null,\"translator\":null,\"typicalAgeRange\":null,\"usageInfo\":null,\"version\":null,\"video\":null,\"workExample\":null,\"workTranslation\":null,\"additionalType\":null,\"alternateName\":null,\"description\":\"{seomatic.meta.seoDescription}\",\"disambiguatingDescription\":null,\"identifier\":null,\"image\":{\"type\":\"ImageObject\",\"url\":\"{seomatic.meta.seoImage}\"},\"mainEntityOfPage\":\"{seomatic.meta.canonicalUrl}\",\"name\":\"{seomatic.meta.seoTitle}\",\"potentialAction\":{\"type\":\"SearchAction\",\"target\":\"{seomatic.site.siteLinksSearchTarget}\",\"query-input\":\"{seomatic.helper.siteLinksQueryInput()}\"},\"sameAs\":null,\"subjectOf\":null,\"url\":\"{seomatic.meta.canonicalUrl}\",\"context\":\"http://schema.org\",\"type\":\"{seomatic.meta.mainEntityOfPage}\",\"id\":null,\"graph\":null,\"include\":true,\"key\":\"mainEntityOfPage\",\"environment\":null,\"dependencies\":null},\"identity\":{\"actionableFeedbackPolicy\":null,\"address\":{\"type\":\"PostalAddress\",\"streetAddress\":\"{seomatic.site.identity.genericStreetAddress}\",\"addressLocality\":\"{seomatic.site.identity.genericAddressLocality}\",\"addressRegion\":\"{seomatic.site.identity.genericAddressRegion}\",\"postalCode\":\"{seomatic.site.identity.genericPostalCode}\",\"addressCountry\":\"{seomatic.site.identity.genericAddressCountry}\"},\"aggregateRating\":null,\"alumni\":null,\"areaServed\":null,\"award\":null,\"brand\":null,\"contactPoint\":null,\"correctionsPolicy\":null,\"department\":null,\"dissolutionDate\":null,\"diversityPolicy\":null,\"diversityStaffingReport\":null,\"duns\":\"{seomatic.site.identity.organizationDuns}\",\"email\":\"{seomatic.site.identity.genericEmail}\",\"employee\":null,\"ethicsPolicy\":null,\"event\":null,\"faxNumber\":null,\"founder\":\"{seomatic.site.identity.organizationFounder}\",\"foundingDate\":\"{seomatic.site.identity.organizationFoundingDate}\",\"foundingLocation\":\"{seomatic.site.identity.organizationFoundingLocation}\",\"funder\":null,\"globalLocationNumber\":null,\"hasCredential\":null,\"hasMerchantReturnPolicy\":null,\"hasOfferCatalog\":null,\"hasPOS\":null,\"interactionStatistic\":null,\"isicV4\":null,\"knowsAbout\":null,\"knowsLanguage\":null,\"legalName\":null,\"leiCode\":null,\"location\":null,\"logo\":{\"type\":\"ImageObject\",\"url\":\"{seomatic.helper.socialTransform(seomatic.site.identity.genericImageIds[0], \\\"schema-logo\\\")}\",\"width\":\"{seomatic.helper.socialTransformWidth(seomatic.site.identity.genericImageIds[0], \\\"schema-logo\\\")}\",\"height\":\"{seomatic.helper.socialTransformHeight(seomatic.site.identity.genericImageIds[0], \\\"schema-logo\\\")}\"},\"makesOffer\":null,\"member\":null,\"memberOf\":null,\"naics\":null,\"numberOfEmployees\":null,\"ownershipFundingInfo\":null,\"owns\":null,\"parentOrganization\":null,\"publishingPrinciples\":null,\"review\":null,\"seeks\":null,\"slogan\":null,\"sponsor\":null,\"subOrganization\":null,\"taxID\":null,\"telephone\":\"{seomatic.site.identity.genericTelephone}\",\"unnamedSourcesPolicy\":null,\"vatID\":null,\"additionalType\":null,\"alternateName\":\"{seomatic.site.identity.genericAlternateName}\",\"description\":\"{seomatic.site.identity.genericDescription}\",\"disambiguatingDescription\":null,\"identifier\":null,\"image\":{\"type\":\"ImageObject\",\"url\":\"{seomatic.site.identity.genericImage}\",\"width\":\"{seomatic.site.identity.genericImageWidth}\",\"height\":\"{seomatic.site.identity.genericImageHeight}\"},\"mainEntityOfPage\":null,\"name\":\"{seomatic.site.identity.genericName}\",\"potentialAction\":null,\"sameAs\":null,\"subjectOf\":null,\"url\":\"{seomatic.site.identity.genericUrl}\",\"context\":\"http://schema.org\",\"type\":\"{seomatic.site.identity.computedType}\",\"id\":\"{seomatic.site.identity.genericUrl}#identity\",\"graph\":null,\"include\":true,\"key\":\"identity\",\"environment\":null,\"dependencies\":null},\"creator\":{\"actionableFeedbackPolicy\":null,\"address\":{\"type\":\"PostalAddress\",\"streetAddress\":\"{seomatic.site.creator.genericStreetAddress}\",\"addressLocality\":\"{seomatic.site.creator.genericAddressLocality}\",\"addressRegion\":\"{seomatic.site.creator.genericAddressRegion}\",\"postalCode\":\"{seomatic.site.creator.genericPostalCode}\",\"addressCountry\":\"{seomatic.site.creator.genericAddressCountry}\"},\"aggregateRating\":null,\"alumni\":null,\"areaServed\":null,\"award\":null,\"brand\":null,\"contactPoint\":null,\"correctionsPolicy\":null,\"department\":null,\"dissolutionDate\":null,\"diversityPolicy\":null,\"diversityStaffingReport\":null,\"duns\":\"{seomatic.site.creator.organizationDuns}\",\"email\":\"{seomatic.site.creator.genericEmail}\",\"employee\":null,\"ethicsPolicy\":null,\"event\":null,\"faxNumber\":null,\"founder\":\"{seomatic.site.creator.organizationFounder}\",\"foundingDate\":\"{seomatic.site.creator.organizationFoundingDate}\",\"foundingLocation\":\"{seomatic.site.creator.organizationFoundingLocation}\",\"funder\":null,\"globalLocationNumber\":null,\"hasCredential\":null,\"hasMerchantReturnPolicy\":null,\"hasOfferCatalog\":null,\"hasPOS\":null,\"interactionStatistic\":null,\"isicV4\":null,\"knowsAbout\":null,\"knowsLanguage\":null,\"legalName\":null,\"leiCode\":null,\"location\":null,\"logo\":{\"type\":\"ImageObject\",\"url\":\"{seomatic.helper.socialTransform(seomatic.site.creator.genericImageIds[0], \\\"schema-logo\\\")}\",\"width\":\"{seomatic.helper.socialTransformWidth(seomatic.site.creator.genericImageIds[0], \\\"schema-logo\\\")}\",\"height\":\"{seomatic.helper.socialTransformHeight(seomatic.site.creator.genericImageIds[0], \\\"schema-logo\\\")}\"},\"makesOffer\":null,\"member\":null,\"memberOf\":null,\"naics\":null,\"numberOfEmployees\":null,\"ownershipFundingInfo\":null,\"owns\":null,\"parentOrganization\":null,\"publishingPrinciples\":null,\"review\":null,\"seeks\":null,\"slogan\":null,\"sponsor\":null,\"subOrganization\":null,\"taxID\":null,\"telephone\":\"{seomatic.site.creator.genericTelephone}\",\"unnamedSourcesPolicy\":null,\"vatID\":null,\"additionalType\":null,\"alternateName\":\"{seomatic.site.creator.genericAlternateName}\",\"description\":\"{seomatic.site.creator.genericDescription}\",\"disambiguatingDescription\":null,\"identifier\":null,\"image\":{\"type\":\"ImageObject\",\"url\":\"{seomatic.site.creator.genericImage}\",\"width\":\"{seomatic.site.creator.genericImageWidth}\",\"height\":\"{seomatic.site.creator.genericImageHeight}\"},\"mainEntityOfPage\":null,\"name\":\"{seomatic.site.creator.genericName}\",\"potentialAction\":null,\"sameAs\":null,\"subjectOf\":null,\"url\":\"{seomatic.site.creator.genericUrl}\",\"context\":\"http://schema.org\",\"type\":\"{seomatic.site.creator.computedType}\",\"id\":\"{seomatic.site.creator.genericUrl}#creator\",\"graph\":null,\"include\":true,\"key\":\"creator\",\"environment\":null,\"dependencies\":null}},\"name\":\"General\",\"description\":\"JsonLd Tags\",\"class\":\"nystudio107\\\\seomatic\\\\models\\\\MetaJsonLdContainer\",\"handle\":\"general\",\"include\":true,\"dependencies\":[],\"clearCache\":false},\"MetaTitleContainergeneral\":{\"data\":{\"title\":{\"title\":\"{seomatic.meta.seoTitle}\",\"siteName\":\"{seomatic.site.siteName}\",\"siteNamePosition\":\"{seomatic.meta.siteNamePosition}\",\"separatorChar\":\"{seomatic.config.separatorChar}\",\"include\":true,\"key\":\"title\",\"environment\":null,\"dependencies\":null}},\"name\":\"General\",\"description\":\"Meta Title Tag\",\"class\":\"nystudio107\\\\seomatic\\\\models\\\\MetaTitleContainer\",\"handle\":\"general\",\"include\":true,\"dependencies\":[],\"clearCache\":false}}','[]','{\"data\":{\"humans\":{\"templateVersion\":\"1.0.0\",\"templateString\":\"/* TEAM */\\n\\nCreator: {{ seomatic.site.creator.genericName ?? \\\"n/a\\\" }}\\nURL: {{ seomatic.site.creator.genericUrl ?? \\\"n/a\\\" }}\\nDescription: {{ seomatic.site.creator.genericDescription ?? \\\"n/a\\\" }}\\n\\n/* THANKS */\\n\\nCraft CMS - https://craftcms.com\\nPixel & Tonic - https://pixelandtonic.com\\n\\n/* SITE */\\n\\nStandards: HTML5, CSS3\\nComponents: Craft CMS 3, Yii2, PHP, JavaScript, SEOmatic\\n\",\"siteId\":null,\"include\":true,\"handle\":\"humans\",\"path\":\"humans.txt\",\"template\":\"_frontend/pages/humans.twig\",\"controller\":\"frontend-template\",\"action\":\"humans\"},\"robots\":{\"templateVersion\":\"1.0.0\",\"templateString\":\"# robots.txt for {{ siteUrl }}\\n\\nSitemap: {{ seomatic.helper.sitemapIndexForSiteId() }}\\n{% switch seomatic.config.environment %}\\n\\n{% case \\\"live\\\" %}\\n\\n# live - don\'t allow web crawlers to index cpresources/ or vendor/\\n\\nUser-agent: *\\nDisallow: /cpresources/\\nDisallow: /vendor/\\nDisallow: /.env\\nDisallow: /cache/\\n\\n{% case \\\"staging\\\" %}\\n\\n# staging - disallow all\\n\\nUser-agent: *\\nDisallow: /\\n\\n{% case \\\"local\\\" %}\\n\\n# local - disallow all\\n\\nUser-agent: *\\nDisallow: /\\n\\n{% default %}\\n\\n# default - don\'t allow web crawlers to index cpresources/ or vendor/\\n\\nUser-agent: *\\nDisallow: /cpresources/\\nDisallow: /vendor/\\nDisallow: /.env\\nDisallow: /cache/\\n\\n{% endswitch %}\\n\",\"siteId\":null,\"include\":true,\"handle\":\"robots\",\"path\":\"robots.txt\",\"template\":\"_frontend/pages/robots.twig\",\"controller\":\"frontend-template\",\"action\":\"robots\"},\"ads\":{\"templateVersion\":\"1.0.0\",\"templateString\":\"# ads.txt file for {{ siteUrl }}\\n# More info: https://support.google.com/admanager/answer/7441288?hl=en\\n{{ siteUrl }},123,DIRECT\\n\",\"siteId\":null,\"include\":true,\"handle\":\"ads\",\"path\":\"ads.txt\",\"template\":\"_frontend/pages/ads.twig\",\"controller\":\"frontend-template\",\"action\":\"ads\"}},\"name\":\"Frontend Templates\",\"description\":\"Templates that are rendered on the frontend\",\"class\":\"nystudio107\\\\seomatic\\\\models\\\\FrontendTemplateContainer\",\"handle\":\"SeomaticEditableTemplate\",\"include\":true,\"dependencies\":null,\"clearCache\":false}','{\"siteType\":\"CreativeWork\",\"siteSubType\":\"WebSite\",\"siteSpecificType\":\"\",\"seoTitleSource\":\"fromCustom\",\"seoTitleField\":\"\",\"siteNamePositionSource\":\"fromCustom\",\"seoDescriptionSource\":\"fromCustom\",\"seoDescriptionField\":\"\",\"seoKeywordsSource\":\"fromCustom\",\"seoKeywordsField\":\"\",\"seoImageIds\":[],\"seoImageSource\":\"fromAsset\",\"seoImageField\":\"\",\"seoImageTransform\":true,\"seoImageTransformMode\":\"crop\",\"seoImageDescriptionSource\":\"fromCustom\",\"seoImageDescriptionField\":\"\",\"twitterCreatorSource\":\"sameAsSite\",\"twitterCreatorField\":\"\",\"twitterTitleSource\":\"sameAsSeo\",\"twitterTitleField\":\"\",\"twitterSiteNamePositionSource\":\"fromCustom\",\"twitterDescriptionSource\":\"sameAsSeo\",\"twitterDescriptionField\":\"\",\"twitterImageIds\":[],\"twitterImageSource\":\"sameAsSeo\",\"twitterImageField\":\"\",\"twitterImageTransform\":true,\"twitterImageTransformMode\":\"crop\",\"twitterImageDescriptionSource\":\"sameAsSeo\",\"twitterImageDescriptionField\":\"\",\"ogTitleSource\":\"sameAsSeo\",\"ogTitleField\":\"\",\"ogSiteNamePositionSource\":\"fromCustom\",\"ogDescriptionSource\":\"sameAsSeo\",\"ogDescriptionField\":\"\",\"ogImageIds\":[],\"ogImageSource\":\"sameAsSeo\",\"ogImageField\":\"\",\"ogImageTransform\":true,\"ogImageTransformMode\":\"crop\",\"ogImageDescriptionSource\":\"sameAsSeo\",\"ogImageDescriptionField\":\"\"}'),
 	(3,'2020-06-03 17:29:09','2020-06-03 17:29:09','abf5d828-f59b-4724-b311-0be985b96eec','1.0.28','section',2,'Homepage','homepage','single',NULL,'index',2,'{\"2\":{\"id\":2,\"sectionId\":2,\"siteId\":2,\"enabledByDefault\":true,\"hasUrls\":true,\"uriFormat\":\"__home__\",\"template\":\"index\",\"language\":\"en-us\"}}','2020-06-03 17:29:09','{\"language\":null,\"mainEntityOfPage\":\"WebPage\",\"seoTitle\":\"{entry.title}\",\"siteNamePosition\":\"\",\"seoDescription\":\"\",\"seoKeywords\":\"\",\"seoImage\":\"\",\"seoImageWidth\":\"\",\"seoImageHeight\":\"\",\"seoImageDescription\":\"\",\"canonicalUrl\":\"{entry.url}\",\"robots\":\"\",\"ogType\":\"website\",\"ogTitle\":\"{seomatic.meta.seoTitle}\",\"ogSiteNamePosition\":\"\",\"ogDescription\":\"{seomatic.meta.seoDescription}\",\"ogImage\":\"{seomatic.meta.seoImage}\",\"ogImageWidth\":\"{seomatic.meta.seoImageWidth}\",\"ogImageHeight\":\"{seomatic.meta.seoImageHeight}\",\"ogImageDescription\":\"{seomatic.meta.seoImageDescription}\",\"twitterCard\":\"summary_large_image\",\"twitterCreator\":\"{seomatic.site.twitterHandle}\",\"twitterTitle\":\"{seomatic.meta.seoTitle}\",\"twitterSiteNamePosition\":\"\",\"twitterDescription\":\"{seomatic.meta.seoDescription}\",\"twitterImage\":\"{seomatic.meta.seoImage}\",\"twitterImageWidth\":\"{seomatic.meta.seoImageWidth}\",\"twitterImageHeight\":\"{seomatic.meta.seoImageHeight}\",\"twitterImageDescription\":\"{seomatic.meta.seoImageDescription}\"}','{\"siteName\":\"Craft\",\"identity\":null,\"creator\":null,\"twitterHandle\":\"\",\"facebookProfileId\":\"\",\"facebookAppId\":\"\",\"googleSiteVerification\":\"\",\"bingSiteVerification\":\"\",\"pinterestSiteVerification\":\"\",\"sameAsLinks\":[],\"siteLinksSearchTarget\":\"\",\"siteLinksQueryInput\":\"\",\"additionalSitemapUrls\":[],\"additionalSitemapUrlsDateUpdated\":null,\"additionalSitemaps\":[]}','{\"sitemapUrls\":true,\"sitemapAssets\":true,\"sitemapFiles\":true,\"sitemapAltLinks\":true,\"sitemapChangeFreq\":\"weekly\",\"sitemapPriority\":0.5,\"sitemapLimit\":null,\"structureDepth\":null,\"sitemapImageFieldMap\":[{\"property\":\"title\",\"field\":\"title\"},{\"property\":\"caption\",\"field\":\"\"},{\"property\":\"geo_location\",\"field\":\"\"},{\"property\":\"license\",\"field\":\"\"}],\"sitemapVideoFieldMap\":[{\"property\":\"title\",\"field\":\"title\"},{\"property\":\"description\",\"field\":\"\"},{\"property\":\"thumbnailLoc\",\"field\":\"\"},{\"property\":\"duration\",\"field\":\"\"},{\"property\":\"category\",\"field\":\"\"}]}','{\"MetaTagContainergeneral\":{\"data\":[],\"name\":\"General\",\"description\":\"General Meta Tags\",\"class\":\"nystudio107\\\\seomatic\\\\models\\\\MetaTagContainer\",\"handle\":\"general\",\"include\":true,\"dependencies\":[],\"clearCache\":false},\"MetaTagContaineropengraph\":{\"data\":[],\"name\":\"Facebook\",\"description\":\"Facebook OpenGraph Meta Tags\",\"class\":\"nystudio107\\\\seomatic\\\\models\\\\MetaTagContainer\",\"handle\":\"opengraph\",\"include\":true,\"dependencies\":[],\"clearCache\":false},\"MetaTagContainertwitter\":{\"data\":[],\"name\":\"Twitter\",\"description\":\"Twitter Card Meta Tags\",\"class\":\"nystudio107\\\\seomatic\\\\models\\\\MetaTagContainer\",\"handle\":\"twitter\",\"include\":true,\"dependencies\":[],\"clearCache\":false},\"MetaTagContainermiscellaneous\":{\"data\":[],\"name\":\"Miscellaneous\",\"description\":\"Miscellaneous Meta Tags\",\"class\":\"nystudio107\\\\seomatic\\\\models\\\\MetaTagContainer\",\"handle\":\"miscellaneous\",\"include\":true,\"dependencies\":[],\"clearCache\":false},\"MetaLinkContainergeneral\":{\"data\":[],\"name\":\"General\",\"description\":\"Link Tags\",\"class\":\"nystudio107\\\\seomatic\\\\models\\\\MetaLinkContainer\",\"handle\":\"general\",\"include\":true,\"dependencies\":[],\"clearCache\":false},\"MetaScriptContainergeneral\":{\"data\":[],\"position\":1,\"name\":\"General\",\"description\":\"Script Tags\",\"class\":\"nystudio107\\\\seomatic\\\\models\\\\MetaScriptContainer\",\"handle\":\"general\",\"include\":true,\"dependencies\":[],\"clearCache\":false},\"MetaJsonLdContainergeneral\":{\"data\":{\"mainEntityOfPage\":{\"breadcrumb\":null,\"lastReviewed\":null,\"mainContentOfPage\":null,\"primaryImageOfPage\":null,\"relatedLink\":null,\"reviewedBy\":null,\"significantLink\":null,\"speakable\":null,\"specialty\":null,\"about\":null,\"abstract\":null,\"accessMode\":null,\"accessModeSufficient\":null,\"accessibilityAPI\":null,\"accessibilityControl\":null,\"accessibilityFeature\":null,\"accessibilityHazard\":null,\"accessibilitySummary\":null,\"accountablePerson\":null,\"acquireLicensePage\":null,\"aggregateRating\":null,\"alternativeHeadline\":null,\"associatedMedia\":null,\"audience\":null,\"audio\":null,\"author\":{\"id\":\"{seomatic.site.identity.genericUrl}#identity\"},\"award\":null,\"character\":null,\"citation\":null,\"comment\":null,\"commentCount\":null,\"conditionsOfAccess\":null,\"contentLocation\":null,\"contentRating\":null,\"contentReferenceTime\":null,\"contributor\":null,\"copyrightHolder\":{\"id\":\"{seomatic.site.identity.genericUrl}#identity\"},\"copyrightYear\":\"{entry.postDate | date(\\\"Y\\\")}\",\"correction\":null,\"creativeWorkStatus\":null,\"creator\":{\"id\":\"{seomatic.site.identity.genericUrl}#creator\"},\"dateCreated\":false,\"dateModified\":\"{entry.dateUpdated |atom}\",\"datePublished\":\"{entry.postDate |atom}\",\"discussionUrl\":null,\"editor\":null,\"educationalAlignment\":null,\"educationalUse\":null,\"encoding\":null,\"encodingFormat\":null,\"exampleOfWork\":null,\"expires\":null,\"funder\":null,\"genre\":null,\"hasPart\":null,\"headline\":\"{seomatic.meta.seoTitle}\",\"inLanguage\":\"{seomatic.meta.language}\",\"interactionStatistic\":null,\"interactivityType\":null,\"isAccessibleForFree\":null,\"isBasedOn\":null,\"isFamilyFriendly\":null,\"isPartOf\":null,\"keywords\":null,\"learningResourceType\":null,\"license\":null,\"locationCreated\":null,\"mainEntity\":null,\"maintainer\":null,\"material\":null,\"materialExtent\":null,\"mentions\":null,\"offers\":null,\"position\":null,\"producer\":null,\"provider\":null,\"publication\":null,\"publisher\":{\"id\":\"{seomatic.site.identity.genericUrl}#creator\"},\"publisherImprint\":null,\"publishingPrinciples\":null,\"recordedAt\":null,\"releasedEvent\":null,\"review\":null,\"schemaVersion\":null,\"sdDatePublished\":null,\"sdLicense\":null,\"sdPublisher\":null,\"sourceOrganization\":null,\"spatial\":null,\"spatialCoverage\":null,\"sponsor\":null,\"temporal\":null,\"temporalCoverage\":null,\"text\":null,\"thumbnailUrl\":null,\"timeRequired\":null,\"translationOfWork\":null,\"translator\":null,\"typicalAgeRange\":null,\"usageInfo\":null,\"version\":null,\"video\":null,\"workExample\":null,\"workTranslation\":null,\"additionalType\":null,\"alternateName\":null,\"description\":\"{seomatic.meta.seoDescription}\",\"disambiguatingDescription\":null,\"identifier\":null,\"image\":{\"type\":\"ImageObject\",\"url\":\"{seomatic.meta.seoImage}\"},\"mainEntityOfPage\":\"{seomatic.meta.canonicalUrl}\",\"name\":\"{seomatic.meta.seoTitle}\",\"potentialAction\":{\"type\":\"SearchAction\",\"target\":\"{seomatic.site.siteLinksSearchTarget}\",\"query-input\":\"{seomatic.helper.siteLinksQueryInput()}\"},\"sameAs\":null,\"subjectOf\":null,\"url\":\"{seomatic.meta.canonicalUrl}\",\"context\":\"http://schema.org\",\"type\":\"{seomatic.meta.mainEntityOfPage}\",\"id\":null,\"graph\":null,\"include\":true,\"key\":\"mainEntityOfPage\",\"environment\":null,\"dependencies\":null}},\"name\":\"General\",\"description\":\"JsonLd Tags\",\"class\":\"nystudio107\\\\seomatic\\\\models\\\\MetaJsonLdContainer\",\"handle\":\"general\",\"include\":true,\"dependencies\":[],\"clearCache\":false},\"MetaTitleContainergeneral\":{\"data\":{\"title\":{\"title\":\"{seomatic.meta.seoTitle}\",\"siteName\":\"{seomatic.site.siteName}\",\"siteNamePosition\":\"{seomatic.meta.siteNamePosition}\",\"separatorChar\":\"{seomatic.config.separatorChar}\",\"include\":true,\"key\":\"title\",\"environment\":null,\"dependencies\":null}},\"name\":\"General\",\"description\":\"Meta Title Tag\",\"class\":\"nystudio107\\\\seomatic\\\\models\\\\MetaTitleContainer\",\"handle\":\"general\",\"include\":true,\"dependencies\":[],\"clearCache\":false}}','[]','{\"data\":[],\"name\":null,\"description\":null,\"class\":\"nystudio107\\\\seomatic\\\\models\\\\FrontendTemplateContainer\",\"handle\":null,\"include\":true,\"dependencies\":null,\"clearCache\":false}','{\"siteType\":\"CreativeWork\",\"siteSubType\":\"WebPage\",\"siteSpecificType\":\"\",\"seoTitleSource\":\"fromField\",\"seoTitleField\":\"title\",\"siteNamePositionSource\":\"sameAsGlobal\",\"seoDescriptionSource\":\"fromCustom\",\"seoDescriptionField\":\"\",\"seoKeywordsSource\":\"fromCustom\",\"seoKeywordsField\":\"\",\"seoImageIds\":[],\"seoImageSource\":\"fromAsset\",\"seoImageField\":\"\",\"seoImageTransform\":true,\"seoImageTransformMode\":\"crop\",\"seoImageDescriptionSource\":\"fromCustom\",\"seoImageDescriptionField\":\"\",\"twitterCreatorSource\":\"sameAsSite\",\"twitterCreatorField\":\"\",\"twitterTitleSource\":\"sameAsSeo\",\"twitterTitleField\":\"\",\"twitterSiteNamePositionSource\":\"sameAsGlobal\",\"twitterDescriptionSource\":\"sameAsSeo\",\"twitterDescriptionField\":\"\",\"twitterImageIds\":[],\"twitterImageSource\":\"sameAsSeo\",\"twitterImageField\":\"\",\"twitterImageTransform\":true,\"twitterImageTransformMode\":\"crop\",\"twitterImageDescriptionSource\":\"sameAsSeo\",\"twitterImageDescriptionField\":\"\",\"ogTitleSource\":\"sameAsSeo\",\"ogTitleField\":\"\",\"ogSiteNamePositionSource\":\"sameAsGlobal\",\"ogDescriptionSource\":\"sameAsSeo\",\"ogDescriptionField\":\"\",\"ogImageIds\":[],\"ogImageSource\":\"sameAsSeo\",\"ogImageField\":\"\",\"ogImageTransform\":true,\"ogImageTransformMode\":\"crop\",\"ogImageDescriptionSource\":\"sameAsSeo\",\"ogImageDescriptionField\":\"\"}'),
 	(4,'2020-06-24 11:35:07','2020-06-24 11:35:08','88160514-cb14-48a7-8f22-384bf7957724','1.0.28','section',3,'News','news','channel',NULL,'',2,'{\"2\":{\"id\":3,\"sectionId\":3,\"siteId\":2,\"enabledByDefault\":true,\"hasUrls\":true,\"uriFormat\":\"news/{slug}\",\"template\":\"\",\"language\":\"en-us\"}}','2020-06-24 11:35:08','{\"language\":null,\"mainEntityOfPage\":\"WebPage\",\"seoTitle\":\"{entry.title}\",\"siteNamePosition\":\"\",\"seoDescription\":\"\",\"seoKeywords\":\"\",\"seoImage\":\"\",\"seoImageWidth\":\"\",\"seoImageHeight\":\"\",\"seoImageDescription\":\"\",\"canonicalUrl\":\"{entry.url}\",\"robots\":\"\",\"ogType\":\"website\",\"ogTitle\":\"{seomatic.meta.seoTitle}\",\"ogSiteNamePosition\":\"\",\"ogDescription\":\"{seomatic.meta.seoDescription}\",\"ogImage\":\"{seomatic.meta.seoImage}\",\"ogImageWidth\":\"{seomatic.meta.seoImageWidth}\",\"ogImageHeight\":\"{seomatic.meta.seoImageHeight}\",\"ogImageDescription\":\"{seomatic.meta.seoImageDescription}\",\"twitterCard\":\"summary_large_image\",\"twitterCreator\":\"{seomatic.site.twitterHandle}\",\"twitterTitle\":\"{seomatic.meta.seoTitle}\",\"twitterSiteNamePosition\":\"\",\"twitterDescription\":\"{seomatic.meta.seoDescription}\",\"twitterImage\":\"{seomatic.meta.seoImage}\",\"twitterImageWidth\":\"{seomatic.meta.seoImageWidth}\",\"twitterImageHeight\":\"{seomatic.meta.seoImageHeight}\",\"twitterImageDescription\":\"{seomatic.meta.seoImageDescription}\"}','{\"siteName\":\"Craft\",\"identity\":null,\"creator\":null,\"twitterHandle\":\"\",\"facebookProfileId\":\"\",\"facebookAppId\":\"\",\"googleSiteVerification\":\"\",\"bingSiteVerification\":\"\",\"pinterestSiteVerification\":\"\",\"sameAsLinks\":[],\"siteLinksSearchTarget\":\"\",\"siteLinksQueryInput\":\"\",\"referrer\":\"no-referrer-when-downgrade\",\"additionalSitemapUrls\":[],\"additionalSitemapUrlsDateUpdated\":null,\"additionalSitemaps\":[]}','{\"sitemapUrls\":true,\"sitemapAssets\":true,\"sitemapFiles\":true,\"sitemapAltLinks\":true,\"sitemapChangeFreq\":\"weekly\",\"sitemapPriority\":0.5,\"sitemapLimit\":null,\"structureDepth\":null,\"sitemapImageFieldMap\":[{\"property\":\"title\",\"field\":\"title\"},{\"property\":\"caption\",\"field\":\"\"},{\"property\":\"geo_location\",\"field\":\"\"},{\"property\":\"license\",\"field\":\"\"}],\"sitemapVideoFieldMap\":[{\"property\":\"title\",\"field\":\"title\"},{\"property\":\"description\",\"field\":\"\"},{\"property\":\"thumbnailLoc\",\"field\":\"\"},{\"property\":\"duration\",\"field\":\"\"},{\"property\":\"category\",\"field\":\"\"}]}','{\"MetaTagContainergeneral\":{\"data\":[],\"name\":\"General\",\"description\":\"General Meta Tags\",\"class\":\"nystudio107\\\\seomatic\\\\models\\\\MetaTagContainer\",\"handle\":\"general\",\"include\":true,\"dependencies\":[],\"clearCache\":false},\"MetaTagContaineropengraph\":{\"data\":[],\"name\":\"Facebook\",\"description\":\"Facebook OpenGraph Meta Tags\",\"class\":\"nystudio107\\\\seomatic\\\\models\\\\MetaTagContainer\",\"handle\":\"opengraph\",\"include\":true,\"dependencies\":[],\"clearCache\":false},\"MetaTagContainertwitter\":{\"data\":[],\"name\":\"Twitter\",\"description\":\"Twitter Card Meta Tags\",\"class\":\"nystudio107\\\\seomatic\\\\models\\\\MetaTagContainer\",\"handle\":\"twitter\",\"include\":true,\"dependencies\":[],\"clearCache\":false},\"MetaTagContainermiscellaneous\":{\"data\":[],\"name\":\"Miscellaneous\",\"description\":\"Miscellaneous Meta Tags\",\"class\":\"nystudio107\\\\seomatic\\\\models\\\\MetaTagContainer\",\"handle\":\"miscellaneous\",\"include\":true,\"dependencies\":[],\"clearCache\":false},\"MetaLinkContainergeneral\":{\"data\":[],\"name\":\"General\",\"description\":\"Link Tags\",\"class\":\"nystudio107\\\\seomatic\\\\models\\\\MetaLinkContainer\",\"handle\":\"general\",\"include\":true,\"dependencies\":[],\"clearCache\":false},\"MetaScriptContainergeneral\":{\"data\":[],\"position\":1,\"name\":\"General\",\"description\":\"Script Tags\",\"class\":\"nystudio107\\\\seomatic\\\\models\\\\MetaScriptContainer\",\"handle\":\"general\",\"include\":true,\"dependencies\":[],\"clearCache\":false},\"MetaJsonLdContainergeneral\":{\"data\":{\"mainEntityOfPage\":{\"breadcrumb\":null,\"lastReviewed\":null,\"mainContentOfPage\":null,\"primaryImageOfPage\":null,\"relatedLink\":null,\"reviewedBy\":null,\"significantLink\":null,\"speakable\":null,\"specialty\":null,\"about\":null,\"abstract\":null,\"accessMode\":null,\"accessModeSufficient\":null,\"accessibilityAPI\":null,\"accessibilityControl\":null,\"accessibilityFeature\":null,\"accessibilityHazard\":null,\"accessibilitySummary\":null,\"accountablePerson\":null,\"acquireLicensePage\":null,\"aggregateRating\":null,\"alternativeHeadline\":null,\"associatedMedia\":null,\"audience\":null,\"audio\":null,\"author\":{\"id\":\"{seomatic.site.identity.genericUrl}#identity\"},\"award\":null,\"character\":null,\"citation\":null,\"comment\":null,\"commentCount\":null,\"conditionsOfAccess\":null,\"contentLocation\":null,\"contentRating\":null,\"contentReferenceTime\":null,\"contributor\":null,\"copyrightHolder\":{\"id\":\"{seomatic.site.identity.genericUrl}#identity\"},\"copyrightYear\":\"{entry.postDate | date(\\\"Y\\\")}\",\"correction\":null,\"creativeWorkStatus\":null,\"creator\":{\"id\":\"{seomatic.site.identity.genericUrl}#creator\"},\"dateCreated\":false,\"dateModified\":\"{entry.dateUpdated |atom}\",\"datePublished\":\"{entry.postDate |atom}\",\"discussionUrl\":null,\"editor\":null,\"educationalAlignment\":null,\"educationalUse\":null,\"encoding\":null,\"encodingFormat\":null,\"exampleOfWork\":null,\"expires\":null,\"funder\":null,\"genre\":null,\"hasPart\":null,\"headline\":\"{seomatic.meta.seoTitle}\",\"inLanguage\":\"{seomatic.meta.language}\",\"interactionStatistic\":null,\"interactivityType\":null,\"isAccessibleForFree\":null,\"isBasedOn\":null,\"isFamilyFriendly\":null,\"isPartOf\":null,\"keywords\":null,\"learningResourceType\":null,\"license\":null,\"locationCreated\":null,\"mainEntity\":null,\"maintainer\":null,\"material\":null,\"materialExtent\":null,\"mentions\":null,\"offers\":null,\"position\":null,\"producer\":null,\"provider\":null,\"publication\":null,\"publisher\":{\"id\":\"{seomatic.site.identity.genericUrl}#creator\"},\"publisherImprint\":null,\"publishingPrinciples\":null,\"recordedAt\":null,\"releasedEvent\":null,\"review\":null,\"schemaVersion\":null,\"sdDatePublished\":null,\"sdLicense\":null,\"sdPublisher\":null,\"sourceOrganization\":null,\"spatial\":null,\"spatialCoverage\":null,\"sponsor\":null,\"temporal\":null,\"temporalCoverage\":null,\"text\":null,\"thumbnailUrl\":null,\"timeRequired\":null,\"translationOfWork\":null,\"translator\":null,\"typicalAgeRange\":null,\"usageInfo\":null,\"version\":null,\"video\":null,\"workExample\":null,\"workTranslation\":null,\"additionalType\":null,\"alternateName\":null,\"description\":\"{seomatic.meta.seoDescription}\",\"disambiguatingDescription\":null,\"identifier\":null,\"image\":{\"type\":\"ImageObject\",\"url\":\"{seomatic.meta.seoImage}\"},\"mainEntityOfPage\":\"{seomatic.meta.canonicalUrl}\",\"name\":\"{seomatic.meta.seoTitle}\",\"potentialAction\":{\"type\":\"SearchAction\",\"target\":\"{seomatic.site.siteLinksSearchTarget}\",\"query-input\":\"{seomatic.helper.siteLinksQueryInput()}\"},\"sameAs\":null,\"subjectOf\":null,\"url\":\"{seomatic.meta.canonicalUrl}\",\"context\":\"http://schema.org\",\"type\":\"{seomatic.meta.mainEntityOfPage}\",\"id\":null,\"graph\":null,\"include\":true,\"key\":\"mainEntityOfPage\",\"environment\":null,\"dependencies\":null}},\"name\":\"General\",\"description\":\"JsonLd Tags\",\"class\":\"nystudio107\\\\seomatic\\\\models\\\\MetaJsonLdContainer\",\"handle\":\"general\",\"include\":true,\"dependencies\":[],\"clearCache\":false},\"MetaTitleContainergeneral\":{\"data\":{\"title\":{\"title\":\"{seomatic.meta.seoTitle}\",\"siteName\":\"{seomatic.site.siteName}\",\"siteNamePosition\":\"{seomatic.meta.siteNamePosition}\",\"separatorChar\":\"{seomatic.config.separatorChar}\",\"include\":true,\"key\":\"title\",\"environment\":null,\"dependencies\":null}},\"name\":\"General\",\"description\":\"Meta Title Tag\",\"class\":\"nystudio107\\\\seomatic\\\\models\\\\MetaTitleContainer\",\"handle\":\"general\",\"include\":true,\"dependencies\":[],\"clearCache\":false}}','[]','{\"data\":[],\"name\":null,\"description\":null,\"class\":\"nystudio107\\\\seomatic\\\\models\\\\FrontendTemplateContainer\",\"handle\":null,\"include\":true,\"dependencies\":null,\"clearCache\":false}','{\"siteType\":\"CreativeWork\",\"siteSubType\":\"WebPage\",\"siteSpecificType\":\"\",\"seoTitleSource\":\"fromField\",\"seoTitleField\":\"title\",\"siteNamePositionSource\":\"sameAsGlobal\",\"seoDescriptionSource\":\"fromCustom\",\"seoDescriptionField\":\"\",\"seoKeywordsSource\":\"fromCustom\",\"seoKeywordsField\":\"\",\"seoImageIds\":[],\"seoImageSource\":\"fromAsset\",\"seoImageField\":\"\",\"seoImageTransform\":true,\"seoImageTransformMode\":\"crop\",\"seoImageDescriptionSource\":\"fromCustom\",\"seoImageDescriptionField\":\"\",\"twitterCreatorSource\":\"sameAsSite\",\"twitterCreatorField\":\"\",\"twitterTitleSource\":\"sameAsSeo\",\"twitterTitleField\":\"\",\"twitterSiteNamePositionSource\":\"sameAsGlobal\",\"twitterDescriptionSource\":\"sameAsSeo\",\"twitterDescriptionField\":\"\",\"twitterImageIds\":[],\"twitterImageSource\":\"sameAsSeo\",\"twitterImageField\":\"\",\"twitterImageTransform\":true,\"twitterImageTransformMode\":\"crop\",\"twitterImageDescriptionSource\":\"sameAsSeo\",\"twitterImageDescriptionField\":\"\",\"ogTitleSource\":\"sameAsSeo\",\"ogTitleField\":\"\",\"ogSiteNamePositionSource\":\"sameAsGlobal\",\"ogDescriptionSource\":\"sameAsSeo\",\"ogDescriptionField\":\"\",\"ogImageIds\":[],\"ogImageSource\":\"sameAsSeo\",\"ogImageField\":\"\",\"ogImageTransform\":true,\"ogImageTransformMode\":\"crop\",\"ogImageDescriptionSource\":\"sameAsSeo\",\"ogImageDescriptionField\":\"\"}'),
-	(5,'2020-06-24 12:10:24','2020-06-24 12:10:24','d5b02d93-bfd8-4cb5-9a7b-820a249691c5','1.0.28','section',4,'Pages','pages','channel',NULL,'_organisms/_page',2,'{\"2\":{\"id\":4,\"sectionId\":4,\"siteId\":2,\"enabledByDefault\":true,\"hasUrls\":true,\"uriFormat\":\"{parent.uri ?? parent.uri}/{slug}\",\"template\":\"_organisms/_page\",\"language\":\"en-us\"}}','2020-06-24 12:10:24','{\"language\":null,\"mainEntityOfPage\":\"WebPage\",\"seoTitle\":\"{entry.title}\",\"siteNamePosition\":\"\",\"seoDescription\":\"\",\"seoKeywords\":\"\",\"seoImage\":\"\",\"seoImageWidth\":\"\",\"seoImageHeight\":\"\",\"seoImageDescription\":\"\",\"canonicalUrl\":\"{entry.url}\",\"robots\":\"\",\"ogType\":\"website\",\"ogTitle\":\"{seomatic.meta.seoTitle}\",\"ogSiteNamePosition\":\"\",\"ogDescription\":\"{seomatic.meta.seoDescription}\",\"ogImage\":\"{seomatic.meta.seoImage}\",\"ogImageWidth\":\"{seomatic.meta.seoImageWidth}\",\"ogImageHeight\":\"{seomatic.meta.seoImageHeight}\",\"ogImageDescription\":\"{seomatic.meta.seoImageDescription}\",\"twitterCard\":\"summary_large_image\",\"twitterCreator\":\"{seomatic.site.twitterHandle}\",\"twitterTitle\":\"{seomatic.meta.seoTitle}\",\"twitterSiteNamePosition\":\"\",\"twitterDescription\":\"{seomatic.meta.seoDescription}\",\"twitterImage\":\"{seomatic.meta.seoImage}\",\"twitterImageWidth\":\"{seomatic.meta.seoImageWidth}\",\"twitterImageHeight\":\"{seomatic.meta.seoImageHeight}\",\"twitterImageDescription\":\"{seomatic.meta.seoImageDescription}\"}','{\"siteName\":\"Craft\",\"identity\":null,\"creator\":null,\"twitterHandle\":\"\",\"facebookProfileId\":\"\",\"facebookAppId\":\"\",\"googleSiteVerification\":\"\",\"bingSiteVerification\":\"\",\"pinterestSiteVerification\":\"\",\"sameAsLinks\":[],\"siteLinksSearchTarget\":\"\",\"siteLinksQueryInput\":\"\",\"referrer\":\"no-referrer-when-downgrade\",\"additionalSitemapUrls\":[],\"additionalSitemapUrlsDateUpdated\":null,\"additionalSitemaps\":[]}','{\"sitemapUrls\":true,\"sitemapAssets\":true,\"sitemapFiles\":true,\"sitemapAltLinks\":true,\"sitemapChangeFreq\":\"weekly\",\"sitemapPriority\":0.5,\"sitemapLimit\":null,\"structureDepth\":null,\"sitemapImageFieldMap\":[{\"property\":\"title\",\"field\":\"title\"},{\"property\":\"caption\",\"field\":\"\"},{\"property\":\"geo_location\",\"field\":\"\"},{\"property\":\"license\",\"field\":\"\"}],\"sitemapVideoFieldMap\":[{\"property\":\"title\",\"field\":\"title\"},{\"property\":\"description\",\"field\":\"\"},{\"property\":\"thumbnailLoc\",\"field\":\"\"},{\"property\":\"duration\",\"field\":\"\"},{\"property\":\"category\",\"field\":\"\"}]}','{\"MetaTagContainergeneral\":{\"data\":[],\"name\":\"General\",\"description\":\"General Meta Tags\",\"class\":\"nystudio107\\\\seomatic\\\\models\\\\MetaTagContainer\",\"handle\":\"general\",\"include\":true,\"dependencies\":[],\"clearCache\":false},\"MetaTagContaineropengraph\":{\"data\":[],\"name\":\"Facebook\",\"description\":\"Facebook OpenGraph Meta Tags\",\"class\":\"nystudio107\\\\seomatic\\\\models\\\\MetaTagContainer\",\"handle\":\"opengraph\",\"include\":true,\"dependencies\":[],\"clearCache\":false},\"MetaTagContainertwitter\":{\"data\":[],\"name\":\"Twitter\",\"description\":\"Twitter Card Meta Tags\",\"class\":\"nystudio107\\\\seomatic\\\\models\\\\MetaTagContainer\",\"handle\":\"twitter\",\"include\":true,\"dependencies\":[],\"clearCache\":false},\"MetaTagContainermiscellaneous\":{\"data\":[],\"name\":\"Miscellaneous\",\"description\":\"Miscellaneous Meta Tags\",\"class\":\"nystudio107\\\\seomatic\\\\models\\\\MetaTagContainer\",\"handle\":\"miscellaneous\",\"include\":true,\"dependencies\":[],\"clearCache\":false},\"MetaLinkContainergeneral\":{\"data\":[],\"name\":\"General\",\"description\":\"Link Tags\",\"class\":\"nystudio107\\\\seomatic\\\\models\\\\MetaLinkContainer\",\"handle\":\"general\",\"include\":true,\"dependencies\":[],\"clearCache\":false},\"MetaScriptContainergeneral\":{\"data\":[],\"position\":1,\"name\":\"General\",\"description\":\"Script Tags\",\"class\":\"nystudio107\\\\seomatic\\\\models\\\\MetaScriptContainer\",\"handle\":\"general\",\"include\":true,\"dependencies\":[],\"clearCache\":false},\"MetaJsonLdContainergeneral\":{\"data\":{\"mainEntityOfPage\":{\"breadcrumb\":null,\"lastReviewed\":null,\"mainContentOfPage\":null,\"primaryImageOfPage\":null,\"relatedLink\":null,\"reviewedBy\":null,\"significantLink\":null,\"speakable\":null,\"specialty\":null,\"about\":null,\"abstract\":null,\"accessMode\":null,\"accessModeSufficient\":null,\"accessibilityAPI\":null,\"accessibilityControl\":null,\"accessibilityFeature\":null,\"accessibilityHazard\":null,\"accessibilitySummary\":null,\"accountablePerson\":null,\"acquireLicensePage\":null,\"aggregateRating\":null,\"alternativeHeadline\":null,\"associatedMedia\":null,\"audience\":null,\"audio\":null,\"author\":{\"id\":\"{seomatic.site.identity.genericUrl}#identity\"},\"award\":null,\"character\":null,\"citation\":null,\"comment\":null,\"commentCount\":null,\"conditionsOfAccess\":null,\"contentLocation\":null,\"contentRating\":null,\"contentReferenceTime\":null,\"contributor\":null,\"copyrightHolder\":{\"id\":\"{seomatic.site.identity.genericUrl}#identity\"},\"copyrightYear\":\"{entry.postDate | date(\\\"Y\\\")}\",\"correction\":null,\"creativeWorkStatus\":null,\"creator\":{\"id\":\"{seomatic.site.identity.genericUrl}#creator\"},\"dateCreated\":false,\"dateModified\":\"{entry.dateUpdated |atom}\",\"datePublished\":\"{entry.postDate |atom}\",\"discussionUrl\":null,\"editor\":null,\"educationalAlignment\":null,\"educationalUse\":null,\"encoding\":null,\"encodingFormat\":null,\"exampleOfWork\":null,\"expires\":null,\"funder\":null,\"genre\":null,\"hasPart\":null,\"headline\":\"{seomatic.meta.seoTitle}\",\"inLanguage\":\"{seomatic.meta.language}\",\"interactionStatistic\":null,\"interactivityType\":null,\"isAccessibleForFree\":null,\"isBasedOn\":null,\"isFamilyFriendly\":null,\"isPartOf\":null,\"keywords\":null,\"learningResourceType\":null,\"license\":null,\"locationCreated\":null,\"mainEntity\":null,\"maintainer\":null,\"material\":null,\"materialExtent\":null,\"mentions\":null,\"offers\":null,\"position\":null,\"producer\":null,\"provider\":null,\"publication\":null,\"publisher\":{\"id\":\"{seomatic.site.identity.genericUrl}#creator\"},\"publisherImprint\":null,\"publishingPrinciples\":null,\"recordedAt\":null,\"releasedEvent\":null,\"review\":null,\"schemaVersion\":null,\"sdDatePublished\":null,\"sdLicense\":null,\"sdPublisher\":null,\"sourceOrganization\":null,\"spatial\":null,\"spatialCoverage\":null,\"sponsor\":null,\"temporal\":null,\"temporalCoverage\":null,\"text\":null,\"thumbnailUrl\":null,\"timeRequired\":null,\"translationOfWork\":null,\"translator\":null,\"typicalAgeRange\":null,\"usageInfo\":null,\"version\":null,\"video\":null,\"workExample\":null,\"workTranslation\":null,\"additionalType\":null,\"alternateName\":null,\"description\":\"{seomatic.meta.seoDescription}\",\"disambiguatingDescription\":null,\"identifier\":null,\"image\":{\"type\":\"ImageObject\",\"url\":\"{seomatic.meta.seoImage}\"},\"mainEntityOfPage\":\"{seomatic.meta.canonicalUrl}\",\"name\":\"{seomatic.meta.seoTitle}\",\"potentialAction\":{\"type\":\"SearchAction\",\"target\":\"{seomatic.site.siteLinksSearchTarget}\",\"query-input\":\"{seomatic.helper.siteLinksQueryInput()}\"},\"sameAs\":null,\"subjectOf\":null,\"url\":\"{seomatic.meta.canonicalUrl}\",\"context\":\"http://schema.org\",\"type\":\"{seomatic.meta.mainEntityOfPage}\",\"id\":null,\"graph\":null,\"include\":true,\"key\":\"mainEntityOfPage\",\"environment\":null,\"dependencies\":null}},\"name\":\"General\",\"description\":\"JsonLd Tags\",\"class\":\"nystudio107\\\\seomatic\\\\models\\\\MetaJsonLdContainer\",\"handle\":\"general\",\"include\":true,\"dependencies\":[],\"clearCache\":false},\"MetaTitleContainergeneral\":{\"data\":{\"title\":{\"title\":\"{seomatic.meta.seoTitle}\",\"siteName\":\"{seomatic.site.siteName}\",\"siteNamePosition\":\"{seomatic.meta.siteNamePosition}\",\"separatorChar\":\"{seomatic.config.separatorChar}\",\"include\":true,\"key\":\"title\",\"environment\":null,\"dependencies\":null}},\"name\":\"General\",\"description\":\"Meta Title Tag\",\"class\":\"nystudio107\\\\seomatic\\\\models\\\\MetaTitleContainer\",\"handle\":\"general\",\"include\":true,\"dependencies\":[],\"clearCache\":false}}','[]','{\"data\":[],\"name\":null,\"description\":null,\"class\":\"nystudio107\\\\seomatic\\\\models\\\\FrontendTemplateContainer\",\"handle\":null,\"include\":true,\"dependencies\":null,\"clearCache\":false}','{\"siteType\":\"CreativeWork\",\"siteSubType\":\"WebPage\",\"siteSpecificType\":\"\",\"seoTitleSource\":\"fromField\",\"seoTitleField\":\"title\",\"siteNamePositionSource\":\"sameAsGlobal\",\"seoDescriptionSource\":\"fromCustom\",\"seoDescriptionField\":\"\",\"seoKeywordsSource\":\"fromCustom\",\"seoKeywordsField\":\"\",\"seoImageIds\":[],\"seoImageSource\":\"fromAsset\",\"seoImageField\":\"\",\"seoImageTransform\":true,\"seoImageTransformMode\":\"crop\",\"seoImageDescriptionSource\":\"fromCustom\",\"seoImageDescriptionField\":\"\",\"twitterCreatorSource\":\"sameAsSite\",\"twitterCreatorField\":\"\",\"twitterTitleSource\":\"sameAsSeo\",\"twitterTitleField\":\"\",\"twitterSiteNamePositionSource\":\"sameAsGlobal\",\"twitterDescriptionSource\":\"sameAsSeo\",\"twitterDescriptionField\":\"\",\"twitterImageIds\":[],\"twitterImageSource\":\"sameAsSeo\",\"twitterImageField\":\"\",\"twitterImageTransform\":true,\"twitterImageTransformMode\":\"crop\",\"twitterImageDescriptionSource\":\"sameAsSeo\",\"twitterImageDescriptionField\":\"\",\"ogTitleSource\":\"sameAsSeo\",\"ogTitleField\":\"\",\"ogSiteNamePositionSource\":\"sameAsGlobal\",\"ogDescriptionSource\":\"sameAsSeo\",\"ogDescriptionField\":\"\",\"ogImageIds\":[],\"ogImageSource\":\"sameAsSeo\",\"ogImageField\":\"\",\"ogImageTransform\":true,\"ogImageTransformMode\":\"crop\",\"ogImageDescriptionSource\":\"sameAsSeo\",\"ogImageDescriptionField\":\"\"}');
+	(5,'2020-06-24 12:10:24','2020-07-01 09:10:22','d5b02d93-bfd8-4cb5-9a7b-820a249691c5','1.0.28','section',4,'Pages','pages','channel',NULL,'_organisms/_page',2,'{\"2\":{\"id\":4,\"sectionId\":4,\"siteId\":2,\"enabledByDefault\":true,\"hasUrls\":true,\"uriFormat\":\"{parent.uri ?? parent.uri}/{slug}\",\"template\":\"_organisms/_page\",\"language\":\"en-us\"}}','2020-07-01 09:10:22','{\"language\":null,\"mainEntityOfPage\":\"WebPage\",\"seoTitle\":\"{entry.title}\",\"siteNamePosition\":\"\",\"seoDescription\":\"\",\"seoKeywords\":\"\",\"seoImage\":\"\",\"seoImageWidth\":\"\",\"seoImageHeight\":\"\",\"seoImageDescription\":\"\",\"canonicalUrl\":\"{entry.url}\",\"robots\":\"\",\"ogType\":\"website\",\"ogTitle\":\"{seomatic.meta.seoTitle}\",\"ogSiteNamePosition\":\"\",\"ogDescription\":\"{seomatic.meta.seoDescription}\",\"ogImage\":\"{seomatic.meta.seoImage}\",\"ogImageWidth\":\"{seomatic.meta.seoImageWidth}\",\"ogImageHeight\":\"{seomatic.meta.seoImageHeight}\",\"ogImageDescription\":\"{seomatic.meta.seoImageDescription}\",\"twitterCard\":\"summary_large_image\",\"twitterCreator\":\"{seomatic.site.twitterHandle}\",\"twitterTitle\":\"{seomatic.meta.seoTitle}\",\"twitterSiteNamePosition\":\"\",\"twitterDescription\":\"{seomatic.meta.seoDescription}\",\"twitterImage\":\"{seomatic.meta.seoImage}\",\"twitterImageWidth\":\"{seomatic.meta.seoImageWidth}\",\"twitterImageHeight\":\"{seomatic.meta.seoImageHeight}\",\"twitterImageDescription\":\"{seomatic.meta.seoImageDescription}\"}','{\"siteName\":\"Craft\",\"identity\":null,\"creator\":null,\"twitterHandle\":\"\",\"facebookProfileId\":\"\",\"facebookAppId\":\"\",\"googleSiteVerification\":\"\",\"bingSiteVerification\":\"\",\"pinterestSiteVerification\":\"\",\"sameAsLinks\":[],\"siteLinksSearchTarget\":\"\",\"siteLinksQueryInput\":\"\",\"referrer\":\"no-referrer-when-downgrade\",\"additionalSitemapUrls\":[],\"additionalSitemapUrlsDateUpdated\":null,\"additionalSitemaps\":[]}','{\"sitemapUrls\":true,\"sitemapAssets\":true,\"sitemapFiles\":true,\"sitemapAltLinks\":true,\"sitemapChangeFreq\":\"weekly\",\"sitemapPriority\":0.5,\"sitemapLimit\":null,\"structureDepth\":null,\"sitemapImageFieldMap\":[{\"property\":\"title\",\"field\":\"title\"},{\"property\":\"caption\",\"field\":\"\"},{\"property\":\"geo_location\",\"field\":\"\"},{\"property\":\"license\",\"field\":\"\"}],\"sitemapVideoFieldMap\":[{\"property\":\"title\",\"field\":\"title\"},{\"property\":\"description\",\"field\":\"\"},{\"property\":\"thumbnailLoc\",\"field\":\"\"},{\"property\":\"duration\",\"field\":\"\"},{\"property\":\"category\",\"field\":\"\"}]}','{\"MetaTagContainergeneral\":{\"data\":[],\"name\":\"General\",\"description\":\"General Meta Tags\",\"class\":\"nystudio107\\\\seomatic\\\\models\\\\MetaTagContainer\",\"handle\":\"general\",\"include\":true,\"dependencies\":[],\"clearCache\":false},\"MetaTagContaineropengraph\":{\"data\":[],\"name\":\"Facebook\",\"description\":\"Facebook OpenGraph Meta Tags\",\"class\":\"nystudio107\\\\seomatic\\\\models\\\\MetaTagContainer\",\"handle\":\"opengraph\",\"include\":true,\"dependencies\":[],\"clearCache\":false},\"MetaTagContainertwitter\":{\"data\":[],\"name\":\"Twitter\",\"description\":\"Twitter Card Meta Tags\",\"class\":\"nystudio107\\\\seomatic\\\\models\\\\MetaTagContainer\",\"handle\":\"twitter\",\"include\":true,\"dependencies\":[],\"clearCache\":false},\"MetaTagContainermiscellaneous\":{\"data\":[],\"name\":\"Miscellaneous\",\"description\":\"Miscellaneous Meta Tags\",\"class\":\"nystudio107\\\\seomatic\\\\models\\\\MetaTagContainer\",\"handle\":\"miscellaneous\",\"include\":true,\"dependencies\":[],\"clearCache\":false},\"MetaLinkContainergeneral\":{\"data\":[],\"name\":\"General\",\"description\":\"Link Tags\",\"class\":\"nystudio107\\\\seomatic\\\\models\\\\MetaLinkContainer\",\"handle\":\"general\",\"include\":true,\"dependencies\":[],\"clearCache\":false},\"MetaScriptContainergeneral\":{\"data\":[],\"position\":1,\"name\":\"General\",\"description\":\"Script Tags\",\"class\":\"nystudio107\\\\seomatic\\\\models\\\\MetaScriptContainer\",\"handle\":\"general\",\"include\":true,\"dependencies\":[],\"clearCache\":false},\"MetaJsonLdContainergeneral\":{\"data\":{\"mainEntityOfPage\":{\"breadcrumb\":null,\"lastReviewed\":null,\"mainContentOfPage\":null,\"primaryImageOfPage\":null,\"relatedLink\":null,\"reviewedBy\":null,\"significantLink\":null,\"speakable\":null,\"specialty\":null,\"about\":null,\"abstract\":null,\"accessMode\":null,\"accessModeSufficient\":null,\"accessibilityAPI\":null,\"accessibilityControl\":null,\"accessibilityFeature\":null,\"accessibilityHazard\":null,\"accessibilitySummary\":null,\"accountablePerson\":null,\"acquireLicensePage\":null,\"aggregateRating\":null,\"alternativeHeadline\":null,\"associatedMedia\":null,\"audience\":null,\"audio\":null,\"author\":{\"id\":\"{seomatic.site.identity.genericUrl}#identity\"},\"award\":null,\"character\":null,\"citation\":null,\"comment\":null,\"commentCount\":null,\"conditionsOfAccess\":null,\"contentLocation\":null,\"contentRating\":null,\"contentReferenceTime\":null,\"contributor\":null,\"copyrightHolder\":{\"id\":\"{seomatic.site.identity.genericUrl}#identity\"},\"copyrightYear\":\"{entry.postDate | date(\\\"Y\\\")}\",\"correction\":null,\"creativeWorkStatus\":null,\"creator\":{\"id\":\"{seomatic.site.identity.genericUrl}#creator\"},\"dateCreated\":false,\"dateModified\":\"{entry.dateUpdated |atom}\",\"datePublished\":\"{entry.postDate |atom}\",\"discussionUrl\":null,\"editor\":null,\"educationalAlignment\":null,\"educationalUse\":null,\"encoding\":null,\"encodingFormat\":null,\"exampleOfWork\":null,\"expires\":null,\"funder\":null,\"genre\":null,\"hasPart\":null,\"headline\":\"{seomatic.meta.seoTitle}\",\"inLanguage\":\"{seomatic.meta.language}\",\"interactionStatistic\":null,\"interactivityType\":null,\"isAccessibleForFree\":null,\"isBasedOn\":null,\"isFamilyFriendly\":null,\"isPartOf\":null,\"keywords\":null,\"learningResourceType\":null,\"license\":null,\"locationCreated\":null,\"mainEntity\":null,\"maintainer\":null,\"material\":null,\"materialExtent\":null,\"mentions\":null,\"offers\":null,\"position\":null,\"producer\":null,\"provider\":null,\"publication\":null,\"publisher\":{\"id\":\"{seomatic.site.identity.genericUrl}#creator\"},\"publisherImprint\":null,\"publishingPrinciples\":null,\"recordedAt\":null,\"releasedEvent\":null,\"review\":null,\"schemaVersion\":null,\"sdDatePublished\":null,\"sdLicense\":null,\"sdPublisher\":null,\"sourceOrganization\":null,\"spatial\":null,\"spatialCoverage\":null,\"sponsor\":null,\"temporal\":null,\"temporalCoverage\":null,\"text\":null,\"thumbnailUrl\":null,\"timeRequired\":null,\"translationOfWork\":null,\"translator\":null,\"typicalAgeRange\":null,\"usageInfo\":null,\"version\":null,\"video\":null,\"workExample\":null,\"workTranslation\":null,\"additionalType\":null,\"alternateName\":null,\"description\":\"{seomatic.meta.seoDescription}\",\"disambiguatingDescription\":null,\"identifier\":null,\"image\":{\"type\":\"ImageObject\",\"url\":\"{seomatic.meta.seoImage}\"},\"mainEntityOfPage\":\"{seomatic.meta.canonicalUrl}\",\"name\":\"{seomatic.meta.seoTitle}\",\"potentialAction\":{\"type\":\"SearchAction\",\"target\":\"{seomatic.site.siteLinksSearchTarget}\",\"query-input\":\"{seomatic.helper.siteLinksQueryInput()}\"},\"sameAs\":null,\"subjectOf\":null,\"url\":\"{seomatic.meta.canonicalUrl}\",\"context\":\"http://schema.org\",\"type\":\"{seomatic.meta.mainEntityOfPage}\",\"id\":null,\"graph\":null,\"include\":true,\"key\":\"mainEntityOfPage\",\"environment\":null,\"dependencies\":null}},\"name\":\"General\",\"description\":\"JsonLd Tags\",\"class\":\"nystudio107\\\\seomatic\\\\models\\\\MetaJsonLdContainer\",\"handle\":\"general\",\"include\":true,\"dependencies\":[],\"clearCache\":false},\"MetaTitleContainergeneral\":{\"data\":{\"title\":{\"title\":\"{seomatic.meta.seoTitle}\",\"siteName\":\"{seomatic.site.siteName}\",\"siteNamePosition\":\"{seomatic.meta.siteNamePosition}\",\"separatorChar\":\"{seomatic.config.separatorChar}\",\"include\":true,\"key\":\"title\",\"environment\":null,\"dependencies\":null}},\"name\":\"General\",\"description\":\"Meta Title Tag\",\"class\":\"nystudio107\\\\seomatic\\\\models\\\\MetaTitleContainer\",\"handle\":\"general\",\"include\":true,\"dependencies\":[],\"clearCache\":false}}','[]','{\"data\":[],\"name\":null,\"description\":null,\"class\":\"nystudio107\\\\seomatic\\\\models\\\\FrontendTemplateContainer\",\"handle\":null,\"include\":true,\"dependencies\":null,\"clearCache\":false}','{\"siteType\":\"CreativeWork\",\"siteSubType\":\"WebPage\",\"siteSpecificType\":\"\",\"seoTitleSource\":\"fromField\",\"seoTitleField\":\"title\",\"siteNamePositionSource\":\"sameAsGlobal\",\"seoDescriptionSource\":\"fromCustom\",\"seoDescriptionField\":\"\",\"seoKeywordsSource\":\"fromCustom\",\"seoKeywordsField\":\"\",\"seoImageIds\":[],\"seoImageSource\":\"fromAsset\",\"seoImageField\":\"\",\"seoImageTransform\":true,\"seoImageTransformMode\":\"crop\",\"seoImageDescriptionSource\":\"fromCustom\",\"seoImageDescriptionField\":\"\",\"twitterCreatorSource\":\"sameAsSite\",\"twitterCreatorField\":\"\",\"twitterTitleSource\":\"sameAsSeo\",\"twitterTitleField\":\"\",\"twitterSiteNamePositionSource\":\"sameAsGlobal\",\"twitterDescriptionSource\":\"sameAsSeo\",\"twitterDescriptionField\":\"\",\"twitterImageIds\":[],\"twitterImageSource\":\"sameAsSeo\",\"twitterImageField\":\"\",\"twitterImageTransform\":true,\"twitterImageTransformMode\":\"crop\",\"twitterImageDescriptionSource\":\"sameAsSeo\",\"twitterImageDescriptionField\":\"\",\"ogTitleSource\":\"sameAsSeo\",\"ogTitleField\":\"\",\"ogSiteNamePositionSource\":\"sameAsGlobal\",\"ogDescriptionSource\":\"sameAsSeo\",\"ogDescriptionField\":\"\",\"ogImageIds\":[],\"ogImageSource\":\"sameAsSeo\",\"ogImageField\":\"\",\"ogImageTransform\":true,\"ogImageTransformMode\":\"crop\",\"ogImageDescriptionSource\":\"sameAsSeo\",\"ogImageDescriptionField\":\"\"}');
 
 /*!40000 ALTER TABLE `seomatic_metabundles` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -4193,10 +4577,8 @@ LOCK TABLES `sessions` WRITE;
 
 INSERT INTO `sessions` (`id`, `userId`, `token`, `dateCreated`, `dateUpdated`, `uid`)
 VALUES
-	(1,1,'yEUOfx3opTkqI9GGmCBOFusnzrNbiINpyD-Jzhk2DxiOIwsret9sWMYb2M9XEINz92qqSp4XjCqcpF5MEvDfqlDUyfE0NP9ZO0j0','2020-06-03 15:54:07','2020-06-03 15:55:17','49043464-1bfa-4834-a5da-b2de82575acc'),
-	(2,1,'D-DhJAArttzXlKe64LUS9n2u5ugNCWb9imxWziV6iKbJddCwUAz79KWxmg1ZR4DanfCCpv6m2Eputt2UkqU3RiyOYxaQ3eRayn89','2020-06-03 16:40:24','2020-06-03 18:49:31','d68c53b0-81b9-4298-ac31-9b7773314400'),
-	(3,1,'8ZcStOLp4GGp2I4O_Ff2ED9_Q50cPutLaRfDGlWdOo0yhGCLtG0oCCZjoTYm8_yoj130TmZiwcs3pIM7kZfYaFknANIZiebKEtlw','2020-06-04 20:50:25','2020-06-04 20:53:27','aca9ea13-fe0a-4c6d-89a3-200a9767cf5f'),
-	(8,1,'j2bmgIo2FSuZdDIsbNY6JQWUm8M6GjPIdIGO147vETnyjMn7khB1miL9x14O-X0ZFcD67lb2A2XgKJ47RgNkcsRlYhTSaet4pLIZ','2020-06-30 15:20:08','2020-06-30 15:20:13','978ad934-5040-4bc8-8bfa-da3f3bacb04a');
+	(11,1,'U6Qt3V2MUp8bHBRiir6sFchJZuCCgFE6fkAwVCnXaHULRWKukYPpLqts5bNTfdM7Dgrr2vgIw0ApB4-n-H4axPnkBst01H_PQ1-h','2020-07-01 09:04:42','2020-07-01 09:04:42','fa2bd219-18ab-482e-95b8-c9c477a98d52'),
+	(12,1,'LjlN5sNkWv_QImZwE8OLNLPtTUjeUJOlbC5tShTCM5Ctw9w0pu7BPmI_FGSlwt-Qs3JHJ3X-ONByiwG8_QUVJ-JqWIcdA8T_i464','2020-07-01 09:05:02','2020-07-01 09:30:29','0335c94e-19ac-4988-abaa-9aa0150c7e32');
 
 /*!40000 ALTER TABLE `sessions` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -4451,6 +4833,26 @@ CREATE TABLE `structureelements` (
   CONSTRAINT `structureelements_structureId_fk` FOREIGN KEY (`structureId`) REFERENCES `structures` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+LOCK TABLES `structureelements` WRITE;
+/*!40000 ALTER TABLE `structureelements` DISABLE KEYS */;
+
+INSERT INTO `structureelements` (`id`, `structureId`, `elementId`, `root`, `lft`, `rgt`, `level`, `dateCreated`, `dateUpdated`, `uid`)
+VALUES
+	(1,5,NULL,1,1,14,0,'2020-07-01 09:06:54','2020-07-01 09:11:21','a5ef32f9-4b6f-4fe5-9d88-a4e8561c540f'),
+	(2,5,12,1,6,7,1,'2020-07-01 09:06:54','2020-07-01 09:10:47','bc71dbe7-8c57-43c6-b386-e43761892db1'),
+	(4,5,20,1,2,3,1,'2020-07-01 09:08:18','2020-07-01 09:10:45','ac04880d-c01a-4c95-896b-bd5cdc3b7c8f'),
+	(5,5,22,1,8,9,1,'2020-07-01 09:08:18','2020-07-01 09:10:47','918b3cd6-5023-4971-a1ab-1e98d5d6a59b'),
+	(7,5,29,1,4,5,1,'2020-07-01 09:10:22','2020-07-01 09:10:47','7217872e-23e9-4500-a9ec-a03912b5edf6'),
+	(8,5,31,1,10,11,1,'2020-07-01 09:10:23','2020-07-01 09:10:47','bdbf23af-594a-4a7e-9a05-84dfff2c703c'),
+	(9,5,33,1,12,13,1,'2020-07-01 09:11:21','2020-07-01 09:11:21','aaa58514-e75f-4785-a5a4-7c87e9dff5b3'),
+	(10,2,NULL,10,1,6,0,'2020-07-01 09:28:18','2020-07-01 09:28:29','7be03ca0-d658-4725-aac9-d243b63ca7f9'),
+	(11,2,34,10,2,3,1,'2020-07-01 09:28:18','2020-07-01 09:28:18','57f4eaae-9c46-4554-8180-c2af9dbe3c5c'),
+	(12,2,35,10,4,5,1,'2020-07-01 09:28:29','2020-07-01 09:28:29','1b5c63a6-407a-4102-aa6e-5ae3392de138'),
+	(13,4,NULL,13,1,4,0,'2020-07-01 09:29:48','2020-07-01 09:29:48','1ee01107-44bb-44c9-a87b-7ff539332f2d'),
+	(14,4,36,13,2,3,1,'2020-07-01 09:29:48','2020-07-01 09:29:48','5f117420-a378-4864-a41b-510aaf9cd0f2');
+
+/*!40000 ALTER TABLE `structureelements` ENABLE KEYS */;
+UNLOCK TABLES;
 
 
 # Dump of table structures
@@ -4469,6 +4871,19 @@ CREATE TABLE `structures` (
   KEY `structures_dateDeleted_idx` (`dateDeleted`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+LOCK TABLES `structures` WRITE;
+/*!40000 ALTER TABLE `structures` DISABLE KEYS */;
+
+INSERT INTO `structures` (`id`, `maxLevels`, `dateCreated`, `dateUpdated`, `dateDeleted`, `uid`)
+VALUES
+	(1,NULL,'2020-07-01 08:31:47','2020-07-01 08:31:47',NULL,'e67873d8-91f5-4516-88f0-13121fbb9c81'),
+	(2,NULL,'2020-07-01 08:59:08','2020-07-01 08:59:08',NULL,'d1c943c2-c8e9-4cef-b4bc-8198f38cb4a7'),
+	(3,NULL,'2020-07-01 09:00:09','2020-07-01 09:00:09',NULL,'64636e72-d294-403e-8d49-5d0fa315b254'),
+	(4,NULL,'2020-07-01 09:00:29','2020-07-01 09:00:29',NULL,'0725db91-17f3-4efb-881f-ec3192620a1c'),
+	(5,3,'2020-07-01 09:06:54','2020-07-01 09:06:54',NULL,'75bd198d-0fe4-4a7c-8ab4-da021aa50354');
+
+/*!40000 ALTER TABLE `structures` ENABLE KEYS */;
+UNLOCK TABLES;
 
 
 # Dump of table supertableblocks
@@ -4790,7 +5205,7 @@ LOCK TABLES `userpreferences` WRITE;
 
 INSERT INTO `userpreferences` (`userId`, `preferences`)
 VALUES
-	(1,'{\"language\":\"en-GB\"}');
+	(1,'{\"language\":\"en-GB\",\"weekStartDay\":\"1\",\"useShapes\":false,\"underlineLinks\":false,\"enableDebugToolbarForSite\":true,\"enableDebugToolbarForCp\":true,\"showExceptionView\":false,\"profileTemplates\":false}');
 
 /*!40000 ALTER TABLE `userpreferences` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -4843,7 +5258,7 @@ LOCK TABLES `users` WRITE;
 
 INSERT INTO `users` (`id`, `username`, `photoId`, `firstName`, `lastName`, `email`, `password`, `admin`, `locked`, `suspended`, `pending`, `lastLoginDate`, `lastLoginAttemptIp`, `invalidLoginWindowStart`, `invalidLoginCount`, `lastInvalidLoginDate`, `lockoutDate`, `hasDashboard`, `verificationCode`, `verificationCodeIssuedDate`, `unverifiedEmail`, `passwordResetRequired`, `lastPasswordChangeDate`, `dateCreated`, `dateUpdated`, `uid`)
 VALUES
-	(1,'support@percipio.london',NULL,NULL,NULL,'support@percipio.london','$2y$13$SlPvIaHyGUzDZEMgvmfTyO1BkYsnkBpWBiBCZ12wfJEWoC8EVYS4O',1,0,0,0,'2020-06-30 15:20:08',NULL,NULL,NULL,NULL,NULL,1,NULL,NULL,NULL,0,'2020-06-03 15:54:07','2020-06-03 15:54:07','2020-06-30 15:20:08','86d53cdb-c5a3-4bbe-ad68-42f46444170a');
+	(1,'support@percipio.london',NULL,'','','support@percipio.london','$2y$13$RMLEQrcRRa9e3flK5VpW/u/E527y1lWa.fINOVTT/UDnbIcuCiF52',1,0,0,0,'2020-07-01 09:05:02',NULL,NULL,NULL,NULL,NULL,1,NULL,NULL,NULL,0,'2020-07-01 09:04:42','2020-06-03 15:54:07','2020-07-01 09:05:02','86d53cdb-c5a3-4bbe-ad68-42f46444170a');
 
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -4883,7 +5298,8 @@ VALUES
 	(5,NULL,3,'Sliders','','2020-06-29 11:55:59','2020-06-29 11:55:59','a60e8108-8373-4c03-822d-c4b4f2ec040b'),
 	(6,NULL,4,'Documents','','2020-06-29 12:58:40','2020-06-29 12:58:40','a2427a59-885a-487f-b173-d6a8895da0e4'),
 	(7,NULL,5,'Articles','','2020-06-29 13:01:12','2020-06-29 13:01:12','23e2a473-3881-4da6-b51e-4d8d1826af04'),
-	(8,NULL,6,'Cover Photos','','2020-06-29 13:24:15','2020-06-29 13:24:15','e4ba9f85-6a1b-4acd-8310-089f4f2f6d45');
+	(8,NULL,6,'Cover Photos','','2020-06-29 13:24:15','2020-06-29 13:24:15','e4ba9f85-6a1b-4acd-8310-089f4f2f6d45'),
+	(9,NULL,7,'Profile Images','','2020-07-01 09:17:16','2020-07-01 09:18:55','dc8c214b-ef95-4101-805a-e120ace34765');
 
 /*!40000 ALTER TABLE `volumefolders` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -4926,7 +5342,8 @@ VALUES
 	(3,10,'Sliders','sliders','craft\\awss3\\Volume',1,'$S3_CLOUDFRONT_URL','{\"addSubfolderToRootUrl\":\"1\",\"autoFocalPoint\":\"\",\"bucket\":\"$S3_BUCKET\",\"bucketSelectionMode\":\"manual\",\"cfDistributionId\":\"$CLOUDFRONT_DISTRIBUTION_ID\",\"cfPrefix\":\"$CLOUDFRONT_PATH_PREFIX\",\"expires\":\"3 months\",\"keyId\":\"$S3_KEY_ID\",\"makeUploadsPublic\":\"1\",\"region\":\"$S3_REGION\",\"secret\":\"$S3_SECRET\",\"storageClass\":\"\",\"subfolder\":\"sliders/\"}',3,'2020-06-29 11:55:59','2020-06-30 15:19:55',NULL,'17ffd720-73f0-4e0c-9878-ea089fcc6863'),
 	(4,12,'Documents','documents','craft\\awss3\\Volume',1,'$CLOUDFRONT_URL','{\"addSubfolderToRootUrl\":\"1\",\"autoFocalPoint\":\"\",\"bucket\":\"$S3_BUCKET\",\"bucketSelectionMode\":\"manual\",\"cfDistributionId\":\"$CLOUDFRONT_DISTRIBUTION_ID\",\"cfPrefix\":\"$CLOUDFRONT_PATH_PREFIX\",\"expires\":\"3 months\",\"keyId\":\"$S3_KEY_ID\",\"makeUploadsPublic\":\"1\",\"region\":\"$S3_REGION\",\"secret\":\"$S3_SECRET\",\"storageClass\":\"\",\"subfolder\":\"documents/\"}',4,'2020-06-29 12:58:40','2020-06-29 13:26:58',NULL,'b011a3f9-88a2-4819-aad0-ca04487dfac8'),
 	(5,19,'Articles','article','craft\\awss3\\Volume',1,'$S3_CLOUDFRONT_URL','{\"addSubfolderToRootUrl\":\"1\",\"autoFocalPoint\":\"\",\"bucket\":\"$S3_BUCKET\",\"bucketSelectionMode\":\"manual\",\"cfDistributionId\":\"$CLOUDFRONT_DISTRIBUTION_ID\",\"cfPrefix\":\"$CLOUDFRONT_PATH_PREFIX\",\"expires\":\"3 months\",\"keyId\":\"$S3_KEY_ID\",\"makeUploadsPublic\":\"1\",\"region\":\"$S3_REGION\",\"secret\":\"$S3_SECRET\",\"storageClass\":\"\",\"subfolder\":\"content/\"}',5,'2020-06-29 13:01:12','2020-06-30 15:19:55',NULL,'dbb9d34a-ed00-430b-a6cd-e61927f7b2d5'),
-	(6,NULL,'Cover Photos','coverPhotos','craft\\awss3\\Volume',1,'$S3_CLOUDFRONT_URL','{\"addSubfolderToRootUrl\":\"1\",\"autoFocalPoint\":\"\",\"bucket\":\"$S3_BUCKET\",\"bucketSelectionMode\":\"manual\",\"cfDistributionId\":\"$CLOUDFRONT_DISTRIBUTION_ID\",\"cfPrefix\":\"$CLOUDFRONT_PATH_PREFIX\",\"expires\":\"3 months\",\"keyId\":\"$S3_KEY_ID\",\"makeUploadsPublic\":\"1\",\"region\":\"$S3_REGION\",\"secret\":\"$S3_SECRET\",\"storageClass\":\"\",\"subfolder\":\"coverphotos/\"}',6,'2020-06-29 13:24:15','2020-06-30 15:19:55',NULL,'918b50e1-632c-4e92-a8c5-55eeb7b8571e');
+	(6,NULL,'Cover Photos','covers','craft\\awss3\\Volume',1,'$S3_CLOUDFRONT_URL','{\"addSubfolderToRootUrl\":\"1\",\"autoFocalPoint\":\"\",\"bucket\":\"$S3_BUCKET\",\"bucketSelectionMode\":\"manual\",\"cfDistributionId\":\"$CLOUDFRONT_DISTRIBUTION_ID\",\"cfPrefix\":\"$CLOUDFRONT_PATH_PREFIX\",\"expires\":\"3 months\",\"keyId\":\"$S3_KEY_ID\",\"makeUploadsPublic\":\"1\",\"region\":\"$S3_REGION\",\"secret\":\"$S3_SECRET\",\"storageClass\":\"\",\"subfolder\":\"coverphotos/\"}',6,'2020-06-29 13:24:15','2020-07-01 09:19:19',NULL,'918b50e1-632c-4e92-a8c5-55eeb7b8571e'),
+	(7,23,'Profile Images','profiles','craft\\awss3\\Volume',1,'$CLOUDFRONT_URL','{\"addSubfolderToRootUrl\":\"1\",\"autoFocalPoint\":\"\",\"bucket\":\"$S3_BUCKET\",\"bucketSelectionMode\":\"manual\",\"cfDistributionId\":\"$CLOUDFRONT_DISTRIBUTION_ID\",\"cfPrefix\":\"$CLOUDFRONT_PATH_PREFIX\",\"expires\":\"3 months\",\"keyId\":\"$S3_KEY_ID\",\"makeUploadsPublic\":\"1\",\"region\":\"$S3_REGION\",\"secret\":\"$S3_SECRET\",\"storageClass\":\"\",\"subfolder\":\"profile-images/\"}',7,'2020-07-01 09:17:16','2020-07-01 09:19:40',NULL,'2cfafcad-5b14-408b-ba81-afd942b8b3cb');
 
 /*!40000 ALTER TABLE `volumes` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -4981,7 +5398,9 @@ LOCK TABLES `webperf_data_samples` WRITE;
 INSERT INTO `webperf_data_samples` (`id`, `dateCreated`, `dateUpdated`, `uid`, `requestId`, `siteId`, `title`, `url`, `queryString`, `dns`, `connect`, `firstByte`, `firstPaint`, `firstContentfulPaint`, `domInteractive`, `pageLoad`, `countryCode`, `device`, `browser`, `os`, `mobile`, `craftTotalMs`, `craftDbMs`, `craftDbCnt`, `craftTwigMs`, `craftTwigCnt`, `craftOtherMs`, `craftOtherCnt`, `craftTotalMemory`)
 VALUES
 	(1,'2020-06-29 16:17:25','2020-06-29 16:17:26','901f4423-cb53-4cc6-8f9c-0d8cc3eb6e75',4466074266704905396,2,'&#x1f6a7; Craft | Homepage','http://localhost:8000/',NULL,NULL,NULL,3528,3570,3570,3570,3866,'??','Macintosh','Chrome 83.0.4103.116','OS X Catalina 10.15',0,2469,40,58,0,0,2429,393,5261904),
-	(2,'2020-06-30 08:19:08','2020-06-30 08:19:09','5d6a941c-26ef-4e97-bc2a-c5091b5361d7',3315219264220380498,2,'&#x1f6a7; Craft | Homepage','http://localhost:8000/',NULL,NULL,NULL,3394,3581,3581,3576,3902,'??','Macintosh','Chrome 83.0.4103.116','OS X Catalina 10.15',0,2095,29,52,0,0,2066,384,6790552);
+	(2,'2020-06-30 08:19:08','2020-06-30 08:19:09','5d6a941c-26ef-4e97-bc2a-c5091b5361d7',3315219264220380498,2,'&#x1f6a7; Craft | Homepage','http://localhost:8000/',NULL,NULL,NULL,3394,3581,3581,3576,3902,'??','Macintosh','Chrome 83.0.4103.116','OS X Catalina 10.15',0,2095,29,52,0,0,2066,384,6790552),
+	(5,'2020-07-01 08:05:13','2020-07-01 08:05:14','4ff4e8cf-f294-4377-a6e4-6c46cfbafab5',9051219123537592820,2,'&#x1f6a7; Craft | Homepage','http://localhost:8000/',NULL,NULL,NULL,3447,3548,3548,3539,4066,'??','Macintosh','Chrome 83.0.4103.116','OS X Catalina 10.15',0,2078,35,56,0,0,2043,384,6929160),
+	(6,'2020-07-01 09:05:16','2020-07-01 09:05:16','044d77d9-f51a-41cb-8c8a-7c320e25cb2d',8032907085125747022,2,'&#x1f6a7; Craft | Homepage','webperf-craft-placeholder','',NULL,NULL,NULL,NULL,NULL,NULL,9839,NULL,NULL,NULL,NULL,NULL,9839,39,58,0,0,9799,464,8052136);
 
 /*!40000 ALTER TABLE `webperf_data_samples` ENABLE KEYS */;
 UNLOCK TABLES;
