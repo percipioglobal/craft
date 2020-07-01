@@ -1,5 +1,24 @@
 # percipioglobal/craft Change Log
 
+## 1.1.2 - 01-07-2020
+
+### Added
+- Added Verbb navigation plugin
+- Added Blitz Recommendations
+- Added Navigation Structure
+- Added Profile Images Volume
+- Added Optimization field for Profile Images
+- Added navigation configuration file
+
+### Changed
+- Changed System Timezone
+- Updated User Settings
+- Updated Development Settings
+
+### Fixed
+- Fixed wrong field under Landing Page Entry
+- Fixed wrong section type for Pages from Channel to Structure
+
 ## 1.1.1 - 30-06-2020
 
 ### Changed
