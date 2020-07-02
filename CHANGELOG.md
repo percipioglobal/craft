@@ -1,5 +1,10 @@
 # percipioglobal/craft Change Log
 
+## 1.1.2.1 - 02-07-2020
+
+### Fixed
+- Made sure header and footer template is in the correct folder
+
 ## 1.1.2 - 01-07-2020
 
 ### Added
