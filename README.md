@@ -70,6 +70,9 @@ The CP login credentials are initially set as follows:
 Login: `support@percipio.london` \
 Password: `letmein`
 
+**Important:** To find the correct credentials for `LOCAL_DB_CONTAINER` run `docker-compose up` and once the docker container is running, use the command `docker container ls` to find the correct name of the container.
+If your project is called `test` the container will be somewhere along the lines of `test_mariadb` or `test_mysql`. That's the value you do have to enter.
+
 **N.B.:** Without authorization & credentials (which are private), the `./docker_pull_db.sh` will not work. It's provided here for instructional purposes
 
 To update to the latest Composer packages (as constrained by the `cms/composer.json` semvers), do:
