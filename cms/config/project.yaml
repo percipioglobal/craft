@@ -41,7 +41,7 @@ categoryGroups:
     structure:
       maxLevels: null
       uid: de27943a-dea2-419d-90cd-fbdfcf88bc6a
-dateModified: 1593776292
+dateModified: 1593776830
 email:
   fromEmail: $SYSTEM_EMAIL
   fromName: $SENDER_NAME
@@ -253,16 +253,21 @@ fields:
     name: 'The Answer'
     searchable: true
     settings:
-      byteLimit: null
-      charLimit: null
-      code: ''
-      columnType: null
-      initialRows: '4'
-      multiline: ''
-      placeholder: ''
+      availableTransforms: '*'
+      availableVolumes: ''
+      cleanupHtml: true
+      columnType: text
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: FAQ.json
+      removeEmptyTags: '1'
+      removeInlineStyles: '1'
+      removeNbsp: '1'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
     translationKeyFormat: null
     translationMethod: none
-    type: craft\fields\PlainText
+    type: craft\redactor\Field
   1c23eb9d-03fe-46ea-9bee-ff46e8bd15a3:
     contentColumnType: string
     fieldGroup: 0314e405-e731-462f-9381-2cfb6ac91134

@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.5.5-10.3.23-MariaDB-1:10.3.23+maria~bionic)
 # Database: project
-# Generation Time: 2020-07-03 11:39:48 +0000
+# Generation Time: 2020-07-03 11:48:04 +0000
 # ************************************************************
 
 
@@ -1063,7 +1063,7 @@ VALUES
 	(54,7,'Optimize Profile Images','optimizeProfileImages','global','',0,'none',NULL,'nystudio107\\imageoptimize\\fields\\OptimizedImages','{\"displayDominantColorPalette\":\"1\",\"displayLazyLoadPlaceholderImages\":\"1\",\"displayOptimizedImageVariants\":\"1\",\"ignoreFilesOfType\":[\"image/svg\",\"image/gif\"],\"variants\":[{\"width\":\"760\",\"useAspectRatio\":\"1\",\"aspectRatioX\":\"1\",\"aspectRatioY\":\"1\",\"retinaSizes\":[\"1\"],\"quality\":\"82\",\"format\":\"\"},{\"width\":\"380\",\"useAspectRatio\":\"1\",\"aspectRatioX\":\"1\",\"aspectRatioY\":\"1\",\"retinaSizes\":[\"1\",\"2\",\"3\"],\"quality\":\"60\",\"format\":\"\"},{\"width\":\"100\",\"useAspectRatio\":\"1\",\"aspectRatioX\":\"1\",\"aspectRatioY\":\"1\",\"retinaSizes\":[\"1\",\"2\",\"3\"],\"quality\":\"60\",\"format\":\"\"}]}','2020-07-01 09:15:06','2020-07-01 09:15:06','9806bc10-174e-4280-b2a8-c684b99a3139'),
 	(55,3,'Category Description','categoryDescription','global','Enter a description for the category. Explain what this categories does.',1,'none',NULL,'craft\\redactor\\Field','{\"availableTransforms\":\"*\",\"availableVolumes\":\"\",\"cleanupHtml\":true,\"columnType\":\"text\",\"purifierConfig\":\"\",\"purifyHtml\":\"1\",\"redactorConfig\":\"Content.json\",\"removeEmptyTags\":\"1\",\"removeInlineStyles\":\"1\",\"removeNbsp\":\"1\",\"showUnpermittedFiles\":false,\"showUnpermittedVolumes\":false}','2020-07-03 11:01:30','2020-07-03 11:01:30','648e7555-63ed-4228-a6b7-7811c865a7af'),
 	(56,14,'The Question','question','global','Enter the frequently asked question.',1,'none',NULL,'craft\\fields\\PlainText','{\"byteLimit\":null,\"charLimit\":null,\"code\":\"\",\"columnType\":null,\"initialRows\":\"4\",\"multiline\":\"\",\"placeholder\":\"\"}','2020-07-03 11:06:36','2020-07-03 11:06:59','a9df6c46-5d2c-4b29-96f7-4490417448b6'),
-	(57,14,'The Answer','answer','global','Enter the answer to the frequently asked question',1,'none',NULL,'craft\\fields\\PlainText','{\"byteLimit\":null,\"charLimit\":null,\"code\":\"\",\"columnType\":null,\"initialRows\":\"4\",\"multiline\":\"\",\"placeholder\":\"\"}','2020-07-03 11:07:41','2020-07-03 11:07:41','1aad5a2f-f77c-42d8-8c02-c97817b9cb18'),
+	(57,14,'The Answer','answer','global','Enter the answer to the frequently asked question',1,'none',NULL,'craft\\redactor\\Field','{\"availableTransforms\":\"*\",\"availableVolumes\":\"\",\"cleanupHtml\":true,\"columnType\":\"text\",\"purifierConfig\":\"\",\"purifyHtml\":\"1\",\"redactorConfig\":\"FAQ.json\",\"removeEmptyTags\":\"1\",\"removeInlineStyles\":\"1\",\"removeNbsp\":\"1\",\"showUnpermittedFiles\":false,\"showUnpermittedVolumes\":false}','2020-07-03 11:07:41','2020-07-03 11:47:15','1aad5a2f-f77c-42d8-8c02-c97817b9cb18'),
 	(58,14,'FAQ Category','faqCategory','global','Please select or create a category this entry belongs to.',1,'site',NULL,'craft\\fields\\Categories','{\"allowLimit\":false,\"allowMultipleSources\":false,\"allowSelfRelations\":\"\",\"branchLimit\":\"\",\"limit\":null,\"localizeRelations\":false,\"selectionLabel\":\"\",\"source\":\"group:4e026396-d7ab-43ef-a817-226fb2dada30\",\"sources\":\"*\",\"targetSiteId\":null,\"validateRelatedElements\":\"\",\"viewMode\":null}','2020-07-03 11:08:45','2020-07-03 11:08:45','0827c9dd-2ea2-4e98-b743-3161e028a304'),
 	(59,NULL,'Questions','questions','matrixBlockType:9e682a2f-b0d4-478b-8b06-549c218b8357','Use the field to select and add Frequently Asked Questions, multiple items can be selected.',0,'site',NULL,'craft\\fields\\Entries','{\"allowSelfRelations\":\"\",\"limit\":\"\",\"localizeRelations\":false,\"selectionLabel\":\"Add questions\",\"source\":null,\"sources\":[\"section:47b7409b-e345-48d9-b684-06ec0a2972f5\"],\"targetSiteId\":null,\"validateRelatedElements\":\"\",\"viewMode\":null}','2020-07-03 11:27:14','2020-07-03 11:38:12','35981b2e-d04e-4366-939a-c0673263711a');
 
@@ -1171,7 +1171,7 @@ LOCK TABLES `info` WRITE;
 
 INSERT INTO `info` (`id`, `version`, `schemaVersion`, `maintenance`, `configMap`, `fieldVersion`, `dateCreated`, `dateUpdated`, `uid`)
 VALUES
-	(1,'3.5.0-beta.3','3.5.2',0,'{\"dateModified\":\"@config/project.yaml\",\"email\":\"@config/project.yaml\",\"fieldGroups\":\"@config/project.yaml\",\"fields\":\"@config/project.yaml\",\"globalSets\":\"@config/project.yaml\",\"matrixBlockTypes\":\"@config/project.yaml\",\"navigation\":\"@config/project.yaml\",\"plugins\":\"@config/project.yaml\",\"sections\":\"@config/project.yaml\",\"siteGroups\":\"@config/project.yaml\",\"sites\":\"@config/project.yaml\",\"spoonBlockTypes\":\"@config/project.yaml\",\"superTableBlockTypes\":\"@config/project.yaml\",\"system\":\"@config/project.yaml\",\"users\":\"@config/project.yaml\",\"volumes\":\"@config/project.yaml\",\"categoryGroups\":\"@config/project.yaml\"}','hgzjolypluki','2020-06-03 15:54:07','2020-07-03 11:38:12','c8953b7a-9a69-461e-9700-4f9e698b4bbd');
+	(1,'3.5.0-beta.3','3.5.2',0,'{\"dateModified\":\"@config/project.yaml\",\"email\":\"@config/project.yaml\",\"fieldGroups\":\"@config/project.yaml\",\"fields\":\"@config/project.yaml\",\"globalSets\":\"@config/project.yaml\",\"matrixBlockTypes\":\"@config/project.yaml\",\"navigation\":\"@config/project.yaml\",\"plugins\":\"@config/project.yaml\",\"sections\":\"@config/project.yaml\",\"siteGroups\":\"@config/project.yaml\",\"sites\":\"@config/project.yaml\",\"spoonBlockTypes\":\"@config/project.yaml\",\"superTableBlockTypes\":\"@config/project.yaml\",\"system\":\"@config/project.yaml\",\"users\":\"@config/project.yaml\",\"volumes\":\"@config/project.yaml\",\"categoryGroups\":\"@config/project.yaml\"}','avsmsjxipjrd','2020-06-03 15:54:07','2020-07-03 11:47:15','c8953b7a-9a69-461e-9700-4f9e698b4bbd');
 
 /*!40000 ALTER TABLE `info` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -1814,7 +1814,7 @@ VALUES
 	('categoryGroups.f326369d-c220-40d9-92e9-7b7b7811d8e5.siteSettings.5da841b1-ca0d-46ff-8bb1-04d6c889ac54.uriFormat','\"news-categories/{slug}\"'),
 	('categoryGroups.f326369d-c220-40d9-92e9-7b7b7811d8e5.structure.maxLevels','null'),
 	('categoryGroups.f326369d-c220-40d9-92e9-7b7b7811d8e5.structure.uid','\"de27943a-dea2-419d-90cd-fbdfcf88bc6a\"'),
-	('dateModified','1593776292'),
+	('dateModified','1593776830'),
 	('email.fromEmail','\"$SYSTEM_EMAIL\"'),
 	('email.fromName','\"$SENDER_NAME\"'),
 	('email.replyToEmail','\"$REPLY_TO\"'),
@@ -1960,16 +1960,21 @@ VALUES
 	('fields.1aad5a2f-f77c-42d8-8c02-c97817b9cb18.instructions','\"Enter the answer to the frequently asked question\"'),
 	('fields.1aad5a2f-f77c-42d8-8c02-c97817b9cb18.name','\"The Answer\"'),
 	('fields.1aad5a2f-f77c-42d8-8c02-c97817b9cb18.searchable','true'),
-	('fields.1aad5a2f-f77c-42d8-8c02-c97817b9cb18.settings.byteLimit','null'),
-	('fields.1aad5a2f-f77c-42d8-8c02-c97817b9cb18.settings.charLimit','null'),
-	('fields.1aad5a2f-f77c-42d8-8c02-c97817b9cb18.settings.code','\"\"'),
-	('fields.1aad5a2f-f77c-42d8-8c02-c97817b9cb18.settings.columnType','null'),
-	('fields.1aad5a2f-f77c-42d8-8c02-c97817b9cb18.settings.initialRows','\"4\"'),
-	('fields.1aad5a2f-f77c-42d8-8c02-c97817b9cb18.settings.multiline','\"\"'),
-	('fields.1aad5a2f-f77c-42d8-8c02-c97817b9cb18.settings.placeholder','\"\"'),
+	('fields.1aad5a2f-f77c-42d8-8c02-c97817b9cb18.settings.availableTransforms','\"*\"'),
+	('fields.1aad5a2f-f77c-42d8-8c02-c97817b9cb18.settings.availableVolumes','\"\"'),
+	('fields.1aad5a2f-f77c-42d8-8c02-c97817b9cb18.settings.cleanupHtml','true'),
+	('fields.1aad5a2f-f77c-42d8-8c02-c97817b9cb18.settings.columnType','\"text\"'),
+	('fields.1aad5a2f-f77c-42d8-8c02-c97817b9cb18.settings.purifierConfig','\"\"'),
+	('fields.1aad5a2f-f77c-42d8-8c02-c97817b9cb18.settings.purifyHtml','\"1\"'),
+	('fields.1aad5a2f-f77c-42d8-8c02-c97817b9cb18.settings.redactorConfig','\"FAQ.json\"'),
+	('fields.1aad5a2f-f77c-42d8-8c02-c97817b9cb18.settings.removeEmptyTags','\"1\"'),
+	('fields.1aad5a2f-f77c-42d8-8c02-c97817b9cb18.settings.removeInlineStyles','\"1\"'),
+	('fields.1aad5a2f-f77c-42d8-8c02-c97817b9cb18.settings.removeNbsp','\"1\"'),
+	('fields.1aad5a2f-f77c-42d8-8c02-c97817b9cb18.settings.showUnpermittedFiles','false'),
+	('fields.1aad5a2f-f77c-42d8-8c02-c97817b9cb18.settings.showUnpermittedVolumes','false'),
 	('fields.1aad5a2f-f77c-42d8-8c02-c97817b9cb18.translationKeyFormat','null'),
 	('fields.1aad5a2f-f77c-42d8-8c02-c97817b9cb18.translationMethod','\"none\"'),
-	('fields.1aad5a2f-f77c-42d8-8c02-c97817b9cb18.type','\"craft\\\\fields\\\\PlainText\"'),
+	('fields.1aad5a2f-f77c-42d8-8c02-c97817b9cb18.type','\"craft\\\\redactor\\\\Field\"'),
 	('fields.1c23eb9d-03fe-46ea-9bee-ff46e8bd15a3.contentColumnType','\"string\"'),
 	('fields.1c23eb9d-03fe-46ea-9bee-ff46e8bd15a3.fieldGroup','\"0314e405-e731-462f-9381-2cfb6ac91134\"'),
 	('fields.1c23eb9d-03fe-46ea-9bee-ff46e8bd15a3.handle','\"teaserImage\"'),
@@ -3994,13 +3999,13 @@ VALUES
 	('superTableBlockTypes.345fb037-87d6-4ac6-bc1d-ca8e22f20593.fields.4d23d076-4a7c-4ad8-969e-ca980aef3815.settings.options.2.__assoc__.2.1','\"\"'),
 	('superTableBlockTypes.345fb037-87d6-4ac6-bc1d-ca8e22f20593.fields.4d23d076-4a7c-4ad8-969e-ca980aef3815.settings.options.3.__assoc__.0.0','\"label\"'),
 	('superTableBlockTypes.345fb037-87d6-4ac6-bc1d-ca8e22f20593.fields.4d23d076-4a7c-4ad8-969e-ca980aef3815.settings.options.3.__assoc__.0.1','\"YouTube\"'),
-	('superTableBlockTypes.345fb037-87d6-4ac6-bc1d-ca8e22f20593.fields.4d23d076-4a7c-4ad8-969e-ca980aef3815.settings.options.3.__assoc__.1.0','\"value\"'),
-	('superTableBlockTypes.345fb037-87d6-4ac6-bc1d-ca8e22f20593.fields.4d23d076-4a7c-4ad8-969e-ca980aef3815.settings.options.3.__assoc__.1.1','\"youtube\"'),
-	('superTableBlockTypes.345fb037-87d6-4ac6-bc1d-ca8e22f20593.fields.4d23d076-4a7c-4ad8-969e-ca980aef3815.settings.options.3.__assoc__.2.0','\"default\"'),
-	('superTableBlockTypes.345fb037-87d6-4ac6-bc1d-ca8e22f20593.fields.4d23d076-4a7c-4ad8-969e-ca980aef3815.settings.options.3.__assoc__.2.1','\"\"');
+	('superTableBlockTypes.345fb037-87d6-4ac6-bc1d-ca8e22f20593.fields.4d23d076-4a7c-4ad8-969e-ca980aef3815.settings.options.3.__assoc__.1.0','\"value\"');
 
 INSERT INTO `projectconfig` (`path`, `value`)
 VALUES
+	('superTableBlockTypes.345fb037-87d6-4ac6-bc1d-ca8e22f20593.fields.4d23d076-4a7c-4ad8-969e-ca980aef3815.settings.options.3.__assoc__.1.1','\"youtube\"'),
+	('superTableBlockTypes.345fb037-87d6-4ac6-bc1d-ca8e22f20593.fields.4d23d076-4a7c-4ad8-969e-ca980aef3815.settings.options.3.__assoc__.2.0','\"default\"'),
+	('superTableBlockTypes.345fb037-87d6-4ac6-bc1d-ca8e22f20593.fields.4d23d076-4a7c-4ad8-969e-ca980aef3815.settings.options.3.__assoc__.2.1','\"\"'),
 	('superTableBlockTypes.345fb037-87d6-4ac6-bc1d-ca8e22f20593.fields.4d23d076-4a7c-4ad8-969e-ca980aef3815.settings.options.4.__assoc__.0.0','\"label\"'),
 	('superTableBlockTypes.345fb037-87d6-4ac6-bc1d-ca8e22f20593.fields.4d23d076-4a7c-4ad8-969e-ca980aef3815.settings.options.4.__assoc__.0.1','\"Vimeo\"'),
 	('superTableBlockTypes.345fb037-87d6-4ac6-bc1d-ca8e22f20593.fields.4d23d076-4a7c-4ad8-969e-ca980aef3815.settings.options.4.__assoc__.1.0','\"value\"'),
@@ -4801,7 +4806,7 @@ VALUES
 	(11,1,'U6Qt3V2MUp8bHBRiir6sFchJZuCCgFE6fkAwVCnXaHULRWKukYPpLqts5bNTfdM7Dgrr2vgIw0ApB4-n-H4axPnkBst01H_PQ1-h','2020-07-01 09:04:42','2020-07-01 09:04:42','fa2bd219-18ab-482e-95b8-c9c477a98d52'),
 	(12,1,'LjlN5sNkWv_QImZwE8OLNLPtTUjeUJOlbC5tShTCM5Ctw9w0pu7BPmI_FGSlwt-Qs3JHJ3X-ONByiwG8_QUVJ-JqWIcdA8T_i464','2020-07-01 09:05:02','2020-07-01 09:30:29','0335c94e-19ac-4988-abaa-9aa0150c7e32'),
 	(13,1,'AqTs9Yb3mJUiTNxBJgjgyc738K7ktJTW-1isp7aRyhSp958PI5pmkBkdVbOdjpmsZiW0n3iPk2iTVlpRelBdyhZQltZH5kJ687Zm','2020-07-03 10:57:49','2020-07-03 10:57:49','4cefa237-efaf-487c-a791-9ede03a01b00'),
-	(14,1,'33Jug1WtdxA7wKvo_Qvo9bYCdkcGYg3Dmb8ffrjzITXvDxXbMlKKRgYp75uDV-9wUe5L_dQsZMPHDIFpTUVqgIdc_Kdq-pRf1g36','2020-07-03 10:57:52','2020-07-03 11:38:21','766dd4e7-3e0d-4689-8079-3443ae223c19');
+	(14,1,'33Jug1WtdxA7wKvo_Qvo9bYCdkcGYg3Dmb8ffrjzITXvDxXbMlKKRgYp75uDV-9wUe5L_dQsZMPHDIFpTUVqgIdc_Kdq-pRf1g36','2020-07-03 10:57:52','2020-07-03 11:47:21','766dd4e7-3e0d-4689-8079-3443ae223c19');
 
 /*!40000 ALTER TABLE `sessions` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -5627,7 +5632,8 @@ VALUES
 	(1,'2020-06-29 16:17:25','2020-06-29 16:17:26','901f4423-cb53-4cc6-8f9c-0d8cc3eb6e75',4466074266704905396,2,'&#x1f6a7; Craft | Homepage','http://localhost:8000/',NULL,NULL,NULL,3528,3570,3570,3570,3866,'??','Macintosh','Chrome 83.0.4103.116','OS X Catalina 10.15',0,2469,40,58,0,0,2429,393,5261904),
 	(2,'2020-06-30 08:19:08','2020-06-30 08:19:09','5d6a941c-26ef-4e97-bc2a-c5091b5361d7',3315219264220380498,2,'&#x1f6a7; Craft | Homepage','http://localhost:8000/',NULL,NULL,NULL,3394,3581,3581,3576,3902,'??','Macintosh','Chrome 83.0.4103.116','OS X Catalina 10.15',0,2095,29,52,0,0,2066,384,6790552),
 	(5,'2020-07-01 08:05:13','2020-07-01 08:05:14','4ff4e8cf-f294-4377-a6e4-6c46cfbafab5',9051219123537592820,2,'&#x1f6a7; Craft | Homepage','http://localhost:8000/',NULL,NULL,NULL,3447,3548,3548,3539,4066,'??','Macintosh','Chrome 83.0.4103.116','OS X Catalina 10.15',0,2078,35,56,0,0,2043,384,6929160),
-	(8,'2020-07-03 10:57:53','2020-07-03 10:57:54','60b299b0-e6a8-490c-b3b6-bf31a12b9942',7437033350725899834,2,'&#x1f6a7; Craft | Homepage','http://localhost:8000/',NULL,NULL,NULL,4181,4546,4546,4547,5111,'??','Macintosh','Chrome 83.0.4103.116','OS X Catalina 10.15',0,1348,36,49,0,0,1311,121,6869288);
+	(8,'2020-07-03 10:57:53','2020-07-03 10:57:54','60b299b0-e6a8-490c-b3b6-bf31a12b9942',7437033350725899834,2,'&#x1f6a7; Craft | Homepage','http://localhost:8000/',NULL,NULL,NULL,4181,4546,4546,4547,5111,'??','Macintosh','Chrome 83.0.4103.116','OS X Catalina 10.15',0,1348,36,49,0,0,1311,121,6869288),
+	(9,'2020-07-03 11:43:53','2020-07-03 11:43:58','f030668c-5d3f-4f2f-9d02-9f258061e944',3377479654367824668,2,'&#x1f6a7; Craft | Homepage','http://localhost:8000/',NULL,NULL,NULL,4355,NULL,NULL,4391,6882,'??','Macintosh','Chrome 83.0.4103.116','OS X Catalina 10.15',0,1842,44,58,0,0,1797,385,6985328);
 
 /*!40000 ALTER TABLE `webperf_data_samples` ENABLE KEYS */;
 UNLOCK TABLES;
