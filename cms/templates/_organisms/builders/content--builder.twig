@@ -3,6 +3,7 @@
     'sectionHeader:buttons',
     'singleImage:image',
     'slide:image',
+    'faqList:questions',
     ]) 
 %}
 
@@ -58,6 +59,12 @@
                 {%- case "resourceList" -%}
             
                     {%- include '_organisms/lists/list--resources' ignore missing with {
+                        content: block,
+                    } -%}
+
+                {%- case "faqList" -%}
+            
+                    {%- include '_organisms/lists/list--faq' ignore missing with {
                         content: block,
                     } -%}
                 

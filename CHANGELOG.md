@@ -1,5 +1,20 @@
 # percipioglobal/craft Change Log
 
+## 1.1.3 - 03-07-2020
+
+### Added
+- Created News Categories
+- Created FAQ Categories
+- Created FAQ Channel
+- Added FAQ List to Content Builder
+- Created template file + variables for FAQ List
+
+### Changed
+- Updated `seed_db.aql`
+
+### Fixed
+- Fixed where Highlight Cards wouldn't show, added them to the correct group in spoon
+
 ## 1.1.2.1 - 02-07-2020
 
 ### Fixed

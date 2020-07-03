@@ -1,4 +1,47 @@
-dateModified: 1593595240
+categoryGroups:
+  4e026396-d7ab-43ef-a817-226fb2dada30:
+    fieldLayouts:
+      389fb0f7-f97f-40f4-a48a-7b674a5cf9ff:
+        tabs:
+          -
+            fields:
+              648e7555-63ed-4228-a6b7-7811c865a7af:
+                required: false
+                sortOrder: 1
+            name: Content
+            sortOrder: 1
+    handle: faqCategories
+    name: 'FAQ Categories'
+    siteSettings:
+      5da841b1-ca0d-46ff-8bb1-04d6c889ac54:
+        hasUrls: true
+        template: ''
+        uriFormat: 'faq-categories/{slug}'
+    structure:
+      maxLevels: null
+      uid: 7befe233-fc23-43dd-beb1-5a2c4cb4b812
+  f326369d-c220-40d9-92e9-7b7b7811d8e5:
+    fieldLayouts:
+      df947a14-e514-4e9d-92c2-eaceb851818e:
+        tabs:
+          -
+            fields:
+              648e7555-63ed-4228-a6b7-7811c865a7af:
+                required: false
+                sortOrder: 1
+            name: Content
+            sortOrder: 1
+    handle: newsCategories
+    name: 'News Categories'
+    siteSettings:
+      5da841b1-ca0d-46ff-8bb1-04d6c889ac54:
+        hasUrls: true
+        template: ''
+        uriFormat: 'news-categories/{slug}'
+    structure:
+      maxLevels: null
+      uid: de27943a-dea2-419d-90cd-fbdfcf88bc6a
+dateModified: 1593776292
 email:
   fromEmail: $SYSTEM_EMAIL
   fromName: $SENDER_NAME
@@ -19,6 +62,8 @@ fieldGroups:
     name: Globals
   1dd95078-7c8a-4ef7-8a16-e33a5341dadb:
     name: 'Image Optimisations '
+  2473fef2-babd-4336-bb2e-550dc284282c:
+    name: FAQ
   712cce4e-490d-44b8-bf2c-5d00c2de4c40:
     name: Assets
   94b4d5ac-d7ea-4241-a6cb-92b39f482f99:
@@ -147,6 +192,29 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: nystudio107\imageoptimize\fields\OptimizedImages
+  0827c9dd-2ea2-4e98-b743-3161e028a304:
+    contentColumnType: string
+    fieldGroup: 2473fef2-babd-4336-bb2e-550dc284282c
+    handle: faqCategory
+    instructions: 'Please select or create a category this entry belongs to.'
+    name: 'FAQ Category'
+    searchable: true
+    settings:
+      allowLimit: false
+      allowMultipleSources: false
+      allowSelfRelations: ''
+      branchLimit: ''
+      limit: null
+      localizeRelations: false
+      selectionLabel: ''
+      source: 'group:4e026396-d7ab-43ef-a817-226fb2dada30'
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: ''
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Categories
   11916eb5-92ff-4945-bb06-1406d6047b36:
     contentColumnType: string
     fieldGroup: c014f72e-6101-4377-a9e4-bbea0f16bce8
@@ -177,6 +245,24 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Assets
+  1aad5a2f-f77c-42d8-8c02-c97817b9cb18:
+    contentColumnType: text
+    fieldGroup: 2473fef2-babd-4336-bb2e-550dc284282c
+    handle: answer
+    instructions: 'Enter the answer to the frequently asked question'
+    name: 'The Answer'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
   1c23eb9d-03fe-46ea-9bee-ff46e8bd15a3:
     contentColumnType: string
     fieldGroup: 0314e405-e731-462f-9381-2cfb6ac91134
@@ -533,6 +619,29 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: nystudio107\imageoptimize\fields\OptimizedImages
+  648e7555-63ed-4228-a6b7-7811c865a7af:
+    contentColumnType: text
+    fieldGroup: 94b4d5ac-d7ea-4241-a6cb-92b39f482f99
+    handle: categoryDescription
+    instructions: 'Enter a description for the category. Explain what this categories does.'
+    name: 'Category Description'
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes: ''
+      cleanupHtml: true
+      columnType: text
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: Content.json
+      removeEmptyTags: '1'
+      removeInlineStyles: '1'
+      removeNbsp: '1'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
   6962a9b1-b802-4295-82b1-398470a9f54c:
     contentColumnType: text
     fieldGroup: 712cce4e-490d-44b8-bf2c-5d00c2de4c40
@@ -874,6 +983,24 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Assets
+  a9df6c46-5d2c-4b29-96f7-4490417448b6:
+    contentColumnType: text
+    fieldGroup: 2473fef2-babd-4336-bb2e-550dc284282c
+    handle: question
+    instructions: 'Enter the frequently asked question.'
+    name: 'The Question'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
   b8ba7115-3804-4c06-8a96-501963d1fc5c:
     contentColumnType: text
     fieldGroup: d08a0d16-0e00-49e6-9cd4-465fa2d65d7d
@@ -1481,6 +1608,43 @@ matrixBlockTypes:
     handle: basicSlider
     name: 'Basic Slider'
     sortOrder: 6
+  9e682a2f-b0d4-478b-8b06-549c218b8357:
+    field: e691301b-7484-40be-a3d4-c3bc590de959
+    fieldLayouts:
+      083a08b4-c833-4b37-8a9f-4ecfa12f4e34:
+        tabs:
+          -
+            fields:
+              35981b2e-d04e-4366-939a-c0673263711a:
+                required: true
+                sortOrder: 1
+            name: Content
+            sortOrder: 1
+    fields:
+      35981b2e-d04e-4366-939a-c0673263711a:
+        contentColumnType: string
+        fieldGroup: null
+        handle: questions
+        instructions: 'Use the field to select and add Frequently Asked Questions, multiple items can be selected.'
+        name: Questions
+        searchable: false
+        settings:
+          allowSelfRelations: ''
+          limit: ''
+          localizeRelations: false
+          selectionLabel: 'Add questions'
+          source: null
+          sources:
+            - 'section:47b7409b-e345-48d9-b684-06ec0a2972f5'
+          targetSiteId: null
+          validateRelatedElements: ''
+          viewMode: null
+        translationKeyFormat: null
+        translationMethod: site
+        type: craft\fields\Entries
+    handle: faqList
+    name: 'FAQ List'
+    sortOrder: 9
   b5a93f0f-21d1-4d67-abc8-a3789543d457:
     field: e691301b-7484-40be-a3d4-c3bc590de959
     fieldLayouts:
@@ -2248,6 +2412,54 @@ plugins:
     enabled: true
     schemaVersion: 1.0.0
 sections:
+  47b7409b-e345-48d9-b684-06ec0a2972f5:
+    enableVersioning: true
+    entryTypes:
+      88bcc4ff-c9d0-4c32-9891-2d01044026a6:
+        fieldLayouts:
+          8d6d7f6f-a7f0-4423-8600-7969d6883742:
+            tabs:
+              -
+                fields:
+                  0827c9dd-2ea2-4e98-b743-3161e028a304:
+                    required: false
+                    sortOrder: 3
+                  1aad5a2f-f77c-42d8-8c02-c97817b9cb18:
+                    required: false
+                    sortOrder: 2
+                  a9df6c46-5d2c-4b29-96f7-4490417448b6:
+                    required: false
+                    sortOrder: 1
+                name: 'FAQ Entry'
+                sortOrder: 1
+        handle: faq
+        hasTitleField: false
+        name: FAQ
+        sortOrder: 1
+        titleFormat: '{question}'
+        titleLabel: Title
+    handle: faq
+    name: FAQ
+    previewTargets:
+      -
+        __assoc__:
+          -
+            - label
+            - 'Primary entry page'
+          -
+            - urlFormat
+            - '{url}'
+          -
+            - refresh
+            - '1'
+    propagationMethod: all
+    siteSettings:
+      5da841b1-ca0d-46ff-8bb1-04d6c889ac54:
+        enabledByDefault: true
+        hasUrls: true
+        template: ''
+        uriFormat: 'faq/{slug}'
+    type: channel
   54e60257-f31a-44aa-960e-bbd364197e28:
     enableVersioning: false
     entryTypes:
@@ -2442,47 +2654,23 @@ sites:
     siteGroup: f89601e9-4ba9-4a48-9e99-350aa9914912
     sortOrder: 1
 spoonBlockTypes:
-  00ca69df-27fa-45c3-8203-a374f076398a:
+  0f32e646-7e83-4896-83b2-d8b63d5721c4:
     context: global
     field: e691301b-7484-40be-a3d4-c3bc590de959
     fieldLayout: null
-    groupName: Article
-    groupSortOrder: 1
-    matrixBlockType: 1d22d2ae-5175-4154-b830-51c806bfbf5b
-    sortOrder: 2
-  1f0dc8cd-e85c-431b-844f-03f587a8b6fb:
-    context: global
-    field: e691301b-7484-40be-a3d4-c3bc590de959
-    fieldLayout: null
-    groupName: Images
+    groupName: Cards
     groupSortOrder: 2
-    matrixBlockType: b5a93f0f-21d1-4d67-abc8-a3789543d457
+    matrixBlockType: 47c98ad7-c9a9-402c-9171-9fd14eb7e8f4
     sortOrder: 1
-  3eb879a5-938d-45c0-9483-a4a03e91466d:
+  207a0285-0178-446d-81a2-f04e03d496cb:
     context: global
     field: e691301b-7484-40be-a3d4-c3bc590de959
     fieldLayout: null
-    groupName: Article
-    groupSortOrder: 1
-    matrixBlockType: 346cce90-1d6e-4c2d-82c0-c91b571c741c
+    groupName: 'Stacked Lists'
+    groupSortOrder: 4
+    matrixBlockType: e2c376a5-8341-40da-993a-68704f00171e
     sortOrder: 1
-  3fefb44f-f050-46e1-88fe-53170d01cfe8:
-    context: global
-    field: e691301b-7484-40be-a3d4-c3bc590de959
-    fieldLayout: null
-    groupName: Images
-    groupSortOrder: 2
-    matrixBlockType: 3a030d4d-66bf-4bff-af6b-a3366b617b7e
-    sortOrder: 2
-  7fd384b5-f34d-4a7a-91d7-f9517fbaf129:
-    context: global
-    field: e691301b-7484-40be-a3d4-c3bc590de959
-    fieldLayout: null
-    groupName: Article
-    groupSortOrder: 1
-    matrixBlockType: de0ad924-50fa-43fc-9790-e44bf330cdd2
-    sortOrder: 3
-  8c48d81c-d358-447b-b200-420fad1e56df:
+  35f34d62-f074-4002-93bb-6ff540ae14b8:
     context: global
     field: e691301b-7484-40be-a3d4-c3bc590de959
     fieldLayout: null
@@ -2490,14 +2678,54 @@ spoonBlockTypes:
     groupSortOrder: 1
     matrixBlockType: 75b2db97-9323-4a3f-9865-e3b6d2f3e785
     sortOrder: 4
-  d1124b44-3b7d-491d-9b7c-99be71727b61:
+  739bf345-7685-4ab6-b94a-f3a8762dfe20:
+    context: global
+    field: e691301b-7484-40be-a3d4-c3bc590de959
+    fieldLayout: null
+    groupName: Article
+    groupSortOrder: 1
+    matrixBlockType: 346cce90-1d6e-4c2d-82c0-c91b571c741c
+    sortOrder: 1
+  9c9f668a-bfd0-4df1-a299-c579ef43a842:
+    context: global
+    field: e691301b-7484-40be-a3d4-c3bc590de959
+    fieldLayout: null
+    groupName: Article
+    groupSortOrder: 1
+    matrixBlockType: de0ad924-50fa-43fc-9790-e44bf330cdd2
+    sortOrder: 3
+  a5b1b4da-f0ee-4c6c-bbc0-b3d559d30627:
+    context: global
+    field: e691301b-7484-40be-a3d4-c3bc590de959
+    fieldLayout: null
+    groupName: Article
+    groupSortOrder: 1
+    matrixBlockType: 1d22d2ae-5175-4154-b830-51c806bfbf5b
+    sortOrder: 2
+  bb0949ab-613a-4829-8afe-af6d6c90446b:
     context: global
     field: e691301b-7484-40be-a3d4-c3bc590de959
     fieldLayout: null
     groupName: 'Stacked Lists'
+    groupSortOrder: 4
+    matrixBlockType: 9e682a2f-b0d4-478b-8b06-549c218b8357
+    sortOrder: 2
+  c824d035-1a55-44b6-a2f4-46a0d36d9e04:
+    context: global
+    field: e691301b-7484-40be-a3d4-c3bc590de959
+    fieldLayout: null
+    groupName: Images
     groupSortOrder: 3
-    matrixBlockType: e2c376a5-8341-40da-993a-68704f00171e
+    matrixBlockType: b5a93f0f-21d1-4d67-abc8-a3789543d457
     sortOrder: 1
+  ef0f24c1-dda1-409a-8197-5d57c204668c:
+    context: global
+    field: e691301b-7484-40be-a3d4-c3bc590de959
+    fieldLayout: null
+    groupName: Images
+    groupSortOrder: 3
+    matrixBlockType: 3a030d4d-66bf-4bff-af6b-a3366b617b7e
+    sortOrder: 2
 superTableBlockTypes:
   235f0eea-5314-454c-b0d4-875dc8653bf8:
     field: 4285cde2-58a1-4cde-aba3-ccdced328ee2
