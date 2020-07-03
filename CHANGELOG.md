@@ -4,13 +4,14 @@
 
 ### Added
 - Created News Categories
-- Created FAQ Categories
-- Created FAQ Channel
-- Added FAQ List to Content Builder
-- Created template file + variables for FAQ List
+- Created FAQ Categories [#8](https://github.com/percipioglobal/craft/issues/8)
+- Created FAQ Channel [#8](https://github.com/percipioglobal/craft/issues/8)
+- Added FAQ List to Content Builder [#8](https://github.com/percipioglobal/craft/issues/8)
+- Created template file + variables for FAQ List [#8](https://github.com/percipioglobal/craft/issues/8)
+- Added redactor field for answer section of the FAQ [#8](https://github.com/percipioglobal/craft/issues/8)
 
 ### Changed
-- Updated `seed_db.aql`
+- Updated `seed_db.sql` [#8](https://github.com/percipioglobal/craft/issues/8)
 
 ### Fixed
 - Fixed where Highlight Cards wouldn't show, added them to the correct group in spoon
@@ -18,7 +19,7 @@
 ## 1.1.2.1 - 02-07-2020
 
 ### Fixed
-- Made sure header and footer template is in the correct folder
+- Made sure header and footer template is in the correct folder [#9](https://github.com/percipioglobal/craft/issues/9)
 
 ## 1.1.2 - 01-07-2020
 
