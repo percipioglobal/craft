@@ -19,6 +19,7 @@ RUN apt-get update \
         libicu-dev \
         libmagickwand-dev \
         libzip-dev \
+        mysql-client \
         unzip \
         zip \
     && \
