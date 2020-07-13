@@ -1,5 +1,30 @@
 # percipioglobal/craft Change Log
 
+## 1.1.4 - 14-07-2020
+
+### Added
+- Added Resources List Organism / Molecule
+- Added FAQ List Organism / Molecule
+- Added structure for Article Molecules
+- Added template for detail pages
+- Added Font Awesome File Type Icons
+- Added more Eager Loaded fields
+
+### Changed
+- Updated `seed_db.sql`
+- Updated News Cards with Profile Photo + Author
+- Updated content-image with more options + overrides
+- Macro `design-system.twig` has been changed to `utilities.twig`
+
+### Fixed
+- Fixed article block fieldhandle [#12](https://github.com/percipioglobal/craft/issues/12)
+- Fixed wrong ENV variables for CloudFront URL [#10](https://github.com/percipioglobal/craft/issues/10)
+- Fixed Image Block [#11](https://github.com/percipioglobal/craft/issues/11)
+- Fixed Resources Block [#13](https://github.com/percipioglobal/craft/issues/13)
+- Fixed mysql command not running on db backup [#14](https://github.com/percipioglobal/craft/issues/14)
+- Fixed issue where profile photos were using the wrong optimisation field
+- Fixed `text-deca` classnames to use `text-4xl` according to tailwind standards
+
 ## 1.1.3 - 03-07-2020
 
 ### Added
