@@ -1,0 +1,11 @@
+<section class="container mx-auto px-4 sm:px-6 lg:px-8">
+
+    {%- for question in content.questions.all() -%}
+        
+        {%- include '_molecules/lists/listitem--faq' ignore missing with {
+            content: question,
+        } -%}
+
+    {%- endfor -%}
+
+</section>
