@@ -1,0 +1,15 @@
+{%- minify -%}
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 my-16">
+
+        {%- for card in content.cards.all() -%}
+
+            {%- include '_molecules/cards/card--highlight' ignore missing with {
+                content: card,
+            } -%}
+
+        {%- endfor -%}
+
+    </div>
+
+{%- endminify -%}
