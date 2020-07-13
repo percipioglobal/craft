@@ -30,10 +30,10 @@
     {% endspaceless %}
 {% endmacro %}
 
-{# Content Image #}
-{% macro content_image(contentImage, alt = '', ratio = null, caption = null) %}
-    {% import _self as render %}
-    {% set image = contentImage.optimizeContent %}
+{# Article Image #}
+{% macro article_image(articleImage, alt = '', ratio = null, caption = null, author = null, source = null) %}
+    {% import _self as atom %}
+    {% set image = articleImage.optimizeArticles %}
     {% spaceless %}
         <figure class="w-full h-full">
         <div class="img {{ ratio -}}">
@@ -45,7 +45,7 @@
                 class="object-cover lazyload">
         </div>
         {% if caption %}
-            {{- render.caption(caption) -}}
+            {{- atom.caption(caption, author, source) -}}
         {% endif %}
         </figure>
     {% endspaceless %}
@@ -70,7 +70,7 @@
 
 {# Profile Image #}
 {% macro profile_image(profileImage, alt = '') %}
-    {% set image = profileImage.optimizeProfile %}
+    {% set image = profileImage.optimizeProfileImages %}
     <figure class="img overflow-hidden h-16 w-16 rounded-full">
         <img  src="{{ image.placeholderImage() }}"
             data-src="{{ image.src() }}"
@@ -92,5 +92,28 @@
 {% macro title(content, words = 60) %}
     {% spaceless %}
         {{- content | escape | typogrify(true) | truncateOnWord(words) | raw -}}
+    {% endspaceless %}
+{% endmacro %}
+
+{# figcaption #}
+
+{% macro caption(content, author = null, source = null) %}
+    {% spaceless %}
+        <figcaption class="font-primary text-center text-sm text-gray-500 italic p-4 border-b border-gray-300">
+            {{- content }}
+            {% if author and source -%}
+                &mdash; 
+                <a href="{{ source.url }}">
+                    <span>
+                        {{ author -}}
+                    </span>
+                    <span class="inline-block ml-2">
+                        <i class="far fa-external-link-alt"></i>
+                    </span>
+                </a>
+            {%- elseif author -%}
+                &mdash; {{ author -}}
+            {% endif -%}
+        </figcaption>
     {% endspaceless %}
 {% endmacro %}
