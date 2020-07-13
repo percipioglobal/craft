@@ -1,0 +1,33 @@
+{% import '_macros/atoms' as atom %}
+
+{% if block.getPrev() %}
+
+    {% if block.getPrev().type == 'blockQuote' and block.getPrev().quoteType == 'pullQuote' %}
+        {% set quote = true %}
+    {% endif %}
+
+    {% if block.getPrev().type == 'singleImage' and (block.getPrev().position == 'left' or block.getPrev().position == 'right') %}
+        {% set image = true %}
+    {% endif %}
+
+{% endif %}
+
+{% set article = {
+    content: content.article,
+    options: {
+        hasQuote: quote ?? null,
+        hasImage: image ?? null,
+    }
+} %}
+
+{% set collapse = false %}
+
+{% if article.options.hasQuote or article.options.hasImage %}
+    {% set collapse = true %}
+{% endif %}
+
+{%- minify -%}
+    <section class="article mx-auto {{ collapse ? '' : 'sm:pt-10' }}">
+        {{- atom.text(content.article) -}}
+    </section>
+{%- endminify -%}
