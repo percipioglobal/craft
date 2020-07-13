@@ -41,7 +41,7 @@ categoryGroups:
     structure:
       maxLevels: null
       uid: de27943a-dea2-419d-90cd-fbdfcf88bc6a
-dateModified: 1593776830
+dateModified: 1594677166
 email:
   fromEmail: $SYSTEM_EMAIL
   fromName: $SENDER_NAME
@@ -70,6 +70,8 @@ fieldGroups:
     name: Common
   b2330e68-6c4a-45ab-b5b1-8a510f75ce4f:
     name: General
+  bbb59518-7cdc-4a7f-b07c-cd6b1fa8201d:
+    name: Users
   c014f72e-6101-4377-a9e4-bbea0f16bce8:
     name: Placeholders
   d08a0d16-0e00-49e6-9cd4-465fa2d65d7d:
@@ -731,6 +733,36 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Assets
+  815594b4-d88f-4430-bf0c-5db890e1051f:
+    contentColumnType: string
+    fieldGroup: bbb59518-7cdc-4a7f-b07c-cd6b1fa8201d
+    handle: profilePhoto
+    instructions: 'Upload the users profilePhoto'
+    name: 'Profile Photo'
+    searchable: true
+    settings:
+      allowSelfRelations: ''
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:5c642d7e-b16b-4836-9575-668d75d242e5'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      restrictFiles: '1'
+      selectionLabel: 'Add a profile photo'
+      showUnpermittedFiles: true
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:2cfafcad-5b14-408b-ba81-afd942b8b3cb'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: true
+      validateRelatedElements: ''
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
   870c07d7-9341-4f1f-825b-25c76239bc0d:
     contentColumnType: text
     fieldGroup: 712cce4e-490d-44b8-bf2c-5d00c2de4c40
@@ -1041,6 +1073,36 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: verbb\supertable\fields\SuperTableField
+  d08d0466-34f4-441b-acd1-439b514f3810:
+    contentColumnType: string
+    fieldGroup: c014f72e-6101-4377-a9e4-bbea0f16bce8
+    handle: profilePhotoPlaceholder
+    instructions: 'Upload a placeholder photo for the users if they haven''''t added any profile image'
+    name: 'Profile Photo Placeholder'
+    searchable: false
+    settings:
+      allowSelfRelations: ''
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:5c642d7e-b16b-4836-9575-668d75d242e5'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      restrictFiles: '1'
+      selectionLabel: ''
+      showUnpermittedFiles: true
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:2cfafcad-5b14-408b-ba81-afd942b8b3cb'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: true
+      validateRelatedElements: ''
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
   d39b90d3-13a8-4d42-b415-1ef20426a174:
     contentColumnType: string
     fieldGroup: c014f72e-6101-4377-a9e4-bbea0f16bce8
@@ -1318,6 +1380,9 @@ globalSets:
               78023dfa-3c9e-47d1-bedc-b6fa76c9d751:
                 required: false
                 sortOrder: 1
+              d08d0466-34f4-441b-acd1-439b514f3810:
+                required: false
+                sortOrder: 5
               d39b90d3-13a8-4d42-b415-1ef20426a174:
                 required: false
                 sortOrder: 3
@@ -1364,7 +1429,7 @@ matrixBlockTypes:
       5053ff27-8e1b-49ea-85c6-c2a1dece3b8e:
         contentColumnType: text
         fieldGroup: null
-        handle: bodyContent
+        handle: article
         instructions: 'Enter one more paragraphs to create your textual content.'
         name: 'Body Content'
         searchable: true
@@ -1509,7 +1574,7 @@ matrixBlockTypes:
           localizeRelations: false
           restrictFiles: '1'
           selectionLabel: 'Add images'
-          showUnpermittedFiles: false
+          showUnpermittedFiles: true
           showUnpermittedVolumes: false
           singleUploadLocationSource: 'volume:dbb9d34a-ed00-430b-a6cd-e61927f7b2d5'
           singleUploadLocationSubpath: ''
@@ -1661,13 +1726,13 @@ matrixBlockTypes:
                 required: true
                 sortOrder: 2
               3fc84cf5-6e3d-46e8-bf13-9a1d4e198438:
-                required: true
+                required: false
                 sortOrder: 4
               49d732ef-0bfc-46c0-ba09-004de008c0ba:
-                required: true
+                required: false
                 sortOrder: 3
               ed4b0f49-8429-4d80-846f-3d441bd3e707:
-                required: false
+                required: true
                 sortOrder: 1
             name: Content
             sortOrder: 1
@@ -1680,7 +1745,7 @@ matrixBlockTypes:
         name: Position
         searchable: false
         settings:
-          default: ''
+          default: center
           options:
             __assoc__:
               -
@@ -1835,23 +1900,35 @@ matrixBlockTypes:
         translationMethod: none
         type: craft\fields\Dropdown
       ed4b0f49-8429-4d80-846f-3d441bd3e707:
-        contentColumnType: text
+        contentColumnType: string
         fieldGroup: null
         handle: image
         instructions: 'Select or upload an image to use in the page.'
         name: Image
-        searchable: true
+        searchable: false
         settings:
-          byteLimit: null
-          charLimit: null
-          code: ''
-          columnType: null
-          initialRows: '4'
-          multiline: ''
-          placeholder: ''
+          allowSelfRelations: ''
+          allowedKinds:
+            - image
+          defaultUploadLocationSource: 'volume:5c642d7e-b16b-4836-9575-668d75d242e5'
+          defaultUploadLocationSubpath: ''
+          limit: '1'
+          localizeRelations: false
+          restrictFiles: '1'
+          selectionLabel: ''
+          showUnpermittedFiles: true
+          showUnpermittedVolumes: false
+          singleUploadLocationSource: 'volume:dbb9d34a-ed00-430b-a6cd-e61927f7b2d5'
+          singleUploadLocationSubpath: ''
+          source: null
+          sources: '*'
+          targetSiteId: null
+          useSingleFolder: true
+          validateRelatedElements: ''
+          viewMode: list
         translationKeyFormat: null
-        translationMethod: none
-        type: craft\fields\PlainText
+        translationMethod: site
+        type: craft\fields\Assets
     handle: singleImage
     name: Image
     sortOrder: 4
@@ -2120,122 +2197,53 @@ matrixBlockTypes:
         tabs:
           -
             fields:
-              909d5089-f93c-423d-a0b4-3e1731e31881:
-                required: true
-                sortOrder: 2
-              9306f894-17cf-49b0-9c4c-7af99e4a7bf1:
-                required: true
-                sortOrder: 3
-              9c4f402b-c9b9-479e-9d03-85fb25151a90:
+              2c244265-381c-45ad-b439-7845b814e5ee:
                 required: true
                 sortOrder: 1
             name: Content
             sortOrder: 1
     fields:
-      909d5089-f93c-423d-a0b4-3e1731e31881:
+      2c244265-381c-45ad-b439-7845b814e5ee:
         contentColumnType: string
         fieldGroup: null
-        handle: target
+        handle: resources
         instructions: ''
-        name: Target
+        name: Resources
         searchable: false
         settings:
-          allowSelfRelations: ''
-          allowedKinds: null
-          defaultUploadLocationSource: 'volume:5c642d7e-b16b-4836-9575-668d75d242e5'
-          defaultUploadLocationSubpath: ''
-          limit: '1'
-          localizeRelations: false
-          restrictFiles: ''
+          columns:
+            __assoc__:
+              -
+                - fbaa4c75-7616-42ca-adea-7615c9b91e38
+                -
+                  __assoc__:
+                    -
+                      - width
+                      - ''
+              -
+                - ec91bde6-778d-4030-89fe-45614d871e81
+                -
+                  __assoc__:
+                    -
+                      - width
+                      - ''
+              -
+                - 25958ba0-5f4a-48fc-9dee-0064db99f702
+                -
+                  __assoc__:
+                    -
+                      - width
+                      - ''
+          contentTable: '{{%stc_7_resources}}'
+          fieldLayout: table
+          maxRows: ''
+          minRows: '1'
+          propagationMethod: all
           selectionLabel: 'Add a resource'
-          showUnpermittedFiles: false
-          showUnpermittedVolumes: false
-          singleUploadLocationSource: 'volume:b011a3f9-88a2-4819-aad0-ca04487dfac8'
-          singleUploadLocationSubpath: ''
-          source: null
-          sources: '*'
-          targetSiteId: null
-          useSingleFolder: true
-          validateRelatedElements: ''
-          viewMode: list
+          staticField: ''
         translationKeyFormat: null
         translationMethod: site
-        type: craft\fields\Assets
-      9306f894-17cf-49b0-9c4c-7af99e4a7bf1:
-        contentColumnType: string
-        fieldGroup: null
-        handle: utilityIcon
-        instructions: ''
-        name: 'Utility Icon'
-        searchable: false
-        settings:
-          optgroups: true
-          options:
-            -
-              __assoc__:
-                -
-                  - label
-                  - Download
-                -
-                  - value
-                  - download
-                -
-                  - default
-                  - ''
-            -
-              __assoc__:
-                -
-                  - label
-                  - PDF
-                -
-                  - value
-                  - pdf
-                -
-                  - default
-                  - ''
-            -
-              __assoc__:
-                -
-                  - label
-                  - XLS
-                -
-                  - value
-                  - xls
-                -
-                  - default
-                  - ''
-            -
-              __assoc__:
-                -
-                  - label
-                  - CSV
-                -
-                  - value
-                  - csv
-                -
-                  - default
-                  - ''
-        translationKeyFormat: null
-        translationMethod: none
-        type: craft\fields\Dropdown
-      9c4f402b-c9b9-479e-9d03-85fb25151a90:
-        contentColumnType: text
-        fieldGroup: null
-        handle: label
-        instructions: 'Enter your label for the resource file'
-        name: Label
-        searchable: true
-        settings:
-          byteLimit: null
-          charLimit: null
-          code: ''
-          columnType: null
-          initialRows: '4'
-          multiline: ''
-          placeholder: ''
-        translationKeyFormat: null
-        translationMethod: none
-        type: craft\fields\PlainText
+        type: verbb\supertable\fields\SuperTableField
     handle: resourceList
     name: 'Resource List'
     sortOrder: 7
@@ -3331,6 +3339,114 @@ superTableBlockTypes:
         translationKeyFormat: null
         translationMethod: site
         type: craft\fields\Assets
+  e8d6be24-fbdf-4f6d-b4e3-2e2b658248e6:
+    field: 2c244265-381c-45ad-b439-7845b814e5ee
+    fieldLayouts:
+      f7a37c9e-dc1a-4c48-816d-f1ae3a08c08f:
+        tabs:
+          -
+            fields:
+              25958ba0-5f4a-48fc-9dee-0064db99f702:
+                required: true
+                sortOrder: 3
+              ec91bde6-778d-4030-89fe-45614d871e81:
+                required: true
+                sortOrder: 2
+              fbaa4c75-7616-42ca-adea-7615c9b91e38:
+                required: true
+                sortOrder: 1
+            name: Content
+            sortOrder: 1
+    fields:
+      25958ba0-5f4a-48fc-9dee-0064db99f702:
+        contentColumnType: string
+        fieldGroup: null
+        handle: utilityIcon
+        instructions: 'Choose the icon you want to display File Icon will show the icon of the File Type being uploaded'
+        name: 'Utility Icon'
+        searchable: false
+        settings:
+          optgroups: true
+          options:
+            -
+              __assoc__:
+                -
+                  - label
+                  - 'File Icon'
+                -
+                  - value
+                  - fileIcon
+                -
+                  - default
+                  - '1'
+            -
+              __assoc__:
+                -
+                  - label
+                  - Download
+                -
+                  - value
+                  - 'far fa-download-cloud-alt'
+                -
+                  - default
+                  - ''
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\fields\Dropdown
+      ec91bde6-778d-4030-89fe-45614d871e81:
+        contentColumnType: string
+        fieldGroup: null
+        handle: target
+        instructions: 'Upload or select your file'
+        name: Target
+        searchable: false
+        settings:
+          allowSelfRelations: ''
+          allowedKinds:
+            - compressed
+            - excel
+            - pdf
+            - powerpoint
+            - text
+            - word
+          defaultUploadLocationSource: 'volume:dbb9d34a-ed00-430b-a6cd-e61927f7b2d5'
+          defaultUploadLocationSubpath: ''
+          limit: '1'
+          localizeRelations: false
+          restrictFiles: '1'
+          selectionLabel: 'Add a resource'
+          showUnpermittedFiles: true
+          showUnpermittedVolumes: false
+          singleUploadLocationSource: 'volume:5c642d7e-b16b-4836-9575-668d75d242e5'
+          singleUploadLocationSubpath: ''
+          source: null
+          sources:
+            - 'volume:b011a3f9-88a2-4819-aad0-ca04487dfac8'
+          targetSiteId: null
+          useSingleFolder: true
+          validateRelatedElements: ''
+          viewMode: list
+        translationKeyFormat: null
+        translationMethod: site
+        type: craft\fields\Assets
+      fbaa4c75-7616-42ca-adea-7615c9b91e38:
+        contentColumnType: text
+        fieldGroup: null
+        handle: label
+        instructions: 'Enter your label for the resource file'
+        name: Label
+        searchable: true
+        settings:
+          byteLimit: null
+          charLimit: null
+          code: ''
+          columnType: null
+          initialRows: '4'
+          multiline: ''
+          placeholder: ''
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\fields\PlainText
 system:
   edition: pro
   live: true
@@ -3340,6 +3456,16 @@ system:
 users:
   allowPublicRegistration: false
   defaultGroup: ''
+  fieldLayouts:
+    485cbf65-5d8f-4164-9aee-0947aca747ca:
+      tabs:
+        -
+          fields:
+            815594b4-d88f-4430-bf0c-5db890e1051f:
+              required: false
+              sortOrder: 1
+          name: 'Profile Photo'
+          sortOrder: 1
   photoSubpath: ''
   photoVolumeUid: 2cfafcad-5b14-408b-ba81-afd942b8b3cb
   requireEmailVerification: true
@@ -3378,7 +3504,7 @@ volumes:
       subfolder: teasers
     sortOrder: 2
     type: craft\awss3\Volume
-    url: $S3_CLOUDFRONT_URL
+    url: $CLOUDFRONT_URL
   17ffd720-73f0-4e0c-9878-ea089fcc6863:
     fieldLayouts:
       c1a12ccb-e2da-48c0-91fb-8620810d76de:
@@ -3422,7 +3548,7 @@ volumes:
       subfolder: sliders/
     sortOrder: 3
     type: craft\awss3\Volume
-    url: $S3_CLOUDFRONT_URL
+    url: $CLOUDFRONT_URL
   2cfafcad-5b14-408b-ba81-afd942b8b3cb:
     fieldLayouts:
       e8b47e71-94ef-4b05-85a2-f9578c687105:
@@ -3495,7 +3621,7 @@ volumes:
       subfolder: coverphotos/
     sortOrder: 6
     type: craft\awss3\Volume
-    url: $S3_CLOUDFRONT_URL
+    url: $CLOUDFRONT_URL
   b011a3f9-88a2-4819-aad0-ca04487dfac8:
     fieldLayouts:
       e64c00c8-31b0-4afa-b497-4a3f2e0d8011:
@@ -3563,4 +3689,4 @@ volumes:
       subfolder: content/
     sortOrder: 5
     type: craft\awss3\Volume
-    url: $S3_CLOUDFRONT_URL
+    url: $CLOUDFRONT_URL
