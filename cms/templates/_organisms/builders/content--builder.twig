@@ -3,11 +3,14 @@
     'sectionHeader:buttons',
     'singleImage:image',
     'slide:image',
+    'resources:target',
     'faqList:questions',
+    'faqList:questions.faqCategory',
+    'author:profilePhoto',
     ]) 
 %}
 
-<div class="container">
+<div class="container max-w-screen-xl mx-auto">
     
     {%- minify -%}
         {%- for block in content.contentBuilder.all() -%}
@@ -63,8 +66,8 @@
                     } -%}
 
                 {%- case "faqList" -%}
-            
-                    {%- include '_organisms/lists/list--faq' ignore missing with {
+        
+                    {%- include '_organisms/lists/list--faq.twig' ignore missing with {
                         content: block,
                     } -%}
                 
