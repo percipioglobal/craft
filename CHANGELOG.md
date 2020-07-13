@@ -1,6 +1,6 @@
 # percipioglobal/craft Change Log
 
-## 1.1.4 - 14-07-2020
+## 1.2.0 - 14-07-2020
 
 ### Added
 - Added Resources List Organism / Molecule
