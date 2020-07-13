@@ -2,6 +2,6 @@
 
 {%- minify -%}
     <section class="mx-auto my-16 {{ content.position == 'full' ? '-mx-4 md:-mx-32' : '' }}">
-        {{- atom.content_image(content.image[0], content.image[0].title, content.ratio, content.caption) -}}
+        {{- atom.article_image(content.image[0], content.image[0].title, content.ratio, content.caption ?? content.image[0].caption, content.image[0].author ?? null, content.image[0].source ?? null) -}}
     </section>
 {%- endminify -%}
