@@ -20,7 +20,7 @@ export const createStore = async(Vue) => {
         plugins: [
             createPersistedState(),
             createMutationsSharer({
-                predicate: ['setNavigation']
+                predicate: []
             }),
         ]
     })

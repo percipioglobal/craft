@@ -1,5 +1,10 @@
 # percipioglobal/craft Change Log
 
+## 1.2.1.2 - 16-07-2020
+
+### Fixed
+- Fixed redundant mutationSharer `setNavigation` from shared Mutations
+
 ## 1.2.1.1 - 16-07-2020
 
 ### Fixed
