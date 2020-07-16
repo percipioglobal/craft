@@ -1,5 +1,15 @@
 # percipioglobal/craft Change Log
 
+## 1.2.1 - 16-07-2020
+
+### Added
+- Vuex Persisted State
+- Vuex Shared Mutations 
+
+### Fixed
+- Fixed missing Fort-Awesome Packages
+- Fixed missing Vue-Wait package 
+
 ## 1.2.0 - 14-07-2020
 
 ### Added
