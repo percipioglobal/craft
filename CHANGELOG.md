@@ -1,5 +1,10 @@
 # percipioglobal/craft Change Log
 
+## 1.2.1.1 - 16-07-2020
+
+### Fixed
+- Fixed missing `createLoadingState` in app.js
+
 ## 1.2.1 - 16-07-2020
 
 ### Added

@@ -2,7 +2,8 @@
 // eslint-disable-next-line unused-vars
 import styles from '../css/app.pcss';
 
-import { createStore } from './stores/store.js'
+import { createStore } from './stores/store.js';
+import { createLoadingState } from './utils/wait.js';
 
 // importing and setting up Font Awesome
 import { dom, library } from '@fortawesome/fontawesome-svg-core';
@@ -34,11 +35,13 @@ const main = async () => {
     ])
 
     const store = await createStore(Vue.default);
+    const wait = await createLoadingState(Vue.default);
 
     // Create our vue instance
     const vm = new Vue.default({
         el: "#page-container",
         store,
+        wait,
         data: () => ({
             
         }),
