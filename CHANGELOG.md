@@ -1,5 +1,13 @@
 # percipioglobal/craft Change Log
 
+## Unreleased - 22-07-2020
+
+### Added
+- Added ARIA compliant labels to the image atoms
+
+### Changed
+- Updated twig tags to discard whitespace in image atoms
+
 ## 1.2.1.2 - 16-07-2020
 
 ### Fixed
