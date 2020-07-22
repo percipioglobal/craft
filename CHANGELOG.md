@@ -7,6 +7,7 @@
 
 ### Changed
 - Updated twig tags to discard whitespace in image atoms
+- Updated `Simple.json` and `Content.json` redactor configs to give the user more control over their content
 
 ## 1.2.1.2 - 16-07-2020
 
