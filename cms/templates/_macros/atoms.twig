@@ -19,13 +19,13 @@
 {% macro hero_image(heroImage, alt = '') %}
     {% set image = heroImage.optimizeHero %}
     {% spaceless %}
-        <figure class="relative w-full h-full">
-        <img  src="{{ image.placeholderImage() }}"
-                data-src="{{ image.src() }}"
-                data-srcset="{{ image.srcset() }}"
-                sizes="100vw"
-                alt="{{ alt }}"
-                class="object-cover min-w-full min-h-full w-full h-full z-1 lazyload">
+        <figure role="figure" aria-label="{{- alt -}}" class="relative w-full h-full">
+            <img  src="{{- image.placeholderImage() -}}"
+                    data-src="{{- image.src() -}}"
+                    data-srcset="{{- image.srcset() -}}"
+                    sizes="100vw"
+                    alt="{{- alt -}}"
+                    class="object-cover min-w-full min-h-full w-full h-full z-1 lazyload">
         </figure>
     {% endspaceless %}
 {% endmacro %}
@@ -35,17 +35,17 @@
     {% import _self as atom %}
     {% set image = articleImage.optimizeArticles %}
     {% spaceless %}
-        <figure class="w-full h-full">
+        <figure role="figure" aria-labelledby="{{- alt ~ '-' ~ articleImage.id -}}" class="w-full h-full">
         <div class="img {{ ratio -}}">
-            <img  src="{{ image.placeholderImage() }}"
-                data-src="{{ image.src() }}"
-                data-srcset="{{ image.srcset() }}"
+            <img  src="{{- image.placeholderImage() -}}"
+                data-src="{{- image.src() -}}"
+                data-srcset="{{- image.srcset() -}}"
                 sizes="100vw"
-                alt="{{ alt }}"
+                alt="{{- alt -}}"
                 class="object-cover lazyload">
         </div>
         {% if caption %}
-            {{- atom.caption(caption, author, source) -}}
+            {{- atom.caption(caption, author, source, alt ~ '-' ~ articleImage.id) -}}
         {% endif %}
         </figure>
     {% endspaceless %}
@@ -55,15 +55,15 @@
 {% macro teaser_image(teaserImage, alt = '') %}
     {% set image = teaserImage.optimizeTeasers %}
     {% spaceless %}
-        <figure class="relative w-full h-full">
-        <div class="img is1by1">
-            <img  src="{{ image.placeholderImage() }}"
-                data-src="{{ image.src() }}"
-                data-srcset="{{ image.srcset() }}"
-                sizes="100vw"
-                alt="{{ alt }}"
-                class="object-cover lazyload">
-        </div>
+        <figure role="figure" aria-label="{{- alt -}}" class="relative w-full h-full">
+            <div class="img is1by1">
+                <img  src="{{- image.placeholderImage() -}}"
+                    data-src="{{- image.src() -}}"
+                    data-srcset="{{- image.srcset() -}}"
+                    sizes="100vw"
+                    alt="{{- alt -}}"
+                    class="object-cover lazyload">
+            </div>
         </figure>
     {% endspaceless %}
 {% endmacro %}
@@ -71,12 +71,12 @@
 {# Profile Image #}
 {% macro profile_image(profileImage, alt = '') %}
     {% set image = profileImage.optimizeProfileImages %}
-    <figure class="img overflow-hidden h-16 w-16 rounded-full">
-        <img  src="{{ image.placeholderImage() }}"
-            data-src="{{ image.src() }}"
-            data-srcset="{{ image.srcset() }}"
+    <figure role="figure" aria-label="{{- alt -}}" class="img overflow-hidden h-16 w-16 rounded-full">
+        <img  src="{{- image.placeholderImage() -}}"
+            data-src="{{- image.src() -}}"
+            data-srcset="{{- image.srcset() -}}"
             sizes="25vw"
-            alt="{{ alt }}"
+            alt="{{- alt -}}"
             class="lazyload">
     </figure>
 {% endmacro %}
@@ -97,9 +97,9 @@
 
 {# figcaption #}
 
-{% macro caption(content, author = null, source = null) %}
+{% macro caption(content, author = null, source = null, id) %}
     {% spaceless %}
-        <figcaption class="font-primary text-center text-sm text-gray-500 italic p-4 border-b border-gray-300">
+        <figcaption id="{{- id -}}" class="font-primary text-center text-sm text-gray-500 italic p-4 border-b border-gray-300">
             {{- content }}
             {% if author and source -%}
                 &mdash; 
