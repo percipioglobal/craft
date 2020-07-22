@@ -1,5 +1,19 @@
 # percipioglobal/craft Change Log
 
+## 1.2.2 - 22-07-2020
+
+### Added
+- Added ARIA compliant labels to the image atoms [#25](https://github.com/percipioglobal/craft/issues/25)
+- Added `typogrify.php` config file [#23](https://github.com/percipioglobal/craft/issues/23)
+
+### Changed
+- Updated twig tags to discard whitespace in image atoms 
+- Updated `Simple.json` redactor config to give the user more control over their content [#22](https://github.com/percipioglobal/craft/issues/22)
+- Updated `Content.json` redactor config to give the user more control over their content [#18](https://github.com/percipioglobal/craft/issues/18)
+- Improved field order on resources block [#21](https://github.com/percipioglobal/craft/issues/21)
+- Renamed SEOMatic to SEO for better authoring experience [#20](https://github.com/percipioglobal/craft/issues/20)
+- Renamed Retour to Redirects for better authoring experience [#19](https://github.com/percipioglobal/craft/issues/19)
+
 ## 1.2.1.2 - 16-07-2020
 
 ### Fixed

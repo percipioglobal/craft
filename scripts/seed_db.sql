@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.5.5-10.3.23-MariaDB-1:10.3.23+maria~bionic)
 # Database: project
-# Generation Time: 2020-07-13 22:05:43 +0000
+# Generation Time: 2020-07-22 18:41:04 +0000
 # ************************************************************
 
 
@@ -351,8 +351,6 @@ VALUES
 	(3,3,2,NULL,'2020-06-29 11:29:40','2020-06-29 11:29:40','185f90cd-4eca-4ea4-be17-68eb0477aa08',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 	(4,4,2,NULL,'2020-06-29 14:57:11','2020-07-13 21:22:48','172f0753-1cf5-4187-a91e-ca3187367c90',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 	(5,5,2,NULL,'2020-06-29 15:08:20','2020-06-30 09:52:33','eaacca52-7f6b-4f7f-bd84-99ede739f438',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
-	(6,6,2,NULL,'2020-06-29 15:58:06','2020-06-29 15:58:42','9d994d0e-b89c-4436-b9af-53d2e7a9de73',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
-	(7,10,2,NULL,'2020-06-30 09:21:44','2020-06-30 09:21:44','a72f051a-0905-4beb-848c-133e307795cb',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 	(9,12,2,'Privacy Policy','2020-07-01 09:01:21','2020-07-01 09:07:05','61c77b46-cc58-4482-b3fb-ff740127a1dc',NULL,NULL,NULL,'{\"optimizedImageUrls\":[],\"optimizedWebPImageUrls\":[],\"variantSourceWidths\":[],\"variantHeights\":[],\"focalPoint\":null,\"originalImageWidth\":null,\"originalImageHeight\":null,\"placeholder\":\"\",\"placeholderSvg\":\"\",\"colorPalette\":[],\"lightness\":null,\"placeholderWidth\":null,\"placeholderHeight\":null}',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 	(11,15,2,'Privacy Policy','2020-07-01 09:03:04','2020-07-01 09:03:04','375fceb5-35c4-4585-b053-0508a8abb4e5',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 	(13,20,2,'About Us','2020-07-01 09:08:18','2020-07-01 09:08:18','2f4f3d86-41a8-47bd-86fb-1a618c032b52',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
@@ -362,8 +360,7 @@ VALUES
 	(18,33,2,NULL,'2020-07-01 09:11:21','2020-07-01 09:11:21','3225f13f-4fba-443b-b2bf-7c828b70215d',NULL,NULL,NULL,'{\"optimizedImageUrls\":[],\"optimizedWebPImageUrls\":[],\"variantSourceWidths\":[],\"variantHeights\":[],\"focalPoint\":null,\"originalImageWidth\":null,\"originalImageHeight\":null,\"placeholder\":\"\",\"placeholderSvg\":\"\",\"colorPalette\":[],\"lightness\":null,\"placeholderWidth\":null,\"placeholderHeight\":null}',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 	(19,34,2,'About Us','2020-07-01 09:28:18','2020-07-01 09:28:18','6ff7d769-c4dc-4c8f-8123-2d5cadb0cdb8',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 	(20,35,2,'Contact Us','2020-07-01 09:28:29','2020-07-01 09:28:29','4a9b1852-8719-4a01-a2f1-4067999acca0',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
-	(21,36,2,'Privacy Policy','2020-07-01 09:29:48','2020-07-01 09:29:48','66b72f4e-78ce-40d8-9a29-00dfa9c94982',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
-	(22,37,2,NULL,'2020-07-03 11:36:28','2020-07-03 11:36:28','83c8112a-9d38-4647-be4d-25dc041af779',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+	(21,36,2,'Privacy Policy','2020-07-01 09:29:48','2020-07-01 09:29:48','66b72f4e-78ce-40d8-9a29-00dfa9c94982',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 
 /*!40000 ALTER TABLE `content` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -437,10 +434,7 @@ LOCK TABLES `drafts` WRITE;
 
 INSERT INTO `drafts` (`id`, `sourceId`, `creatorId`, `name`, `notes`, `trackChanges`, `dateLastMerged`)
 VALUES
-	(1,NULL,1,'First draft','',0,NULL),
-	(2,NULL,1,'First draft',NULL,0,NULL),
-	(6,NULL,1,'First draft',NULL,0,NULL),
-	(7,NULL,1,'First draft',NULL,0,NULL);
+	(6,NULL,1,'First draft',NULL,0,NULL);
 
 /*!40000 ALTER TABLE `drafts` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -505,11 +499,9 @@ VALUES
 	(3,NULL,NULL,9,'craft\\elements\\GlobalSet',1,0,'2020-06-29 11:29:40','2020-06-29 11:29:40',NULL,'881e6056-d468-4b69-a65a-0ca344beb931'),
 	(4,NULL,NULL,15,'craft\\elements\\GlobalSet',1,0,'2020-06-29 14:57:11','2020-07-13 21:22:48',NULL,'a2aa1ca5-9822-4918-9c36-9b612669921b'),
 	(5,NULL,NULL,22,'craft\\elements\\GlobalSet',1,0,'2020-06-29 15:08:20','2020-06-30 09:52:33',NULL,'dffe2f47-18b7-4dcb-845d-2d88fa0378c3'),
-	(6,1,NULL,8,'craft\\elements\\Entry',1,0,'2020-06-29 15:58:06','2020-06-29 15:58:42',NULL,'e0219e72-d9bb-40ae-8c2a-55259cec552a'),
 	(7,NULL,NULL,1,'craft\\elements\\MatrixBlock',1,0,'2020-06-29 15:58:35','2020-06-29 15:58:35','2020-06-29 15:58:43','a7cb3067-4bb1-45b4-93d4-5d1f6ef9b3e0'),
-	(8,NULL,NULL,1,'craft\\elements\\MatrixBlock',1,0,'2020-06-29 15:58:42','2020-06-29 15:58:42',NULL,'e393eddb-3492-4483-967d-f0c107128d4a'),
-	(9,NULL,NULL,3,'craft\\elements\\MatrixBlock',1,0,'2020-06-29 15:58:43','2020-06-29 15:58:43',NULL,'bf8de847-6369-44dc-b334-b1107f90492d'),
-	(10,2,NULL,8,'craft\\elements\\Entry',1,0,'2020-06-30 09:21:44','2020-06-30 09:21:44',NULL,'3e8cb33d-c3af-478f-91ec-e65c68be14af'),
+	(8,NULL,NULL,1,'craft\\elements\\MatrixBlock',1,0,'2020-06-29 15:58:42','2020-06-29 15:58:42','2020-07-22 18:39:07','e393eddb-3492-4483-967d-f0c107128d4a'),
+	(9,NULL,NULL,3,'craft\\elements\\MatrixBlock',1,0,'2020-06-29 15:58:43','2020-06-29 15:58:43','2020-07-22 18:39:10','bf8de847-6369-44dc-b334-b1107f90492d'),
 	(12,NULL,NULL,18,'craft\\elements\\Entry',1,0,'2020-07-01 09:01:21','2020-07-01 09:03:04',NULL,'cca3822f-59b2-4788-8351-c6583e21bc2e'),
 	(14,NULL,NULL,2,'craft\\elements\\MatrixBlock',1,0,'2020-07-01 09:03:04','2020-07-01 09:07:05',NULL,'599f86fb-bf37-4180-a439-1f94fdf523c1'),
 	(15,NULL,2,18,'craft\\elements\\Entry',1,0,'2020-07-01 09:03:04','2020-07-01 09:03:04',NULL,'beb1fd1d-264e-48ce-8028-a7120d03f18a'),
@@ -530,7 +522,8 @@ VALUES
 	(34,NULL,NULL,NULL,'verbb\\navigation\\elements\\Node',1,0,'2020-07-01 09:28:18','2020-07-01 09:28:18',NULL,'0121e921-ff8c-4931-825f-f265be4ac781'),
 	(35,NULL,NULL,NULL,'verbb\\navigation\\elements\\Node',1,0,'2020-07-01 09:28:29','2020-07-01 09:28:29',NULL,'82f68a1c-4af9-4c8a-bbc0-16e8349b75e1'),
 	(36,NULL,NULL,NULL,'verbb\\navigation\\elements\\Node',1,0,'2020-07-01 09:29:48','2020-07-01 09:29:48',NULL,'584af954-88c9-4144-901c-1a8eaf906766'),
-	(37,7,NULL,8,'craft\\elements\\Entry',1,0,'2020-07-03 11:36:28','2020-07-03 11:36:28',NULL,'3e93d339-336b-48a7-8056-6377adb96e5e');
+	(39,NULL,NULL,20,'craft\\elements\\MatrixBlock',1,0,'2020-07-22 18:38:29','2020-07-22 18:38:29','2020-07-22 18:39:11','307a05dc-2090-4ef3-a329-e9cb1008f79b'),
+	(40,NULL,NULL,29,'verbb\\supertable\\elements\\SuperTableBlockElement',1,0,'2020-07-22 18:38:29','2020-07-22 18:38:29','2020-07-22 18:39:11','8c248316-1bfe-426e-8b0b-4756427e771c');
 
 /*!40000 ALTER TABLE `elements` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -571,11 +564,9 @@ VALUES
 	(3,3,2,NULL,NULL,1,'2020-06-29 11:29:40','2020-06-29 11:29:40','69f1c8aa-b123-4814-952b-3c1646cd95b3'),
 	(4,4,2,NULL,NULL,1,'2020-06-29 14:57:11','2020-06-29 14:57:11','529a00e8-06eb-478a-98e8-92c76f005d21'),
 	(5,5,2,NULL,NULL,1,'2020-06-29 15:08:20','2020-06-29 15:08:20','a9d543b1-9f31-4660-ab45-c917313363e7'),
-	(6,6,2,'__temp_ckkkvinjothrnqltufdcpahudabrfhwjmwzx','news/__temp_ckkkvinjothrnqltufdcpahudabrfhwjmwzx',1,'2020-06-29 15:58:06','2020-06-29 15:58:06','eae0304b-8d00-4ff1-916f-c4ac37370106'),
 	(7,7,2,NULL,NULL,1,'2020-06-29 15:58:35','2020-06-29 15:58:35','4d8d4836-e039-4903-854b-ac0a87a8c16d'),
 	(8,8,2,NULL,NULL,1,'2020-06-29 15:58:42','2020-06-29 15:58:42','38379712-4fb9-4ec6-9b14-0317063a80d5'),
 	(9,9,2,NULL,NULL,1,'2020-06-29 15:58:43','2020-06-29 15:58:43','f748df66-106c-40ed-a230-07ae9a57645e'),
-	(10,10,2,'__temp_uxtwjjhyabfypkdyqlghkhvinsnxedjzkuom','news/__temp_uxtwjjhyabfypkdyqlghkhvinsnxedjzkuom',1,'2020-06-30 09:21:44','2020-06-30 09:21:44','4a3a15a6-50da-4885-b7c2-4b22606a54d8'),
 	(12,12,2,'privacy-policy','privacy-policy',1,'2020-07-01 09:01:21','2020-07-01 09:07:00','3bbc997a-c998-46cc-83a8-0944d0b7b99d'),
 	(14,14,2,NULL,NULL,1,'2020-07-01 09:03:04','2020-07-01 09:03:04','ed3bb612-ece8-450d-a860-4e2385a3c392'),
 	(15,15,2,'privacy-policy','privacy-policy',1,'2020-07-01 09:03:04','2020-07-01 09:03:04','54d831cc-4722-4611-bda4-18b573867b1f'),
@@ -596,7 +587,8 @@ VALUES
 	(34,34,2,NULL,NULL,1,'2020-07-01 09:28:18','2020-07-01 09:28:18','38f5607e-d366-47e7-9a99-e5adc0a834a2'),
 	(35,35,2,NULL,NULL,1,'2020-07-01 09:28:29','2020-07-01 09:28:29','03f7f586-bf9c-4b8c-853c-a426318331c5'),
 	(36,36,2,NULL,NULL,1,'2020-07-01 09:29:48','2020-07-01 09:29:48','ceb1246f-618b-4143-ad5d-b4dd36b6f16a'),
-	(37,37,2,'__temp_ujgshvejdsxbkdxifguublkcqleblrxgdffw','news/__temp_ujgshvejdsxbkdxifguublkcqleblrxgdffw',1,'2020-07-03 11:36:28','2020-07-03 11:36:28','9f08b78b-4cd9-42a6-9e9d-31b66ea31bd7');
+	(39,39,2,NULL,NULL,1,'2020-07-22 18:38:29','2020-07-22 18:38:29','19511516-40d4-4176-88ed-280e57e80f97'),
+	(40,40,2,NULL,NULL,1,'2020-07-22 18:38:29','2020-07-22 18:38:29','d3cf9c7d-47a6-4d84-bd8e-15b0985cc8cc');
 
 /*!40000 ALTER TABLE `elements_sites` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -639,16 +631,13 @@ LOCK TABLES `entries` WRITE;
 INSERT INTO `entries` (`id`, `sectionId`, `parentId`, `typeId`, `authorId`, `postDate`, `expiryDate`, `deletedWithEntryType`, `dateCreated`, `dateUpdated`, `uid`)
 VALUES
 	(2,2,NULL,2,NULL,'2020-06-03 17:29:00',NULL,NULL,'2020-06-03 17:29:09','2020-06-03 17:29:09','e461e6b4-4a0b-4239-ac4c-a8ba30f85de4'),
-	(6,3,NULL,3,1,'2020-06-29 15:58:00',NULL,NULL,'2020-06-29 15:58:06','2020-06-29 15:58:06','deb4636d-4d15-4b24-b5ca-6beffffd9d41'),
-	(10,3,NULL,3,1,'2020-06-30 09:21:00',NULL,NULL,'2020-06-30 09:21:44','2020-06-30 09:21:44','609010db-298d-431f-a637-511a4d281899'),
 	(12,4,NULL,5,1,'2020-07-01 09:00:00',NULL,NULL,'2020-07-01 09:01:21','2020-07-01 09:03:04','4d0a00ae-e817-47b4-b4fb-56d86bb665f1'),
 	(15,4,NULL,5,1,'2020-07-01 09:00:00',NULL,NULL,'2020-07-01 09:03:04','2020-07-01 09:03:04','3d3385e1-7960-4141-9547-234069208c43'),
 	(20,4,NULL,5,1,'2020-07-01 09:07:00',NULL,NULL,'2020-07-01 09:08:18','2020-07-01 09:08:18','0ac579d7-1a49-49ca-aabf-69a7b4e5a598'),
 	(22,4,NULL,5,1,'2020-07-01 09:07:00',NULL,NULL,'2020-07-01 09:08:18','2020-07-01 09:08:18','13328854-4d9e-41b8-a221-bc57497cebbe'),
 	(29,4,NULL,5,1,'2020-07-01 09:09:00',NULL,NULL,'2020-07-01 09:10:22','2020-07-01 09:10:22','f21e93ed-11c1-4d38-91cb-4fa5af1f6885'),
 	(31,4,NULL,5,1,'2020-07-01 09:09:00',NULL,NULL,'2020-07-01 09:10:23','2020-07-01 09:10:23','e610b5de-4a74-481f-94b3-cc36c0118418'),
-	(33,4,NULL,4,1,'2020-07-01 09:11:00',NULL,NULL,'2020-07-01 09:11:21','2020-07-01 09:11:21','c8fab1da-a96d-4743-a9c7-88a131b661d8'),
-	(37,3,NULL,3,1,'2020-07-03 11:36:00',NULL,NULL,'2020-07-03 11:36:28','2020-07-03 11:36:28','26ac20a1-846d-454f-a23d-78c8ecdc8597');
+	(33,4,NULL,4,1,'2020-07-01 09:11:00',NULL,NULL,'2020-07-01 09:11:21','2020-07-01 09:11:21','c8fab1da-a96d-4743-a9c7-88a131b661d8');
 
 /*!40000 ALTER TABLE `entries` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -813,13 +802,6 @@ VALUES
 	(208,22,98,53,0,3,'2020-06-30 09:52:33','2020-06-30 09:52:33','23c0659b-5545-4b52-9a81-6f5d5dcf6509'),
 	(209,22,98,51,0,1,'2020-06-30 09:52:33','2020-06-30 09:52:33','a81bebde-7036-4c3b-a967-c78aca66e89f'),
 	(210,22,98,52,0,2,'2020-06-30 09:52:33','2020-06-30 09:52:33','fe8591e1-a746-47c0-899c-e2244d1025b5'),
-	(211,11,99,29,0,1,'2020-06-30 15:19:55','2020-06-30 15:19:55','3aade431-e026-46ad-8907-c94cf68fc60d'),
-	(212,11,99,30,0,2,'2020-06-30 15:19:55','2020-06-30 15:19:55','0f014147-88a2-420f-9616-48a86ea4511f'),
-	(213,10,100,29,0,1,'2020-06-30 15:19:55','2020-06-30 15:19:55','7660c7e9-b5aa-4458-9388-fa2d8f211f18'),
-	(214,10,100,31,0,2,'2020-06-30 15:19:55','2020-06-30 15:19:55','f78856dc-1bfe-4b62-a4c5-ff44e342d1b7'),
-	(215,10,100,30,0,3,'2020-06-30 15:19:55','2020-06-30 15:19:55','5054fa8a-25d3-447b-ac98-54cf49ad590a'),
-	(216,10,101,28,0,1,'2020-06-30 15:19:55','2020-06-30 15:19:55','45665c36-c8cc-4543-8053-2ba527b279f7'),
-	(217,19,102,37,0,1,'2020-06-30 15:19:55','2020-06-30 15:19:55','41948e36-2753-4b39-9217-8382e3271297'),
 	(218,18,103,4,0,1,'2020-07-01 09:02:06','2020-07-01 09:02:06','2884a164-3ea9-4aff-94aa-bd2064425ed6'),
 	(219,18,104,25,0,1,'2020-07-01 09:02:06','2020-07-01 09:02:06','2af88fd3-e067-4c77-a584-12ac3df3cd78'),
 	(220,18,104,23,0,2,'2020-07-01 09:02:06','2020-07-01 09:02:06','c462d74f-c7fa-4b41-9a29-2a4beabd613c'),
@@ -837,30 +819,37 @@ VALUES
 	(282,15,135,41,0,3,'2020-07-13 21:22:48','2020-07-13 21:22:48','f97c6cfa-5dc2-42f3-bded-4addef4fa0b4'),
 	(283,15,135,38,0,2,'2020-07-13 21:22:48','2020-07-13 21:22:48','65e31a6f-5526-43c6-ad9b-e95650379451'),
 	(284,28,136,60,0,1,'2020-07-13 21:23:27','2020-07-13 21:23:27','879ea9c0-4c00-405e-84fb-9a4b2d27e940'),
-	(336,6,161,18,1,2,'2020-07-13 21:52:45','2020-07-13 21:52:45','1edf6a02-4a1d-4215-8cbd-c6b262847683'),
-	(337,6,161,19,1,1,'2020-07-13 21:52:45','2020-07-13 21:52:45','a05e1d55-f6fa-4be7-8359-3fea3e6195e4'),
-	(338,1,162,5,0,3,'2020-07-13 21:52:45','2020-07-13 21:52:45','8a86914d-27c0-41ca-a1ea-21d8ef27539f'),
-	(339,1,162,6,1,1,'2020-07-13 21:52:45','2020-07-13 21:52:45','f9fddc4c-3aad-4b67-8412-52c7b3e6ed19'),
-	(340,1,162,7,1,2,'2020-07-13 21:52:45','2020-07-13 21:52:45','35ce7520-eac5-474b-b4e4-53d0d30a4dcd'),
-	(341,2,163,8,1,1,'2020-07-13 21:52:46','2020-07-13 21:52:46','fcf73764-4a66-4fb5-ad69-b9ada055f4d0'),
-	(342,3,164,9,1,3,'2020-07-13 21:52:46','2020-07-13 21:52:46','b17c8ac9-c82d-4804-af8e-e792dbd0183e'),
-	(343,3,164,10,1,1,'2020-07-13 21:52:46','2020-07-13 21:52:46','0a5cb1f8-8f60-4fc4-8a69-d9ce0d86acbf'),
-	(344,3,164,11,0,2,'2020-07-13 21:52:46','2020-07-13 21:52:46','88e1203f-a6c3-43d8-bd61-54b5c396f927'),
-	(345,3,164,12,1,4,'2020-07-13 21:52:46','2020-07-13 21:52:46','e5d8a64a-7ce4-418d-9bb9-1ae71e4a4aed'),
-	(346,4,165,13,1,2,'2020-07-13 21:52:47','2020-07-13 21:52:47','71264171-bfe7-42f7-b6e2-15267cd02f93'),
-	(347,4,165,14,0,4,'2020-07-13 21:52:47','2020-07-13 21:52:47','77279b4d-f073-4dc5-865d-e61d9fa1f433'),
-	(348,4,165,15,0,3,'2020-07-13 21:52:47','2020-07-13 21:52:47','870b5bdc-73f3-49e5-9c0f-ab91253b072f'),
-	(349,4,165,16,1,1,'2020-07-13 21:52:47','2020-07-13 21:52:47','a53689e3-5218-4cd4-9db0-c2e2a910caee'),
-	(350,5,166,17,1,1,'2020-07-13 21:52:47','2020-07-13 21:52:47','8a159326-0336-4309-955b-c0a26b9b8e7a'),
-	(351,13,167,35,0,2,'2020-07-13 21:52:48','2020-07-13 21:52:48','b10ad197-0735-4d36-8f52-89596439c5c4'),
-	(352,13,167,36,1,1,'2020-07-13 21:52:48','2020-07-13 21:52:48','d3a57119-b095-4209-9eca-79b0424a0eb9'),
-	(353,14,168,34,1,1,'2020-07-13 21:52:48','2020-07-13 21:52:48','dc37bd85-4274-423d-ae4d-923f934d0059'),
-	(354,29,169,63,1,3,'2020-07-13 21:52:49','2020-07-13 21:52:49','50ff97ab-fe3c-4243-a2aa-5f92323ad4a9'),
-	(355,29,169,64,1,2,'2020-07-13 21:52:49','2020-07-13 21:52:49','c66717d1-2866-40d9-a653-f760d82a0fb4'),
-	(356,29,169,65,1,1,'2020-07-13 21:52:49','2020-07-13 21:52:49','97b00039-7233-4d63-ba8e-1baceafa884d'),
-	(357,20,170,62,1,1,'2020-07-13 21:52:49','2020-07-13 21:52:49','781ab4b2-ad9d-4e52-9d9b-145398186838'),
-	(358,21,171,50,1,1,'2020-07-13 21:52:49','2020-07-13 21:52:49','e20448c5-f444-471e-a242-9ea006ec094e'),
-	(359,27,172,59,1,1,'2020-07-13 21:52:49','2020-07-13 21:52:49','a85d56ed-a006-44ef-bc5f-76e64ae637db');
+	(360,11,173,29,0,1,'2020-07-22 18:25:31','2020-07-22 18:25:31','f134d5e9-f002-4a02-a070-bf0176445b7e'),
+	(361,11,173,30,0,2,'2020-07-22 18:25:31','2020-07-22 18:25:31','bd2fc991-8a73-4c27-aaa4-28958cfe764f'),
+	(362,10,174,29,0,1,'2020-07-22 18:25:31','2020-07-22 18:25:31','be6ad27e-36fa-4d3d-9a02-dc09acedfc33'),
+	(363,10,174,31,0,2,'2020-07-22 18:25:31','2020-07-22 18:25:31','f6f88087-1bcd-4884-8acf-c74330b1e4cc'),
+	(364,10,174,30,0,3,'2020-07-22 18:25:31','2020-07-22 18:25:31','ecbffa93-f909-43b9-824e-c6cdfe4a4add'),
+	(365,10,175,28,0,1,'2020-07-22 18:25:31','2020-07-22 18:25:31','e556a900-787c-4c29-8f74-641eeb1a7f67'),
+	(366,19,176,37,0,1,'2020-07-22 18:25:31','2020-07-22 18:25:31','0f6be71e-0ed6-40ed-bb5f-6077ba34037e'),
+	(391,6,189,18,1,2,'2020-07-22 18:40:10','2020-07-22 18:40:10','d3e78b30-36ff-4558-8588-447e5b269125'),
+	(392,6,189,19,1,1,'2020-07-22 18:40:10','2020-07-22 18:40:10','5903aa40-cd32-4b85-92ec-4adb9c7988a1'),
+	(393,1,190,5,0,3,'2020-07-22 18:40:11','2020-07-22 18:40:11','c2982efd-7718-489e-a3eb-e8aec9afe589'),
+	(394,1,190,6,1,1,'2020-07-22 18:40:11','2020-07-22 18:40:11','27e66d36-7ee0-4136-b29a-a6f1d0c107f2'),
+	(395,1,190,7,1,2,'2020-07-22 18:40:11','2020-07-22 18:40:11','9b691268-dd03-4b77-9bbc-a8de8649bb42'),
+	(396,2,191,8,1,1,'2020-07-22 18:40:11','2020-07-22 18:40:11','0b2284d5-184b-4864-9747-eac0c919cbbb'),
+	(397,3,192,9,1,3,'2020-07-22 18:40:12','2020-07-22 18:40:12','3d568a2a-411c-41f0-8c67-b92443b494ec'),
+	(398,3,192,10,1,1,'2020-07-22 18:40:12','2020-07-22 18:40:12','d5bbfffa-ae41-439a-95a0-84e1f174877c'),
+	(399,3,192,11,0,2,'2020-07-22 18:40:12','2020-07-22 18:40:12','676ba153-54e9-4ad5-a598-43a9577b8dfc'),
+	(400,3,192,12,1,4,'2020-07-22 18:40:12','2020-07-22 18:40:12','5ff2c69b-1745-45df-bcb4-57ed29e3e778'),
+	(401,4,193,13,1,2,'2020-07-22 18:40:12','2020-07-22 18:40:12','a8b1f742-ad52-4c48-a6ee-275aa7de0bb6'),
+	(402,4,193,14,0,4,'2020-07-22 18:40:12','2020-07-22 18:40:12','c363cecd-360c-434a-9323-08bdb01ecd4d'),
+	(403,4,193,15,0,3,'2020-07-22 18:40:12','2020-07-22 18:40:12','50d89fd9-c84d-4841-ac37-888102c52fcc'),
+	(404,4,193,16,1,1,'2020-07-22 18:40:12','2020-07-22 18:40:12','c14462d6-1cc1-45c2-932e-9c1e413e75f3'),
+	(405,5,194,17,1,1,'2020-07-22 18:40:13','2020-07-22 18:40:13','41600a35-ef04-4422-946f-02c46d701fd7'),
+	(406,13,195,35,0,2,'2020-07-22 18:40:14','2020-07-22 18:40:14','6ea878a0-b7c6-44b3-bbc2-741d19cf334b'),
+	(407,13,195,36,1,1,'2020-07-22 18:40:14','2020-07-22 18:40:14','3c38976f-a930-4000-96c2-05e208c4d90f'),
+	(408,14,196,34,1,1,'2020-07-22 18:40:14','2020-07-22 18:40:14','45d26b74-1dad-4faf-8354-16462765fa39'),
+	(409,29,197,63,1,2,'2020-07-22 18:40:14','2020-07-22 18:40:14','79f79bdd-eb17-4017-b5ab-954a264c5a74'),
+	(410,29,197,64,1,3,'2020-07-22 18:40:15','2020-07-22 18:40:15','53f38b55-131e-4542-a653-8f5c075fbe42'),
+	(411,29,197,65,1,1,'2020-07-22 18:40:15','2020-07-22 18:40:15','405ef57e-d920-4f8a-a3fd-bd77788f0ea2'),
+	(412,20,198,62,1,1,'2020-07-22 18:40:15','2020-07-22 18:40:15','8b0c7e0a-5b00-48cf-8dfb-397ac90e73dd'),
+	(413,21,199,50,1,1,'2020-07-22 18:40:15','2020-07-22 18:40:15','12ecac8c-88f9-460d-ac21-719d771680ca'),
+	(414,27,200,59,1,1,'2020-07-22 18:40:15','2020-07-22 18:40:15','7b906119-b219-458e-a9c6-711f74841955');
 
 /*!40000 ALTER TABLE `fieldlayoutfields` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -953,10 +942,6 @@ VALUES
 	(32,12,'Metadata',1,'2020-06-29 13:29:28','2020-06-29 13:29:28','c36f755d-77f5-4628-94c6-6065080cc20c'),
 	(50,16,'Content',1,'2020-06-29 15:00:00','2020-06-29 15:00:00','e0a7aa92-86fb-477b-a27b-7e727272d4de'),
 	(98,22,'Organisational Information',1,'2020-06-30 09:52:33','2020-06-30 09:52:33','9ba493a2-949c-4870-986e-bc09d1b36dbd'),
-	(99,11,'Metadata',1,'2020-06-30 15:19:55','2020-06-30 15:19:55','622dcbfa-39d6-4e7c-907d-98adc449b0d1'),
-	(100,10,'Metadata',1,'2020-06-30 15:19:55','2020-06-30 15:19:55','10d20d3e-18d5-4485-a4eb-336304f3b256'),
-	(101,10,'Optimized Images',2,'2020-06-30 15:19:55','2020-06-30 15:19:55','23846c8b-f7e9-4997-aa8f-8a6c2ed9c413'),
-	(102,19,'Optimized Images',1,'2020-06-30 15:19:55','2020-06-30 15:19:55','e9321c44-750a-4c55-8d60-ffeac4ef96c3'),
 	(103,18,'Content',1,'2020-07-01 09:02:06','2020-07-01 09:02:06','e0fb3519-8ce8-4585-8fc6-92aa09c067f0'),
 	(104,18,'Metadata',2,'2020-07-01 09:02:06','2020-07-01 09:02:06','93e1c536-fb80-433b-b98c-c7f99a1f16ce'),
 	(106,17,'Metadata',1,'2020-07-01 09:12:13','2020-07-01 09:12:13','63e695f5-5695-4fec-975a-2d61155d3d12'),
@@ -966,18 +951,22 @@ VALUES
 	(112,26,'FAQ Entry',1,'2020-07-03 11:10:14','2020-07-03 11:10:14','1b791309-690d-4d84-8fa7-e3a3f212fa6f'),
 	(135,15,'Placeholder Images',1,'2020-07-13 21:22:48','2020-07-13 21:22:48','bb2035b6-9682-4eb3-8386-e353bad6b5b9'),
 	(136,28,'Profile Photo',1,'2020-07-13 21:23:27','2020-07-13 21:23:27','983b38ac-2fb8-4c11-8a15-69ce81f5ba2d'),
-	(161,6,'Content',1,'2020-07-13 21:52:45','2020-07-13 21:52:45','7ebabe97-c5cb-4290-b6ce-87ff655c30b8'),
-	(162,1,'Content',1,'2020-07-13 21:52:45','2020-07-13 21:52:45','45d1e5f3-0e19-469f-80e4-f109fda9a0c3'),
-	(163,2,'Content',1,'2020-07-13 21:52:46','2020-07-13 21:52:46','1547fa5c-9400-4aa1-a81b-e885ede5e072'),
-	(164,3,'Content',1,'2020-07-13 21:52:46','2020-07-13 21:52:46','d3e500f1-6623-43e6-8ca0-1a0c2936d271'),
-	(165,4,'Content',1,'2020-07-13 21:52:47','2020-07-13 21:52:47','a0627d5c-1618-4e84-9f63-9d535e6be681'),
-	(166,5,'Content',1,'2020-07-13 21:52:47','2020-07-13 21:52:47','a115614c-38c9-4ffb-87fe-927ddf12e30e'),
-	(167,13,'Content',1,'2020-07-13 21:52:48','2020-07-13 21:52:48','041929cd-91e6-4e43-8ea7-d4f165d093a4'),
-	(168,14,'Content',1,'2020-07-13 21:52:48','2020-07-13 21:52:48','b0b8cc20-6f78-45d6-8103-2bf13ea30c1e'),
-	(169,29,'Content',1,'2020-07-13 21:52:49','2020-07-13 21:52:49','43d03737-a1c0-48b1-8b4a-50ef0cd3d697'),
-	(170,20,'Content',1,'2020-07-13 21:52:49','2020-07-13 21:52:49','e7c3060d-bbf7-49ef-9c7a-ea7386c8c2bf'),
-	(171,21,'Content',1,'2020-07-13 21:52:49','2020-07-13 21:52:49','700422fa-c286-467f-8aad-de24893c859d'),
-	(172,27,'Content',1,'2020-07-13 21:52:49','2020-07-13 21:52:49','7a72a7f5-b4ef-4479-814e-f716ff705112');
+	(173,11,'Metadata',1,'2020-07-22 18:25:30','2020-07-22 18:25:30','74785beb-32cb-40f9-95e1-122d1fd64980'),
+	(174,10,'Metadata',1,'2020-07-22 18:25:31','2020-07-22 18:25:31','f9ae5b86-3951-4fb2-a6c9-566db74c0a2e'),
+	(175,10,'Optimized Images',2,'2020-07-22 18:25:31','2020-07-22 18:25:31','8024adb3-bd44-44cc-bd8d-525d2fc717d4'),
+	(176,19,'Optimized Images',1,'2020-07-22 18:25:31','2020-07-22 18:25:31','b8888919-61e9-4273-87e2-14d3ef141581'),
+	(189,6,'Content',1,'2020-07-22 18:40:10','2020-07-22 18:40:10','2cca3891-628b-4372-be19-a743334ba5ed'),
+	(190,1,'Content',1,'2020-07-22 18:40:11','2020-07-22 18:40:11','6d91cdbe-354d-4c81-a091-05512be36de3'),
+	(191,2,'Content',1,'2020-07-22 18:40:11','2020-07-22 18:40:11','058d977e-f353-4fcd-ba6f-1e948f6e413e'),
+	(192,3,'Content',1,'2020-07-22 18:40:12','2020-07-22 18:40:12','72b7b106-5d8b-4ce1-b5e0-ce0b86c844fb'),
+	(193,4,'Content',1,'2020-07-22 18:40:12','2020-07-22 18:40:12','b7c49b60-bf8e-48bc-9ea4-a4b2d15adb05'),
+	(194,5,'Content',1,'2020-07-22 18:40:13','2020-07-22 18:40:13','16d31d27-2d0c-4562-aaa9-d85adec84438'),
+	(195,13,'Content',1,'2020-07-22 18:40:14','2020-07-22 18:40:14','d7d0c130-2f98-48f7-84a1-e51e36047391'),
+	(196,14,'Content',1,'2020-07-22 18:40:14','2020-07-22 18:40:14','5403757c-f3b3-4ec3-b3d0-3aeedd787c15'),
+	(197,29,'Content',1,'2020-07-22 18:40:14','2020-07-22 18:40:14','fb2519b3-ca18-4251-89f3-4c4292e16210'),
+	(198,20,'Content',1,'2020-07-22 18:40:15','2020-07-22 18:40:15','ab7b28af-c185-4ba9-9edb-394797d516a8'),
+	(199,21,'Content',1,'2020-07-22 18:40:15','2020-07-22 18:40:15','a71cbdbc-5ba9-4b58-aa58-710da17e7a59'),
+	(200,27,'Content',1,'2020-07-22 18:40:15','2020-07-22 18:40:15','f9cce162-eda2-4eb2-887f-97597c6956b5');
 
 /*!40000 ALTER TABLE `fieldlayouttabs` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -1073,7 +1062,7 @@ VALUES
 	(59,NULL,'Questions','questions','matrixBlockType:9e682a2f-b0d4-478b-8b06-549c218b8357','Use the field to select and add Frequently Asked Questions, multiple items can be selected.',0,'site',NULL,'craft\\fields\\Entries','{\"allowSelfRelations\":\"\",\"limit\":\"\",\"localizeRelations\":false,\"selectionLabel\":\"Add questions\",\"source\":null,\"sources\":[\"section:47b7409b-e345-48d9-b684-06ec0a2972f5\"],\"targetSiteId\":null,\"validateRelatedElements\":\"\",\"viewMode\":null}','2020-07-03 11:27:14','2020-07-03 11:38:12','35981b2e-d04e-4366-939a-c0673263711a'),
 	(60,15,'Profile Photo','profilePhoto','global','Upload the users profilePhoto',1,'site',NULL,'craft\\fields\\Assets','{\"allowSelfRelations\":\"\",\"allowedKinds\":[\"image\"],\"defaultUploadLocationSource\":\"volume:5c642d7e-b16b-4836-9575-668d75d242e5\",\"defaultUploadLocationSubpath\":\"\",\"limit\":\"1\",\"localizeRelations\":false,\"restrictFiles\":\"1\",\"selectionLabel\":\"Add a profile photo\",\"showUnpermittedFiles\":true,\"showUnpermittedVolumes\":false,\"singleUploadLocationSource\":\"volume:2cfafcad-5b14-408b-ba81-afd942b8b3cb\",\"singleUploadLocationSubpath\":\"\",\"source\":null,\"sources\":\"*\",\"targetSiteId\":null,\"useSingleFolder\":true,\"validateRelatedElements\":\"\",\"viewMode\":\"list\"}','2020-07-13 21:20:43','2020-07-13 21:20:43','815594b4-d88f-4430-bf0c-5db890e1051f'),
 	(61,12,'Profile Photo Placeholder','profilePhotoPlaceholder','global','Upload a placeholder photo for the users if they haven\'\'t added any profile image',0,'site',NULL,'craft\\fields\\Assets','{\"allowSelfRelations\":\"\",\"allowedKinds\":[\"image\"],\"defaultUploadLocationSource\":\"volume:5c642d7e-b16b-4836-9575-668d75d242e5\",\"defaultUploadLocationSubpath\":\"\",\"limit\":\"1\",\"localizeRelations\":false,\"restrictFiles\":\"1\",\"selectionLabel\":\"\",\"showUnpermittedFiles\":true,\"showUnpermittedVolumes\":false,\"singleUploadLocationSource\":\"volume:2cfafcad-5b14-408b-ba81-afd942b8b3cb\",\"singleUploadLocationSubpath\":\"\",\"source\":null,\"sources\":\"*\",\"targetSiteId\":null,\"useSingleFolder\":true,\"validateRelatedElements\":\"\",\"viewMode\":\"list\"}','2020-07-13 21:22:00','2020-07-13 21:22:00','d08d0466-34f4-441b-acd1-439b514f3810'),
-	(62,NULL,'Resources','resources','matrixBlockType:e2c376a5-8341-40da-993a-68704f00171e','',0,'site',NULL,'verbb\\supertable\\fields\\SuperTableField','{\"columns\":{\"fbaa4c75-7616-42ca-adea-7615c9b91e38\":{\"width\":\"\"},\"ec91bde6-778d-4030-89fe-45614d871e81\":{\"width\":\"\"},\"25958ba0-5f4a-48fc-9dee-0064db99f702\":{\"width\":\"\"}},\"contentTable\":\"{{%stc_7_resources}}\",\"fieldLayout\":\"table\",\"maxRows\":\"\",\"minRows\":\"1\",\"propagationMethod\":\"all\",\"selectionLabel\":\"Add a resource\",\"staticField\":\"\"}','2020-07-13 21:48:22','2020-07-13 21:50:28','2c244265-381c-45ad-b439-7845b814e5ee'),
+	(62,NULL,'Resources','resources','matrixBlockType:e2c376a5-8341-40da-993a-68704f00171e','',0,'site',NULL,'verbb\\supertable\\fields\\SuperTableField','{\"columns\":{\"fbaa4c75-7616-42ca-adea-7615c9b91e38\":{\"width\":\"50%\"},\"25958ba0-5f4a-48fc-9dee-0064db99f702\":{\"width\":\"20%\"},\"ec91bde6-778d-4030-89fe-45614d871e81\":{\"width\":\"\"}},\"contentTable\":\"{{%stc_7_resources}}\",\"fieldLayout\":\"table\",\"maxRows\":\"\",\"minRows\":\"1\",\"propagationMethod\":\"all\",\"selectionLabel\":\"Add a resource\",\"staticField\":\"\"}','2020-07-13 21:48:22','2020-07-22 18:40:14','2c244265-381c-45ad-b439-7845b814e5ee'),
 	(63,NULL,'Utility Icon','utilityIcon','superTableBlockType:e8d6be24-fbdf-4f6d-b4e3-2e2b658248e6','Choose the icon you want to display File Icon will show the icon of the File Type being uploaded',0,'none',NULL,'craft\\fields\\Dropdown','{\"optgroups\":true,\"options\":[{\"label\":\"File Icon\",\"value\":\"fileIcon\",\"default\":\"1\"},{\"label\":\"Download\",\"value\":\"far fa-download-cloud-alt\",\"default\":\"\"}]}','2020-07-13 21:48:23','2020-07-13 21:48:23','25958ba0-5f4a-48fc-9dee-0064db99f702'),
 	(64,NULL,'Target','target','superTableBlockType:e8d6be24-fbdf-4f6d-b4e3-2e2b658248e6','Upload or select your file',0,'site',NULL,'craft\\fields\\Assets','{\"allowSelfRelations\":\"\",\"allowedKinds\":[\"compressed\",\"excel\",\"pdf\",\"powerpoint\",\"text\",\"word\"],\"defaultUploadLocationSource\":\"volume:dbb9d34a-ed00-430b-a6cd-e61927f7b2d5\",\"defaultUploadLocationSubpath\":\"\",\"limit\":\"1\",\"localizeRelations\":false,\"restrictFiles\":\"1\",\"selectionLabel\":\"Add a resource\",\"showUnpermittedFiles\":true,\"showUnpermittedVolumes\":false,\"singleUploadLocationSource\":\"volume:5c642d7e-b16b-4836-9575-668d75d242e5\",\"singleUploadLocationSubpath\":\"\",\"source\":null,\"sources\":[\"volume:b011a3f9-88a2-4819-aad0-ca04487dfac8\"],\"targetSiteId\":null,\"useSingleFolder\":true,\"validateRelatedElements\":\"\",\"viewMode\":\"list\"}','2020-07-13 21:48:23','2020-07-13 21:52:48','ec91bde6-778d-4030-89fe-45614d871e81'),
 	(65,NULL,'Label','label','superTableBlockType:e8d6be24-fbdf-4f6d-b4e3-2e2b658248e6','Enter your label for the resource file',1,'none',NULL,'craft\\fields\\PlainText','{\"byteLimit\":null,\"charLimit\":null,\"code\":\"\",\"columnType\":null,\"initialRows\":\"4\",\"multiline\":\"\",\"placeholder\":\"\"}','2020-07-13 21:48:23','2020-07-13 21:50:29','fbaa4c75-7616-42ca-adea-7615c9b91e38');
@@ -1182,7 +1171,7 @@ LOCK TABLES `info` WRITE;
 
 INSERT INTO `info` (`id`, `version`, `schemaVersion`, `maintenance`, `configMap`, `fieldVersion`, `dateCreated`, `dateUpdated`, `uid`)
 VALUES
-	(1,'3.5.0-beta.3','3.5.2',0,'{\"dateModified\":\"@config/project.yaml\",\"email\":\"@config/project.yaml\",\"fieldGroups\":\"@config/project.yaml\",\"fields\":\"@config/project.yaml\",\"globalSets\":\"@config/project.yaml\",\"matrixBlockTypes\":\"@config/project.yaml\",\"navigation\":\"@config/project.yaml\",\"plugins\":\"@config/project.yaml\",\"sections\":\"@config/project.yaml\",\"siteGroups\":\"@config/project.yaml\",\"sites\":\"@config/project.yaml\",\"spoonBlockTypes\":\"@config/project.yaml\",\"superTableBlockTypes\":\"@config/project.yaml\",\"system\":\"@config/project.yaml\",\"users\":\"@config/project.yaml\",\"volumes\":\"@config/project.yaml\",\"categoryGroups\":\"@config/project.yaml\"}','evvqgnlomzen','2020-06-03 15:54:07','2020-07-13 21:52:49','c8953b7a-9a69-461e-9700-4f9e698b4bbd');
+	(1,'3.5.0-beta.3','3.5.2',0,'{\"categoryGroups\":\"@config/project.yaml\",\"dateModified\":\"@config/project.yaml\",\"email\":\"@config/project.yaml\",\"fieldGroups\":\"@config/project.yaml\",\"fields\":\"@config/project.yaml\",\"globalSets\":\"@config/project.yaml\",\"matrixBlockTypes\":\"@config/project.yaml\",\"navigation\":\"@config/project.yaml\",\"plugins\":\"@config/project.yaml\",\"sections\":\"@config/project.yaml\",\"siteGroups\":\"@config/project.yaml\",\"sites\":\"@config/project.yaml\",\"spoonBlockTypes\":\"@config/project.yaml\",\"superTableBlockTypes\":\"@config/project.yaml\",\"system\":\"@config/project.yaml\",\"users\":\"@config/project.yaml\",\"volumes\":\"@config/project.yaml\"}','vlfrgsocodfa','2020-06-03 15:54:07','2020-07-22 18:40:15','c8953b7a-9a69-461e-9700-4f9e698b4bbd');
 
 /*!40000 ALTER TABLE `info` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -1252,9 +1241,6 @@ LOCK TABLES `matrixblocks` WRITE;
 
 INSERT INTO `matrixblocks` (`id`, `ownerId`, `fieldId`, `typeId`, `sortOrder`, `deletedWithOwner`, `dateCreated`, `dateUpdated`, `uid`)
 VALUES
-	(7,6,4,1,1,0,'2020-06-29 15:58:36','2020-06-29 15:58:36','5decc9e1-6ef3-41dc-8eed-418ef997c34f'),
-	(8,6,4,1,1,NULL,'2020-06-29 15:58:43','2020-06-29 15:58:43','e709a36a-b399-4a69-8ed4-c9b978eeaa95'),
-	(9,6,4,3,2,NULL,'2020-06-29 15:58:43','2020-06-29 15:58:43','bbd77073-3576-42d3-9943-8bec5ca0a462'),
 	(14,12,4,2,1,NULL,'2020-07-01 09:03:04','2020-07-01 09:03:04','3e708068-c6b7-45e2-b7bb-18e5669d24e6'),
 	(16,15,4,2,1,NULL,'2020-07-01 09:03:04','2020-07-01 09:03:04','d1216a7e-488e-4deb-86f3-d9f3e8e468da'),
 	(21,20,4,2,1,NULL,'2020-07-01 09:08:18','2020-07-01 09:08:18','9aba7fce-46fb-4cfa-928c-7f424e0f8ab9'),
@@ -1354,7 +1340,8 @@ VALUES
 	(11,26,2,'2020-07-01 09:10:11','2020-07-01 09:10:11','cfd42271-f769-4a77-894f-348dfbb87f4e',NULL,NULL,'<p>Contact C</p>',NULL,NULL,NULL,NULL,NULL,NULL),
 	(12,27,2,'2020-07-01 09:10:18','2020-07-01 09:10:18','0ac892df-a3ce-4a0e-b649-c8b5ee3a86a0',NULL,NULL,'<p>Contact Content</p>',NULL,NULL,NULL,NULL,NULL,NULL),
 	(14,30,2,'2020-07-01 09:10:23','2020-07-01 09:10:23','8d641715-9a91-4ac4-ae99-a4db6950f033',NULL,NULL,'<p>Contact Content</p>',NULL,NULL,NULL,NULL,NULL,NULL),
-	(15,32,2,'2020-07-01 09:10:23','2020-07-01 09:10:23','7cc87532-afed-44ce-a581-cd70934454a4',NULL,NULL,'<p>Contact Content</p>',NULL,NULL,NULL,NULL,NULL,NULL);
+	(15,32,2,'2020-07-01 09:10:23','2020-07-01 09:10:23','7cc87532-afed-44ce-a581-cd70934454a4',NULL,NULL,'<p>Contact Content</p>',NULL,NULL,NULL,NULL,NULL,NULL),
+	(16,39,2,'2020-07-22 18:38:29','2020-07-22 18:38:29','06e996e2-3f77-4689-b001-20b1db5a6666',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 
 /*!40000 ALTER TABLE `matrixcontent_contentbuilder` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -1758,27 +1745,27 @@ LOCK TABLES `plugins` WRITE;
 
 INSERT INTO `plugins` (`id`, `handle`, `version`, `schemaVersion`, `licenseKeyStatus`, `licensedEdition`, `installDate`, `dateCreated`, `dateUpdated`, `uid`)
 VALUES
-	(1,'aws-s3','1.2.8','1.2','unknown',NULL,'2020-06-03 17:29:06','2020-06-03 17:29:06','2020-07-13 21:18:18','e7a25f97-e6c6-4c88-982f-2c53dfadc061'),
-	(2,'fastcgi-cache-bust','1.0.9','1.0.0','unknown',NULL,'2020-06-03 17:29:06','2020-06-03 17:29:06','2020-07-13 21:18:18','76ab2217-f3ad-46d1-9861-a4141160dd67'),
-	(3,'feed-me','4.2.3','2.1.2','unknown',NULL,'2020-06-03 17:29:06','2020-06-03 17:29:06','2020-07-13 21:18:18','cc6e476a-e4ae-4f2d-aa33-96cf23e64bb6'),
-	(4,'image-optimize','1.6.14','1.0.0','invalid',NULL,'2020-06-03 17:29:06','2020-06-03 17:29:06','2020-07-13 21:18:18','6b9a8f2f-c21f-4455-8445-fd1f88e6e651'),
-	(5,'minify','1.2.10','1.0.0','unknown',NULL,'2020-06-03 17:29:07','2020-06-03 17:29:07','2020-07-13 21:18:18','f90892e9-67a5-4e30-8479-026ec17a881c'),
-	(6,'mailgun','1.4.3','1.0.0','unknown',NULL,'2020-06-03 17:29:07','2020-06-03 17:29:07','2020-07-13 21:18:18','a6f81e66-59c5-475d-9880-b9f5885ee126'),
-	(7,'redactor','2.6.1','2.3.0','unknown',NULL,'2020-06-03 17:29:07','2020-06-03 17:29:07','2020-07-13 21:18:18','3feb520e-58d2-4a98-8e0b-21160d7fda1d'),
-	(8,'retour','3.1.40','3.0.9','invalid',NULL,'2020-06-03 17:29:07','2020-06-03 17:29:07','2020-07-13 21:18:18','99ada9be-cbe7-49c6-8176-b1e3f5c58e0e'),
-	(9,'seomatic','3.3.10','3.0.9','invalid',NULL,'2020-06-03 17:29:07','2020-06-03 17:29:07','2020-07-13 21:18:18','dc8072cd-5037-4bff-a6f1-82649bcaa003'),
-	(10,'twigpack','1.2.3','1.0.0','unknown',NULL,'2020-06-03 17:29:08','2020-06-03 17:29:08','2020-07-13 21:18:18','8a87e082-6d91-4cf0-afe3-f4e694327d58'),
-	(11,'typogrify','1.1.18','1.0.0','unknown',NULL,'2020-06-03 17:29:08','2020-06-03 17:29:08','2020-07-13 21:18:18','996f1b25-4fa7-4351-aaa5-42883dcda503'),
-	(12,'webperf','1.0.18','1.0.1','invalid',NULL,'2020-06-03 17:29:08','2020-06-03 17:29:08','2020-07-13 21:18:18','c3808de6-4817-4eff-a80f-c198b77a04b7'),
-	(13,'notifications','1.1.3','1.0.0','unknown',NULL,'2020-06-03 17:32:30','2020-06-03 17:32:30','2020-07-13 21:18:18','200f861c-6c16-45ec-9b1b-1afc1405ecad'),
-	(14,'password-policy','1.0.6','1.0.0','unknown',NULL,'2020-06-03 17:32:35','2020-06-03 17:32:35','2020-07-13 21:18:18','354170bf-181f-41e1-8c97-4c500e2907dd'),
-	(15,'position-fieldtype','1.0.16','1.0.0','unknown',NULL,'2020-06-03 17:32:38','2020-06-03 17:32:38','2020-07-13 21:18:18','5cbc98b2-36bd-4362-b6be-913860bfe571'),
-	(16,'spoon','3.5.2','3.5.0','invalid',NULL,'2020-06-03 17:32:41','2020-06-03 17:32:41','2020-07-13 21:18:18','625751ec-385a-454f-aed5-331222bc4dfe'),
-	(17,'width-fieldtype','1.0.7','1.0.0','unknown',NULL,'2020-06-03 17:32:45','2020-06-03 17:32:45','2020-07-13 21:18:18','1b0e1157-330c-46b6-a65d-c1b5333e5d85'),
-	(18,'eager-beaver','1.0.4','1.0.0','unknown',NULL,'2020-06-24 08:57:37','2020-06-24 08:57:37','2020-07-13 21:18:18','d643af87-22a8-415f-b751-a93a34fcc7ce'),
-	(20,'typedlinkfield','2.0.0-beta.9','2.0.0','unknown',NULL,'2020-06-24 09:21:11','2020-06-24 09:21:11','2020-07-13 21:18:18','55cedef8-552e-4981-beb2-146ff64c2d89'),
-	(21,'navigation','1.3.21','1.0.17','invalid',NULL,'2020-07-01 08:08:51','2020-07-01 08:08:51','2020-07-13 21:18:18','b9a30535-9bda-4b5d-9b03-31a6d71d7ca6'),
-	(22,'super-table','2.5.1','2.2.1','unknown',NULL,'2020-07-01 08:32:55','2020-07-01 08:32:55','2020-07-13 21:18:18','6f5da9db-fd5d-4753-a1c0-56272ef57e34');
+	(1,'aws-s3','1.2.8','1.2','unknown',NULL,'2020-06-03 17:29:06','2020-06-03 17:29:06','2020-07-22 18:26:17','e7a25f97-e6c6-4c88-982f-2c53dfadc061'),
+	(2,'fastcgi-cache-bust','1.0.9','1.0.0','unknown',NULL,'2020-06-03 17:29:06','2020-06-03 17:29:06','2020-07-22 18:26:17','76ab2217-f3ad-46d1-9861-a4141160dd67'),
+	(3,'feed-me','4.2.3','2.1.2','unknown',NULL,'2020-06-03 17:29:06','2020-06-03 17:29:06','2020-07-22 18:26:17','cc6e476a-e4ae-4f2d-aa33-96cf23e64bb6'),
+	(4,'image-optimize','1.6.14','1.0.0','invalid',NULL,'2020-06-03 17:29:06','2020-06-03 17:29:06','2020-07-22 18:26:17','6b9a8f2f-c21f-4455-8445-fd1f88e6e651'),
+	(5,'minify','1.2.10','1.0.0','unknown',NULL,'2020-06-03 17:29:07','2020-06-03 17:29:07','2020-07-22 18:26:17','f90892e9-67a5-4e30-8479-026ec17a881c'),
+	(6,'mailgun','1.4.3','1.0.0','unknown',NULL,'2020-06-03 17:29:07','2020-06-03 17:29:07','2020-07-22 18:26:17','a6f81e66-59c5-475d-9880-b9f5885ee126'),
+	(7,'redactor','2.6.1','2.3.0','unknown',NULL,'2020-06-03 17:29:07','2020-06-03 17:29:07','2020-07-22 18:26:17','3feb520e-58d2-4a98-8e0b-21160d7fda1d'),
+	(8,'retour','3.1.40','3.0.9','invalid',NULL,'2020-06-03 17:29:07','2020-06-03 17:29:07','2020-07-22 18:26:17','99ada9be-cbe7-49c6-8176-b1e3f5c58e0e'),
+	(9,'seomatic','3.3.11','3.0.9','invalid',NULL,'2020-06-03 17:29:07','2020-06-03 17:29:07','2020-07-22 18:26:17','dc8072cd-5037-4bff-a6f1-82649bcaa003'),
+	(10,'twigpack','1.2.3','1.0.0','unknown',NULL,'2020-06-03 17:29:08','2020-06-03 17:29:08','2020-07-22 18:26:17','8a87e082-6d91-4cf0-afe3-f4e694327d58'),
+	(11,'typogrify','1.1.18','1.0.0','unknown',NULL,'2020-06-03 17:29:08','2020-06-03 17:29:08','2020-07-22 18:26:17','996f1b25-4fa7-4351-aaa5-42883dcda503'),
+	(12,'webperf','1.0.18','1.0.1','invalid',NULL,'2020-06-03 17:29:08','2020-06-03 17:29:08','2020-07-22 18:26:17','c3808de6-4817-4eff-a80f-c198b77a04b7'),
+	(13,'notifications','1.1.3','1.0.0','unknown',NULL,'2020-06-03 17:32:30','2020-06-03 17:32:30','2020-07-22 18:26:17','200f861c-6c16-45ec-9b1b-1afc1405ecad'),
+	(14,'password-policy','1.0.6','1.0.0','unknown',NULL,'2020-06-03 17:32:35','2020-06-03 17:32:35','2020-07-22 18:26:17','354170bf-181f-41e1-8c97-4c500e2907dd'),
+	(15,'position-fieldtype','1.0.16','1.0.0','unknown',NULL,'2020-06-03 17:32:38','2020-06-03 17:32:38','2020-07-22 18:26:17','5cbc98b2-36bd-4362-b6be-913860bfe571'),
+	(16,'spoon','3.5.2','3.5.0','invalid',NULL,'2020-06-03 17:32:41','2020-06-03 17:32:41','2020-07-22 18:26:17','625751ec-385a-454f-aed5-331222bc4dfe'),
+	(17,'width-fieldtype','1.0.7','1.0.0','unknown',NULL,'2020-06-03 17:32:45','2020-06-03 17:32:45','2020-07-22 18:26:17','1b0e1157-330c-46b6-a65d-c1b5333e5d85'),
+	(18,'eager-beaver','1.0.4','1.0.0','unknown',NULL,'2020-06-24 08:57:37','2020-06-24 08:57:37','2020-07-22 18:26:17','d643af87-22a8-415f-b751-a93a34fcc7ce'),
+	(20,'typedlinkfield','2.0.0-beta.9','2.0.0','unknown',NULL,'2020-06-24 09:21:11','2020-06-24 09:21:11','2020-07-22 18:26:17','55cedef8-552e-4981-beb2-146ff64c2d89'),
+	(21,'navigation','1.3.21','1.0.17','invalid',NULL,'2020-07-01 08:08:51','2020-07-01 08:08:51','2020-07-22 18:26:17','b9a30535-9bda-4b5d-9b03-31a6d71d7ca6'),
+	(22,'super-table','2.5.1','2.2.1','unknown',NULL,'2020-07-01 08:32:55','2020-07-01 08:32:55','2020-07-22 18:26:17','6f5da9db-fd5d-4753-a1c0-56272ef57e34');
 
 /*!40000 ALTER TABLE `plugins` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -1822,7 +1809,7 @@ VALUES
 	('categoryGroups.f326369d-c220-40d9-92e9-7b7b7811d8e5.siteSettings.5da841b1-ca0d-46ff-8bb1-04d6c889ac54.uriFormat','\"news-categories/{slug}\"'),
 	('categoryGroups.f326369d-c220-40d9-92e9-7b7b7811d8e5.structure.maxLevels','null'),
 	('categoryGroups.f326369d-c220-40d9-92e9-7b7b7811d8e5.structure.uid','\"de27943a-dea2-419d-90cd-fbdfcf88bc6a\"'),
-	('dateModified','1594677166'),
+	('dateModified','1595443209'),
 	('email.fromEmail','\"$SYSTEM_EMAIL\"'),
 	('email.fromName','\"$SENDER_NAME\"'),
 	('email.replyToEmail','\"$REPLY_TO\"'),
@@ -3360,11 +3347,11 @@ VALUES
 	('matrixBlockTypes.e2c376a5-8341-40da-993a-68704f00171e.fields.2c244265-381c-45ad-b439-7845b814e5ee.searchable','false'),
 	('matrixBlockTypes.e2c376a5-8341-40da-993a-68704f00171e.fields.2c244265-381c-45ad-b439-7845b814e5ee.settings.columns.__assoc__.0.0','\"fbaa4c75-7616-42ca-adea-7615c9b91e38\"'),
 	('matrixBlockTypes.e2c376a5-8341-40da-993a-68704f00171e.fields.2c244265-381c-45ad-b439-7845b814e5ee.settings.columns.__assoc__.0.1.__assoc__.0.0','\"width\"'),
-	('matrixBlockTypes.e2c376a5-8341-40da-993a-68704f00171e.fields.2c244265-381c-45ad-b439-7845b814e5ee.settings.columns.__assoc__.0.1.__assoc__.0.1','\"\"'),
-	('matrixBlockTypes.e2c376a5-8341-40da-993a-68704f00171e.fields.2c244265-381c-45ad-b439-7845b814e5ee.settings.columns.__assoc__.1.0','\"ec91bde6-778d-4030-89fe-45614d871e81\"'),
+	('matrixBlockTypes.e2c376a5-8341-40da-993a-68704f00171e.fields.2c244265-381c-45ad-b439-7845b814e5ee.settings.columns.__assoc__.0.1.__assoc__.0.1','\"50%\"'),
+	('matrixBlockTypes.e2c376a5-8341-40da-993a-68704f00171e.fields.2c244265-381c-45ad-b439-7845b814e5ee.settings.columns.__assoc__.1.0','\"25958ba0-5f4a-48fc-9dee-0064db99f702\"'),
 	('matrixBlockTypes.e2c376a5-8341-40da-993a-68704f00171e.fields.2c244265-381c-45ad-b439-7845b814e5ee.settings.columns.__assoc__.1.1.__assoc__.0.0','\"width\"'),
-	('matrixBlockTypes.e2c376a5-8341-40da-993a-68704f00171e.fields.2c244265-381c-45ad-b439-7845b814e5ee.settings.columns.__assoc__.1.1.__assoc__.0.1','\"\"'),
-	('matrixBlockTypes.e2c376a5-8341-40da-993a-68704f00171e.fields.2c244265-381c-45ad-b439-7845b814e5ee.settings.columns.__assoc__.2.0','\"25958ba0-5f4a-48fc-9dee-0064db99f702\"'),
+	('matrixBlockTypes.e2c376a5-8341-40da-993a-68704f00171e.fields.2c244265-381c-45ad-b439-7845b814e5ee.settings.columns.__assoc__.1.1.__assoc__.0.1','\"20%\"'),
+	('matrixBlockTypes.e2c376a5-8341-40da-993a-68704f00171e.fields.2c244265-381c-45ad-b439-7845b814e5ee.settings.columns.__assoc__.2.0','\"ec91bde6-778d-4030-89fe-45614d871e81\"'),
 	('matrixBlockTypes.e2c376a5-8341-40da-993a-68704f00171e.fields.2c244265-381c-45ad-b439-7845b814e5ee.settings.columns.__assoc__.2.1.__assoc__.0.0','\"width\"'),
 	('matrixBlockTypes.e2c376a5-8341-40da-993a-68704f00171e.fields.2c244265-381c-45ad-b439-7845b814e5ee.settings.columns.__assoc__.2.1.__assoc__.0.1','\"\"'),
 	('matrixBlockTypes.e2c376a5-8341-40da-993a-68704f00171e.fields.2c244265-381c-45ad-b439-7845b814e5ee.settings.contentTable','\"{{%stc_7_resources}}\"'),
@@ -3478,10 +3465,61 @@ VALUES
 	('plugins.retour.enabled','true'),
 	('plugins.retour.licenseKey','null'),
 	('plugins.retour.schemaVersion','\"3.0.9\"'),
+	('plugins.retour.settings.additionalHeaders','\"\"'),
+	('plugins.retour.settings.alwaysStripQueryString','true'),
+	('plugins.retour.settings.automaticallyTrimStatistics','\"1\"'),
+	('plugins.retour.settings.createUriChangeRedirects','true'),
+	('plugins.retour.settings.dynamicRedirectDisplayLimit','100'),
+	('plugins.retour.settings.enableApiEndpoint','\"\"'),
+	('plugins.retour.settings.excludePatterns','\"\"'),
+	('plugins.retour.settings.pluginName','\"Redirects\"'),
+	('plugins.retour.settings.preserveQueryString','false'),
+	('plugins.retour.settings.recordRemoteIp','true'),
+	('plugins.retour.settings.refreshIntervalSecs','5'),
+	('plugins.retour.settings.staticRedirectDisplayLimit','100'),
+	('plugins.retour.settings.statisticsRateLimitMs','\"3600000\"'),
+	('plugins.retour.settings.statsDisplayLimit','1000'),
+	('plugins.retour.settings.statsStoredLimit','1000'),
+	('plugins.retour.settings.stripQueryStringFromStats','true'),
+	('plugins.retour.settings.uriChangeRedirectSrcMatch','\"pathonly\"'),
 	('plugins.seomatic.edition','\"standard\"'),
 	('plugins.seomatic.enabled','true'),
 	('plugins.seomatic.licenseKey','null'),
 	('plugins.seomatic.schemaVersion','\"3.0.9\"'),
+	('plugins.seomatic.settings.addHrefLang','true'),
+	('plugins.seomatic.settings.addPaginatedHreflang','true'),
+	('plugins.seomatic.settings.addXDefaultHrefLang','true'),
+	('plugins.seomatic.settings.cpTitlePrefix','\"⚙ \"'),
+	('plugins.seomatic.settings.cspNonce','\"\"'),
+	('plugins.seomatic.settings.cspScriptSrcPolicies.0.__assoc__.0.0','\"policy\"'),
+	('plugins.seomatic.settings.cspScriptSrcPolicies.0.__assoc__.0.1','\"\'self\'\"'),
+	('plugins.seomatic.settings.devModeCpTitlePrefix','\"&#x1f6a7;⚙ \"'),
+	('plugins.seomatic.settings.devModeTitlePrefix','\"&#x1f6a7; \"'),
+	('plugins.seomatic.settings.displayAnalysisSidebar','true'),
+	('plugins.seomatic.settings.displayPreviewSidebar','true'),
+	('plugins.seomatic.settings.enableJsonLdEndpoint','\"\"'),
+	('plugins.seomatic.settings.enableMetaContainerEndpoint','\"\"'),
+	('plugins.seomatic.settings.environment','\"$ENVIRONMENT\"'),
+	('plugins.seomatic.settings.generatorEnabled','true'),
+	('plugins.seomatic.settings.headersEnabled','true'),
+	('plugins.seomatic.settings.lowercaseCanonicalUrl','\"1\"'),
+	('plugins.seomatic.settings.maxDescriptionLength','155'),
+	('plugins.seomatic.settings.maxTitleLength','70'),
+	('plugins.seomatic.settings.metaCacheDuration','\"null\"'),
+	('plugins.seomatic.settings.pluginName','\"SEO\"'),
+	('plugins.seomatic.settings.regenerateSitemapsAutomatically','true'),
+	('plugins.seomatic.settings.renderEnabled','true'),
+	('plugins.seomatic.settings.separatorChar','\"|\"'),
+	('plugins.seomatic.settings.sidebarDisplayPreviewTypes.0','\"google\"'),
+	('plugins.seomatic.settings.sidebarDisplayPreviewTypes.1','\"twitter\"'),
+	('plugins.seomatic.settings.sidebarDisplayPreviewTypes.2','\"facebook\"'),
+	('plugins.seomatic.settings.sidebarDisplayPreviewTypes.3','\"linkedin\"'),
+	('plugins.seomatic.settings.sidebarDisplayPreviewTypes.4','\"slack\"'),
+	('plugins.seomatic.settings.siteGroupsSeparate','\"1\"'),
+	('plugins.seomatic.settings.sitemapsEnabled','true'),
+	('plugins.seomatic.settings.siteUrlOverride','\"\"'),
+	('plugins.seomatic.settings.socialMediaPreviewTarget','true'),
+	('plugins.seomatic.settings.submitSitemaps','true'),
 	('plugins.spoon.edition','\"standard\"'),
 	('plugins.spoon.enabled','true'),
 	('plugins.spoon.schemaVersion','\"3.5.0\"'),
@@ -4004,7 +4042,10 @@ VALUES
 	('superTableBlockTypes.345fb037-87d6-4ac6-bc1d-ca8e22f20593.fields.4d23d076-4a7c-4ad8-969e-ca980aef3815.settings.options.0.__assoc__.1.0','\"value\"'),
 	('superTableBlockTypes.345fb037-87d6-4ac6-bc1d-ca8e22f20593.fields.4d23d076-4a7c-4ad8-969e-ca980aef3815.settings.options.0.__assoc__.1.1','\"twitter\"'),
 	('superTableBlockTypes.345fb037-87d6-4ac6-bc1d-ca8e22f20593.fields.4d23d076-4a7c-4ad8-969e-ca980aef3815.settings.options.0.__assoc__.2.0','\"default\"'),
-	('superTableBlockTypes.345fb037-87d6-4ac6-bc1d-ca8e22f20593.fields.4d23d076-4a7c-4ad8-969e-ca980aef3815.settings.options.0.__assoc__.2.1','\"\"'),
+	('superTableBlockTypes.345fb037-87d6-4ac6-bc1d-ca8e22f20593.fields.4d23d076-4a7c-4ad8-969e-ca980aef3815.settings.options.0.__assoc__.2.1','\"\"');
+
+INSERT INTO `projectconfig` (`path`, `value`)
+VALUES
 	('superTableBlockTypes.345fb037-87d6-4ac6-bc1d-ca8e22f20593.fields.4d23d076-4a7c-4ad8-969e-ca980aef3815.settings.options.1.__assoc__.0.0','\"label\"'),
 	('superTableBlockTypes.345fb037-87d6-4ac6-bc1d-ca8e22f20593.fields.4d23d076-4a7c-4ad8-969e-ca980aef3815.settings.options.1.__assoc__.0.1','\"Facebook\"'),
 	('superTableBlockTypes.345fb037-87d6-4ac6-bc1d-ca8e22f20593.fields.4d23d076-4a7c-4ad8-969e-ca980aef3815.settings.options.1.__assoc__.1.0','\"value\"'),
@@ -4025,10 +4066,7 @@ VALUES
 	('superTableBlockTypes.345fb037-87d6-4ac6-bc1d-ca8e22f20593.fields.4d23d076-4a7c-4ad8-969e-ca980aef3815.settings.options.3.__assoc__.2.1','\"\"'),
 	('superTableBlockTypes.345fb037-87d6-4ac6-bc1d-ca8e22f20593.fields.4d23d076-4a7c-4ad8-969e-ca980aef3815.settings.options.4.__assoc__.0.0','\"label\"'),
 	('superTableBlockTypes.345fb037-87d6-4ac6-bc1d-ca8e22f20593.fields.4d23d076-4a7c-4ad8-969e-ca980aef3815.settings.options.4.__assoc__.0.1','\"Vimeo\"'),
-	('superTableBlockTypes.345fb037-87d6-4ac6-bc1d-ca8e22f20593.fields.4d23d076-4a7c-4ad8-969e-ca980aef3815.settings.options.4.__assoc__.1.0','\"value\"');
-
-INSERT INTO `projectconfig` (`path`, `value`)
-VALUES
+	('superTableBlockTypes.345fb037-87d6-4ac6-bc1d-ca8e22f20593.fields.4d23d076-4a7c-4ad8-969e-ca980aef3815.settings.options.4.__assoc__.1.0','\"value\"'),
 	('superTableBlockTypes.345fb037-87d6-4ac6-bc1d-ca8e22f20593.fields.4d23d076-4a7c-4ad8-969e-ca980aef3815.settings.options.4.__assoc__.1.1','\"vimeo\"'),
 	('superTableBlockTypes.345fb037-87d6-4ac6-bc1d-ca8e22f20593.fields.4d23d076-4a7c-4ad8-969e-ca980aef3815.settings.options.4.__assoc__.2.0','\"default\"'),
 	('superTableBlockTypes.345fb037-87d6-4ac6-bc1d-ca8e22f20593.fields.4d23d076-4a7c-4ad8-969e-ca980aef3815.settings.options.4.__assoc__.2.1','\"\"'),
@@ -4093,9 +4131,9 @@ VALUES
 	('superTableBlockTypes.5080d76b-6045-45f3-bd78-a72dd0067420.fields.f3960fae-d20a-4473-9a73-315dfed31760.type','\"craft\\\\fields\\\\Assets\"'),
 	('superTableBlockTypes.e8d6be24-fbdf-4f6d-b4e3-2e2b658248e6.field','\"2c244265-381c-45ad-b439-7845b814e5ee\"'),
 	('superTableBlockTypes.e8d6be24-fbdf-4f6d-b4e3-2e2b658248e6.fieldLayouts.f7a37c9e-dc1a-4c48-816d-f1ae3a08c08f.tabs.0.fields.25958ba0-5f4a-48fc-9dee-0064db99f702.required','true'),
-	('superTableBlockTypes.e8d6be24-fbdf-4f6d-b4e3-2e2b658248e6.fieldLayouts.f7a37c9e-dc1a-4c48-816d-f1ae3a08c08f.tabs.0.fields.25958ba0-5f4a-48fc-9dee-0064db99f702.sortOrder','3'),
+	('superTableBlockTypes.e8d6be24-fbdf-4f6d-b4e3-2e2b658248e6.fieldLayouts.f7a37c9e-dc1a-4c48-816d-f1ae3a08c08f.tabs.0.fields.25958ba0-5f4a-48fc-9dee-0064db99f702.sortOrder','2'),
 	('superTableBlockTypes.e8d6be24-fbdf-4f6d-b4e3-2e2b658248e6.fieldLayouts.f7a37c9e-dc1a-4c48-816d-f1ae3a08c08f.tabs.0.fields.ec91bde6-778d-4030-89fe-45614d871e81.required','true'),
-	('superTableBlockTypes.e8d6be24-fbdf-4f6d-b4e3-2e2b658248e6.fieldLayouts.f7a37c9e-dc1a-4c48-816d-f1ae3a08c08f.tabs.0.fields.ec91bde6-778d-4030-89fe-45614d871e81.sortOrder','2'),
+	('superTableBlockTypes.e8d6be24-fbdf-4f6d-b4e3-2e2b658248e6.fieldLayouts.f7a37c9e-dc1a-4c48-816d-f1ae3a08c08f.tabs.0.fields.ec91bde6-778d-4030-89fe-45614d871e81.sortOrder','3'),
 	('superTableBlockTypes.e8d6be24-fbdf-4f6d-b4e3-2e2b658248e6.fieldLayouts.f7a37c9e-dc1a-4c48-816d-f1ae3a08c08f.tabs.0.fields.fbaa4c75-7616-42ca-adea-7615c9b91e38.required','true'),
 	('superTableBlockTypes.e8d6be24-fbdf-4f6d-b4e3-2e2b658248e6.fieldLayouts.f7a37c9e-dc1a-4c48-816d-f1ae3a08c08f.tabs.0.fields.fbaa4c75-7616-42ca-adea-7615c9b91e38.sortOrder','1'),
 	('superTableBlockTypes.e8d6be24-fbdf-4f6d-b4e3-2e2b658248e6.fieldLayouts.f7a37c9e-dc1a-4c48-816d-f1ae3a08c08f.tabs.0.name','\"Content\"'),
@@ -4209,7 +4247,7 @@ VALUES
 	('volumes.14e48735-7707-43d5-a6f1-90cc18da80f1.settings.subfolder','\"teasers\"'),
 	('volumes.14e48735-7707-43d5-a6f1-90cc18da80f1.sortOrder','2'),
 	('volumes.14e48735-7707-43d5-a6f1-90cc18da80f1.type','\"craft\\\\awss3\\\\Volume\"'),
-	('volumes.14e48735-7707-43d5-a6f1-90cc18da80f1.url','\"$S3_CLOUDFRONT_URL\"'),
+	('volumes.14e48735-7707-43d5-a6f1-90cc18da80f1.url','\"$CLOUDFRONT_URL\"'),
 	('volumes.17ffd720-73f0-4e0c-9878-ea089fcc6863.fieldLayouts.c1a12ccb-e2da-48c0-91fb-8620810d76de.tabs.0.fields.6962a9b1-b802-4295-82b1-398470a9f54c.required','false'),
 	('volumes.17ffd720-73f0-4e0c-9878-ea089fcc6863.fieldLayouts.c1a12ccb-e2da-48c0-91fb-8620810d76de.tabs.0.fields.6962a9b1-b802-4295-82b1-398470a9f54c.sortOrder','1'),
 	('volumes.17ffd720-73f0-4e0c-9878-ea089fcc6863.fieldLayouts.c1a12ccb-e2da-48c0-91fb-8620810d76de.tabs.0.fields.870c07d7-9341-4f1f-825b-25c76239bc0d.required','false'),
@@ -4240,7 +4278,7 @@ VALUES
 	('volumes.17ffd720-73f0-4e0c-9878-ea089fcc6863.settings.subfolder','\"sliders/\"'),
 	('volumes.17ffd720-73f0-4e0c-9878-ea089fcc6863.sortOrder','3'),
 	('volumes.17ffd720-73f0-4e0c-9878-ea089fcc6863.type','\"craft\\\\awss3\\\\Volume\"'),
-	('volumes.17ffd720-73f0-4e0c-9878-ea089fcc6863.url','\"$S3_CLOUDFRONT_URL\"'),
+	('volumes.17ffd720-73f0-4e0c-9878-ea089fcc6863.url','\"$CLOUDFRONT_URL\"'),
 	('volumes.2cfafcad-5b14-408b-ba81-afd942b8b3cb.fieldLayouts.e8b47e71-94ef-4b05-85a2-f9578c687105.tabs.0.fields.9806bc10-174e-4280-b2a8-c684b99a3139.required','false'),
 	('volumes.2cfafcad-5b14-408b-ba81-afd942b8b3cb.fieldLayouts.e8b47e71-94ef-4b05-85a2-f9578c687105.tabs.0.fields.9806bc10-174e-4280-b2a8-c684b99a3139.sortOrder','1'),
 	('volumes.2cfafcad-5b14-408b-ba81-afd942b8b3cb.fieldLayouts.e8b47e71-94ef-4b05-85a2-f9578c687105.tabs.0.name','\"Image Optimizations\"'),
@@ -4301,7 +4339,7 @@ VALUES
 	('volumes.918b50e1-632c-4e92-a8c5-55eeb7b8571e.settings.subfolder','\"coverphotos/\"'),
 	('volumes.918b50e1-632c-4e92-a8c5-55eeb7b8571e.sortOrder','6'),
 	('volumes.918b50e1-632c-4e92-a8c5-55eeb7b8571e.type','\"craft\\\\awss3\\\\Volume\"'),
-	('volumes.918b50e1-632c-4e92-a8c5-55eeb7b8571e.url','\"$S3_CLOUDFRONT_URL\"'),
+	('volumes.918b50e1-632c-4e92-a8c5-55eeb7b8571e.url','\"$CLOUDFRONT_URL\"'),
 	('volumes.b011a3f9-88a2-4819-aad0-ca04487dfac8.fieldLayouts.e64c00c8-31b0-4afa-b497-4a3f2e0d8011.tabs.0.fields.502c51a1-5b82-4368-90e1-aa68b1d4e479.required','false'),
 	('volumes.b011a3f9-88a2-4819-aad0-ca04487dfac8.fieldLayouts.e64c00c8-31b0-4afa-b497-4a3f2e0d8011.tabs.0.fields.502c51a1-5b82-4368-90e1-aa68b1d4e479.sortOrder','1'),
 	('volumes.b011a3f9-88a2-4819-aad0-ca04487dfac8.fieldLayouts.e64c00c8-31b0-4afa-b497-4a3f2e0d8011.tabs.0.fields.6962a9b1-b802-4295-82b1-398470a9f54c.required','false'),
@@ -4351,7 +4389,7 @@ VALUES
 	('volumes.dbb9d34a-ed00-430b-a6cd-e61927f7b2d5.settings.subfolder','\"content/\"'),
 	('volumes.dbb9d34a-ed00-430b-a6cd-e61927f7b2d5.sortOrder','5'),
 	('volumes.dbb9d34a-ed00-430b-a6cd-e61927f7b2d5.type','\"craft\\\\awss3\\\\Volume\"'),
-	('volumes.dbb9d34a-ed00-430b-a6cd-e61927f7b2d5.url','\"$S3_CLOUDFRONT_URL\"');
+	('volumes.dbb9d34a-ed00-430b-a6cd-e61927f7b2d5.url','\"$CLOUDFRONT_URL\"');
 
 /*!40000 ALTER TABLE `projectconfig` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -4384,21 +4422,6 @@ CREATE TABLE `queue` (
   KEY `queue_channel_fail_timeUpdated_delay_idx` (`channel`,`fail`,`timeUpdated`,`delay`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-LOCK TABLES `queue` WRITE;
-/*!40000 ALTER TABLE `queue` DISABLE KEYS */;
-
-INSERT INTO `queue` (`id`, `channel`, `job`, `description`, `timePushed`, `ttr`, `delay`, `priority`, `dateReserved`, `timeUpdated`, `progress`, `progressLabel`, `attempt`, `fail`, `dateFailed`, `error`)
-VALUES
-	(1,'queue',X'4F3A33343A2263726166745C71756575655C6A6F62735C557064617465536561726368496E646578223A373A7B733A31313A22656C656D656E7454797065223B733A32343A2263726166745C656C656D656E74735C476C6F62616C536574223B733A393A22656C656D656E744964223B693A343B733A363A22736974654964223B693A323B733A31323A226669656C6448616E646C6573223B613A303A7B7D733A31313A226465736372697074696F6E223B4E3B733A33303A220063726166745C71756575655C426173654A6F62005F70726F6772657373223B693A303B733A33353A220063726166745C71756575655C426173654A6F62005F70726F67726573734C6162656C223B4E3B7D','Updating search indexes',1594675368,300,0,1024,NULL,NULL,0,NULL,NULL,0,NULL,NULL),
-	(2,'queue',X'4F3A34313A226C656E7A5C6C696E6B6669656C645C6C697374656E6572735C43616368654C697374656E65724A6F62223A343A7B733A373A226669656C644964223B693A31393B733A31313A226465736372697074696F6E223B733A32363A2243616368652054617267657420656C656D656E74206C696E6B73223B733A33303A220063726166745C71756575655C426173654A6F62005F70726F6772657373223B693A303B733A33353A220063726166745C71756575655C426173654A6F62005F70726F67726573734C6162656C223B4E3B7D','Cache Target element links',1594676898,300,0,1024,NULL,NULL,0,NULL,NULL,0,NULL,NULL),
-	(3,'queue',X'4F3A34313A226C656E7A5C6C696E6B6669656C645C6C697374656E6572735C43616368654C697374656E65724A6F62223A343A7B733A373A226669656C644964223B693A31313B733A31313A226465736372697074696F6E223B733A33323A2243616368652051756F746520536F7572636520656C656D656E74206C696E6B73223B733A33303A220063726166745C71756575655C426173654A6F62005F70726F6772657373223B693A303B733A33353A220063726166745C71756575655C426173654A6F62005F70726F67726573734C6162656C223B4E3B7D','Cache Quote Source element links',1594676900,300,0,1024,NULL,NULL,0,NULL,NULL,0,NULL,NULL),
-	(4,'queue',X'4F3A34313A226C656E7A5C6C696E6B6669656C645C6C697374656E6572735C43616368654C697374656E65724A6F62223A343A7B733A373A226669656C644964223B693A31393B733A31313A226465736372697074696F6E223B733A32363A2243616368652054617267657420656C656D656E74206C696E6B73223B733A33303A220063726166745C71756575655C426173654A6F62005F70726F6772657373223B693A303B733A33353A220063726166745C71756575655C426173654A6F62005F70726F67726573734C6162656C223B4E3B7D','Cache Target element links',1594677024,300,0,1024,NULL,NULL,0,NULL,NULL,0,NULL,NULL),
-	(5,'queue',X'4F3A34313A226C656E7A5C6C696E6B6669656C645C6C697374656E6572735C43616368654C697374656E65724A6F62223A343A7B733A373A226669656C644964223B693A31313B733A31313A226465736372697074696F6E223B733A33323A2243616368652051756F746520536F7572636520656C656D656E74206C696E6B73223B733A33303A220063726166745C71756575655C426173654A6F62005F70726F6772657373223B693A303B733A33353A220063726166745C71756575655C426173654A6F62005F70726F67726573734C6162656C223B4E3B7D','Cache Quote Source element links',1594677025,300,0,1024,NULL,NULL,0,NULL,NULL,0,NULL,NULL),
-	(6,'queue',X'4F3A34313A226C656E7A5C6C696E6B6669656C645C6C697374656E6572735C43616368654C697374656E65724A6F62223A343A7B733A373A226669656C644964223B693A31393B733A31313A226465736372697074696F6E223B733A32363A2243616368652054617267657420656C656D656E74206C696E6B73223B733A33303A220063726166745C71756575655C426173654A6F62005F70726F6772657373223B693A303B733A33353A220063726166745C71756575655C426173654A6F62005F70726F67726573734C6162656C223B4E3B7D','Cache Target element links',1594677164,300,0,1024,NULL,NULL,0,NULL,NULL,0,NULL,NULL),
-	(7,'queue',X'4F3A34313A226C656E7A5C6C696E6B6669656C645C6C697374656E6572735C43616368654C697374656E65724A6F62223A343A7B733A373A226669656C644964223B693A31313B733A31313A226465736372697074696F6E223B733A33323A2243616368652051756F746520536F7572636520656C656D656E74206C696E6B73223B733A33303A220063726166745C71756575655C426173654A6F62005F70726F6772657373223B693A303B733A33353A220063726166745C71756575655C426173654A6F62005F70726F67726573734C6162656C223B4E3B7D','Cache Quote Source element links',1594677166,300,0,1024,NULL,NULL,0,NULL,NULL,0,NULL,NULL);
-
-/*!40000 ALTER TABLE `queue` ENABLE KEYS */;
-UNLOCK TABLES;
 
 
 # Dump of table relations
@@ -4511,6 +4534,8 @@ VALUES
 	('8b988faa','@verbb/navigation/resources/dist'),
 	('8e0bd56d','@lib/garnishjs'),
 	('91690a3a','@lenz/linkfield/assets/field/resources'),
+	('920646bf','@modules/sitemodule/assetbundles/sitemodule/dist'),
+	('927aa326','@nystudio107/retour/assetbundles/retour/dist'),
 	('95613ac4','@lib/garnishjs'),
 	('960397d2','@rias/positionfieldtype/assetbundles/positionfieldtype/dist'),
 	('983f5a96','@app/web/assets/dashboard/dist'),
@@ -4557,6 +4582,7 @@ VALUES
 	('f21ba949','@lenz/linkfield/assets/admin/resources'),
 	('f40fcc9d','@nystudio107/webperf/assetbundles/boomerang/dist/js'),
 	('f66b641d','@lib/xregexp'),
+	('f742f075','@nystudio107/seomatic/assetbundles/seomatic/dist'),
 	('fc072097','@lib/selectize'),
 	('fece6822','@lib/datepicker-i18n');
 
@@ -4927,7 +4953,8 @@ VALUES
 	(12,1,'LjlN5sNkWv_QImZwE8OLNLPtTUjeUJOlbC5tShTCM5Ctw9w0pu7BPmI_FGSlwt-Qs3JHJ3X-ONByiwG8_QUVJ-JqWIcdA8T_i464','2020-07-01 09:05:02','2020-07-01 09:30:29','0335c94e-19ac-4988-abaa-9aa0150c7e32'),
 	(13,1,'AqTs9Yb3mJUiTNxBJgjgyc738K7ktJTW-1isp7aRyhSp958PI5pmkBkdVbOdjpmsZiW0n3iPk2iTVlpRelBdyhZQltZH5kJ687Zm','2020-07-03 10:57:49','2020-07-03 10:57:49','4cefa237-efaf-487c-a791-9ede03a01b00'),
 	(14,1,'33Jug1WtdxA7wKvo_Qvo9bYCdkcGYg3Dmb8ffrjzITXvDxXbMlKKRgYp75uDV-9wUe5L_dQsZMPHDIFpTUVqgIdc_Kdq-pRf1g36','2020-07-03 10:57:52','2020-07-03 11:47:21','766dd4e7-3e0d-4689-8079-3443ae223c19'),
-	(15,1,'GE6d-QlzdJ7rkCfVcqNB8txEUR8QP2oQTAudyUn3vcjg3dBD11lfjvdAeWRP1nR9OAzYbZe6hUKgwjWQ5Eg_tR5YfdLHuY8VG44M','2020-07-13 21:17:56','2020-07-13 21:56:06','159df267-2a31-44f4-8597-41177a2005b0');
+	(15,1,'GE6d-QlzdJ7rkCfVcqNB8txEUR8QP2oQTAudyUn3vcjg3dBD11lfjvdAeWRP1nR9OAzYbZe6hUKgwjWQ5Eg_tR5YfdLHuY8VG44M','2020-07-13 21:17:56','2020-07-13 21:56:06','159df267-2a31-44f4-8597-41177a2005b0'),
+	(16,1,'lrTxLEP33Tgd1jMIuYFrU7VbIdM0AC471KU6p-IC5YFHQCOiH-1nBK4Wx6drXWBbHh6RgYqgI9La7PtBsJwZeTw8TQXw0DHWrJz2','2020-07-22 18:26:01','2020-07-22 18:40:26','03905987-fc31-43d2-97eb-0f8deeab10f0');
 
 /*!40000 ALTER TABLE `sessions` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -5131,6 +5158,15 @@ CREATE TABLE `stc_7_resources` (
   CONSTRAINT `stc_7_resources_siteId_fk` FOREIGN KEY (`siteId`) REFERENCES `sites` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+LOCK TABLES `stc_7_resources` WRITE;
+/*!40000 ALTER TABLE `stc_7_resources` DISABLE KEYS */;
+
+INSERT INTO `stc_7_resources` (`id`, `elementId`, `siteId`, `dateCreated`, `dateUpdated`, `uid`, `field_utilityIcon`, `field_label`)
+VALUES
+	(1,40,2,'2020-07-22 18:38:29','2020-07-22 18:38:29','aa907877-6c5d-4783-a285-fbd36591e6aa','fileIcon',NULL);
+
+/*!40000 ALTER TABLE `stc_7_resources` ENABLE KEYS */;
+UNLOCK TABLES;
 
 
 # Dump of table stc_navigationsettings
@@ -5288,6 +5324,15 @@ CREATE TABLE `supertableblocks` (
   CONSTRAINT `supertableblocks_typeId_fk` FOREIGN KEY (`typeId`) REFERENCES `supertableblocktypes` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+LOCK TABLES `supertableblocks` WRITE;
+/*!40000 ALTER TABLE `supertableblocks` DISABLE KEYS */;
+
+INSERT INTO `supertableblocks` (`id`, `ownerId`, `fieldId`, `typeId`, `sortOrder`, `deletedWithOwner`, `dateCreated`, `dateUpdated`, `uid`)
+VALUES
+	(40,39,62,5,1,1,'2020-07-22 18:38:29','2020-07-22 18:38:29','3e05b713-0976-446b-a0e4-b0a5621a2a69');
+
+/*!40000 ALTER TABLE `supertableblocks` ENABLE KEYS */;
+UNLOCK TABLES;
 
 
 # Dump of table supertableblocktypes
@@ -5635,7 +5680,7 @@ LOCK TABLES `users` WRITE;
 
 INSERT INTO `users` (`id`, `username`, `photoId`, `firstName`, `lastName`, `email`, `password`, `admin`, `locked`, `suspended`, `pending`, `lastLoginDate`, `lastLoginAttemptIp`, `invalidLoginWindowStart`, `invalidLoginCount`, `lastInvalidLoginDate`, `lockoutDate`, `hasDashboard`, `verificationCode`, `verificationCodeIssuedDate`, `unverifiedEmail`, `passwordResetRequired`, `lastPasswordChangeDate`, `dateCreated`, `dateUpdated`, `uid`)
 VALUES
-	(1,'support@percipio.london',NULL,'','','support@percipio.london','$2y$13$RMLEQrcRRa9e3flK5VpW/u/E527y1lWa.fINOVTT/UDnbIcuCiF52',1,0,0,0,'2020-07-13 21:17:56',NULL,NULL,NULL,NULL,NULL,1,NULL,NULL,NULL,0,'2020-07-01 09:04:42','2020-06-03 15:54:07','2020-07-13 21:17:56','86d53cdb-c5a3-4bbe-ad68-42f46444170a');
+	(1,'support@percipio.london',NULL,'','','support@percipio.london','$2y$13$RMLEQrcRRa9e3flK5VpW/u/E527y1lWa.fINOVTT/UDnbIcuCiF52',1,0,0,0,'2020-07-22 18:26:01',NULL,NULL,NULL,NULL,NULL,1,NULL,NULL,NULL,0,'2020-07-01 09:04:42','2020-06-03 15:54:07','2020-07-22 18:26:01','86d53cdb-c5a3-4bbe-ad68-42f46444170a');
 
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -5715,11 +5760,11 @@ LOCK TABLES `volumes` WRITE;
 INSERT INTO `volumes` (`id`, `fieldLayoutId`, `name`, `handle`, `type`, `hasUrls`, `url`, `settings`, `sortOrder`, `dateCreated`, `dateUpdated`, `dateDeleted`, `uid`)
 VALUES
 	(1,NULL,'Branding','branding','craft\\awss3\\Volume',1,'$CLOUDFRONT_URL','{\"addSubfolderToRootUrl\":\"1\",\"autoFocalPoint\":\"\",\"bucket\":\"$S3_BUCKET\",\"bucketSelectionMode\":\"manual\",\"cfDistributionId\":\"$CLOUDFRONT_DISTRIBUTION_ID\",\"cfPrefix\":\"$CLOUDFRONT_PATH_PREFIX\",\"expires\":\"3 months\",\"keyId\":\"$S3_KEY_ID\",\"makeUploadsPublic\":\"1\",\"region\":\"$S3_REGION\",\"secret\":\"$S3_SECRET\",\"storageClass\":\"\",\"subfolder\":\"branding/\"}',1,'2020-06-03 17:29:09','2020-06-29 11:48:55',NULL,'5c642d7e-b16b-4836-9575-668d75d242e5'),
-	(2,11,'Teasers','teasers','craft\\awss3\\Volume',1,'$S3_CLOUDFRONT_URL','{\"addSubfolderToRootUrl\":\"1\",\"autoFocalPoint\":\"\",\"bucket\":\"$S3_BUCKET\",\"bucketSelectionMode\":\"manual\",\"cfDistributionId\":\"$CLOUDFRONT_DISTRIBUTION_ID\",\"cfPrefix\":\"$CLOUDFRONT_PATH_PREFIX\",\"expires\":\"3 months\",\"keyId\":\"$S3_KEY_ID\",\"makeUploadsPublic\":\"1\",\"region\":\"$S3_REGION\",\"secret\":\"$S3_SECRET\",\"storageClass\":\"\",\"subfolder\":\"teasers\"}',2,'2020-06-24 11:55:23','2020-06-30 15:19:55',NULL,'14e48735-7707-43d5-a6f1-90cc18da80f1'),
-	(3,10,'Sliders','sliders','craft\\awss3\\Volume',1,'$S3_CLOUDFRONT_URL','{\"addSubfolderToRootUrl\":\"1\",\"autoFocalPoint\":\"\",\"bucket\":\"$S3_BUCKET\",\"bucketSelectionMode\":\"manual\",\"cfDistributionId\":\"$CLOUDFRONT_DISTRIBUTION_ID\",\"cfPrefix\":\"$CLOUDFRONT_PATH_PREFIX\",\"expires\":\"3 months\",\"keyId\":\"$S3_KEY_ID\",\"makeUploadsPublic\":\"1\",\"region\":\"$S3_REGION\",\"secret\":\"$S3_SECRET\",\"storageClass\":\"\",\"subfolder\":\"sliders/\"}',3,'2020-06-29 11:55:59','2020-06-30 15:19:55',NULL,'17ffd720-73f0-4e0c-9878-ea089fcc6863'),
+	(2,11,'Teasers','teasers','craft\\awss3\\Volume',1,'$CLOUDFRONT_URL','{\"addSubfolderToRootUrl\":\"1\",\"autoFocalPoint\":\"\",\"bucket\":\"$S3_BUCKET\",\"bucketSelectionMode\":\"manual\",\"cfDistributionId\":\"$CLOUDFRONT_DISTRIBUTION_ID\",\"cfPrefix\":\"$CLOUDFRONT_PATH_PREFIX\",\"expires\":\"3 months\",\"keyId\":\"$S3_KEY_ID\",\"makeUploadsPublic\":\"1\",\"region\":\"$S3_REGION\",\"secret\":\"$S3_SECRET\",\"storageClass\":\"\",\"subfolder\":\"teasers\"}',2,'2020-06-24 11:55:23','2020-07-22 18:25:31',NULL,'14e48735-7707-43d5-a6f1-90cc18da80f1'),
+	(3,10,'Sliders','sliders','craft\\awss3\\Volume',1,'$CLOUDFRONT_URL','{\"addSubfolderToRootUrl\":\"1\",\"autoFocalPoint\":\"\",\"bucket\":\"$S3_BUCKET\",\"bucketSelectionMode\":\"manual\",\"cfDistributionId\":\"$CLOUDFRONT_DISTRIBUTION_ID\",\"cfPrefix\":\"$CLOUDFRONT_PATH_PREFIX\",\"expires\":\"3 months\",\"keyId\":\"$S3_KEY_ID\",\"makeUploadsPublic\":\"1\",\"region\":\"$S3_REGION\",\"secret\":\"$S3_SECRET\",\"storageClass\":\"\",\"subfolder\":\"sliders/\"}',3,'2020-06-29 11:55:59','2020-07-22 18:25:31',NULL,'17ffd720-73f0-4e0c-9878-ea089fcc6863'),
 	(4,12,'Documents','documents','craft\\awss3\\Volume',1,'$CLOUDFRONT_URL','{\"addSubfolderToRootUrl\":\"1\",\"autoFocalPoint\":\"\",\"bucket\":\"$S3_BUCKET\",\"bucketSelectionMode\":\"manual\",\"cfDistributionId\":\"$CLOUDFRONT_DISTRIBUTION_ID\",\"cfPrefix\":\"$CLOUDFRONT_PATH_PREFIX\",\"expires\":\"3 months\",\"keyId\":\"$S3_KEY_ID\",\"makeUploadsPublic\":\"1\",\"region\":\"$S3_REGION\",\"secret\":\"$S3_SECRET\",\"storageClass\":\"\",\"subfolder\":\"documents/\"}',4,'2020-06-29 12:58:40','2020-06-29 13:26:58',NULL,'b011a3f9-88a2-4819-aad0-ca04487dfac8'),
-	(5,19,'Articles','article','craft\\awss3\\Volume',1,'$S3_CLOUDFRONT_URL','{\"addSubfolderToRootUrl\":\"1\",\"autoFocalPoint\":\"\",\"bucket\":\"$S3_BUCKET\",\"bucketSelectionMode\":\"manual\",\"cfDistributionId\":\"$CLOUDFRONT_DISTRIBUTION_ID\",\"cfPrefix\":\"$CLOUDFRONT_PATH_PREFIX\",\"expires\":\"3 months\",\"keyId\":\"$S3_KEY_ID\",\"makeUploadsPublic\":\"1\",\"region\":\"$S3_REGION\",\"secret\":\"$S3_SECRET\",\"storageClass\":\"\",\"subfolder\":\"content/\"}',5,'2020-06-29 13:01:12','2020-06-30 15:19:55',NULL,'dbb9d34a-ed00-430b-a6cd-e61927f7b2d5'),
-	(6,NULL,'Cover Photos','covers','craft\\awss3\\Volume',1,'$S3_CLOUDFRONT_URL','{\"addSubfolderToRootUrl\":\"1\",\"autoFocalPoint\":\"\",\"bucket\":\"$S3_BUCKET\",\"bucketSelectionMode\":\"manual\",\"cfDistributionId\":\"$CLOUDFRONT_DISTRIBUTION_ID\",\"cfPrefix\":\"$CLOUDFRONT_PATH_PREFIX\",\"expires\":\"3 months\",\"keyId\":\"$S3_KEY_ID\",\"makeUploadsPublic\":\"1\",\"region\":\"$S3_REGION\",\"secret\":\"$S3_SECRET\",\"storageClass\":\"\",\"subfolder\":\"coverphotos/\"}',6,'2020-06-29 13:24:15','2020-07-01 09:19:19',NULL,'918b50e1-632c-4e92-a8c5-55eeb7b8571e'),
+	(5,19,'Articles','article','craft\\awss3\\Volume',1,'$CLOUDFRONT_URL','{\"addSubfolderToRootUrl\":\"1\",\"autoFocalPoint\":\"\",\"bucket\":\"$S3_BUCKET\",\"bucketSelectionMode\":\"manual\",\"cfDistributionId\":\"$CLOUDFRONT_DISTRIBUTION_ID\",\"cfPrefix\":\"$CLOUDFRONT_PATH_PREFIX\",\"expires\":\"3 months\",\"keyId\":\"$S3_KEY_ID\",\"makeUploadsPublic\":\"1\",\"region\":\"$S3_REGION\",\"secret\":\"$S3_SECRET\",\"storageClass\":\"\",\"subfolder\":\"content/\"}',5,'2020-06-29 13:01:12','2020-07-22 18:25:31',NULL,'dbb9d34a-ed00-430b-a6cd-e61927f7b2d5'),
+	(6,NULL,'Cover Photos','covers','craft\\awss3\\Volume',1,'$CLOUDFRONT_URL','{\"addSubfolderToRootUrl\":\"1\",\"autoFocalPoint\":\"\",\"bucket\":\"$S3_BUCKET\",\"bucketSelectionMode\":\"manual\",\"cfDistributionId\":\"$CLOUDFRONT_DISTRIBUTION_ID\",\"cfPrefix\":\"$CLOUDFRONT_PATH_PREFIX\",\"expires\":\"3 months\",\"keyId\":\"$S3_KEY_ID\",\"makeUploadsPublic\":\"1\",\"region\":\"$S3_REGION\",\"secret\":\"$S3_SECRET\",\"storageClass\":\"\",\"subfolder\":\"coverphotos/\"}',6,'2020-06-29 13:24:15','2020-07-22 18:25:31',NULL,'918b50e1-632c-4e92-a8c5-55eeb7b8571e'),
 	(7,23,'Profile Images','profiles','craft\\awss3\\Volume',1,'$CLOUDFRONT_URL','{\"addSubfolderToRootUrl\":\"1\",\"autoFocalPoint\":\"\",\"bucket\":\"$S3_BUCKET\",\"bucketSelectionMode\":\"manual\",\"cfDistributionId\":\"$CLOUDFRONT_DISTRIBUTION_ID\",\"cfPrefix\":\"$CLOUDFRONT_PATH_PREFIX\",\"expires\":\"3 months\",\"keyId\":\"$S3_KEY_ID\",\"makeUploadsPublic\":\"1\",\"region\":\"$S3_REGION\",\"secret\":\"$S3_SECRET\",\"storageClass\":\"\",\"subfolder\":\"profile-images/\"}',7,'2020-07-01 09:17:16','2020-07-01 09:19:40',NULL,'2cfafcad-5b14-408b-ba81-afd942b8b3cb');
 
 /*!40000 ALTER TABLE `volumes` ENABLE KEYS */;
