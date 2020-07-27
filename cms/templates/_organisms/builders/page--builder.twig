@@ -2,6 +2,7 @@
     'highlightCards:cards',
     'sectionHeader:buttons',
     'singleImage:image',
+    'galleryImages:images'
     'slide:image',
     ]) 
 %}
@@ -41,7 +42,7 @@
                     content: block,
                 } -%}
 
-            {%- case "galleryImage" -%}
+            {%- case "galleryImages" -%}
             
                 {%- include '_molecules/images/image--gallery' ignore missing with {
                     content: block,
