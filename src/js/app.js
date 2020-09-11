@@ -8,17 +8,21 @@ import { createLoadingState } from './utils/wait.js';
 // importing and setting up Font Awesome
 import { dom, library } from '@fortawesome/fontawesome-svg-core';
 import {
-    // faCloudDownloadAlt as farCloudDownloadAlt,
-    // faExternalLinkAlt as farExternalLinkAlt,
+    // 
     faFilePdf as farFilePdf,
-    faFileExcel as farFileSpreadsheet,
+    faFileExcel as farFileExcel,
     faFileWord as farFileWord,
     faFilePowerpoint as farFilePowerPoint,
     faFileArchive as farFileArchive,
-} from '@fortawesome/free-regular-svg-icons';
+} from '';
+
+import {
+    faCloudDownloadAlt as fasCloudDownloadAlt,
+    faExternalLinkAlt as fasExternalLinkAlt,
+} from '';
 
 // load font-awesome libraries
-library.add(farFilePdf, farFileSpreadsheet, farFileWord, farFilePowerPoint, farFileArchive);
+library.add(farFilePdf, farFileExcel, farFileWord, farFilePowerPoint, farFileArchive, fasCloudDownloadAlt, fasExternalLinkAlt);
 
 // convert i tags to SVG
 dom.watch({

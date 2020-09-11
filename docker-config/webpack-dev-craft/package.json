@@ -59,6 +59,7 @@
         "@fortawesome/fontawesome-free": "^5.14.0",
         "@fortawesome/fontawesome-svg-core": "^1.2.30",
         "@fortawesome/free-regular-svg-icons": "^5.14.0",
+        "@fortawesome/free-solid-svg-icons": "^5.14.0",
         "@babel/preset-env": "^7.1.0",
         "@babel/register": "^7.0.0",
         "@babel/runtime": "^7.0.0",
