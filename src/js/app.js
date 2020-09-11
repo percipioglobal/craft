@@ -8,7 +8,6 @@ import { createLoadingState } from './utils/wait.js';
 // importing and setting up Font Awesome
 import { dom, library } from '@fortawesome/fontawesome-svg-core';
 import {
-    // 
     faFilePdf as farFilePdf,
     faFileExcel as farFileExcel,
     faFileWord as farFileWord,
