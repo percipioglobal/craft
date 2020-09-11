@@ -3444,7 +3444,7 @@ superTableBlockTypes:
                   - Download
                 -
                   - value
-                  - 'far fa-download-cloud-alt'
+                  - 'fas fa-download-cloud-alt'
                 -
                   - default
                   - ''

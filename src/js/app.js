@@ -7,18 +7,21 @@ import { createLoadingState } from './utils/wait.js';
 
 // importing and setting up Font Awesome
 import { dom, library } from '@fortawesome/fontawesome-svg-core';
-import { 
-    faCloudDownloadAlt as farCloudDownloadAlt,
-    faExternalLinkAlt as farExternalLinkAlt,
+import {
     faFilePdf as farFilePdf,
-    faFileSpreadsheet as farFileSpreadsheet,
+    faFileExcel as farFileExcel,
     faFileWord as farFileWord,
     faFilePowerpoint as farFilePowerPoint,
-    faFileArchive as farFileArchive, 
-} from '@fortawesome/pro-regular-svg-icons';
+    faFileArchive as farFileArchive,
+} from '@fortawesome/free-regular-svg-icons';
+
+import {
+    faCloudDownloadAlt as fasCloudDownloadAlt,
+    faExternalLinkAlt as fasExternalLinkAlt,
+} from '@fortawesome/free-solid-svg-icons';
 
 // load font-awesome libraries
-library.add(farCloudDownloadAlt, farExternalLinkAlt, farFilePdf, farFileSpreadsheet, farFileWord, farFilePowerPoint, farFileArchive);
+library.add(farFilePdf, farFileExcel, farFileWord, farFilePowerPoint, farFileArchive, fasCloudDownloadAlt, fasExternalLinkAlt);
 
 // convert i tags to SVG
 dom.watch({
@@ -43,13 +46,13 @@ const main = async () => {
         store,
         wait,
         data: () => ({
-            
+
         }),
         components: {
-            
+
         },
         methods: {
-            
+
         }
     });
 
