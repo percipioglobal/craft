@@ -1,5 +1,19 @@
 # percipioglobal/craft Change Log
 
+## 1.3.0 - Unreleased
+
+### Added
+- Added in the Tailwind Typography plugin with a few standard settings
+
+### Changed
+- Changed the Font Awesome Pro packages to the Free alternatives and updated all of their values
+
+### Fixed
+- Fixed wrong template handle for errors to `error`
+- Fixed AMP template layouts path
+- Fixed wrong paths into `errors templates`
+- Fixed `baseUrl` wrong alias
+
 ## 1.2.2 - 22-07-2020
 
 ### Added
