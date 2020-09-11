@@ -677,7 +677,7 @@ LOCK TABLES `entrytypes` WRITE;
 
 INSERT INTO `entrytypes` (`id`, `sectionId`, `fieldLayoutId`, `name`, `handle`, `hasTitleField`, `titleLabel`, `titleFormat`, `sortOrder`, `dateCreated`, `dateUpdated`, `dateDeleted`, `uid`)
 VALUES
-	(1,1,NULL,'Errors','errors',1,'Title',NULL,1,'2020-06-03 17:29:08','2020-06-03 17:29:08',NULL,'faceb3ed-6771-453c-9c2a-aa330847f6db'),
+	(1,1,NULL,'Errors','error',1,'Title',NULL,1,'2020-06-03 17:29:08','2020-06-03 17:29:08',NULL,'faceb3ed-6771-453c-9c2a-aa330847f6db'),
 	(2,2,NULL,'Homepage','homepage',0,NULL,'{section.name|raw}',1,'2020-06-03 17:29:09','2020-06-03 17:29:09',NULL,'fb3a8f31-d1cc-4c13-903b-a501f7e51f54'),
 	(3,3,8,'News','news',1,'Title','',1,'2020-06-24 11:35:08','2020-06-24 11:58:36',NULL,'2d711019-2880-4c21-8217-ff88e953e2bb'),
 	(4,4,17,'Landings Page','landingsPage',1,'Title','',1,'2020-06-24 12:10:24','2020-06-29 15:01:49',NULL,'13d83534-d33c-4c02-8e9a-8214c5419071'),
@@ -3618,13 +3618,13 @@ VALUES
 	('sections.9de367ab-77b8-47bb-bbc3-63e79a202c3e.siteSettings.5da841b1-ca0d-46ff-8bb1-04d6c889ac54.uriFormat','\"news/{slug}\"'),
 	('sections.9de367ab-77b8-47bb-bbc3-63e79a202c3e.type','\"channel\"'),
 	('sections.a72bfe0c-3389-4f9f-8ec1-ab318ec10b29.enableVersioning','false'),
-	('sections.a72bfe0c-3389-4f9f-8ec1-ab318ec10b29.entryTypes.faceb3ed-6771-453c-9c2a-aa330847f6db.handle','\"errors\"'),
+	('sections.a72bfe0c-3389-4f9f-8ec1-ab318ec10b29.entryTypes.faceb3ed-6771-453c-9c2a-aa330847f6db.handle','\"error\"'),
 	('sections.a72bfe0c-3389-4f9f-8ec1-ab318ec10b29.entryTypes.faceb3ed-6771-453c-9c2a-aa330847f6db.hasTitleField','true'),
 	('sections.a72bfe0c-3389-4f9f-8ec1-ab318ec10b29.entryTypes.faceb3ed-6771-453c-9c2a-aa330847f6db.name','\"Errors\"'),
 	('sections.a72bfe0c-3389-4f9f-8ec1-ab318ec10b29.entryTypes.faceb3ed-6771-453c-9c2a-aa330847f6db.sortOrder','1'),
 	('sections.a72bfe0c-3389-4f9f-8ec1-ab318ec10b29.entryTypes.faceb3ed-6771-453c-9c2a-aa330847f6db.titleFormat','null'),
 	('sections.a72bfe0c-3389-4f9f-8ec1-ab318ec10b29.entryTypes.faceb3ed-6771-453c-9c2a-aa330847f6db.titleLabel','\"Title\"'),
-	('sections.a72bfe0c-3389-4f9f-8ec1-ab318ec10b29.handle','\"errors\"'),
+	('sections.a72bfe0c-3389-4f9f-8ec1-ab318ec10b29.handle','\"error\"'),
 	('sections.a72bfe0c-3389-4f9f-8ec1-ab318ec10b29.name','\"Errors\"'),
 	('sections.a72bfe0c-3389-4f9f-8ec1-ab318ec10b29.propagationMethod','\"all\"'),
 	('sections.a72bfe0c-3389-4f9f-8ec1-ab318ec10b29.siteSettings.5da841b1-ca0d-46ff-8bb1-04d6c889ac54.enabledByDefault','true'),
@@ -4809,7 +4809,7 @@ LOCK TABLES `sections` WRITE;
 
 INSERT INTO `sections` (`id`, `structureId`, `name`, `handle`, `type`, `enableVersioning`, `propagationMethod`, `previewTargets`, `dateCreated`, `dateUpdated`, `dateDeleted`, `uid`)
 VALUES
-	(1,NULL,'Errors','errors','channel',0,'all',NULL,'2020-06-03 17:29:08','2020-06-03 17:29:08',NULL,'a72bfe0c-3389-4f9f-8ec1-ab318ec10b29'),
+	(1,NULL,'Errors','error','channel',0,'all',NULL,'2020-06-03 17:29:08','2020-06-03 17:29:08',NULL,'a72bfe0c-3389-4f9f-8ec1-ab318ec10b29'),
 	(2,NULL,'Homepage','homepage','single',0,'all',NULL,'2020-06-03 17:29:08','2020-06-03 17:29:08',NULL,'54e60257-f31a-44aa-960e-bbd364197e28'),
 	(3,NULL,'News','news','channel',1,'all','[{\"label\":\"Primary entry page\",\"urlFormat\":\"{url}\",\"refresh\":\"1\"}]','2020-06-24 11:35:07','2020-06-24 11:35:07',NULL,'9de367ab-77b8-47bb-bbc3-63e79a202c3e'),
 	(4,5,'Pages','pages','structure',1,'all','[{\"label\":\"Primary entry page\",\"urlFormat\":\"{url}\",\"refresh\":\"1\"}]','2020-06-24 12:10:23','2020-07-01 09:06:54',NULL,'ef841ba4-7bcd-4ef5-9c12-96377bf7fba2'),

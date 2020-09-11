@@ -2607,13 +2607,13 @@ sections:
     enableVersioning: false
     entryTypes:
       faceb3ed-6771-453c-9c2a-aa330847f6db:
-        handle: errors
+        handle: error
         hasTitleField: true
         name: Errors
         sortOrder: 1
         titleFormat: null
         titleLabel: Title
-    handle: errors
+    handle: error
     name: Errors
     propagationMethod: all
     siteSettings:
