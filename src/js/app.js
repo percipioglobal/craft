@@ -14,12 +14,12 @@ import {
     faFileWord as farFileWord,
     faFilePowerpoint as farFilePowerPoint,
     faFileArchive as farFileArchive,
-} from '';
+} from '@fortawesome/free-regular-svg-icons';
 
 import {
     faCloudDownloadAlt as fasCloudDownloadAlt,
     faExternalLinkAlt as fasExternalLinkAlt,
-} from '';
+} from '@fortawesome/free-solid-svg-icons';
 
 // load font-awesome libraries
 library.add(farFilePdf, farFileExcel, farFileWord, farFilePowerPoint, farFileArchive, fasCloudDownloadAlt, fasExternalLinkAlt);
