@@ -36,7 +36,6 @@
         "nystudio107/craft-seomatic": "^3.2.0",
         "nystudio107/craft-webperf": "^1.0.0",
         "nystudio107/craft-twigpack": "^1.2.0",
-        "nystudio107/dotenvy": "^1.1.0",
         "percipioglobal/craft-notifications": "^1.1.1",
         "percipioglobal/craft-password-policy": "^1.0.0",
         "putyourlightson/craft-blitz-recommendations": "^1.1",
@@ -55,19 +54,24 @@
         "sort-packages": true,
         "optimize-autoloader": true,
         "platform": {
-            "php": "7.2"
+            "php": "7.3"
         }
     },
     "scripts": {
         "craft-update": [
+            "@php craft install/check && @php craft clear-caches/all || return 0",
             "@php craft install/check && @php craft migrate/all || return 0",
-            "@php craft install/check && @php craft project-config/sync || return 0",
-            "@php craft install/check && @php craft clear-caches/all || return 0"
+            "@php craft install/check && @php craft project-config/sync || return 0"
         ],
         "post-root-package-install": [
-            "@php -r \"file_exists('.env') || copy('example.env', '.env');\""
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
         ],
-        "post-update-cmd": "@craft-update",
-        "post-install-cmd": "@craft-update"
+        "post-create-project-cmd": [
+            "@php craft setup/welcome"
+        ],
+        "pre-update-cmd": "@pre-craft-update",
+        "pre-install-cmd": "@pre-craft-update",
+        "post-update-cmd": "@post-craft-update",
+        "post-install-cmd": "@post-craft-update"
     }
 }

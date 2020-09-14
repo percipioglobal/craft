@@ -8,27 +8,28 @@
  * @see \craft\config\GeneralConfig
  */
 
+use craft\helpers\App;
+
 return [
     // Craft config settings from .env variables
     'aliases' => [
-        '@assetsUrl' => getenv('ASSETS_URL'),
-        '@cloudfrontUrl' => getenv('CLOUDFRONT_URL'),
-        '@web' => getenv('SITE_URL'),
-        '@webroot' => getenv('WEB_ROOT_PATH'),
+        '@assetsUrl' => App::env('ASSETS_URL'),
+        '@cloudfrontUrl' => App::env('CLOUDFRONT_URL'),
+        '@web' => App::env('SITE_URL'),
+        '@webroot' => App::env('WEB_ROOT_PATH'),
     ],
 
-    'allowUpdates' => (bool)getenv('ALLOW_UPDATES'),
-    'allowAdminChanges' => (bool)getenv('ALLOW_ADMIN_CHANGES'),
-    'backupOnUpdate' => (bool)getenv('BACKUP_ON_UPDATE'),
-    'devMode' => (bool)getenv('DEV_MODE'),
-    'enableGraphQlCaching' => (bool)getenv('ENABLE_GRAPHQL_CACHING'),
-    'enableTemplateCaching' => (bool)getenv('ENABLE_TEMPLATE_CACHING'),
-    'isSystemLive' => (bool)getenv('IS_SYSTEM_LIVE'),
-    'maxRevisions' => (bool)getenv('MAX_REVISIONS'),
-    'resourceBasePath' => getenv('WEB_ROOT_PATH').'/cpresources',
-    'runQueueAutomatically' => (bool)getenv('RUN_QUEUE_AUTOMATICALLY'),
-    'securityKey' => getenv('SECURITY_KEY'),
-    'softDeleteDuration' => (int)getenv('SOFT_DELETE_DURATION'),
+    'allowUpdates' => (bool)App::env('ALLOW_UPDATES'),
+    'allowAdminChanges' => (bool)App::env('ALLOW_ADMIN_CHANGES'),
+    'backupOnUpdate' => (bool)App::env('BACKUP_ON_UPDATE'),
+    'devMode' => (bool)App::env('DEV_MODE'),
+    'enableGraphQlCaching' => (bool)App::env('ENABLE_GRAPHQL_CACHING'),
+    'enableTemplateCaching' => (bool)App::env('ENABLE_TEMPLATE_CACHING'),
+    'maxRevisions' => (bool)App::env('MAX_REVISIONS'),
+    'resourceBasePath' => App::env('WEB_ROOT_PATH').'/cpresources',
+    'runQueueAutomatically' => (bool)App::env('RUN_QUEUE_AUTOMATICALLY'),
+    'securityKey' => App::env('SECURITY_KEY'),
+    'softDeleteDuration' => (int)App::env('SOFT_DELETE_DURATION'),
 
     // Craft config settings from constants
     'cacheDuration' => false,

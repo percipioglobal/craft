@@ -6,7 +6,6 @@ const MODERN_CONFIG = 'modern';
 const git = require('git-rev-sync');
 const glob = require('glob-all');
 const merge = require('webpack-merge');
-const moment = require('moment');
 const path = require('path');
 const webpack = require('webpack');
 
@@ -45,6 +44,7 @@ class TailwindExtractor {
 
 // Configure file banner
 const configureBanner = () => {
+    const timestamp = new Date();
     try {
         return {
             banner: [
@@ -52,9 +52,9 @@ const configureBanner = () => {
                 ' * @project        ' + settings.name,
                 ' * @name           ' + '[filebase]',
                 ' * @author         ' + pkg.author.name,
-                ' * @build          ' + moment().format('llll') + ' ET',
+                ' * @build          ' + timestamp.toString(),
                 ' * @release        ' + git.long() + ' [' + git.branch() + ']',
-                ' * @copyright      Copyright (c) ' + moment().format('YYYY') + ' ' + settings.copyright,
+                ' * @copyright      Copyright (c) ' + timestamp.getFullYear() + ' ' + settings.copyright,
                 ' *',
                 ' */',
                 ''
@@ -68,8 +68,8 @@ const configureBanner = () => {
                 ' * @project        ' + settings.name,
                 ' * @name           ' + '[filebase]',
                 ' * @author         ' + pkg.author.name,
-                ' * @build          ' + moment().format('llll') + ' ET',
-                ' * @copyright      Copyright (c) ' + moment().format('YYYY') + ' ' + settings.copyright,
+                ' * @build          ' + timestamp.toString(),
+                ' * @copyright      Copyright (c) ' + timestamp.getFullYear() + ' ' + settings.copyright,
                 ' *',
                 ' */',
                 ''
@@ -167,7 +167,7 @@ const configureImageLoader = (buildType) => {
                 {
                     loader: 'file-loader',
                     options: {
-                        name: 'img/[name].[hash].[ext]'
+                        name: 'img/[name].[contenthash].[ext]'
                     }
                 }
             ]
@@ -180,7 +180,7 @@ const configureImageLoader = (buildType) => {
                 {
                     loader: 'file-loader',
                     options: {
-                        name: 'img/[name].[hash].[ext]'
+                        name: 'img/[name].[contenthash].[ext]'
                     }
                 },
                 {
@@ -264,6 +264,7 @@ const configurePostcssLoader = (buildType) => {
                 {
                     loader: 'css-loader',
                     options: {
+                        url: false,
                         importLoaders: 2,
                         sourceMap: true
                     }
@@ -352,7 +353,7 @@ module.exports = [
         common.legacyConfig,
         {
             output: {
-                filename: path.join('./js', '[name]-legacy.[chunkhash].js'),
+                filename: path.join('./js', '[name]-legacy.[contenthash].js'),
             },
             mode: 'production',
             devtool: 'source-map',
@@ -366,7 +367,7 @@ module.exports = [
             plugins: [
                 new MiniCssExtractPlugin({
                     path: path.resolve(__dirname, settings.paths.dist.base),
-                    filename: path.join('./css', '[name].[chunkhash].css'),
+                    filename: path.join('./css', '[name].[contenthash].css'),
                 }),
                 new PurgecssPlugin(
                     configurePurgeCss()
@@ -402,7 +403,7 @@ module.exports = [
         common.modernConfig,
         {
             output: {
-                filename: path.join('./js', '[name].[chunkhash].js'),
+                filename: path.join('./js', '[name].[contenthash].js'),
             },
             mode: 'production',
             devtool: 'source-map',

@@ -2,6 +2,7 @@ FROM node:11
 
 # Install packages for headless chrome
 # https://medium.com/@ssmak/how-to-fix-puppetteer-error-while-loading-shared-libraries-libx11-xcb-so-1-c1918b75acc3
+
 RUN apt-get update \
     && \
     # apt Debian packages
@@ -44,4 +45,10 @@ RUN apt-get update \
         libnss3 \
         lsb-release \
         wget \
-        xdg-utils
+        xdg-utils \
+    # Clean apt repo caches that don't need to be part of the image
+    && \
+    apt-get clean \
+    && \
+    # Clean out directories that don't need to be part of the image
+    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*

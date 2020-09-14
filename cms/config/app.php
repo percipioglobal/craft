@@ -17,6 +17,8 @@
  * your config/ folder, alongside this one.
  */
 
+use craft\helpers\App;
+
 return [
     'modules' => [
         'site-module' => [
@@ -25,22 +27,26 @@ return [
     ],
     'bootstrap' => ['site-module'],
     'components' => [
-        'deprecator' => [
-            'throwExceptions' => YII_DEBUG,
-        ],
-        'redis' => [
-            'class' => yii\redis\Connection::class,
-            'hostname' => getenv('REDIS_HOSTNAME'),
-            'port' => getenv('REDIS_PORT'),
-            'database' => getenv('REDIS_DEFAULT_DB'),
-        ],
         'cache' => [
             'class' => yii\redis\Cache::class,
             'redis' => [
-                'hostname' => getenv('REDIS_HOSTNAME'),
-                'port' => getenv('REDIS_PORT'),
-                'database' => getenv('REDIS_CRAFT_DB'),
+                'hostname' => App::env('REDIS_HOSTNAME'),
+                'port' => App::env('REDIS_PORT'),
+                'database' => App::env('REDIS_CRAFT_DB'),
             ],
+        ],
+        'deprecator' => [
+            'throwExceptions' => App::env('DEV_MODE'),
+        ],
+        'queue' => [
+            'class' => craft\queue\Queue::class,
+            'ttr' => 10 * 60,
+        ],
+        'redis' => [
+            'class' => yii\redis\Connection::class,
+            'hostname' => App::env('REDIS_HOSTNAME'),
+            'port' => App::env('REDIS_PORT'),
+            'database' => App::env('REDIS_DEFAULT_DB'),
         ],
     ],
 ];
