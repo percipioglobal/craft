@@ -1,0 +1,19 @@
+{# 
+    ### OPTIONS ###
+    ---------------
+
+    words: (INT) -- give the maximum amount of words that can be displayed in the title, default value = 60;
+    content: (STR) -- the actual content as a string
+
+#}
+
+{% set values = {
+    content: options.content ??? '',
+    words: options.words ??? 60,
+} %}
+
+{# Render Title #}
+
+{% spaceless %}
+    {{- values.content | escape | typogrify(true) | wordLimit(values.words) -}}
+{% endspaceless %}

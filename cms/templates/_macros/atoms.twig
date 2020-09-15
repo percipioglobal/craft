@@ -1,9 +1,31 @@
+{#
+    # Atom
+    # @package   percipioglobal\craft
+    # @since     1.0.0
+    # @author    Percipio Global Ltd.
+    # @link      https://percipio.london
+    # @copyright Copyright (c) 2020 Percipio Global Ltd.
+    # @license   MIT
+    # @license   https://opensource.org/licenses/MIT MIT Licensed
+    #}
+
+{% macro atom(type, atom, options, prefix = '') %}
+    {% spaceless %}
+        {% include '_atoms/' ~ type ~ 's/' ~ prefix ~ type ~ '--' ~ atom with {
+            options: options,
+        } %}
+    {% endspaceless %}
+{% endmacro %}
+
 {# Date #}
 {% macro formatDate(date) %}
     {% spaceless %}
         {{- date | date('d.m.Y') -}}
     {% endspaceless %}
 {% endmacro %}
+
+
+{# -- to migrate -- #}
 
 {# Logos #}
 {% macro logo(type = 'logo') %}
@@ -79,20 +101,6 @@
             alt="{{- alt -}}"
             class="lazyload">
     </figure>
-{% endmacro %}
-
-{# Render Text #}
-{% macro text(content) %}
-    {% spaceless %}
-        {{ content | raw | typogrify }}
-    {% endspaceless %}
-{% endmacro %}
-
-{# Render Title #}
-{% macro title(content, words = 60) %}
-    {% spaceless %}
-        {{- content | escape | typogrify(true) | truncateOnWord(words) | raw -}}
-    {% endspaceless %}
 {% endmacro %}
 
 {# figcaption #}
