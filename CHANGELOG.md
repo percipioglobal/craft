@@ -1,6 +1,6 @@
 # percipioglobal/craft Change Log
 
-## 1.3.0 - Unreleased
+## 1.3.0 - 15-09-2020
 
 ### Added
 - Added in the Tailwind Typography plugin with a few standard settings
@@ -15,6 +15,9 @@
 - Added a queue component with a longer ttr
 - Added a queue docker container to run queue jobs via ./craft queue/listen
 - Added image optimizers to the php-dev-craft Docker image
+- Added Blitz Recommendations
+- Added atom router in macros that handles atoms through type/atom and options object.
+- Added Page Router and AMP Page router based on entry types.
 
 ### Changed
 - Changed the Font Awesome Pro packages to the Free alternatives and updated all of their values
@@ -29,6 +32,7 @@
 - Updated the css-loader config to ignore embedded URLs
 - Changed project-config/sync -> project-config/apply
 - Updated the buddy.yaml with the latest Prep Craft script
+- Created seperate files for atoms
 
 ### Fixed
 - Fixed wrong template handle for errors to `error`
