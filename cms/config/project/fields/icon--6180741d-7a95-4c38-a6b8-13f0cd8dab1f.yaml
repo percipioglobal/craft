@@ -1,0 +1,28 @@
+contentColumnType: string
+fieldGroup: 11cffc84-a18e-49e3-9923-8229743b2a28
+handle: icon
+instructions: ''
+name: 'Logo Icon'
+searchable: true
+settings:
+  allowSelfRelations: ''
+  allowedKinds: null
+  defaultUploadLocationSource: 'volume:5c642d7e-b16b-4836-9575-668d75d242e5'
+  defaultUploadLocationSubpath: ''
+  limit: '1'
+  localizeRelations: false
+  restrictFiles: ''
+  selectionLabel: ''
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  singleUploadLocationSource: 'volume:5c642d7e-b16b-4836-9575-668d75d242e5'
+  singleUploadLocationSubpath: ''
+  source: null
+  sources: '*'
+  targetSiteId: null
+  useSingleFolder: false
+  validateRelatedElements: ''
+  viewMode: list
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Assets

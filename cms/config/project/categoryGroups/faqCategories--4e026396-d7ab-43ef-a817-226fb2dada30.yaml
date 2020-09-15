@@ -1,0 +1,20 @@
+fieldLayouts:
+  389fb0f7-f97f-40f4-a48a-7b674a5cf9ff:
+    tabs:
+      -
+        fields:
+          648e7555-63ed-4228-a6b7-7811c865a7af:
+            required: false
+            sortOrder: 1
+        name: Content
+        sortOrder: 1
+handle: faqCategories
+name: 'FAQ Categories'
+siteSettings:
+  5da841b1-ca0d-46ff-8bb1-04d6c889ac54:
+    hasUrls: true
+    template: ''
+    uriFormat: 'faq-categories/{slug}'
+structure:
+  maxLevels: null
+  uid: 7befe233-fc23-43dd-beb1-5a2c4cb4b812

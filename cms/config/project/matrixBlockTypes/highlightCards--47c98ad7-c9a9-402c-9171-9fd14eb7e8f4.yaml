@@ -1,0 +1,37 @@
+field: e691301b-7484-40be-a3d4-c3bc590de959
+fieldLayouts:
+  088a9888-4f4a-4c24-9756-170fa037079f:
+    tabs:
+      -
+        fields:
+          6c47b7b0-71d0-4acb-92d5-6d8624f711fb:
+            required: true
+            sortOrder: 1
+        name: Content
+        sortOrder: 1
+fields:
+  6c47b7b0-71d0-4acb-92d5-6d8624f711fb:
+    contentColumnType: string
+    fieldGroup: null
+    handle: cards
+    instructions: 'Select entries to be displayed on the page'
+    name: Cards
+    searchable: false
+    settings:
+      allowSelfRelations: ''
+      limit: '2'
+      localizeRelations: false
+      selectionLabel: 'Add a card to highlight'
+      source: null
+      sources:
+        - 'section:9de367ab-77b8-47bb-bbc3-63e79a202c3e'
+        - 'section:ef841ba4-7bcd-4ef5-9c12-96377bf7fba2'
+      targetSiteId: null
+      validateRelatedElements: ''
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+handle: highlightCards
+name: 'Highlight Cards'
+sortOrder: 8

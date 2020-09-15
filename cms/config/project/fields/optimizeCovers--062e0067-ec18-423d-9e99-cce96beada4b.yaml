@@ -1,0 +1,116 @@
+contentColumnType: text
+fieldGroup: 1dd95078-7c8a-4ef7-8a16-e33a5341dadb
+handle: optimizeCovers
+instructions: ''
+name: 'Optimize Covers'
+searchable: false
+settings:
+  displayDominantColorPalette: '1'
+  displayLazyLoadPlaceholderImages: '1'
+  displayOptimizedImageVariants: '1'
+  variants:
+    -
+      __assoc__:
+        -
+          - width
+          - '1200'
+        -
+          - useAspectRatio
+          - '1'
+        -
+          - aspectRatioX
+          - '5'
+        -
+          - aspectRatioY
+          - '8'
+        -
+          - retinaSizes
+          -
+            - '1'
+            - '2'
+        -
+          - quality
+          - '82'
+        -
+          - format
+          - jpg
+    -
+      __assoc__:
+        -
+          - width
+          - '992'
+        -
+          - useAspectRatio
+          - '1'
+        -
+          - aspectRatioX
+          - '5'
+        -
+          - aspectRatioY
+          - '8'
+        -
+          - retinaSizes
+          -
+            - '1'
+            - '2'
+        -
+          - quality
+          - '82'
+        -
+          - format
+          - jpg
+    -
+      __assoc__:
+        -
+          - width
+          - '768'
+        -
+          - useAspectRatio
+          - '1'
+        -
+          - aspectRatioX
+          - '5'
+        -
+          - aspectRatioY
+          - '8'
+        -
+          - retinaSizes
+          -
+            - '1'
+            - '2'
+            - '3'
+        -
+          - quality
+          - '60'
+        -
+          - format
+          - jpg
+    -
+      __assoc__:
+        -
+          - width
+          - '576'
+        -
+          - useAspectRatio
+          - '1'
+        -
+          - aspectRatioX
+          - '5'
+        -
+          - aspectRatioY
+          - '8'
+        -
+          - retinaSizes
+          -
+            - '1'
+            - '2'
+            - '3'
+        -
+          - quality
+          - '60'
+        -
+          - format
+          - jpg
+translationKeyFormat: null
+translationMethod: none
+type: nystudio107\imageoptimize\fields\OptimizedImages

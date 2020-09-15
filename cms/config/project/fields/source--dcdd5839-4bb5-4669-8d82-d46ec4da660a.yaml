@@ -1,0 +1,147 @@
+contentColumnType: string
+fieldGroup: 0314e405-e731-462f-9381-2cfb6ac91134
+handle: source
+instructions: 'Add the source of the image'
+name: 'Image Source'
+searchable: true
+settings:
+  allowCustomText: true
+  allowTarget: false
+  autoNoReferrer: false
+  defaultLinkName: url
+  defaultText: ''
+  enableAllLinkTypes: false
+  enableAriaLabel: false
+  enableElementCache: false
+  enableTitle: false
+  typeSettings:
+    __assoc__:
+      -
+        - asset
+        -
+          __assoc__:
+            -
+              - enabled
+              - false
+            -
+              - allowCustomQuery
+              - false
+            -
+              - allowCrossSiteLink
+              - false
+            -
+              - sources
+              - '*'
+      -
+        - category
+        -
+          __assoc__:
+            -
+              - enabled
+              - false
+            -
+              - allowCustomQuery
+              - false
+            -
+              - allowCrossSiteLink
+              - false
+            -
+              - sources
+              - '*'
+      -
+        - entry
+        -
+          __assoc__:
+            -
+              - enabled
+              - false
+            -
+              - allowCustomQuery
+              - false
+            -
+              - allowCrossSiteLink
+              - false
+            -
+              - sources
+              - '*'
+      -
+        - site
+        -
+          __assoc__:
+            -
+              - enabled
+              - false
+            -
+              - sites
+              - '*'
+      -
+        - user
+        -
+          __assoc__:
+            -
+              - enabled
+              - false
+            -
+              - allowCustomQuery
+              - false
+            -
+              - allowCrossSiteLink
+              - false
+            -
+              - sources
+              - '*'
+      -
+        - custom
+        -
+          __assoc__:
+            -
+              - enabled
+              - false
+            -
+              - allowAliases
+              - false
+            -
+              - disableValidation
+              - false
+      -
+        - email
+        -
+          __assoc__:
+            -
+              - enabled
+              - false
+            -
+              - allowAliases
+              - false
+            -
+              - disableValidation
+              - false
+      -
+        - tel
+        -
+          __assoc__:
+            -
+              - enabled
+              - false
+            -
+              - allowAliases
+              - false
+            -
+              - disableValidation
+              - false
+      -
+        - url
+        -
+          __assoc__:
+            -
+              - enabled
+              - true
+            -
+              - allowAliases
+              - false
+            -
+              - disableValidation
+              - false
+translationKeyFormat: null
+translationMethod: none
+type: lenz\linkfield\fields\LinkField

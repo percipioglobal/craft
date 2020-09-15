@@ -1,0 +1,69 @@
+contentColumnType: text
+fieldGroup: 1dd95078-7c8a-4ef7-8a16-e33a5341dadb
+handle: optimizeTeasers
+instructions: ''
+name: 'Optimize Teasers'
+searchable: false
+settings:
+  displayDominantColorPalette: '1'
+  displayLazyLoadPlaceholderImages: '1'
+  displayOptimizedImageVariants: '1'
+  ignoreFilesOfType:
+    - image/svg
+    - image/gif
+  variants:
+    -
+      __assoc__:
+        -
+          - width
+          - '1024'
+        -
+          - useAspectRatio
+          - '1'
+        -
+          - aspectRatioX
+          - '4'
+        -
+          - aspectRatioY
+          - '3'
+        -
+          - retinaSizes
+          -
+            - '1'
+            - '2'
+            - '3'
+        -
+          - quality
+          - '82'
+        -
+          - format
+          - ''
+    -
+      __assoc__:
+        -
+          - width
+          - '640'
+        -
+          - useAspectRatio
+          - '1'
+        -
+          - aspectRatioX
+          - '4'
+        -
+          - aspectRatioY
+          - '3'
+        -
+          - retinaSizes
+          -
+            - '1'
+            - '2'
+            - '3'
+        -
+          - quality
+          - '82'
+        -
+          - format
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: nystudio107\imageoptimize\fields\OptimizedImages

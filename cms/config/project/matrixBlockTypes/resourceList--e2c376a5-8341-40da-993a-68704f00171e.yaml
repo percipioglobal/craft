@@ -1,0 +1,56 @@
+field: e691301b-7484-40be-a3d4-c3bc590de959
+fieldLayouts:
+  9078b0df-811f-4c76-b011-5d7d75e21f16:
+    tabs:
+      -
+        fields:
+          2c244265-381c-45ad-b439-7845b814e5ee:
+            required: true
+            sortOrder: 1
+        name: Content
+        sortOrder: 1
+fields:
+  2c244265-381c-45ad-b439-7845b814e5ee:
+    contentColumnType: string
+    fieldGroup: null
+    handle: resources
+    instructions: ''
+    name: Resources
+    searchable: false
+    settings:
+      columns:
+        __assoc__:
+          -
+            - fbaa4c75-7616-42ca-adea-7615c9b91e38
+            -
+              __assoc__:
+                -
+                  - width
+                  - 50%
+          -
+            - 25958ba0-5f4a-48fc-9dee-0064db99f702
+            -
+              __assoc__:
+                -
+                  - width
+                  - 20%
+          -
+            - ec91bde6-778d-4030-89fe-45614d871e81
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+      contentTable: '{{%stc_7_resources}}'
+      fieldLayout: table
+      maxRows: ''
+      minRows: '1'
+      propagationMethod: all
+      selectionLabel: 'Add a resource'
+      staticField: ''
+    translationKeyFormat: null
+    translationMethod: site
+    type: verbb\supertable\fields\SuperTableField
+handle: resourceList
+name: 'Resource List'
+sortOrder: 7

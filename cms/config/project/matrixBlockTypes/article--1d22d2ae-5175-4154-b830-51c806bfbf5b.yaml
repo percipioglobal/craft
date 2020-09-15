@@ -1,0 +1,38 @@
+field: e691301b-7484-40be-a3d4-c3bc590de959
+fieldLayouts:
+  ce1931f4-9280-4231-b357-ea8750a88735:
+    tabs:
+      -
+        fields:
+          5053ff27-8e1b-49ea-85c6-c2a1dece3b8e:
+            required: true
+            sortOrder: 1
+        name: Content
+        sortOrder: 1
+fields:
+  5053ff27-8e1b-49ea-85c6-c2a1dece3b8e:
+    contentColumnType: text
+    fieldGroup: null
+    handle: article
+    instructions: 'Enter one more paragraphs to create your textual content.'
+    name: 'Body Content'
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes: ''
+      cleanupHtml: true
+      columnType: text
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: Content.json
+      removeEmptyTags: '1'
+      removeInlineStyles: '1'
+      removeNbsp: '1'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+handle: article
+name: 'Article Body'
+sortOrder: 2

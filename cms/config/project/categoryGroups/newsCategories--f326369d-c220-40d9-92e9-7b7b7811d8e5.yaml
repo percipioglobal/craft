@@ -1,0 +1,20 @@
+fieldLayouts:
+  df947a14-e514-4e9d-92c2-eaceb851818e:
+    tabs:
+      -
+        fields:
+          648e7555-63ed-4228-a6b7-7811c865a7af:
+            required: false
+            sortOrder: 1
+        name: Content
+        sortOrder: 1
+handle: newsCategories
+name: 'News Categories'
+siteSettings:
+  5da841b1-ca0d-46ff-8bb1-04d6c889ac54:
+    hasUrls: true
+    template: ''
+    uriFormat: 'news-categories/{slug}'
+structure:
+  maxLevels: null
+  uid: de27943a-dea2-419d-90cd-fbdfcf88bc6a

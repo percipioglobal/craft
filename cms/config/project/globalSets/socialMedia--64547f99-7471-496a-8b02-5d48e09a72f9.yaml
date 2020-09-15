@@ -1,0 +1,12 @@
+fieldLayouts:
+  aa941dfd-a87a-40fc-b891-69e8e72f86bc:
+    tabs:
+      -
+        fields:
+          3603960e-5907-4970-921d-18a3c1c86c7e:
+            required: false
+            sortOrder: 1
+        name: 'Social Media'
+        sortOrder: 1
+handle: socialMedia
+name: 'Social Media'

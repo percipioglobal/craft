@@ -1,0 +1,69 @@
+field: c439e251-a130-434d-a716-aab4d0651420
+fieldLayouts:
+  77c73bb9-3176-40c2-bec8-e28177e2a87c:
+    tabs:
+      -
+        fields:
+          6d157457-cb17-4d30-b2cd-ade98a8fdcf0:
+            required: true
+            sortOrder: 4
+          74c703ba-fb2c-421f-9b09-2bd3762770de:
+            required: true
+            sortOrder: 3
+          98769057-9c93-4e96-89ff-cb7b6a3a1188:
+            required: true
+            sortOrder: 2
+          f4cbe95b-c71a-42f8-a9d8-464dcf3916a9:
+            required: true
+            sortOrder: 1
+        name: Content
+        sortOrder: 1
+fields:
+  6d157457-cb17-4d30-b2cd-ade98a8fdcf0:
+    contentColumnType: boolean
+    fieldGroup: null
+    handle: privacyLinks
+    instructions: ''
+    name: 'Privacy Links'
+    searchable: false
+    settings:
+      default: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Lightswitch
+  74c703ba-fb2c-421f-9b09-2bd3762770de:
+    contentColumnType: boolean
+    fieldGroup: null
+    handle: footerNavigation
+    instructions: ''
+    name: 'Footer Navigation'
+    searchable: false
+    settings:
+      default: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Lightswitch
+  98769057-9c93-4e96-89ff-cb7b6a3a1188:
+    contentColumnType: boolean
+    fieldGroup: null
+    handle: secondaryNavigation
+    instructions: ''
+    name: 'Secondary Navigation'
+    searchable: false
+    settings:
+      default: false
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Lightswitch
+  f4cbe95b-c71a-42f8-a9d8-464dcf3916a9:
+    contentColumnType: boolean
+    fieldGroup: null
+    handle: primaryNavigation
+    instructions: ''
+    name: 'Primary Navigation'
+    searchable: false
+    settings:
+      default: false
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Lightswitch

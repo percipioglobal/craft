@@ -1,0 +1,23 @@
+contentColumnType: string
+fieldGroup: 5ecf59f4-1339-4602-bd54-aa112f8f098e
+handle: newsCategories
+instructions: ''
+name: 'News Categories'
+searchable: false
+settings:
+  allowLimit: false
+  allowMultipleSources: false
+  allowSelfRelations: false
+  branchLimit: ''
+  limit: null
+  localizeRelations: false
+  selectionLabel: 'Add a news category'
+  showSiteMenu: true
+  source: 'group:f326369d-c220-40d9-92e9-7b7b7811d8e5'
+  sources: '*'
+  targetSiteId: null
+  validateRelatedElements: true
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Categories

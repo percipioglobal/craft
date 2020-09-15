@@ -1,0 +1,17 @@
+contentColumnType: text
+fieldGroup: 712cce4e-490d-44b8-bf2c-5d00c2de4c40
+handle: caption
+instructions: 'Add the default caption for the image or document.'
+name: Caption
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: 'Add a standard caption to the asset'
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

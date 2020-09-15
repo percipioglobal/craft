@@ -1,0 +1,30 @@
+fieldLayouts:
+  71520570-0884-48d3-8b9b-a5ac2fe8e8e4:
+    tabs:
+      -
+        fields:
+          97956e7f-3294-43b2-9d6a-e717706432bc:
+            required: false
+            sortOrder: 1
+        name: 'Optimized Images'
+        sortOrder: 1
+handle: article
+hasUrls: true
+name: Articles
+settings:
+  addSubfolderToRootUrl: '1'
+  autoFocalPoint: ''
+  bucket: $S3_BUCKET
+  bucketSelectionMode: manual
+  cfDistributionId: $CLOUDFRONT_DISTRIBUTION_ID
+  cfPrefix: $CLOUDFRONT_PATH_PREFIX
+  expires: '3 months'
+  keyId: $S3_KEY_ID
+  makeUploadsPublic: '1'
+  region: $S3_REGION
+  secret: $S3_SECRET
+  storageClass: ''
+  subfolder: content/
+sortOrder: 5
+type: craft\awss3\Volume
+url: $CLOUDFRONT_URL

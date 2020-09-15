@@ -1,0 +1,33 @@
+fieldLayouts:
+  c341cf32-8aa7-456c-9a0f-7f06c63a1575:
+    tabs:
+      -
+        fields:
+          6962a9b1-b802-4295-82b1-398470a9f54c:
+            required: false
+            sortOrder: 1
+          dcdd5839-4bb5-4669-8d82-d46ec4da660a:
+            required: false
+            sortOrder: 2
+        name: Metadata
+        sortOrder: 1
+handle: teasers
+hasUrls: true
+name: Teasers
+settings:
+  addSubfolderToRootUrl: '1'
+  autoFocalPoint: ''
+  bucket: $S3_BUCKET
+  bucketSelectionMode: manual
+  cfDistributionId: $CLOUDFRONT_DISTRIBUTION_ID
+  cfPrefix: $CLOUDFRONT_PATH_PREFIX
+  expires: '3 months'
+  keyId: $S3_KEY_ID
+  makeUploadsPublic: '1'
+  region: $S3_REGION
+  secret: $S3_SECRET
+  storageClass: ''
+  subfolder: teasers
+sortOrder: 2
+type: craft\awss3\Volume
+url: $CLOUDFRONT_URL

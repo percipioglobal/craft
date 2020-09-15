@@ -1,0 +1,43 @@
+fieldLayouts:
+  c1a12ccb-e2da-48c0-91fb-8620810d76de:
+    tabs:
+      -
+        fields:
+          6962a9b1-b802-4295-82b1-398470a9f54c:
+            required: false
+            sortOrder: 1
+          870c07d7-9341-4f1f-825b-25c76239bc0d:
+            required: false
+            sortOrder: 2
+          dcdd5839-4bb5-4669-8d82-d46ec4da660a:
+            required: false
+            sortOrder: 3
+        name: Metadata
+        sortOrder: 1
+      -
+        fields:
+          634bebf5-ce96-4127-ab28-ee2541fb9f3b:
+            required: false
+            sortOrder: 1
+        name: 'Optimized Images'
+        sortOrder: 2
+handle: sliders
+hasUrls: true
+name: Sliders
+settings:
+  addSubfolderToRootUrl: '1'
+  autoFocalPoint: ''
+  bucket: $S3_BUCKET
+  bucketSelectionMode: manual
+  cfDistributionId: $CLOUDFRONT_DISTRIBUTION_ID
+  cfPrefix: $CLOUDFRONT_PATH_PREFIX
+  expires: '3 months'
+  keyId: $S3_KEY_ID
+  makeUploadsPublic: '1'
+  region: $S3_REGION
+  secret: $S3_SECRET
+  storageClass: ''
+  subfolder: sliders/
+sortOrder: 3
+type: craft\awss3\Volume
+url: $CLOUDFRONT_URL

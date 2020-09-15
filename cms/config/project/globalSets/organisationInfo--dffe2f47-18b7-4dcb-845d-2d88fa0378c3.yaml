@@ -1,0 +1,18 @@
+fieldLayouts:
+  0fb7a1e2-da23-40b8-95ba-78b6fe2379d6:
+    tabs:
+      -
+        fields:
+          54daa4d7-b5cf-4458-9e19-67155be19343:
+            required: false
+            sortOrder: 3
+          76099428-f3d4-42a7-9bb8-08f425b41461:
+            required: false
+            sortOrder: 1
+          e0ee7443-387e-4be3-a64f-3c5ae52be354:
+            required: false
+            sortOrder: 2
+        name: 'Organisational Information'
+        sortOrder: 1
+handle: organisationInfo
+name: 'Organisational Information'

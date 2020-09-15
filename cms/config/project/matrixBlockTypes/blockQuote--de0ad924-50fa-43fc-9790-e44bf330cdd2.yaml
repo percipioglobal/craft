@@ -1,0 +1,257 @@
+field: e691301b-7484-40be-a3d4-c3bc590de959
+fieldLayouts:
+  3041cc5a-1802-4565-802a-5b693e59e93f:
+    tabs:
+      -
+        fields:
+          37051ce6-f0ea-4d54-97a5-e8c0f304f99c:
+            required: true
+            sortOrder: 3
+          3ef3485e-6187-4dac-af6b-66d630852b61:
+            required: true
+            sortOrder: 1
+          4133e37a-d625-476e-91aa-a600e0123064:
+            required: false
+            sortOrder: 2
+          7931c097-151d-4681-920d-d3f6004afc0e:
+            required: true
+            sortOrder: 4
+        name: Content
+        sortOrder: 1
+fields:
+  37051ce6-f0ea-4d54-97a5-e8c0f304f99c:
+    contentColumnType: string
+    fieldGroup: null
+    handle: quoteType
+    instructions: 'Choose the type of quote.'
+    name: Type
+    searchable: false
+    settings:
+      optgroups: true
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - 'Block Quote'
+            -
+              - value
+              - blockQuote
+            -
+              - default
+              - '1'
+        -
+          __assoc__:
+            -
+              - label
+              - 'Pull Quote'
+            -
+              - value
+              - pullQuote
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+  3ef3485e-6187-4dac-af6b-66d630852b61:
+    contentColumnType: text
+    fieldGroup: null
+    handle: quote
+    instructions: 'Enter your quote.'
+    name: Quote
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: '1'
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  4133e37a-d625-476e-91aa-a600e0123064:
+    contentColumnType: string
+    fieldGroup: null
+    handle: quoteSource
+    instructions: 'Select an entry or enter an external url to point to the source of the quote.'
+    name: 'Quote Source'
+    searchable: false
+    settings:
+      allowCustomText: true
+      allowTarget: false
+      autoNoReferrer: false
+      defaultLinkName: entry
+      defaultText: ''
+      enableAllLinkTypes: false
+      enableAriaLabel: false
+      enableElementCache: false
+      enableTitle: false
+      typeSettings:
+        __assoc__:
+          -
+            - asset
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - false
+                -
+                  - allowCustomQuery
+                  - false
+                -
+                  - allowCrossSiteLink
+                  - false
+                -
+                  - sources
+                  - '*'
+          -
+            - category
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - false
+                -
+                  - allowCustomQuery
+                  - false
+                -
+                  - allowCrossSiteLink
+                  - false
+                -
+                  - sources
+                  - '*'
+          -
+            - entry
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - true
+                -
+                  - allowCustomQuery
+                  - false
+                -
+                  - allowCrossSiteLink
+                  - false
+                -
+                  - sources
+                  - '*'
+          -
+            - site
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - false
+                -
+                  - sites
+                  - '*'
+          -
+            - user
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - false
+                -
+                  - allowCustomQuery
+                  - false
+                -
+                  - allowCrossSiteLink
+                  - false
+                -
+                  - sources
+                  - '*'
+          -
+            - custom
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - false
+                -
+                  - allowAliases
+                  - false
+                -
+                  - disableValidation
+                  - false
+          -
+            - email
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - false
+                -
+                  - allowAliases
+                  - false
+                -
+                  - disableValidation
+                  - false
+          -
+            - tel
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - false
+                -
+                  - allowAliases
+                  - false
+                -
+                  - disableValidation
+                  - false
+          -
+            - url
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - true
+                -
+                  - allowAliases
+                  - false
+                -
+                  - disableValidation
+                  - false
+    translationKeyFormat: null
+    translationMethod: none
+    type: lenz\linkfield\fields\LinkField
+  7931c097-151d-4681-920d-d3f6004afc0e:
+    contentColumnType: string
+    fieldGroup: null
+    handle: position
+    instructions: 'The position field only has an influence when the type Pull Quote has been selected.'
+    name: Position
+    searchable: false
+    settings:
+      default: full
+      options:
+        __assoc__:
+          -
+            - left
+            - '1'
+          -
+            - center
+            - ''
+          -
+            - right
+            - '1'
+          -
+            - full
+            - ''
+          -
+            - drop-left
+            - ''
+          -
+            - drop-right
+            - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: rias\positionfieldtype\fields\Position
+handle: blockQuote
+name: Quotation
+sortOrder: 3

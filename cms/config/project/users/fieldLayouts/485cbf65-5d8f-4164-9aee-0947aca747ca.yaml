@@ -1,0 +1,8 @@
+tabs:
+  -
+    fields:
+      815594b4-d88f-4430-bf0c-5db890e1051f:
+        required: false
+        sortOrder: 1
+    name: 'Profile Photo'
+    sortOrder: 1

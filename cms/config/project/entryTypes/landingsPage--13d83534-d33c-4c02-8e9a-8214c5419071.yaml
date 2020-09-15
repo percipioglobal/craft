@@ -1,0 +1,25 @@
+fieldLayouts:
+  29456920-ac69-416e-9b72-d9e7baa46e32:
+    tabs:
+      -
+        elements:
+          -
+            instructions: null
+            label: Title
+            type: craft\fieldlayoutelements\EntryTitleField
+          -
+            fieldUid: 1c23eb9d-03fe-46ea-9bee-ff46e8bd15a3
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 6a3feb81-50ce-467a-8aca-b5d4cc12aed0
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Metadata
+        sortOrder: 1
+handle: landingsPage
+hasTitleField: true
+name: 'Landings Page'
+section: ef841ba4-7bcd-4ef5-9c12-96377bf7fba2
+sortOrder: 1
+titleFormat: ''
