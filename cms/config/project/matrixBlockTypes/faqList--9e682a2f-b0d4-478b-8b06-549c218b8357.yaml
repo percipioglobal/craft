@@ -1,0 +1,36 @@
+field: e691301b-7484-40be-a3d4-c3bc590de959
+fieldLayouts:
+  083a08b4-c833-4b37-8a9f-4ecfa12f4e34:
+    tabs:
+      -
+        fields:
+          35981b2e-d04e-4366-939a-c0673263711a:
+            required: true
+            sortOrder: 1
+        name: Content
+        sortOrder: 1
+fields:
+  35981b2e-d04e-4366-939a-c0673263711a:
+    contentColumnType: string
+    fieldGroup: null
+    handle: questions
+    instructions: 'Use the field to select and add Frequently Asked Questions, multiple items can be selected.'
+    name: Questions
+    searchable: false
+    settings:
+      allowSelfRelations: ''
+      limit: ''
+      localizeRelations: false
+      selectionLabel: 'Add questions'
+      source: null
+      sources:
+        - 'section:47b7409b-e345-48d9-b684-06ec0a2972f5'
+      targetSiteId: null
+      validateRelatedElements: ''
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+handle: faqList
+name: 'FAQ List'
+sortOrder: 9

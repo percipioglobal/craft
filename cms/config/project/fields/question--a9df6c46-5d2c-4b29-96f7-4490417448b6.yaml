@@ -1,0 +1,17 @@
+contentColumnType: text
+fieldGroup: 2473fef2-babd-4336-bb2e-550dc284282c
+handle: question
+instructions: 'Enter the frequently asked question.'
+name: 'The Question'
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

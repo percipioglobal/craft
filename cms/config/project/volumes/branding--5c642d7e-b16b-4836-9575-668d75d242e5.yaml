@@ -1,0 +1,20 @@
+handle: branding
+hasUrls: true
+name: Branding
+settings:
+  addSubfolderToRootUrl: '1'
+  autoFocalPoint: ''
+  bucket: $S3_BUCKET
+  bucketSelectionMode: manual
+  cfDistributionId: $CLOUDFRONT_DISTRIBUTION_ID
+  cfPrefix: $CLOUDFRONT_PATH_PREFIX
+  expires: '3 months'
+  keyId: $S3_KEY_ID
+  makeUploadsPublic: '1'
+  region: $S3_REGION
+  secret: $S3_SECRET
+  storageClass: ''
+  subfolder: branding/
+sortOrder: 1
+type: craft\awss3\Volume
+url: $CLOUDFRONT_URL

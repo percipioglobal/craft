@@ -1,0 +1,30 @@
+fieldLayouts:
+  e8b47e71-94ef-4b05-85a2-f9578c687105:
+    tabs:
+      -
+        fields:
+          9806bc10-174e-4280-b2a8-c684b99a3139:
+            required: false
+            sortOrder: 1
+        name: 'Image Optimizations'
+        sortOrder: 1
+handle: profiles
+hasUrls: true
+name: 'Profile Images'
+settings:
+  addSubfolderToRootUrl: '1'
+  autoFocalPoint: ''
+  bucket: $S3_BUCKET
+  bucketSelectionMode: manual
+  cfDistributionId: $CLOUDFRONT_DISTRIBUTION_ID
+  cfPrefix: $CLOUDFRONT_PATH_PREFIX
+  expires: '3 months'
+  keyId: $S3_KEY_ID
+  makeUploadsPublic: '1'
+  region: $S3_REGION
+  secret: $S3_SECRET
+  storageClass: ''
+  subfolder: profile-images/
+sortOrder: 7
+type: craft\awss3\Volume
+url: $CLOUDFRONT_URL

@@ -1,0 +1,17 @@
+contentColumnType: string(480)
+fieldGroup: b2330e68-6c4a-45ab-b5b1-8a510f75ce4f
+handle: description
+instructions: ''
+name: Description
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: 120
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

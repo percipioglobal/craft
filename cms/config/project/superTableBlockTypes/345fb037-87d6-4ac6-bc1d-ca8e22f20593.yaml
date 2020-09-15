@@ -1,0 +1,242 @@
+field: 3603960e-5907-4970-921d-18a3c1c86c7e
+fieldLayouts:
+  1a752062-a3fb-459c-acb9-a1e4c17d48bc:
+    tabs:
+      -
+        fields:
+          49fc2634-bf3b-4e3e-a1bc-9eeb199fac80:
+            required: true
+            sortOrder: 2
+          4d23d076-4a7c-4ad8-969e-ca980aef3815:
+            required: true
+            sortOrder: 1
+        name: Content
+        sortOrder: 1
+fields:
+  49fc2634-bf3b-4e3e-a1bc-9eeb199fac80:
+    contentColumnType: string
+    fieldGroup: null
+    handle: socialMediaUrl
+    instructions: ''
+    name: 'Social Media URL'
+    searchable: false
+    settings:
+      allowCustomText: false
+      allowTarget: false
+      autoNoReferrer: false
+      defaultLinkName: site
+      defaultText: ''
+      enableAllLinkTypes: false
+      enableAriaLabel: false
+      enableElementCache: false
+      enableTitle: false
+      typeSettings:
+        __assoc__:
+          -
+            - asset
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - false
+                -
+                  - allowCustomQuery
+                  - false
+                -
+                  - allowCrossSiteLink
+                  - false
+                -
+                  - sources
+                  - '*'
+          -
+            - category
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - false
+                -
+                  - allowCustomQuery
+                  - false
+                -
+                  - allowCrossSiteLink
+                  - false
+                -
+                  - sources
+                  - '*'
+          -
+            - entry
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - false
+                -
+                  - allowCustomQuery
+                  - false
+                -
+                  - allowCrossSiteLink
+                  - false
+                -
+                  - sources
+                  - '*'
+          -
+            - site
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - false
+                -
+                  - sites
+                  - '*'
+          -
+            - user
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - false
+                -
+                  - allowCustomQuery
+                  - false
+                -
+                  - allowCrossSiteLink
+                  - false
+                -
+                  - sources
+                  - '*'
+          -
+            - custom
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - false
+                -
+                  - allowAliases
+                  - false
+                -
+                  - disableValidation
+                  - false
+          -
+            - email
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - false
+                -
+                  - allowAliases
+                  - false
+                -
+                  - disableValidation
+                  - false
+          -
+            - tel
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - false
+                -
+                  - allowAliases
+                  - false
+                -
+                  - disableValidation
+                  - false
+          -
+            - url
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - true
+                -
+                  - allowAliases
+                  - false
+                -
+                  - disableValidation
+                  - false
+    translationKeyFormat: null
+    translationMethod: none
+    type: lenz\linkfield\fields\LinkField
+  4d23d076-4a7c-4ad8-969e-ca980aef3815:
+    contentColumnType: string
+    fieldGroup: null
+    handle: socialMediaType
+    instructions: ''
+    name: 'Social Media Type'
+    searchable: false
+    settings:
+      optgroups: true
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - Twitter
+            -
+              - value
+              - twitter
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Facebook
+            -
+              - value
+              - facebook
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Instagram
+            -
+              - value
+              - instagram
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - YouTube
+            -
+              - value
+              - youtube
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Vimeo
+            -
+              - value
+              - vimeo
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - GitHub
+            -
+              - value
+              - github
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown

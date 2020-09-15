@@ -1,0 +1,64 @@
+field: cc4d5589-5884-4fb2-ba84-ffb388a8806e
+fieldLayouts:
+  1250dda9-6a10-41e5-9491-8e054eb76d83:
+    tabs:
+      -
+        fields:
+          085923fe-5934-4d01-a2fd-ec625094c005:
+            required: false
+            sortOrder: 2
+          f3960fae-d20a-4473-9a73-315dfed31760:
+            required: true
+            sortOrder: 1
+        name: Content
+        sortOrder: 1
+fields:
+  085923fe-5934-4d01-a2fd-ec625094c005:
+    contentColumnType: text
+    fieldGroup: null
+    handle: caption
+    instructions: ''
+    name: Caption
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  f3960fae-d20a-4473-9a73-315dfed31760:
+    contentColumnType: string
+    fieldGroup: null
+    handle: image
+    instructions: 'Add a single image to appear in the slider'
+    name: Image
+    searchable: false
+    settings:
+      allowSelfRelations: ''
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:5c642d7e-b16b-4836-9575-668d75d242e5'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      restrictFiles: '1'
+      selectionLabel: 'Add a slider image'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:17ffd720-73f0-4e0c-9878-ea089fcc6863'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources:
+        - 'volume:17ffd720-73f0-4e0c-9878-ea089fcc6863'
+      targetSiteId: null
+      useSingleFolder: true
+      validateRelatedElements: ''
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets

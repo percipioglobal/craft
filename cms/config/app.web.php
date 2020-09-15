@@ -15,18 +15,23 @@
  * This application config is applied only for *only* web requests
  */
 
+use craft\helpers\App;
+
 return [
     'components' => [
-        'session' => [
-            'class' => \yii\redis\Session::class,
-            'redis' => [
-                'hostname' => getenv('REDIS_HOSTNAME'),
-                'port' => getenv('REDIS_PORT'),
-                'database' => getenv('REDIS_CRAFT_DB'),
-            ],
-            'as session' => [
-                'class' => \craft\behaviors\SessionBehavior::class,
-            ],
-        ],
+        'session' => static function() {
+            // Get the default component config
+            $config = craft\helpers\App::sessionConfig();
+            // Override the class to use Redis' session class and our config settings
+            $config['class'] = yii\redis\Session::class;
+            $config['redis'] = [
+                'hostname' => App::env('REDIS_HOSTNAME'),
+                'port' => App::env('REDIS_PORT'),
+                'database' => App::env('REDIS_CRAFT_DB'),
+            ];
+            // Instantiate and return it
+            return Craft::createObject($config);
+        },
+
     ],
 ];

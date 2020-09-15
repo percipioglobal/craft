@@ -1,0 +1,36 @@
+fieldLayouts:
+  e64c00c8-31b0-4afa-b497-4a3f2e0d8011:
+    tabs:
+      -
+        fields:
+          502c51a1-5b82-4368-90e1-aa68b1d4e479:
+            required: false
+            sortOrder: 1
+          6962a9b1-b802-4295-82b1-398470a9f54c:
+            required: false
+            sortOrder: 2
+          870c07d7-9341-4f1f-825b-25c76239bc0d:
+            required: false
+            sortOrder: 3
+        name: Metadata
+        sortOrder: 1
+handle: documents
+hasUrls: true
+name: Documents
+settings:
+  addSubfolderToRootUrl: '1'
+  autoFocalPoint: ''
+  bucket: $S3_BUCKET
+  bucketSelectionMode: manual
+  cfDistributionId: $CLOUDFRONT_DISTRIBUTION_ID
+  cfPrefix: $CLOUDFRONT_PATH_PREFIX
+  expires: '3 months'
+  keyId: $S3_KEY_ID
+  makeUploadsPublic: '1'
+  region: $S3_REGION
+  secret: $S3_SECRET
+  storageClass: ''
+  subfolder: documents/
+sortOrder: 4
+type: craft\awss3\Volume
+url: $CLOUDFRONT_URL

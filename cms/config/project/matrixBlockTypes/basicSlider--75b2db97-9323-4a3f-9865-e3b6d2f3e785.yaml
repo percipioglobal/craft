@@ -1,0 +1,49 @@
+field: e691301b-7484-40be-a3d4-c3bc590de959
+fieldLayouts:
+  f5c867a3-9fde-4150-b6d0-71459f184ef2:
+    tabs:
+      -
+        fields:
+          cc4d5589-5884-4fb2-ba84-ffb388a8806e:
+            required: true
+            sortOrder: 1
+        name: Content
+        sortOrder: 1
+fields:
+  cc4d5589-5884-4fb2-ba84-ffb388a8806e:
+    contentColumnType: string
+    fieldGroup: null
+    handle: slides
+    instructions: ''
+    name: Slides
+    searchable: false
+    settings:
+      columns:
+        __assoc__:
+          -
+            - f3960fae-d20a-4473-9a73-315dfed31760
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - 085923fe-5934-4d01-a2fd-ec625094c005
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+      contentTable: '{{%stc_6_slides}}'
+      fieldLayout: matrix
+      maxRows: '9'
+      minRows: '2'
+      propagationMethod: all
+      selectionLabel: 'Add a new slide'
+      staticField: ''
+    translationKeyFormat: null
+    translationMethod: site
+    type: verbb\supertable\fields\SuperTableField
+handle: basicSlider
+name: 'Basic Slider'
+sortOrder: 6

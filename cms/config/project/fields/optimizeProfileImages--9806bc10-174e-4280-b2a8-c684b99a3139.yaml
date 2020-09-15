@@ -1,0 +1,93 @@
+contentColumnType: text
+fieldGroup: 1dd95078-7c8a-4ef7-8a16-e33a5341dadb
+handle: optimizeProfileImages
+instructions: ''
+name: 'Optimize Profile Images'
+searchable: false
+settings:
+  displayDominantColorPalette: '1'
+  displayLazyLoadPlaceholderImages: '1'
+  displayOptimizedImageVariants: '1'
+  ignoreFilesOfType:
+    - image/svg
+    - image/gif
+  variants:
+    -
+      __assoc__:
+        -
+          - width
+          - '760'
+        -
+          - useAspectRatio
+          - '1'
+        -
+          - aspectRatioX
+          - '1'
+        -
+          - aspectRatioY
+          - '1'
+        -
+          - retinaSizes
+          -
+            - '1'
+        -
+          - quality
+          - '82'
+        -
+          - format
+          - ''
+    -
+      __assoc__:
+        -
+          - width
+          - '380'
+        -
+          - useAspectRatio
+          - '1'
+        -
+          - aspectRatioX
+          - '1'
+        -
+          - aspectRatioY
+          - '1'
+        -
+          - retinaSizes
+          -
+            - '1'
+            - '2'
+            - '3'
+        -
+          - quality
+          - '60'
+        -
+          - format
+          - ''
+    -
+      __assoc__:
+        -
+          - width
+          - '100'
+        -
+          - useAspectRatio
+          - '1'
+        -
+          - aspectRatioX
+          - '1'
+        -
+          - aspectRatioY
+          - '1'
+        -
+          - retinaSizes
+          -
+            - '1'
+            - '2'
+            - '3'
+        -
+          - quality
+          - '60'
+        -
+          - format
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: nystudio107\imageoptimize\fields\OptimizedImages

@@ -1,0 +1,24 @@
+fieldLayouts:
+  ae81ae30-d804-4ab6-ae3c-069c5f405e09:
+    tabs:
+      -
+        fields:
+          11916eb5-92ff-4945-bb06-1406d6047b36:
+            required: false
+            sortOrder: 4
+          78023dfa-3c9e-47d1-bedc-b6fa76c9d751:
+            required: false
+            sortOrder: 1
+          d08d0466-34f4-441b-acd1-439b514f3810:
+            required: false
+            sortOrder: 5
+          d39b90d3-13a8-4d42-b415-1ef20426a174:
+            required: false
+            sortOrder: 3
+          df090dc9-1e25-4504-abd3-18e7996d8d6d:
+            required: false
+            sortOrder: 2
+        name: 'Placeholder Images'
+        sortOrder: 1
+handle: placeholders
+name: Placeholders

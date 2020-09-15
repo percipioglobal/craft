@@ -1,0 +1,29 @@
+contentColumnType: string
+fieldGroup: 0314e405-e731-462f-9381-2cfb6ac91134
+handle: teaserImage
+instructions: 'Upload the teaser image here, this image will also be used when the post is shared on social media or google.'
+name: 'Teaser Image'
+searchable: false
+settings:
+  allowSelfRelations: ''
+  allowedKinds: null
+  defaultUploadLocationSource: 'volume:5c642d7e-b16b-4836-9575-668d75d242e5'
+  defaultUploadLocationSubpath: ''
+  limit: '1'
+  localizeRelations: false
+  restrictFiles: ''
+  selectionLabel: 'Add a teaser image'
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  singleUploadLocationSource: 'volume:14e48735-7707-43d5-a6f1-90cc18da80f1'
+  singleUploadLocationSubpath: ''
+  source: null
+  sources:
+    - 'volume:14e48735-7707-43d5-a6f1-90cc18da80f1'
+  targetSiteId: null
+  useSingleFolder: true
+  validateRelatedElements: '1'
+  viewMode: list
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Assets

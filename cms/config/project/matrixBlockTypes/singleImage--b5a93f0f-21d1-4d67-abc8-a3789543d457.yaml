@@ -1,0 +1,216 @@
+field: e691301b-7484-40be-a3d4-c3bc590de959
+fieldLayouts:
+  1f38f42e-d515-4104-b279-6e3f7edbee7d:
+    tabs:
+      -
+        fields:
+          302a5592-8085-472e-9356-ab6b1eaf1635:
+            required: true
+            sortOrder: 2
+          3fc84cf5-6e3d-46e8-bf13-9a1d4e198438:
+            required: false
+            sortOrder: 4
+          49d732ef-0bfc-46c0-ba09-004de008c0ba:
+            required: false
+            sortOrder: 3
+          ed4b0f49-8429-4d80-846f-3d441bd3e707:
+            required: true
+            sortOrder: 1
+        name: Content
+        sortOrder: 1
+fields:
+  302a5592-8085-472e-9356-ab6b1eaf1635:
+    contentColumnType: string
+    fieldGroup: null
+    handle: position
+    instructions: 'Select a position where you want the image to be displayed, if you select left or right it will display next to the text. If you want multiple images in the same row, please select image gallery.'
+    name: Position
+    searchable: false
+    settings:
+      default: center
+      options:
+        __assoc__:
+          -
+            - left
+            - '1'
+          -
+            - center
+            - '1'
+          -
+            - right
+            - '1'
+          -
+            - full
+            - '1'
+          -
+            - drop-left
+            - ''
+          -
+            - drop-right
+            - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: rias\positionfieldtype\fields\Position
+  3fc84cf5-6e3d-46e8-bf13-9a1d4e198438:
+    contentColumnType: text
+    fieldGroup: null
+    handle: caption
+    instructions: 'Enter an optional caption for the image, if an image already contains a caption, this field will override the original one.'
+    name: Caption
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  49d732ef-0bfc-46c0-ba09-004de008c0ba:
+    contentColumnType: string
+    fieldGroup: null
+    handle: ratio
+    instructions: 'Select the Aspect Ratio where you want the image to be displayed in, use live preview to see how it looks.'
+    name: Ratio
+    searchable: false
+    settings:
+      optgroups: true
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - None
+            -
+              - value
+              - ''
+            -
+              - default
+              - '1'
+        -
+          __assoc__:
+            -
+              - label
+              - '1:1'
+            -
+              - value
+              - is1by1
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - '2:1'
+            -
+              - value
+              - is2by1
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - '4:3'
+            -
+              - value
+              - is4by3
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - '3:4'
+            -
+              - value
+              - is3by4
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - '7:5'
+            -
+              - value
+              - is7by5
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - '8:5'
+            -
+              - value
+              - is8by5
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - '16:9'
+            -
+              - value
+              - is16by9
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - '21:9'
+            -
+              - value
+              - is21by9
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+  ed4b0f49-8429-4d80-846f-3d441bd3e707:
+    contentColumnType: string
+    fieldGroup: null
+    handle: image
+    instructions: 'Select or upload an image to use in the page.'
+    name: Image
+    searchable: false
+    settings:
+      allowSelfRelations: ''
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:5c642d7e-b16b-4836-9575-668d75d242e5'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      restrictFiles: '1'
+      selectionLabel: ''
+      showUnpermittedFiles: true
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:dbb9d34a-ed00-430b-a6cd-e61927f7b2d5'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: true
+      validateRelatedElements: ''
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+handle: singleImage
+name: Image
+sortOrder: 4

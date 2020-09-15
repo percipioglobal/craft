@@ -1,0 +1,29 @@
+contentColumnType: string
+fieldGroup: c014f72e-6101-4377-a9e4-bbea0f16bce8
+handle: profilePhotoPlaceholder
+instructions: 'Upload a placeholder photo for the users if they haven''''t added any profile image'
+name: 'Profile Photo Placeholder'
+searchable: false
+settings:
+  allowSelfRelations: ''
+  allowedKinds:
+    - image
+  defaultUploadLocationSource: 'volume:5c642d7e-b16b-4836-9575-668d75d242e5'
+  defaultUploadLocationSubpath: ''
+  limit: '1'
+  localizeRelations: false
+  restrictFiles: '1'
+  selectionLabel: ''
+  showUnpermittedFiles: true
+  showUnpermittedVolumes: false
+  singleUploadLocationSource: 'volume:2cfafcad-5b14-408b-ba81-afd942b8b3cb'
+  singleUploadLocationSubpath: ''
+  source: null
+  sources: '*'
+  targetSiteId: null
+  useSingleFolder: true
+  validateRelatedElements: ''
+  viewMode: list
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Assets

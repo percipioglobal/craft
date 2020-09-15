@@ -1,0 +1,9 @@
+handle: footerNavigation
+instructions: ''
+maxNodes: ''
+name: 'Footer Navigation'
+propagateNodes: false
+sortOrder: 3
+structure:
+  maxLevels: null
+  uid: 64636e72-d294-403e-8d49-5d0fa315b254

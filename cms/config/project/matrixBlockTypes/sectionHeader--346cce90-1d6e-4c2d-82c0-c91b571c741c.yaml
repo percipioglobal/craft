@@ -1,0 +1,91 @@
+field: e691301b-7484-40be-a3d4-c3bc590de959
+fieldLayouts:
+  7d15571b-c1d6-4a10-ae40-f21cdc67cf8d:
+    tabs:
+      -
+        fields:
+          4285cde2-58a1-4cde-aba3-ccdced328ee2:
+            required: false
+            sortOrder: 3
+          6fcc732b-3375-496d-92b8-64f3dcc00d00:
+            required: true
+            sortOrder: 1
+          e7b63d80-91cc-438a-b670-59cbb778ca14:
+            required: true
+            sortOrder: 2
+        name: Content
+        sortOrder: 1
+fields:
+  4285cde2-58a1-4cde-aba3-ccdced328ee2:
+    contentColumnType: string
+    fieldGroup: null
+    handle: buttons
+    instructions: 'Optionally add a button to the section that can refer to another page or entry.'
+    name: Button
+    searchable: false
+    settings:
+      columns:
+        __assoc__:
+          -
+            - 4697a491-b07d-46f9-87d8-c6cd9fb804a9
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - 3f37c536-3682-4856-a6af-a9f582d4c782
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+      contentTable: '{{%stc_1_buttons}}'
+      fieldLayout: matrix
+      maxRows: '1'
+      minRows: '1'
+      propagationMethod: all
+      selectionLabel: ''
+      staticField: '1'
+    translationKeyFormat: null
+    translationMethod: site
+    type: verbb\supertable\fields\SuperTableField
+  6fcc732b-3375-496d-92b8-64f3dcc00d00:
+    contentColumnType: text
+    fieldGroup: null
+    handle: header
+    instructions: 'Enter a section heading from an article or a page, a page can contain multiple sections, this is preferably 1 -3 words.'
+    name: Header
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  e7b63d80-91cc-438a-b670-59cbb778ca14:
+    contentColumnType: string(480)
+    fieldGroup: null
+    handle: description
+    instructions: 'Enter a short description what the section is about. Maximum 120 characters.'
+    name: Description
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: 120
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: sectionHeader
+name: 'Section Header'
+sortOrder: 1

@@ -1,0 +1,17 @@
+contentColumnType: string
+fieldGroup: 0dd08fc1-c043-49cb-bdcf-80521b7bd98a
+handle: navigationSettings
+instructions: 'Select in which navigational parts the menu item should display.'
+name: 'Navigation Settings'
+searchable: true
+settings:
+  contentTable: '{{%stc_navigationsettings}}'
+  fieldLayout: row
+  maxRows: ''
+  minRows: ''
+  propagationMethod: all
+  selectionLabel: ''
+  staticField: ''
+translationKeyFormat: null
+translationMethod: site
+type: verbb\supertable\fields\SuperTableField

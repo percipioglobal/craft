@@ -1,0 +1,45 @@
+field: e691301b-7484-40be-a3d4-c3bc590de959
+fieldLayouts:
+  90e11fff-ed8c-4be8-946c-ef601288ca9b:
+    tabs:
+      -
+        fields:
+          4a86f07d-200e-4dbc-a06a-223d9cc5c049:
+            required: true
+            sortOrder: 1
+        name: Content
+        sortOrder: 1
+fields:
+  4a86f07d-200e-4dbc-a06a-223d9cc5c049:
+    contentColumnType: string
+    fieldGroup: null
+    handle: images
+    instructions: 'Select images that you want to display as a grid on the page, maximum 8 images allowed.'
+    name: Images
+    searchable: false
+    settings:
+      allowSelfRelations: ''
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:5c642d7e-b16b-4836-9575-668d75d242e5'
+      defaultUploadLocationSubpath: ''
+      limit: '8'
+      localizeRelations: false
+      restrictFiles: '1'
+      selectionLabel: 'Add images'
+      showUnpermittedFiles: true
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:dbb9d34a-ed00-430b-a6cd-e61927f7b2d5'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: true
+      validateRelatedElements: ''
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+handle: galleryImages
+name: 'Image Gallery'
+sortOrder: 5

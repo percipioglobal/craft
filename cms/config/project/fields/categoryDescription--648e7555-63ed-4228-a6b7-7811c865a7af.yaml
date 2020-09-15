@@ -1,0 +1,22 @@
+contentColumnType: text
+fieldGroup: 94b4d5ac-d7ea-4241-a6cb-92b39f482f99
+handle: categoryDescription
+instructions: 'Enter a description for the category. Explain what this categories does.'
+name: 'Category Description'
+searchable: true
+settings:
+  availableTransforms: '*'
+  availableVolumes: ''
+  cleanupHtml: true
+  columnType: text
+  purifierConfig: ''
+  purifyHtml: '1'
+  redactorConfig: Content.json
+  removeEmptyTags: '1'
+  removeInlineStyles: '1'
+  removeNbsp: '1'
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+translationKeyFormat: null
+translationMethod: none
+type: craft\redactor\Field

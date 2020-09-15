@@ -1,0 +1,28 @@
+contentColumnType: string
+fieldGroup: c014f72e-6101-4377-a9e4-bbea0f16bce8
+handle: photoCoverPlaceholder
+instructions: 'Upload an image that will serve as placeholder if the original image can not be found or is not ready for display yet.'
+name: 'Photo Cover Placeholder'
+searchable: true
+settings:
+  allowSelfRelations: ''
+  allowedKinds: null
+  defaultUploadLocationSource: 'volume:5c642d7e-b16b-4836-9575-668d75d242e5'
+  defaultUploadLocationSubpath: ''
+  limit: '1'
+  localizeRelations: false
+  restrictFiles: ''
+  selectionLabel: 'Add an image'
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  singleUploadLocationSource: 'volume:918b50e1-632c-4e92-a8c5-55eeb7b8571e'
+  singleUploadLocationSubpath: ''
+  source: null
+  sources: '*'
+  targetSiteId: null
+  useSingleFolder: true
+  validateRelatedElements: ''
+  viewMode: list
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Assets

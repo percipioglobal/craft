@@ -1,0 +1,29 @@
+fieldLayouts:
+  8d6d7f6f-a7f0-4423-8600-7969d6883742:
+    tabs:
+      -
+        elements:
+          -
+            instructions: null
+            label: Title
+            type: craft\fieldlayoutelements\EntryTitleField
+          -
+            fieldUid: a9df6c46-5d2c-4b29-96f7-4490417448b6
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 1aad5a2f-f77c-42d8-8c02-c97817b9cb18
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 0827c9dd-2ea2-4e98-b743-3161e028a304
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: 'FAQ Entry'
+        sortOrder: 1
+handle: faq
+hasTitleField: false
+name: FAQ
+section: 47b7409b-e345-48d9-b684-06ec0a2972f5
+sortOrder: 1
+titleFormat: '{question}'

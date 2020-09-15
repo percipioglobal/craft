@@ -1,0 +1,28 @@
+contentColumnType: string
+fieldGroup: 12311739-6ceb-4fb4-a572-7f2ea0ad3b69
+handle: coverPhoto
+instructions: 'Upload the Cover Photo of the Document / eBook or PDF'
+name: 'Cover Photo'
+searchable: false
+settings:
+  allowSelfRelations: ''
+  allowedKinds: null
+  defaultUploadLocationSource: 'volume:5c642d7e-b16b-4836-9575-668d75d242e5'
+  defaultUploadLocationSubpath: ''
+  limit: '1'
+  localizeRelations: false
+  restrictFiles: ''
+  selectionLabel: ''
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  singleUploadLocationSource: 'volume:918b50e1-632c-4e92-a8c5-55eeb7b8571e'
+  singleUploadLocationSubpath: ''
+  source: null
+  sources: '*'
+  targetSiteId: null
+  useSingleFolder: true
+  validateRelatedElements: ''
+  viewMode: list
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Assets

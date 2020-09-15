@@ -1,0 +1,213 @@
+dateModified: 1600163229
+email:
+  fromEmail: $SYSTEM_EMAIL
+  fromName: $SENDER_NAME
+  replyToEmail: $REPLY_TO
+  transportType: craft\mail\transportadapters\Sendmail
+graphql:
+  publicToken:
+    enabled: false
+    expiryDate: null
+plugins:
+  aws-s3:
+    eager-beaver:
+      enabled: true
+      schemaVersion: 1.0.0
+    enabled: true
+    schemaVersion: '1.2'
+  blitz-recommendations:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  eager-beaver:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  fastcgi-cache-bust:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  feed-me:
+    enabled: true
+    schemaVersion: 2.1.2
+  image-optimize:
+    edition: standard
+    enabled: true
+    licenseKey: null
+    schemaVersion: 1.0.0
+    settings:
+      allowUpScaledImageVariants: false
+      assetVolumeSubFolders: true
+      autoSharpenScaledImages: true
+      createColorPalette: true
+      createPlaceholderSilhouettes: false
+      imageTransformTypeSettings:
+        __assoc__:
+          -
+            - nystudio107\imageoptimizeimgix\imagetransforms\ImgixImageTransform
+            -
+              __assoc__:
+                -
+                  - domain
+                  - ''
+                -
+                  - apiKey
+                  - ''
+                -
+                  - securityToken
+                  - ''
+          -
+            - nystudio107\imageoptimizesharp\imagetransforms\SharpImageTransform
+            -
+              __assoc__:
+                -
+                  - baseUrl
+                  - $SERVERLESS_SHARP_CLOUDFRONT_URL
+          -
+            - nystudio107\imageoptimizethumbor\imagetransforms\ThumborImageTransform
+            -
+              __assoc__:
+                -
+                  - baseUrl
+                  - ''
+                -
+                  - securityKey
+                  - ''
+                -
+                  - includeBucketPrefix
+                  - ''
+      lowerQualityRetinaImageVariants: false
+      transformClass: nystudio107\imageoptimizesharp\imagetransforms\SharpImageTransform
+  mailgun:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  minify:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  navigation:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.19
+    settings:
+      bypassProjectConfig: false
+      pluginName: Navigation
+  notifications:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  password-policy:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  position-fieldtype:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  redactor:
+    enabled: true
+    schemaVersion: 2.3.0
+  retour:
+    edition: standard
+    enabled: true
+    licenseKey: null
+    schemaVersion: 3.0.9
+    settings:
+      additionalHeaders: ''
+      alwaysStripQueryString: true
+      automaticallyTrimStatistics: '1'
+      createUriChangeRedirects: true
+      dynamicRedirectDisplayLimit: 100
+      enableApiEndpoint: ''
+      excludePatterns: ''
+      pluginName: Redirects
+      preserveQueryString: false
+      recordRemoteIp: true
+      refreshIntervalSecs: 5
+      staticRedirectDisplayLimit: 100
+      statisticsRateLimitMs: '3600000'
+      statsDisplayLimit: 1000
+      statsStoredLimit: 1000
+      stripQueryStringFromStats: true
+      uriChangeRedirectSrcMatch: pathonly
+  seomatic:
+    edition: standard
+    enabled: true
+    licenseKey: null
+    schemaVersion: 3.0.9
+    settings:
+      addHrefLang: true
+      addPaginatedHreflang: true
+      addXDefaultHrefLang: true
+      cpTitlePrefix: '⚙ '
+      cspNonce: ''
+      cspScriptSrcPolicies:
+        -
+          __assoc__:
+            -
+              - policy
+              - '''self'''
+      devModeCpTitlePrefix: '&#x1f6a7;⚙ '
+      devModeTitlePrefix: '&#x1f6a7; '
+      displayAnalysisSidebar: true
+      displayPreviewSidebar: true
+      enableJsonLdEndpoint: ''
+      enableMetaContainerEndpoint: ''
+      environment: $ENVIRONMENT
+      generatorEnabled: true
+      headersEnabled: true
+      lowercaseCanonicalUrl: '1'
+      maxDescriptionLength: 155
+      maxTitleLength: 70
+      metaCacheDuration: 'null'
+      pluginName: SEO
+      regenerateSitemapsAutomatically: true
+      renderEnabled: true
+      separatorChar: '|'
+      sidebarDisplayPreviewTypes:
+        - google
+        - twitter
+        - facebook
+        - linkedin
+        - slack
+      siteGroupsSeparate: '1'
+      siteUrlOverride: ''
+      sitemapsEnabled: true
+      socialMediaPreviewTarget: true
+      submitSitemaps: true
+  spoon:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.5.0
+  super-table:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.2.1
+  twigpack:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  typedlinkfield:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
+  typogrify:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  webperf:
+    edition: standard
+    enabled: true
+    licenseKey: null
+    schemaVersion: 1.0.1
+  width-fieldtype:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+system:
+  edition: pro
+  live: true
+  name: Craft
+  schemaVersion: 3.5.13
+  timeZone: Europe/London

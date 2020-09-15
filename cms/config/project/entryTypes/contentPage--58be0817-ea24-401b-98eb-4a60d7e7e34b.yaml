@@ -1,0 +1,49 @@
+fieldLayouts:
+  ab0a57c7-97b7-45bd-bba3-2b0d1c0a782c:
+    tabs:
+      -
+        elements:
+          -
+            instructions: null
+            label: Title
+            type: craft\fieldlayoutelements\EntryTitleField
+          -
+            fieldUid: e691301b-7484-40be-a3d4-c3bc590de959
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Content
+        sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: 1c23eb9d-03fe-46ea-9bee-ff46e8bd15a3
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: c439e251-a130-434d-a716-aab4d0651420
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 6a3feb81-50ce-467a-8aca-b5d4cc12aed0
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Settings
+        sortOrder: 2
+      -
+        elements:
+          -
+            fieldUid: 1c23eb9d-03fe-46ea-9bee-ff46e8bd15a3
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 6a3feb81-50ce-467a-8aca-b5d4cc12aed0
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Metadata
+        sortOrder: 3
+handle: contentPage
+hasTitleField: true
+name: 'Content Page'
+section: ef841ba4-7bcd-4ef5-9c12-96377bf7fba2
+sortOrder: 2
+titleFormat: ''

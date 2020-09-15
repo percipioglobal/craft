@@ -1,0 +1,23 @@
+{%- set news = craft.entries.section('news')
+    .with(['teaserImage', 'newsCategory'])
+    .orderBy('postDate desc')
+    .offset(1)
+    .all() -%}
+
+{%- include '_organisms/heroes/hero--main' with {
+    content: entry,
+} -%}
+
+{% if entry.lastUpdated %}
+    {%- include '_molecules/meta/meta--edited' with {
+        content: entry,
+    } -%}
+{% endif %}
+
+<div class="container max-w-screen-hd p-8 mx-auto mt-16">
+    {%- include '_organisms/cards/cards--highlight' ignore missing with {
+        content: news,
+        type: 'news',
+        hasFeatured: true,
+    } -%}
+</div>

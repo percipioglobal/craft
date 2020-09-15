@@ -1,18 +1,48 @@
 # percipioglobal/craft Change Log
 
-## 1.3.0 - Unreleased
+## 1.3.0 - 15-09-2020
 
 ### Added
 - Added in the Tailwind Typography plugin with a few standard settings
+- Added Typescript support
+- Use Vue.js 3.0
+- Added buddy.yml for atomic deployments
+- Added ESLint support
+- Added native image lazy loading
+- Slim Docker containers after build
+- Added init to the docker-compose.yml to processes are sent signals
+- Added `--no-tablespaces` to the mysqldump command options to work around changes in MySQL
+- Added a queue component with a longer ttr
+- Added a queue docker container to run queue jobs via ./craft queue/listen
+- Added image optimizers to the php-dev-craft Docker image
+- Added Blitz Recommendations
+- Added atom router in macros that handles atoms through type/atom and options object.
+- Added Page Router and AMP Page router based on entry types.
 
 ### Changed
 - Changed the Font Awesome Pro packages to the Free alternatives and updated all of their values
+- Replaced moment with vanilla Javascript
+- Replaced `getenv()` with `App::env()`
+- Boilerplate now requires craftcms/cms ^3.5.9
+- Refactor composer scripts to handle Craft not being installed, leveraging craft install/check
+- Remove `[hash]` from dev config to eliminate potential [memory errors](https://github.com/webpack/webpack-dev-server/issues/438)
+- Use `[contenthash]` in production instead of [hash or chunkhash](https://github.com/webpack/webpack.js.org/issues/2096)
+- Better nginx config for local dev, based on nystudio107/nginx
+- Removed dotenvy
+- Updated the css-loader config to ignore embedded URLs
+- Changed project-config/sync -> project-config/apply
+- Updated the buddy.yaml with the latest Prep Craft script
+- Created seperate files for atoms
 
 ### Fixed
 - Fixed wrong template handle for errors to `error`
 - Fixed AMP template layouts path
 - Fixed wrong paths into `errors templates`
 - Fixed `baseUrl` wrong alias
+- Refactored Docker config to use more sane contexts during builds, speeding up build time immensely 🎩 Patrick
+- Change throwExceptions deprecator config to use App::env('DEV_MODE')
+- Fix redis session config to use App::sessionConfig()
+- Modern config only for local dev, [fixing multi-compiler issues](https://github.com/webpack/webpack-dev-server/issues/2355) with HRM
 
 ## 1.2.2 - 22-07-2020
 
