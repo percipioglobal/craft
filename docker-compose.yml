@@ -17,7 +17,7 @@ services:
       - ./cms/web:/var/www/project/cms/web:cached
   # php - personal home page
   php:
-    build:
+    build: &php-build
       context: ./docker-config/php-dev-craft
       dockerfile: ./Dockerfile
     depends_on:
