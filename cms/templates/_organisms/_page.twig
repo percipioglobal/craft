@@ -1,0 +1,41 @@
+{% extends "_boilerplate/_layouts/generic-page-layout.twig" %}
+
+{% block headLinks %}
+    {{ parent() }}
+    <link rel="amphtml" href="{{- craft.app.request.absoluteUrl ~ '/amp' -}}">
+{% endblock headLinks %}
+
+{% block content %}
+        {%- switch entry.type -%}
+                
+                {%- case "contentPage" -%}
+
+                    {%- include '_organisms/entry-types/page--content' ignore missing with {
+                        content: entry,
+                    } -%}
+
+                {%- case "landingsPage" -%}
+
+                    {%- include '_organisms/entry-types/page--landing' ignore missing with {
+                        content: entry,
+                    } -%}
+
+                {%- case "newsPage" -%}
+
+                    {%- include '_organisms/entry-types/page--news' ignore missing with {
+                        content: entry,
+                    } -%}
+
+                {%- case "news" -%}
+
+                    {%- include '_organisms/entry-types/entry--news' ignore missing with {
+                        content: entry,
+                    } -%}
+
+        {%- endswitch -%}
+{% endblock %}
+
+{# -- Any JavaScript that should be included before </body> -- #}
+{% block bodyJs %}
+    {{ parent() }}
+{% endblock bodyJs %}
