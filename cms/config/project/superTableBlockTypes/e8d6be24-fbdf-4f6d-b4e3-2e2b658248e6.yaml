@@ -3,16 +3,34 @@ fieldLayouts:
   f7a37c9e-dc1a-4c48-816d-f1ae3a08c08f:
     tabs:
       -
-        fields:
-          25958ba0-5f4a-48fc-9dee-0064db99f702:
+        elements:
+          -
+            fieldUid: fbaa4c75-7616-42ca-adea-7615c9b91e38
+            instructions: null
+            label: null
             required: true
-            sortOrder: 2
-          ec91bde6-778d-4030-89fe-45614d871e81:
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 25958ba0-5f4a-48fc-9dee-0064db99f702
+            instructions: null
+            label: null
             required: true
-            sortOrder: 3
-          fbaa4c75-7616-42ca-adea-7615c9b91e38:
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: ec91bde6-778d-4030-89fe-45614d871e81
+            instructions: null
+            label: null
             required: true
-            sortOrder: 1
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
         name: Content
         sortOrder: 1
 fields:
@@ -59,7 +77,7 @@ fields:
     name: Target
     searchable: false
     settings:
-      allowSelfRelations: ''
+      allowSelfRelations: false
       allowedKinds:
         - compressed
         - excel
@@ -73,6 +91,7 @@ fields:
       localizeRelations: false
       restrictFiles: '1'
       selectionLabel: 'Add a resource'
+      showSiteMenu: true
       showUnpermittedFiles: true
       showUnpermittedVolumes: false
       singleUploadLocationSource: 'volume:5c642d7e-b16b-4836-9575-668d75d242e5'
@@ -82,7 +101,7 @@ fields:
         - 'volume:b011a3f9-88a2-4819-aad0-ca04487dfac8'
       targetSiteId: null
       useSingleFolder: true
-      validateRelatedElements: ''
+      validateRelatedElements: false
       viewMode: list
     translationKeyFormat: null
     translationMethod: site
@@ -102,6 +121,7 @@ fields:
       initialRows: '4'
       multiline: ''
       placeholder: ''
+      uiMode: normal
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText

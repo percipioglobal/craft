@@ -1,0 +1,40 @@
+field: 7950ad45-9f8c-452f-aaaa-0e7e0aca0acf
+fieldLayouts:
+  7ba12033-99b9-481b-a872-66be0a895aa5:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 35f7cc21-2142-48e1-abe9-3404072de34e
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  35f7cc21-2142-48e1-abe9-3404072de34e:
+    contentColumnType: text
+    fieldGroup: null
+    handle: description
+    instructions: ''
+    name: Description
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: heroMain
+name: 'Main Header'
+sortOrder: 2

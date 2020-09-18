@@ -3,13 +3,25 @@ fieldLayouts:
   8f709fd8-761f-41fb-80d6-2e01237696d9:
     tabs:
       -
-        fields:
-          3f37c536-3682-4856-a6af-a9f582d4c782:
+        elements:
+          -
+            fieldUid: 4697a491-b07d-46f9-87d8-c6cd9fb804a9
+            instructions: null
+            label: null
             required: true
-            sortOrder: 2
-          4697a491-b07d-46f9-87d8-c6cd9fb804a9:
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 3f37c536-3682-4856-a6af-a9f582d4c782
+            instructions: null
+            label: null
             required: true
-            sortOrder: 1
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
         name: Content
         sortOrder: 1
 fields:
@@ -33,7 +45,7 @@ fields:
               - primary
             -
               - default
-              - ''
+              - '1'
         -
           __assoc__:
             -
@@ -52,7 +64,7 @@ fields:
               - 'Primary Ghost'
             -
               - value
-              - primaryGhost
+              - primary--ghost
             -
               - default
               - ''
@@ -63,7 +75,7 @@ fields:
               - 'Secondary Ghost'
             -
               - value
-              - secondaryGhost
+              - secondary--ghost
             -
               - default
               - ''
@@ -74,7 +86,7 @@ fields:
     contentColumnType: string
     fieldGroup: null
     handle: target
-    instructions: ''
+    instructions: 'Select a page or entry you wish this button to link to'
     name: Target
     searchable: false
     settings:

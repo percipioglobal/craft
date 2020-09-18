@@ -9,6 +9,28 @@
     # @license   https://opensource.org/licenses/MIT MIT Licensed
     #}
 
+{# 
+
+    ### USAGE ###
+    ---------------
+
+    type: (STR) -- enter the type of atom you want to use, this is the singular word of the atoms folder ( eg. text )
+    atom: (STR) -- the actual atom you want to use out of the select type ( eg. title )
+    options: (OBJ) -- an object where you can pass optional parameters to the atom
+    prefix: (STR) -- a prefix that can be given to be prepended on the atom
+
+    # EXAMPLES
+
+    simple example: type = 'text' / atom = 'title' would make `_atoms/texts/text--title`
+    prefixed example: type = 'text' / atom = 'title' / prefix = 'amp_' would make `_atoms/texts/amp_text--title`
+
+    # CODE EXAMPLES
+
+    {{- render.atom('text', 'title', { content: content.header, words: 5, }) -}}
+    {{- render.atom('text', 'title', { content: content.header, words: 5, }) '_amp' -}}
+
+#}
+
 {% macro atom(type, atom, options, prefix = '') %}
     {% spaceless %}
         {% include '_atoms/' ~ type ~ 's/' ~ prefix ~ type ~ '--' ~ atom with {

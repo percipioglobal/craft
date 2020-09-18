@@ -1,11 +1,11 @@
-field: e691301b-7484-40be-a3d4-c3bc590de959
+field: 55805748-502a-48b2-9107-cac1d3e9b18e
 fieldLayouts:
-  7d15571b-c1d6-4a10-ae40-f21cdc67cf8d:
+  4e57d704-405a-4ead-bd39-fc3caacb7ca1:
     tabs:
       -
         elements:
           -
-            fieldUid: 6fcc732b-3375-496d-92b8-64f3dcc00d00
+            fieldUid: 93863723-9e5b-4ca3-9264-940e320f4a63
             instructions: null
             label: null
             required: true
@@ -14,7 +14,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: e7b63d80-91cc-438a-b670-59cbb778ca14
+            fieldUid: 844e44ed-99f1-4807-a8f7-6b8d2f32c612
             instructions: null
             label: null
             required: true
@@ -23,7 +23,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 4285cde2-58a1-4cde-aba3-ccdced328ee2
+            fieldUid: 3907b6fa-b7ad-458d-829e-921e6b18bb2d
             instructions: null
             label: null
             required: false
@@ -34,7 +34,7 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  4285cde2-58a1-4cde-aba3-ccdced328ee2:
+  3907b6fa-b7ad-458d-829e-921e6b18bb2d:
     contentColumnType: string
     fieldGroup: null
     handle: buttons
@@ -42,43 +42,27 @@ fields:
     name: Buttons
     searchable: false
     settings:
-      columns:
-        __assoc__:
-          -
-            - 4697a491-b07d-46f9-87d8-c6cd9fb804a9
-            -
-              __assoc__:
-                -
-                  - width
-                  - ''
-          -
-            - 3f37c536-3682-4856-a6af-a9f582d4c782
-            -
-              __assoc__:
-                -
-                  - width
-                  - ''
-      contentTable: '{{%stc_1_buttons}}'
+      contentTable: '{{%stc_buttons}}'
       fieldLayout: row
       maxRows: '2'
       minRows: '1'
       placeholderKey: null
       propagationMethod: all
       selectionLabel: 'Add a button'
-      staticField: '1'
+      staticField: ''
     translationKeyFormat: null
     translationMethod: site
     type: verbb\supertable\fields\SuperTableField
-  6fcc732b-3375-496d-92b8-64f3dcc00d00:
-    contentColumnType: text
+  844e44ed-99f1-4807-a8f7-6b8d2f32c612:
+    contentColumnType: string(480)
     fieldGroup: null
-    handle: header
-    instructions: 'Enter a section heading from an article or a page, a page can contain multiple sections, this is preferably 1 -3 words.'
-    name: Header
-    searchable: true
+    handle: description
+    instructions: 'Enter a short description what the section is about. Maximum 120 characters.'
+    name: Description
+    searchable: false
     settings:
       byteLimit: null
-      charLimit: null
+      charLimit: 120
       code: ''
       columnType: null
       initialRows: '4'
@@ -88,16 +72,16 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
-  e7b63d80-91cc-438a-b670-59cbb778ca14:
-    contentColumnType: string(480)
+  93863723-9e5b-4ca3-9264-940e320f4a63:
+    contentColumnType: text
     fieldGroup: null
-    handle: description
-    instructions: 'Enter a short description what the section is about. Maximum 120 characters.'
-    name: Description
-    searchable: true
+    handle: header
+    instructions: 'Enter a section heading from an article or a page, a page can contain multiple sections, this is preferably 1 -3 words.'
+    name: Header
+    searchable: false
     settings:
       byteLimit: null
-      charLimit: 120
+      charLimit: null
       code: ''
       columnType: null
       initialRows: '4'

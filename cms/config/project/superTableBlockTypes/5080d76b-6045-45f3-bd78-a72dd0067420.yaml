@@ -3,13 +3,25 @@ fieldLayouts:
   1250dda9-6a10-41e5-9491-8e054eb76d83:
     tabs:
       -
-        fields:
-          085923fe-5934-4d01-a2fd-ec625094c005:
-            required: false
-            sortOrder: 2
-          f3960fae-d20a-4473-9a73-315dfed31760:
+        elements:
+          -
+            fieldUid: f3960fae-d20a-4473-9a73-315dfed31760
+            instructions: null
+            label: null
             required: true
-            sortOrder: 1
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 085923fe-5934-4d01-a2fd-ec625094c005
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
         name: Content
         sortOrder: 1
 fields:
@@ -28,6 +40,7 @@ fields:
       initialRows: '4'
       multiline: ''
       placeholder: ''
+      uiMode: normal
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
@@ -39,7 +52,7 @@ fields:
     name: Image
     searchable: false
     settings:
-      allowSelfRelations: ''
+      allowSelfRelations: false
       allowedKinds:
         - image
       defaultUploadLocationSource: 'volume:5c642d7e-b16b-4836-9575-668d75d242e5'
@@ -48,6 +61,7 @@ fields:
       localizeRelations: false
       restrictFiles: '1'
       selectionLabel: 'Add a slider image'
+      showSiteMenu: true
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
       singleUploadLocationSource: 'volume:17ffd720-73f0-4e0c-9878-ea089fcc6863'
@@ -57,7 +71,7 @@ fields:
         - 'volume:17ffd720-73f0-4e0c-9878-ea089fcc6863'
       targetSiteId: null
       useSingleFolder: true
-      validateRelatedElements: ''
+      validateRelatedElements: false
       viewMode: list
     translationKeyFormat: null
     translationMethod: site

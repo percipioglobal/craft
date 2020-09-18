@@ -3,10 +3,16 @@ fieldLayouts:
   9078b0df-811f-4c76-b011-5d7d75e21f16:
     tabs:
       -
-        fields:
-          2c244265-381c-45ad-b439-7845b814e5ee:
+        elements:
+          -
+            fieldUid: 2c244265-381c-45ad-b439-7845b814e5ee
+            instructions: null
+            label: null
             required: true
-            sortOrder: 1
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
         name: Content
         sortOrder: 1
 fields:
@@ -45,6 +51,7 @@ fields:
       fieldLayout: table
       maxRows: ''
       minRows: '1'
+      placeholderKey: null
       propagationMethod: all
       selectionLabel: 'Add a resource'
       staticField: ''

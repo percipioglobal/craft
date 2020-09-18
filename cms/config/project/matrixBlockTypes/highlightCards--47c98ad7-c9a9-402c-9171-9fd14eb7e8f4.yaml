@@ -3,10 +3,16 @@ fieldLayouts:
   088a9888-4f4a-4c24-9756-170fa037079f:
     tabs:
       -
-        fields:
-          6c47b7b0-71d0-4acb-92d5-6d8624f711fb:
+        elements:
+          -
+            fieldUid: 6c47b7b0-71d0-4acb-92d5-6d8624f711fb
+            instructions: null
+            label: null
             required: true
-            sortOrder: 1
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
         name: Content
         sortOrder: 1
 fields:
@@ -18,16 +24,17 @@ fields:
     name: Cards
     searchable: false
     settings:
-      allowSelfRelations: ''
+      allowSelfRelations: false
       limit: '2'
       localizeRelations: false
       selectionLabel: 'Add a card to highlight'
+      showSiteMenu: true
       source: null
       sources:
         - 'section:9de367ab-77b8-47bb-bbc3-63e79a202c3e'
         - 'section:ef841ba4-7bcd-4ef5-9c12-96377bf7fba2'
       targetSiteId: null
-      validateRelatedElements: ''
+      validateRelatedElements: false
       viewMode: null
     translationKeyFormat: null
     translationMethod: site
