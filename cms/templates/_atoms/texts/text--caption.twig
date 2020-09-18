@@ -1,0 +1,39 @@
+{#
+    ### OPTIONS ###
+    ---------------
+
+    content: (STR) -- caption content
+    alt: (STR) -- brief description of the image
+    author: (STR) -- Add author to caption
+    source: (STR) -- Add source to caption
+#}
+
+{% set values = {
+    content: options.content ??? "",
+    author: options.author ??? null,
+    source: options.source ??? null,
+    id: options.source ??? "",
+    style: options.style ??? "font-primary text-center text-sm text-gray-500 italic p-4 border-b border-gray-300",
+} %}
+
+{# Render Caption #}
+
+{% spaceless %}
+	<figcaption id="{{- values.id -}}" class="{{- values.style -}}">
+		{{- values.content }}
+		{% if values.author and values.source -%}
+			&mdash;
+			<a href="{{ values.source.url }}">
+				<span>
+					{{ values.author -}}
+				</span>
+				<span class="inline-block ml-2">
+					<i class="fas fa-external-link-alt"></i>
+				</span>
+			</a>
+		{%- elseif values.author -%}
+			&mdash;
+			{{ values.author -}}
+		{% endif -%}
+	</figcaption>
+{% endspaceless %}

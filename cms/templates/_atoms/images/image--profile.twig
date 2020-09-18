@@ -1,0 +1,26 @@
+{#
+    ### OPTIONS ###
+    ---------------
+
+    image: (IMAGE OBJECT) -- pass trough the image from craft
+    alt: (STR) -- brief description of the image
+
+#}
+
+{% set values = {
+    image: options.image ??? null,
+    alt: options.alt ??? '',
+    style: options.styling ??? "",
+} %}
+
+{# Render Profile #}
+
+{% set image = values.image.optimizeProfileImages %}
+<figure role="figure" aria-label="{{- values.alt -}}" class="img overflow-hidden h-16 w-16 rounded-full  {{values.style}}">
+	<img src="{{- image.placeholderImage() -}}"
+        data-src="{{- image.src() -}}"
+        data-srcset="{{- image.srcset() -}}"
+        sizes="25vw"
+        alt="{{- values.alt -}}"
+        class="lazyload">
+</figure>

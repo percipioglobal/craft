@@ -1,0 +1,21 @@
+{#
+    ### OPTIONS ###
+    ---------------
+
+    type: (STR) -- type of the svg
+
+#}
+
+{% set values = {
+    type: options.type ??? "logo",
+    style: options.styling ??? "",
+} %}
+
+{# Render Logo #}
+
+{% spaceless %}
+	{% set logo = type == 'logo' ? brand.logo.one() : brand.icon.one() %}
+	<a href="{{- alias('@web') ~ '/' -}}" class="block relative z-1 {{ type == 'logo' ? 'w-48 h-6' : 'w-12 h-12' -}}  {{values.style}">
+		{{ svg(logo) }}
+	</a>
+{% endspaceless %}
