@@ -37,6 +37,11 @@ RUN mkdir -p /var/www/project/cms/web/cpresources && \
 
 WORKDIR /var/www/project/cms
 
+# Append our php.ini overrides to the end of the file
+RUN echo "memory_limit = 512M" >> /usr/local/etc/php/php.ini && \
+    echo "opcache.revalidate_freq = 0" >> /usr/local/etc/php/php.ini && \
+    echo "opcache.validate_timestamps = 1" >> /usr/local/etc/php/php.ini
+
 # Force permissions, update Craft, and start php-fpm
 
 # Do a `composer install` without running any Composer scripts
