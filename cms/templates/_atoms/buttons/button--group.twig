@@ -1,0 +1,29 @@
+{# 
+    ### OPTIONS ###
+    ---------------
+
+    buttons: (OBJ) -- Parse in an object that contains all buttons.
+
+#}
+
+{% import '_macros/atoms' as render %}
+
+{% set values = {
+    buttons: options.buttons ??? null,
+} %}
+
+{%- minify -%}
+
+    <div class="my-4">
+        {%- if values.buttons -%}
+            {%- for button in values.buttons -%}
+                {{- render.atom('button', 'primary', {
+                    url: button.target.getUrl(),
+                    text: button.target.getText(),
+                    utility: not loop.last ? 'mr-4' : '',
+                }) -}}
+            {%- endfor -%}
+        {%- endif -%}
+    </div>
+
+{%- endminify -%}
