@@ -2,30 +2,37 @@
 
 {%- minify -%}
 
-    <div>
-        <h5 class="text-xs uppercase">
+    <div class="mb-4">
+        <h5 class="text-xs uppercase mb-2">
             {{- 
-                render.atom(
-                    'text', 
-                    'title', 
-                    { 
+                render.atom('text', 'title', { 
                         content: content.header,
                         words: 5,
-                    }
-                ) 
+                    }) 
             -}}
         </h5>
-        <h2 class="text-2xl">
+
+        <h2 class="text-2xl mb-4">
             {{- 
-                render.atom(
-                    'text',
-                    'title',
-                    {
+                render.atom('text', 'title', {
                         content: content.description
-                    }
-                )    
+                    })    
             -}}
         </h2>
+
+        {#  <div>
+            {% for button in content.buttons.all() %}
+                {{- render.atom('button', 'primary', {
+                    url: button.target.getUrl(),
+                    text: button.target.getText(),
+                }) -}}
+            {% endfor %}
+        </div> #}
+
+        {{- render.atom('button', 'group', {
+            buttons: content.buttons.all(),
+        }) -}}
+
     </div>
 
 {%- endminify -%}
