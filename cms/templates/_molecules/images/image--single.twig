@@ -1,7 +1,18 @@
-{% import '_macros/atoms' as atom %}
+{% import '_macros/atoms' as render %}
 
 {%- minify -%}
-    <section class="mx-auto my-16 {{ content.position == 'full' ? '-mx-4 md:-mx-32' : '' }}">
-        {{- atom.article_image(content.image[0], content.image[0].title, content.ratio, content.caption ?? content.image[0].caption, content.image[0].author ?? null, content.image[0].source ?? null) -}}
-    </section>
+    <div class="mx-auto my-16 {{ content.position == 'full' ? '-mx-4 md:-mx-32' : '' }}">
+
+        {{- 
+            render.atom('image', 'article', {
+                    image: content.image[0],
+                    alt: content.image[0].title,
+                    ratio: content.ratio,
+                    caption: content.caption ?? content.image[0].caption,
+                    author: content.image[0].author ?? null,
+                    source: content.image[0].source ?? null,
+                })    
+        -}}
+
+    </div>
 {%- endminify -%}
