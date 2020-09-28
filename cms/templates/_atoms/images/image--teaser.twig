@@ -1,0 +1,60 @@
+{% extends "_atoms/images/image--variables" %}
+
+{# 
+    ### OPTIONS ###
+    ---------------
+
+    ## INHERITED
+
+    image: (OBJ) -- Pass through the image object
+    sizes: (ARR) -- sizes array for responsive images
+    alt: (STR) -- The alt text
+    ratio: (STR) -- Give the aspect ratio in the correct format eg. is1by1 / is16by9 ( optional )
+    caption: (STR) -- The caption text ( optional )
+    author: (STR) -- The author of the image ( optional )
+    source: (STR) -- The image source ( optional )
+
+    ## ADDED 
+
+    optimized: (OBJ) -- Add the image optimized field to the atom
+    placeholder: (OBJ) --- Add the placeholder image to the atom
+
+#}
+
+{% import '_macros/atoms' as render %}
+
+{% block image %}
+
+    {%- set values = values|merge({
+        optimized: options.image.optimizeTeasers ??? null,
+        placeholder: placeholder.teaserPlaceholder[0].optimizeTeasers ??? null
+    }) -%}
+
+    {%- minify -%}
+
+        <figure role="figure" aria-label="{{- values.alt -}}" class="w-full h-full">
+
+            <picture class="img {{ values.ratio -}}">
+
+                <source data-srcset="{{- values.optimized.srcsetWebP() ??? values.placeholder.srcsetWebP() -}}"
+                        sizes="{%- for size in values.sizes -%}{{- not loop.last ? size ~ ',' : size -}}{%- endfor -%}"
+                        type="image/webp"
+                />
+
+                <source data-srcset="{{- values.optimized.srcset() ??? values.placeholder.srcset() -}}"
+                        sizes="{%- for size in values.sizes -%}{{- not loop.last ? size ~ ',' : size -}}{%- endfor -%}"
+                />
+
+                <img    class="lazyload object-cover"
+                        loading="lazy"
+                        alt="{{- values.alt -}}"
+                        src="{{- values.optimized.placeholderImage() ??? values.placeholder.placeholderImage() -}}"
+                />
+
+            </picture>
+
+        </figure>
+
+    {%- endminify -%}
+
+{%- endblock -%}
