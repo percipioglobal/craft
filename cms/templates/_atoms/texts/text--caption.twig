@@ -1,0 +1,47 @@
+{# 
+    ### OPTIONS ###
+    ---------------
+
+    caption: (STR) -- The caption text - required
+    author: (STR) -- The author of the image - optional
+    source: (STR) -- The image source - optinal
+    id: (STR) -- id for accessibility match with figure - required
+
+#}
+
+{% set values = {
+
+    caption: options.caption,
+    author: options.author ??? null,
+    source: options.source ??? null, 
+    id: options.id,
+
+} %}
+
+{% spaceless %}
+
+    <figcaption id="{{- values.id -}}" class="text-center text-sm text-gray-500 italic">
+
+        {{- values.caption }}
+
+        {% if values.author and values.source -%}
+
+            &mdash;
+            <a href="{{- options.source.url -}}">
+                <span>
+                    {{- source.author -}}
+                </span>
+                <span class="inline-block ml-2">
+                    <i class="fas fa-external-link-alt"></i>
+                </span>
+            </a>
+
+        {%- elseif values.author -%}
+
+            &mdash; {{ values.author -}}
+            
+        {% endif -%}
+
+    </figcaption>
+
+{% endspaceless %}
