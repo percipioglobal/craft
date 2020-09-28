@@ -1,0 +1,36 @@
+{% extends "_atoms/quotes/quote--variables" %}
+
+{# 
+    ### OPTIONS ###
+    ---------------
+
+    content: (STR) -- The actual quote
+    source: (OBJ) -- Object that contains the source link
+
+#}
+
+{% import '_macros/atoms' as render %}
+
+{% block quote %}
+
+    {%- minify -%}
+
+        <blockquote {{ values.source ? 'cite="'~ values.source.getText() ~ '"' : '' }}>
+
+            <p>
+                {{- render.atom('text', 'content', { content: values.content }) -}}
+            </p>
+
+            {%- if values.source -%}
+
+                <footer>
+                    <a href="{{- values.source.getUrl() -}}">{{- values.source.getText() -}}</a>
+                </footer>
+
+            {%- endif -%}
+
+        </blockquote>
+
+    {%- endminify -%}
+
+{% endblock %}

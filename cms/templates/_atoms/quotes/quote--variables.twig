@@ -1,0 +1,20 @@
+{# 
+    ### OPTIONS ###
+    ---------------
+
+    content: (STR) -- The actual quote
+    source: (OBJ) -- Object that contains the source link
+    position: (STR) -- The position in case it is a Pull quote
+
+#}
+
+{% set values = {
+
+    content: options.content ??? null,
+    source: options.source ??? null,
+    position: options.position ??? null,
+
+} %}
+
+{% block quote %}
+{% endblock %}
