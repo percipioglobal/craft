@@ -89,6 +89,7 @@ fields:
       defaultUploadLocationSubpath: ''
       limit: '1'
       localizeRelations: false
+      previewMode: full
       restrictFiles: '1'
       selectionLabel: 'Add a resource'
       showSiteMenu: true

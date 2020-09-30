@@ -53,4 +53,4 @@ fields:
     type: verbb\supertable\fields\SuperTableField
 handle: basicSlider
 name: 'Basic Slider'
-sortOrder: 6
+sortOrder: 7

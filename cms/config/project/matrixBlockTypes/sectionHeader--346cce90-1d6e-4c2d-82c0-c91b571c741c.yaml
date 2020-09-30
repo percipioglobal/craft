@@ -109,4 +109,4 @@ fields:
     type: craft\fields\PlainText
 handle: sectionHeader
 name: 'Section Header'
-sortOrder: 1
+sortOrder: 3

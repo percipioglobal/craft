@@ -1,11 +1,11 @@
-field: e691301b-7484-40be-a3d4-c3bc590de959
+field: 55805748-502a-48b2-9107-cac1d3e9b18e
 fieldLayouts:
-  3041cc5a-1802-4565-802a-5b693e59e93f:
+  ad7febac-8d77-4398-8fbd-5b175d19641a:
     tabs:
       -
         elements:
           -
-            fieldUid: 3ef3485e-6187-4dac-af6b-66d630852b61
+            fieldUid: 39a1747f-508a-4ea2-ba7e-8bc5c057563c
             instructions: null
             label: null
             required: true
@@ -14,7 +14,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 4133e37a-d625-476e-91aa-a600e0123064
+            fieldUid: a9a1faa5-9ee8-4c3b-a8e0-9e94e95077c7
             instructions: null
             label: null
             required: false
@@ -23,81 +23,78 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 37051ce6-f0ea-4d54-97a5-e8c0f304f99c
+            fieldUid: bc3ff665-9a6b-4017-8ae7-e1d32a84363d
             instructions: null
             label: null
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
-            width: 50
+            width: 100
           -
-            fieldUid: 7931c097-151d-4681-920d-d3f6004afc0e
+            fieldUid: 3ef590a8-8cd0-410c-98cf-4512c8a79131
             instructions: null
             label: null
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
-            width: 50
+            width: 100
         name: Content
         sortOrder: 1
 fields:
-  37051ce6-f0ea-4d54-97a5-e8c0f304f99c:
-    contentColumnType: string
-    fieldGroup: null
-    handle: quoteType
-    instructions: 'Choose the type of quote.'
-    name: Type
-    searchable: false
-    settings:
-      optgroups: true
-      options:
-        -
-          __assoc__:
-            -
-              - label
-              - 'Block Quote'
-            -
-              - value
-              - blockQuote
-            -
-              - default
-              - '1'
-        -
-          __assoc__:
-            -
-              - label
-              - 'Pull Quote'
-            -
-              - value
-              - pullQuote
-            -
-              - default
-              - ''
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\Dropdown
-  3ef3485e-6187-4dac-af6b-66d630852b61:
+  39a1747f-508a-4ea2-ba7e-8bc5c057563c:
     contentColumnType: text
     fieldGroup: null
     handle: quote
     instructions: 'Enter your quote.'
     name: Quote
-    searchable: true
+    searchable: false
     settings:
       byteLimit: null
       charLimit: null
       code: ''
       columnType: null
       initialRows: '4'
-      multiline: '1'
+      multiline: ''
       placeholder: ''
       uiMode: normal
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
-  4133e37a-d625-476e-91aa-a600e0123064:
+  3ef590a8-8cd0-410c-98cf-4512c8a79131:
+    contentColumnType: string
+    fieldGroup: null
+    handle: position
+    instructions: 'The position field only has an influence when the type Pull Quote has been selected.'
+    name: Position
+    searchable: false
+    settings:
+      default: left
+      options:
+        __assoc__:
+          -
+            - left
+            - '1'
+          -
+            - center
+            - ''
+          -
+            - right
+            - '1'
+          -
+            - full
+            - ''
+          -
+            - drop-left
+            - ''
+          -
+            - drop-right
+            - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: rias\positionfieldtype\fields\Position
+  a9a1faa5-9ee8-4c3b-a8e0-9e94e95077c7:
     contentColumnType: string
     fieldGroup: null
     handle: quoteSource
@@ -245,38 +242,41 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: lenz\linkfield\fields\LinkField
-  7931c097-151d-4681-920d-d3f6004afc0e:
+  bc3ff665-9a6b-4017-8ae7-e1d32a84363d:
     contentColumnType: string
     fieldGroup: null
-    handle: position
-    instructions: 'The position field only has an influence when the type Pull Quote has been selected.'
-    name: Position
+    handle: quoteType
+    instructions: 'Choose the type of quote.'
+    name: Type
     searchable: false
     settings:
-      default: left
+      optgroups: true
       options:
-        __assoc__:
-          -
-            - left
-            - '1'
-          -
-            - center
-            - ''
-          -
-            - right
-            - '1'
-          -
-            - full
-            - ''
-          -
-            - drop-left
-            - ''
-          -
-            - drop-right
-            - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 'Block Quote'
+            -
+              - value
+              - blockQuote
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 'Pull Quote'
+            -
+              - value
+              - pullQuote
+            -
+              - default
+              - ''
     translationKeyFormat: null
     translationMethod: none
-    type: rias\positionfieldtype\fields\Position
+    type: craft\fields\Dropdown
 handle: blockQuote
 name: Quotation
-sortOrder: 4
+sortOrder: 5

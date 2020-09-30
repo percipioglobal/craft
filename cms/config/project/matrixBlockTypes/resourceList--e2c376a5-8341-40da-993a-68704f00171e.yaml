@@ -60,4 +60,4 @@ fields:
     type: verbb\supertable\fields\SuperTableField
 handle: resourceList
 name: 'Resource List'
-sortOrder: 7
+sortOrder: 8

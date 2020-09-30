@@ -40,4 +40,4 @@ fields:
     type: craft\fields\Entries
 handle: faqList
 name: 'FAQ List'
-sortOrder: 9
+sortOrder: 10

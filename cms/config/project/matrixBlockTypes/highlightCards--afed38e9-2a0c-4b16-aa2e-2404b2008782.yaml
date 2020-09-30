@@ -1,11 +1,11 @@
-field: e691301b-7484-40be-a3d4-c3bc590de959
+field: 55805748-502a-48b2-9107-cac1d3e9b18e
 fieldLayouts:
-  088a9888-4f4a-4c24-9756-170fa037079f:
+  9d055ea2-c356-4758-8867-cae47dc11402:
     tabs:
       -
         elements:
           -
-            fieldUid: 6c47b7b0-71d0-4acb-92d5-6d8624f711fb
+            fieldUid: c113c4fa-c4b4-439f-b4a6-8b3d66ae070c
             instructions: null
             label: null
             required: true
@@ -16,7 +16,7 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  6c47b7b0-71d0-4acb-92d5-6d8624f711fb:
+  c113c4fa-c4b4-439f-b4a6-8b3d66ae070c:
     contentColumnType: string
     fieldGroup: null
     handle: cards
@@ -41,4 +41,4 @@ fields:
     type: craft\fields\Entries
 handle: highlightCards
 name: 'Highlight Cards'
-sortOrder: 9
+sortOrder: 6

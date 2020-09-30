@@ -42,7 +42,23 @@ fields:
     name: Buttons
     searchable: false
     settings:
-      contentTable: '{{%stc_buttons}}'
+      columns:
+        __assoc__:
+          -
+            - 03013785-a710-4dce-a0bd-263e0acfb5dd
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - 847926b4-c795-4f3b-a415-c8e59ca58929
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+      contentTable: '{{%stc_13_buttons}}'
       fieldLayout: row
       maxRows: '2'
       minRows: '1'
@@ -93,4 +109,4 @@ fields:
     type: craft\fields\PlainText
 handle: sectionHeader
 name: 'Section Header'
-sortOrder: 1
+sortOrder: 3
