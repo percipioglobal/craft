@@ -15,6 +15,9 @@
 - Added a queue component with a longer ttr
 - Added a queue docker container to run queue jobs via ./craft queue/listen
 - Added image optimizers to the php-dev-craft Docker image
+- Added Image atoms
+- Added Text atoms
+- Added Button atoms
 
 ### Changed
 - Changed the Font Awesome Pro packages to the Free alternatives and updated all of their values

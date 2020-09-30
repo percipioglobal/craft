@@ -13,5 +13,7 @@
 {# Render Title #}
 
 {% spaceless %}
-    {{- values.content | typogrify(true) -}}
+    <div class="text-lg font-bold mb-8">
+        {{- values.content | typogrify(true) -}}
+    </div>
 {% endspaceless %}

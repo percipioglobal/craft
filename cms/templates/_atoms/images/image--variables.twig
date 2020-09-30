@@ -1,0 +1,34 @@
+{# 
+    ### OPTIONS ###
+    ---------------
+
+    image: (OBJ) -- Pass through the image object
+    sizes: (ARR) -- sizes array for responsive images
+    alt: (STR) -- The alt text
+    ratio: (STR) -- Give the aspect ratio in the correct format eg. is1by1 / is16by9 ( optional )
+    caption: (STR) -- The caption text ( optional )
+    author: (STR) -- The author of the image ( optional )
+    source: (STR) -- The image source ( optional )
+
+#}
+
+{%- set placeholder = craft.globalSets()
+    .handle('placeholders')
+    .with(['articlePlaceholder', 'photoCoverPlaceholder', 'profilePhotoPlaceholder', 'sliderPlaceholder', 'teaserPlaceholder', 'heroPlaceholder'])
+    .one()
+-%}
+
+{% set values = {
+
+    image: options.image ??? null,
+    sizes: options.sizes ??? ['100vw'],
+    alt: options.alt ??? '',
+    ratio: options.ratio ??? null,
+    caption: options.caption ??? null,
+    author: options.author ??? null,
+    source: options.source ??? null, 
+
+} %}
+
+{% block image %}
+{% endblock %}

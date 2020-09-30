@@ -1,11 +1,11 @@
-field: 4285cde2-58a1-4cde-aba3-ccdced328ee2
+field: 3907b6fa-b7ad-458d-829e-921e6b18bb2d
 fieldLayouts:
-  8f709fd8-761f-41fb-80d6-2e01237696d9:
+  6caca5bd-78ce-4b7e-ac39-61b7252639b1:
     tabs:
       -
         elements:
           -
-            fieldUid: 4697a491-b07d-46f9-87d8-c6cd9fb804a9
+            fieldUid: 03013785-a710-4dce-a0bd-263e0acfb5dd
             instructions: null
             label: null
             required: true
@@ -14,7 +14,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 3f37c536-3682-4856-a6af-a9f582d4c782
+            fieldUid: 847926b4-c795-4f3b-a415-c8e59ca58929
             instructions: null
             label: null
             required: true
@@ -25,64 +25,7 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  3f37c536-3682-4856-a6af-a9f582d4c782:
-    contentColumnType: string
-    fieldGroup: null
-    handle: style
-    instructions: ''
-    name: Style
-    searchable: false
-    settings:
-      optgroups: true
-      options:
-        -
-          __assoc__:
-            -
-              - label
-              - 'Primary '
-            -
-              - value
-              - primary
-            -
-              - default
-              - '1'
-        -
-          __assoc__:
-            -
-              - label
-              - Secondary
-            -
-              - value
-              - secondary
-            -
-              - default
-              - ''
-        -
-          __assoc__:
-            -
-              - label
-              - 'Primary Ghost'
-            -
-              - value
-              - primary--ghost
-            -
-              - default
-              - ''
-        -
-          __assoc__:
-            -
-              - label
-              - 'Secondary Ghost'
-            -
-              - value
-              - secondary--ghost
-            -
-              - default
-              - ''
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\Dropdown
-  4697a491-b07d-46f9-87d8-c6cd9fb804a9:
+  03013785-a710-4dce-a0bd-263e0acfb5dd:
     contentColumnType: string
     fieldGroup: null
     handle: target
@@ -230,3 +173,38 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: lenz\linkfield\fields\LinkField
+  847926b4-c795-4f3b-a415-c8e59ca58929:
+    contentColumnType: string
+    fieldGroup: null
+    handle: style
+    instructions: ''
+    name: Style
+    searchable: false
+    settings:
+      optgroups: true
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - Primary
+            -
+              - value
+              - primary
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Secondary
+            -
+              - value
+              - secondary
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown

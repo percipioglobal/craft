@@ -1,4 +1,4 @@
-{% import '_macros/atoms' as atom %}
+{% import '_macros/atoms' as render %}
 
 {% if block.getPrev() %}
 
@@ -27,7 +27,11 @@
 {% endif %}
 
 {%- minify -%}
-    <section class="article mx-auto {{ collapse ? '' : 'sm:pt-10' }}">
-        {{- atom.text(content.article) -}}
-    </section>
+
+    <div>
+
+        {{- render.atom('text', 'content', { content: content.article }) -}}
+
+    </div>
+
 {%- endminify -%}

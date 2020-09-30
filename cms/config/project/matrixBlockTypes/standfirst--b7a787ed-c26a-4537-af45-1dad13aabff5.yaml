@@ -1,11 +1,11 @@
-field: e691301b-7484-40be-a3d4-c3bc590de959
+field: 55805748-502a-48b2-9107-cac1d3e9b18e
 fieldLayouts:
-  ce1931f4-9280-4231-b357-ea8750a88735:
+  a13a95fe-0414-48ad-bcf1-e4b97e667ffe:
     tabs:
       -
         elements:
           -
-            fieldUid: 5053ff27-8e1b-49ea-85c6-c2a1dece3b8e
+            fieldUid: 6d8e5650-bf25-44a5-bce5-8f54dd2a2f73
             instructions: null
             label: null
             required: true
@@ -16,13 +16,13 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  5053ff27-8e1b-49ea-85c6-c2a1dece3b8e:
+  6d8e5650-bf25-44a5-bce5-8f54dd2a2f73:
     contentColumnType: text
     fieldGroup: null
-    handle: article
-    instructions: 'Enter one more paragraphs to create your textual content.'
-    name: 'Body Content'
-    searchable: true
+    handle: standfirst
+    instructions: 'Please enter an introductory paragraph, use this to start a page or an article where it is necessary to have an introductory text that stands out from the other copy'
+    name: 'Introductory Paragraph'
+    searchable: false
     settings:
       availableTransforms: '*'
       availableVolumes: ''
@@ -33,7 +33,7 @@ fields:
       manualConfig: ''
       purifierConfig: ''
       purifyHtml: '1'
-      redactorConfig: Content.json
+      redactorConfig: Simple.json
       removeEmptyTags: '1'
       removeInlineStyles: '1'
       removeNbsp: '1'
@@ -44,6 +44,6 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\redactor\Field
-handle: article
-name: 'Article Body'
-sortOrder: 2
+handle: standfirst
+name: Standfirst
+sortOrder: 1

@@ -1,0 +1,7 @@
+{% import '_macros/atoms' as render %}
+
+{%- minify -%}
+
+    {{- render.atom('text', 'standfirst', { content: content.standfirst }) -}}
+
+{%- endminify -%}

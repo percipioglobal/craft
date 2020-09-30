@@ -26,8 +26,8 @@
 {% block image %}
 
     {%- set values = values|merge({
-        optimized: options.image.optimizeTeasers ??? null,
-        placeholder: placeholder.teaserPlaceholder[0].optimizeTeasers ??? null
+        optimized: options.image.optimizeCovers ??? null,
+        placeholder: placeholder.photoCoverPlaceholder[0].optimizeCovers ??? null
     }) -%}
 
     {%- minify -%}

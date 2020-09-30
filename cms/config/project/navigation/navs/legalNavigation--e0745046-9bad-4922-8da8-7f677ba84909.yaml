@@ -1,9 +1,0 @@
-handle: legalNavigation
-instructions: ''
-maxNodes: ''
-name: 'Legal Navigation'
-propagateNodes: false
-sortOrder: 4
-structure:
-  maxLevels: null
-  uid: 0725db91-17f3-4efb-881f-ec3192620a1c
