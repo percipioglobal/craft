@@ -1,5 +1,13 @@
 # percipioglobal/craft Change Log
 
+## 1.3.1 - Unreleased 
+
+- Made docker more performant
+- Added queue shell script
+- Made builds with Tailwind much more performant
+- Return back to Vue 2.0
+- Added root vendor folder to `.gitignore`
+
 ## 1.3.0 - Unreleased
 
 ### Added
