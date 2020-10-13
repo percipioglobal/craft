@@ -10,6 +10,7 @@ RUN apt-get update \
         optipng \
         gifsicle \
         webp \
+        ffmpeg \
     && \
     # Install PHP extensions
     docker-php-ext-install \
@@ -25,6 +26,9 @@ RUN apt-get update \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 WORKDIR /var/www/project
+
+COPY ./run_queue.sh .
+RUN chmod a+x run_queue.sh
 
 # Create the storage directory and make it writeable by PHP
 RUN mkdir -p /var/www/project/cms/storage && \
