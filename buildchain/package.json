@@ -142,7 +142,7 @@
         "lazysizes": "^5.2.2",
         "regenerator-runtime": "^0.13.2",
         "tailwindcss": "^1.0.0",
-        "vue": "^3.0.0-beta.14",
+        "vue": "^2.5.17",
         "vue-wait": "^1.4.8",
         "vuex": "^3.1.2",
         "vuex-persistedstate": "^2.7.1",
