@@ -1,0 +1,40 @@
+{#
+    ### OPTIONS ###
+    ---------------
+
+    image: (IMAGE OBJECT) -- pass trough the image from craft
+    alt: (STR) -- brief description of the image
+    ratio: (STR) -- Tailwind css class for ratio
+    caption: (STR) -- Caption added underneath the image
+    author: (STR) -- Add author to caption
+    source: (STR) -- Add source to caption
+#}
+
+{% set values = {
+    image: options.image ??? null,
+    alt: options.alt ??? '',
+    ratio: options.ratio ??? null,
+    caption: options.caption ??? null,
+    author: options.author ??? null,
+    source: options.source ??? null,
+    style: options.styling ??? "",
+} %}
+
+{# Render Teaser #}
+
+{% import '_macros/atoms' as render %}
+{% set image = values.image.optimizeArticles %}
+{% spaceless %}
+	<figure role="figure" aria-labelledby="{{- values.alt ~ '-' ~ values.image.id -}}" class="w-full h-full {{values.style}}">
+		<div class="img {{ values.ratio -}}">
+			<img src="{{- image.placeholderImage() -}}"
+                data-src="{{- image.src() -}}"
+                data-srcset="{{- image.srcset() -}}"
+                sizes="100vw" alt="{{- values.alt -}}"
+                class="object-cover lazyload">
+		</div>
+		{% if values.caption %}
+       {{- render.atom('text', 'caption', { content: values.caption, author: values.author, source: values.source, id: values.alt ~ '-' ~ values.image.id }) -}}
+		{% endif %}
+	</figure>
+{% endspaceless %}

@@ -16,6 +16,7 @@
 
 # COMPOSER
 */vendor/*
+/vendor/*
 
 # CRAFT STORAGE
 */storage/*

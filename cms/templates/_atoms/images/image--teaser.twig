@@ -1,0 +1,30 @@
+{#
+    ### OPTIONS ###
+    ---------------
+
+    image: (IMAGE OBJECT) -- pass trough the image from craft
+    alt: (STR) -- brief description of the image
+
+#}
+
+{% set values = {
+    image: options.image ??? null,
+    alt: options.alt ??? '',
+    style: options.styling ??? "",
+} %}
+
+{# Render Teaser #}
+
+{% set image = values.image.optimizeTeasers %}
+{% spaceless %}
+	<figure role="figure" aria-label="{{- values.alt -}}" class="relative w-full h-full {{values.style}}">
+		<div class="img is1by1">
+			<img src="{{- image.placeholderImage() -}}"
+        data-src="{{- image.src() -}}"
+        data-srcset="{{- image.srcset() -}}"
+        sizes="100vw"
+        alt="{{- values.alt -}}"
+        class="object-cover lazyload">
+		</div>
+	</figure>
+{% endspaceless %}

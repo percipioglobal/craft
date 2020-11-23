@@ -1,5 +1,10 @@
-// import our css
-import '../css/app.pcss';
+// Import our CSS
+import '../css/tailwind-base.pcss';
+import '../css/app-base.pcss';
+import '../css/tailwind-components.pcss';
+import '../css/app-components.pcss';
+import '../css/tailwind-utilities.pcss';
+import '../css/app-utilities.pcss';
 
 import { createStore } from './stores/store.js';
 import { createLoadingState } from './utils/wait.js';
@@ -31,13 +36,16 @@ dom.watch({
 // App main
 const main = async () => {
     // Async load the vue module
-    const { createApp, defineAsyncComponent } = await import(/* webpackChunkName: "vue" */ 'vue');
+    const [ Vue, Lazysizes ] = await Promise.all([
+        import(/* webpackChunkName: "vue" */ 'vue'),
+        import(/* webpackChunkName: "lazysizes" */ 'lazysizes'),
+    ])
 
     const store = await createStore(Vue.default);
     const wait = await createLoadingState(Vue.default);
 
     // Create our vue instance
-    const app = createApp({
+    const app = new Vue.default({
         el: "#page-container",
         store,
         wait,
