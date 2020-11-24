@@ -1,4 +1,4 @@
-# percipioglobal/craft Change Log
+# Go-live checklist
 
 ### Code
 - [ ] Telephone numbers are clickable with "tel:"
