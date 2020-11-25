@@ -20,6 +20,7 @@
 - Updated all the builders to match op with the new eagerBeaver
 - Updated _organisms/entry-types/page--content with the meta in comment
 - Updated css/utilities/aspect-ratios with basic styling to fit the image and added isFilled
+- Updated the config/seomatic-config according to our company info
 
 ## 1.3.1 - Unreleased
 
