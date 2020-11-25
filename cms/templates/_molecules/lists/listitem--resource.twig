@@ -1,15 +1,15 @@
-{% import '_macros/atoms' as atom %}
+{% import '_macros/atoms' as render %}
 {% import '_macros/utilities' as utility %}
 
 {%- minify -%}
 <a class="group border-t border-gray-100 flex justify-between py-8 w-full hover:border-gray-300" href="{{- content.target[0].url -}}">
     <div class="relative">
         <h4 class="text-orange-500 text-base sm:text-4xl group-hover:text-orange-300 trans-button">
-            {{- atom.title(content.label) -}}
+            {{- render.atom('text', 'content', { content: content.label }) -}}
         </h4>
 
         <span class="font-normal text-sm text-gray-500">
-            {{- atom.text(content.description) }} [{{- content.target[0].size | filesize(1) }} {{ resource.target[0].kind | lower }}]
+            {{- render.atom('text', 'content', { content: content.description }) -}} [{{- content.target[0].size | filesize(1) }} {{ resource.target[0].kind | lower }}]
         </span>
     </div>
 

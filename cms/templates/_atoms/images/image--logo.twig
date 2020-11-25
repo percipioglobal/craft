@@ -7,15 +7,17 @@
 #}
 
 {% set values = {
+    svg: options.svg ??? options.placeholders.brandingPlaceholder[0],
     type: options.type ??? "logo",
+    url: options.url ??? alias('@web') ~ '/',
+    title: options.title ??? "",
     style: options.styling ??? "",
 } %}
 
 {# Render Logo #}
 
-{% spaceless %}
-	{% set logo = type == 'logo' ? brand.logo.one() : brand.icon.one() %}
-	<a href="{{- alias('@web') ~ '/' -}}" class="block relative z-1 {{ type == 'logo' ? 'w-48 h-6' : 'w-12 h-12' -}}  {{values.style}">
-		{{ svg(logo) }}
+{%- minify -%}
+	<a href="{{- values.url -}}" class="block relative z-1" title="{{- values.title -}}">
+        {{- swatch ? svg(values.svg) : svg(values.svg, sanitize=true)|attr({ class: values.style }) -}}
 	</a>
-{% endspaceless %}
+{%- minify -%}

@@ -3,6 +3,8 @@
     ---------------
 
     buttons: (OBJ) -- Parse in an object that contains all buttons.
+    type: (STR) -- Use this to include the type of button we have - defaults to primary.
+    utilities: (STR) -- Add utility classes to the group ( optional )
 
 #}
 
@@ -10,17 +12,18 @@
 
 {% set values = {
     buttons: options.buttons ??? null,
+    type: options.type ??? 'primary',
+    utilities: options.utilities ??? null,
 } %}
 
 {%- minify -%}
 
-    <div class="my-4">
+    <div class="my-4 {{ values.utilities ? values.utilities : '' -}}">
         {%- if values.buttons -%}
             {%- for button in values.buttons -%}
-                {{- render.atom('button', 'primary', {
+                {{- render.atom('button', values.type, {
                     url: button.target.getUrl(),
                     text: button.target.getText(),
-                    utility: not loop.last ? 'mr-4' : '',
                 }) -}}
             {%- endfor -%}
         {%- endif -%}

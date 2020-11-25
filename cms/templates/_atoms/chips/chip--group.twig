@@ -1,0 +1,34 @@
+{# 
+    ### OPTIONS ###
+    ---------------
+
+    chips: (OBJ) -- Parse in an object that contains all chips.
+    colors: (OBJ) -- color object with primary and secondary class names. ( optional )
+    type: (STR) -- Use this to include the type of chip we have - defaults to primary.
+    utilities: (STR) -- Add utility classes to the group ( optional )
+
+#}
+
+{% import '_macros/atoms' as render %}
+
+{% set values = {
+    chips: options.chips ??? null,
+    colors: options.colors ??? null,
+    type: options.type ??? 'primary',
+    utilities: options.utilities ??? null,
+} %}
+
+{%- minify -%}
+
+    <div class="my-4 {{ values.utilities ? values.utilities : '' -}}">
+        {%- if values.chips -%}
+            {%- for chip in values.chips -%}
+                {{- render.atom('chip', values.type, {
+                    text: chip.title,
+                    colors: values.colors,
+                }) -}}
+            {%- endfor -%}
+        {%- endif -%}
+    </div>
+
+{%- endminify -%}

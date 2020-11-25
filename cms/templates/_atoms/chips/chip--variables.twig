@@ -2,19 +2,23 @@
     ### OPTIONS ###
     ---------------
 
-    url: (STR) -- the url for the button
     text: (STR) -- the text for the button
+    url: (STR) -- the url for the button ( optional )
     icon: (STR) -- the icon for the button ( optional )
-    utlities: (STR) -- the button utility from TW for the last button in the loop
+    utlities: (STR) -- the specific TW spacing utilities to add
+    colors: (OBJ) -- the button utility from TW for the last button in the loop
 
 #}
 
 {% set values = {
-    url: options.url ??? null,
+
     text: options.text ??? '',
+    url: options.url ??? null,
     icon: options.icon ??? null,
     utilities: options.utilities ??? null,
+    colors: options.colors ??? null,
+
 } %}
 
-{% block button %}
+{% block chip %}
 {% endblock %}

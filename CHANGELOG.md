@@ -5,6 +5,21 @@
 - Made docker more performant
 - Updated webpack 5
 - Added go-live checklist
+- Added _macros/functions and moved function from _macros/utilities over
+- Added _atoms/buttons (cta, group, primary, secondary, tertiary and variables) to add global button styling and grouping of buttons
+- Added _atoms/chips (group, skills and variables) to add global label like components and group those labels
+- Added _atoms/dates (variables)
+- Expanded _atoms/images with partner to add branding partners
+- Updated _atoms/images (article, cover, hero, logo, profile, teaser and variables) to make it more intuitive and better parsing of variables
+- Added _atoms/links (home and partner)
+- Added _atoms/texts (standfirst and variables) to make it more intuitive
+- Added placeholders to the global variables
+- Added custom cookie
+- Updated _molecules/cards/card--highlight to match up with the atoms
+- Added _molecules/images/image--gallery for a basic masonry two gridded gallery
+- Updated all the builders to match op with the new eagerBeaver
+- Updated _organisms/entry-types/page--content with the meta in comment
+- Updated css/utilities/aspect-ratios with basic styling to fit the image and added isFilled
 
 ## 1.3.1 - Unreleased
 

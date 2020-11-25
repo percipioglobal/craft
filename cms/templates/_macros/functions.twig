@@ -1,0 +1,13 @@
+{# Formats all dates accordingly #}
+{% macro format_date(date) %}
+    {% spaceless %}
+        {{- date | date('j F, Y') -}}
+    {% endspaceless %}
+{% endmacro %}
+
+{# Enter a date to show time ago in human readable form #}
+{% macro time_ago(date) %}
+    {% spaceless %}
+        {{- craft.app.formatter.asRelativeTime(date) -}}
+    {% endspaceless %}
+{% endmacro %}

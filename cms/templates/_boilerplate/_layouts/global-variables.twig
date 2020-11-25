@@ -18,6 +18,12 @@
 {% set baseUrl = alias('@web') ~ '/' %}
 {% set gaTrackingId = getenv('GA_TRACKING_ID') %}
 
+{%- set placeholder = craft.globalSets()
+    .handle('placeholders')
+    .with(['articlePlaceholder', 'photoCoverPlaceholder', 'profilePhotoPlaceholder', 'sliderPlaceholder', 'teaserPlaceholder', 'heroPlaceholder', 'brandingPlaceholder'])
+    .one()
+-%}
+
 {# -- Twig output from the render; this must be in a block -- #}
 {% block htmlPage %}
 {% endblock %}
