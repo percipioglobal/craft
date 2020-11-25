@@ -2,8 +2,8 @@
     content: entry,
 } -%}
 
-{%- include '_organisms/builders/content--builder' with { 
-    content: entry, 
+{%- include '_organisms/builders/content--builder' with {
+    content: entry,
 } -%}
 
 {%- set news = craft.entries.section('news').id(['not', entry.id]).with(['teaserImage', 'newsCategory']).all() -%}

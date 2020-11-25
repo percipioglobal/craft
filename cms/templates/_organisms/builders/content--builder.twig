@@ -1,4 +1,5 @@
 {% do craft.eagerBeaver.eagerLoadElements(entry, [
+    'contentBuilder',
     'highlightCards:cards',
     'sectionHeader:buttons',
     'singleImage:image',
@@ -10,15 +11,21 @@
     ]) 
 %}
 
-<div class="container max-w-screen-xl mx-auto">
+<article class="container max-w-screen-xl mx-auto">
     
     {%- minify -%}
-        {%- for block in content.contentBuilder.all() -%}
+        {%- for block in content.contentBuilder -%}
             {%- switch block.type -%}
                 
                 {%- case "article" -%}
                     
                     {%- include '_molecules/content/content--article' ignore missing with {
+                        content: block,
+                    } -%}
+
+                {%- case "standfirst" -%}
+                    
+                    {%- include '_molecules/content/content--standfirst' ignore missing with {
                         content: block,
                     } -%}
                 
@@ -76,4 +83,4 @@
         {%- endfor -%}
     {%- endminify -%}
 
-</div>
+</article>

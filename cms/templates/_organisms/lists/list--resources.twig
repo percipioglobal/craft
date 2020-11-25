@@ -2,7 +2,7 @@
 <section class="container mx-auto px-4 pt-10 md:pt-12 sm:pb-8">
 
     {%- for resource in content.resources.all() -%}
-        
+
         {%- include '_molecules/lists/listitem--resource' ignore missing with {
             content: resource,
         } -%}

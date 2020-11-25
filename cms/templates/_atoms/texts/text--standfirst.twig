@@ -1,0 +1,19 @@
+{# 
+    ### OPTIONS ###
+    ---------------
+
+    content: (STR) -- the actual content as a string
+
+#}
+
+{% set values = {
+    content: options.content ??? '',
+} %}
+
+{# Render Title #}
+
+{% spaceless %}
+    <div class="text-lg font-bold mb-8">
+        {{- values.content | typogrify(true) -}}
+    </div>
+{% endspaceless %}
