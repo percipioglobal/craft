@@ -1,42 +1,41 @@
-.img {
-  @apply block relative;
+.isFilled,
+.is1by1,
+.is2by1,
+.is3by1,
+.is4by3,
+.is3by4,
+.is7by5,
+.is16by9,
+.is21by9 {
+  @apply
+    overflow-hidden;
+}
 
-  img {
-    @apply block h-auto w-full;
-  }
-
-  &.is1by1,
-  &.is2by1,
-  &.is3by1,
-  &.is4by3,
-  &.is3by4,
-  &.is7by5,
-  &.is16by9,
-  &.is21by9 {
-    @apply
-      overflow-hidden;
-  }
-
-  &.is1by1 img,
-  &.is2by1 img,
-  &.is3by1 img,
-  &.is4by3 img,
-  &.is3by4 img,
-  &.is7by5 img,
-  &.is16by9 img,
-  &.is21by9 img {
-    @apply
-      absolute
-      h-full
-      w-full
-      top-0
-      left-0
-      object-cover;
-  }
-
+.isFilled > img,
+.is1by1 > img,
+.is2by1 > img,
+.is3by1 > img,
+.is4by3 > img,
+.is3by4 > img,
+.is7by5 > img,
+.is16by9 > img,
+.is21by9 > img {
+  @apply
+    absolute
+    h-full
+    w-full
+    top-0
+    left-0
+    object-cover;
 }
 
 @responsive {
+
+  .isFilled {
+    @apply
+      h-full
+      w-full;
+  }
 
   .is1by1 {
     padding-top: 100%;
