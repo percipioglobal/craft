@@ -39,6 +39,7 @@
 - [ ] Favicon is added
 - [ ] Error pages are designed and added
 - [ ] Cookie notification is added and linked to the Privacy Policy page
+- [ ] Old browser notification is added
 - [ ] Shareble links (Facebook, Linkedin, Twitter, ...) are tested
 - [ ] The F/E is being checked by the designer
 - [ ] Retour plugin is set to redirect old urls
