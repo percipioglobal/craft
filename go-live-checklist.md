@@ -24,6 +24,7 @@
 - [ ] Buddy.yml is set correctly
 - [ ] data-tag-[category|action|labelvalue] tags added to downloads/forms for GA
 - [ ] Does the app use localStorage
+- [ ] AMP templates are added
 
 ### Code - CMS
 - [ ] All forms are propertly validated and user-friendly validated
@@ -94,5 +95,6 @@
 - [ ] Styling is according to the brand guideline
 - [ ] Testing the json ld is set correctly [https://search.google.com/structured-data/testing-tool/u/0/?hl=en](https://search.google.com/structured-data/testing-tool/u/0/?hl=en)
 - [ ] Doing a global SEO audit
+- [ ] AMP is working
 
 Brought to you by [Percipio.London](https://percipio.london/)
