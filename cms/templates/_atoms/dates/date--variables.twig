@@ -1,0 +1,22 @@
+{# 
+    ### OPTIONS ###
+    ---------------
+
+    date: (DateTime) -- The Date/Time Object to parse
+    text: (STR) -- the text for the date entry ( optional )
+    icon: (STR) -- the icon for the date entry ( optional )
+    position: (STR) -- append/prepend default: prepend ( optional )
+    utlity: (STR) -- the utilities from TW to apply on the container
+
+#}
+
+{% set values = {
+    date: options.date,
+    text: options.text ??? null,
+    icon: options.icon ??? null,
+    position: options.position ??? 'prepend',
+    utilities: options.utilities ??? null,
+} %}
+
+{% block date %}
+{% endblock %}

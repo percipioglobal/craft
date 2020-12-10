@@ -44,7 +44,7 @@ fields:
               - Download
             -
               - value
-              - 'fas fa-download-cloud-alt'
+              - 'fas fa-cloud-download-alt'
             -
               - default
               - ''

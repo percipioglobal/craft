@@ -1,7 +1,18 @@
-{# Date #}
-{% macro formatDate(date) %}
+{# Margin Position #}
+{% macro position(content) %}
     {% spaceless %}
-        {{- date | date('d.m.Y') -}}
+        {%- switch content.position -%}
+
+            {%- case "center" -%}
+                mx-auto
+
+            {%- case "left" -%}
+                mr-auto
+
+            {%- case "right" -%}
+                ml-auto
+
+        {%- endswitch -%}
     {% endspaceless %}
 {% endmacro %}
 
@@ -20,7 +31,7 @@
                     <i class="far fa-file-pdf"></i>
 
                 {% case 'xlsx' or 'xls' %}
-                    <i class="far fa-file-excel"></i>
+                    <i class="far fa-file-spreadsheet"></i>
 
                 {% case 'docx' or 'doc' %}
                     <i class="far fa-file-word"></i>
@@ -34,23 +45,5 @@
                 {% endswitch %}
             </span>
         {% endif %}
-    {% endspaceless %}
-{% endmacro %}
-
-{# Margin Position #}
-{% macro position(content) %}
-    {% spaceless %}
-        {%- switch content.position -%}
-
-            {%- case "center" -%}
-                mx-auto
-
-            {%- case "left" -%}
-                mr-auto
-
-            {%- case "right" -%}
-                ml-auto
-
-        {%- endswitch -%}
     {% endspaceless %}
 {% endmacro %}

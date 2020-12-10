@@ -4,7 +4,7 @@
 
     {%- minify -%}
 
-        <a {{ values.url ? 'href="' ~ values.url ~ '"': '' }} class="inline-flex {{ values.utility ? values.utility : '' -}}">
+        <a {{ values.url ? 'href="' ~ values.url ~ '"': '' }} class="inline-flex {{ values.utilities ? values.utilities : '' -}}">
             {{- values.text -}}
         </a>
 

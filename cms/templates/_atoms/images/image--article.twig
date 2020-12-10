@@ -1,40 +1,76 @@
+{% extends "_atoms/images/image--variables" %}
+
 {#
     ### OPTIONS ###
     ---------------
 
-    image: (IMAGE OBJECT) -- pass trough the image from craft
-    alt: (STR) -- brief description of the image
-    ratio: (STR) -- Tailwind css class for ratio
-    caption: (STR) -- Caption added underneath the image
-    author: (STR) -- Add author to caption
-    source: (STR) -- Add source to caption
+    ## INHERITED
+
+    image: (OBJ) -- Pass through the image object
+    sizes: (ARR) -- sizes array for responsive images
+    alt: (STR) -- The alt text
+    ratio: (STR) -- Give the aspect ratio in the correct format eg. is1by1 / is16by9 ( optional )
+    caption: (STR) -- The caption text ( optional )
+    author: (STR) -- The author of the image ( optional )
+    source: (STR) -- The image source ( optional )
+
+    ## ADDED
+
+    optimized: (OBJ) -- Add the image optimized field to the atom
+    placeholder: (OBJ) --- Add the placeholder image to the atom
+
 #}
 
-{% set values = {
-    image: options.image ??? null,
-    alt: options.alt ??? '',
-    ratio: options.ratio ??? null,
-    caption: options.caption ??? null,
-    author: options.author ??? null,
-    source: options.source ??? null,
-    style: options.styling ??? "",
-} %}
-
-{# Render Teaser #}
-
 {% import '_macros/atoms' as render %}
-{% set image = values.image.optimizeArticles %}
-{% spaceless %}
-	<figure role="figure" aria-labelledby="{{- values.alt ~ '-' ~ values.image.id -}}" class="w-full h-full {{values.style}}">
-		<div class="img {{ values.ratio -}}">
-			<img src="{{- image.placeholderImage() -}}"
-                data-src="{{- image.src() -}}"
-                data-srcset="{{- image.srcset() -}}"
-                sizes="100vw" alt="{{- values.alt -}}"
-                class="object-cover lazyload">
-		</div>
-		{% if values.caption %}
-       {{- render.atom('text', 'caption', { content: values.caption, author: values.author, source: values.source, id: values.alt ~ '-' ~ values.image.id }) -}}
-		{% endif %}
-	</figure>
-{% endspaceless %}
+
+{% block image %}
+
+    {%- set values = values|merge({
+        optimized: options.image.optimizeArticles ??? null,
+        placeholder: options.placeholders.articlePlaceholder[0].optimizeArticles ??? null
+    }) -%}
+
+    {%- minify -%}
+
+        <figure role="figure" aria-labelledby="{{- values.alt ~ '-' ~ values.image.id -}}" class="w-full h-full">
+
+            <picture class="block relative {{ values.ratio -}}">
+
+                <source data-srcset="{{- values.optimized.srcsetWebP() ??? values.placeholder.srcsetWebP() -}}"
+                        sizes="{%- for size in values.sizes -%}{{- not loop.last ? size ~ ',' : size -}}{%- endfor -%}"
+                        type="image/webp"
+                />
+
+                <source data-srcset="{{- values.optimized.srcset() ??? values.placeholder.srcset() -}}"
+                        sizes="{%- for size in values.sizes -%}{{- not loop.last ? size ~ ',' : size -}}{%- endfor -%}"
+                />
+
+                <img
+                        src="{{- values.optimized.placeholderImage() -}}"
+                        data-src="{{- values.optimized.src() -}}"
+                        data-srcset="{{- values.optimized.srcset() ??? values.placeholder.srcset() -}}"
+                        sizes="{%- for size in values.sizes -%}{{- not loop.last ? size ~ ',' : size -}}{%- endfor -%}"
+                        class="lazyload"
+                        loading="lazy"
+                        alt="{{- values.alt -}}"
+
+                />
+
+            </picture>
+
+            {% if values.caption %}
+
+                {{- render.atom('text', 'caption', {
+                    caption: values.caption,
+                    author: values.author,
+                    source: values.source,
+                    id: values.alt ~ '-' ~ values.image.id,
+                }) -}}
+
+            {% endif %}
+
+        </figure>
+
+    {%- endminify -%}
+
+{%- endblock -%}

@@ -1,10 +1,11 @@
-{%- import '_macros/atoms' as atom -%}
+{%- import '_macros/atoms' as render -%}
+{%- import '_macros/utilities' as utilities -%}
 
 {# Eager Load categories based on entry types #}
 {%- if entry.type == 'news' -%}
     {%- do craft.eagerBeaver.eagerLoadElements(entry, [
         'newsCategory'
-        ]) 
+        ])
     -%}
 {%- endif -%}
 
@@ -17,26 +18,30 @@
     <div class="relative w-full border-b-4 border-gray-300">
 
         <div class="mb-8">
-            {{- atom.teaser_image(teaserImage, teaserImage.title) -}}
+            {{- render.atom('image', 'teaser', {
+                image: teaserImage,
+                alt:teaserImage.title  }) -}}
         </div>
 
         <div class="flex items-center text-left mb-8">
             {% if entry.type == 'news' %}
                 <div class="flex-shrink-0 h-16 w-16 mr-3">
-                    {{- atom.profile_image(userImage, entry.author) -}}
+                    {{- render.atom('image', 'profile', {
+                        image: userImage,
+                        alt:entry.author  }) -}}
                 </div>
             {% endif %}
 
             <div>
                 <h4 class="text-4xl font-secondary font-normal leading-normal">
                     <a href="{{- content.url -}}">
-                        {{- atom.text(content.title) -}}
+                        {{- render.atom('text', 'content', { content: content.title }) -}}
                     </a>
                 </h4>
-                
+
                 <span class="text-xs leading-tight text-gray-500 lowercase">
                     {# Need to add the themes, not just categories, currently only supports one category, create categories atom #}
-                    <p class="text-xs font-bold uppercase tracking-wide leading-normal mb-4">{{- content.newsCategory[0].title ?? 'No Category' }} - {{- atom.formatDate(content.postDate) -}}</p>
+                    <p class="text-xs font-bold uppercase tracking-wide leading-normal mb-4">{{- content.newsCategory[0].title ?? 'No Category' }} - {{- utilities.formatDate(content.postDate) -}}</p>
                 </span>
             </div>
         </div>
@@ -46,10 +51,10 @@
 
             <a href="{{- url(alias('@web/' ~ content.uri)) -}}" class="absolute block top-0 left-0 h-full w-full z-1">
                 <span class="sr-only">
-                    {{- "Discover" | t }} {{ atom.text(content.title) }} {{ content.newsCategory.one().title ?? '' -}}
+                    {{- "Discover" | t }} {{- render.atom('text', 'content', { content: content.title }) -}} {{ content.newsCategory.one().title ?? '' -}}
                 </span>
             </a>
-        
-        </div>               
+
+        </div>
     </div>
 {%- endminify -%}

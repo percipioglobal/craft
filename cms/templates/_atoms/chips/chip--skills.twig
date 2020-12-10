@@ -1,0 +1,13 @@
+{% extends "_atoms/chips/chip--variables" %}
+
+{% block chip %}
+
+    {%- minify -%}
+
+        <span class="inline-block mb-2 bg-white-100 px-4 py-1 font-mono lowercase text-sm rounded-full text-{{- values.colors.primary }} {{ values.utilities ? values.utilities : '' -}}">
+            {{- values.text -}}
+        </span>
+
+    {%- endminify -%}
+
+{% endblock %}

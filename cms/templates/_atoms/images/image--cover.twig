@@ -27,7 +27,7 @@
 
     {%- set values = values|merge({
         optimized: options.image.optimizeCovers ??? null,
-        placeholder: placeholder.photoCoverPlaceholder[0].optimizeCovers ??? null
+        placeholder: options.placeholders.photoCoverPlaceholder[0].optimizeCovers ??? null
     }) -%}
 
     {%- minify -%}
@@ -45,10 +45,15 @@
                         sizes="{%- for size in values.sizes -%}{{- not loop.last ? size ~ ',' : size -}}{%- endfor -%}"
                 />
 
-                <img    class="lazyload object-cover"
-                        loading="lazy"
+                <img    
+                        src="{{- values.optimized.placeholderImage() -}}"
+                        data-src="{{- values.optimized.src() -}}" 
+                        data-srcset="{{- values.optimized.srcset() ??? values.placeholder.srcset() -}}"
+                        sizes="{%- for size in values.sizes -%}{{- not loop.last ? size ~ ',' : size -}}{%- endfor -%}"
+                        class="lazyload"        
+                        loading="lazy"    
                         alt="{{- values.alt -}}"
-                        src="{{- values.optimized.placeholderImage() ??? values.placeholder.placeholderImage() -}}"
+                        
                 />
 
             </picture>

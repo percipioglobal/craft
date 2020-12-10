@@ -12,6 +12,9 @@ module.exports = {
     entry: {
         'app': [
             '../src/js/app.ts',
+            '../src/css/tailwind-base.pcss',
+            '../src/css/tailwind-components.pcss',
+            '../src/css/tailwind-utilities.pcss',
             '../src/css/app-base.pcss',
             '../src/css/app-components.pcss',
             '../src/css/app-utilities.pcss',

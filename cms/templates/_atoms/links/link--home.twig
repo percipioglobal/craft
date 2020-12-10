@@ -1,0 +1,23 @@
+{% if options.swatch %}
+    {% set logo %}
+        {% include '_atoms/svgs/svg--logo.svg' with { swatch: options.swatch } %}
+    {% endset %}
+{% endif %}
+
+{% set values = {
+    url: options.url,
+    title: options.title ?? '',
+    logo: options.swatch ? logo : options.logo ??? options.placeholder.brandingPlaceholder[0],
+    utilities: options.utilities ?? '',
+} %}
+
+{% set svg = options.swatch ? values.logo : svg(values.logo, sanitize = true) %}
+
+<a 
+    href="{{- values.url -}}"
+    title="{{- values.title -}}"
+>
+
+    {{- svg | attr({ class: values.utilities }) -}}
+
+</a>

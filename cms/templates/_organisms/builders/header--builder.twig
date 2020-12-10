@@ -1,15 +1,15 @@
 {% do craft.eagerBeaver.eagerLoadElements(entry, [
-    'sectionHeader:buttons',
-    ]) 
+    'sectionHeader.buttons',
+    ])
 %}
-    
+
 {%- minify -%}
     {%- for block in content.headerBuilder.all() -%}
-            
+
         {%- switch block.type -%}
-            
+
             {%- case 'heroContent' -%}
-                
+
                 {%- include '_organisms/heroes/hero--content' ignore missing with {
                     content: block,
                 } -%}
@@ -27,6 +27,6 @@
                 } -%}
 
         {%- endswitch -%}
-            
+
     {%- endfor -%}
 {%- endminify -%}
