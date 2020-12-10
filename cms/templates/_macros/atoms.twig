@@ -16,10 +16,3 @@
         } %}
     {% endspaceless %}
 {% endmacro %}
-
-{# Date #}
-{% macro formatDate(date) %}
-    {% spaceless %}
-        {{- date | date('d.m.Y') -}}
-    {% endspaceless %}
-{% endmacro %}

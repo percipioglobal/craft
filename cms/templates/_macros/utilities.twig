@@ -1,18 +1,7 @@
-{# Margin Position #}
-{% macro position(content) %}
+{# Date #}
+{% macro formatDate(date) %}
     {% spaceless %}
-        {%- switch content.position -%}
-
-            {%- case "center" -%}
-                mx-auto
-
-            {%- case "left" -%}
-                mr-auto
-
-            {%- case "right" -%}
-                ml-auto
-
-        {%- endswitch -%}
+        {{- date | date('d.m.Y') -}}
     {% endspaceless %}
 {% endmacro %}
 
@@ -45,5 +34,23 @@
                 {% endswitch %}
             </span>
         {% endif %}
+    {% endspaceless %}
+{% endmacro %}
+
+{# Margin Position #}
+{% macro position(content) %}
+    {% spaceless %}
+        {%- switch content.position -%}
+
+            {%- case "center" -%}
+                mx-auto
+
+            {%- case "left" -%}
+                mr-auto
+
+            {%- case "right" -%}
+                ml-auto
+
+        {%- endswitch -%}
     {% endspaceless %}
 {% endmacro %}

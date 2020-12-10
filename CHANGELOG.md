@@ -1,6 +1,12 @@
 # percipioglobal/craft Change Log
 
-## 1.3.1 - Unreleased 
+## 1.3.2 - Unreleased
+
+- Made docker more performant
+- Updated webpack 5
+- Added go-live checklist
+
+## 1.3.1 - Unreleased
 
 - Made docker more performant
 - Added queue shell script
@@ -55,7 +61,7 @@
 - Added `typogrify.php` config file [#23](https://github.com/percipioglobal/craft/issues/23)
 
 ### Changed
-- Updated twig tags to discard whitespace in image atoms 
+- Updated twig tags to discard whitespace in image atoms
 - Updated `Simple.json` redactor config to give the user more control over their content [#22](https://github.com/percipioglobal/craft/issues/22)
 - Updated `Content.json` redactor config to give the user more control over their content [#18](https://github.com/percipioglobal/craft/issues/18)
 - Improved field order on resources block [#21](https://github.com/percipioglobal/craft/issues/21)
@@ -76,11 +82,11 @@
 
 ### Added
 - Vuex Persisted State
-- Vuex Shared Mutations 
+- Vuex Shared Mutations
 
 ### Fixed
 - Fixed missing Fort-Awesome Packages
-- Fixed missing Vue-Wait package 
+- Fixed missing Vue-Wait package
 
 ## 1.2.0 - 14-07-2020
 
