@@ -1,0 +1,16 @@
+#!/bin/bash
+exec < /dev/tty
+
+# Get the current branch name
+branch_name=$(git branch | grep "*" | sed "s/\* //")
+
+# Get the name of the branch that was just merged
+reflog_message=$(git reflog -1)
+merged_branch_name=$(echo $reflog_message | cut -d" " -f 4 | sed "s/://")
+
+# Begin output
+echo " "
+echo "You've just merged the branch \"$merged_branch_name\" into \"$branch_name\". "
+echo "Project Config changes are being applied"
+
+docker-compose exec php ./craft project-config/apply
