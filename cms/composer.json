@@ -21,7 +21,7 @@
     "require": {
         "angellco/spoon": "^3.3.3",
         "craftcms/aws-s3": "^1.2",
-        "craftcms/cms": "^3.5.0",
+        "craftcms/cms": "^3.5.16",
         "craftcms/feed-me": "^4.2.0",
         "craftcms/redactor": "^2.1.0",
         "craftcms/mailgun": "1.4.3",
@@ -35,7 +35,7 @@
         "nystudio107/craft-retour": "^3.0.0",
         "nystudio107/craft-seomatic": "^3.2.0",
         "nystudio107/craft-webperf": "^1.0.0",
-        "nystudio107/craft-twigpack": "^1.2.0",
+        "nystudio107/craft-twigpack": "^1.2.9",
         "percipioglobal/craft-notifications": "^1.1.1",
         "percipioglobal/craft-password-policy": "^1.0.0",
         "putyourlightson/craft-blitz-recommendations": "^1.1",
@@ -44,6 +44,9 @@
         "verbb/super-table": "^2.1.0",
         "vlucas/phpdotenv": "^3.4.0",
         "yiisoft/yii2-redis": "^2.0.6"
+    },
+    "require-dev": {
+        "yiisoft/yii2-shell": "^2.0.3"
     },
     "autoload": {
         "psr-4": {
