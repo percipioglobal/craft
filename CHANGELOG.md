@@ -2,6 +2,8 @@
 
 ## 1.4.0 - Unreleased
 
+- Bugfix: added Teaser optimized to the Teaser asset volume
+
 ## 1.3.2 - Unreleased
 
 - Made docker more performant
