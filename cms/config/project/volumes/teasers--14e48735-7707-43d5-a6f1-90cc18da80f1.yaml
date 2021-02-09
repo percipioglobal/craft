@@ -2,15 +2,63 @@ fieldLayouts:
   c341cf32-8aa7-456c-9a0f-7f06c63a1575:
     tabs:
       -
-        fields:
-          6962a9b1-b802-4295-82b1-398470a9f54c:
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\AssetTitleField
+            warning: null
+            width: 100
+          -
+            fieldUid: 6962a9b1-b802-4295-82b1-398470a9f54c
+            instructions: null
+            label: null
             required: false
-            sortOrder: 1
-          dcdd5839-4bb5-4669-8d82-d46ec4da660a:
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: dcdd5839-4bb5-4669-8d82-d46ec4da660a
+            instructions: null
+            label: null
             required: false
-            sortOrder: 2
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
         name: Metadata
         sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: 35a1d959-d78e-4445-891c-7bb671c48281
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: 'Optimized Images'
+        sortOrder: 2
 handle: teasers
 hasUrls: true
 name: Teasers
@@ -28,6 +76,8 @@ settings:
   secret: $S3_SECRET
   storageClass: ''
   subfolder: teasers
-sortOrder: 2
+sortOrder: 0
+titleTranslationKeyFormat: null
+titleTranslationMethod: null
 type: craft\awss3\Volume
 url: $CLOUDFRONT_URL
