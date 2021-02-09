@@ -1,4 +1,4 @@
-dateModified: 1600163229
+dateModified: 1612892008
 email:
   fromEmail: $SYSTEM_EMAIL
   fromName: $SENDER_NAME
@@ -29,7 +29,7 @@ plugins:
     schemaVersion: 1.0.0
   feed-me:
     enabled: true
-    schemaVersion: 2.1.2
+    schemaVersion: 4.3.0
   image-optimize:
     edition: standard
     enabled: true
@@ -89,7 +89,7 @@ plugins:
   navigation:
     edition: standard
     enabled: true
-    schemaVersion: 1.0.19
+    schemaVersion: 1.0.21
     settings:
       bypassProjectConfig: false
       pluginName: Navigation
@@ -209,5 +209,5 @@ system:
   edition: pro
   live: true
   name: Craft
-  schemaVersion: 3.5.13
+  schemaVersion: 3.6.1
   timeZone: Europe/London
