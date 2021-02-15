@@ -1,6 +1,6 @@
 {# Margin Position #}
-{% macro position(content) %}
-    {% spaceless %}
+{%- macro position(content) -%}
+    {%- spaceless -%}
         {%- switch content.position -%}
 
             {%- case "center" -%}
@@ -13,37 +13,5 @@
                 ml-auto
 
         {%- endswitch -%}
-    {% endspaceless %}
-{% endmacro %}
-
-{# File Icons #}
-{% macro file_icon(type, icon = 'no-icon', classes = null) %}
-    {% spaceless %}
-        {% if icon != 'fileIcon' %}
-            <span class="icon {{ classes -}}">
-                <i class="{{ icon }}"></i>
-            </span>
-        {% else %}
-            <span class="icon {{ classes -}}">
-                {%- switch type | lower -%}
-
-                {% case 'pdf' %}
-                    <i class="far fa-file-pdf"></i>
-
-                {% case 'xlsx' or 'xls' %}
-                    <i class="far fa-file-spreadsheet"></i>
-
-                {% case 'docx' or 'doc' %}
-                    <i class="far fa-file-word"></i>
-
-                {% case 'pptx' or 'ppt' %}
-                    <i class="far fa-file-powerpoint"></i>
-
-                {% case 'zip' %}
-                    <i class="far fa-file-archive"></i>
-
-                {% endswitch %}
-            </span>
-        {% endif %}
-    {% endspaceless %}
-{% endmacro %}
+    {%- endspaceless -%}
+{%- endmacro -%}

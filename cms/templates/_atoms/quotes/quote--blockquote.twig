@@ -1,6 +1,6 @@
-{% extends "_atoms/quotes/quote--variables" %}
+{%- extends "_atoms/quotes/quote--variables" -%}
 
-{# 
+{#
     ### OPTIONS ###
     ---------------
 
@@ -9,22 +9,26 @@
 
 #}
 
-{% import '_macros/atoms' as render %}
+{%- import '_macros/atoms' as render -%}
 
-{% block quote %}
+{%- block quote -%}
 
     {%- minify -%}
 
-        <blockquote {{ values.source ? 'cite="'~ values.source.getText() ~ '"' : '' }}>
+        <blockquote {{ values.source ? 'cite="'~ values.source.getText() ~ '"' : '' }} class="pt-2 relative mr-auto {{ values.position == 'right' ? ' text-right' : 'text-left' -}}">
 
-            <p>
-                {{- render.atom('text', 'content', { content: values.content }) -}}
-            </p>
+            <span class="absolute top-0 left-0 text-blue-500 text-6xl font-serif">&quot;</span>
+
+            <div class="prose md:prose-lg ml-10">
+                <p>
+                    {{- render.atom('text', 'content', { content: values.content }) -}}
+                </p>
+            </div>
 
             {%- if values.source -%}
 
-                <footer>
-                    <a href="{{- values.source.getUrl() -}}">{{- values.source.getText() -}}</a>
+                <footer class="ml-10 mt-2">
+                    <a href="{{- values.source.getUrl() -}}" class="text-blue-500">~ {{ values.source.getText() -}}</a>
                 </footer>
 
             {%- endif -%}
@@ -33,4 +37,4 @@
 
     {%- endminify -%}
 
-{% endblock %}
+{%- endblock -%}

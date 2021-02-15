@@ -1,7 +1,7 @@
 {
     "name": "percipioglobal/craft",
     "description": "Percipio's Craft CMS scaffolding for projects",
-    "version": "0.1.0",
+    "version": "1.4.0",
     "keywords": [
         "craft",
         "cms",
@@ -17,11 +17,11 @@
         "source": "https://github.com/percipioglobal/craft",
         "docs": "https://github.com/percipioglobal/craft"
     },
-    "minimum-stability": "beta",
+    "minimum-stability": "stable",
     "require": {
         "angellco/spoon": "^3.3.3",
         "craftcms/aws-s3": "^1.2",
-        "craftcms/cms": "^3.5.0",
+        "craftcms/cms": "^3.6.0",
         "craftcms/feed-me": "^4.2.0",
         "craftcms/redactor": "^2.1.0",
         "craftcms/mailgun": "1.4.3",
@@ -33,9 +33,9 @@
         "nystudio107/craft-minify": "^1.2.5",
         "nystudio107/craft-typogrify": "^1.1.4",
         "nystudio107/craft-retour": "^3.0.0",
-        "nystudio107/craft-seomatic": "^3.2.0",
+        "nystudio107/craft-seomatic": "^3.3.32",
         "nystudio107/craft-webperf": "^1.0.0",
-        "nystudio107/craft-twigpack": "^1.2.0",
+        "nystudio107/craft-twigpack": "^1.2.9",
         "percipioglobal/craft-notifications": "^1.1.1",
         "percipioglobal/craft-password-policy": "^1.0.0",
         "putyourlightson/craft-blitz-recommendations": "^1.1",
@@ -44,6 +44,9 @@
         "verbb/super-table": "^2.1.0",
         "vlucas/phpdotenv": "^3.4.0",
         "yiisoft/yii2-redis": "^2.0.6"
+    },
+    "require-dev": {
+        "yiisoft/yii2-shell": "^2.0.3"
     },
     "autoload": {
         "psr-4": {
@@ -59,9 +62,15 @@
     },
     "scripts": {
         "craft-update": [
-            "@php craft install/check && @php craft clear-caches/all || return 0",
-            "@php craft install/check && @php craft migrate/all || return 0",
-            "@php craft install/check && @php craft project-config/sync || return 0"
+            "@pre-craft-update",
+            "@post-craft-update"
+        ],
+        "pre-craft-update": [
+        ],
+        "post-craft-update": [
+            "@php craft install/check && php craft clear-caches/all --interactive=0 || exit 0",
+            "@php craft install/check && php craft migrate/all --interactive=0 || exit 0",
+            "@php craft install/check && php craft project-config/apply --interactive=0 || exit 0"
         ],
         "post-root-package-install": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""

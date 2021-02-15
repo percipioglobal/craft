@@ -3,7 +3,7 @@ fieldGroup: 1572f461-2a67-47a4-a36c-80839168bcb7
 handle: organisationPhone
 instructions: 'Enter your organisation''s phone number'
 name: 'Organisation Phone'
-searchable: true
+searchable: false
 settings:
   byteLimit: null
   charLimit: null
@@ -12,6 +12,7 @@ settings:
   initialRows: '4'
   multiline: ''
   placeholder: ''
+  uiMode: normal
 translationKeyFormat: null
 translationMethod: none
 type: craft\fields\PlainText

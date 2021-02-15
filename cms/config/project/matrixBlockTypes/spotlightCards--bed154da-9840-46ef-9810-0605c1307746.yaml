@@ -1,0 +1,85 @@
+field: e691301b-7484-40be-a3d4-c3bc590de959
+fieldLayouts:
+  c9dc96d8-5b84-4b92-87bd-23a7905d3cb6:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: d57e5f8e-8914-40a4-9743-1c213f66843a
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: fe7c86d0-397a-4931-b026-ec32fdb7933b
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  d57e5f8e-8914-40a4-9743-1c213f66843a:
+    contentColumnType: string
+    fieldGroup: null
+    handle: cards
+    instructions: 'Select a channel you want to show the latest entries from'
+    name: Cards
+    searchable: false
+    settings:
+      optgroups: true
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - News
+            -
+              - value
+              - news
+            -
+              - default
+              - '1'
+        -
+          __assoc__:
+            -
+              - label
+              - FAQ
+            -
+              - value
+              - faq
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+  fe7c86d0-397a-4931-b026-ec32fdb7933b:
+    contentColumnType: smallint(1)
+    fieldGroup: null
+    handle: limit
+    instructions: 'Set a maximum of spotlight cards you want to show. Maximum of 6'
+    name: Limit
+    searchable: false
+    settings:
+      decimals: 0
+      defaultValue: '4'
+      max: '6'
+      min: '1'
+      prefix: null
+      previewCurrency: ''
+      previewFormat: decimal
+      size: null
+      suffix: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Number
+handle: spotlightCards
+name: 'Spotlight Cards'
+sortOrder: 10

@@ -1,4 +1,4 @@
-{% extends "_atoms/texts/text--variables" %}
+{%- extends "_atoms/texts/text--variables" -%}
 
 {#
     ### OPTIONS ###
@@ -8,8 +8,8 @@
 
 #}
 
-{% block text %}
+{%- block text -%}
     {%- minify -%}
         {{- values.content | typogrify(true) -}}
     {%- endminify -%}
-{% endblock %}
+{%- endblock -%}

@@ -3,12 +3,43 @@ fieldGroup: 0dd08fc1-c043-49cb-bdcf-80521b7bd98a
 handle: navigationSettings
 instructions: 'Select in which navigational parts the menu item should display.'
 name: 'Navigation Settings'
-searchable: true
+searchable: false
 settings:
+  columns:
+    __assoc__:
+      -
+        - f4cbe95b-c71a-42f8-a9d8-464dcf3916a9
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 98769057-9c93-4e96-89ff-cb7b6a3a1188
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 74c703ba-fb2c-421f-9b09-2bd3762770de
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 6d157457-cb17-4d30-b2cd-ade98a8fdcf0
+        -
+          __assoc__:
+            -
+              - width
+              - ''
   contentTable: '{{%stc_navigationsettings}}'
   fieldLayout: row
   maxRows: ''
   minRows: ''
+  placeholderKey: null
   propagationMethod: all
   selectionLabel: ''
   staticField: ''

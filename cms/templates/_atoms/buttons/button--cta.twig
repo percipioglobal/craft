@@ -1,14 +1,36 @@
-{% extends "_atoms/buttons/button--variables" %}
+{%- extends "_atoms/buttons/button--variables" -%}
 
-{% block button %}
+{#
+    ### OPTIONS ###
+    ---------------
+
+    url: (STR) -- the url for the button
+    text: (STR) -- the text for the button
+    icon: (STR) -- the icon for the button ( optional )
+    utlities: (STR) -- the button utility from TW for the last button in the loop
+    target: (STR) -- add _blank if you want to open the button in a new window
+    gaCategory: (STR) -- add a category for GTM tracking
+    gaAction: (STR) -- add an acction to GTM. This can be click / download / submit
+    gaLabel: (STR) -- add a value to the category for GTM tracking
+#}
+
+{%- block button -%}
 
     {%- minify -%}
 
-        <a {{ values.url ? 'href="' ~ values.url ~ '"': '' }} class="inline-flex {{ values.utility ? values.utility : '' -}}">
+        <a
+            {{ values.url ? 'href="' ~ values.url ~ '"': '' }}
+            {{ values.gaCategory ? 'data-tag-category=' ~ values.gaCategory : '' }}
+            {{ values.gaAction ? 'data-tag-action=' ~ values.gaAction : '' }}
+            {{ values.gaLabel ? 'data-tag-label=' ~ values.gaLabel : '' }}
+            {{ values.target ? 'target=' ~ values.target : '' }}
+            aria-label="{{- values.text -}}"
+            class="inline-flex {{ values.utility ? values.utility : '' -}}"
+        >
             {{- values.text -}}
         </a>
 
     {%- endminify -%}
 
-{% endblock %}
+{%- endblock -%}
 

@@ -4,15 +4,15 @@
     .offset(1)
     .all() -%}
 
-{%- include '_organisms/heroes/hero--main' with {
+{%- include '_organisms/heroes/hero--main' ignore missing with {
     content: entry,
 } -%}
 
-{% if entry.lastUpdated %}
+{%- if entry.lastUpdated -%}
     {%- include '_molecules/meta/meta--edited' with {
         content: entry,
     } -%}
-{% endif %}
+{%- endif -%}
 
 <div class="container max-w-screen-hd p-8 mx-auto mt-16">
     {%- include '_organisms/cards/cards--highlight' ignore missing with {

@@ -1,0 +1,40 @@
+{%- extends "_atoms/icons/icon--variables" -%}
+
+{#
+    ### OPTIONS ###
+    ---------------
+
+    icon: (STR) -- Font awesome icon class
+    parentcss: (STR) -- Adding custom classes to wrapping span of the icon
+    iconcss: (STR) -- Adding custom classes to the icon
+    size: (STR) -- Adding size choosing between inline / xs / sm / lg / xl
+    variant: (STR) -- Adding a variant with square / circle
+    colour: (STR) -- Adding a colour to the icon
+
+#}
+
+{%- block icon -%}
+
+    {%- set sizes = {
+        'inline': 'ml-1 text-xs',
+        'xs': 'text-sm',
+        'sm': 'text-base',
+        'lg': 'text-2xl',
+        'xl': 'text-5xl',
+    } -%}
+
+    {%- set variantsIcon = {
+        'circle': 'fas fa-circle fa-stack-2x',
+        'square': 'fas fa-square-full fa-stack-2x',
+    } -%}
+
+    <span class="{{ values.parentcss }} {{ sizes[values.size] is defined ? sizes[values.size] : sizes['sm'] }} {{ values.variant != '' ? 'fa-stack' : '' }}">
+
+        {%- if values.variant != '' -%}
+            <i class="{{ variantsIcon[values.variant] is defined ? variantsIcon[values.variant] : '' }} {{ sizes[values.size] is defined ? sizes[values.size] : sizes['sm'] }} {{ values.colour }} opacity-20 group-hover:opacity-100 transition-opacity duration-200 ease-in-out"></i>
+        {%- endif -%}
+
+        <i class="{{ sizes[values.size] is defined ? sizes[values.size] : sizes['sm'] }} {{ values.variant != '' ? 'fa-stack-1x ' : '' }} {{ values.icon }} {{ values.iconcss }} {{ values.colour }} group-hover:text-white transition-colors duration-200 ease-in-out"></i>
+
+    </span>
+{%- endblock -%}

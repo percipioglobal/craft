@@ -1,4 +1,4 @@
-{% extends "_atoms/images/image--variables" %}
+{%- extends "_atoms/images/image--variables" -%}
 
 {# 
     ### OPTIONS ###
@@ -21,9 +21,9 @@
 
 #}
 
-{% import '_macros/atoms' as render %}
+{%- import '_macros/atoms' as render -%}
 
-{% block image %}
+{%- block image -%}
 
     {%- set values = values|merge({
         optimized: options.image.optimizeProfileImages ??? null,

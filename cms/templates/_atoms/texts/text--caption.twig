@@ -9,22 +9,22 @@
 
 #}
 
-{% set values = {
+{%- set values = {
 
     caption: options.caption,
     author: options.author ??? null,
     source: options.source ??? null,
     id: options.id ??? 'now'|date('U'),
 
-} %}
+} -%}
 
-{% spaceless %}
+{%- spaceless -%}
 
-    <figcaption id="{{- values.id -}}" class="text-center text-sm text-gray-500 italic">
+    <figcaption id="{{- values.id -}}" class="text-center text-base border-b-2 italic py-4 text-gray-500">
 
         {{- values.caption }}
 
-        {% if values.author and values.source -%}
+        {%- if values.author and values.source -%}
 
             &mdash;
             <a href="{{- options.source.url -}}">
@@ -40,8 +40,8 @@
 
             &mdash; {{ values.author -}}
 
-        {% endif -%}
+        {%- endif -%}
 
     </figcaption>
 
-{% endspaceless %}
+{%- endspaceless -%}

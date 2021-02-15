@@ -1,32 +1,26 @@
 {
     "buttons": [
-        "formatting",
-        "bold",
-        "italic",
-        "lists",
-        "sup",
-        "sub",
-        "link",
-        "table",
-        "html"
+    "formatting",
+    "bold",
+    "italic",
+    "lists",
+    "sup",
+    "sub",
+    "link",
+    "html"
     ],
-    "formatting": ["p", "h2", "h3", "h4"],
-    "plugins": ["counter", "table"],
-    "formattingAdd": {
-        "span": {
-        "title": "Highlight",
-        "api": "module.inline.format",
-        "args": {
-            "tag": "span",
-            "class": "text-teal-400"
-        }
-        }
-    },
+    "formatting": [
+    "p",
+    "h3",
+    "h4",
+    "h5",
+    "h6"
+    ],
+    "plugins": ["counter"],
+    "toolbarFixed": true,
     "pastePlainText": true,
     "pasteImages": false,
-    "pasteKeepStyle": ["p"],
     "spellcheck": true,
     "structure": true,
-    "source": true,
-    "toolbarFixed": true
+    "source": true
 }

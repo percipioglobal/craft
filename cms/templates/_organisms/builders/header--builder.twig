@@ -1,10 +1,13 @@
-{% do craft.eagerBeaver.eagerLoadElements(entry, [
-    'sectionHeader.buttons',
+{%- do craft.eagerBeaver.eagerLoadElements(entry, [
+    'headerBuilder',
+    'headerBuilder.heroContent:buttons',
+    'headerBuilder.heroMain:buttons',
+    'headerBuilder.heroMain:heroImage',
     ])
 %}
 
 {%- minify -%}
-    {%- for block in content.headerBuilder.all() -%}
+    {%- for block in content.headerBuilder -%}
 
         {%- switch block.type -%}
 
@@ -14,15 +17,9 @@
                     content: block,
                 } -%}
 
-            {% case "heroMain" %}
+            {%- case "heroMain" -%}
 
                 {%- include '_organisms/heroes/hero--main' ignore missing with {
-                    content: block,
-                } -%}
-
-            {% case "heroSlider" %}
-
-                {%- include '_organisms/heroes/hero--slider' ignore missing with {
                     content: block,
                 } -%}
 

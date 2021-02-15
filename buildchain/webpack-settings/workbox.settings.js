@@ -6,7 +6,7 @@ require('dotenv').config();
 // settings
 module.exports = {
     workbox: {
-        swDest: '../sw.js',
+        swDest: '../percipio.js',
         swSrc: '../src/js/service-worker.ts',
         exclude: [
             /\.(png|jpe?g|gif|svg|webp)$/i,

@@ -10,13 +10,13 @@
 
 #}
 
-{% set values = {
+{%- set values = {
     date: options.date,
     text: options.text ??? null,
     icon: options.icon ??? null,
     position: options.position ??? 'prepend',
     utilities: options.utilities ??? null,
-} %}
+} -%}
 
-{% block date %}
-{% endblock %}
+{%- block date -%}
+{%- endblock -%}

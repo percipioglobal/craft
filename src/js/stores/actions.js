@@ -1,13 +1,15 @@
 import axios from 'axios';
 import { configureXhrApi, executeXhr } from '../utils/xhr.js';
 import { configureGqlApi, executeGqlQuery } from '../utils/gql.js';
+import { NEWS_QUERY } from '../data/queries.js';
+
 
 const CSRF_ENDPOINT = '/actions/site-module/csrf/get-csrf';
 const TOKEN_ENDPOINT = '/actions/site-module/csrf/get-gql-token';
 const GRAPHQL_ENDPOINT = '/api';
 
 // Fetch & commit the CSRF token
-export const getCsrf = async({commit, state}) => {
+export const fetchCsrf = async({commit}) => {
     const api = axios.create(configureXhrApi(CSRF_ENDPOINT));
     let variables = {
     };
@@ -18,7 +20,7 @@ export const getCsrf = async({commit, state}) => {
 };
 
 // Fetch & commit the GraphQL token
-export const getGqlToken = async({commit, state}) => {
+export const fetchGqlToken = async({commit, state}) => {
     const api = axios.create(configureXhrApi(TOKEN_ENDPOINT));
     let variables = {
         ...(state.csrf && { [state.csrf.name]: state.csrf.value }),
@@ -29,18 +31,20 @@ export const getGqlToken = async({commit, state}) => {
     });
 };
 
-// Vue - Craft CMS field mapping;
-const additionalParamFields = {
-    
-};
+// Fetch the news entries 
+export const fetchNews = async({commit, state}) => {
+    const token = state.gqlToken ? state.gqlToken.token : null;
 
-// Push additional params
-const pushAdditionalParam = (state, dataFieldName, dbFieldName, additionalParams) => {
-    let fieldValue = state.searchForm ? state.searchForm[dataFieldName] || '' : '';
-    if (fieldValue.length) {
-        additionalParams.push({
-            fieldName: dbFieldName,
-            fieldValue: fieldValue,
-        });
-    }
-};
+    // Configure our API endpoint
+    const api = axios.create(configureGqlApi(GRAPHQL_ENDPOINT, token));
+
+    // Construct the variables object
+    let variables = {}
+
+    // Execute the GQL Query
+    await executeGqlQuery(api, NEWS_QUERY, variables, (data) =>  {
+        if (data.entries) {
+            commit('setNews', data.entries);
+        }
+    })
+}

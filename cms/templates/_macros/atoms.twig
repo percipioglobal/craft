@@ -9,10 +9,10 @@
     # @license   https://opensource.org/licenses/MIT MIT Licensed
     #}
 
-{% macro atom(type, atom, options, prefix = '') %}
-    {% spaceless %}
-        {% include '_atoms/' ~ type ~ 's/' ~ prefix ~ type ~ '--' ~ atom with {
+{%- macro atom(type, atom, options, prefix = '') -%}
+    {%- spaceless -%}
+        {%- include '_atoms/' ~ type ~ 's/' ~ prefix ~ type ~ '--' ~ atom with {
             options: options,
-        } %}
-    {% endspaceless %}
-{% endmacro %}
+        } -%}
+    {%- endspaceless -%}
+{%- endmacro -%}

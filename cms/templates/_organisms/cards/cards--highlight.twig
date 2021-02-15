@@ -1,12 +1,22 @@
 {%- minify -%}
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 my-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 my-12">
 
-        {%- for card in content.cards.all() -%}
+        {%- for card in content.cards -%}
 
-            {%- include '_molecules/cards/card--highlight' ignore missing with {
-                content: card,
-            } -%}
+            {%- switch card.type -%}
+
+                {%- case 'news' -%}
+
+                    {%- include '_molecules/cards/card--news' ignore missing with {
+                        content: card,
+                    } -%}
+
+                {%- default -%}
+                    {# add default case #}
+
+            {%- endswitch -%}
+
 
         {%- endfor -%}
 

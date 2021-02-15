@@ -1,0 +1,38 @@
+{%- import '_macros/atoms' as render -%}
+{%- import '_macros/functions' as function -%}
+
+{%- minify -%}
+
+    <article class="group flex flex-col flex-grow relative transition ease-in duration-150 shadow-md bg-blue-500 hover:shadow-xl hover:bg-blue-600">
+
+        {{- render.atom('image', 'teaser', {
+            image: content.teaserImage[0] ??? placeholders.teaserPlaceholder[0],
+            alt:content.teaserImage[0].title ??? placeholders.teaserPlaceholder[0].title,
+            ratio: 'is16by9',
+            placeholders: placeholders,
+        }) -}}
+
+        <div class="p-4">
+            <time class="block text-sm pb-1 text-white" datetime="{{ content.postDate|date('c') }}">
+                {{- function.format_date(content.postDate) -}}
+            </time>
+            <h4 class="text-xl font-bold text-white leading-tight print:text-sm print:font-bold">
+                {{- render.atom('text', 'title', {
+                    content: content.title
+                }) -}}
+            </h4>
+        </div>
+
+        <a
+            href="{{- content.url -}}"
+            data-tag-category="card-news"
+            data-tag-action="click"
+            data-tag-label="{{- content.url -}}"
+            class="absolute inset-0 z-1"
+        >
+            <span class="sr-only">Read more about {{- content.title -}}</span>
+        </a>
+
+    </article>
+
+{%- endminify -%}

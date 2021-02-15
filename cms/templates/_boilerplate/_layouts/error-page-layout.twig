@@ -17,12 +17,12 @@
     │                                  bodyHtml                                   │
     └─────────────────────────────────────────────────────────────────────────────┘
 #}
-{% extends "_boilerplate/_layouts/generic-page-layout.twig" %}
+{%- extends "_boilerplate/_layouts/generic-page-layout.twig" -%}
 
-{% block content %}
-{% endblock %}
+{%- block content -%}
+{%- endblock -%}
 
-{% block subcontent %}
+{%- block subcontent -%}
     <section>
         <div class="container mx-auto py-8">
             <div class="text-center p-8 mb-8">
@@ -36,8 +36,8 @@
         </div>
     </section>
 
-{% endblock %}
+{%- endblock -%}
 
 {# -- Any JavaScript that should be included before </body> -- #}
-{% block bodyJs %}
-{% endblock bodyJs %}
+{%- block bodyJs -%}
+{%- endblock bodyJs -%}

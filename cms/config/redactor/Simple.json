@@ -9,7 +9,6 @@
     "plugins": ["counter"],
     "pastePlainText": true,
     "pasteImages": false,
-    "pasteKeepStyle": ["p"],
     "spellcheck": true,
     "structure": true,
     "toolbarFixed": true

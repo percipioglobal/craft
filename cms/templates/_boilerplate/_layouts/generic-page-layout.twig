@@ -17,46 +17,46 @@
     │                                  bodyHtml                                   │
     └─────────────────────────────────────────────────────────────────────────────┘
 #}
-{% extends "_boilerplate/_layouts/base-html-layout.twig" %}
+{%- extends "_boilerplate/_layouts/base-html-layout.twig" -%}
 
 {# -- Any <meta> tags that should be included in the <head> #}
-{% block headMeta %}
-{% endblock headMeta %}
+{%- block headMeta -%}
+{%- endblock headMeta -%}
 
 {# -- Any <link> tags that should be included in the <head> #}
-{% block headLinks %}
-{% endblock headLinks %}
+{%- block headLinks -%}
+{%- endblock headLinks -%}
 
 {# -- Any CSS that should be included before </head> -- #}
-{% block headCss %}
-    {% include "_inline-css/site-fonts.css" %}
-{% endblock headCss %}
+{%- block headCss -%}
+    {%- include "_inline-css/site-fonts.css" -%}
+{%- endblock headCss -%}
 
 {# -- Page body -- #}
-{% block bodyHtml %}
+{%- block bodyHtml -%}
     <div id="page-container" class="overflow-hidden leading-tight">
+        <div id="component-container">
+        </div>
         <div id="content-container" class="bg-repeat header-background">
 
             {# -- Info header, including _navbar.twig -- #}
-            {% include "_organisms/sections/header.twig" %}
+            {%- include "_organisms/sections/header.twig" -%}
 
             <main>
-                <div class="container mx-auto pb-8">
-                    {# -- Primary content block -- #}
-                    {% block content %}
-                    {% endblock %}
-                </div>
+                {# -- Primary content block -- #}
+                {%- block content -%}
+                {%- endblock -%}
             </main>
         </div>
 
         {# -- Content that appears below the primary content block -- #}
-        {% block subcontent %}
-        {% endblock %}
+        {%- block subcontent -%}
+        {%- endblock -%}
 
         {# -- Info footer -- #}
-        {% include "_organisms/sections/footer.twig" %}
+        {%- include "_organisms/sections/footer.twig" -%}
 
         {# -- HTML Footer -- #}
-        {% include "_partials/global-footer.twig" %}
+        {%- include "_partials/global-footer.twig" -%}
     </div>
-{% endblock bodyHtml %}
+{%- endblock bodyHtml -%}

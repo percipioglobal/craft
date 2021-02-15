@@ -1,0 +1,49 @@
+field: e691301b-7484-40be-a3d4-c3bc590de959
+fieldLayouts:
+  5b45c163-40fe-4227-a886-183a31b3c156:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: b06ee5f5-05a5-4b2d-ae59-122bff896ee6
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  b06ee5f5-05a5-4b2d-ae59-122bff896ee6:
+    contentColumnType: text
+    fieldGroup: null
+    handle: standfirst
+    instructions: 'This text is being used as intro of an article. This will be most of the time underneath a Section Header title and above content (like Article Body or and Image)'
+    name: Standfirst
+    searchable: false
+    settings:
+      availableTransforms: '*'
+      availableVolumes: ''
+      cleanupHtml: true
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: Standfirst.json
+      removeEmptyTags: '1'
+      removeInlineStyles: '1'
+      removeNbsp: '1'
+      showHtmlButtonForNonAdmins: ''
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+handle: standfirst
+name: Standfirst
+sortOrder: 2

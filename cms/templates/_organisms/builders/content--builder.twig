@@ -1,6 +1,7 @@
-{% do craft.eagerBeaver.eagerLoadElements(entry, [
+{%- do craft.eagerBeaver.eagerLoadElements(entry, [
     'contentBuilder',
     'contentBuilder.highlightCards:cards',
+    'contentBuilder.sectionHeader',
     'contentBuilder.sectionHeader:buttons',
     'contentBuilder.singleImage:image',
     'contentBuilder.slide:image',
@@ -55,13 +56,18 @@
                     } -%}
 
                 {%- case "galleryImages" -%}
-                    {%- include '_molecules/images/image--gallery' ignore missing with {
+                    {%- include '_organisms/images/image--gallery' ignore missing with {
                         content: block,
                     } -%}
 
                 {%- case "highlightCards" -%}
 
                     {%- include '_organisms/cards/cards--highlight' ignore missing with {
+                        content: block,
+                    } -%}
+
+                {%- case "spotlightCards" -%}
+                    {%- include '_organisms/cards/cards--spotlight' ignore missing with {
                         content: block,
                     } -%}
 

@@ -1,0 +1,51 @@
+{%- import '_macros/atoms' as render -%}
+{%- import '_macros/functions' as function -%}
+
+{#
+    ### OPTIONS ###
+    ---------------
+
+    utilities: (OBJ) -- Pass utilities styling trough this object with keys [nav, wrapper, link]
+    link: (STR) -- The link where the share should point to
+    title: (STR) -- Title of the entry whom being shared
+    colour: (STR) -- The colour of the icon
+    platforms: (OBJ) -- Pass the platforms you want to show for sharing
+#}
+
+{%- set options = {
+    utilities: utilities ??? null,
+    link: link ??? alias('@web') ~ '/',
+    title: title ??? entry.title ??? seomatic.site.identity.genericName ??? '',
+    colour: colour ??? 'orange-500',
+    platforms: platforms ??? ['facebook', 'twitter', 'envelope', 'print']
+} -%}
+
+<nav role="menu" class="{{- options.utilities.nav ??? null -}}" aria-labelledby="share-navigation">
+	<div role="menubar" class="{{- options.utilities.wrapper ??? null }}">
+
+		{%- for platform in options.platforms -%}
+            {%- set sharer = function.share_action(platform, link, title) -%}
+
+            {%- if platform == "print" -%}
+                <button class="{{- options.utilities.link ??? null}}" role="menuitem" title="{{- options.title -}}" @click="printPage()">
+                    <span class="sr-only">{{- options.title -}}</span>
+                    {{- render.atom('icon', 'fa', {
+                        icon:  function.fa_icon_lut(platform),
+                        size: 'lg',
+                        colour: 'text-' ~ options.colour ~ ' hover:text-orange-500',
+                    }) -}}
+                </button>
+            {%- else -%}
+                <a href="{{- sharer -}}" class="{{- options.utilities.link ??? null}}" role="menuitem" title="{{- options.title -}}" target="_blank" rel="noopener">
+                    <span class="sr-only">{{- options.title -}}</span>
+                    {{- render.atom('icon', 'fa', {
+                        icon:  function.fa_icon_lut(platform),
+                        size: 'lg',
+                        colour: 'text-' ~ options.colour ~ ' hover:text-orange-500',
+                    }) -}}
+                </a>
+            {%- endif -%}
+        {%- endfor -%}
+
+	</div>
+</nav>

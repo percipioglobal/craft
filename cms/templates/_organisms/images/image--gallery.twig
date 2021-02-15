@@ -1,0 +1,75 @@
+{%- import '_macros/atoms' as render -%}
+
+{%- set columns = 2 -%}
+
+<div class="container mx-auto max-w-screen-lg my-10">
+    <div class="w-full">
+        <div class="grid grid-cols-6 gap-4 w-full">
+            {%- for image in content.images -%}
+                {# options #}
+                {%- set imageSize = image.getWidth() > image.getHeight() ? "landscape" : image.getWidth() - 10 < image.getHeight() and image.getWidth() + 10 > image.getHeight() ? "square" : "portrait" -%}
+                {%- set siblingImageSize = "" -%}
+                {%- set colspan = "" -%}
+                {%- set ratio = "" -%}
+
+                {# fetch sibling size #}
+                {%- if loop.index0 % columns == 1 and content.images[loop.index0 - 1] is defined -%}
+                    {%- if content.images[loop.index0 - 1].getWidth() - 10 < content.images[loop.index0 - 1].getHeight() and  content.images[loop.index0 - 1].getWidth() + 10 > content.images[loop.index0 - 1].getHeight() -%}
+                        {%- set siblingImageSize = "square" -%}
+                    {%- elseif content.images[loop.index0 - 1].getWidth() > content.images[loop.index0 - 1].getHeight() -%}
+                        {%- set siblingImageSize = "landscape" -%}
+                    {%- else -%}
+                        {%- set siblingImageSize = "portrait" -%}
+                    {%- endif -%}
+                {%- elseif loop.index0 % columns == 0 and content.images[loop.index0 + 1] is defined -%}
+                    {# {%- set siblingImageSize = content.images[loop.index0 + 1].getWidth() > content.images[loop.index0 + 1].getHeight() ? "landscape" : "portrait" -%} #}
+                    {%- if content.images[loop.index0 + 1].getWidth() - 10 < content.images[loop.index0 + 1].getHeight() and  content.images[loop.index0 + 1].getWidth() + 10 > content.images[loop.index0 + 1].getHeight() -%}
+                        {%- set siblingImageSize = "square" -%}
+                    {%- elseif content.images[loop.index0 + 1].getWidth() > content.images[loop.index0 + 1].getHeight() -%}
+                        {%- set siblingImageSize = "landscape" -%}
+                    {%- else -%}
+                        {%- set siblingImageSize = "portrait" -%}
+                    {%- endif -%}
+                {%- endif -%}
+
+                {# check sibling size to know which format the image should show #}
+                {%- if imageSize == siblingImageSize -%}
+                    {%- set colspan = "3" -%}
+                    {%- set ratio = imageSize == "landscape" and siblingImageSize == "landscape" ? "is4by3" : imageSize == "portrait" ? "is3by4" : "is1by1" -%}
+                {%- endif -%}
+                {%- if imageSize == "landscape" and siblingImageSize == "portrait" or imageSize == "landscape" and siblingImageSize == "square" -%}
+                    {%- set colspan = "4" -%}
+                    {%- set ratio = "isFilled" -%}
+                {%- endif -%}
+                {%- if imageSize == "portrait" and siblingImageSize == "landscape" or imageSize == "square" and siblingImageSize == "landscape" -%}
+                    {%- set colspan = "2" -%}
+                    {%- set ratio = imageSize == "portrait" ? "is3by4" : "is1by1" -%}
+                {%- endif -%}
+                {%- if imageSize == "portrait" and siblingImageSize == "square" or imageSize == "square" and siblingImageSize == "portrait" -%}
+                    {%- set colspan = "3" -%}
+                    {%- set ratio = "is1by1" -%}
+                {%- endif -%}
+                {%- if siblingImageSize == "" -%}
+                    {%- set colspan = "6" -%}
+                    {%- set ratio = "is16by9" -%}
+                {%- endif -%}
+
+                <div class="col-span-6 sm:col-span-{{- colspan -}}">
+                    {{- render.atom('image', 'article', {
+                        image: image,
+                        placeholders: placeholder,
+                        alt:image.title,
+                        ratio: ratio,
+                        utilities: 'overflow-hidden'  }) -}}
+                </div>
+            {%- endfor -%}
+        </div>
+
+        {%- if content.caption|length -%}
+            {{- render.atom('text', 'caption', {
+                caption: content.caption,
+                swatch: swatch ??? null,
+            }) -}}
+        {%- endif -%}
+    </div>
+</div>

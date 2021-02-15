@@ -1,20 +1,52 @@
-{% import '_macros/atoms' as render %}
-{% import '_macros/utilities' as utility %}
+{%- import '_macros/atoms' as render -%}
 
 {%- minify -%}
-<a class="group border-t border-gray-100 flex justify-between py-8 w-full hover:border-gray-300" href="{{- content.target[0].url -}}">
-    <div class="relative">
-        <h4 class="text-orange-500 text-base sm:text-4xl group-hover:text-orange-300 trans-button">
-            {{- render.atom('text', 'content', { content: content.label }) -}}
-        </h4>
+<a class="group border-b-2 border-blue-500 bg-gray-50 flex justify-between py-8 w-full hover:bg-blue-800 px-4 md:px-8"
+    href="{{- content.target[0].url -}}"
+    target="_blank"
+    data-tag-category="download"
+    data-tag-action="{{ content.target[0].kind | lower -}}"
+    data-tag-label="{{ content.target[0].filename | lower -}}"
+>
 
-        <span class="font-normal text-sm text-gray-500">
-            {{- render.atom('text', 'content', { content: content.description }) -}} [{{- content.target[0].size | filesize(1) }} {{ resource.target[0].kind | lower }}]
+	<div class="relative flex items-center">
+		{{- render.atom('icon', 'file', {
+            type: content.target[0].kind,
+            icon: content.utilityIcon,
+            size: 'xl',
+            variant: '',
+            parentcss: '',
+            iconcss: 'group-hover:text-white',
+            colour: 'text-blue-500'
+        }) -}}
+	</div>
+
+	<div class="relative flex-grow px-4 md:px-8">
+		<h4 class="text-base font-medium sm:text-2xl group-hover:text-white trans-button inline-block w-full">
+			{{- render.atom('text', 'content', { content: content.label }) -}}
+		</h4>
+
+        {%- if content.description|length -%}
+            <p class="text-base inline-block w-full group-hover:text-white">
+                {{- render.atom('text', 'content', { content: content.description }) -}}
+            </p>
+        {%- endif -%}
+
+		<span class="text-xs text-gray-500 group-hover:text-white pt-2 inline-block">
+			<span class="text-blue-800 group-hover:text-white">{{ content.target[0].filename }}</span> - [{{- content.target[0].size | filesize(1) }}
+			{{ resource.target[0].kind | lower }}]
+		</span>
+	</div>
+
+	<div class="relative flex items-center">
+		<span class="px-5 py-3 bg-blue-500 font-bold text-white group-hover:bg-blue-800 flex">
+            <span class="pr-2">Download</span>
+            {{- render.atom('icon', 'fa', {
+                icon: 'fas fa-download',
+                size: 'xs',
+                colour: 'text-white'
+            }) -}}
         </span>
-    </div>
-
-    <div class="relative">
-        {{- utility.file_icon(content.target[0].kind, content.utilityIcon, 'text-gray-500 group-hover:text-orange-300 trans-button') -}}
-    </div>
+	</div>
 </a>
 {%- endminify -%}

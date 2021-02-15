@@ -1,36 +1,50 @@
 # percipioglobal/craft Change Log
 
-## 1.3.2 - Unreleased
+## 1.4.0 - 15/02/2021
 
-- Made docker more performant
-- Updated webpack 5
+### Added
+- GTM support on Button atoms
+- Support for square images has been added in the Gallery Images organism
+- Added social button atoms
+- Added Spotlight Cards with the ability to choose how much latest entries you want to display.
+- Added a Kitchen Sink Page to show every component in the project.
+- Created GitHub Pull Request Templates and Label strategies
+- Created a cookie warning/notification component in Vue
 - Added go-live checklist
-- Added _macros/functions and moved function from _macros/utilities over
-- Added _atoms/buttons (cta, group, primary, secondary, tertiary and variables) to add global button styling and grouping of buttons
-- Added _atoms/chips (group, skills and variables) to add global label like components and group those labels
-- Added _atoms/dates (variables)
-- Expanded _atoms/images with partner to add branding partners
-- Updated _atoms/images (article, cover, hero, logo, profile, teaser and variables) to make it more intuitive and better parsing of variables
-- Added _atoms/links (home and partner)
-- Added _atoms/texts (standfirst and variables) to make it more intuitive
+- Added `_macros/functions` and moved function from `_macros/utilities` over
+- Added `_atoms/buttons` (cta, group, primary, secondary, tertiary and variables) to add global button styling and grouping of buttons
+- Added `_atoms/chips` (group, skills and variables) to add global label like components and group those labels
+- Added `_atoms/dates` (variables)
+- Added `_atoms/links` (home and partner)
+- Added `_atoms/texts` (standfirst and variables) to make it more intuitive
 - Added placeholders to the global variables
-- Added custom cookie
-- Updated _molecules/cards/card--highlight to match up with the atoms
-- Added _molecules/images/image--gallery for a basic masonry two gridded gallery
-- Updated all the builders to match op with the new eagerBeaver
-- Updated _organisms/entry-types/page--content with the meta in comment
-- Updated css/utilities/aspect-ratios with basic styling to fit the image and added isFilled
-- Updated the config/seomatic-config according to our company info
-
-## 1.3.1 - Unreleased
-
-- Made docker more performant
-- Added queue shell script
-- Made builds with Tailwind much more performant
-- Return back to Vue 2.0
+- Added `_molecules/images/image--gallery` for a basic masonry two column gallery
 - Added root vendor folder to `.gitignore`
 
-## 1.3.0 - Unreleased
+### Changed
+- Made builds with Tailwind much more performant
+- Made docker more performant
+- Updated containers to alpine php
+- Updated containers to now use PHP-8
+- Updated Nginx to use version 1.19
+- Buddy commands updated to work with the alpine builds
+- Updated the buildchain to work fully with webpack 5
+- Updated all the builders to match op with the new eagerBeaver
+- Updated `_organisms/entry-types/page--content` with the meta in comment
+- Updated `css/utilities/aspect-ratios` with basic styling to fit the image and added `isFilled`
+- Updated the `config/seomatic-config` according to our company info
+- Expanded `_atoms/images` with partner to add branding partners
+- Updated `_atoms/images` (article, cover, hero, logo, profile, teaser and variables) to make it more intuitive and better parsing of variables
+- Updated `_molecules/cards/card--highlight` to match up with the atoms
+- Eager Loading optimisations
+- Updated Highlight Cards to fetch specific card types instead of using `card--highlight`
+- Updated the styling of some components to have a default version
+
+### Fixed
+- Added Teaser optimized to the Teaser asset volume
+- Fixed Hero optimiser name in the atom
+
+## 1.3.0 - 15/09/2020
 
 ### Added
 - Added in the Tailwind Typography plugin with a few standard settings

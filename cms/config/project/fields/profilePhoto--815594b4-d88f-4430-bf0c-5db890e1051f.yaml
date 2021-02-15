@@ -3,17 +3,20 @@ fieldGroup: bbb59518-7cdc-4a7f-b07c-cd6b1fa8201d
 handle: profilePhoto
 instructions: 'Upload the users profilePhoto'
 name: 'Profile Photo'
-searchable: true
+searchable: false
 settings:
-  allowSelfRelations: ''
+  allowSelfRelations: false
+  allowUploads: true
   allowedKinds:
     - image
   defaultUploadLocationSource: 'volume:5c642d7e-b16b-4836-9575-668d75d242e5'
   defaultUploadLocationSubpath: ''
   limit: '1'
   localizeRelations: false
+  previewMode: full
   restrictFiles: '1'
   selectionLabel: 'Add a profile photo'
+  showSiteMenu: true
   showUnpermittedFiles: true
   showUnpermittedVolumes: false
   singleUploadLocationSource: 'volume:2cfafcad-5b14-408b-ba81-afd942b8b3cb'
@@ -22,7 +25,7 @@ settings:
   sources: '*'
   targetSiteId: null
   useSingleFolder: true
-  validateRelatedElements: ''
+  validateRelatedElements: false
   viewMode: list
 translationKeyFormat: null
 translationMethod: site

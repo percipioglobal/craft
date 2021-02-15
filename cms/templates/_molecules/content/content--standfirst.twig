@@ -1,7 +1,11 @@
-{% import '_macros/atoms' as render %}
+{%- import '_macros/atoms' as render -%}
 
 {%- minify -%}
 
-    {{- render.atom('text', 'standfirst', { content: content.standfirst }) -}}
+    <div class="my-10">
+        <div class="container mx-auto max-w-screen-lg">
+            {{- render.atom('text', 'standfirst', { content: content.standfirst }) -}}
+        </div>
+    </div>
 
 {%- endminify -%}

@@ -3,10 +3,16 @@ fieldLayouts:
   90e11fff-ed8c-4be8-946c-ef601288ca9b:
     tabs:
       -
-        fields:
-          4a86f07d-200e-4dbc-a06a-223d9cc5c049:
+        elements:
+          -
+            fieldUid: 4a86f07d-200e-4dbc-a06a-223d9cc5c049
+            instructions: null
+            label: null
             required: true
-            sortOrder: 1
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
         name: Content
         sortOrder: 1
 fields:
@@ -18,15 +24,18 @@ fields:
     name: Images
     searchable: false
     settings:
-      allowSelfRelations: ''
+      allowSelfRelations: false
+      allowUploads: true
       allowedKinds:
         - image
       defaultUploadLocationSource: 'volume:5c642d7e-b16b-4836-9575-668d75d242e5'
       defaultUploadLocationSubpath: ''
       limit: '8'
       localizeRelations: false
+      previewMode: full
       restrictFiles: '1'
       selectionLabel: 'Add images'
+      showSiteMenu: true
       showUnpermittedFiles: true
       showUnpermittedVolumes: false
       singleUploadLocationSource: 'volume:dbb9d34a-ed00-430b-a6cd-e61927f7b2d5'
@@ -35,11 +44,11 @@ fields:
       sources: '*'
       targetSiteId: null
       useSingleFolder: true
-      validateRelatedElements: ''
+      validateRelatedElements: false
       viewMode: list
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Assets
 handle: galleryImages
 name: 'Image Gallery'
-sortOrder: 5
+sortOrder: 6

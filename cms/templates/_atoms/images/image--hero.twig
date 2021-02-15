@@ -1,6 +1,6 @@
-{% extends "_atoms/images/image--variables" %}
+{%- extends "_atoms/images/image--variables" -%}
 
-{# 
+{#
     ### OPTIONS ###
     ---------------
 
@@ -14,20 +14,20 @@
     author: (STR) -- The author of the image ( optional )
     source: (STR) -- The image source ( optional )
 
-    ## ADDED 
+    ## ADDED
 
     optimized: (OBJ) -- Add the image optimized field to the atom
     placeholder: (OBJ) --- Add the placeholder image to the atom
 
 #}
 
-{% import '_macros/atoms' as render %}
+{%- import '_macros/atoms' as render -%}
 
-{% block image %}
+{%- block image -%}
 
     {%- set values = values|merge({
         optimized: options.image.optimizeHero ??? null,
-        placeholder: options.placeholders.heroPlaceholder[0].optimizeHero ??? null
+        placeholder: options.placeholders.heroPlaceholder[0].optimizeHeroes ??? null
     }) -%}
 
     {%- minify -%}
@@ -45,15 +45,15 @@
                         sizes="{%- for size in values.sizes -%}{{- not loop.last ? size ~ ',' : size -}}{%- endfor -%}"
                 />
 
-                <img    
+                <img
                         src="{{- values.optimized.placeholderImage() -}}"
-                        data-src="{{- values.optimized.src() -}}" 
+                        data-src="{{- values.optimized.src() -}}"
                         data-srcset="{{- values.optimized.srcset() ??? values.placeholder.srcset() -}}"
                         sizes="{%- for size in values.sizes -%}{{- not loop.last ? size ~ ',' : size -}}{%- endfor -%}"
-                        class="lazyload"        
-                        loading="lazy"    
+                        class="lazyload"
+                        loading="lazy"
                         alt="{{- values.alt -}}"
-                        
+
                 />
 
             </picture>

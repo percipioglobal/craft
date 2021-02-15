@@ -1,4 +1,4 @@
-{% extends "_atoms/images/image--variables" %}
+{%- extends "_atoms/images/image--variables" -%}
 
 {#
     ### OPTIONS ###
@@ -10,6 +10,7 @@
     sizes: (ARR) -- sizes array for responsive images ( optional )
     alt: (STR) -- The alt text ( required )
     ratio: (STR) -- Give the aspect ratio in the correct format eg. is1by1 / is16by9 ( optional )
+    animation: (STR) -- Type of animation you want to show ( optional )
 
     ## ADDED
 
@@ -18,18 +19,36 @@
 
 #}
 
-{% block image %}
+{%- block image -%}
 
     {%- set values = values|merge({
-        optimized: options.image.optimizeTeasers,
+        optimized: options.image.optimizeTeasers ??? null,
         placeholder: options.placeholders.teaserPlaceholder[0].optimizeTeasers ??? null,
     }) -%}
 
+    {%- set animation = {
+        inner: null,
+        outer: null,
+    } -%}
+
+    {%- switch values.animation -%}
+
+        {%- case 'scale' -%}
+
+            {%- set timing = 'transition duration-500 ease-in-out transform' -%}
+
+            {%- set animation = {
+                inner: timing ~ ' group-hover:scale-125',
+                outer: timing ~ ' group-hover:scale-90',
+            } -%}
+
+    {%- endswitch -%}
+
     {%- minify -%}
 
-        <figure role="figure" aria-label="{{- values.alt -}}" class="w-full h-full">
+        <figure role="figure" aria-label="{{- values.alt -}}" class="w-full h-full {{ animation.outer ? animation.outer : '' -}}">
 
-            <picture class="block relative {{ values.ratio -}}">
+            <picture class="block relative {{ values.ratio }} {{ animation.inner ? animation.inner : '' -}}">
 
                 <source data-srcset="{{- values.optimized.srcsetWebP() ??? values.placeholder.srcsetWebP() -}}"
                         sizes="{%- for size in values.sizes -%}{{- not loop.last ? size ~ ',' : size -}}{%- endfor -%}"
@@ -40,15 +59,13 @@
                         sizes="{%- for size in values.sizes -%}{{- not loop.last ? size ~ ',' : size -}}{%- endfor -%}"
                 />
 
-                <img    
-                        src="{{- values.optimized.placeholderImage() -}}"
-                        data-src="{{- values.optimized.src() -}}" 
+                <img
+                        src="{{- values.optimized.placeholderImage() ??? values.placeholder.placeholderImage() -}}"
+                        data-src="{{- values.optimized.src() ??? values.placeholder.src() -}}"
                         data-srcset="{{- values.optimized.srcset() ??? values.placeholder.srcset() -}}"
                         sizes="{%- for size in values.sizes -%}{{- not loop.last ? size ~ ',' : size -}}{%- endfor -%}"
-                        class="lazyload"        
-                        loading="lazy"    
                         alt="{{- values.alt -}}"
-                        
+
                 />
 
             </picture>

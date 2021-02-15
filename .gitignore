@@ -2,8 +2,8 @@
 #
 # Example .gitignore file for Craft 3 CMS projects
 #
-# @author    Percipio Global Ltd.
-# @copyright Copyright (c) 2020 Percipio Global Ltd.
+# @author    percipio.london
+# @copyright Copyright (c) 2021 Percipio Global Ltd.
 # @link      https://percipio.london/
 # @package   percipioglobal/craft
 # @since     1.0.0
@@ -16,7 +16,6 @@
 
 # COMPOSER
 */vendor/*
-/vendor/*
 
 # CRAFT STORAGE
 */storage/*
@@ -25,6 +24,9 @@
 # ASSETS
 /cms/web/assets/*
 /cms/web/cpresources/*
+/cms/web/dist/*
+/cms/web/favicon.*
+/cms/web/sw.*
 
 # BUILD FILES
 node_modules

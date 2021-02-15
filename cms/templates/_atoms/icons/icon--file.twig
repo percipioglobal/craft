@@ -1,0 +1,48 @@
+{%- extends "_atoms/icons/icon--variables" -%}
+
+{#
+    ### OPTIONS ###
+    ---------------
+
+    icon: (STR) -- Font awesome icon class
+    parentcss: (STR) -- Adding custom classes to wrapping span of the icon
+    iconcss: (STR) -- Adding custom classes to the icon
+    size: (STR) -- Adding size choosing between inline / xs / sm / lg / xl
+    variant: (STR) -- Adding a variant with rect / circle
+    colour: (STR) -- Adding a colour to the icon
+
+    ## ADDED
+
+    type: (STR) -- Type of a file
+#}
+
+{%- import '_macros/atoms' as render -%}
+
+{%- block icon -%}
+
+    {%- set icon = values.icon -%}
+
+	{%- if values.icon == 'fileIcon' -%}
+        {%- switch options.type | lower -%}
+            {%- case 'pdf' -%}
+                {%- set icon = "far fa-file-pdf" -%}
+            {%- case 'xlsx' or 'xls' -%}
+                {%- set icon = "far fa-file-spreadsheet" -%}
+            {%- case 'docx' or 'doc' -%}
+                {%- set icon = "far fa-file-word" -%}
+            {%- case 'pptx' or 'ppt' -%}
+                {%- set icon = "far fa-file-powerpoint" -%}
+            {%- case 'zip' -%}
+                {%- set icon = "far fa-file-archive" -%}
+        {%- endswitch -%}
+	{%- endif -%}
+
+    {{- render.atom('icon', 'fa', {
+        icon:  icon,
+        parentcss: values.parentcss,
+        iconcss: values.iconcss,
+        size: values.size,
+        variant: values.variant,
+        colour: values.colour,
+    }) -}}
+{%- endblock -%}

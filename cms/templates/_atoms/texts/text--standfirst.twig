@@ -1,4 +1,4 @@
-{% extends "_atoms/texts/text--variables" %}
+{%- extends "_atoms/texts/text--variables" -%}
 
 {#
     ### OPTIONS ###
@@ -8,10 +8,10 @@
 
 #}
 
-{% block text %}
+{%- block text -%}
     {%- minify -%}
         <div class="text-lg font-bold mb-8">
             {{- values.content | typogrify(true) -}}
         </div>
     {%- endminify -%}
-{% endblock %}
+{%- endblock -%}

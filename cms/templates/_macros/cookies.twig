@@ -4,11 +4,11 @@
     # Macros for getting and setting cookies natively with Craft CMS 3.1.17 or later
     #
     # Usage:
-    # {% import "_macros/cookies.twig" as cookies %}
+    # {%- import "_macros/cookies.twig" as cookies -%}
     # Get a cookie:
-    # {% set woof = cookies.get('woof') %}
+    # {%- set woof = cookies.get('woof') -%}
     # Set a cookie:
-    # {% do cookies.set('woof', 'bark', now | date_modify('+1 hour').timestamp) %}
+    # {%- do cookies.set('woof', 'bark', now | date_modify('+1 hour').timestamp) -%}
     #
     # @package   percipioglobal\craft
     # @since     1.0.0
@@ -29,11 +29,11 @@
     # @return string className
     #}
     {%- macro get(name, cookieJar = null) -%}
-    {% spaceless %}
-        {% set cookieJar = cookieJar ?? craft.app.request.cookies %}
-        {% set cookie = cookieJar.get(name) %}
+    {%- spaceless -%}
+        {%- set cookieJar = cookieJar ?? craft.app.request.cookies -%}
+        {%- set cookie = cookieJar.get(name) -%}
         {{ cookie.value ?? '' }}
-    {% endspaceless %}
+    {%- endspaceless -%}
 {%- endmacro -%}
 
 {#
@@ -52,10 +52,10 @@
 # @param yii\web\CookieCollection  cookieJar
 #}
 {%- macro set(name, value = '', expires = 0, path = '/', domain = '', secure = false, httpOnly = false, cookieJar = null) -%}
-    {% spaceless %}
-        {% set cookieJar = cookieJar ?? craft.app.response.cookies %}
-        {% set domain = domain | length ?: craft.app.config.general.defaultCookieDomain %}
-        {% set cookie = create({
+    {%- spaceless -%}
+        {%- set cookieJar = cookieJar ?? craft.app.response.cookies -%}
+        {%- set domain = domain | length ?: craft.app.config.general.defaultCookieDomain -%}
+        {%- set cookie = create({
             'class': 'yii\\web\\Cookie',
             'name': name,
             'value': value,
@@ -64,7 +64,7 @@
             'secure': secure,
             'httpOnly': httpOnly,
             'expire': expires
-        }) %}
-        {% do cookieJar.add(cookie) %}
-    {% endspaceless %}
+        }) -%}
+        {%- do cookieJar.add(cookie) -%}
+    {%- endspaceless -%}
 {%- endmacro -%}

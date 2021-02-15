@@ -1,5 +1,5 @@
 
-{% extends "_atoms/texts/text--variables" %}
+{%- extends "_atoms/texts/text--variables" -%}
 
 {# 
     ### OPTIONS ###
@@ -13,7 +13,7 @@
 
 #}
 
-{% block text %}
+{%- block text -%}
 
     {%- set values = values|merge({
         words: options.words ??? 60,
@@ -23,4 +23,4 @@
         {{- values.content | typogrify(true) | wordLimit(values.words) | raw -}}
     {%- endminify -%}
     
-{% endblock %}
+{%- endblock -%}
