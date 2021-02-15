@@ -12,10 +12,11 @@ module.exports = (type = 'modern', settings) => {
     // common config
     const common = () => ({
         entry: settings.entry,
-        experiments: {
-            topLevelAwait: true,
-        },
         name: pkg.name,
+        output: {
+            path: path.resolve(__dirname, settings.paths.dist),
+            publicPath: settings.urls.publicPath()
+        },
         resolve: {
             alias: settings.alias,
             extensions: settings.extensions,

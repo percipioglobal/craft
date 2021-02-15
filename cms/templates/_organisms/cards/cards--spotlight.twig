@@ -1,0 +1,9 @@
+{%- switch content.cards -%}
+
+    {%- case "news" -%}
+
+        {%- include '_organisms/cards/cards--news' ignore missing with {
+            limit: content.limit,
+        } -%}
+
+{%- endswitch -%}

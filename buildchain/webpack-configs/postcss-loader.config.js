@@ -38,11 +38,7 @@ module.exports = (type = 'modern', settings) => {
                                             path: ['./node_modules'],
                                         }],
                                         TailwindCss('./tailwind.config.js'),
-                                        ['postcss-mixins', {
-                                        }],
                                         ['postcss-nested', {
-                                        }],
-                                        ['postcss-hexrgba', {
                                         }],
                                         ...postCssPlugins,
                                     ],

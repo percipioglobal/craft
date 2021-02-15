@@ -1,0 +1,31 @@
+{%- import '_macros/atoms' as render -%}
+{%- import '_macros/functions' as function -%}
+{%- set utilities = utilities ?? '' -%}
+{%- set wrapperUtilities = wrapperUtilities ?? '' %}
+{%- set linkUtilities = linkUtilities ?? '' -%}
+
+<nav role="menu" class="{{- utilities -}}" aria-labelledby="social-navigation">
+    <div role="menubar" class="{{- wrapperUtilities }} w-full space-x-3">
+        {% for social in seomatic.site.sameAsLinks %}
+            <a
+                href="{{- social.url -}}"
+                class="{{- linkUtilities }} inline-block text-lg"
+                role="menuitem"
+                title="{{- social.siteName -}}"
+                aria-label="{{- social.siteName -}}"
+                target="_blank"
+                rel="noopener"
+                data-tag-category="{{- 'social-navigation-' ~ social.handle -}}"
+                data-tag-action="click"
+                data-tag-label="{{- social.url -}}"
+            >
+                <span class="sr-only">{{- social.siteName -}}</span>
+                {{- render.atom('icon', 'fa', {
+                    icon:  function.fa_icon_lut(platform),
+                    size: 'lg',
+                    colour: 'text-' ~ options.colour ~ ' hover:text-blue-500',
+                }) -}}
+            </a>
+        {% endfor %}
+    </div>
+</nav>

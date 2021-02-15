@@ -33,7 +33,6 @@ module.exports = (type = 'modern', settings) => {
             legacy: {
                 ...common(),
                 optimization: {
-                    chunkIds: 'named',
                     minimize: true,
                     minimizer: [
                         new TerserPlugin({
@@ -60,8 +59,6 @@ module.exports = (type = 'modern', settings) => {
                 },
                 output: {
                     filename: path.join('./js', '[name]-legacy.[contenthash].js'),
-                    path: path.resolve(__dirname, settings.paths.dist),
-                    publicPath: settings.urls.publicPath(),
                 },
                 plugins: [
                     new MiniCssExtractPlugin({
@@ -73,7 +70,6 @@ module.exports = (type = 'modern', settings) => {
             modern: {
                 ...common(),
                 optimization: {
-                    chunkIds: 'named',
                     minimize: true,
                     minimizer: [
                         new TerserPlugin({
@@ -86,8 +82,6 @@ module.exports = (type = 'modern', settings) => {
                 },
                 output: {
                     filename: path.join('./js', '[name].[contenthash].js'),
-                    path: path.resolve(__dirname, settings.paths.dist),
-                    publicPath: settings.urls.publicPath(),
                 },
             },
         }

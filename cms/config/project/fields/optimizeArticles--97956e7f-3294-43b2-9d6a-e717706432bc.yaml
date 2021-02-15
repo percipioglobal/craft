@@ -3,11 +3,16 @@ fieldGroup: 1dd95078-7c8a-4ef7-8a16-e33a5341dadb
 handle: optimizeArticles
 instructions: 'Optimisations for the images used in an article body'
 name: 'Optimize Articles'
-searchable: true
+searchable: false
 settings:
   displayDominantColorPalette: '1'
   displayLazyLoadPlaceholderImages: '1'
   displayOptimizedImageVariants: '1'
+  fieldVolumeSettings:
+    __assoc__:
+      -
+        - article
+        - '*'
   variants:
     -
       __assoc__:

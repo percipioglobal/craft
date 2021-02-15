@@ -9,14 +9,14 @@
 
 #}
 
-{% import '_macros/atoms' as render %}
+{%- import '_macros/atoms' as render -%}
 
-{% set values = {
+{%- set values = {
     chips: options.chips ??? null,
     colors: options.colors ??? null,
     type: options.type ??? 'primary',
     utilities: options.utilities ??? null,
-} %}
+} -%}
 
 {%- minify -%}
 

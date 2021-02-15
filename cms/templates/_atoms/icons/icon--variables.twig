@@ -1,0 +1,24 @@
+{#
+    ### OPTIONS ###
+    ---------------
+
+    icon: (STR) -- Font awesome icon class
+    parentcss: (STR) -- Adding custom classes to wrapping span of the icon
+    iconcss: (STR) -- Adding custom classes to the icon
+    size: (STR) -- Adding size choosing between inline / xs / sm / lg / xl
+    variant: (STR) -- Adding a variant with rect / circle
+    colour: (STR) -- Adding a colour to the icon
+
+#}
+
+{%- set values = {
+    icon: options.icon ??? 'no-icon',
+    parentcss: options.parentcss ??? null,
+    iconcss: options.iconcss ??? null,
+    size: options.size ??? 'sm',
+    variant: options.variant ??? '',
+    colour: options.colour ??? 'primary'
+} -%}
+
+{%- block icon -%}
+{%- endblock -%}

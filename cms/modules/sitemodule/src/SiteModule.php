@@ -10,7 +10,7 @@
 
 namespace modules\sitemodule;
 
-use modules\sitemodule\assetbundles\sitemodule\SiteModuleAsset;
+use modules\sitemodule\assetbundles\SiteModule\SiteModuleAsset;
 use modules\sitemodule\services\Helper;
 use modules\sitemodule\variables\SiteVariable;
 

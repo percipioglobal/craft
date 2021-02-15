@@ -1,13 +1,42 @@
-{% extends "_atoms/buttons/button--variables" %}
+{%- extends "_atoms/buttons/button--variables" -%}
 
-{% block button %}
+{#
+    ### OPTIONS ###
+    ---------------
+
+    url: (STR) -- the url for the button
+    text: (STR) -- the text for the button
+    icon: (STR) -- the icon for the button ( optional )
+    size: (STR) -- enter large / small into the value. the padding will change according to the size
+    utlities: (STR) -- the button utility from TW for the last button in the loop
+    inverted: (STR) -- wether the button is shown as a ghost or not
+    target: (STR) -- add _blank if you want to open the button in a new window
+    gaCategory: (STR) -- add a category for GTM tracking
+    gaAction: (STR) -- add an acction to GTM. This can be click / download / submit
+    gaLabel: (STR) -- add a value to the category for GTM tracking
+#}
+
+{%- block button -%}
 
     {%- minify -%}
 
-        <a {{ values.url ? 'href=' ~ values.url : '' }} class="inline-flex border px-8 py-4 font-bold text-lg border-primary-600 text-primary-600 hover:text-white-100 hover:bg-primary-600 {{ values.utilities ? values.utilities : '' -}}">
+        {%- set sizes = {
+            'small': 'px-4 py-2',
+            'large': 'px-8 py-4',
+        } -%}
+
+        <a
+            {{ values.url ? 'href=' ~ values.url : '' }}
+            {{ values.gaCategory ? 'data-tag-category=' ~ values.gaCategory : '' }}
+            {{ values.gaAction ? 'data-tag-action=' ~ values.gaAction : '' }}
+            {{ values.gaLabel ? 'data-tag-label=' ~ values.gaLabel : '' }}
+            {{ values.target ? 'target=' ~ values.target : '' }}
+            aria-label="{{- values.text -}}"
+            class="inline-flex border {{ sizes[values.size] is defined ? sizes[values.size] : sizes['large'] }} {{ values.inverted ? 'border-blue-600 text-blue-600' : 'border-blue-600 bg-blue-500 text-white' }} font-bold text-lg hover:text-white hover:bg-blue-600 {{ values.utilities ? values.utilities : '' -}}"
+        >
             {{- values.text -}}
         </a>
 
     {%- endminify -%}
 
-{% endblock %}
+{%- endblock -%}

@@ -1,4 +1,4 @@
-{% extends "_atoms/images/image--variables" %}
+{%- extends "_atoms/images/image--variables" -%}
 
 {# 
     ### OPTIONS ###
@@ -22,11 +22,11 @@
 
 #}
 
-{% set values = {
+{%- set values = {
     image: options.image ??? null,
-} %}
+} -%}
 
-{% block image %}
+{%- block image -%}
 
     {%- set values = values|merge({
         placeholder: options.placeholders.brandingPlaceholder[0] ??? null,
@@ -36,14 +36,14 @@
 
     {%- minify -%}
 
-        {% if values.type == 'svg' %}
+        {%- if values.type == 'svg' -%}
             <figure role="figure" aria-label="{{- values.alt -}}" class="h-full">
                 <picture class="h-full">
                     {{- svg(values.image ??? values.placeholder, sanitize=true) | attr({ class: values.style }) -}}
                 </picture>
             </figure>
-        {% endif %}
+        {%- endif -%}
 
     {%- endminify -%}
 
-{% endblock %}
+{%- endblock -%}

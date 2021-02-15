@@ -1,29 +1,25 @@
-// module exports
 module.exports = {
-    purge: {
-        content: [
-            '../cms/templates/**/*.{twig,html}',
-            '../src/vue/**/*.{vue,html}',
-        ],
-        layers: [
-            'base',
-            'components',
-            'utilities',
-        ],
-        mode: 'layers',
-        options: {
-            whitelist: [
-                '../src/css/components/**/*.{css}',
-            ],
-        }
-    },
     theme: {
+
+        container: {
+            padding: {
+                DEFAULT: '1rem',
+                sm: '2rem',
+                '2xl': '0',
+            },
+        },
+
         // Extend the default Tailwind config here
         extend: {
-            
         },
         // Replace the default Tailwind config here
-        },
-        corePlugins: {},
-        plugins: [],
+    },
+    variants: {
+        scale: ['group-hover'],
+        textColor: ['responsive', 'hover', 'focus', 'group-hover'],
+    },
+    corePlugins: {},
+    plugins: [
+        require('@tailwindcss/typography'),
+    ],
 };

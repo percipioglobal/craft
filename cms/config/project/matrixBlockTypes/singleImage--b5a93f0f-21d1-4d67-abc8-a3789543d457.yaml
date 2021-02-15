@@ -3,54 +3,65 @@ fieldLayouts:
   1f38f42e-d515-4104-b279-6e3f7edbee7d:
     tabs:
       -
-        fields:
-          302a5592-8085-472e-9356-ab6b1eaf1635:
+        elements:
+          -
+            fieldUid: ed4b0f49-8429-4d80-846f-3d441bd3e707
+            instructions: null
+            label: null
             required: true
-            sortOrder: 2
-          3fc84cf5-6e3d-46e8-bf13-9a1d4e198438:
-            required: false
-            sortOrder: 4
-          49d732ef-0bfc-46c0-ba09-004de008c0ba:
-            required: false
-            sortOrder: 3
-          ed4b0f49-8429-4d80-846f-3d441bd3e707:
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 302a5592-8085-472e-9356-ab6b1eaf1635
+            instructions: null
+            label: null
             required: true
-            sortOrder: 1
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 49d732ef-0bfc-46c0-ba09-004de008c0ba
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 3fc84cf5-6e3d-46e8-bf13-9a1d4e198438
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
         name: Content
         sortOrder: 1
 fields:
   302a5592-8085-472e-9356-ab6b1eaf1635:
-    contentColumnType: string
+    contentColumnType: text
     fieldGroup: null
     handle: position
     instructions: 'Select a position where you want the image to be displayed, if you select left or right it will display next to the text. If you want multiple images in the same row, please select image gallery.'
     name: Position
     searchable: false
     settings:
-      default: center
-      options:
-        __assoc__:
-          -
-            - left
-            - '1'
-          -
-            - center
-            - '1'
-          -
-            - right
-            - '1'
-          -
-            - full
-            - '1'
-          -
-            - drop-left
-            - ''
-          -
-            - drop-right
-            - ''
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+      uiMode: normal
     translationKeyFormat: null
     translationMethod: none
-    type: rias\positionfieldtype\fields\Position
+    type: craft\fields\PlainText
   3fc84cf5-6e3d-46e8-bf13-9a1d4e198438:
     contentColumnType: text
     fieldGroup: null
@@ -66,6 +77,7 @@ fields:
       initialRows: '4'
       multiline: ''
       placeholder: ''
+      uiMode: normal
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
@@ -189,15 +201,18 @@ fields:
     name: Image
     searchable: false
     settings:
-      allowSelfRelations: ''
+      allowSelfRelations: false
+      allowUploads: true
       allowedKinds:
         - image
       defaultUploadLocationSource: 'volume:5c642d7e-b16b-4836-9575-668d75d242e5'
       defaultUploadLocationSubpath: ''
       limit: '1'
       localizeRelations: false
+      previewMode: full
       restrictFiles: '1'
       selectionLabel: ''
+      showSiteMenu: true
       showUnpermittedFiles: true
       showUnpermittedVolumes: false
       singleUploadLocationSource: 'volume:dbb9d34a-ed00-430b-a6cd-e61927f7b2d5'
@@ -206,11 +221,11 @@ fields:
       sources: '*'
       targetSiteId: null
       useSingleFolder: true
-      validateRelatedElements: ''
+      validateRelatedElements: false
       viewMode: list
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Assets
 handle: singleImage
 name: Image
-sortOrder: 4
+sortOrder: 5

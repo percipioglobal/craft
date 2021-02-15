@@ -3,16 +3,19 @@ fieldGroup: c014f72e-6101-4377-a9e4-bbea0f16bce8
 handle: photoCoverPlaceholder
 instructions: 'Upload an image that will serve as placeholder if the original image can not be found or is not ready for display yet.'
 name: 'Photo Cover Placeholder'
-searchable: true
+searchable: false
 settings:
-  allowSelfRelations: ''
+  allowSelfRelations: false
+  allowUploads: true
   allowedKinds: null
   defaultUploadLocationSource: 'volume:5c642d7e-b16b-4836-9575-668d75d242e5'
   defaultUploadLocationSubpath: ''
   limit: '1'
   localizeRelations: false
+  previewMode: full
   restrictFiles: ''
   selectionLabel: 'Add an image'
+  showSiteMenu: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
   singleUploadLocationSource: 'volume:918b50e1-632c-4e92-a8c5-55eeb7b8571e'
@@ -21,7 +24,7 @@ settings:
   sources: '*'
   targetSiteId: null
   useSingleFolder: true
-  validateRelatedElements: ''
+  validateRelatedElements: false
   viewMode: list
 translationKeyFormat: null
 translationMethod: site

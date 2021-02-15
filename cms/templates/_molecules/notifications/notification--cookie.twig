@@ -1,0 +1,12 @@
+{%- import '_macros/atoms' as render -%}
+
+{%- set options = {
+    title: cookie.heading ??? "Cookie",
+    privacy: cookie.button.getText() ??? "Detail",
+    accept: "Accept all",
+    url: cookie.button.getLink() ??? "/privacy-policy",
+    colour: swatch.secondary ??? null,
+    content: cookie.article ??? null,
+} -%}
+
+<notification--cookie :options="{{- options|json_encode -}}"></notification--cookie>

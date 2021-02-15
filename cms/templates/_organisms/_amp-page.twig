@@ -1,18 +1,18 @@
-{% extends "_boilerplate/_layouts/amp-generic-page-layout.twig" %}
+{%- extends "_boilerplate/_layouts/amp-generic-page-layout.twig" -%}
 
-{% block headLinks %}
+{%- block headLinks -%}
     {{ parent() }}
-{% endblock headLinks %}
+{%- endblock headLinks -%}
 
-{% if entry is not defined %}
-    {% set entrySlug = craft.app.request.getSegment(craft.app.request.getSegments()|length - 1) %}
-    {% set entry = craft.entries.slug(entrySlug).one() %}
-{% endif %}
+{%- if entry is not defined -%}
+    {%- set entrySlug = craft.app.request.getSegment(craft.app.request.getSegments()|length - 1) -%}
+    {%- set entry = craft.entries.slug(entrySlug).one() -%}
+{%- endif -%}
 
-{% do seomatic.helper.loadMetadataForUri(entry.uri) %}
-{% do seomatic.script.container().include(false) %}
+{%- do seomatic.helper.loadMetadataForUri(entry.uri) -%}
+{%- do seomatic.script.container().include(false) -%}
 
-{% block headCss %}
+{%- block headCss -%}
     {{ parent() }}
     {%- switch entry.type -%}
 
@@ -25,9 +25,9 @@
             {{ craft.twigpack.includeFile("@webroot/dist/criticalcss/pages/amp_" ~ craft.app.request.segments | first ~ "_critical.min.css") }}
 
     {%- endswitch -%}
-{% endblock headCss %}
+{%- endblock headCss -%}
 
-{% block content %}
+{%- block content -%}
 
         {%- switch entry.type -%}
 
@@ -56,8 +56,8 @@
                     } -%}
 
         {%- endswitch -%}
-{% endblock %}
+{%- endblock -%}
 
 {# -- Any JavaScript that should be included before </body> -- #}
-{% block bodyJs %}
-{% endblock bodyJs %}
+{%- block bodyJs -%}
+{%- endblock bodyJs -%}

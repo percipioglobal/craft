@@ -1,18 +1,20 @@
 /**
- * This injects any component classes registered by plugins.
+ * This injects any component classes registered by plugins. or template
  *
  */
-@import 'tailwindcss/components';
 
 /**
- * Include global styles
+ * Here we add custom component classes; stuff we want loaded
+ * *before* the utilities so that the utilities can still
+ * override them.
  *
  */
 
-@import './global.pcss';
+@import './webfonts.pcss';
+@import './components/global.pcss';
 
 /* atoms go first */
-@import './atoms/icons.pcss';
+@import './atoms/logo.pcss';
 
 /* followed by molecules */
 

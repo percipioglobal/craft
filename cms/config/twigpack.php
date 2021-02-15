@@ -9,8 +9,6 @@
  * @copyright Copyright (c) 2018 nystudio107
  */
 
-use craft\helpers\App;
-
 /**
  * Twigpack config.php
  *
@@ -25,11 +23,13 @@ use craft\helpers\App;
  * you do for 'general.php'
  */
 
+use craft\helpers\App;
+
 return [
     // If `devMode` is on, use webpack-dev-server to all for HMR (hot module reloading)
     'useDevServer' => App::env('DEV_MODE'),
     // The JavaScript entry from the manifest.json to inject on Twig error pages
-    'errorEntry' => ['runtime.js', 'app.js'],
+    'errorEntry' => 'app.js',
     // Manifest file names
     'manifest' => [
         'legacy' => 'manifest-legacy.json',
@@ -45,13 +45,6 @@ return [
         'manifestPath' => App::env('TWIGPACK_DEV_SERVER_MANIFEST_PATH'),
         'publicPath' => App::env('TWIGPACK_DEV_SERVER_PUBLIC_PATH'),
     ],
-    // Bundle to use with the webpack-dev-server
-    'devServerBuildType' => 'combined',
-    // Whether to include a Content Security Policy "nonce" for inline
-    // CSS or JavaScript. Valid values are 'header' or 'tag' for how the CSP
-    // should be included. c.f.:
-    // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#Unsafe_inline_script
-    'cspNonce' => '',
     // Local files config
     'localFiles' => [
         'basePath' => '@webroot/',

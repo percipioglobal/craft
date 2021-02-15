@@ -3,16 +3,34 @@ fieldLayouts:
   7d15571b-c1d6-4a10-ae40-f21cdc67cf8d:
     tabs:
       -
-        fields:
-          4285cde2-58a1-4cde-aba3-ccdced328ee2:
+        elements:
+          -
+            fieldUid: 6fcc732b-3375-496d-92b8-64f3dcc00d00
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: e7b63d80-91cc-438a-b670-59cbb778ca14
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 4285cde2-58a1-4cde-aba3-ccdced328ee2
+            instructions: null
+            label: null
             required: false
-            sortOrder: 3
-          6fcc732b-3375-496d-92b8-64f3dcc00d00:
-            required: true
-            sortOrder: 1
-          e7b63d80-91cc-438a-b670-59cbb778ca14:
-            required: true
-            sortOrder: 2
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
         name: Content
         sortOrder: 1
 fields:
@@ -42,20 +60,21 @@ fields:
                   - ''
       contentTable: '{{%stc_1_buttons}}'
       fieldLayout: matrix
-      maxRows: '1'
-      minRows: '1'
+      maxRows: '2'
+      minRows: '0'
+      placeholderKey: null
       propagationMethod: all
-      selectionLabel: ''
-      staticField: '1'
+      selectionLabel: 'Add a button'
+      staticField: ''
     translationKeyFormat: null
     translationMethod: site
     type: verbb\supertable\fields\SuperTableField
   6fcc732b-3375-496d-92b8-64f3dcc00d00:
     contentColumnType: text
     fieldGroup: null
-    handle: header
+    handle: heading
     instructions: 'Enter a section heading from an article or a page, a page can contain multiple sections, this is preferably 1 -3 words.'
-    name: Header
+    name: Heading
     searchable: true
     settings:
       byteLimit: null
@@ -65,6 +84,7 @@ fields:
       initialRows: '4'
       multiline: ''
       placeholder: ''
+      uiMode: normal
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
@@ -83,6 +103,7 @@ fields:
       initialRows: '4'
       multiline: ''
       placeholder: ''
+      uiMode: normal
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText

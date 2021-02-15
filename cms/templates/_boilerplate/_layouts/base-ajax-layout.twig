@@ -11,13 +11,13 @@
     │                                  htmlPage                                   │
     └─────────────────────────────────────────────────────────────────────────────┘
 #}
-{% extends "_boilerplate/_layouts/global-variables.twig" %}
+{%- extends "_boilerplate/_layouts/global-variables.twig" -%}
 
-{% block htmlPage %}
-    {% minify %}
+{%- block htmlPage -%}
+    {%- minify -%}
         {# -- Primary content block -- #}
-        {% block content %}
+        {%- block content -%}
             <code>No content block defined.</code>
-        {% endblock content %}
-    {% endminify %}
-{% endblock htmlPage %}
+        {%- endblock content -%}
+    {%- endminify -%}
+{%- endblock htmlPage -%}

@@ -1,0 +1,22 @@
+{%- set cards = cards ??? craft.entries.section('news')
+    .with(['teaserImage', 'newsCategories'])
+    .orderBy('postDate desc')
+    .limit(limit)
+    .all()
+ -%}
+
+{%- minify -%}
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 my-12">
+
+        {%- for card in cards -%}
+
+            {%- include '_molecules/cards/card--news' ignore missing with {
+                content: card,
+            } -%}
+
+        {%- endfor -%}
+
+    </div>
+
+{%- endminify -%}

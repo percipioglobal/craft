@@ -33,6 +33,7 @@ services:
       - ./cms:/var/www/project/cms:cached
       - ./cms/vendor:/var/www/project/cms/vendor:delegated
       - ./cms/storage/logs:/var/www/project/cms/storage/logs:delegated
+      - ./cms/storage/runtime/compiled_templates:/var/www/project/cms/storage/runtime/compiled_templates:delegated
   # php - run php-fpm with xdebug
   php_xdebug:
     build:
@@ -77,7 +78,7 @@ services:
       MYSQL_PASSWORD: project
     init: true
     ports:
-      - "3306:3306"
+      - "4306:3306"
     volumes:
       - db-data:/var/lib/mysql
       - ./db-seed/:/docker-entrypoint-initdb.d

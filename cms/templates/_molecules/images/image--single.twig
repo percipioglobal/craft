@@ -1,18 +1,22 @@
-{% import '_macros/atoms' as render %}
+{%- import '_macros/atoms' as render -%}
 
 {%- minify -%}
-    <div class="mx-auto my-16 {{ content.position == 'full' ? '-mx-4 md:-mx-32' : '' }}">
+    <section class="mx-auto my-10 {{ content.position == 'full' ? '-mx-4 md:-mx-32' : '' }}">
 
-        {{- 
-            render.atom('image', 'article', {
-                    image: content.image[0],
-                    alt: content.image[0].title,
-                    ratio: content.ratio,
-                    caption: content.caption ?? content.image[0].caption,
-                    author: content.image[0].author ?? null,
-                    source: content.image[0].source ?? null,
-                })    
-        -}}
+        <div class="container mx-auto {{ content.position == 'center' ? 'max-w-screen-lg' : '' }}">
+            {%- if content.image|length -%}
+                {{- render.atom('image', 'article', {
+                        image: content.image[0],
+                        alt: content.image[0].title,
+                        ratio: content.ratio,
+                        caption: content.caption ?? content.image[0].caption,
+                        author: content.image[0].author ?? "",
+                        source: content.image[0].source ?? "",
+                        placeholders: placeholders,
+                    })
+                -}}
+            {%- endif -%}
+        </div>
 
-    </div>
+    </section>
 {%- endminify -%}

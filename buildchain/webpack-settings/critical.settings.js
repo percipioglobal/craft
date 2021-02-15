@@ -10,25 +10,32 @@ module.exports = {
         suffix: '_critical.min.css',
         criticalHeight: 1200,
         criticalWidth: 1200,
+        ampPrefix: 'amp_',
+        ampCriticalHeight: 19200,
+        ampCriticalWidth: 600,
         pages: [
             {
-                uri: '',
+                url: '',
                 template: 'index'
             },
             {
-                uri: 'errors/offline',
+                url: '',
+                template: 'amp_index'
+            },
+            {
+                url: 'errors/offline',
                 template: 'errors/offline'
             },
             {
-                uri: 'errors/error',
+                url: 'errors/error',
                 template: 'errors/error'
             },
             {
-                uri: 'errors/503',
+                url: 'errors/503',
                 template: 'errors/503'
             },
             {
-                uri: 'errors/404',
+                url: 'errors/404',
                 template: 'errors/404'
             },
         ]

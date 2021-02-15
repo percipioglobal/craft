@@ -3,10 +3,16 @@ fieldLayouts:
   f5c867a3-9fde-4150-b6d0-71459f184ef2:
     tabs:
       -
-        fields:
-          cc4d5589-5884-4fb2-ba84-ffb388a8806e:
+        elements:
+          -
+            fieldUid: cc4d5589-5884-4fb2-ba84-ffb388a8806e
+            instructions: null
+            label: null
             required: true
-            sortOrder: 1
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
         name: Content
         sortOrder: 1
 fields:
@@ -38,6 +44,7 @@ fields:
       fieldLayout: matrix
       maxRows: '9'
       minRows: '2'
+      placeholderKey: null
       propagationMethod: all
       selectionLabel: 'Add a new slide'
       staticField: ''
@@ -46,4 +53,4 @@ fields:
     type: verbb\supertable\fields\SuperTableField
 handle: basicSlider
 name: 'Basic Slider'
-sortOrder: 6
+sortOrder: 7

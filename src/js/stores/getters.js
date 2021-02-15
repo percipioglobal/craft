@@ -1,7 +1,11 @@
-export const fetchCsrfToken = (state) => {
+export const getCsrfToken = (state) => {
     return state.csrf;
 }
 
-export const fetchGqlToken = (state) => {
+export const getGqlToken = (state) => {
     return state.gqlToken;
+}
+
+export const getNews = (state) => {
+    return state.news;
 }

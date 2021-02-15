@@ -9,11 +9,12 @@
     caption: (STR) -- The caption text ( optional )
     author: (STR) -- The author of the image ( optional )
     source: (STR) -- The image source ( optional )
+    animation: (STR) -- Type of animation you want to show ( optional )
     placeholder: (OBJ) -- The object that contains all placeholders ( required )
 
 #}
 
-{% set values = {
+{%- set values = {
 
     image: options.image ??? null,
     sizes: options.sizes ??? ['100vw'],
@@ -22,9 +23,10 @@
     caption: options.caption ??? null,
     author: options.author ??? null,
     source: options.source ??? null,
+    animation: options.animation ??? null,
     placeholders: options.placeholders,
 
-} %}
+} -%}
 
-{% block image %}
-{% endblock %}
+{%- block image -%}
+{%- endblock -%}

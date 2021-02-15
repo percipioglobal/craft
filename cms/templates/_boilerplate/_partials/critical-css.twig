@@ -1,5 +1,5 @@
 {# -- Critical CSS -- #}
-{% set cssHash = craft.twigpack.getModuleHash("styles.css", "legacy") %}
+{%- set cssHash = craft.twigpack.getModuleHash("styles.css", "legacy") -%}
 
 <!--# if expr="$HTTP_COOKIE=/critical\-css\={{ cssHash }}/" -->
 {{ craft.twigpack.includeCssModule("styles.css", false) }}

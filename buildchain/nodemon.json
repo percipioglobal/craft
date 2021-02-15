@@ -5,4 +5,4 @@
         "webpack-settings/*.js"
     ],
     "exec": "webpack serve --config webpack.dev.js"
-}  
+}

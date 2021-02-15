@@ -3,13 +3,25 @@ fieldLayouts:
   8f709fd8-761f-41fb-80d6-2e01237696d9:
     tabs:
       -
-        fields:
-          3f37c536-3682-4856-a6af-a9f582d4c782:
+        elements:
+          -
+            fieldUid: 4697a491-b07d-46f9-87d8-c6cd9fb804a9
+            instructions: null
+            label: null
             required: true
-            sortOrder: 2
-          4697a491-b07d-46f9-87d8-c6cd9fb804a9:
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 3f37c536-3682-4856-a6af-a9f582d4c782
+            instructions: null
+            label: null
             required: true
-            sortOrder: 1
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
         name: Content
         sortOrder: 1
 fields:
@@ -81,6 +93,8 @@ fields:
       allowCustomText: true
       allowTarget: false
       autoNoReferrer: false
+      customTextMaxLength: 0
+      customTextRequired: false
       defaultLinkName: entry
       defaultText: ''
       enableAllLinkTypes: false
@@ -89,6 +103,58 @@ fields:
       enableTitle: false
       typeSettings:
         __assoc__:
+          -
+            - url
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - false
+                -
+                  - allowAliases
+                  - false
+                -
+                  - disableValidation
+                  - false
+          -
+            - custom
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - false
+                -
+                  - allowAliases
+                  - false
+                -
+                  - disableValidation
+                  - false
+          -
+            - email
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - false
+                -
+                  - allowAliases
+                  - false
+                -
+                  - disableValidation
+                  - false
+          -
+            - tel
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - false
+                -
+                  - allowAliases
+                  - false
+                -
+                  - disableValidation
+                  - false
           -
             - asset
             -
@@ -138,16 +204,6 @@ fields:
                   - sources
                   - '*'
           -
-            - site
-            -
-              __assoc__:
-                -
-                  - enabled
-                  - false
-                -
-                  - sites
-                  - '*'
-          -
             - user
             -
               __assoc__:
@@ -164,57 +220,15 @@ fields:
                   - sources
                   - '*'
           -
-            - custom
+            - site
             -
               __assoc__:
                 -
                   - enabled
                   - false
                 -
-                  - allowAliases
-                  - false
-                -
-                  - disableValidation
-                  - false
-          -
-            - email
-            -
-              __assoc__:
-                -
-                  - enabled
-                  - false
-                -
-                  - allowAliases
-                  - false
-                -
-                  - disableValidation
-                  - false
-          -
-            - tel
-            -
-              __assoc__:
-                -
-                  - enabled
-                  - false
-                -
-                  - allowAliases
-                  - false
-                -
-                  - disableValidation
-                  - false
-          -
-            - url
-            -
-              __assoc__:
-                -
-                  - enabled
-                  - false
-                -
-                  - allowAliases
-                  - false
-                -
-                  - disableValidation
-                  - false
+                  - sites
+                  - '*'
     translationKeyFormat: null
     translationMethod: none
     type: lenz\linkfield\fields\LinkField

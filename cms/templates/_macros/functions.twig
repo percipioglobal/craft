@@ -1,13 +1,55 @@
 {# Formats all dates accordingly #}
-{% macro format_date(date) %}
-    {% spaceless %}
-        {{- date | date('j F, Y') -}}
-    {% endspaceless %}
-{% endmacro %}
+{%- macro format_date(date) -%}
+	{%- spaceless -%}
+		{{- date | date('j F, Y') -}}
+	{%- endspaceless -%}
+{%- endmacro -%}
+
+{# Formats all times from date accordingly #}
+{%- macro format_time(date) -%}
+    {%- spaceless -%}
+        {{- date | date('H:i') -}}
+    {%- endspaceless -%}
+{%- endmacro -%}
 
 {# Enter a date to show time ago in human readable form #}
-{% macro time_ago(date) %}
-    {% spaceless %}
+{%- macro time_ago(date) -%}
+    {%- spaceless -%}
         {{- craft.app.formatter.asRelativeTime(date) -}}
-    {% endspaceless %}
-{% endmacro %}
+    {%- endspaceless -%}
+{%- endmacro -%}
+
+{# fetch an icon from the Font Awesome library #}
+{%- macro fa_icon_lut(type) -%}
+	{%- set lut = {
+		'angle-down': 'fas fa-angle-down',
+		'angle-left': 'fas fa-angle-left',
+		'angle-right': 'fas fa-angle-right',
+		'angle-up': 'fas fa-angle-up',
+		'calendar-day': 'fas fa-calendar-day',
+		'download': 'fas fa-download',
+		'envelope': 'fas fa-envelope',
+		'facebook': 'fab fa-facebook-f',
+		'globe-europe': 'fas fa-globe-europe',
+		'map-marker-alt': 'fas fa-map-marker-alt',
+		'print': 'fas fa-print',
+		'phone': 'fas fa-phone',
+		'twitter': 'fab fa-twitter',
+	} -%}
+	{%- spaceless -%}
+		{{- lut[type] ??? 'fas fa-hashtag' -}}
+	{%- endspaceless -%}
+{%- endmacro -%}
+
+{# Make a share functionality #}
+{%- macro share_action(type, link, title) -%}
+	{%- set lut = {
+		'facebook': 'https://www.facebook.com/sharer/sharer.php?u=' ~ link,
+		'twitter': 'https://twitter.com/share?text=&url=' ~ link,
+		'envelope': 'mailto:mail@mail.com?subject=' ~ title ~ ' -  '~ link,
+		'print': 'javascript:window.print();',
+	} -%}
+	{%- spaceless -%}
+		{{- lut[type] ??? null -}}
+	{%- endspaceless -%}
+{%- endmacro -%}

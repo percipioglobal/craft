@@ -3,19 +3,43 @@ fieldLayouts:
   77c73bb9-3176-40c2-bec8-e28177e2a87c:
     tabs:
       -
-        fields:
-          6d157457-cb17-4d30-b2cd-ade98a8fdcf0:
+        elements:
+          -
+            fieldUid: f4cbe95b-c71a-42f8-a9d8-464dcf3916a9
+            instructions: null
+            label: null
             required: true
-            sortOrder: 4
-          74c703ba-fb2c-421f-9b09-2bd3762770de:
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 98769057-9c93-4e96-89ff-cb7b6a3a1188
+            instructions: null
+            label: null
             required: true
-            sortOrder: 3
-          98769057-9c93-4e96-89ff-cb7b6a3a1188:
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 74c703ba-fb2c-421f-9b09-2bd3762770de
+            instructions: null
+            label: null
             required: true
-            sortOrder: 2
-          f4cbe95b-c71a-42f8-a9d8-464dcf3916a9:
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 6d157457-cb17-4d30-b2cd-ade98a8fdcf0
+            instructions: null
+            label: null
             required: true
-            sortOrder: 1
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
         name: Content
         sortOrder: 1
 fields:
@@ -27,7 +51,9 @@ fields:
     name: 'Privacy Links'
     searchable: false
     settings:
-      default: ''
+      default: false
+      offLabel: null
+      onLabel: null
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Lightswitch
@@ -39,7 +65,9 @@ fields:
     name: 'Footer Navigation'
     searchable: false
     settings:
-      default: ''
+      default: false
+      offLabel: null
+      onLabel: null
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Lightswitch
@@ -52,6 +80,8 @@ fields:
     searchable: false
     settings:
       default: false
+      offLabel: null
+      onLabel: null
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Lightswitch
@@ -64,6 +94,8 @@ fields:
     searchable: false
     settings:
       default: false
+      offLabel: null
+      onLabel: null
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Lightswitch

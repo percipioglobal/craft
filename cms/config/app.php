@@ -20,11 +20,10 @@
 use craft\helpers\App;
 
 return [
-    'id' => App::env('APP_ID') ?: 'CraftCMS',
     'modules' => [
         'site-module' => [
             'class' => \modules\sitemodule\SiteModule::class,
-        ]
+        ],
     ],
     'bootstrap' => ['site-module'],
     'components' => [
@@ -40,9 +39,8 @@ return [
             'throwExceptions' => App::env('DEV_MODE'),
         ],
         'queue' => [
-            'class' => yii\queue\redis\Queue::class,
-            'redis' => 'redis',
-            'channel' => 'queue',
+            'class' => craft\queue\Queue::class,
+            'ttr' => 10 * 60,
         ],
         'redis' => [
             'class' => yii\redis\Connection::class,

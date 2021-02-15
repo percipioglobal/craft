@@ -1,0 +1,43 @@
+
+{%- import '_macros/atoms' as render -%}
+
+{%- minify -%}
+<section class="relative w-full min-h-2/3 pt-0 md:pt-24 flex items-center bg-black border-b-8 border-blue-500 overflow-hidden">
+	<div class="container mx-auto max-w-screen-lg">
+		<div class="z-2 relative px-12 pt-32 md:pt-20 pb-6 md:pb-20">
+
+			<h1 class="sr-only">
+				{{- seomatic.site.identity.genericName -}}:
+				{{- render.atom('text', 'title', { content: content.heading ??? entry.title }) -}}
+			</h1>
+
+			<h2 class="font-extrabold leading-none text-4xl lg:text-6xl text-white">
+				{{- render.atom('text', 'title', { content: content.heading ??? entry.title }) -}}
+			</h2>
+
+			{%- if content.description -%}
+				<div class="prose prose-lg mt-8 md:mt-2 text-white">
+					{{- render.atom('text', 'content', { content: content.description }) -}}
+				</div>
+			{%- endif -%}
+
+            {%- if content.buttons -%}
+
+                {{- render.atom('button', 'group', {
+
+                    buttons: content.buttons,
+                    type: 'primary',
+                    utilities: 'mt-6 space-x-4',
+                    gaCategory: 'hero-cta',
+                    gaAction: 'click',
+					inverted: false,
+
+                }) -}}
+
+            {%- endif -%}
+
+		</div>
+
+	</div>
+</section>
+{%- endminify -%}
