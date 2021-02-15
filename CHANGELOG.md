@@ -19,8 +19,10 @@
 - Added `_atoms/texts` (standfirst and variables) to make it more intuitive
 - Added placeholders to the global variables
 - Added `_molecules/images/image--gallery` for a basic masonry two column gallery
+- Added root vendor folder to `.gitignore`
 
 ### Changed
+- Made builds with Tailwind much more performant
 - Made docker more performant
 - Updated containers to alpine php
 - Updated containers to now use PHP-8
@@ -41,14 +43,6 @@
 ### Fixed
 - Added Teaser optimized to the Teaser asset volume
 - Fixed Hero optimiser name in the atom
-
-## 1.3.1 - 10/11/2020
-
-- Made docker more performant
-- Added queue shell script
-- Made builds with Tailwind much more performant
-- Return back to Vue 2.0
-- Added root vendor folder to `.gitignore`
 
 ## 1.3.0 - 15/09/2020
 
