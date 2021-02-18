@@ -1,5 +1,10 @@
 # percipioglobal/craft Change Log
 
+## 1.4.1.1 - 18/02/2021
+
+### Fixed
+- Fixed issue where case-sensitive machines would see 2 sitemodule folders.
+
 ## 1.4.1 - 18/02/2021
 
 ### Changed
