@@ -1,9 +1,9 @@
 {%- import '_macros/atoms' as render -%}
 
 {%- minify -%}
-    <section class="mx-auto my-10 {{ content.position == 'full' ? '-mx-4 md:-mx-32' : '' -}}">
+    <section class="mx-auto my-10 {{ content.position == 'full' ? '-mx-4 md:-mx-32' : '' }}">
 
-        <div class="container mx-auto {{ content.position == 'center' ? 'max-w-screen-lg' : '' -}}">
+        <div class="container mx-auto {{ content.position == 'center' ? 'max-w-screen-lg' : '' }}">
             {%- if content.image|length -%}
                 {{- render.atom('image', 'article', {
                         image: content.image[0],

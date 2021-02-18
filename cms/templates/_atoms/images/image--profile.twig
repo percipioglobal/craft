@@ -47,8 +47,8 @@
                 />
 
                 <img    
-                        src="{{- values.optimized.placeholderImage() -}}"
-                        data-src="{{- values.optimized.src() -}}" 
+                        src="{{- values.optimized.placeholderImage() ??? values.placeholder.placeholderImage() -}}"
+                        data-src="{{- values.optimized.src() ??? values.placeholder.src() -}}" 
                         data-srcset="{{- values.optimized.srcset() ??? values.placeholder.srcset() -}}"
                         sizes="{%- for size in values.sizes -%}{{- not loop.last ? size ~ ',' : size -}}{%- endfor -%}"
                         class="lazyload"        
