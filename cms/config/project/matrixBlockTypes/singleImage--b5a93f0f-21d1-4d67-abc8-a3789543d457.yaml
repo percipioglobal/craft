@@ -44,24 +44,37 @@ fieldLayouts:
         sortOrder: 1
 fields:
   302a5592-8085-472e-9356-ab6b1eaf1635:
-    contentColumnType: text
+    contentColumnType: string
     fieldGroup: null
     handle: position
     instructions: 'Select a position where you want the image to be displayed, if you select left or right it will display next to the text. If you want multiple images in the same row, please select image gallery.'
     name: Position
     searchable: false
     settings:
-      byteLimit: null
-      charLimit: null
-      code: ''
-      columnType: null
-      initialRows: '4'
-      multiline: ''
-      placeholder: ''
-      uiMode: normal
+      default: center
+      options:
+        __assoc__:
+          -
+            - left
+            - ''
+          -
+            - center
+            - '1'
+          -
+            - right
+            - ''
+          -
+            - full
+            - '1'
+          -
+            - drop-left
+            - ''
+          -
+            - drop-right
+            - ''
     translationKeyFormat: null
     translationMethod: none
-    type: craft\fields\PlainText
+    type: rias\positionfieldtype\fields\Position
   3fc84cf5-6e3d-46e8-bf13-9a1d4e198438:
     contentColumnType: text
     fieldGroup: null
