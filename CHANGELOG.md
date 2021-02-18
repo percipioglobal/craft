@@ -1,5 +1,16 @@
 # percipioglobal/craft Change Log
 
+## 1.4.1 - 18/02/2021
+
+### Changed
+- Updated favicons to use `6.2.1` which contains an updated version of sharp that should build on M1 Macs
+- Updated the position field type to be more compatible with PHP-8
+- Made site module PSR-4 compliant
+
+### Fixed
+- Fixed a few issues where images could error when using live preview, as no fallback was provided
+- Fixed an issue where the description text was white against a white background for the section header
+- Fixed the issue where the seed db / project files would have a plaintext field for the image position rather than a position field type
 ## 1.4.0 - 15/02/2021
 
 ### Added
