@@ -25,7 +25,7 @@
         "craftcms/feed-me": "^4.2.0",
         "craftcms/redactor": "^2.1.0",
         "craftcms/mailgun": "1.4.3",
-        "hybridinteractive/craft-position-fieldtype": "^1.0.0",
+        "hybridinteractive/craft-position-fieldtype": "^1.0.17",
         "hybridinteractive/craft-width-fieldtype": "^1.0.3",
         "nystudio107/craft-eagerbeaver": "^1.0.0",
         "nystudio107/craft-imageoptimize": "^1.0.0",
