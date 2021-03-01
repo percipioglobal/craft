@@ -31,7 +31,7 @@
         - "apk update && apk add git zip"
         - "curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer"
         - "# php ext pdo_mysql"
-        - "docker-php-ext-install pdo_pgsql pgsql"
+        - "docker-php-ext-install pdo_mysql mysqli"
       volume_mappings:
         - "/:/buddy/$PROJECT_SHORTNAME"
       trigger_condition: "ALWAYS"
@@ -160,7 +160,7 @@
         - "apk update && apk add git zip"
         - "curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer"
         - "# php ext pdo_mysql"
-        - "docker-php-ext-install pdo_pgsql pgsql"
+        - "docker-php-ext-install pdo_mysql mysqli"
       volume_mappings:
         - "/:/buddy/$PROJECT_SHORTNAME"
       trigger_condition: "ALWAYS"

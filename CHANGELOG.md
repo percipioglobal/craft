@@ -1,5 +1,10 @@
 # percipioglobal/craft Change Log
 
+## 1.4.1.4 - 01/03/2021
+
+### Changed
+- Changed pgsql to mysqli for alpine builds
+
 ## 1.4.1.3 - 01/03/2021
 
 ### Fixed
