@@ -1,6 +1,12 @@
 # percipioglobal/craft Change Log
 
-## 1.4.1.1 - 18/02/2021
+## 1.4.1.3 - 01/03/2021
+
+### Fixed
+- Fixed issue where the buddy production build had `-y` appended to `apk add`
+- Fixed issue where the Slack notification was added twice
+
+## 1.4.1.1 / 1.4.1.2 - 18/02/2021
 
 ### Fixed
 - Fixed issue where case-sensitive machines would see 2 sitemodule folders.
