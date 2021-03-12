@@ -20,4 +20,4 @@
 	<a href="{{- values.url -}}" class="block relative z-1" title="{{- values.title -}}">
         {{- swatch ? svg(values.svg) : svg(values.svg, sanitize=true)|attr({ class: values.style }) -}}
 	</a>
-{%- minify -%}
+{%- endminify -%}

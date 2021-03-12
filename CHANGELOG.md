@@ -1,5 +1,16 @@
 # percipioglobal/craft Change Log
 
+## 1.4.2 - 12/03/2021
+
+### Added
+- Added on deploy failure slack notification
+### Changed
+- Updated buddy to use `node-dev-base`
+- Changed buddy `npm ci` to `npm install`
+### Fixed
+- Fixed issue where logo atom wasn't using the correct end tag
+- Added App ID Support
+
 ## 1.4.1.4 - 01/03/2021
 
 ### Changed

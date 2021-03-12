@@ -27,26 +27,24 @@ return [
     ],
     'bootstrap' => ['site-module'],
     'components' => [
+        'redis' => [
+            'class' => yii\redis\Connection::class,
+            'hostname' => App::env('REDIS_HOSTNAME'),
+            'port' => App::env('REDIS_PORT'),
+            'database' => App::env('REDIS_CRAFT_DB'),
+        ],
         'cache' => [
             'class' => yii\redis\Cache::class,
-            'redis' => [
-                'hostname' => App::env('REDIS_HOSTNAME'),
-                'port' => App::env('REDIS_PORT'),
-                'database' => App::env('REDIS_CRAFT_DB'),
-            ],
+            'keyPrefix' => App::env('APP_ID') ?: 'Percipio',
+            'defaultDuration' => 86400,
         ],
         'deprecator' => [
             'throwExceptions' => App::env('DEV_MODE'),
         ],
         'queue' => [
-            'class' => craft\queue\Queue::class,
-            'ttr' => 10 * 60,
-        ],
-        'redis' => [
-            'class' => yii\redis\Connection::class,
-            'hostname' => App::env('REDIS_HOSTNAME'),
-            'port' => App::env('REDIS_PORT'),
-            'database' => App::env('REDIS_DEFAULT_DB'),
+            'class' => yii\queue\redis\Queue::class,
+            'redis' => 'redis',
+            'channel' => 'queue',
         ],
     ],
 ];
