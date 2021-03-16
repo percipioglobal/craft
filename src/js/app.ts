@@ -1,5 +1,4 @@
-import { createStore } from './stores/store.js';
-
+import { createStore } from '@/js/stores/store.js';
 // App main
 const site = async () => {
     // Async load the vue module
@@ -15,7 +14,7 @@ const site = async () => {
         el: '#page-container',
         store,
         components: {
-            'notification--cookie': () => import(/* webpackChunkName: "notification--cookie" */ '../vue/molecules/notifications/notification--cookie.vue'),
+            'notification--cookie': () => import(/* webpackChunkName: "notification--cookie" */ '@/vue/molecules/notifications/notification--cookie.vue'),
         },
 
         data: () => ({}),

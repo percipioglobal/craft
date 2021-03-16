@@ -2,30 +2,27 @@
 
 // node modules
 require('dotenv').config();
+const path = require('path');
 
 // settings
 module.exports = {
     alias: {
-        'vue$': 'vue/dist/vue.esm.js'
+        'vue$': 'vue/dist/vue.esm.js',
+        '@': path.resolve('../src'),
     },
     copyright: '©2020 Percipio.London',
     entry: {
         'app': [
-            '../src/js/app.ts',
-            '../src/css/tailwind-base.pcss',
-            '../src/css/tailwind-components.pcss',
-            '../src/css/tailwind-utilities.pcss',
-            '../src/css/app-base.pcss',
-            '../src/css/app-components.pcss',
-            '../src/css/app-utilities.pcss',
-            '../src/js/assets/icons.js',
+            '@/js/app.ts',
+            '@/js/assets/icons.js',
+            '@/css/app.pcss',
         ],
         'lazysizes-wrapper': '../src/js/utils/lazysizes-wrapper.ts',
     },
     extensions: ['.ts', '.js', '.vue', '.json'],
     name: 'percipio.london',
     paths: {
-        dist: '../../cms/web/dist/',
+        dist: path.resolve('../cms/web/dist'),
     },
     urls: {
         criticalCss: 'https://percipio.london/',

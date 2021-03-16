@@ -14,10 +14,6 @@ module.exports = {
         },
         // Replace the default Tailwind config here
     },
-    variants: {
-        scale: ['group-hover'],
-        textColor: ['responsive', 'hover', 'focus', 'group-hover'],
-    },
     corePlugins: {},
     plugins: [
         require('@tailwindcss/typography'),

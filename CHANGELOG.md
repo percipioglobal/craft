@@ -1,5 +1,17 @@
 # percipioglobal/craft Change Log
 
+## 1.4.3 - 16/03/2021
+
+### Added
+- Added Tailwind JIT
+- Added file aliasing for the builds
+### Changed
+- Changed webpack-dev-container to use `node 14-alpine`
+- Bumped minimum PHP requirements to `7.4`
+
+### Fixed
+- Fixed wrong option for criticalCss, changed `url` to `uri`
+
 ## 1.4.2 - 12/03/2021
 
 ### Added

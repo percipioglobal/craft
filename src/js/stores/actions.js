@@ -1,7 +1,7 @@
 import axios from 'axios';
-import { configureXhrApi, executeXhr } from '../utils/xhr.js';
-import { configureGqlApi, executeGqlQuery } from '../utils/gql.js';
-import { NEWS_QUERY } from '../data/queries.js';
+import { configureXhrApi, executeXhr } from '@/js/utils/xhr.js';
+import { configureGqlApi, executeGqlQuery } from '@/js/utils/gql.js';
+import { NEWS_QUERY } from '@/js/data/queries.js';
 
 
 const CSRF_ENDPOINT = '/actions/site-module/csrf/get-csrf';

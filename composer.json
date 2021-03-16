@@ -1,7 +1,7 @@
 {
     "name": "craftcms/craft",
     "description": "Percipio Global Craft 3.5 CMS scaffolding project",
-    "version": "1.4.2",
+    "version": "1.4.3",
     "keywords": [
         "craft",
         "cms",
@@ -31,7 +31,7 @@
     "config": {
         "optimize-autoloader": true,
         "platform": {
-            "php": "7.3"
+            "php": "7.4"
         }
     },
     "scripts": {

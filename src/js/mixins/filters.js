@@ -1,4 +1,4 @@
-import { escapeChars } from '../functions/math';
+import { escapeChars } from '@/js/functions/math';
 
 export const replace = {
     filters: {
