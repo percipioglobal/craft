@@ -1,6 +1,6 @@
-import * as actions from '@/js/src/stores/actions.js';
-import * as getters from '@/js/src/stores/actions.js';
-import * as mutations from '@/js/src/stores/actions.js';
+import * as actions from '@/js/stores/actions.js';
+import * as getters from '@/js/stores/actions.js';
+import * as mutations from '@/js/stores/actions.js';
 
 // Main Store
 export const createStore = async(Vue) => {
