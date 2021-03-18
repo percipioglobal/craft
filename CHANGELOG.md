@@ -1,5 +1,10 @@
 # percipioglobal/craft Change Log
 
+## 1.4.3 - 18/03/2021
+
+### Fixed
+- Fixed an issue with wrong aliases
+- Created the single `app.pcss` needed for Tailwind JIT
 ## 1.4.3 - 16/03/2021
 
 ### Added
