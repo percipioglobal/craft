@@ -50,11 +50,11 @@ The following Craft CMS plugins are used on this site:
 
 This project package works exactly the way Pixel & Tonic's [craftcms/craft](https://github.com/craftcms/craft) package works; you create a new project by first creating & installing the project:
 
-    composer create-project percipioglobal/craft PATH
+    `composer create-project percipioglobal/craft PATH`
 
 Make sure that `PATH` is the path to your project, including the name you want for the project, e.g.:
 
-    composer create-project percipioglobal/craft craft3
+    `composer create-project percipioglobal/craft craft3`
 
 ## Setting Up Local Dev
 
@@ -62,31 +62,36 @@ You'll need Docker desktop for your platform installed to run the project in loc
 
 * Set up a `.env` file in the `cms/` directory, based off of the provided `example.env`
 * Set up a `.env.sh.` file in the `scripts/` directory, based off of the provided `example.env.sh`
-* Start up the site with `docker-compose up` (the first build will be somewhat lengthy)
-* Import the `seed.sql` database dump the first time from the `seed-db/` dir with `./docker_restore_db.sh ./seed-db/seed.sql`
-* Navigate to `http://localhost:8000` to use the site; the `webpack-dev-server` runs off of `http://localhost:8080`
+* Start up the site by typing make dev in terminal in the project's root directory (the first build will be somewhat lengthy)
+* Navigate to http://localhost:8000 to use the site; the webpack-dev-server runs off of http://localhost:8080
 
 The CP login credentials are initially set as follows:
 
 Login: `support@percipio.london` \
 Password: `letmein`
 
+Obviously change these to whatever you like as needed.
+
+Build the production assets by typing make build to build the critical CSS, fonts, and other production assets. They will appear in `cms/web/dist/` (just double-click on the `report-legacy.html` and `report-modern.html` files to view them).
+
 **Important:** To find the correct credentials for `LOCAL_DB_CONTAINER` run `docker-compose up` and once the docker container is running, use the command `docker container ls` to find the correct name of the container.
 If your project is called `test` the container will be somewhere along the lines of `test_mariadb` or `test_mysql`. That's the value you do have to enter.
 
 **N.B.:** Without authorization & credentials (which are private), the `./docker_pull_db.sh` will not work. It's provided here for instructional purposes
 
-To update to the latest Composer packages (as constrained by the `cms/composer.json` semvers), do:
-```
-rm cms/composer.lock
-docker-compose up
-```
+## Makefile Project Commands
 
-To update to the latest npm packages (as constrained by the `docker-config/webpack-dev-craft/package.json` semvers), do:
-```
-rm docker-config/webpack-dev-craft/package-lock.json
-docker-compose up
-```
+This project uses Docker to shrink-wrap the devops it needs to run around the project.
+
+To make using it easier, we're using a Makefile and the built-in `make` utility to create local aliases. You can run the following from terminal in the project directory:
+
+- `make dev` - starts up the local dev server listening on `http://localhost:8000/`
+- `make build` - builds the static assets via the webpack 5 buildchain
+- `make clean` - shuts down the Docker containers, removes any mounted volumes (including the database), and then rebuilds the containers from scratch
+- `make composer xxx` - runs the `composer` command passed in, e.g. `make composer install`
+- `make npm xxx` - runs the `npm` command passed in, e.g. `make npm install`
+- `make pulldb` - runs the `scripts/docker_pull_db.sh` script to pull a remote database into the database container; the `scripts/.env.sh` must be set up first
+- `make restoredb xxx` - runs the `scripts/docker_restore_db.sh` script to restore a local database dump into the database container; the `scripts/.env.sh` must be set up first
 
 To use Xdebug with VSCode install the [PHP Debug extension](https://marketplace.visualstudio.com/items?itemName=felixfbecker.php-debug ) and use the following configuration:
 ```json
@@ -115,7 +120,30 @@ Since we are using docker to run our project, we need to execute the craft CLI c
 
 ## Updating Composer Packages
 
-Run the following command to update your composer packages to the latest version: `docker-compose exec php composer update`
+To update to the latest Composer packages (as constrained by the `cms/composer.json` semvers), do: 
+
+`docker-compose exec php composer update`
+
+or 
+
+```
+rm cms/composer.lock
+make dev
+```
+
+
+## Updating NPM Packages
+
+To update to the latest npm packages (as constrained by the `buildchain/package.json` semvers), do:
+
+`docker-compose exec webpack npm update`
+
+or 
+
+```
+rm buildchain/package-lock.json
+make dev
+```
 
 Below is the entire intact, unmodified `README.md` from Pixel & Tonic's [craftcms/craft](https://github.com/craftcms/craft):
 

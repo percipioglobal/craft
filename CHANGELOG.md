@@ -1,5 +1,20 @@
 # percipioglobal/craft Change Log
 
+## 1.4.5 - 29/03/2021
+
+### Added
+- Added `make clean` to the Makefile
+- Added Makefile Project Commands to `README.md`
+- Added `make composer xxx` & `make npm xxx` commands
+- Added `make` command aliases
+
+### Changed
+- Use official MariaDB images
+
+### Fixed
+- Fixed an issue with the `webpack-dev-server` version `^4.0.0-beta.1` by moving the `overlay` config setting to `client` (https://github.com/nystudio107/craft/issues/54)
+- Fix webpack buildchain pipeline
+
 ## 1.4.4 - 18/03/2021
 
 ### Fixed
