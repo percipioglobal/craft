@@ -6,12 +6,12 @@ fieldLayouts:
           502c51a1-5b82-4368-90e1-aa68b1d4e479:
             required: false
             sortOrder: 1
-          6962a9b1-b802-4295-82b1-398470a9f54c:
-            required: false
-            sortOrder: 2
           870c07d7-9341-4f1f-825b-25c76239bc0d:
             required: false
             sortOrder: 3
+          6962a9b1-b802-4295-82b1-398470a9f54c:
+            required: false
+            sortOrder: 2
         name: Metadata
         sortOrder: 1
 handle: documents

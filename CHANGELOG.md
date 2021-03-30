@@ -1,5 +1,12 @@
 # percipioglobal/craft Change Log
 
+## 1.4.6 - 30/03/2021
+
+### Changed
+- Updated `db-seed/seed.sql` to reflect updates
+- Updated project files
+- Removed unused ENV var
+
 ## 1.4.5 - 29/03/2021
 
 ### Added

@@ -34,41 +34,6 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  37051ce6-f0ea-4d54-97a5-e8c0f304f99c:
-    contentColumnType: string
-    fieldGroup: null
-    handle: quoteType
-    instructions: 'Choose the type of quote.'
-    name: Type
-    searchable: false
-    settings:
-      optgroups: true
-      options:
-        -
-          __assoc__:
-            -
-              - label
-              - 'Block Quote'
-            -
-              - value
-              - blockQuote
-            -
-              - default
-              - '1'
-        -
-          __assoc__:
-            -
-              - label
-              - 'Pull Quote'
-            -
-              - value
-              - pullQuote
-            -
-              - default
-              - ''
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\Dropdown
   3ef3485e-6187-4dac-af6b-66d630852b61:
     contentColumnType: text
     fieldGroup: null
@@ -238,6 +203,41 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: lenz\linkfield\fields\LinkField
+  37051ce6-f0ea-4d54-97a5-e8c0f304f99c:
+    contentColumnType: string
+    fieldGroup: null
+    handle: quoteType
+    instructions: 'Choose the type of quote.'
+    name: Type
+    searchable: false
+    settings:
+      optgroups: true
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - 'Block Quote'
+            -
+              - value
+              - blockQuote
+            -
+              - default
+              - '1'
+        -
+          __assoc__:
+            -
+              - label
+              - 'Pull Quote'
+            -
+              - value
+              - pullQuote
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
 handle: blockQuote
 name: Quotation
 sortOrder: 4
