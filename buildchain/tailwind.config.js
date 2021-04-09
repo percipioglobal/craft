@@ -1,4 +1,21 @@
 module.exports = {
+    mode: 'jit',
+    purge: {
+        content: [
+            '../src/templates/**/*.{twig,html}',
+            '../src/vue/**/*.{vue,js}',
+        ],
+        layers: [
+            'base',
+            'components',
+            'utilities',
+        ],
+        mode: 'layers',
+        options: {
+            whitelist: [
+            ],
+        }
+    },
     theme: {
 
         container: {
@@ -12,7 +29,7 @@ module.exports = {
         // Extend the default Tailwind config here
         extend: {
         },
-        // Replace the default Tailwind config here
+
     },
     corePlugins: {},
     plugins: [

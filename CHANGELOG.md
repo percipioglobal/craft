@@ -1,5 +1,14 @@
 # percipioglobal/craft Change Log
 
+## 1.4.7 - 09/04/2021
+
+### Added
+- Added purge rules in the TW config
+
+### Changed
+- Updated `tailwind` to `2.1`
+- Enabling JIT in the TW config
+
 ## 1.4.6 - 30/03/2021
 
 ### Changed
