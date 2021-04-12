@@ -1,5 +1,11 @@
 # percipioglobal/craft Change Log
 
+## 1.4.8 - 12/04/2021
+
+### Fixed
+- Fixed wrong fieldName in templates for hero image block
+- Fixed missing placeholder for Hero Images
+
 ## 1.4.7 - 09/04/2021
 
 ### Added
