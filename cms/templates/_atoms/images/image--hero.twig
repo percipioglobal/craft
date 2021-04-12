@@ -26,7 +26,7 @@
 {%- block image -%}
 
     {%- set values = values|merge({
-        optimized: options.image.optimizeHero ??? null,
+        optimized: options.image.optimizeHeroes ??? null,
         placeholder: options.placeholders.heroPlaceholder[0].optimizeHeroes ??? null
     }) -%}
 

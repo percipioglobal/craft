@@ -2,7 +2,7 @@
     'headerBuilder',
     'headerBuilder.heroContent:buttons',
     'headerBuilder.heroMain:buttons',
-    'headerBuilder.heroMain:heroImage',
+    'headerBuilder.heroMain:image',
     ])
 %}
 
@@ -19,7 +19,7 @@
 
             {%- case "heroMain" -%}
 
-                {%- include '_organisms/heroes/hero--main' ignore missing with {
+                {%- include '_organisms/heroes/hero--image' ignore missing with {
                     content: block,
                 } -%}
 
