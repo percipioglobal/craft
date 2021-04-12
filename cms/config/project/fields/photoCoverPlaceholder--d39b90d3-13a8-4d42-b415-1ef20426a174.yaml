@@ -1,5 +1,5 @@
 contentColumnType: string
-fieldGroup: c014f72e-6101-4377-a9e4-bbea0f16bce8
+fieldGroup: c014f72e-6101-4377-a9e4-bbea0f16bce8 # Placeholders
 handle: photoCoverPlaceholder
 instructions: 'Upload an image that will serve as placeholder if the original image can not be found or is not ready for display yet.'
 name: 'Photo Cover Placeholder'
@@ -8,7 +8,7 @@ settings:
   allowSelfRelations: false
   allowUploads: true
   allowedKinds: null
-  defaultUploadLocationSource: 'volume:5c642d7e-b16b-4836-9575-668d75d242e5'
+  defaultUploadLocationSource: 'volume:5c642d7e-b16b-4836-9575-668d75d242e5' # Branding
   defaultUploadLocationSubpath: ''
   limit: '1'
   localizeRelations: false
@@ -18,7 +18,7 @@ settings:
   showSiteMenu: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
-  singleUploadLocationSource: 'volume:918b50e1-632c-4e92-a8c5-55eeb7b8571e'
+  singleUploadLocationSource: 'volume:918b50e1-632c-4e92-a8c5-55eeb7b8571e' # Cover Photos
   singleUploadLocationSubpath: ''
   source: null
   sources: '*'

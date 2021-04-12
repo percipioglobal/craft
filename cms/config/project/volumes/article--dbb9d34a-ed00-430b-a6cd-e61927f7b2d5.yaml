@@ -2,10 +2,39 @@ fieldLayouts:
   71520570-0884-48d3-8b9b-a5ac2fe8e8e4:
     tabs:
       -
-        fields:
-          97956e7f-3294-43b2-9d6a-e717706432bc:
-            required: false
-            sortOrder: 1
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\AssetTitleField
+            warning: null
+            width: 100
+          -
+            fieldUid: 97956e7f-3294-43b2-9d6a-e717706432bc # Optimize Articles
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
         name: 'Optimized Images'
         sortOrder: 1
 handle: article
@@ -26,5 +55,7 @@ settings:
   storageClass: ''
   subfolder: content/
 sortOrder: 5
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
 type: craft\awss3\Volume
 url: $CLOUDFRONT_URL

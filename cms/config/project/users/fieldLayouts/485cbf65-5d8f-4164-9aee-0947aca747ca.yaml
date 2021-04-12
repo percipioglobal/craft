@@ -1,8 +1,14 @@
 tabs:
   -
-    fields:
-      815594b4-d88f-4430-bf0c-5db890e1051f:
-        required: false
-        sortOrder: 1
+    elements:
+      -
+        fieldUid: 815594b4-d88f-4430-bf0c-5db890e1051f # Profile Photo
+        instructions: null
+        label: null
+        required: '0'
+        tip: null
+        type: craft\fieldlayoutelements\CustomField
+        warning: null
+        width: 100
     name: 'Profile Photo'
     sortOrder: 1

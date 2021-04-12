@@ -1,5 +1,5 @@
 contentColumnType: string
-fieldGroup: 2473fef2-babd-4336-bb2e-550dc284282c
+fieldGroup: 2473fef2-babd-4336-bb2e-550dc284282c # FAQ
 handle: faqCategory
 instructions: 'Please select or create a category this entry belongs to.'
 name: 'FAQ Category'
@@ -7,15 +7,16 @@ searchable: true
 settings:
   allowLimit: false
   allowMultipleSources: false
-  allowSelfRelations: ''
+  allowSelfRelations: false
   branchLimit: ''
   limit: null
   localizeRelations: false
   selectionLabel: ''
-  source: 'group:4e026396-d7ab-43ef-a817-226fb2dada30'
+  showSiteMenu: true
+  source: 'group:4e026396-d7ab-43ef-a817-226fb2dada30' # FAQ Categories
   sources: '*'
   targetSiteId: null
-  validateRelatedElements: ''
+  validateRelatedElements: false
   viewMode: null
 translationKeyFormat: null
 translationMethod: site

@@ -27,7 +27,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 6962a9b1-b802-4295-82b1-398470a9f54c
+            fieldUid: 6962a9b1-b802-4295-82b1-398470a9f54c # Author
             instructions: null
             label: null
             required: false
@@ -36,7 +36,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: dcdd5839-4bb5-4669-8d82-d46ec4da660a
+            fieldUid: dcdd5839-4bb5-4669-8d82-d46ec4da660a # Image Source
             instructions: null
             label: null
             required: false
@@ -49,7 +49,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: 35a1d959-d78e-4445-891c-7bb671c48281
+            fieldUid: 35a1d959-d78e-4445-891c-7bb671c48281 # Optimize Teasers
             instructions: null
             label: null
             required: false
@@ -78,6 +78,6 @@ settings:
   subfolder: teasers
 sortOrder: 0
 titleTranslationKeyFormat: null
-titleTranslationMethod: null
+titleTranslationMethod: site
 type: craft\awss3\Volume
 url: $CLOUDFRONT_URL

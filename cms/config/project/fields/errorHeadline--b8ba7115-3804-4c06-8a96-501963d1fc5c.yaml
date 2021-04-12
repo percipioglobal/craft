@@ -1,5 +1,5 @@
 contentColumnType: text
-fieldGroup: d08a0d16-0e00-49e6-9cd4-465fa2d65d7d
+fieldGroup: d08a0d16-0e00-49e6-9cd4-465fa2d65d7d # Errors
 handle: errorHeadline
 instructions: ''
 name: 'Error Headline'
@@ -11,7 +11,7 @@ settings:
   columnType: text
   initialRows: '4'
   multiline: ''
-  placeholder: ''
+  placeholder: null
   uiMode: normal
 translationKeyFormat: null
 translationMethod: none

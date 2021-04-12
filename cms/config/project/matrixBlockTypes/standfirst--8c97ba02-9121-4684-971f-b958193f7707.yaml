@@ -1,11 +1,11 @@
-field: e691301b-7484-40be-a3d4-c3bc590de959
+field: e691301b-7484-40be-a3d4-c3bc590de959 # Content Builder
 fieldLayouts:
   5b45c163-40fe-4227-a886-183a31b3c156:
     tabs:
       -
         elements:
           -
-            fieldUid: b06ee5f5-05a5-4b2d-ae59-122bff896ee6
+            fieldUid: b06ee5f5-05a5-4b2d-ae59-122bff896ee6 # Standfirst
             instructions: null
             label: null
             required: true
@@ -16,7 +16,7 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  b06ee5f5-05a5-4b2d-ae59-122bff896ee6:
+  b06ee5f5-05a5-4b2d-ae59-122bff896ee6: # Standfirst
     contentColumnType: text
     fieldGroup: null
     handle: standfirst

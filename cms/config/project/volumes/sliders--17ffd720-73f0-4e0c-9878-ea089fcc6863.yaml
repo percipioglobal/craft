@@ -2,23 +2,70 @@ fieldLayouts:
   c1a12ccb-e2da-48c0-91fb-8620810d76de:
     tabs:
       -
-        fields:
-          870c07d7-9341-4f1f-825b-25c76239bc0d:
-            required: false
-            sortOrder: 2
-          6962a9b1-b802-4295-82b1-398470a9f54c:
-            required: false
-            sortOrder: 1
-          dcdd5839-4bb5-4669-8d82-d46ec4da660a:
-            required: false
-            sortOrder: 3
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\AssetTitleField
+            warning: null
+            width: 100
+          -
+            fieldUid: 6962a9b1-b802-4295-82b1-398470a9f54c # Author
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 870c07d7-9341-4f1f-825b-25c76239bc0d # Caption
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: dcdd5839-4bb5-4669-8d82-d46ec4da660a # Image Source
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
         name: Metadata
         sortOrder: 1
       -
-        fields:
-          634bebf5-ce96-4127-ab28-ee2541fb9f3b:
-            required: false
-            sortOrder: 1
+        elements:
+          -
+            fieldUid: 634bebf5-ce96-4127-ab28-ee2541fb9f3b # Optimize Slider Images
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
         name: 'Optimized Images'
         sortOrder: 2
 handle: sliders
@@ -39,5 +86,7 @@ settings:
   storageClass: ''
   subfolder: sliders/
 sortOrder: 3
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
 type: craft\awss3\Volume
 url: $CLOUDFRONT_URL

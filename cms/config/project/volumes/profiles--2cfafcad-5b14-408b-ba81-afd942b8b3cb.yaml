@@ -2,10 +2,39 @@ fieldLayouts:
   e8b47e71-94ef-4b05-85a2-f9578c687105:
     tabs:
       -
-        fields:
-          9806bc10-174e-4280-b2a8-c684b99a3139:
-            required: false
-            sortOrder: 1
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\AssetTitleField
+            warning: null
+            width: 100
+          -
+            fieldUid: 9806bc10-174e-4280-b2a8-c684b99a3139 # Optimize Profile Images
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
         name: 'Image Optimizations'
         sortOrder: 1
 handle: profiles
@@ -26,5 +55,7 @@ settings:
   storageClass: ''
   subfolder: profile-images/
 sortOrder: 7
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
 type: craft\awss3\Volume
 url: $CLOUDFRONT_URL

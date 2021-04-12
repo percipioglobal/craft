@@ -1,13 +1,9 @@
-dateModified: 1617105668
+dateModified: 1618240572
 email:
   fromEmail: $SYSTEM_EMAIL
   fromName: $SENDER_NAME
   replyToEmail: $REPLY_TO
   transportType: craft\mail\transportadapters\Sendmail
-graphql:
-  publicToken:
-    enabled: false
-    expiryDate: null
 plugins:
   aws-s3:
     eager-beaver:

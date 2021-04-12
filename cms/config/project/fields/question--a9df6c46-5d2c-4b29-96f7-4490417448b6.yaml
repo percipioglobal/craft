@@ -1,5 +1,5 @@
 contentColumnType: text
-fieldGroup: 2473fef2-babd-4336-bb2e-550dc284282c
+fieldGroup: 2473fef2-babd-4336-bb2e-550dc284282c # FAQ
 handle: question
 instructions: 'Enter the frequently asked question.'
 name: 'The Question'
@@ -11,7 +11,8 @@ settings:
   columnType: null
   initialRows: '4'
   multiline: ''
-  placeholder: ''
+  placeholder: null
+  uiMode: normal
 translationKeyFormat: null
 translationMethod: none
 type: craft\fields\PlainText

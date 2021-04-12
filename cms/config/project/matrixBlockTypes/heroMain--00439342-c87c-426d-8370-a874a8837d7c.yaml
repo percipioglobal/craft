@@ -1,11 +1,11 @@
-field: 1266c39b-94f2-433c-ac8e-e84aa225a740
+field: 1266c39b-94f2-433c-ac8e-e84aa225a740 # Header Builder
 fieldLayouts:
   b0372d69-c68d-49a1-bf2e-7079cfe035dd:
     tabs:
       -
         elements:
           -
-            fieldUid: ea74ba6b-b787-414c-9f83-a01b8377bd73
+            fieldUid: ea74ba6b-b787-414c-9f83-a01b8377bd73 # Heading
             instructions: null
             label: null
             required: false
@@ -14,7 +14,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 040d9f96-b22c-414c-8b92-9ec41f548a81
+            fieldUid: 040d9f96-b22c-414c-8b92-9ec41f548a81 # Description
             instructions: null
             label: null
             required: false
@@ -23,7 +23,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: af937c7b-a59e-445e-ac72-b9c36b9854f0
+            fieldUid: af937c7b-a59e-445e-ac72-b9c36b9854f0 # Buttons
             instructions: null
             label: null
             required: false
@@ -34,7 +34,7 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  040d9f96-b22c-414c-8b92-9ec41f548a81:
+  040d9f96-b22c-414c-8b92-9ec41f548a81: # Description
     contentColumnType: text
     fieldGroup: null
     handle: description
@@ -62,7 +62,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\redactor\Field
-  af937c7b-a59e-445e-ac72-b9c36b9854f0:
+  af937c7b-a59e-445e-ac72-b9c36b9854f0: # Buttons
     contentColumnType: string
     fieldGroup: null
     handle: buttons
@@ -73,7 +73,7 @@ fields:
       columns:
         __assoc__:
           -
-            - 68e8bef5-3752-4c83-a67b-6fe5d31c976a
+            - 68e8bef5-3752-4c83-a67b-6fe5d31c976a # Button
             -
               __assoc__:
                 -
@@ -90,7 +90,7 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: verbb\supertable\fields\SuperTableField
-  ea74ba6b-b787-414c-9f83-a01b8377bd73:
+  ea74ba6b-b787-414c-9f83-a01b8377bd73: # Heading
     contentColumnType: text
     fieldGroup: null
     handle: heading
@@ -104,7 +104,7 @@ fields:
       columnType: null
       initialRows: '4'
       multiline: ''
-      placeholder: ''
+      placeholder: null
       uiMode: normal
     translationKeyFormat: null
     translationMethod: none

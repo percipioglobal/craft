@@ -1,11 +1,11 @@
-field: e691301b-7484-40be-a3d4-c3bc590de959
+field: e691301b-7484-40be-a3d4-c3bc590de959 # Content Builder
 fieldLayouts:
   f5c867a3-9fde-4150-b6d0-71459f184ef2:
     tabs:
       -
         elements:
           -
-            fieldUid: cc4d5589-5884-4fb2-ba84-ffb388a8806e
+            fieldUid: cc4d5589-5884-4fb2-ba84-ffb388a8806e # Slides
             instructions: null
             label: null
             required: true
@@ -16,7 +16,7 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  cc4d5589-5884-4fb2-ba84-ffb388a8806e:
+  cc4d5589-5884-4fb2-ba84-ffb388a8806e: # Slides
     contentColumnType: string
     fieldGroup: null
     handle: slides
@@ -27,14 +27,14 @@ fields:
       columns:
         __assoc__:
           -
-            - f3960fae-d20a-4473-9a73-315dfed31760
+            - f3960fae-d20a-4473-9a73-315dfed31760 # Image
             -
               __assoc__:
                 -
                   - width
                   - ''
           -
-            - 085923fe-5934-4d01-a2fd-ec625094c005
+            - 085923fe-5934-4d01-a2fd-ec625094c005 # Caption
             -
               __assoc__:
                 -

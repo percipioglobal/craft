@@ -1,29 +1,30 @@
 contentColumnType: string
-fieldGroup: 11cffc84-a18e-49e3-9923-8229743b2a28 # Branding
-handle: icon
+fieldGroup: c014f72e-6101-4377-a9e4-bbea0f16bce8 # Placeholders
+handle: heroPlaceholder
 instructions: ''
-name: 'Logo Icon'
+name: 'Hero Image Placeholder'
 searchable: false
 settings:
   allowSelfRelations: false
   allowUploads: true
-  allowedKinds: null
-  defaultUploadLocationSource: 'volume:5c642d7e-b16b-4836-9575-668d75d242e5' # Branding
+  allowedKinds:
+    - image
+  defaultUploadLocationSource: 'volume:1105c63e-3aaf-403a-8259-736f0a2d47f8' # Heroes
   defaultUploadLocationSubpath: ''
   limit: '1'
   localizeRelations: false
   previewMode: full
-  restrictFiles: ''
-  selectionLabel: ''
+  restrictFiles: '1'
+  selectionLabel: 'Add an image'
   showSiteMenu: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
-  singleUploadLocationSource: 'volume:5c642d7e-b16b-4836-9575-668d75d242e5' # Branding
+  singleUploadLocationSource: 'volume:14e48735-7707-43d5-a6f1-90cc18da80f1' # Teasers
   singleUploadLocationSubpath: ''
   source: null
   sources: '*'
   targetSiteId: null
-  useSingleFolder: false
+  useSingleFolder: true
   validateRelatedElements: false
   viewMode: list
 translationKeyFormat: null

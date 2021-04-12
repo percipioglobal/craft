@@ -4,22 +4,53 @@ fieldLayouts:
       -
         elements:
           -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
             instructions: null
-            label: Title
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
             type: craft\fieldlayoutelements\EntryTitleField
+            warning: null
+            width: 100
           -
-            fieldUid: 1c23eb9d-03fe-46ea-9bee-ff46e8bd15a3
-            required: false
+            fieldUid: 1c23eb9d-03fe-46ea-9bee-ff46e8bd15a3 # Teaser Image
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
             type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
           -
-            fieldUid: 6a3feb81-50ce-467a-8aca-b5d4cc12aed0
-            required: false
+            fieldUid: 6a3feb81-50ce-467a-8aca-b5d4cc12aed0 # Description
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
             type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
         name: Metadata
         sortOrder: 1
 handle: landingsPage
 hasTitleField: true
 name: 'Landings Page'
-section: ef841ba4-7bcd-4ef5-9c12-96377bf7fba2
+section: ef841ba4-7bcd-4ef5-9c12-96377bf7fba2 # Pages
 sortOrder: 1
-titleFormat: ''
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

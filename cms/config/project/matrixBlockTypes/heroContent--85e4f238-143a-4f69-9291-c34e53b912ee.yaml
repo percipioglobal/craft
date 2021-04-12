@@ -1,11 +1,11 @@
-field: 1266c39b-94f2-433c-ac8e-e84aa225a740
+field: 1266c39b-94f2-433c-ac8e-e84aa225a740 # Header Builder
 fieldLayouts:
   a73e2e27-cf9a-4425-b353-3b16b7b96869:
     tabs:
       -
         elements:
           -
-            fieldUid: 6843ef52-9bcd-483a-956a-b63193181c85
+            fieldUid: 6843ef52-9bcd-483a-956a-b63193181c85 # Heading
             instructions: null
             label: null
             required: false
@@ -14,7 +14,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 21df72f8-6b89-4f91-9c09-d04a531f29de
+            fieldUid: 21df72f8-6b89-4f91-9c09-d04a531f29de # Description
             instructions: null
             label: null
             required: false
@@ -23,7 +23,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: f1db3ebb-c604-4fa8-9f2d-4255e0515ea9
+            fieldUid: f1db3ebb-c604-4fa8-9f2d-4255e0515ea9 # Buttons
             instructions: null
             label: null
             required: false
@@ -34,7 +34,7 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  21df72f8-6b89-4f91-9c09-d04a531f29de:
+  21df72f8-6b89-4f91-9c09-d04a531f29de: # Description
     contentColumnType: text
     fieldGroup: null
     handle: description
@@ -62,7 +62,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\redactor\Field
-  6843ef52-9bcd-483a-956a-b63193181c85:
+  6843ef52-9bcd-483a-956a-b63193181c85: # Heading
     contentColumnType: text
     fieldGroup: null
     handle: heading
@@ -76,12 +76,12 @@ fields:
       columnType: null
       initialRows: '4'
       multiline: ''
-      placeholder: ''
+      placeholder: null
       uiMode: normal
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
-  f1db3ebb-c604-4fa8-9f2d-4255e0515ea9:
+  f1db3ebb-c604-4fa8-9f2d-4255e0515ea9: # Buttons
     contentColumnType: string
     fieldGroup: null
     handle: buttons
@@ -92,7 +92,7 @@ fields:
       columns:
         __assoc__:
           -
-            - aa00fbfa-4274-4def-a5e0-651e06d5baae
+            - aa00fbfa-4274-4def-a5e0-651e06d5baae # Button
             -
               __assoc__:
                 -

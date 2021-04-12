@@ -27,7 +27,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 1c23eb9d-03fe-46ea-9bee-ff46e8bd15a3
+            fieldUid: 1c23eb9d-03fe-46ea-9bee-ff46e8bd15a3 # Teaser Image
             instructions: null
             label: null
             required: '0'
@@ -36,7 +36,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 6a3feb81-50ce-467a-8aca-b5d4cc12aed0
+            fieldUid: 6a3feb81-50ce-467a-8aca-b5d4cc12aed0 # Description
             instructions: null
             label: null
             required: '0'
@@ -45,7 +45,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: d7c71eec-4319-4f22-8bc6-a8bf17da8f3d
+            fieldUid: d7c71eec-4319-4f22-8bc6-a8bf17da8f3d # News Categories
             instructions: null
             label: null
             required: false
@@ -58,7 +58,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: e691301b-7484-40be-a3d4-c3bc590de959
+            fieldUid: e691301b-7484-40be-a3d4-c3bc590de959 # Content Builder
             instructions: null
             label: null
             required: '0'
@@ -71,7 +71,7 @@ fieldLayouts:
 handle: news
 hasTitleField: true
 name: News
-section: 9de367ab-77b8-47bb-bbc3-63e79a202c3e
+section: 9de367ab-77b8-47bb-bbc3-63e79a202c3e # News
 sortOrder: 1
 titleFormat: null
 titleTranslationKeyFormat: null

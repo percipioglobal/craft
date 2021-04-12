@@ -1,5 +1,5 @@
 contentColumnType: string
-fieldGroup: 07a123c0-4e8e-4c19-a79e-61829f5d88c0
+fieldGroup: 07a123c0-4e8e-4c19-a79e-61829f5d88c0 # Builders
 handle: contentBuilder
 instructions: 'Use this builder to create content on your page, every block has its own specific functionality'
 name: 'Content Builder'

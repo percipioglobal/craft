@@ -4,26 +4,62 @@ fieldLayouts:
       -
         elements:
           -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
             instructions: null
-            label: Title
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
             type: craft\fieldlayoutelements\EntryTitleField
+            warning: null
+            width: 100
           -
-            fieldUid: a9df6c46-5d2c-4b29-96f7-4490417448b6
-            required: false
+            fieldUid: a9df6c46-5d2c-4b29-96f7-4490417448b6 # The Question
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
             type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
           -
-            fieldUid: 1aad5a2f-f77c-42d8-8c02-c97817b9cb18
-            required: false
+            fieldUid: 1aad5a2f-f77c-42d8-8c02-c97817b9cb18 # The Answer
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
             type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
           -
-            fieldUid: 0827c9dd-2ea2-4e98-b743-3161e028a304
-            required: false
+            fieldUid: 0827c9dd-2ea2-4e98-b743-3161e028a304 # FAQ Category
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
             type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
         name: 'FAQ Entry'
         sortOrder: 1
 handle: faq
 hasTitleField: false
 name: FAQ
-section: 47b7409b-e345-48d9-b684-06ec0a2972f5
+section: 47b7409b-e345-48d9-b684-06ec0a2972f5 # FAQ
 sortOrder: 1
 titleFormat: '{question}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

@@ -1,11 +1,11 @@
-field: e691301b-7484-40be-a3d4-c3bc590de959
+field: e691301b-7484-40be-a3d4-c3bc590de959 # Content Builder
 fieldLayouts:
   1f38f42e-d515-4104-b279-6e3f7edbee7d:
     tabs:
       -
         elements:
           -
-            fieldUid: ed4b0f49-8429-4d80-846f-3d441bd3e707
+            fieldUid: ed4b0f49-8429-4d80-846f-3d441bd3e707 # Image
             instructions: null
             label: null
             required: true
@@ -14,7 +14,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 302a5592-8085-472e-9356-ab6b1eaf1635
+            fieldUid: 302a5592-8085-472e-9356-ab6b1eaf1635 # Position
             instructions: null
             label: null
             required: true
@@ -23,7 +23,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 49d732ef-0bfc-46c0-ba09-004de008c0ba
+            fieldUid: 49d732ef-0bfc-46c0-ba09-004de008c0ba # Ratio
             instructions: null
             label: null
             required: false
@@ -32,7 +32,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 3fc84cf5-6e3d-46e8-bf13-9a1d4e198438
+            fieldUid: 3fc84cf5-6e3d-46e8-bf13-9a1d4e198438 # Caption
             instructions: null
             label: null
             required: false
@@ -43,7 +43,7 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  3fc84cf5-6e3d-46e8-bf13-9a1d4e198438:
+  3fc84cf5-6e3d-46e8-bf13-9a1d4e198438: # Caption
     contentColumnType: text
     fieldGroup: null
     handle: caption
@@ -57,12 +57,12 @@ fields:
       columnType: null
       initialRows: '4'
       multiline: ''
-      placeholder: ''
+      placeholder: null
       uiMode: normal
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
-  49d732ef-0bfc-46c0-ba09-004de008c0ba:
+  49d732ef-0bfc-46c0-ba09-004de008c0ba: # Ratio
     contentColumnType: string
     fieldGroup: null
     handle: ratio
@@ -174,7 +174,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Dropdown
-  302a5592-8085-472e-9356-ab6b1eaf1635:
+  302a5592-8085-472e-9356-ab6b1eaf1635: # Position
     contentColumnType: string
     fieldGroup: null
     handle: position
@@ -206,7 +206,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: rias\positionfieldtype\fields\Position
-  ed4b0f49-8429-4d80-846f-3d441bd3e707:
+  ed4b0f49-8429-4d80-846f-3d441bd3e707: # Image
     contentColumnType: string
     fieldGroup: null
     handle: image
@@ -218,7 +218,7 @@ fields:
       allowUploads: true
       allowedKinds:
         - image
-      defaultUploadLocationSource: 'volume:5c642d7e-b16b-4836-9575-668d75d242e5'
+      defaultUploadLocationSource: 'volume:5c642d7e-b16b-4836-9575-668d75d242e5' # Branding
       defaultUploadLocationSubpath: ''
       limit: '1'
       localizeRelations: false
@@ -228,7 +228,7 @@ fields:
       showSiteMenu: true
       showUnpermittedFiles: true
       showUnpermittedVolumes: false
-      singleUploadLocationSource: 'volume:dbb9d34a-ed00-430b-a6cd-e61927f7b2d5'
+      singleUploadLocationSource: 'volume:dbb9d34a-ed00-430b-a6cd-e61927f7b2d5' # Articles
       singleUploadLocationSubpath: ''
       source: null
       sources: '*'

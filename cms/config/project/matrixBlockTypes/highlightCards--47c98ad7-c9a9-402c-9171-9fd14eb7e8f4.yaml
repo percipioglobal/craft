@@ -1,11 +1,11 @@
-field: e691301b-7484-40be-a3d4-c3bc590de959
+field: e691301b-7484-40be-a3d4-c3bc590de959 # Content Builder
 fieldLayouts:
   088a9888-4f4a-4c24-9756-170fa037079f:
     tabs:
       -
         elements:
           -
-            fieldUid: 6c47b7b0-71d0-4acb-92d5-6d8624f711fb
+            fieldUid: 6c47b7b0-71d0-4acb-92d5-6d8624f711fb # Cards
             instructions: null
             label: null
             required: true
@@ -16,7 +16,7 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  6c47b7b0-71d0-4acb-92d5-6d8624f711fb:
+  6c47b7b0-71d0-4acb-92d5-6d8624f711fb: # Cards
     contentColumnType: string
     fieldGroup: null
     handle: cards
@@ -31,8 +31,8 @@ fields:
       showSiteMenu: true
       source: null
       sources:
-        - 'section:9de367ab-77b8-47bb-bbc3-63e79a202c3e'
-        - 'section:ef841ba4-7bcd-4ef5-9c12-96377bf7fba2'
+        - 'section:9de367ab-77b8-47bb-bbc3-63e79a202c3e' # News
+        - 'section:ef841ba4-7bcd-4ef5-9c12-96377bf7fba2' # Pages
       targetSiteId: null
       validateRelatedElements: false
       viewMode: null

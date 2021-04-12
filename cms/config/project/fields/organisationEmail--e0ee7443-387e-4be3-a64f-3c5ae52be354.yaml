@@ -1,5 +1,5 @@
 contentColumnType: string
-fieldGroup: 1572f461-2a67-47a4-a36c-80839168bcb7
+fieldGroup: 1572f461-2a67-47a4-a36c-80839168bcb7 # Globals
 handle: organisationEmail
 instructions: 'enter your organisation email address'
 name: 'Organisation Email'
