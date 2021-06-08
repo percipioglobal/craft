@@ -1,5 +1,10 @@
 # percipioglobal/craft Change Log
 
+## 1.4.9.1 - 08/06/2021
+
+### Fixed
+- Fixed `devServer` --> `server` (╯°□°）╯︵ ┻━┻
+
 ## 1.4.9 - 08/06/2021
 
 ### Added

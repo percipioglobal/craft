@@ -1,7 +1,7 @@
 {
     "name": "craftcms/craft",
     "description": "Percipio Global Craft 3.6 CMS scaffolding project",
-    "version": "1.4.9",
+    "version": "1.4.9.1",
     "keywords": [
         "craft",
         "cms",
