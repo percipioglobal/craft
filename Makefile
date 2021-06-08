@@ -11,6 +11,9 @@ clean:
 composer: up
 	docker exec -it ${CONTAINER} composer \
 		$(filter-out $@,$(MAKECMDGOALS))
+craft: up
+	docker exec -it ${CONTAINER} php craft \
+		$(filter-out $@,$(MAKECMDGOALS))
 dev: up
 npm: up
 	docker exec -it ${BUILDCHAIN} npm \
@@ -20,8 +23,20 @@ pulldb: up
 restoredb: up
 	cd scripts/ && ./docker_restore_db.sh \
 		$(filter-out $@,$(MAKECMDGOALS))
+update:
+	docker-compose down
+	rm -f cms/composer.lock
+	rm -f buildchain/package-lock.json
+	docker-compose up
+update-clean:
+	docker-compose down
+	rm -f cms/composer.lock
+	rm -rf cms/vendor/
+	rm -f buildchain/package-lock.json
+	rm -rf buildchain/node_modules/
+	docker-compose up
 up:
-	if [ ! "$$(docker ps -q -f name=$${CONTAINER})" ]; then \
+	if [ ! "$$(docker ps -q -f name=${CONTAINER})" ]; then \
         docker-compose up; \
     fi
 %:
