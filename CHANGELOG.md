@@ -17,6 +17,7 @@
 ### Fixed
 - Fixed trailing slashes in `.env` example file for `ASSETS_URL` and `SITE_URL`
 - Fixed missing placeholder for Hero Images
+
 ## 1.4.8 - 12/04/2021
 
 ### Fixed
