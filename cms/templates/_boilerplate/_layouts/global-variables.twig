@@ -13,9 +13,12 @@
 {# -- Prefetch & preconnect headers and links -- #}
 {%- set prefetchUrls = [
     alias("@assetsUrl"),
+    alias("@cloudfrontUrl"),
 ] -%}
+
 {# -- General global variables -- #}
 {%- set baseUrl = alias('@web') ~ '/' -%}
+{%- set assetsUrl = alias('@assetsUrl') ~ '/' -%}
 {%- set gaTrackingId = getenv('GA_TRACKING_ID') -%}
 
 {%- set placeholder = craft.globalSets()
