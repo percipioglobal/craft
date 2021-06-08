@@ -36,7 +36,7 @@ return [
         'modern' => 'manifest.json',
     ],
     // Public server config
-    'devServer' => [
+    'server' => [
         'manifestPath' => '@webroot/dist/',
         'publicPath' => '/',
     ],
