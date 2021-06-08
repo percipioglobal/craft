@@ -1,5 +1,22 @@
 # percipioglobal/craft Change Log
 
+## 1.4.9 - 08/06/2021
+
+### Added
+- Added `runtime.js` to errorEntry twigpack settings
+- Added `cloudfrontUrl` alias to prefetched URLs
+- Added `assetsUrl` variable
+- Added Makefile
+
+### Changed
+
+- Changed `baseUrl` alias variable to `@web`
+- Updated permissions for docker containers
+- Updated the `site-fonts.css` file to actually load the included fonts
+
+### Fixed
+- Fixed trailing slashes in `.env` example file for `ASSETS_URL` and `SITE_URL`
+- Fixed missing placeholder for Hero Images
 ## 1.4.8 - 12/04/2021
 
 ### Fixed
