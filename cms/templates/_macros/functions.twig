@@ -53,14 +53,3 @@
 		{{- lut[type] ??? null -}}
 	{%- endspaceless -%}
 {%- endmacro -%}
-
-{# Parses Boolean value useful for vue #}
-{%- macro parse_boolean(boolean) -%}
-    {%- spaceless -%}
-        {% if boolean %}
-			true
-		{% else %}
-			false
-		{% endif %}
-    {%- endspaceless -%}
-{%- endmacro -%}

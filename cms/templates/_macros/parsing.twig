@@ -1,0 +1,10 @@
+{# Parses Boolean value useful for vue #}
+{%- macro boolean(boolean) -%}
+    {%- spaceless -%}
+        {% if boolean %}
+			true
+		{% else %}
+			false
+		{% endif %}
+    {%- endspaceless -%}
+{%- endmacro -%}
