@@ -1,5 +1,12 @@
 # percipioglobal/craft Change Log
 
+## 1.4.10 - 23/06/2021
+
+### Changed
+- Removed `USER` directive in the PHP containers, since the pool runs as www-data already
+- Fix permissions regression
+- Continue running the php-fpm containers as root (since php-fpm uses worker pools with the proper user/group), but switch to su-exec to ensure any craft CLI commands are run as www-data
+
 ## 1.4.9.1 - 08/06/2021
 
 ### Fixed

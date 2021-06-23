@@ -23,6 +23,7 @@ RUN set -eux; \
     && \
     # Packages to install
     apk add --no-cache \
+        su-exec \
         gifsicle \
         jpegoptim \
         libwebp-tools \
@@ -45,13 +46,15 @@ RUN set -eux; \
 
 WORKDIR /var/www/project
 
-# Create the storage directory and make it writeable by PHP
-RUN mkdir -p /var/www/project/cms/storage && \
-    mkdir -p /var/www/project/cms/storage/runtime && \
-    chown -R www-data:www-data /var/www/project/cms/storage
-
-# Create the cpresources directory and make it writeable by PHP
-RUN mkdir -p /var/www/project/cms/web/cpresources && \
-    chown -R www-data:www-data /var/www/project/cms/web/cpresources
+RUN mkdir -p /var/www/project/cms/storage \
+    && \
+    mkdir -p /var/www/project/cms/web/cpresources \
+    && \
+    chown -R www-data:www-data /var/www/project
 
 WORKDIR /var/www/project/cms
+
+# Force permissions, update Craft, and start php-fpm
+CMD chown -R www-data:www-data /var/www/project \
+    && \
+    php-fpm
