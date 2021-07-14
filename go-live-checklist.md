@@ -63,6 +63,7 @@
 - [ ] The queue daemon is added
 - [ ] The cronjob is added for generating the sitemap (SEOmatic)
 - [ ] The image processor is turned on (Lambda or other)
+- [ ] Make sure to test the security of the site on https://www.ssllabs.com/ssltest/analyze.html?d=nationaltutoring.org.uk
 
 ### Testing
 - [ ] Google Pagespeed test 85+
