@@ -38,6 +38,7 @@
 - [ ] Sitemap.xml is being generated
 - [ ] Robots.txt is present and correct
 - [ ] Favicon is added
+- [ ] App icons are added
 - [ ] Error pages are designed and added
 - [ ] Cookie notification is added and linked to the Privacy Policy page
 - [ ] Old browser notification is added
