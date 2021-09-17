@@ -65,6 +65,8 @@
                         data-srcset="{{- values.optimized.srcset() ??? values.placeholder.srcset() -}}"
                         sizes="{%- for size in values.sizes -%}{{- not loop.last ? size ~ ',' : size -}}{%- endfor -%}"
                         alt="{{- values.alt -}}"
+                        class="lazyload"
+                        loading="lazy"
 
                 />
 
