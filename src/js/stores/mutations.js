@@ -1,11 +1,11 @@
-export const setGqlToken = (state, data) => {
+export const SET_GQL_TOKEN = (state, data) => {
     state.gqlToken = data;
 }
 
-export const setCsrf = (state, data) => {
+export const SET_CSRF = (state, data) => {
     state.csrf = data;
 }
 
-export const setNews = (state, data) => {
+export const SET_NEWS = (state, data) => {
     state.news = data;
 }

@@ -1,11 +1,11 @@
-export const getCsrfToken = (state) => {
+export const CSRF_TOKEN = (state) => {
     return state.csrf;
 }
 
-export const getGqlToken = (state) => {
+export const GQL_TOKEN = (state) => {
     return state.gqlToken;
 }
 
-export const getNews = (state) => {
+export const NEWS = (state) => {
     return state.news;
 }
