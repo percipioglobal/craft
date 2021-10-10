@@ -34,6 +34,7 @@
         "url": "https://github.com/percipioglobal/craft/issues"
     },
     "dependencies": {
+        "@tailwindcss/aspect-ratio": "^0.2.0",
         "@tailwindcss/typography": "^0.4.0",
         "axios": "^0.21.1",
         "core-js": "^3.8.3",

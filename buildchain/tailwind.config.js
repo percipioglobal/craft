@@ -11,10 +11,21 @@ module.exports = {
             'utilities',
         ],
         mode: 'layers',
-        options: {
-            whitelist: [
-            ],
-        }
+        safelist: [
+            'aspect-h-1',
+            'aspect-h-3',
+            'aspect-h-4',
+            'aspect-h-5',
+            'aspect-h-9',
+            'aspect-w-1',
+            'aspect-w-16',
+            'aspect-w-2',
+            'aspect-w-21',
+            'aspect-w-3',
+            'aspect-w-4',
+            'aspect-w-7',
+            'aspect-w-8',
+        ]
     },
     theme: {
 
@@ -33,6 +44,7 @@ module.exports = {
     },
     corePlugins: {},
     plugins: [
+        require('@tailwindcss/typography'),
         require('@tailwindcss/typography'),
     ],
 };
