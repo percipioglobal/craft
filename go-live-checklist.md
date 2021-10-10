@@ -33,6 +33,7 @@
 - [ ] Form data is beind send to the correct receiver
 - [ ] All images are being optimized for web
 - [ ] SEOmatic is fully set and all tags are added
+- [ ] Change password from our default to a generated one
 
 ### General
 - [ ] Sitemap.xml is being generated
