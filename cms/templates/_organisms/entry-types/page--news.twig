@@ -1,7 +1,6 @@
 {%- set news = craft.entries.section('news')
     .with(['teaserImage', 'newsCategory'])
     .orderBy('postDate desc')
-    .offset(1)
     .all() -%}
 
 {%- include '_organisms/heroes/hero--main' ignore missing with {
@@ -18,6 +17,5 @@
     {%- include '_organisms/cards/cards--highlight' ignore missing with {
         content: news,
         type: 'news',
-        hasFeatured: true,
     } -%}
 </div>
