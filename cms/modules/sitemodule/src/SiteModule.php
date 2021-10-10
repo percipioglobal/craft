@@ -147,6 +147,15 @@ class SiteModule extends Module
             );
         }
 
+        //Register Twig extensions for fetching colours
+        if (Craft::$app->request->getIsSiteRequest()) {
+            $coloursTwigExtension = new ColoursTwigExtension();
+            Craft::$app->view->registerTwigExtension($coloursTwigExtension);
+
+            $ratioTwigExtension = new RatioTwigExtenssion();
+            Craft::$app->view->registerTwigExtension($ratioTwigExtension);
+        }
+
         Craft::info(
             Craft::t(
                 'site-module',
