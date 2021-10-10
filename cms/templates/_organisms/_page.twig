@@ -1,38 +1,39 @@
 {%- extends "_boilerplate/_layouts/generic-page-layout.twig" -%}
 
-{%- block headLinks -%}
+{# ENABLE WHEN AMP IS SETUP #}
+{# {%- block headLinks -%}
     {{ parent() }}
     <link rel="amphtml" href="{{- craft.app.request.absoluteUrl ~ '/amp' -}}">
-{%- endblock headLinks -%}
+{%- endblock headLinks -%} #}
 
 {%- block content -%}
-        {%- switch entry.type -%}
+    {%- switch entry.type -%}
 
-                {%- case "contentPage" -%}
+        {%- case "contentPage" -%}
 
-                    {%- include '_organisms/entry-types/page--content' ignore missing with {
-                        content: entry,
-                    } -%}
+            {%- include '_organisms/entry-types/page--content' ignore missing with {
+                content: entry,
+            } -%}
 
-                {%- case "landingsPage" -%}
+        {%- case "landingsPage" -%}
 
-                    {%- include '_organisms/entry-types/page--landing' ignore missing with {
-                        content: entry,
-                    } -%}
+            {%- include '_organisms/entry-types/page--landing' ignore missing with {
+                content: entry,
+            } -%}
 
-                {%- case "newsPage" -%}
+        {%- case "newsPage" -%}
 
-                    {%- include '_organisms/entry-types/page--news' ignore missing with {
-                        content: entry,
-                    } -%}
+            {%- include '_organisms/entry-types/page--news' ignore missing with {
+                content: entry,
+            } -%}
 
-                {%- case "news" -%}
+        {%- case "news" -%}
 
-                    {%- include '_organisms/entry-types/entry--news' ignore missing with {
-                        content: entry,
-                    } -%}
+            {%- include '_organisms/entry-types/entry--news' ignore missing with {
+                content: entry,
+            } -%}
 
-        {%- endswitch -%}
+    {%- endswitch -%}
 {%- endblock -%}
 
 {# -- Any JavaScript that should be included before </body> -- #}
