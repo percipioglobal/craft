@@ -23,7 +23,7 @@ return [
     'allowAdminChanges' => (bool)App::env('ALLOW_ADMIN_CHANGES'),
     'backupOnUpdate' => (bool)App::env('BACKUP_ON_UPDATE'),
     'devMode' => (bool)App::env('DEV_MODE'),
-    'enableGraphQlCaching' => (bool)App::env('ENABLE_GRAPHQL_CACHING'),
+    'enableGraphqlCaching' => (bool)App::env('ENABLE_GRAPHQL_CACHING'),
     'enableTemplateCaching' => (bool)App::env('ENABLE_TEMPLATE_CACHING'),
     'maxRevisions' => (bool)App::env('MAX_REVISIONS'),
     'resourceBasePath' => App::env('WEB_ROOT_PATH').'/cpresources',
