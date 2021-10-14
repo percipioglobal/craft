@@ -19,6 +19,6 @@
  */
 
 return [
-    'amp' => ['template' => 'amp-index'],
+    // 'amp' => ['template' => 'amp-index'],
     'api' => 'graphql/api',
 ];
