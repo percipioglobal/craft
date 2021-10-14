@@ -21,7 +21,7 @@
     "require": {
         "angellco/spoon": "^3.3.3",
         "craftcms/aws-s3": "^1.2",
-        "craftcms/cms": "^3.6.9",
+        "craftcms/cms": "^3.7.15",
         "craftcms/feed-me": "^4.2.0",
         "craftcms/redactor": "^2.1.0",
         "craftcms/mailgun": "1.4.3",
