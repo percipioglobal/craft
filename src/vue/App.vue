@@ -6,14 +6,14 @@
     export default defineComponent({
 
         components: {
-            'notification--cookie': () => import(/* webpackChunkName: "notification--cookie" */ '@/vue/molecules/notifications/notification--cookie.vue'),
+            'notification--cookie': defineAsyncComponent(() => import(/* webpackChunkName: "notification--cookie" */ '@/vue/molecules/notifications/notification--cookie.vue')),
         },
 
         data: () => ({}),
 
         computed: {
             ...mapGetters([
-                'GQL_TOKEN'
+                'tokens/GQL_TOKEN'
             ])
         },
 
@@ -28,11 +28,10 @@
         async mounted(){
 
             if(!this.GQL_TOKEN) {
-                await this.$store.dispatch('FETCH_CSRF')
-                await this.$store.dispatch('FETCH_GQL_TOKEN')
+                await this.$store.dispatch('tokens/FETCH_CSRF')
+                await this.$store.dispatch('tokens/FETCH_GQL_TOKEN')
             }
 
-            // await this.$store.dispatch("FETCH_PLACEHOLDERS")
         }
     })
 

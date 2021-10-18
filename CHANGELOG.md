@@ -1,22 +1,22 @@
 # percipioglobal/craft Change Log
 
-## 1.5.0 - 18/10/2021
-
+## 1.5.0 - UNRELEASED
+### Added
+- Added tailwind ratio with helper classes
+- Added Vue 3
+- Added Vuex 4
 ### Changed
 - Updated go-live-checklist.md
 - Disabled AMP by default
 - Removed cluttered classes from the page--news
-- Update Vue and Vuex handling
-- Updated package.json
-- Updated composer.json
+- Updated dependencies
+- Updated TS shims
+- updated `enableGraphQlCaching` --> `enableGraphqlCaching` deprecation change
 
 ### Fixed
-- Fix the eager loading on resrouces
-- Fix lazyloading on the teaser image
-- enableGraphQLCaching typo
-
-### Added
-- Added tailwind ratio with helper classes
+- Made sure Eager Loading works on the resources organism
+- Fixed Lazy Loading tags on the teaser images
+- Removed duplicate loading of typography plugin in Tailwind
 
 ## 1.4.10 - 23/06/2021
 

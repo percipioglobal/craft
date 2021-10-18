@@ -7,8 +7,8 @@ const path = require('path');
 // settings
 module.exports = {
     alias: {
-        'vue$': 'vue/dist/vue.esm.js',
         '@': path.resolve('../src'),
+        vue: 'vue/dist/vue.esm-bundler.js',
     },
     copyright: '©2020 Percipio.London',
     entry: {

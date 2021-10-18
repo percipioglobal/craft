@@ -37,7 +37,7 @@
 </template>
 
 <script lang="ts">
-    import { defineAsyncComponent, defineComponent } from 'vue'
+    import { defineComponent } from 'vue'
 
     export default defineComponent({
         props: {

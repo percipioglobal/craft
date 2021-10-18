@@ -1,25 +1,26 @@
 // dev-server.config.js
 // returns a webpack config object for running webpack-dev-server
-
 // node modules
-const path = require('path');
-
+const path = require('path')
 // webpack plugins
 const webpack = require('webpack');
-
 // return a webpack config
 module.exports = (type = 'modern', settings) => {
     // common config
     const common = () => ({
         devServer: {
+            allowedHosts: 'all',
             client: {
-                overlay: true,
                 progress: false,
+                overlay: true,
+                webSocketURL: {
+                    hostname: settings.host(),
+                    port: settings.port(),
+                }
             },
             devMiddleware: {
                 publicPath: '/',
             },
-            firewall: false,
             headers: {
                 'Access-Control-Allow-Origin': '*'
             },
@@ -27,7 +28,6 @@ module.exports = (type = 'modern', settings) => {
             hot: true,
             https: !!parseInt(settings.https()),
             port: settings.port(),
-            public: settings.public(),
             static: {
                 directory: path.resolve(__dirname, settings.contentBase()),
                 publicPath: '/',
@@ -46,6 +46,7 @@ module.exports = (type = 'modern', settings) => {
         },
         output: {
             filename: path.join('./js', '[name].js'),
+            path: path.resolve(__dirname, settings.paths.dist),
             publicPath: settings.public() + '/',
         },
         plugins: [
@@ -80,6 +81,5 @@ module.exports = (type = 'modern', settings) => {
             },
         }
     };
-
     return configs[process.env.NODE_ENV][type];
 }

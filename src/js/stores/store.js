@@ -1,26 +1,21 @@
 import { createStore } from 'vuex'
 import createPersistedState from 'vuex-persistedstate'
 
-import * as actions from '@/js/stores/actions.js';
-import * as getters from '@/js/stores/getters.js';
-import * as mutations from '@/js/stores/mutations.js';
+import * as actions from './actions.js'
+import * as getters from './getters.js'
+import * as mutations from './mutations.js'
 
-// const uiState = createPersistedState({
-//     paths: ['ui.showSubscription'],
-//     key: 'ui'
-// })
+/* ----------- AUTH ----------- */
+import { TOKENS } from './tokens/tokenStore'
 
 // Main Store
 export const store = createStore({
     namespaced: true,
-    state: {
-        csrf: null,
-        gqlToken: null,
-        news: null,
-    },
+    state: () => ({}),
     getters,
     mutations,
     actions,
-    modules: {},
-    // plugins: [uiState],
+    modules: {
+        tokens: TOKENS,
+    },
 });
