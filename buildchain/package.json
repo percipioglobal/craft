@@ -43,10 +43,10 @@
         "regenerator-runtime": "^0.13.2",
         "tailwindcss": "^2.1.0",
         "tiny-cookie": "^1.0.1",
-        "vue": "^2.6.12",
+        "vue": "^3.1.5",
         "vue-wait": "^1.4.8",
-        "vuex": "^3.6.2",
-        "vuex-persistedstate": "^2.7.1",
+        "vuex": "^4.0.0",
+        "vuex-persistedstate": "^4.0.0",
         "vuex-shared-mutations": "^1.0.2"
     },
     "description": "Percipio.London Craft CMS Scaffolding",
