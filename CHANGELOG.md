@@ -1,5 +1,23 @@
 # percipioglobal/craft Change Log
 
+## 1.5.0 - 18/10/2021
+
+### Changed
+- Updated go-live-checklist.md
+- Disabled AMP by default
+- Removed cluttered classes from the page--news
+- Update Vue and Vuex handling
+- Updated package.json
+- Updated composer.json
+
+### Fixed
+- Fix the eager loading on resrouces
+- Fix lazyloading on the teaser image
+- enableGraphQLCaching typo
+
+### Added
+- Added tailwind ratio with helper classes
+
 ## 1.4.10 - 23/06/2021
 
 ### Changed
