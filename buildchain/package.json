@@ -45,7 +45,7 @@
         "tiny-cookie": "^1.0.1",
         "vue": "^3.1.5",
         "vuex": "^4.0.0",
-        "vuex-persistedstate": "^4.0.0",
+        "vuex-persistedstate": "^4.0.0"
     },
     "description": "Percipio.London Craft CMS Scaffolding",
     "devDependencies": {
