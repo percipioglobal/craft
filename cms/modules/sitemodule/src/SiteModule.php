@@ -10,10 +10,6 @@
 
 namespace modules\sitemodule;
 
-use modules\sitemodule\assetbundles\SiteModule\SiteModuleAsset;
-use modules\sitemodule\services\Helper;
-use modules\sitemodule\variables\SiteVariable;
-
 use Craft;
 use craft\events\RegisterTemplateRootsEvent;
 use craft\events\TemplateEvent;
@@ -22,6 +18,12 @@ use craft\web\twig\variables\CraftVariable;
 use craft\web\View;
 use craft\web\UrlManager;
 use craft\events\RegisterUrlRulesEvent;
+
+use modules\sitemodule\assetbundles\SiteModule\SiteModuleAsset;
+use modules\sitemodule\helpers\ColoursTwigExtension;
+use modules\sitemodule\helpers\RatioTwigExtension;
+use modules\sitemodule\services\Helper;
+use modules\sitemodule\variables\SiteVariable;
 
 use yii\base\Event;
 use yii\base\InvalidConfigException;
@@ -152,7 +154,7 @@ class SiteModule extends Module
             $coloursTwigExtension = new ColoursTwigExtension();
             Craft::$app->view->registerTwigExtension($coloursTwigExtension);
 
-            $ratioTwigExtension = new RatioTwigExtenssion();
+            $ratioTwigExtension = new RatioTwigExtension();
             Craft::$app->view->registerTwigExtension($ratioTwigExtension);
         }
 

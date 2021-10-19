@@ -4,7 +4,7 @@ namespace modules\sitemodule\helpers;
 
 use Craft;
 
-class RatioTwigExtenssion extends \Twig\Extension\AbstractExtension
+class RatioTwigExtension extends \Twig\Extension\AbstractExtension
 {
     private $ratios = [
         100 => 'aspect-w-1 aspect-h-1',
