@@ -1,7 +1,7 @@
 {
     "name": "craftcms/craft",
     "description": "Percipio Global Craft 3.6 CMS scaffolding project",
-    "version": "1.4.10",
+    "version": "1.5.0",
     "keywords": [
         "craft",
         "cms",
@@ -20,7 +20,7 @@
         "rss": "https://craftcms.com/changelog.rss"
     },
     "require": {
-        "craftcms/cms": "^3.6.0",
+        "craftcms/cms": "^3.7.0",
         "vlucas/phpdotenv": "^3.4.0"
     },
     "autoload": {

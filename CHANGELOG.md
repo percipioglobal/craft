@@ -1,6 +1,6 @@
 # percipioglobal/craft Change Log
 
-## 1.5.0 - UNRELEASED
+## 1.5.0 - 19/10/2021
 ### Added
 - Added tailwind ratio with helper classes
 - Added Vue 3
