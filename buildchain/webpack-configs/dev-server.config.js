@@ -11,8 +11,8 @@ module.exports = (type = 'modern', settings) => {
         devServer: {
             allowedHosts: 'all',
             client: {
-                progress: false,
                 overlay: true,
+                progress: false,
                 webSocketURL: {
                     hostname: settings.host(),
                     port: settings.port(),
@@ -32,7 +32,7 @@ module.exports = (type = 'modern', settings) => {
                 directory: path.resolve(__dirname, settings.contentBase()),
                 publicPath: '/',
                 watch: {
-                    poll: !!parseInt(settings.poll()),
+                    usePolling: settings.poll() | 0,
                     ignored: /node_modules/,
                 },
             },
@@ -56,6 +56,9 @@ module.exports = (type = 'modern', settings) => {
                 exclude: /\.(pcss|css)($|\?)/i,
             }),
         ],
+        watchOptions: {
+            poll: settings.poll() | 0,
+        },
     });
     // configs
     const configs = {

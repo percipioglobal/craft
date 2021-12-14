@@ -34,3 +34,4 @@ fieldLayouts:
         sortOrder: 1
 handle: organisationInfo
 name: 'Organisational Information'
+sortOrder: 1

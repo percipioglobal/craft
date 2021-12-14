@@ -20,20 +20,26 @@ services:
       context: ./docker-config/php-prod-craft
       dockerfile: ./Dockerfile
     depends_on:
-      - "mariadb"
+      - "mysql"
       - "redis"
     env_file:
       *env
     expose:
       - "9000"
     init: true
+    tty: true
     volumes: &php-volumes
+      # Change the path below to map to your local plugin repositories
+      - /Users/michtio/dev/craft-plugins:/Users/michtio/dev/craft-plugins
       - cpresources:/var/www/project/cms/web/cpresources:delegated
       - storage:/var/www/project/cms/storage:delegated
+      - ./cms:/var/www/project/cms:cached
+      # Specific directories that need to be bind-mounted
       - ./cms/storage/logs:/var/www/project/cms/storage/logs:delegated
       - ./cms/storage/runtime/compiled_templates:/var/www/project/cms/storage/runtime/compiled_templates:delegated
-      - ./cms:/var/www/project/cms:cached
+      - ./cms/storage/runtime/compiled_classes:/var/www/project/cms/storage/runtime/compiled_classes:delegated
       - ./cms/vendor:/var/www/project/cms/vendor:delegated
+      - ./cms/storage/rebrand:/var/www/project/cms/storage/rebrand:delegated
   # php - run php-fpm with xdebug
   php_xdebug: 
     build:
@@ -46,6 +52,7 @@ services:
     expose: 
       - "9000"
     init: true
+    tty: true
     volumes:
       *php-volumes
   # queue - runs queue jobs via php craft queue/listen
@@ -60,11 +67,13 @@ services:
     init: true
     volumes:
       *php-volumes
-  # mariadb - database
-  mariadb:
+  # mysql - database
+  mysql:
     build:
-      context: ./docker-config/mariadb
+      context: ./docker-config/mysql
       dockerfile: ./Dockerfile
+    cap_add:
+      - SYS_NICE  # CAP_SYS_NICE
     env_file:
       *env
     environment:
@@ -86,6 +95,7 @@ services:
     expose:
       - "6379"
     init: true
+    tty: true
   # webpack - frontend build system
   webpack:
     build:
@@ -94,6 +104,7 @@ services:
     env_file:
       *env
     init: true
+    tty: true
     ports:
       - "8080:8080"
     volumes:

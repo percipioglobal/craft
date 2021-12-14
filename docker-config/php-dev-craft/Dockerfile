@@ -34,6 +34,7 @@ RUN set -eux; \
     # Install PHP extensions
     docker-php-ext-install \
         pdo_mysql \
+        soap \
     && \
     # Install Composer
     curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin/ --filename=composer \
