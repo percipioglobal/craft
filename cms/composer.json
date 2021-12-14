@@ -1,7 +1,7 @@
 {
     "name": "percipioglobal/craft",
-    "description": "Percipio's Craft CMS scaffolding for projects",
-    "version": "1.5.0",
+    "description": "Percipio's Craft CMS 3 scaffolding for projects",
+    "version": "1.5.1",
     "keywords": [
         "craft",
         "cms",
@@ -41,6 +41,7 @@
         "yiisoft/yii2-redis": "^2.0.6"
     },
     "require-dev": {
+        "nystudio107/craft-autocomplete": "^1.0.0",
         "yiisoft/yii2-shell": "^2.0.3"
     },
     "autoload": {
@@ -52,7 +53,7 @@
         "sort-packages": true,
         "optimize-autoloader": true,
         "platform": {
-            "php": "7.3"
+            "php": "7.2.5"
         }
     },
     "scripts": {
