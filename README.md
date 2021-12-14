@@ -1,12 +1,25 @@
 ## About percipioglobal/craft
 
 This is an alternate scaffolding package for Craft 3 CMS projects to Pixel & Tonic's canonical [craftcms/craft](https://github.com/craftcms/craft) package.
+
+### Vite buildchain
+
+This project uses a [Vite.js](https://vitejs.dev/) for the build system as per [Vite.js Next Generation Frontend Tooling + Craft CMS](https://nystudio107.com/blog/using-vite-js-next-generation-frontend-tooling-with-craft-cms), as opposed to the usual webpack buildchain.
+
+Some things are still unfinished:
+
+* Favicon generation isn't done; this probably would be done with the [rollup-favicons-plugin](https://www.npmjs.com/package/rollup-plugin-favicons)
+* AMP CSS isn't included; this will likely be done the same way the Critical CSS is done
+
+But if these things aren't important to you, by all means, dive in.
+
+Vite is _fast_ ⚡
  
 The project is based on [Craft CMS](https://craftcms.com) using a unique `templates/_boilerplate` system for web/AJAX/AMP pages, and implements a number of technologies/techniques:
  
 * [Docker](https://www.docker.com/) Docker is used for local development; see **Setting Up Local Dev** below for details
 * A base Twig templating setup as described in [An Effective Twig Base Templating Setup](https://nystudio107.com/blog/an-effective-twig-base-templating-setup)
-* [webpack](https://webpack.js.org/) is used for the build system as per [An Annotated webpack 4 Config for Frontend Web Development](https://nystudio107.com/blog/an-annotated-webpack-4-config-for-frontend-web-development)
+* [Vite.js](https://vitejs.dev/) is used for the build system as per [Vite.js Next Generation Frontend Tooling + Craft CMS](https://nystudio107.com/blog/using-vite-js-next-generation-frontend-tooling-with-craft-cms)
 * [TypeScript](https://www.typescriptlang.org/) for strictly typed JavaScript code
 * [Vue.js 3.0](https://vuejs.org/) is used for some of the interactive bits on the website, and Vue.js 3.x allows us to leverage the [Composition API](https://composition-api.vuejs.org/) 
 * [Tailwind CSS](https://tailwindcss.com/) for the site-wide CSS
@@ -19,7 +32,6 @@ The project is based on [Craft CMS](https://craftcms.com) using a unique `templa
 * Frontend error handling as per [Handling Errors Gracefully in Craft CMS](https://nystudio107.com/blog/handling-errors-gracefully-in-craft-cms)
 * A custom site module as per [Enhancing a Craft CMS 3 Website with a Custom Module](https://nystudio107.com/blog/enhancing-a-craft-cms-3-website-with-a-custom-module)
 * CLI-based queue as per [Robust queue job handling in Craft CMS](https://nystudio107.com/blog/robust-queue-job-handling-in-craft-cms)
-* FastCGI Static Cache as per [Static Page Caching with Craft CMS](https://nystudio107.com/blog/static-caching-with-craft-cms)
 * [buddy.works](http://buddy.works/) atomic deployments
 
 ...and probably a bunch of other stuff too.
@@ -29,19 +41,15 @@ The following Craft CMS plugins are used on this site:
 * [Feed Me](https://github.com/craftcms/feed-me) - to import entries and entry data from XML, RSS or ATOM feeds.
 * [Redactor](https://github.com/craftcms/redactor) - Edit rich text content using Redactor by Imperavi.
 * [Mailgun](https://github.com/craftcms/mailgun) - Mailgun mailer adapter for Craft CMS
-* [Width Fieldtype](https://github.com/hybridinteractive/craft-width-fieldtype) - adds the posibility to choose from predefined widths
 * [Position Fieldtype](https://github.com/hybridinteractive/craft-position-fieldtype) - Adds a position fieldtype
-* [FastCGI Cache Bust](https://github.com/nystudio107/craft-fastcgicachebust) - to bust the FastCGI cache whenever entries are modified
 * [ImageOptimize](https://github.com/nystudio107/craft-imageoptimize) - for the optimized images and `srcset`s used on the site
 * [Minify](https://github.com/nystudio107/craft-minify) - to minify the HTML and inline JS/CSS
-* [Retour](https://github.com/nystudio107/craft-retour) - for setting up 404 redirects
 * [Eager Beaver](https://github.com/nystudio107/craft-eager-beaver) - to handle eager loading on entry pages
 * [SEOmatic](https://github.com/nystudio107/craft-seomatic) - for handling site-side SEO
 * [Twigpack](https://github.com/nystudio107/craft-twigpack) - for loading webpack-generated `manifest.json` resources in a modern way
 * [Typogrify](https://github.com/nystudio107/craft-typogrify) - for smart quotes and other typographic ligatures
-* [Webperf](https://github.com/nystudio107/craft-webperf) - for monitoring web performance
-* [Password Policy](https://github.com/percipioglobal/craft-password-policy) - for adding password policies
-* [Notifications](https://github.com/percipioglobal/craft-notifictions) - for handling system notifications
+* [Colour Swatches](https://github.com/percipioglobal/craft-colour-swatches) - for adding color palettes
+* [Timeloop](https://github.com/percipioglobal/craft-timeloop) - for creating repeatable dates
 * [Super Table](https://github.com/verbb/super-table) - Field Type to create powerful tables
 * [Spoon](https://github.com/angell-co/Spoon) - Organising our matrix fields
 * [Navigation](https://github.com/verbb/navigation) - Managing Navigation Menus
@@ -50,20 +58,38 @@ The following Craft CMS plugins are used on this site:
 
 This project package works exactly the way Pixel & Tonic's [craftcms/craft](https://github.com/craftcms/craft) package works; you create a new project by first creating & installing the project:
 
-    `composer create-project percipioglobal/craft PATH`
+    `composer create-project percipioglobal/craft:dev-craft-vite PATH --no-install`
 
 Make sure that `PATH` is the path to your project, including the name you want for the project, e.g.:
 
-    `composer create-project percipioglobal/craft craft3`
+    `composer create-project percipioglobal/craft:dev-craft-vite vitecraft --no-install --remove-vcs`
+
+We use `--no-install` so that the composer packages for the root project are not installed.
 
 ## Setting Up Local Dev
 
 You'll need Docker desktop for your platform installed to run the project in local development
 
-* Set up a `.env` file in the `cms/` directory, based off of the provided `example.env`
-* Set up a `.env.sh.` file in the `scripts/` directory, based off of the provided `example.env.sh`
-* Start up the site by typing make dev in terminal in the project's root directory (the first build will be somewhat lengthy)
-* Navigate to http://localhost:8000 to use the site; the webpack-dev-server runs off of http://localhost:8080
+* Start up the site by typing `make dev` in terminal in the project's root directory (the first build will be somewhat lengthy)
+* Navigate to `http://localhost:8000` to use the site; the `vite-dev-server` runs off of `http://localhost:3000`
+
+Wait until you see the following to indicate that the PHP container is ready:
+
+```
+php_1         | Craft is installed.
+php_1         | Applying changes from your project config files ... done
+php_1         | [01-Dec-2020 18:38:46] NOTICE: fpm is running, pid 22
+php_1         | [01-Dec-2020 18:38:46] NOTICE: ready to handle connections
+
+...and the following to indicate that the Vite container is ready:
+```
+vite_1        |   vite v2.3.2 dev server running at:
+vite_1        |
+vite_1        |   > Local:    http://localhost:3000/
+vite_1        |   > Network:  http://172.22.0.5:3000/
+vite_1        |
+vite_1        |   ready in 1573ms.
+```
 
 The CP login credentials are initially set as follows:
 

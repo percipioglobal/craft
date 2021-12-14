@@ -96,22 +96,21 @@ services:
       - "6379"
     init: true
     tty: true
-  # webpack - frontend build system
-  webpack:
+  # vite - frontend build system
+  vite:
     build:
-      context: ./docker-config/node-dev-webpack
+      context: ./docker-config/node-dev-vite
       dockerfile: ./Dockerfile
     env_file:
       *env
     init: true
     tty: true
     ports:
-      - "8080:8080"
+      - "3000:3000"
     volumes:
-      - ./tsconfig.json:/var/www/project/tsconfig.json:cached
       - ./buildchain:/var/www/project/buildchain:cached
       - ./buildchain/node_modules:/var/www/project/buildchain/node_modules:delegated
-      - ./cms/web/dist:/var/www/project/cms/web/dist:delegated
+      - ./cms/web:/var/www/project/cms/web:delegated
       - ./src:/var/www/project/src:cached
       - ./cms/templates:/var/www/project/cms/templates:cached
 
