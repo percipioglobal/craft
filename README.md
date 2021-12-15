@@ -29,9 +29,7 @@ The following Craft CMS plugins are used on this site:
 * [Feed Me](https://github.com/craftcms/feed-me) - to import entries and entry data from XML, RSS or ATOM feeds.
 * [Redactor](https://github.com/craftcms/redactor) - Edit rich text content using Redactor by Imperavi.
 * [Mailgun](https://github.com/craftcms/mailgun) - Mailgun mailer adapter for Craft CMS
-* [Width Fieldtype](https://github.com/hybridinteractive/craft-width-fieldtype) - adds the posibility to choose from predefined widths
 * [Position Fieldtype](https://github.com/hybridinteractive/craft-position-fieldtype) - Adds a position fieldtype
-* [FastCGI Cache Bust](https://github.com/nystudio107/craft-fastcgicachebust) - to bust the FastCGI cache whenever entries are modified
 * [ImageOptimize](https://github.com/nystudio107/craft-imageoptimize) - for the optimized images and `srcset`s used on the site
 * [Minify](https://github.com/nystudio107/craft-minify) - to minify the HTML and inline JS/CSS
 * [Retour](https://github.com/nystudio107/craft-retour) - for setting up 404 redirects
@@ -39,22 +37,20 @@ The following Craft CMS plugins are used on this site:
 * [SEOmatic](https://github.com/nystudio107/craft-seomatic) - for handling site-side SEO
 * [Twigpack](https://github.com/nystudio107/craft-twigpack) - for loading webpack-generated `manifest.json` resources in a modern way
 * [Typogrify](https://github.com/nystudio107/craft-typogrify) - for smart quotes and other typographic ligatures
-* [Webperf](https://github.com/nystudio107/craft-webperf) - for monitoring web performance
-* [Password Policy](https://github.com/percipioglobal/craft-password-policy) - for adding password policies
-* [Notifications](https://github.com/percipioglobal/craft-notifictions) - for handling system notifications
+* [Colour Swatches](https://github.com/percipioglobal/craft-colour-swatches) - for creating color palettes
+* [Timeloop](https://github.com/percipioglobal/craft-timeloop) - for handling repeatable dates
 * [Super Table](https://github.com/verbb/super-table) - Field Type to create powerful tables
 * [Spoon](https://github.com/angell-co/Spoon) - Organising our matrix fields
-* [Navigation](https://github.com/verbb/navigation) - Managing Navigation Menus
 
 ## Using percipioglobal/craft
 
 This project package works exactly the way Pixel & Tonic's [craftcms/craft](https://github.com/craftcms/craft) package works; you create a new project by first creating & installing the project:
 
-    `composer create-project percipioglobal/craft PATH`
+    `composer create-project percipioglobal/craft PATH --no-install --remove-vcs`
 
 Make sure that `PATH` is the path to your project, including the name you want for the project, e.g.:
 
-    `composer create-project percipioglobal/craft craft3`
+    `composer create-project percipioglobal/craft craft3 --no-install --remove-vcs`
 
 ## Setting Up Local Dev
 
@@ -62,8 +58,23 @@ You'll need Docker desktop for your platform installed to run the project in loc
 
 * Set up a `.env` file in the `cms/` directory, based off of the provided `example.env`
 * Set up a `.env.sh.` file in the `scripts/` directory, based off of the provided `example.env.sh`
-* Start up the site by typing make dev in terminal in the project's root directory (the first build will be somewhat lengthy)
-* Navigate to http://localhost:8000 to use the site; the webpack-dev-server runs off of http://localhost:8080
+* Start up the site by typing `make dev` in terminal in the project's root directory (the first build will be somewhat lengthy)
+* Navigate to `http://localhost:8000` to use the site; the `webpack-dev-server` runs off of `http://localhost:8080`
+
+Wait until you see the following to indicate that the PHP container is ready:
+
+```
+php_1         | Craft is installed.
+php_1         | Applying changes from your project config files ... done
+php_1         | [01-Dec-2020 18:38:46] NOTICE: fpm is running, pid 22
+php_1         | [01-Dec-2020 18:38:46] NOTICE: ready to handle connections
+```
+
+...and the following to indicate that the webpack container is ready:
+```
+webpack_1     | <i> project (webpack 5.9.0) compiled successfully in 12097 ms
+webpack_1     | <i> [webpack-dev-middleware] Child "project": Compiled successfully.
+```
 
 The CP login credentials are initially set as follows:
 
@@ -75,9 +86,9 @@ Obviously change these to whatever you like as needed.
 Build the production assets by typing make build to build the critical CSS, fonts, and other production assets. They will appear in `cms/web/dist/` (just double-click on the `report-legacy.html` and `report-modern.html` files to view them).
 
 **Important:** To find the correct credentials for `LOCAL_DB_CONTAINER` run `docker-compose up` and once the docker container is running, use the command `docker container ls` to find the correct name of the container.
-If your project is called `test` the container will be somewhere along the lines of `test_mariadb` or `test_mysql`. That's the value you do have to enter.
+If your project is called `test` the container will be somewhere along the lines of `test_mariadb_1` or `test_mysql_1`. That's the value you do have to enter.
 
-**N.B.:** Without authorization & credentials (which are private), the `./docker_pull_db.sh` will not work. It's provided here for instructional purposes
+**N.B.:** Without authorization & credentials (which are private), the `make pulldb` will not work (it just runs `scripts/docker_pull_db.sh`). It's provided here for instructional purposes.
 
 ## Makefile Project Commands
 
@@ -88,10 +99,25 @@ To make using it easier, we're using a Makefile and the built-in `make` utility 
 - `make dev` - starts up the local dev server listening on `http://localhost:8000/`
 - `make build` - builds the static assets via the webpack 5 buildchain
 - `make clean` - shuts down the Docker containers, removes any mounted volumes (including the database), and then rebuilds the containers from scratch
+- `make update` - causes the project to update to the latest Composer and NPM dependencies
+- `make update-clean` - completely removes `node_modules/` & `vendor/`, then causes the project to update to the latest Composer and NPM dependencies
 - `make composer xxx` - runs the `composer` command passed in, e.g. `make composer install`
+- `make craft xxx` - runs the `craft` [console command](https://craftcms.com/docs/3.x/console-commands.html) passed in, e.g. `make craft project-config/apply` in the php container
 - `make npm xxx` - runs the `npm` command passed in, e.g. `make npm install`
 - `make pulldb` - runs the `scripts/docker_pull_db.sh` script to pull a remote database into the database container; the `scripts/.env.sh` must be set up first
 - `make restoredb xxx` - runs the `scripts/docker_restore_db.sh` script to restore a local database dump into the database container; the `scripts/.env.sh` must be set up first
+
+### Other notes
+
+To update to the latest Composer packages (as constrained by the `cms/composer.json` semvers) and latest npm packages (as constrained by the `docker-config/webpack-dev-devmode/package.json` semvers), do:
+```
+make update
+```
+
+To start from scratch by removing `buildchain/node_modules/` & `cms/vendor/`, then update to the latest Composer packages (as constrained by the `cms/composer.json` semvers) and latest npm packages (as constrained by the `docker-config/webpack-dev-devmode/package.json` semvers), do:
+```
+make update-clean
+```
 
 To use Xdebug with VSCode install the [PHP Debug extension](https://marketplace.visualstudio.com/items?itemName=felixfbecker.php-debug ) and use the following configuration:
 ```json
@@ -112,37 +138,6 @@ To use Xdebug with VSCode install the [PHP Debug extension](https://marketplace.
         }
     ]
 }
-```
-
-## Running Craft CLI commands
-
-Since we are using docker to run our project, we need to execute the craft CLI commands prepended with the docker command `docker-compose exec php`, eg: `docker-compose exec php ./craft project-config/sync`.
-
-## Updating Composer Packages
-
-To update to the latest Composer packages (as constrained by the `cms/composer.json` semvers), do: 
-
-`docker-compose exec php composer update`
-
-or 
-
-```
-rm cms/composer.lock
-make dev
-```
-
-
-## Updating NPM Packages
-
-To update to the latest npm packages (as constrained by the `buildchain/package.json` semvers), do:
-
-`docker-compose exec webpack npm update`
-
-or 
-
-```
-rm buildchain/package-lock.json
-make dev
 ```
 
 Below is the entire intact, unmodified `README.md` from Pixel & Tonic's [craftcms/craft](https://github.com/craftcms/craft):
