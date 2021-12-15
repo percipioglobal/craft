@@ -5,7 +5,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: 4a86f07d-200e-4dbc-a06a-223d9cc5c049 # Images
+            fieldUid: 4a86f07d-200e-4dbc-a06a-223d9cc5c049
             instructions: null
             label: null
             required: true
@@ -16,7 +16,7 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  4a86f07d-200e-4dbc-a06a-223d9cc5c049: # Images
+  4a86f07d-200e-4dbc-a06a-223d9cc5c049:
     contentColumnType: string
     fieldGroup: null
     handle: images
@@ -28,7 +28,7 @@ fields:
       allowUploads: true
       allowedKinds:
         - image
-      defaultUploadLocationSource: 'volume:5c642d7e-b16b-4836-9575-668d75d242e5' # Branding
+      defaultUploadLocationSource: 'volume:5c642d7e-b16b-4836-9575-668d75d242e5'
       defaultUploadLocationSubpath: ''
       limit: '8'
       localizeRelations: false
@@ -38,7 +38,7 @@ fields:
       showSiteMenu: true
       showUnpermittedFiles: true
       showUnpermittedVolumes: false
-      singleUploadLocationSource: 'volume:dbb9d34a-ed00-430b-a6cd-e61927f7b2d5' # Articles
+      singleUploadLocationSource: 'volume:dbb9d34a-ed00-430b-a6cd-e61927f7b2d5'
       singleUploadLocationSubpath: ''
       source: null
       sources: '*'

@@ -5,7 +5,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: f4cbe95b-c71a-42f8-a9d8-464dcf3916a9 # Primary Navigation
+            fieldUid: f4cbe95b-c71a-42f8-a9d8-464dcf3916a9
             instructions: null
             label: null
             required: true
@@ -14,7 +14,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 98769057-9c93-4e96-89ff-cb7b6a3a1188 # Secondary Navigation
+            fieldUid: 98769057-9c93-4e96-89ff-cb7b6a3a1188
             instructions: null
             label: null
             required: true
@@ -23,7 +23,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 74c703ba-fb2c-421f-9b09-2bd3762770de # Footer Navigation
+            fieldUid: 74c703ba-fb2c-421f-9b09-2bd3762770de
             instructions: null
             label: null
             required: true
@@ -32,7 +32,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 6d157457-cb17-4d30-b2cd-ade98a8fdcf0 # Privacy Links
+            fieldUid: 6d157457-cb17-4d30-b2cd-ade98a8fdcf0
             instructions: null
             label: null
             required: true
@@ -43,7 +43,7 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  6d157457-cb17-4d30-b2cd-ade98a8fdcf0: # Privacy Links
+  6d157457-cb17-4d30-b2cd-ade98a8fdcf0:
     contentColumnType: boolean
     fieldGroup: null
     handle: privacyLinks
@@ -57,7 +57,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Lightswitch
-  74c703ba-fb2c-421f-9b09-2bd3762770de: # Footer Navigation
+  74c703ba-fb2c-421f-9b09-2bd3762770de:
     contentColumnType: boolean
     fieldGroup: null
     handle: footerNavigation
@@ -71,7 +71,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Lightswitch
-  98769057-9c93-4e96-89ff-cb7b6a3a1188: # Secondary Navigation
+  98769057-9c93-4e96-89ff-cb7b6a3a1188:
     contentColumnType: boolean
     fieldGroup: null
     handle: secondaryNavigation
@@ -85,7 +85,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Lightswitch
-  f4cbe95b-c71a-42f8-a9d8-464dcf3916a9: # Primary Navigation
+  f4cbe95b-c71a-42f8-a9d8-464dcf3916a9:
     contentColumnType: boolean
     fieldGroup: null
     handle: primaryNavigation

@@ -5,7 +5,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: ea74ba6b-b787-414c-9f83-a01b8377bd73 # Heading
+            fieldUid: ea74ba6b-b787-414c-9f83-a01b8377bd73
             instructions: null
             label: null
             required: false
@@ -14,7 +14,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 040d9f96-b22c-414c-8b92-9ec41f548a81 # Description
+            fieldUid: 040d9f96-b22c-414c-8b92-9ec41f548a81
             instructions: null
             label: null
             required: false
@@ -23,7 +23,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: af937c7b-a59e-445e-ac72-b9c36b9854f0 # Buttons
+            fieldUid: af937c7b-a59e-445e-ac72-b9c36b9854f0
             instructions: null
             label: null
             required: false
@@ -34,7 +34,7 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  040d9f96-b22c-414c-8b92-9ec41f548a81: # Description
+  040d9f96-b22c-414c-8b92-9ec41f548a81:
     contentColumnType: text
     fieldGroup: null
     handle: description
@@ -62,7 +62,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\redactor\Field
-  af937c7b-a59e-445e-ac72-b9c36b9854f0: # Buttons
+  af937c7b-a59e-445e-ac72-b9c36b9854f0:
     contentColumnType: string
     fieldGroup: null
     handle: buttons
@@ -73,7 +73,7 @@ fields:
       columns:
         __assoc__:
           -
-            - 68e8bef5-3752-4c83-a67b-6fe5d31c976a # Button
+            - 68e8bef5-3752-4c83-a67b-6fe5d31c976a
             -
               __assoc__:
                 -
@@ -90,7 +90,7 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: verbb\supertable\fields\SuperTableField
-  ea74ba6b-b787-414c-9f83-a01b8377bd73: # Heading
+  ea74ba6b-b787-414c-9f83-a01b8377bd73:
     contentColumnType: text
     fieldGroup: null
     handle: heading

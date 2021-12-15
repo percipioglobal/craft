@@ -13,7 +13,7 @@ settings:
   localizeRelations: false
   selectionLabel: ''
   showSiteMenu: true
-  source: 'group:4e026396-d7ab-43ef-a817-226fb2dada30' # FAQ Categories
+  source: 'group:4e026396-d7ab-43ef-a817-226fb2dada30'
   sources: '*'
   targetSiteId: null
   validateRelatedElements: false

@@ -1,11 +1,11 @@
-field: 4285cde2-58a1-4cde-aba3-ccdced328ee2 # Button
+field: 4285cde2-58a1-4cde-aba3-ccdced328ee2
 fieldLayouts:
   8f709fd8-761f-41fb-80d6-2e01237696d9:
     tabs:
       -
         elements:
           -
-            fieldUid: 4697a491-b07d-46f9-87d8-c6cd9fb804a9 # Target
+            fieldUid: 4697a491-b07d-46f9-87d8-c6cd9fb804a9
             instructions: null
             label: null
             required: true
@@ -14,7 +14,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 3f37c536-3682-4856-a6af-a9f582d4c782 # Style
+            fieldUid: 3f37c536-3682-4856-a6af-a9f582d4c782
             instructions: null
             label: null
             required: true
@@ -25,7 +25,7 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  3f37c536-3682-4856-a6af-a9f582d4c782: # Style
+  3f37c536-3682-4856-a6af-a9f582d4c782:
     contentColumnType: string
     fieldGroup: null
     handle: style
@@ -82,7 +82,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Dropdown
-  4697a491-b07d-46f9-87d8-c6cd9fb804a9: # Target
+  4697a491-b07d-46f9-87d8-c6cd9fb804a9:
     contentColumnType: string
     fieldGroup: null
     handle: target

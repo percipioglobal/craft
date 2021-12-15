@@ -5,7 +5,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: 6843ef52-9bcd-483a-956a-b63193181c85 # Heading
+            fieldUid: 6843ef52-9bcd-483a-956a-b63193181c85
             instructions: null
             label: null
             required: false
@@ -14,7 +14,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 21df72f8-6b89-4f91-9c09-d04a531f29de # Description
+            fieldUid: 21df72f8-6b89-4f91-9c09-d04a531f29de
             instructions: null
             label: null
             required: false
@@ -23,7 +23,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: f1db3ebb-c604-4fa8-9f2d-4255e0515ea9 # Buttons
+            fieldUid: f1db3ebb-c604-4fa8-9f2d-4255e0515ea9
             instructions: null
             label: null
             required: false
@@ -34,7 +34,7 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  21df72f8-6b89-4f91-9c09-d04a531f29de: # Description
+  21df72f8-6b89-4f91-9c09-d04a531f29de:
     contentColumnType: text
     fieldGroup: null
     handle: description
@@ -62,7 +62,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\redactor\Field
-  6843ef52-9bcd-483a-956a-b63193181c85: # Heading
+  6843ef52-9bcd-483a-956a-b63193181c85:
     contentColumnType: text
     fieldGroup: null
     handle: heading
@@ -81,7 +81,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
-  f1db3ebb-c604-4fa8-9f2d-4255e0515ea9: # Buttons
+  f1db3ebb-c604-4fa8-9f2d-4255e0515ea9:
     contentColumnType: string
     fieldGroup: null
     handle: buttons
@@ -92,7 +92,7 @@ fields:
       columns:
         __assoc__:
           -
-            - aa00fbfa-4274-4def-a5e0-651e06d5baae # Button
+            - aa00fbfa-4274-4def-a5e0-651e06d5baae
             -
               __assoc__:
                 -

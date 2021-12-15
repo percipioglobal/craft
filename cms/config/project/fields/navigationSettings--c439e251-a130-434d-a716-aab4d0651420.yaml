@@ -8,28 +8,28 @@ settings:
   columns:
     __assoc__:
       -
-        - f4cbe95b-c71a-42f8-a9d8-464dcf3916a9 # Primary Navigation
+        - f4cbe95b-c71a-42f8-a9d8-464dcf3916a9
         -
           __assoc__:
             -
               - width
               - ''
       -
-        - 98769057-9c93-4e96-89ff-cb7b6a3a1188 # Secondary Navigation
+        - 98769057-9c93-4e96-89ff-cb7b6a3a1188
         -
           __assoc__:
             -
               - width
               - ''
       -
-        - 74c703ba-fb2c-421f-9b09-2bd3762770de # Footer Navigation
+        - 74c703ba-fb2c-421f-9b09-2bd3762770de
         -
           __assoc__:
             -
               - width
               - ''
       -
-        - 6d157457-cb17-4d30-b2cd-ade98a8fdcf0 # Privacy Links
+        - 6d157457-cb17-4d30-b2cd-ade98a8fdcf0
         -
           __assoc__:
             -

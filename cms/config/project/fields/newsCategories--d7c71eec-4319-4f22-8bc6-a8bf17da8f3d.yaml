@@ -13,7 +13,7 @@ settings:
   localizeRelations: false
   selectionLabel: 'Add a news category'
   showSiteMenu: true
-  source: 'group:f326369d-c220-40d9-92e9-7b7b7811d8e5' # News Categories
+  source: 'group:f326369d-c220-40d9-92e9-7b7b7811d8e5'
   sources: '*'
   targetSiteId: null
   validateRelatedElements: true

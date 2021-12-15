@@ -1,11 +1,11 @@
-field: cc4d5589-5884-4fb2-ba84-ffb388a8806e # Slides
+field: cc4d5589-5884-4fb2-ba84-ffb388a8806e
 fieldLayouts:
   1250dda9-6a10-41e5-9491-8e054eb76d83:
     tabs:
       -
         elements:
           -
-            fieldUid: f3960fae-d20a-4473-9a73-315dfed31760 # Image
+            fieldUid: f3960fae-d20a-4473-9a73-315dfed31760
             instructions: null
             label: null
             required: true
@@ -14,7 +14,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 085923fe-5934-4d01-a2fd-ec625094c005 # Caption
+            fieldUid: 085923fe-5934-4d01-a2fd-ec625094c005
             instructions: null
             label: null
             required: false
@@ -25,7 +25,7 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  085923fe-5934-4d01-a2fd-ec625094c005: # Caption
+  085923fe-5934-4d01-a2fd-ec625094c005:
     contentColumnType: text
     fieldGroup: null
     handle: caption
@@ -44,7 +44,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
-  f3960fae-d20a-4473-9a73-315dfed31760: # Image
+  f3960fae-d20a-4473-9a73-315dfed31760:
     contentColumnType: string
     fieldGroup: null
     handle: image
@@ -56,7 +56,7 @@ fields:
       allowUploads: true
       allowedKinds:
         - image
-      defaultUploadLocationSource: 'volume:5c642d7e-b16b-4836-9575-668d75d242e5' # Branding
+      defaultUploadLocationSource: 'volume:5c642d7e-b16b-4836-9575-668d75d242e5'
       defaultUploadLocationSubpath: ''
       limit: '1'
       localizeRelations: false
@@ -66,11 +66,11 @@ fields:
       showSiteMenu: true
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
-      singleUploadLocationSource: 'volume:17ffd720-73f0-4e0c-9878-ea089fcc6863' # Sliders
+      singleUploadLocationSource: 'volume:17ffd720-73f0-4e0c-9878-ea089fcc6863'
       singleUploadLocationSubpath: ''
       source: null
       sources:
-        - 'volume:17ffd720-73f0-4e0c-9878-ea089fcc6863' # Sliders
+        - 'volume:17ffd720-73f0-4e0c-9878-ea089fcc6863'
       targetSiteId: null
       useSingleFolder: true
       validateRelatedElements: false

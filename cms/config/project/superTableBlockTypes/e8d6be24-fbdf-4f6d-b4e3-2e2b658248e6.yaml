@@ -1,11 +1,11 @@
-field: 2c244265-381c-45ad-b439-7845b814e5ee # Resources
+field: 2c244265-381c-45ad-b439-7845b814e5ee
 fieldLayouts:
   f7a37c9e-dc1a-4c48-816d-f1ae3a08c08f:
     tabs:
       -
         elements:
           -
-            fieldUid: fbaa4c75-7616-42ca-adea-7615c9b91e38 # Label
+            fieldUid: fbaa4c75-7616-42ca-adea-7615c9b91e38
             instructions: null
             label: null
             required: true
@@ -14,7 +14,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 25958ba0-5f4a-48fc-9dee-0064db99f702 # Utility Icon
+            fieldUid: 25958ba0-5f4a-48fc-9dee-0064db99f702
             instructions: null
             label: null
             required: true
@@ -23,7 +23,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: ec91bde6-778d-4030-89fe-45614d871e81 # Target
+            fieldUid: ec91bde6-778d-4030-89fe-45614d871e81
             instructions: null
             label: null
             required: true
@@ -34,7 +34,7 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  25958ba0-5f4a-48fc-9dee-0064db99f702: # Utility Icon
+  25958ba0-5f4a-48fc-9dee-0064db99f702:
     contentColumnType: string
     fieldGroup: null
     handle: utilityIcon
@@ -69,7 +69,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Dropdown
-  ec91bde6-778d-4030-89fe-45614d871e81: # Target
+  ec91bde6-778d-4030-89fe-45614d871e81:
     contentColumnType: string
     fieldGroup: null
     handle: target
@@ -86,7 +86,7 @@ fields:
         - powerpoint
         - text
         - word
-      defaultUploadLocationSource: 'volume:dbb9d34a-ed00-430b-a6cd-e61927f7b2d5' # Articles
+      defaultUploadLocationSource: 'volume:dbb9d34a-ed00-430b-a6cd-e61927f7b2d5'
       defaultUploadLocationSubpath: ''
       limit: '1'
       localizeRelations: false
@@ -96,11 +96,11 @@ fields:
       showSiteMenu: true
       showUnpermittedFiles: true
       showUnpermittedVolumes: false
-      singleUploadLocationSource: 'volume:5c642d7e-b16b-4836-9575-668d75d242e5' # Branding
+      singleUploadLocationSource: 'volume:5c642d7e-b16b-4836-9575-668d75d242e5'
       singleUploadLocationSubpath: ''
       source: null
       sources:
-        - 'volume:b011a3f9-88a2-4819-aad0-ca04487dfac8' # Documents
+        - 'volume:b011a3f9-88a2-4819-aad0-ca04487dfac8'
       targetSiteId: null
       useSingleFolder: true
       validateRelatedElements: false
@@ -108,7 +108,7 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Assets
-  fbaa4c75-7616-42ca-adea-7615c9b91e38: # Label
+  fbaa4c75-7616-42ca-adea-7615c9b91e38:
     contentColumnType: text
     fieldGroup: null
     handle: label

@@ -1,11 +1,11 @@
-field: af937c7b-a59e-445e-ac72-b9c36b9854f0 # Buttons
+field: af937c7b-a59e-445e-ac72-b9c36b9854f0
 fieldLayouts:
   63df6b16-57fc-47a3-9c8e-92dbf975d8eb:
     tabs:
       -
         elements:
           -
-            fieldUid: 68e8bef5-3752-4c83-a67b-6fe5d31c976a # Button
+            fieldUid: 68e8bef5-3752-4c83-a67b-6fe5d31c976a
             instructions: null
             label: null
             required: true
@@ -16,7 +16,7 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  68e8bef5-3752-4c83-a67b-6fe5d31c976a: # Button
+  68e8bef5-3752-4c83-a67b-6fe5d31c976a:
     contentColumnType: string
     fieldGroup: null
     handle: target

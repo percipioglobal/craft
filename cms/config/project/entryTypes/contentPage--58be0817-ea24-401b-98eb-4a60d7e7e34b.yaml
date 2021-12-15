@@ -71,7 +71,7 @@ fieldLayouts:
 handle: contentPage
 hasTitleField: true
 name: 'Content Page'
-section: ef841ba4-7bcd-4ef5-9c12-96377bf7fba2 # Pages
+section: ef841ba4-7bcd-4ef5-9c12-96377bf7fba2
 sortOrder: 2
 titleFormat: null
 titleTranslationKeyFormat: null

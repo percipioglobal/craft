@@ -5,7 +5,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: 35981b2e-d04e-4366-939a-c0673263711a # Questions
+            fieldUid: 35981b2e-d04e-4366-939a-c0673263711a
             instructions: null
             label: null
             required: true
@@ -16,7 +16,7 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  35981b2e-d04e-4366-939a-c0673263711a: # Questions
+  35981b2e-d04e-4366-939a-c0673263711a:
     contentColumnType: string
     fieldGroup: null
     handle: questions
@@ -31,7 +31,7 @@ fields:
       showSiteMenu: true
       source: null
       sources:
-        - 'section:47b7409b-e345-48d9-b684-06ec0a2972f5' # FAQ
+        - 'section:47b7409b-e345-48d9-b684-06ec0a2972f5'
       targetSiteId: null
       validateRelatedElements: false
       viewMode: null

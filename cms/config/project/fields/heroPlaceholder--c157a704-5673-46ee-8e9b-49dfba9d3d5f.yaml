@@ -9,7 +9,7 @@ settings:
   allowUploads: true
   allowedKinds:
     - image
-  defaultUploadLocationSource: 'volume:1105c63e-3aaf-403a-8259-736f0a2d47f8' # Heroes
+  defaultUploadLocationSource: 'volume:1105c63e-3aaf-403a-8259-736f0a2d47f8'
   defaultUploadLocationSubpath: ''
   limit: '1'
   localizeRelations: false
@@ -19,7 +19,7 @@ settings:
   showSiteMenu: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
-  singleUploadLocationSource: 'volume:14e48735-7707-43d5-a6f1-90cc18da80f1' # Teasers
+  singleUploadLocationSource: 'volume:14e48735-7707-43d5-a6f1-90cc18da80f1'
   singleUploadLocationSubpath: ''
   source: null
   sources: '*'

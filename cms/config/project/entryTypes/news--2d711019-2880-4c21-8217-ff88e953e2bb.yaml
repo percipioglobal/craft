@@ -71,7 +71,7 @@ fieldLayouts:
 handle: news
 hasTitleField: true
 name: News
-section: 9de367ab-77b8-47bb-bbc3-63e79a202c3e # News
+section: 9de367ab-77b8-47bb-bbc3-63e79a202c3e
 sortOrder: 1
 titleFormat: null
 titleTranslationKeyFormat: null

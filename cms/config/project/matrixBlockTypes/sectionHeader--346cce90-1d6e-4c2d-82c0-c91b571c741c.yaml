@@ -5,7 +5,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: 6fcc732b-3375-496d-92b8-64f3dcc00d00 # Heading
+            fieldUid: 6fcc732b-3375-496d-92b8-64f3dcc00d00
             instructions: null
             label: null
             required: true
@@ -14,7 +14,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: e7b63d80-91cc-438a-b670-59cbb778ca14 # Description
+            fieldUid: e7b63d80-91cc-438a-b670-59cbb778ca14
             instructions: null
             label: null
             required: true
@@ -23,7 +23,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 4285cde2-58a1-4cde-aba3-ccdced328ee2 # Button
+            fieldUid: 4285cde2-58a1-4cde-aba3-ccdced328ee2
             instructions: null
             label: null
             required: false
@@ -34,7 +34,7 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  6fcc732b-3375-496d-92b8-64f3dcc00d00: # Heading
+  6fcc732b-3375-496d-92b8-64f3dcc00d00:
     contentColumnType: text
     fieldGroup: null
     handle: heading
@@ -53,7 +53,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
-  4285cde2-58a1-4cde-aba3-ccdced328ee2: # Button
+  4285cde2-58a1-4cde-aba3-ccdced328ee2:
     contentColumnType: string
     fieldGroup: null
     handle: buttons
@@ -64,14 +64,14 @@ fields:
       columns:
         __assoc__:
           -
-            - 4697a491-b07d-46f9-87d8-c6cd9fb804a9 # Target
+            - 4697a491-b07d-46f9-87d8-c6cd9fb804a9
             -
               __assoc__:
                 -
                   - width
                   - ''
           -
-            - 3f37c536-3682-4856-a6af-a9f582d4c782 # Style
+            - 3f37c536-3682-4856-a6af-a9f582d4c782
             -
               __assoc__:
                 -
@@ -88,7 +88,7 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: verbb\supertable\fields\SuperTableField
-  e7b63d80-91cc-438a-b670-59cbb778ca14: # Description
+  e7b63d80-91cc-438a-b670-59cbb778ca14:
     contentColumnType: string(480)
     fieldGroup: null
     handle: description

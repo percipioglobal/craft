@@ -1,5 +1,12 @@
 # percipioglobal/craft Change Log
 
+## 1.5.1 - 15/12/2021
+### Changed
+- Updated to Tailwind 3
+- Using MySQL 8 over MariaDB
+- Removed/Added some plugins
+- Added new DB Seed
+
 ## 1.5.0 - 19/10/2021
 ### Added
 - Added tailwind ratio with helper classes

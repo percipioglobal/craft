@@ -5,7 +5,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: 5053ff27-8e1b-49ea-85c6-c2a1dece3b8e # Body Content
+            fieldUid: 5053ff27-8e1b-49ea-85c6-c2a1dece3b8e
             instructions: null
             label: null
             required: true
@@ -16,7 +16,7 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  5053ff27-8e1b-49ea-85c6-c2a1dece3b8e: # Body Content
+  5053ff27-8e1b-49ea-85c6-c2a1dece3b8e:
     contentColumnType: text
     fieldGroup: null
     handle: article

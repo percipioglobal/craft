@@ -5,7 +5,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: 3ef3485e-6187-4dac-af6b-66d630852b61 # Quote
+            fieldUid: 3ef3485e-6187-4dac-af6b-66d630852b61
             instructions: null
             label: null
             required: true
@@ -14,7 +14,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 4133e37a-d625-476e-91aa-a600e0123064 # Quote Source
+            fieldUid: 4133e37a-d625-476e-91aa-a600e0123064
             instructions: null
             label: null
             required: false
@@ -23,7 +23,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 37051ce6-f0ea-4d54-97a5-e8c0f304f99c # Type
+            fieldUid: 37051ce6-f0ea-4d54-97a5-e8c0f304f99c
             instructions: null
             label: null
             required: true
@@ -34,7 +34,7 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  3ef3485e-6187-4dac-af6b-66d630852b61: # Quote
+  3ef3485e-6187-4dac-af6b-66d630852b61:
     contentColumnType: text
     fieldGroup: null
     handle: quote
@@ -53,7 +53,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
-  4133e37a-d625-476e-91aa-a600e0123064: # Quote Source
+  4133e37a-d625-476e-91aa-a600e0123064:
     contentColumnType: string
     fieldGroup: null
     handle: quoteSource
@@ -115,7 +115,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: lenz\linkfield\fields\LinkField
-  37051ce6-f0ea-4d54-97a5-e8c0f304f99c: # Type
+  37051ce6-f0ea-4d54-97a5-e8c0f304f99c:
     contentColumnType: string
     fieldGroup: null
     handle: quoteType

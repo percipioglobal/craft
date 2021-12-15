@@ -31,7 +31,7 @@ fieldLayouts:
 handle: error
 hasTitleField: true
 name: Errors
-section: a72bfe0c-3389-4f9f-8ec1-ab318ec10b29 # Errors
+section: a72bfe0c-3389-4f9f-8ec1-ab318ec10b29
 sortOrder: 1
 titleFormat: null
 titleTranslationKeyFormat: null

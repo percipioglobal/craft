@@ -5,7 +5,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: b06ee5f5-05a5-4b2d-ae59-122bff896ee6 # Standfirst
+            fieldUid: b06ee5f5-05a5-4b2d-ae59-122bff896ee6
             instructions: null
             label: null
             required: true
@@ -16,7 +16,7 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  b06ee5f5-05a5-4b2d-ae59-122bff896ee6: # Standfirst
+  b06ee5f5-05a5-4b2d-ae59-122bff896ee6:
     contentColumnType: text
     fieldGroup: null
     handle: standfirst
