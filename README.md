@@ -52,13 +52,12 @@ The following Craft CMS plugins are used on this site:
 * [Timeloop](https://github.com/percipioglobal/craft-timeloop) - for creating repeatable dates
 * [Super Table](https://github.com/verbb/super-table) - Field Type to create powerful tables
 * [Spoon](https://github.com/angell-co/Spoon) - Organising our matrix fields
-* [Navigation](https://github.com/verbb/navigation) - Managing Navigation Menus
 
 ## Using percipioglobal/craft
 
 This project package works exactly the way Pixel & Tonic's [craftcms/craft](https://github.com/craftcms/craft) package works; you create a new project by first creating & installing the project:
 
-    `composer create-project percipioglobal/craft:dev-craft-vite PATH --no-install`
+    `composer create-project percipioglobal/craft:dev-craft-vite PATH --no-install --remove-vcs`
 
 Make sure that `PATH` is the path to your project, including the name you want for the project, e.g.:
 
@@ -98,12 +97,12 @@ Password: `letmein`
 
 Obviously change these to whatever you like as needed.
 
-Build the production assets by typing make build to build the critical CSS, fonts, and other production assets. They will appear in `cms/web/dist/` (just double-click on the `report-legacy.html` and `report-modern.html` files to view them).
+Build the production assets by typing `make build` to build the critical CSS, fonts, and other production assets. They will appear in `cms/web/dist/` (just double-click on the `report-legacy.html` and `report-modern.html` files to view them).
 
 **Important:** To find the correct credentials for `LOCAL_DB_CONTAINER` run `docker-compose up` and once the docker container is running, use the command `docker container ls` to find the correct name of the container.
-If your project is called `test` the container will be somewhere along the lines of `test_mariadb` or `test_mysql`. That's the value you do have to enter.
+If your project is called `test` the container will be somewhere along the lines of `test_mysql_1`. That's the value you do have to enter.
 
-**N.B.:** Without authorization & credentials (which are private), the `./docker_pull_db.sh` will not work. It's provided here for instructional purposes
+**N.B.:** Without authorization & credentials (which are private), the `make pulldb` will not work (it just runs `scripts/docker_pull_db.sh`). It's provided here for instructional purposes.
 
 ## Makefile Project Commands
 
@@ -112,12 +111,27 @@ This project uses Docker to shrink-wrap the devops it needs to run around the pr
 To make using it easier, we're using a Makefile and the built-in `make` utility to create local aliases. You can run the following from terminal in the project directory:
 
 - `make dev` - starts up the local dev server listening on `http://localhost:8000/`
-- `make build` - builds the static assets via the webpack 5 buildchain
+- `make build` - builds the static assets via the Vite buildchain
 - `make clean` - shuts down the Docker containers, removes any mounted volumes (including the database), and then rebuilds the containers from scratch
+- `make update` - causes the project to update to the latest Composer and NPM dependencies
+- `make update-clean` - completely removes `node_modules/` & `vendor/`, then causes the project to update to the latest Composer and NPM dependencies
 - `make composer xxx` - runs the `composer` command passed in, e.g. `make composer install`
+- `make craft xxx` - runs the `craft` [console command](https://craftcms.com/docs/3.x/console-commands.html) passed in, e.g. `make craft project-config/apply` in the php container
 - `make npm xxx` - runs the `npm` command passed in, e.g. `make npm install`
 - `make pulldb` - runs the `scripts/docker_pull_db.sh` script to pull a remote database into the database container; the `scripts/.env.sh` must be set up first
 - `make restoredb xxx` - runs the `scripts/docker_restore_db.sh` script to restore a local database dump into the database container; the `scripts/.env.sh` must be set up first
+
+### Other notes
+
+To update to the latest Composer packages (as constrained by the `cms/composer.json` semvers) and latest npm packages (as constrained by the `buildchain/package.json` semvers), do:
+```
+make update
+```
+
+To start from scratch by removing `buildchain/node_modules/` & `cms/vendor/`, then update to the latest Composer packages (as constrained by the `cms/composer.json` semvers) and latest npm packages (as constrained by the `buildchain/package.json` semvers), do:
+```
+make update-clean
+```
 
 To use Xdebug with VSCode install the [PHP Debug extension](https://marketplace.visualstudio.com/items?itemName=felixfbecker.php-debug ) and use the following configuration:
 ```json
@@ -138,37 +152,6 @@ To use Xdebug with VSCode install the [PHP Debug extension](https://marketplace.
         }
     ]
 }
-```
-
-## Running Craft CLI commands
-
-Since we are using docker to run our project, we need to execute the craft CLI commands prepended with the docker command `docker-compose exec php`, eg: `docker-compose exec php ./craft project-config/sync`.
-
-## Updating Composer Packages
-
-To update to the latest Composer packages (as constrained by the `cms/composer.json` semvers), do: 
-
-`docker-compose exec php composer update`
-
-or 
-
-```
-rm cms/composer.lock
-make dev
-```
-
-
-## Updating NPM Packages
-
-To update to the latest npm packages (as constrained by the `buildchain/package.json` semvers), do:
-
-`docker-compose exec webpack npm update`
-
-or 
-
-```
-rm buildchain/package-lock.json
-make dev
 ```
 
 Below is the entire intact, unmodified `README.md` from Pixel & Tonic's [craftcms/craft](https://github.com/craftcms/craft):

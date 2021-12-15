@@ -5,6 +5,7 @@
 - Added tailwind ratio with helper classes
 - Added Vue 3
 - Added Vuex 4
+
 ### Changed
 - Updated go-live-checklist.md
 - Disabled AMP by default

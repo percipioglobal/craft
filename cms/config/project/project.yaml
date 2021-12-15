@@ -1,4 +1,4 @@
-dateModified: 1639480290
+dateModified: 1639562078
 email:
   fromEmail: $SYSTEM_EMAIL
   fromName: $SENDER_NAME
@@ -150,6 +150,10 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+  colour-swatches:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.4.2
   eager-beaver:
     edition: standard
     enabled: true
@@ -164,7 +168,6 @@ plugins:
   image-optimize:
     edition: standard
     enabled: true
-    licenseKey: 9E0GNZGDICQUC701CD805KLG
     schemaVersion: 1.0.0
     settings:
       allowUpScaledImageVariants: false
@@ -311,12 +314,15 @@ plugins:
   spoon:
     edition: standard
     enabled: true
-    licenseKey: 5ORYCU819DCEOPQB8B5ERU5N
     schemaVersion: 3.5.0
   super-table:
     edition: standard
     enabled: true
     schemaVersion: 2.2.1
+  timeloop:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
   twigpack:
     edition: standard
     enabled: true
@@ -326,6 +332,10 @@ plugins:
     enabled: true
     schemaVersion: 2.0.0
   typogrify:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  vite:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
