@@ -37,7 +37,7 @@
         "putyourlightson/craft-blitz-recommendations": "^1.1",
         "sebastianlenz/linkfield": "^2.0@beta",
         "verbb/super-table": "^2.1.0",
-        "vlucas/phpdotenv": "^3.4.0",
+        "vlucas/phpdotenv": "^5.4.0",
         "yiisoft/yii2-redis": "^2.0.6"
     },
     "require-dev": {
@@ -49,9 +49,13 @@
             "modules\\sitemodule\\": "modules/sitemodule/src/"
         }
     },
-    "config": {
-        "sort-packages": true,
+    "config": {  
+        "allow-plugins": {
+            "craftcms/plugin-installer": true,
+            "yiisoft/yii2-composer": true
+        },
         "optimize-autoloader": true,
+        "sort-packages": true,
         "platform": {
             "php": "7.4"
         }

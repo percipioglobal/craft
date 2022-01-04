@@ -23,7 +23,6 @@ module.exports = (type = 'modern', settings) => {
                     target: criticalDest,
                     extract: false,
                     inline: false,
-                    minify: true,
                     width: criticalWidth,
                     height: criticalHeight,
                 })
