@@ -31,13 +31,13 @@
         "nystudio107/craft-minify": "^1.2.5",
         "nystudio107/craft-typogrify": "^1.1.4",
         "nystudio107/craft-seomatic": "^3.3.32",
-        "nystudio107/craft-vite": "^1.0.9",
+        "nystudio107/craft-vite": "^1.0.20",
         "percipioglobal/craft-colour-swatches": "^1.5.0",
         "percipiolondon/craft-timeloop": "^1.0.0",
         "putyourlightson/craft-blitz-recommendations": "^1.1",
         "sebastianlenz/linkfield": "^2.0@beta",
         "verbb/super-table": "^2.1.0",
-        "vlucas/phpdotenv": "^3.4.0",
+        "vlucas/phpdotenv": "^5.4.0",
         "yiisoft/yii2-redis": "^2.0.6"
     },
     "require-dev": {
@@ -50,8 +50,12 @@
         }
     },
     "config": {
-        "sort-packages": true,
+        "allow-plugins": {
+            "craftcms/plugin-installer": true,
+            "yiisoft/yii2-composer": true
+        },
         "optimize-autoloader": true,
+        "sort-packages": true,
         "platform": {
             "php": "7.4"
         }
