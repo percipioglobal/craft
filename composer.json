@@ -27,5 +27,6 @@
             "@php -r \"@unlink('LICENSE.md');\"",
             "@php -r \"@unlink('README.md');\""
         ]
-    }
+    },
+    "version": "2.0.0"
 }

@@ -39,7 +39,7 @@ The following Craft CMS plugins are used on this site:
 * [Minify](https://github.com/nystudio107/craft-minify) - to minify the HTML and inline JS/CSS
 * [Eager Beaver](https://github.com/nystudio107/craft-eager-beaver) - to handle eager loading on entry pages
 * [SEOmatic](https://github.com/nystudio107/craft-seomatic) - for handling site-side SEO
-* [Twigpack](https://github.com/nystudio107/craft-twigpack) - for loading webpack-generated `manifest.json` resources in a modern way
+* [Vite](https://github.com/nystudio107/craft-vite) - for loading vite-generated `manifest.json` resources in a modern way
 * [Typogrify](https://github.com/nystudio107/craft-typogrify) - for smart quotes and other typographic ligatures
 * [Colour Swatches](https://github.com/percipioglobal/craft-colour-swatches) - for adding color palettes
 * [Timeloop](https://github.com/percipioglobal/craft-timeloop) - for creating repeatable dates
@@ -62,7 +62,7 @@ We use `--no-install` so that the composer packages for the root project are not
 
 You'll need Docker desktop for your platform installed to run the project in local development
 
-* Start up the site by typing `make dev` in terminal in the project's root directory (the first build will be somewhat lengthy)
+* Start up the site by typing `make dev` in terminal in the project's root directory (the first build will be somewhat lengt hy)
 * Navigate to `http://localhost:8000` to use the site; the `vite-dev-server` runs off of `http://localhost:3000`
 
 Wait until you see the following to indicate that the PHP container is ready:
