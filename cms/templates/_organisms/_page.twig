@@ -1,10 +1,9 @@
 {%- extends "_boilerplate/_layouts/generic-page-layout.twig" -%}
 
 {# ENABLE WHEN AMP IS SETUP #}
-{# {%- block headLinks -%}
+{%- block headLinks -%}
     {{ parent() }}
-    <link rel="amphtml" href="{{- craft.app.request.absoluteUrl ~ '/amp' -}}">
-{%- endblock headLinks -%} #}
+{%- endblock headLinks -%}
 
 {%- block content -%}
     {%- switch entry.type -%}
