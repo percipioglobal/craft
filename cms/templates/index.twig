@@ -1,11 +1,5 @@
 {%- extends "_boilerplate/_layouts/generic-page-layout.twig" -%}
 
-{# ENABLE WHEN AMP IS SETUP #}
-{# {%- block headLinks -%}
-    {{ parent() }}
-    <link rel="amphtml" href="{{ siteUrl('/amp') }}">
-{%- endblock headLinks -%} #}
-
 {%- block content -%}
     {%- include '_organisms/entry-types/page--landing' ignore missing with {
         entry: entry
