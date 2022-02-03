@@ -15,7 +15,7 @@
 
     {%- minify -%}
 
-        <blockquote {{ values.source ? 'cite="'~ values.source.getText() ~ '"' : '' }} class="pt-2 relative mr-auto {{ values.position == 'right' ? ' text-right' : 'text-left' -}}">
+        <blockquote {{ (options.source ? 'cite="'~ options.source.getText(options.source.getUrl()) ~ '"' : '')|raw }} class="pt-2 relative mr-auto {{ values.position == 'right' ? ' text-right' : 'text-left' -}}">
 
             <span class="absolute top-0 left-0 text-blue-500 text-6xl font-serif">&quot;</span>
 
@@ -25,10 +25,10 @@
                 </p>
             </div>
 
-            {%- if values.source -%}
+            {%- if options.source -%}
 
                 <footer class="ml-10 mt-2">
-                    <a href="{{- values.source.getUrl() -}}" class="text-blue-500">~ {{ values.source.getText() -}}</a>
+                    <a href="{{- options.source.getUrl() -}}" class="text-blue-500">~ {{ options.source.getText(options.source.getUrl()) -}}</a>
                 </footer>
 
             {%- endif -%}

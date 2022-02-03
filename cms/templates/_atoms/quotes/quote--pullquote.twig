@@ -18,7 +18,7 @@
 
         <aside class="clearfix {{- values.position =='left' ? 'float-left' : 'float-right' -}}">
 
-            <blockquote {{ values.source ? 'cite="'~ values.source.getText() ~ '"' : '' }} class="py-2 border-blue-500 relative mr-auto {{ values.position == 'right' ? 'pr-4 text-right border-r-4' : 'pl-4 text-left border-l-4' -}}">
+            <blockquote {{ (options.source ? 'cite="'~ options.source.getText(options.source.getUrl()) ~ '"' : '')|raw }} class="py-2 border-blue-500 relative mr-auto {{ values.position == 'right' ? 'pr-4 text-right border-r-4' : 'pl-4 text-left border-l-4' -}}">
 
                 <div class="prose md:prose-lg">
                     <p>
@@ -26,10 +26,10 @@
                     </p>
                 </div>
 
-                {%- if values.source -%}
+                {%- if options.source -%}
 
                     <footer class="ml-10">
-                        <a href="{{- values.source.getUrl() -}}" class="text-blue-500">~ {{ values.source.getText() -}}</a>
+                        <a href="{{- options.source.getUrl() -}}" class="text-blue-500">~ {{ options.source.getText(options.source.getUrl()) -}}</a>
                     </footer>
 
                 {%- endif -%}
