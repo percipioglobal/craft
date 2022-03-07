@@ -83,7 +83,7 @@ services:
       MYSQL_PASSWORD: project
     init: true
     ports:
-      - "4306:3306"
+      - "3311:3306"
     volumes:
       - db-data:/var/lib/mysql
       - ./db-seed/:/docker-entrypoint-initdb.d

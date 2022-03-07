@@ -17,27 +17,11 @@
         "source": "https://github.com/percipioglobal/craft",
         "docs": "https://github.com/percipioglobal/craft"
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "alpha",
     "require": {
-        "angellco/spoon": "^3.3.3",
-        "craftcms/aws-s3": "^1.2",
-        "craftcms/cms": "^3.7.20",
-        "craftcms/feed-me": "^4.2.0",
-        "craftcms/redactor": "^2.1.0",
-        "craftcms/mailgun": "^2.0.0",
-        "hybridinteractive/craft-position-fieldtype": "^1.0.17",
-        "nystudio107/craft-eagerbeaver": "^1.0.0",
-        "nystudio107/craft-imageoptimize": "^1.0.0",
-        "nystudio107/craft-minify": "^1.2.5",
-        "nystudio107/craft-typogrify": "^1.1.4",
-        "nystudio107/craft-seomatic": "^3.3.32",
-        "nystudio107/craft-vite": "^1.0.20",
-        "percipioglobal/craft-colour-swatches": "^1.5.0",
-        "percipiolondon/craft-timeloop": "^1.0.0",
-        "putyourlightson/craft-blitz-recommendations": "^1.1",
-        "sebastianlenz/linkfield": "^2.0@beta",
-        "verbb/super-table": "^2.1.0",
-        "vlucas/phpdotenv": "^5.4.0",
+        "craftcms/cms": "^4.0.0-alpha.1",
+        "craftcms/redactor": "^3.0.0-beta.1",
+        "nystudio107/craft-vite": "^4.0.0-beta.1",
         "yiisoft/yii2-redis": "^2.0.6"
     },
     "require-dev": {
@@ -57,7 +41,7 @@
         "optimize-autoloader": true,
         "sort-packages": true,
         "platform": {
-            "php": "7.4"
+            "php": "8.0.4"
         }
     },
     "scripts": {
