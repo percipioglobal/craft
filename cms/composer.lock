@@ -676,16 +676,16 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "4.0.0-alpha.1",
+            "version": "4.0.0-beta.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "ba4088560abc22f4b57704ac4975a70c252122de"
+                "reference": "2c20eed81e34c35b880ddd9e1bc61c9cfd9c6690"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/ba4088560abc22f4b57704ac4975a70c252122de",
-                "reference": "ba4088560abc22f4b57704ac4975a70c252122de",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/2c20eed81e34c35b880ddd9e1bc61c9cfd9c6690",
+                "reference": "2c20eed81e34c35b880ddd9e1bc61c9cfd9c6690",
                 "shasum": ""
             },
             "require": {
@@ -712,8 +712,10 @@
                 "league/oauth2-client": "^2.6.0",
                 "mikehaertl/php-shellcommand": "^1.6.3",
                 "moneyphp/money": "^4.0",
+                "monolog/monolog": "^2.3",
                 "php": "^8.0.2",
                 "pixelandtonic/imagine": "~1.2.4.1",
+                "samdark/yii2-psr-log-target": "^1.1",
                 "seld/cli-prompt": "^1.0.4",
                 "symfony/http-client": "^6.0.3",
                 "symfony/var-dumper": "^5.0|^6.0",
@@ -745,6 +747,7 @@
                 "codeception/module-phpbrowser": "^1.0.2",
                 "codeception/module-rest": "^1.4.2",
                 "codeception/module-yii2": "^1.1.5",
+                "craftcms/ecs": "dev-main",
                 "fakerphp/faker": "^1.19.0",
                 "league/factory-muffin": "^3.3.0",
                 "phpstan/phpstan": "^1.4.6",
@@ -787,20 +790,20 @@
                 "rss": "https://github.com/craftcms/cms/releases.atom",
                 "source": "https://github.com/craftcms/cms"
             },
-            "time": "2022-03-01T20:40:43+00:00"
+            "time": "2022-03-09T20:44:42+00:00"
         },
         {
             "name": "craftcms/html-field",
-            "version": "2.0.0",
+            "version": "2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/html-field.git",
-                "reference": "60174b111d7c180d91bca59af7d86f3ccac1a1a4"
+                "reference": "5476387139d255a6dd258b7dab2ad952c49cbf20"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/html-field/zipball/60174b111d7c180d91bca59af7d86f3ccac1a1a4",
-                "reference": "60174b111d7c180d91bca59af7d86f3ccac1a1a4",
+                "url": "https://api.github.com/repos/craftcms/html-field/zipball/5476387139d255a6dd258b7dab2ad952c49cbf20",
+                "reference": "5476387139d255a6dd258b7dab2ad952c49cbf20",
                 "shasum": ""
             },
             "require": {
@@ -835,7 +838,7 @@
                 "rss": "https://github.com/craftcms/html-field/commits/main.atom",
                 "source": "https://github.com/craftcms/html-field"
             },
-            "time": "2022-03-04T20:53:05+00:00"
+            "time": "2022-03-10T14:41:08+00:00"
         },
         {
             "name": "craftcms/oauth2-craftid",
@@ -1834,16 +1837,16 @@
         },
         {
             "name": "illuminate/collections",
-            "version": "v9.3.1",
+            "version": "v9.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/collections.git",
-                "reference": "3f4db0d7d1583a09b024e66370f30ee8b633f588"
+                "reference": "22c4bb17f4e6c6fb470b5957e8232b1b5baf76b0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/collections/zipball/3f4db0d7d1583a09b024e66370f30ee8b633f588",
-                "reference": "3f4db0d7d1583a09b024e66370f30ee8b633f588",
+                "url": "https://api.github.com/repos/illuminate/collections/zipball/22c4bb17f4e6c6fb470b5957e8232b1b5baf76b0",
+                "reference": "22c4bb17f4e6c6fb470b5957e8232b1b5baf76b0",
                 "shasum": ""
             },
             "require": {
@@ -1885,11 +1888,11 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2022-02-28T12:33:28+00:00"
+            "time": "2022-03-07T15:02:25+00:00"
         },
         {
             "name": "illuminate/conditionable",
-            "version": "v9.3.1",
+            "version": "v9.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/conditionable.git",
@@ -1935,16 +1938,16 @@
         },
         {
             "name": "illuminate/contracts",
-            "version": "v9.3.1",
+            "version": "v9.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
-                "reference": "7cf6c0c9fc14a1ea4a9860d6e69b52e513cb505f"
+                "reference": "ce68106c575410c71f92ac1c91c5d95c561033bc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/contracts/zipball/7cf6c0c9fc14a1ea4a9860d6e69b52e513cb505f",
-                "reference": "7cf6c0c9fc14a1ea4a9860d6e69b52e513cb505f",
+                "url": "https://api.github.com/repos/illuminate/contracts/zipball/ce68106c575410c71f92ac1c91c5d95c561033bc",
+                "reference": "ce68106c575410c71f92ac1c91c5d95c561033bc",
                 "shasum": ""
             },
             "require": {
@@ -1979,11 +1982,11 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2022-03-03T14:08:19+00:00"
+            "time": "2022-03-04T18:18:32+00:00"
         },
         {
             "name": "illuminate/macroable",
-            "version": "v9.3.0",
+            "version": "v9.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/macroable.git",
@@ -2303,6 +2306,105 @@
             "time": "2021-12-01T10:39:00+00:00"
         },
         {
+            "name": "monolog/monolog",
+            "version": "2.3.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Seldaek/monolog.git",
+                "reference": "fd4380d6fc37626e2f799f29d91195040137eba9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/fd4380d6fc37626e2f799f29d91195040137eba9",
+                "reference": "fd4380d6fc37626e2f799f29d91195040137eba9",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2",
+                "psr/log": "^1.0.1 || ^2.0 || ^3.0"
+            },
+            "provide": {
+                "psr/log-implementation": "1.0.0 || 2.0.0 || 3.0.0"
+            },
+            "require-dev": {
+                "aws/aws-sdk-php": "^2.4.9 || ^3.0",
+                "doctrine/couchdb": "~1.0@dev",
+                "elasticsearch/elasticsearch": "^7",
+                "graylog2/gelf-php": "^1.4.2",
+                "mongodb/mongodb": "^1.8",
+                "php-amqplib/php-amqplib": "~2.4 || ^3",
+                "php-console/php-console": "^3.1.3",
+                "phpspec/prophecy": "^1.6.1",
+                "phpstan/phpstan": "^0.12.91",
+                "phpunit/phpunit": "^8.5",
+                "predis/predis": "^1.1",
+                "rollbar/rollbar": "^1.3",
+                "ruflin/elastica": ">=0.90@dev",
+                "swiftmailer/swiftmailer": "^5.3|^6.0"
+            },
+            "suggest": {
+                "aws/aws-sdk-php": "Allow sending log messages to AWS services like DynamoDB",
+                "doctrine/couchdb": "Allow sending log messages to a CouchDB server",
+                "elasticsearch/elasticsearch": "Allow sending log messages to an Elasticsearch server via official client",
+                "ext-amqp": "Allow sending log messages to an AMQP server (1.0+ required)",
+                "ext-curl": "Required to send log messages using the IFTTTHandler, the LogglyHandler, the SendGridHandler, the SlackWebhookHandler or the TelegramBotHandler",
+                "ext-mbstring": "Allow to work properly with unicode symbols",
+                "ext-mongodb": "Allow sending log messages to a MongoDB server (via driver)",
+                "ext-openssl": "Required to send log messages using SSL",
+                "ext-sockets": "Allow sending log messages to a Syslog server (via UDP driver)",
+                "graylog2/gelf-php": "Allow sending log messages to a GrayLog2 server",
+                "mongodb/mongodb": "Allow sending log messages to a MongoDB server (via library)",
+                "php-amqplib/php-amqplib": "Allow sending log messages to an AMQP server using php-amqplib",
+                "php-console/php-console": "Allow sending log messages to Google Chrome",
+                "rollbar/rollbar": "Allow sending log messages to Rollbar",
+                "ruflin/elastica": "Allow sending log messages to an Elastic Search server"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "2.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Monolog\\": "src/Monolog"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jordi Boggiano",
+                    "email": "j.boggiano@seld.be",
+                    "homepage": "https://seld.be"
+                }
+            ],
+            "description": "Sends your logs to files, sockets, inboxes, databases and various web services",
+            "homepage": "https://github.com/Seldaek/monolog",
+            "keywords": [
+                "log",
+                "logging",
+                "psr-3"
+            ],
+            "support": {
+                "issues": "https://github.com/Seldaek/monolog/issues",
+                "source": "https://github.com/Seldaek/monolog/tree/2.3.5"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/Seldaek",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/monolog/monolog",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2021-10-01T21:08:31+00:00"
+        },
+        {
             "name": "nystudio107/craft-plugin-vite",
             "version": "4.0.0-beta.1",
             "source": {
@@ -2356,16 +2458,16 @@
         },
         {
             "name": "nystudio107/craft-vite",
-            "version": "4.0.0-beta.1",
+            "version": "4.0.0-beta.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-vite.git",
-                "reference": "7bd8ad8815ecb22743540243430025a66d48f3a2"
+                "reference": "4efd1b23865026e4543a4f59ef98b12605f416e0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-vite/zipball/7bd8ad8815ecb22743540243430025a66d48f3a2",
-                "reference": "7bd8ad8815ecb22743540243430025a66d48f3a2",
+                "url": "https://api.github.com/repos/nystudio107/craft-vite/zipball/4efd1b23865026e4543a4f59ef98b12605f416e0",
+                "reference": "4efd1b23865026e4543a4f59ef98b12605f416e0",
                 "shasum": ""
             },
             "require": {
@@ -2374,13 +2476,9 @@
             },
             "type": "craft-plugin",
             "extra": {
-                "name": "Vite",
+                "class": "nystudio107\\vite\\Vite",
                 "handle": "vite",
-                "developer": "nystudio107",
-                "developerUrl": "https://nystudio107.com",
-                "documentationUrl": "https://github.com/nystudio107/craft-vite/blob/master/README.md",
-                "changelogUrl": "https://raw.githubusercontent.com/nystudio107/craft-vite/master/CHANGELOG.md",
-                "class": "nystudio107\\vite\\Vite"
+                "name": "Vite"
             },
             "autoload": {
                 "psr-4": {
@@ -2406,9 +2504,9 @@
                 "vite"
             ],
             "support": {
-                "docs": "https://github.com/nystudio107/craft-vite/blob/master/README.md",
-                "issues": "https://github.com/nystudio107/craft-vite/issues",
-                "source": "https://github.com/nystudio107/craft-vite/tree/4.0.0-beta.1"
+                "docs": "https://nystudio107.com/docs/vite/",
+                "issues": "https://nystudio107.com/plugins/vite/support",
+                "source": "https://github.com/nystudio107/craft-vite"
             },
             "funding": [
                 {
@@ -2416,7 +2514,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-02-07T20:56:13+00:00"
+            "time": "2022-03-09T03:52:35+00:00"
         },
         {
             "name": "opis/closure",
@@ -3237,6 +3335,68 @@
                 }
             ],
             "time": "2022-02-11T10:27:51+00:00"
+        },
+        {
+            "name": "samdark/yii2-psr-log-target",
+            "version": "1.1.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/samdark/yii2-psr-log-target.git",
+                "reference": "ccb29ecb7140c4eb81c3dfad38f61b21a9c1ed30"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/samdark/yii2-psr-log-target/zipball/ccb29ecb7140c4eb81c3dfad38f61b21a9c1ed30",
+                "reference": "ccb29ecb7140c4eb81c3dfad38f61b21a9c1ed30",
+                "shasum": ""
+            },
+            "require": {
+                "psr/log": "~1.0.2|~1.1.0",
+                "yiisoft/yii2": "~2.0.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.4"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "samdark\\log\\": "src",
+                    "samdark\\log\\tests\\": "tests"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Alexander Makarov",
+                    "email": "sam@rmcreative.ru"
+                }
+            ],
+            "description": "Yii 2 log target which uses PSR-3 compatible logger",
+            "homepage": "https://github.com/samdark/yii2-psr-log-target",
+            "keywords": [
+                "extension",
+                "log",
+                "psr-3",
+                "yii"
+            ],
+            "support": {
+                "issues": "https://github.com/samdark/yii2-psr-log-target/issues",
+                "source": "https://github.com/samdark/yii2-psr-log-target"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/samdark",
+                    "type": "github"
+                },
+                {
+                    "url": "https://www.patreon.com/samdark",
+                    "type": "patreon"
+                }
+            ],
+            "time": "2020-07-16T12:34:01+00:00"
         },
         {
             "name": "seld/cli-prompt",
@@ -5480,16 +5640,16 @@
         },
         {
             "name": "voku/anti-xss",
-            "version": "4.1.37",
+            "version": "4.1.39",
             "source": {
                 "type": "git",
                 "url": "https://github.com/voku/anti-xss.git",
-                "reference": "728e158427a263917f33b0a29eb75d866bd18d17"
+                "reference": "64a59ba4744e6722866ff3440d93561da9e85cd0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/voku/anti-xss/zipball/728e158427a263917f33b0a29eb75d866bd18d17",
-                "reference": "728e158427a263917f33b0a29eb75d866bd18d17",
+                "url": "https://api.github.com/repos/voku/anti-xss/zipball/64a59ba4744e6722866ff3440d93561da9e85cd0",
+                "reference": "64a59ba4744e6722866ff3440d93561da9e85cd0",
                 "shasum": ""
             },
             "require": {
@@ -5535,7 +5695,7 @@
             ],
             "support": {
                 "issues": "https://github.com/voku/anti-xss/issues",
-                "source": "https://github.com/voku/anti-xss/tree/4.1.37"
+                "source": "https://github.com/voku/anti-xss/tree/4.1.39"
             },
             "funding": [
                 {
@@ -5559,20 +5719,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-02-15T01:57:51+00:00"
+            "time": "2022-03-08T17:03:58+00:00"
         },
         {
             "name": "voku/arrayy",
-            "version": "7.9.0",
+            "version": "7.9.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/voku/Arrayy.git",
-                "reference": "8c56970123b8c6d62d3583f0ba1eb6846b62d913"
+                "reference": "11509d59745af6b2c23a781938491f9981241c1d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/voku/Arrayy/zipball/8c56970123b8c6d62d3583f0ba1eb6846b62d913",
-                "reference": "8c56970123b8c6d62d3583f0ba1eb6846b62d913",
+                "url": "https://api.github.com/repos/voku/Arrayy/zipball/11509d59745af6b2c23a781938491f9981241c1d",
+                "reference": "11509d59745af6b2c23a781938491f9981241c1d",
                 "shasum": ""
             },
             "require": {
@@ -5642,7 +5802,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-02-15T10:43:00+00:00"
+            "time": "2022-03-08T19:16:33+00:00"
         },
         {
             "name": "voku/email-check",
@@ -5722,16 +5882,16 @@
         },
         {
             "name": "voku/portable-ascii",
-            "version": "2.0.0",
+            "version": "2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/voku/portable-ascii.git",
-                "reference": "9bd89e83cecdf8c37b64909454249eaed98b2c89"
+                "reference": "b56450eed252f6801410d810c8e1727224ae0743"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/voku/portable-ascii/zipball/9bd89e83cecdf8c37b64909454249eaed98b2c89",
-                "reference": "9bd89e83cecdf8c37b64909454249eaed98b2c89",
+                "url": "https://api.github.com/repos/voku/portable-ascii/zipball/b56450eed252f6801410d810c8e1727224ae0743",
+                "reference": "b56450eed252f6801410d810c8e1727224ae0743",
                 "shasum": ""
             },
             "require": {
@@ -5768,7 +5928,7 @@
             ],
             "support": {
                 "issues": "https://github.com/voku/portable-ascii/issues",
-                "source": "https://github.com/voku/portable-ascii/tree/2.0.0"
+                "source": "https://github.com/voku/portable-ascii/tree/2.0.1"
             },
             "funding": [
                 {
@@ -5792,20 +5952,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-01-24T18:59:03+00:00"
+            "time": "2022-03-08T17:03:00+00:00"
         },
         {
             "name": "voku/portable-utf8",
-            "version": "6.0.3",
+            "version": "6.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/voku/portable-utf8.git",
-                "reference": "82a714b5a4973974c1113e97b11c1044a8b8cb85"
+                "reference": "f6c78e492520115bb2d947c3a0d90a2c6b7a60a8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/voku/portable-utf8/zipball/82a714b5a4973974c1113e97b11c1044a8b8cb85",
-                "reference": "82a714b5a4973974c1113e97b11c1044a8b8cb85",
+                "url": "https://api.github.com/repos/voku/portable-utf8/zipball/f6c78e492520115bb2d947c3a0d90a2c6b7a60a8",
+                "reference": "f6c78e492520115bb2d947c3a0d90a2c6b7a60a8",
                 "shasum": ""
             },
             "require": {
@@ -5867,7 +6027,7 @@
             ],
             "support": {
                 "issues": "https://github.com/voku/portable-utf8/issues",
-                "source": "https://github.com/voku/portable-utf8/tree/6.0.3"
+                "source": "https://github.com/voku/portable-utf8/tree/6.0.4"
             },
             "funding": [
                 {
@@ -5891,7 +6051,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-01-30T05:20:24+00:00"
+            "time": "2022-03-08T17:04:59+00:00"
         },
         {
             "name": "voku/stop-words",
