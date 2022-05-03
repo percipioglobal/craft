@@ -33,7 +33,7 @@
 %}
 
 {%- block htmlTag -%}
-    <html class="fonts-loaded" lang="{{ craft.app.language |slice(0,2) }}" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+    <html lang="{{ craft.app.language |slice(0,2) }}" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
 {%- endblock htmlTag -%}
 
 {# -- Page content that should be included in the <head> -- #}
@@ -69,7 +69,7 @@
     {# -- Page content that should be included in the <body> -- #}
     {%- block bodyHtml -%}
     {%- endblock bodyHtml -%}
-    
+
     {# -- Inline JS #}
     {%- include "_boilerplate/_partials/body-js.twig" -%}
 

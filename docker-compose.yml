@@ -27,10 +27,8 @@ services:
     expose:
       - "9000"
     init: true
-    tty: true
     volumes: &php-volumes
       # Change the path below to map to your local plugin repositories
-      - /Users/michtio/dev/craft-plugins:/Users/michtio/dev/craft-plugins
       - cpresources:/var/www/project/cms/web/cpresources:delegated
       - storage:/var/www/project/cms/storage:delegated
       - ./cms:/var/www/project/cms:cached
@@ -41,7 +39,7 @@ services:
       - ./cms/vendor:/var/www/project/cms/vendor:delegated
       - ./cms/storage/rebrand:/var/www/project/cms/storage/rebrand:delegated
   # php - run php-fpm with xdebug
-  php_xdebug: 
+  php_xdebug:
     build:
       context: ./docker-config/php-dev-craft
       dockerfile: ./Dockerfile
@@ -49,10 +47,9 @@ services:
       - "php"
     env_file:
       *env
-    expose: 
+    expose:
       - "9000"
     init: true
-    tty: true
     volumes:
       *php-volumes
   # queue - runs queue jobs via php craft queue/listen
@@ -78,15 +75,15 @@ services:
       *env
     environment:
       MYSQL_ROOT_PASSWORD: secret
-      MYSQL_DATABASE: project
+      MYSQL_DATABASES: project
       MYSQL_USER: project
       MYSQL_PASSWORD: project
     init: true
     ports:
-      - "3311:3306"
+      - "8001:3306"
     volumes:
-      - db-data:/var/lib/mysql
-      - ./db-seed/:/docker-entrypoint-initdb.d
+      - mysql-db-data:/var/lib/mysql
+      - ./db-seed/mysql:/docker-entrypoint-initdb.d
   # redis - key/value database for caching & php sessions
   redis:
     build:
@@ -95,7 +92,6 @@ services:
     expose:
       - "6379"
     init: true
-    tty: true
   # vite - frontend build system
   vite:
     build:
@@ -104,9 +100,8 @@ services:
     env_file:
       *env
     init: true
-    tty: true
     ports:
-      - "3000:3000"
+      - "8002:8002"
     volumes:
       - ./buildchain:/var/www/project/buildchain:cached
       - ./buildchain/node_modules:/var/www/project/buildchain/node_modules:delegated
@@ -115,6 +110,6 @@ services:
       - ./cms/templates:/var/www/project/cms/templates:cached
 
 volumes:
-  db-data:
+  mysql-db-data:
   cpresources:
   storage:
