@@ -1,6 +1,10 @@
 import vue from '@vitejs/plugin-vue'
 import legacy from '@vitejs/plugin-legacy'
 import ViteRestart from 'vite-plugin-restart'
+import viteCompression from 'vite-plugin-compression';
+import manifestSRI from 'vite-plugin-manifest-sri';
+import {visualizer} from 'rollup-plugin-visualizer';
+import eslintPlugin from 'vite-plugin-eslint';
 import { nodeResolve } from '@rollup/plugin-node-resolve'
 import critical from 'rollup-plugin-critical'
 import { ViteFaviconsPlugin } from "vite-plugin-favicon2"
@@ -14,24 +18,23 @@ export default ({ command }) => ({
         manifest: true,
         outDir: '../cms/web/dist',
         rollupOptions: {
-        input: {
-            app: './src/js/app.ts',
-            'lazysizes-wrapper': './src/js/utils/lazysizes-wrapper.ts',
-        },
-        output: {
-            sourcemap: true
-        },
+            input: {
+                app: './src/js/app.ts',
+                'lazysizes-wrapper': './src/js/utils/lazysizes-wrapper.ts',
+            },
+            output: {
+                sourcemap: true
+            },
         }
     },
     plugins: [
         critical({
-            criticalUrl: 'https://percipio.london',
+            criticalUrl: 'https://example.com',
             criticalBase: '../cms/web/dist/criticalcss/',
             criticalPages: [
-                { uri: '/', template: 'index' },
+                {uri: '/', template: 'index'},
             ],
-            criticalConfig: {
-            }
+            criticalConfig: {}
         }),
         legacy({
             targets: ['defaults', 'not IE 11']
@@ -52,11 +55,25 @@ export default ({ command }) => ({
             ],
         }),
         vue(),
+        viteCompression({
+            filter: /\.(js|mjs|json|css|map)$/i
+        }),
+        manifestSRI(),
+        visualizer({
+            filename: '../src/web/dist/assets/stats.html',
+            template: 'treemap',
+            sourcemap: true,
+        }),
+        eslintPlugin({
+            cache: false,
+        }),
     ],
     publicDir: './src/public',
     resolve: {
         alias: {
-            '@': path.resolve(__dirname, './src')
+            '@': path.resolve(__dirname, './src'),
+            '~': path.resolve(__dirname, './src'),
+            // vue: 'vue/dist/vue.esm-bundler.js',
         },
         preserveSymlinks: true,
     },
@@ -65,8 +82,8 @@ export default ({ command }) => ({
             strict: false
         },
         host: '0.0.0.0',
-        origin: 'http://localhost:3000/',
-        port: 3000,
+        origin: 'http://localhost:8002/',
+        port: 8002,
         strictPort: true,
     }
 });

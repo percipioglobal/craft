@@ -1,7 +1,7 @@
 {
     "name": "percipioglobal/craft",
     "description": "Percipio's Craft CMS scaffolding for projects",
-    "version": "1.5.0",
+    "version": "4.0.0",
     "keywords": [
         "craft",
         "cms",
@@ -17,11 +17,14 @@
         "source": "https://github.com/percipioglobal/craft",
         "docs": "https://github.com/percipioglobal/craft"
     },
-    "minimum-stability": "alpha",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "require": {
-        "craftcms/cms": "^4.0.0-alpha.1",
+        "craftcms/cms": "^4.0.0-beta.1",
         "craftcms/redactor": "^3.0.0-beta.1",
         "nystudio107/craft-vite": "^4.0.0-beta.1",
+        "php": "^8.0.2",
+        "vlucas/phpdotenv": "^5.4.1",
         "yiisoft/yii2-redis": "^2.0.6"
     },
     "require-dev": {

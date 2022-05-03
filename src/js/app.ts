@@ -1,24 +1,25 @@
-import App from '@/vue/App.vue'
-import { createApp } from 'vue'
-import { store } from './stores/store.js'
+import App from '~/vue/App.vue'
+import { createApp, h } from 'vue'
+import { createPinia } from 'pinia'
 
-// Import our CSS
-import '@/css/app.pcss';
+import '@/css/app.pcss'
 
-// App main
 const main = async () => {
+    const app = createApp({
+        render: () => h(App)
+    })
+    app.use(createPinia())
 
-    const app = createApp(App)
-
-    // Mount Vuex
-    app.use(store)
-
-    // Mount the app
-    const root = app.mount('#page-container')
-
-    return root
+    return app.mount('#page-container')
 }
 
-// Execute async function
-main().then((root) => {
-});
+main().then(() => {
+    console.log()
+})
+
+// Accept HMR as per: https://vitejs.dev/guide/api-hmr.html
+if (import.meta.hot) {
+    import.meta.hot.accept(() => {
+        console.log("HMR")
+    });
+}

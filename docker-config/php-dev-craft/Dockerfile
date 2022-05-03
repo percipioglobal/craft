@@ -34,7 +34,6 @@ RUN set -eux; \
     # Install PHP extensions
     docker-php-ext-install \
         pdo_mysql \
-        soap \
     && \
     # Install Composer
     curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin/ --filename=composer \
@@ -55,7 +54,5 @@ RUN mkdir -p /var/www/project/cms/storage \
 
 WORKDIR /var/www/project/cms
 
-# Force permissions, update Craft, and start php-fpm
-CMD chown -R www-data:www-data /var/www/project \
-    && \
-    php-fpm
+# Start php-fpm
+CMD php-fpm

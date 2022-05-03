@@ -1,8 +1,0 @@
-baseUrl: $SITE_URL
-handle: default
-hasUrls: true
-language: en-GB
-name: 'Percipio London'
-primary: true
-siteGroup: ea8755ae-7c67-465e-bf87-954308338c7d
-sortOrder: 1
