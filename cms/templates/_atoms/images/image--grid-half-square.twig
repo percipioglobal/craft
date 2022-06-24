@@ -1,0 +1,55 @@
+{%- extends '_atoms/images/_image--props' -%}
+
+{#
+    ### PROPERTIES ###
+    ------------------
+
+    INHERITED FROM: `_atoms/images/image--props.twig`
+
+    EXTENDED
+    --------
+
+    ratio: (STR) -- Give the aspect ratio in the correct format eg. aspect-4/3 / aspect-16/9 ( optional )
+    optimized: (OBJ) -- The image optimizations for the image
+    placeholder: (OBJ) -- Add the placeholder image to the atom
+#}
+
+{%- block image -%}
+    {%- set props = props|merge({
+        optimized: options.image.optimizeGrid50Square ??? null,
+        placeholder: options.placeholders.gridPlaceholder.first.optimizeGrid50Square,
+    }) -%}
+
+    {%- minify -%}
+
+        <figure class="block h-full w-full" role="figure" aria-labelledby="{{- props.alt ~ '-' ~ props.image.id ??? props.placeholder.id -}}">
+
+            <picture>
+
+                <source
+                    data-srcset="{{- props.optimized.srcsetWebP() ??? props.placeholder.srcsetWebP() -}}"
+                    sizes="{%- for size in props.sizes -%}{{- not loop.last ? size ~ ',' : size -}}{%- endfor -%}"
+                    type="image/webp"
+                />
+
+                <source
+                    data-srcset="{{- props.optimized.srcset() ??? props.placeholder.srcset() -}}"
+                    sizes="{%- for size in props.sizes -%}{{- not loop.last ? size ~ ',' : size -}}{%- endfor -%}"
+                />
+
+                <img
+                    src="{{- props.optimized.placeholderImage() ??? props.placeholder.placeholderImage() -}}"
+                    data-src="{{- props.optimized.src() ??? props.placeholder.src() -}}"
+                    data-srcset="{{- props.optimized.srcset() ??? props.placeholder.srcset() -}}"
+                    sizes="{%- for size in props.sizes -%}{{- not loop.last ? size ~ ',' : size -}}{%- endfor -%}"
+                    class="lazyload aspect-16/9 md:aspect-auto object-cover w-full h-full object-center {{ props.utilities -}}"
+                    loading="lazy"
+                    alt="{{- props.alt -}}"
+                />
+
+            </picture>
+
+        </figure>
+
+    {%- endminify -%}
+{%- endblock -%}

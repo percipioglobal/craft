@@ -1,0 +1,93 @@
+field: e691301b-7484-40be-a3d4-c3bc590de959 # Content Builder
+fieldLayouts:
+  8bc4a467-312b-471c-b5d4-4c43fd30d7a5:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: bcca818c-5cb3-4998-8165-95f5c9929f23 # Standfirst
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e0d9eb5a-9368-42c5-a0ca-741cabf76b46
+            warning: null
+            width: 100
+          -
+            fieldUid: 9ecea484-fe9d-4944-8519-dee7181de25c # Alignment
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b74f8f50-d238-4afa-9d47-2dc01748546a
+            warning: null
+            width: 100
+        name: Content
+        uid: 7b2c88a7-3d29-44b8-ba35-3539654ae3e3
+fields:
+  9ecea484-fe9d-4944-8519-dee7181de25c: # Alignment
+    columnSuffix: fqltiypo
+    contentColumnType: string
+    fieldGroup: null
+    handle: alignment
+    instructions: null
+    name: Alignment
+    searchable: false
+    settings:
+      default: ''
+      options:
+        __assoc__:
+          -
+            - left
+            - '1'
+          -
+            - center
+            - '1'
+          -
+            - right
+            - ''
+          -
+            - full
+            - ''
+          -
+            - drop-left
+            - ''
+          -
+            - drop-right
+            - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: rias\positionfieldtype\fields\Position
+  bcca818c-5cb3-4998-8165-95f5c9929f23: # Standfirst
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: standfirst
+    instructions: 'This text is being used as intro of an article. This will be most of the time underneath a Section Header title and above content (like Article Body or and Image)'
+    name: Standfirst
+    searchable: false
+    settings:
+      availableTransforms: '*'
+      availableVolumes: ''
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: null
+      purifyHtml: true
+      redactorConfig: Standfirst.json
+      removeEmptyTags: true
+      removeInlineStyles: true
+      removeNbsp: true
+      showHtmlButtonForNonAdmins: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+handle: standfirst
+name: Standfirst
+sortOrder: 2

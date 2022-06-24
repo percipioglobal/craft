@@ -1,17 +1,18 @@
+import {defineConfig} from 'vite'
 import vue from '@vitejs/plugin-vue'
 import legacy from '@vitejs/plugin-legacy'
 import ViteRestart from 'vite-plugin-restart'
-import viteCompression from 'vite-plugin-compression';
-import manifestSRI from 'vite-plugin-manifest-sri';
-import {visualizer} from 'rollup-plugin-visualizer';
-import eslintPlugin from 'vite-plugin-eslint';
-import { nodeResolve } from '@rollup/plugin-node-resolve'
+import viteCompression from 'vite-plugin-compression'
+import manifestSRI from 'vite-plugin-manifest-sri'
+import {visualizer} from 'rollup-plugin-visualizer'
+import eslintPlugin from 'vite-plugin-eslint'
+import {nodeResolve} from '@rollup/plugin-node-resolve'
 import critical from 'rollup-plugin-critical'
-import { ViteFaviconsPlugin } from "vite-plugin-favicon2"
-import path from 'path'
+import {ViteFaviconsPlugin} from 'vite-plugin-favicon2'
+import * as path from 'path';
 
 // https://vitejs.dev/config/
-export default ({ command }) => ({
+export default defineConfig(({command}) => ({
     base: command === 'serve' ? '' : '/dist/',
     build: {
         emptyOutDir: true,
@@ -29,7 +30,7 @@ export default ({ command }) => ({
     },
     plugins: [
         critical({
-            criticalUrl: 'https://example.com',
+            criticalUrl: 'https://percipio.london',
             criticalBase: '../cms/web/dist/criticalcss/',
             criticalPages: [
                 {uri: '/', template: 'index'},
@@ -45,7 +46,7 @@ export default ({ command }) => ({
             ],
         }),
         ViteFaviconsPlugin({
-            logo: "./src/img/favicon-src.png",
+            logo: './src/img/favicon-src.png',
             inject: false,
             outputPath: 'favicons',
         }),
@@ -72,8 +73,7 @@ export default ({ command }) => ({
     resolve: {
         alias: {
             '@': path.resolve(__dirname, './src'),
-            '~': path.resolve(__dirname, './src'),
-            // vue: 'vue/dist/vue.esm-bundler.js',
+            vue: 'vue/dist/vue.esm-bundler.js',
         },
         preserveSymlinks: true,
     },
@@ -82,8 +82,8 @@ export default ({ command }) => ({
             strict: false
         },
         host: '0.0.0.0',
-        origin: 'http://localhost:8002/',
+        origin: 'http://localhost:8002',
         port: 8002,
         strictPort: true,
     }
-});
+}));

@@ -1,0 +1,1128 @@
+dateModified: 1655490527
+elementSources:
+  craft\elements\Entry:
+    -
+      key: '*'
+      type: native
+    -
+      key: singles
+      type: native
+    -
+      heading: Structures
+      type: heading
+    -
+      key: 'section:ef841ba4-7bcd-4ef5-9c12-96377bf7fba2' # Pages
+      tableAttributes:
+        - type
+        - 'field:ea5a623d-3c94-4cee-a74c-6159235f684e'
+        - revisionCreator
+        - dateUpdated
+        - link
+      type: native
+    -
+      disabled: false
+      key: 'section:92164c9b-e1af-4a4e-b639-44a2b5d79bd3' # Navigation
+      tableAttributes:
+        - uri
+        - 'field:b884a1be-f354-4202-8335-78016b5d035a' # Show link as button
+      type: native
+    -
+      heading: Channels
+      type: heading
+    -
+      disabled: false
+      key: 'section:a43f63a3-f09b-404a-8002-846873fd6fe6' # Plugins
+      tableAttributes:
+        - postDate
+        - expiryDate
+        - author
+        - link
+      type: native
+    -
+      key: 'section:9de367ab-77b8-47bb-bbc3-63e79a202c3e' # Blog
+      tableAttributes:
+        - slug
+        - 'field:8ce2faf2-a20a-4547-8145-4e3f9e75eb87' # Blog Categories
+        - 'field:ea5a623d-3c94-4cee-a74c-6159235f684e'
+        - author
+        - postDate
+        - link
+      type: native
+    -
+      key: 'section:dbc716a7-2122-4b92-b942-471970256a35' # Clients
+      tableAttributes:
+        - postDate
+        - expiryDate
+        - author
+        - link
+      type: native
+    -
+      key: 'section:1ae55366-a3a6-4ed1-bf34-12ead8ae6c21' # Our Services
+      type: native
+    -
+      key: 'section:f4a50ead-30b3-4d86-bdd1-9d5c295fb9fd' # Our Work
+      tableAttributes:
+        - 'field:10a7e511-e02a-46ff-8524-7390d3e9be19' # Client
+        - 'field:ea5a623d-3c94-4cee-a74c-6159235f684e'
+        - dateUpdated
+        - revisionCreator
+        - postDate
+        - link
+      type: native
+    -
+      key: 'section:e80a7183-56ec-49d8-81a8-405444fc3077' # The Team
+      tableAttributes:
+        - slug
+        - postDate
+        - 'field:ea5a623d-3c94-4cee-a74c-6159235f684e'
+        - link
+        - 'field:cbbbac66-4ad4-4edc-b9fe-ef597989736f'
+      type: native
+    -
+      key: 'section:1962717b-7da2-4f6f-be49-ee640b8ddfe2' # Vacancies
+      type: native
+    -
+      heading: Misc
+      type: heading
+    -
+      key: 'section:a72bfe0c-3389-4f9f-8ec1-ab318ec10b29' # Errors
+      type: native
+    -
+      heading: ''
+      type: heading
+email:
+  fromEmail: $SYSTEM_EMAIL
+  fromName: $SENDER_NAME
+  replyToEmail: $REPLY_TO
+  transportType: craft\mail\transportadapters\Sendmail
+fs:
+  articles:
+    hasUrls: true
+    name: Articles
+    settings:
+      addSubfolderToRootUrl: true
+      autoFocalPoint: false
+      bucket: $S3_BUCKET
+      bucketSelectionMode: manual
+      cfDistributionId: $CLOUDFRONT_DISTRIBUTION_ID
+      cfPrefix: ''
+      expires: '1 years'
+      keyId: $S3_KEY_ID
+      makeUploadsPublic: true
+      region: $S3_REGION
+      secret: $S3_SECRET
+      storageClass: ''
+      subfolder: articles
+    type: craft\awss3\Fs
+    url: $CLOUDFRONT_URL
+  cards:
+    hasUrls: true
+    name: Cards
+    settings:
+      addSubfolderToRootUrl: true
+      autoFocalPoint: false
+      bucket: $S3_BUCKET
+      bucketSelectionMode: manual
+      cfDistributionId: $CLOUDFRONT_DISTRIBUTION_ID
+      cfPrefix: ''
+      expires: '1 years'
+      keyId: $S3_KEY_ID
+      makeUploadsPublic: false
+      region: $S3_REGION
+      secret: $S3_SECRET
+      storageClass: ''
+      subfolder: cards
+    type: craft\awss3\Fs
+    url: $CLOUDFRONT_URL
+  ctas:
+    hasUrls: true
+    name: CTAs
+    settings:
+      addSubfolderToRootUrl: true
+      autoFocalPoint: false
+      bucket: $S3_BUCKET
+      bucketSelectionMode: manual
+      cfDistributionId: $CLOUDFRONT_DISTRIBUTION_ID
+      cfPrefix: ''
+      expires: '1 years'
+      keyId: $S3_KEY_ID
+      makeUploadsPublic: true
+      region: $S3_REGION
+      secret: $S3_SECRET
+      storageClass: ''
+      subfolder: ctas
+    type: craft\awss3\Fs
+    url: $CLOUDFRONT_URL
+  gallery:
+    hasUrls: true
+    name: Gallery
+    settings:
+      addSubfolderToRootUrl: true
+      autoFocalPoint: false
+      bucket: $S3_BUCKET
+      bucketSelectionMode: manual
+      cfDistributionId: $CLOUDFRONT_DISTRIBUTION_ID
+      cfPrefix: ''
+      expires: '1 years'
+      keyId: $S3_KEY_ID
+      makeUploadsPublic: true
+      region: $S3_REGION
+      secret: $S3_SECRET
+      storageClass: ''
+      subfolder: gallery
+    type: craft\awss3\Fs
+    url: $CLOUDFRONT_URL
+  grids:
+    hasUrls: true
+    name: Grids
+    settings:
+      addSubfolderToRootUrl: true
+      autoFocalPoint: false
+      bucket: $S3_BUCKET
+      bucketSelectionMode: manual
+      cfDistributionId: $CLOUDFRONT_DISTRIBUTION_ID
+      cfPrefix: ''
+      expires: '1 years'
+      keyId: $S3_KEY_ID
+      makeUploadsPublic: true
+      region: $S3_REGION
+      secret: $S3_SECRET
+      storageClass: ''
+      subfolder: grid50
+    type: craft\awss3\Fs
+    url: $CLOUDFRONT_URL
+  icons:
+    hasUrls: true
+    name: Icons
+    settings:
+      addSubfolderToRootUrl: true
+      autoFocalPoint: false
+      bucket: $S3_BUCKET
+      bucketSelectionMode: manual
+      cfDistributionId: $CLOUDFRONT_DISTRIBUTION_ID
+      cfPrefix: ''
+      expires: '1 years'
+      keyId: $S3_KEY_ID
+      makeUploadsPublic: true
+      region: $S3_REGION
+      secret: $S3_SECRET
+      storageClass: ''
+      subfolder: icons
+    type: craft\awss3\Fs
+    url: $CLOUDFRONT_URL
+  media:
+    hasUrls: true
+    name: Media
+    settings:
+      addSubfolderToRootUrl: true
+      autoFocalPoint: false
+      bucket: $S3_BUCKET
+      bucketSelectionMode: manual
+      cfDistributionId: $CLOUDFRONT_DISTRIBUTION_ID
+      cfPrefix: ''
+      expires: '1 years'
+      keyId: $S3_KEY_ID
+      makeUploadsPublic: true
+      region: $S3_REGION
+      secret: $S3_SECRET
+      storageClass: ''
+      subfolder: media
+    type: craft\awss3\Fs
+    url: $CLOUDFRONT_URL
+  og:
+    hasUrls: true
+    name: 'OG Images'
+    settings:
+      addSubfolderToRootUrl: true
+      autoFocalPoint: false
+      bucket: $S3_BUCKET
+      bucketSelectionMode: manual
+      cfDistributionId: $CLOUDFRONT_DISTRIBUTION_ID
+      cfPrefix: ''
+      expires: '1 years'
+      keyId: $S3_KEY_ID
+      makeUploadsPublic: true
+      region: $S3_REGION
+      secret: $S3_SECRET
+      storageClass: ''
+      subfolder: og-images
+    type: craft\awss3\Fs
+    url: $CLOUDFRONT_URL
+meta:
+  __names__:
+    0c7a7b67-3926-4a9f-b449-8d1d1c451f2f: Width # Width
+    0d208796-7b7c-4677-bab0-0c107ff1c99b: Button # Button
+    0f7ba706-766a-4187-950b-1e24b7b30eeb: 'Grid 50% Square Optimisations' # Grid 50% Square Optimisations
+    0fb24d65-ce08-439c-b873-e060e2797035: 'Hero Secondary' # Hero Secondary
+    1a84863b-861a-4293-b8ca-c88d90b87ae8: 'Card Placeholder' # Card Placeholder
+    1ae55366-a3a6-4ed1-bf34-12ead8ae6c21: 'Our Services' # Our Services
+    01b78fde-8a32-4ecc-b1b0-abf0661898ce: Skills # Skills
+    1b99a854-98db-4e61-b98d-3c4e357b1e85: Containerise # Containerise
+    1c70a707-ac77-4b59-b166-37219108f31b: Background # Background
+    01c92414-d375-423e-8183-4682ff91cbe4: Price # Price
+    1caabc75-eb3c-43a5-bffd-5b3289015e5c: Heading # Heading
+    1cc6350b-c0ba-4f7f-8034-dbcec8643016: Filename # Filename
+    1cd525bc-8beb-4ba2-9452-2e02803421ef: 'Video Placeholder' # Video Placeholder
+    1d22d2ae-5175-4154-b830-51c806bfbf5b: 'Article Body' # Article Body
+    1dd95078-7c8a-4ef7-8a16-e33a5341dadb: 'Image Optimisations ' # Image Optimisations 
+    1e5edb55-fbe5-44a5-8fd2-8f668886557e: 'Background Color' # Background Color
+    1eb19599-751e-4136-ac0f-385321fd1f98: Heading # Heading
+    1ec524ae-9191-455b-b284-ff820468b3e4: Background # Background
+    1ecbeef5-820f-4123-a8db-30daae3cd4f7: Images # Images
+    1f276b15-e846-4aaa-a997-41ecafa68adc: Icons # Icons
+    2a8995d5-6e36-4d6b-8992-419951e154b0: Description # Description
+    2b415d29-2051-4baf-988f-da71364afc60: Description # Description
+    2b6794f2-86c4-486e-ad7e-a162752af5ef: 'Grid 50% Optimisations' # Grid 50% Optimisations
+    2bcee070-9832-4e9a-a3d1-51566028022e: 'OG Image' # OG Image
+    2c70613c-0c00-4d9a-96bf-658a6db58d9c: Logo # Logo
+    2c244265-381c-45ad-b439-7845b814e5ee: Resources # Resources
+    2cb6fb1e-761a-4096-ba9d-e151495efc98: Caption # Caption
+    2d711019-2880-4c21-8217-ff88e953e2bb: Blog # Blog
+    2dd56883-3aaa-4d1b-85a9-a62fd192ff43: 'Highlight Cards' # Highlight Cards
+    3a030d4d-66bf-4bff-af6b-a3366b617b7e: 'Image Gallery' # Image Gallery
+    3a3a038a-b887-45f4-8850-96f3b78060f2: Width # Width
+    3ef3485e-6187-4dac-af6b-66d630852b61: Quote # Quote
+    3f37c536-3682-4856-a6af-a9f582d4c782: Style # Style
+    3fc84cf5-6e3d-46e8-bf13-9a1d4e198438: Caption # Caption
+    4a86f07d-200e-4dbc-a06a-223d9cc5c049: Images # Images
+    4be4bd14-ce94-450b-a4f4-e10721ba5b22: Containerise # Containerise
+    4d23d076-4a7c-4ad8-969e-ca980aef3815: 'Social Media Type' # Social Media Type
+    4dfa8799-f095-4bd8-a821-1fb376db0278: Grids # Grids
+    4ee5d848-5fee-407d-a3aa-7475ef0fe6bc: Width # Width
+    4f6c2efe-5cf4-46b5-82e5-79a8796af5c5: Content # Content
+    5a47b114-f61e-4fa9-abf3-015b22306186: 'Legal Group' # Legal Group
+    5ba9dee9-1843-4b4f-b62c-6f3c7de2e04c: Quote # Quote
+    5da841b1-ca0d-46ff-8bb1-04d6c889ac54: Percipio # Percipio
+    05e07097-2450-4ce9-9bf6-a198b2c1470a: Containerise # Containerise
+    6a3feb81-50ce-467a-8aca-b5d4cc12aed0: Description # Description
+    6aa0f4e6-667e-42b9-b9ad-1b3be7de0f68: Subtitle # Subtitle
+    6ba3a39a-5d6c-488d-bcab-d047d0942b0e: Swatch # Swatch
+    6c7ac939-e852-4b9b-8598-65aa98581027: Content # Content
+    6c47b7b0-71d0-4acb-92d5-6d8624f711fb: Cards # Cards
+    6ce968c0-0bf9-4ff9-92ed-cd3e942cf8e4: 'Legal Navigation' # Legal Navigation
+    6d157457-cb17-4d30-b2cd-ade98a8fdcf0: 'Privacy Links' # Privacy Links
+    6f97421f-a077-4f86-ac71-61c6f9cd5bef: 'Quote Source' # Quote Source
+    6fcc732b-3375-496d-92b8-64f3dcc00d00: Overline # Overline
+    07a123c0-4e8e-4c19-a79e-61829f5d88c0: Builders # Builders
+    7ae58b62-c0ab-49a5-b8da-252b1eb96383: Button # Button
+    7b7f1a25-dd1f-40c1-8c62-7af0091d883f: Width # Width
+    7bc51fb0-9ad3-4518-bd25-e12e3d2d0acf: Button # Button
+    7c663d4b-8df0-42ba-af70-699dc9d51210: 'OG optimisations' # OG optimisations
+    7d2faad5-6db7-456e-bf6d-53461216d40e: 'Content CTA' # Content CTA
+    7e7008d5-deb5-4018-9fb7-52f6b2603f34: Cards # Cards
+    8a8aa24a-d558-4d4c-83a5-e5983ab32e77: Items # Items
+    8aa79663-4f9b-4c0e-8f3c-6fd1ff521de6: 'Hero Primary' # Hero Primary
+    8c5e09a3-fcbe-484a-95c1-97e362a260e8: 'Services Overview' # Services Overview
+    8c9be2b5-73bf-4f32-8fd2-fc36a109dbab: 'Default Optimisations' # Default Optimisations
+    8ce2faf2-a20a-4547-8145-4e3f9e75eb87: 'Blog Categories' # Blog Categories
+    8f7046bb-5261-4213-9d49-b1244e5d458e: 'Grid Placeholder' # Grid Placeholder
+    9a6ec17a-0ce8-43a1-8526-80f2db164c2d: 'Grid Items' # Grid Items
+    9bca25cb-2cf2-4427-baf8-44e347cc8a7a: Button # Button
+    9c4ff5ca-6227-465d-a4a9-5a584eba02b4: 'Body Content' # Body Content
+    9de367ab-77b8-47bb-bbc3-63e79a202c3e: Blog # Blog
+    9ecea484-fe9d-4944-8519-dee7181de25c: Alignment # Alignment
+    10a7e511-e02a-46ff-8524-7390d3e9be19: Client # Client
+    11cd00ae-7392-488f-b7d5-f0116379c7ed: Employees # Employees
+    13d83534-d33c-4c02-8e9a-8214c5419071: 'Landing Page' # Landing Page
+    014b68dd-cb2e-4a34-a2b4-91eba4de1e16: Code # Code
+    020d5ff3-f24f-48ae-bd4c-ad2beb6b4d8b: Heading # Heading
+    24fd51e7-3c4a-4991-89c1-290d5c79408c: 'Logo Position' # Logo Position
+    28eeceba-0a90-4920-85a2-1bc8eb49f094: 'Grid Content Image - 50% background' # Grid Content Image - 50% background
+    29d259da-2846-455c-b5ab-ed43e74ae7fa: 'Text Size' # Text Size
+    31c5270d-1393-4081-ac23-419af7b7b991: Button # Button
+    32d5ec8b-e9ee-4409-ba69-616e0502bf3a: Overline # Overline
+    33e627f0-fb3c-4547-869f-d56442d83ea7: 'Team Member' # Team Member
+    37b4ca60-ef63-4bbb-a7ab-de771a39a327: Buttons # Buttons
+    40e441b8-aeac-4f02-878a-60457e5699a8: Position # Position
+    040f68f0-b32f-4544-8b97-56d71c7f3428: Ratio # Ratio
+    45bf720f-d88e-428a-919d-5b748c8571d6: 'Our Services' # Our Services
+    46d6543c-b83e-4b73-be6e-edcfb691204e: 'Grid Items' # Grid Items
+    46faf86d-bfa5-4356-bef1-0af3b2a87332: 'Secondary Navigation' # Secondary Navigation
+    47c98ad7-c9a9-402c-9171-9fd14eb7e8f4: 'Highlight Cards' # Highlight Cards
+    48f153ba-ba26-42dd-b297-c5b428cc259b: Image # Image
+    49d732ef-0bfc-46c0-ba09-004de008c0ba: Ratio # Ratio
+    49fc2634-bf3b-4e3e-a1bc-9eeb199fac80: 'Social Media URL' # Social Media URL
+    50e67c67-8b9c-48a2-9cb1-2c3e91f38d29: Buttons # Buttons
+    54daa4d7-b5cf-4458-9e19-67155be19343: 'Organisation Phone' # Organisation Phone
+    54e60257-f31a-44aa-960e-bbd364197e28: Homepage # Homepage
+    55ac783b-adeb-42fc-98f5-0adf13a8419d: Width # Width
+    056eaad6-b9f8-4337-b984-8bfbbabccb62: Overline # Overline
+    57f60bd3-c5a9-461b-ae37-5a637231ab58: Settings # Settings
+    58be0817-ea24-401b-98eb-4a60d7e7e34b: 'Content Page' # Content Page
+    58eccc39-1c9e-45ac-bae8-465deff69786: Team # Team
+    70d3e848-905a-4246-a20b-02c24af51402: 'Organisation Address Postal Code ' # Organisation Address Postal Code 
+    73ee03a9-c989-4d98-bd96-db9bc9cb2a5c: Caption # Caption
+    74c703ba-fb2c-421f-9b09-2bd3762770de: 'Footer Navigation' # Footer Navigation
+    74d5a128-4fbc-4ea8-a7d7-c828e87680ff: 'Organisation Address Region' # Organisation Address Region
+    74ec495a-3fc7-4175-8f94-3ee08302407a: Articles # Articles
+    74f6b1ab-d7f2-4df1-89fe-1601cf0697a0: Navigation # Navigation
+    75b9f683-7e77-4bae-8d79-335f32bcd3cf: Projects # Projects
+    80a6157c-e287-49ae-a937-228b86f1ffa2: Buttons # Buttons
+    082e47d2-643f-411e-a751-0d9f915db739: Swatch # Swatch
+    83cafeab-7189-4e6a-8d08-62f9e35de063: Content # Content
+    85f7ea92-40ac-44bf-b3fe-20f8075fe802: Image # Image
+    86f3d931-a648-4eb5-90b9-83a61fde3fdf: 'Site Admins' # Site Admins
+    88bcc4ff-c9d0-4c32-9891-2d01044026a6: FAQ # FAQ
+    91df968c-fe4d-4f3b-b3db-0abde5d64dfb: Footer # Footer
+    94b4d5ac-d7ea-4241-a6cb-92b39f482f99: Common # Common
+    96da5623-ecd5-4a22-9321-97d95dacdd26: 'Small Cards Optimisation' # Small Cards Optimisation
+    107c46d5-29f5-404d-95b7-0d92ca6eb688: Content # Content
+    151de730-f956-437c-a617-de5725e4c07a: Projects # Projects
+    173ee72f-225f-4615-a999-193b8c9c051a: 'Section Header' # Section Header
+    209a0bce-f412-4727-873b-681c4f93c4f7: Video # Video
+    210a0701-869d-41da-a862-26f5e894743c: 'Projects Overview' # Projects Overview
+    211c30fd-38d1-4538-a639-0fa6572f5273: Image # Image
+    235f6bca-1696-4cae-b788-151de8ea53bf: Image # Image
+    247bfb7d-d077-42ee-b2ba-84feb1b3fd19: Content # Content
+    284e17ab-cd25-417d-8951-fd69b7169e3d: 'Hero Image' # Hero Image
+    302a5592-8085-472e-9356-ab6b1eaf1635: Position # Position
+    0314e405-e731-462f-9381-2cfb6ac91134: Images # Images
+    0345c44d-88e4-4280-842b-158ec0307b5a: Background # Background
+    345c4093-df0a-45dd-9d5f-47fb3fac8c7d: Heading # Heading
+    346cce90-1d6e-4c2d-82c0-c91b571c741c: 'Section Header' # Section Header
+    385a49df-e957-49d6-b921-68d76f6f9e57: 'Grid Content' # Grid Content
+    00498acf-c1c2-4c00-83f2-39a7255870f8: Vacancies # Vacancies
+    0536c060-0d97-421e-8c73-3ad5baec52d2: Skills # Skills
+    557aea75-e34b-4fff-83c6-c67a95ce8bec: 'Large Cards Optimisation' # Large Cards Optimisation
+    562bd8b6-c7c7-4de6-9a1b-910238a74390: Plugin # Plugin
+    633b1b96-cdb8-4c97-a045-aa63d306b41c: Language # Language
+    643cffa6-e745-4f11-a03c-e83dbba19d24: Swatch # Swatch
+    677c9cfd-68a9-4ee2-a78e-1835df918bb4: 'Team Overview' # Team Overview
+    712cce4e-490d-44b8-bf2c-5d00c2de4c40: Assets # Assets
+    714aef78-b2cb-46ab-82b4-e1cbf362b65c: Target # Target
+    720b0445-dc28-4b47-85df-59e4f03c666b: Button # Button
+    768b3119-7033-4796-be27-562fecd1e4c7: 'Vacancies Overview' # Vacancies Overview
+    914b27f9-4dac-42d5-bb42-0e41ba29f93a: 'Contact Page' # Contact Page
+    1161e40e-4abd-42f6-ab07-1f1254de17b4: OG # OG
+    1572f461-2a67-47a4-a36c-80839168bcb7: Globals # Globals
+    1750a33c-c911-45de-9392-80a3004cbe0d: Description # Description
+    1755ebbe-91fc-4a2a-80cb-667cc2cf1795: Locations # Locations
+    1840d0e9-f862-4f32-b963-dd796b3b437e: 'Public Schema' # Public Schema
+    4103b2f0-dd71-494b-919a-621d2a5e959e: Heading # Heading
+    4133e37a-d625-476e-91aa-a600e0123064: 'Quote Source' # Quote Source
+    4610a356-a212-46cd-a7a1-6286620e89ef: 'Grid Items' # Grid Items
+    4652c972-110d-45c4-9032-c39f4c7e92cf: Footer # Footer
+    4697a491-b07d-46f9-87d8-c6cd9fb804a9: Target # Target
+    5053ff27-8e1b-49ea-85c6-c2a1dece3b8e: 'Body Content' # Body Content
+    5075f768-2e40-45a6-a82b-61721232c356: Heading # Heading
+    5162e4ea-9d64-443b-847d-ef657925e27a: 'Article Optimisations' # Article Optimisations
+    5527a397-226d-4a44-a929-1133169e498a: 'Square Gallery Optimisation' # Square Gallery Optimisation
+    6325f925-feea-4e28-b6ec-7630d3e70cc8: Embed # Embed
+    6398bf72-eab8-49ad-8949-2dfd557210c8: 'Grid Content Info' # Grid Content Info
+    6776ad6d-4fab-4c6f-a948-20e376cc6820: Button # Button
+    7094bca5-b1bf-4bdd-8699-baa53877dc85: Heading # Heading
+    7127ef72-a077-470d-8d8d-96b29a40a27a: 'Logo Position' # Logo Position
+    8242f176-ff64-4969-8ece-037c27beea0a: Standfirst # Standfirst
+    8411ab0f-47f3-4c38-ad3b-f449f6bfe1f5: 'Small Gallery Optimisation' # Small Gallery Optimisation
+    9151f126-34cf-4f3a-960f-107acc9842ad: Heading # Heading
+    9475b42a-7657-4e3f-9d5b-1e1b5a1732ca: Swatch # Swatch
+    13653e63-9892-4752-b260-32518bc3bb3d: Cards # Cards
+    15615c51-0340-4dc2-831f-12d4ee3fd845: 'Large Blog Card Optimisation' # Large Blog Card Optimisation
+    25958ba0-5f4a-48fc-9dee-0064db99f702: 'Utility Icon' # Utility Icon
+    28688c0a-84eb-41d8-8c25-01ed4992bed8: 'Gallery Placeholder' # Gallery Placeholder
+    33274ae4-f375-4070-b42c-f1cef4e48a81: Heading # Heading
+    34000b23-2325-400f-a43f-958941335fe3: 'Project Categories' # Project Categories
+    35981b2e-d04e-4366-939a-c0673263711a: Questions # Questions
+    45539eda-7272-4a6b-b4a2-2b629a2742ec: Caption # Caption
+    60380d2b-c803-4fab-8aed-752e3268b5f5: 'Grid Content Image - 33%' # Grid Content Image - 33%
+    62060b0e-9ae6-4b5a-a779-469967724b21: 'Large Gallery Optimisation' # Large Gallery Optimisation
+    73929e5d-0eaa-424c-8cd1-ce83b47fd733: 'Page Builder' # Page Builder
+    085923fe-5934-4d01-a2fd-ec625094c005: Caption # Caption
+    91602cc8-0f1b-49b4-b806-9b424f7b0206: Image # Image
+    92164c9b-e1af-4a4e-b639-44a2b5d79bd3: Navigation # Navigation
+    93892db5-fbae-4955-92ff-5b51c9962812: Authors # Authors
+    209738f8-00a6-45b2-b594-50afccb1662e: 'Image Gallery' # Image Gallery
+    0568325a-5e70-4dde-982d-1cad58a42365: Background # Background
+    670882de-3f12-4bfd-b44e-7f5132526ff9: Description # Description
+    827203e4-23bd-4920-a23d-c4dcaad52d5f: Navigation # Navigation
+    985978cb-f5c1-4dc7-a9d3-4f278773ccff: Caption # Caption
+    1962717b-7da2-4f6f-be49-ee640b8ddfe2: Vacancies # Vacancies
+    2075123a-3328-41eb-a8ad-ce1987d26d66: Overline # Overline
+    6569339b-0b2b-4801-9b30-7599f28e1a5b: Media # Media
+    6834194e-43c0-464b-9333-a15bd914d9d3: 'Project Categories' # Project Categories
+    18802253-9492-45f9-94a3-1d4c9b68c027: Swatch # Swatch
+    26759232-9c46-43b6-9279-f62bb6e4cf85: Heading # Heading
+    60285741-d9e6-4e21-b26e-3330c2d02f47: Name # Name
+    61518518-d14c-4402-a480-c059af3b7087: Buttons # Buttons
+    69564637-9091-434c-aa5c-50eef46f8c93: Swatch # Swatch
+    76099428-f3d4-42a7-9bb8-08f425b41461: 'Organisation Name' # Organisation Name
+    98769057-9c93-4e96-89ff-cb7b6a3a1188: 'Secondary Navigation' # Secondary Navigation
+    a5be1b28-c12a-4a3c-8bf6-8cddef930108: Heading # Heading
+    a5cb77be-c4d9-4d3e-88fb-d5384ca13941: 'Error Image' # Error Image
+    a6d05f0a-f046-4a8d-bddd-dd368b675507: Content # Content
+    a9ba876e-c0bf-4a8c-b77e-e926de382189: Items # Items
+    a23c9a51-65d8-446d-b01a-222c2403d805: Media # Media
+    a43f63a3-f09b-404a-8002-846873fd6fe6: Plugins # Plugins
+    a57c1d51-171d-47c2-ac77-cbc30d2229f3: 'Content CTA' # Content CTA
+    a72bfe0c-3389-4f9f-8ec1-ab318ec10b29: Errors # Errors
+    a81ab3c0-c52b-4817-8820-c0e69e9a0d2d: Containerise # Containerise
+    a2754e8b-3bc4-46e8-a8e4-45f15fd7590a: 'Grid 33% Optimisations' # Grid 33% Optimisations
+    a54705e1-c7e5-4ae2-b074-41c2bbfe0358: Clients # Clients
+    ab91f872-7263-4250-b647-317386f8f679: 'Organisation Address' # Organisation Address
+    ae2f2577-98ad-4416-afb0-0a136fd1680d: Location # Location
+    ae3a8d43-87b0-4ec3-a5f4-f0e081d700a1: 'Plugins Overview' # Plugins Overview
+    ae57f7d7-6764-4fd4-84e9-3e526e23b520: Image # Image
+    aee87c60-8ff1-4121-95d8-e29d940f8537: Limit # Limit
+    afc7e63f-6b0d-4d17-8c23-b13f049166f3: Image # Image
+    b2c99831-d731-447c-8233-c0418cc574bd: Cards # Cards
+    b2ec8a9f-db13-477e-ac15-28a3c7b4f3e4: 'Small Blog Card Optimisation' # Small Blog Card Optimisation
+    b4a06662-5fb9-4347-9b76-b1e291db3b88: Cards # Cards
+    b5a93f0f-21d1-4d67-abc8-a3789543d457: Image # Image
+    b8ba7115-3804-4c06-8a96-501963d1fc5c: 'Error Headline' # Error Headline
+    b9bc50d8-56c8-4a22-bc8b-f581880783e4: 'Active Installs' # Active Installs
+    b37bf9ac-438e-4850-89da-517bdcc6a0b2: 'Grid Items' # Grid Items
+    b40e769e-e3a2-49a1-87b9-31237b6aa762: Content # Content
+    b51f4d5a-4d35-43f1-af05-72e206874892: 'Footer Navigation' # Footer Navigation
+    b61c0f3e-aaeb-4c6d-aab8-39448c056b8e: CTAs # CTAs
+    b74a2d1f-f160-4a53-9a84-05b89c63c277: Blog # Blog
+    b176a5a8-9d76-4653-9f6c-9ecb212d6f1a: Heading # Heading
+    b692e225-204e-4347-bbca-cc383d5dee6a: Plugins # Plugins
+    b884a1be-f354-4202-8335-78016b5d035a: 'Show link as button' # Show link as button
+    b928e034-1b69-487e-a45b-b37d0f8a59a9: Containerise # Containerise
+    b2330e68-6c4a-45ab-b5b1-8a510f75ce4f: General # General
+    b43847a9-d877-4a56-ba8e-39f6c25c85cb: Code # Code
+    b723924c-f0d9-4479-945f-b43f96e8e1e5: 'Text Size' # Text Size
+    b1976587-c4c2-4712-b20f-35026b46a5a7: Target # Target
+    baad7fb6-18f2-4914-bc33-e1c48da96896: 'Card Image' # Card Image
+    bae060ba-ddb9-4f66-8df8-9055de4e31e5: 'Show Logo' # Show Logo
+    bc2fcf7d-8195-4529-8758-a3004866f759: 'Blog Overview' # Blog Overview
+    bcca818c-5cb3-4998-8165-95f5c9929f23: Standfirst # Standfirst
+    beef2807-f960-414c-9ff2-690d9c30b6a8: Caption # Caption
+    c0f07903-c672-4f33-b571-4bf55e084345: Copyright # Copyright
+    c0083422-e548-49c9-9db5-a2477942038d: 'Job Role' # Job Role
+    c014f72e-6101-4377-a9e4-bbea0f16bce8: Placeholders # Placeholders
+    c5cb9c4f-a101-416a-b253-8c56fb2b215f: Placeholders # Placeholders
+    c77ea1bd-e263-4198-b915-5cd6ebf7f78d: 'Grid Items' # Grid Items
+    c499bc8d-734b-4fe4-b74e-dca793aba082: 'Body Content' # Body Content
+    c2249c59-46a5-435d-ab41-42bb543e2875: City # City
+    c5638e5a-a8f8-4f97-ab00-7247cd30b054: Width # Width
+    c6379e33-9e45-4b32-a2a0-136084548853: Button # Button
+    ca8bffb4-dfed-4ca4-b421-ffcc8cca47e2: Target # Target
+    cc4d5589-5884-4fb2-ba84-ffb388a8806e: Slides # Slides
+    ccc50eb1-1bd2-4306-842a-0a31f567c135: Image # Image
+    cd0c5467-595b-44e8-b0b0-aa3cd2e4f87e: Image # Image
+    ce64c3ac-ec79-4405-98a9-aea16011e258: Width # Width
+    ce437437-2354-47a4-ae70-98fdb69aa175: Version # Version
+    ceaca46d-720d-442d-b054-f8fb3704701a: 'Default Placeholder' # Default Placeholder
+    d08a0d16-0e00-49e6-9cd4-465fa2d65d7d: Errors # Errors
+    d09756bb-3dd5-4ad8-b6eb-6e3595705141: Description # Description
+    d2e22319-599d-4193-b09f-3d48c90668e6: Heading # Heading
+    d5dde356-9f59-4da4-ad17-e3d7825da610: Country # Country
+    d8cef538-a756-4496-b7f6-0e0bb61c14c2: 'Primary Navigation' # Primary Navigation
+    d9bfce22-613d-44cc-bdac-b06404b4a8ea: Heading # Heading
+    d613d12d-ac03-4153-942b-0cca809f451b: 'Body Content' # Body Content
+    d641ef2d-f0a1-4a0d-b648-642c98a7e5bb: 'Article Placeholder' # Article Placeholder
+    d3594d38-4b2c-48a2-b77c-c0819aa700c7: Overline # Overline
+    d7413814-0c30-451d-a383-d39d7cc3f78b: Position # Position
+    db91cdbf-486a-4cbd-a24e-fac4e2327a50: 'Plugin Icon' # Plugin Icon
+    dbc7a062-ef19-48ca-bd6f-acda62a18b78: 'Hero Builder' # Hero Builder
+    dbc716a7-2122-4b92-b942-471970256a35: Clients # Clients
+    de0ad924-50fa-43fc-9790-e44bf330cdd2: Quotation # Quotation
+    df8a0480-96ec-4e76-bc8f-16b5e4f2fa3b: Heading # Heading
+    dffe2f47-18b7-4dcb-845d-2d88fa0378c3: 'Organisational Information' # Organisational Information
+    e0eb66ab-e5e9-4342-9c73-f3034283641e: Overline # Overline
+    e0ee7443-387e-4be3-a64f-3c5ae52be354: 'Organisation Email' # Organisation Email
+    e0745046-9bad-4922-8da8-7f677ba84909: 'Legal Navigation' # Legal Navigation
+    e0753f10-1084-4173-8a7e-4e414207205c: Buttons # Buttons
+    e4b2aca1-7f88-4186-92bb-f48a6f1c1c61: 'Grid Items' # Grid Items
+    e4fa92d0-02c7-4c27-9eb2-782fb6603654: Width # Width
+    e6d658aa-c335-4f15-bbcd-59fe05d9e913: 'Error Text' # Error Text
+    e7b63d80-91cc-438a-b670-59cbb778ca14: Heading # Heading
+    e80a7183-56ec-49d8-81a8-405444fc3077: 'The Team' # The Team
+    e531a8df-ea73-4e09-8422-d08a20883128: Slides # Slides
+    e561deca-d709-4e55-89be-2b9254d635e4: Heading # Heading
+    e691301b-7484-40be-a3d4-c3bc590de959: 'Content Builder' # Content Builder
+    e999168b-c918-4bb5-817e-a9b72cca830a: 'Grid Content Image - 50%' # Grid Content Image - 50%
+    eb808a1d-0eb6-4d72-8f1a-4eb2ccf1fb93: Callout # Callout
+    ebc9bc3a-83e6-4cab-956d-f254a119f606: 'Show Logo' # Show Logo
+    ec91bde6-778d-4030-89fe-45614d871e81: Target # Target
+    ed4b0f49-8429-4d80-846f-3d441bd3e707: Image # Image
+    ee0406c9-28bc-4941-889f-a5c46e62ec44: Image # Image
+    ef841ba4-7bcd-4ef5-9c12-96377bf7fba2: Pages # Pages
+    efb7b090-ee57-4c4f-a7e9-f8cbc9b9c7ae: Image # Image
+    f2dee3a0-3c95-4b6a-9494-ffe8ce0dff46: Gallery # Gallery
+    f4a50ead-30b3-4d86-bdd1-9d5c295fb9fd: 'Our Work' # Our Work
+    f4cbe95b-c71a-42f8-a9d8-464dcf3916a9: 'Primary Navigation' # Primary Navigation
+    f4de4bd2-7a0e-4563-b290-a2a72c8d23df: Image # Image
+    f7cf0694-24fa-4e41-943b-40abaddc797a: 'Quote Author' # Quote Author
+    f86e951a-5dea-4768-b733-ae5506291930: Containerise # Containerise
+    f665a550-cb91-431e-bfa3-1428815affad: 'Heading Callout' # Heading Callout
+    f3960fae-d20a-4473-9a73-315dfed31760: Image # Image
+    f66247e5-1697-4e5a-976e-ff087ee0911e: Description # Description
+    f89601e9-4ba9-4a48-9e99-350aa9914912: Default # Default
+    f326369d-c220-40d9-92e9-7b7b7811d8e5: 'News Categories' # News Categories
+    f4124494-afa7-474f-beca-7740fe61e6e1: Office # Office
+    faa39bae-b425-4b70-b3f6-c1584cdda9dc: Website # Website
+    faceb3ed-6771-453c-9c2a-aa330847f6db: Errors # Errors
+    fb3a8f31-d1cc-4c13-903b-a501f7e51f54: Homepage # Homepage
+    fb9ce4c2-c0b0-4eb5-9543-61fce2682a0e: Content # Content
+    fbaa4c75-7616-42ca-adea-7615c9b91e38: Label # Label
+    fc6be63b-f5ea-47c7-9839-cf3289cd1a96: 'Quote Author' # Quote Author
+    fd71a6c2-749b-4db5-9f9e-29d0f1766834: 'Started working at Percipio.London' # Started working at Percipio.London
+    ff2b4da8-c253-49e7-8258-9a7a0a40d3c7: Swatch # Swatch
+plugins:
+  aws-s3:
+    enabled: true
+    schemaVersion: '2.0'
+  blitz:
+    edition: standard
+    enabled: true
+    licenseKey: 098AFX2F099TL01KIJ38HC5I
+    schemaVersion: 4.1.2
+    settings:
+      apiKey: ''
+      cacheControlHeader: 'public, s-maxage=31536000, max-age=0'
+      cacheDuration: null
+      cacheElementQueries: true
+      cacheElements: true
+      cacheGeneratorSettings:
+        __assoc__:
+          -
+            - concurrency
+            - '3'
+      cacheGeneratorType: putyourlightson\blitz\drivers\generators\HttpGenerator
+      cacheNonHtmlResponses: false
+      cachePurgerSettings:
+        __assoc__:
+          -
+            - zoneIds
+            -
+              __assoc__:
+                -
+                  - 5da841b1-ca0d-46ff-8bb1-04d6c889ac54 # Percipio
+                  -
+                    __assoc__:
+                      -
+                        - zoneId
+                        - $CLOUDFLARE_ZONE_ID
+          -
+            - authenticationMethod
+            - apiToken
+          -
+            - apiToken
+            - $CLOUDFLARE_API_KEY
+          -
+            - apiKey
+            - ''
+          -
+            - email
+            - ''
+      cachePurgerType: putyourlightson\blitz\drivers\purgers\CloudflarePurger
+      cacheStorageSettings:
+        __assoc__:
+          -
+            - folderPath
+            - '@webroot/cache/blitz'
+          -
+            - createGzipFiles
+            - ''
+          -
+            - createBrotliFiles
+            - ''
+      cacheStorageType: putyourlightson\blitz\drivers\storage\FileStorage
+      cachingEnabled: true
+      debug: true
+      deployerType: putyourlightson\blitz\drivers\deployers\DummyDeployer
+      driverJobPriority: 100
+      excludedQueryStringParams:
+        -
+          __assoc__:
+            -
+              - queryStringParam
+              - gclid
+        -
+          __assoc__:
+            -
+              - queryStringParam
+              - fbclid
+      excludedUriPatterns:
+        -
+          __assoc__:
+            -
+              - uriPattern
+              - news-categories
+        -
+          __assoc__:
+            -
+              - uriPattern
+              - project-categories
+        -
+          __assoc__:
+            -
+              - uriPattern
+              - skills
+      generatePagesWithQueryStringParams: true
+      hintsEnabled: true
+      includedQueryStringParams:
+        -
+          __assoc__:
+            -
+              - queryStringParam
+              - '.*'
+      includedUriPatterns:
+        -
+          __assoc__:
+            -
+              - uriPattern
+              - '.*'
+      injectScriptEvent: DOMContentLoaded
+      integrations:
+        - putyourlightson\blitz\drivers\integrations\FeedMeIntegration
+        - putyourlightson\blitz\drivers\integrations\SeomaticIntegration
+      maxRetryAttempts: 10
+      mutexTimeout: 1
+      outputComments: true
+      queryStringCaching: 0
+      queueJobTtr: 300
+      refreshCacheAutomaticallyForGlobals: true
+      refreshCacheJobPriority: 10
+      refreshCacheWhenElementMovedInStructure: true
+      refreshCacheWhenElementSavedNotLive: false
+      refreshCacheWhenElementSavedUnchanged: false
+      refreshMode: 3
+      sendPoweredByHeader: false
+  blitz-recommendations:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.1.0
+  colour-swatches:
+    enabled: true
+    schemaVersion: 1.4.3
+  eager-beaver:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  embeddedassets:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  image-optimize:
+    edition: standard
+    enabled: true
+    licenseKey: L5YE26W49XD3K4PP91RH06RM
+    schemaVersion: 1.0.0
+    settings:
+      allowUpScaledImageVariants: true
+      assetVolumeSubFolders: true
+      autoSharpenScaledImages: true
+      createColorPalette: true
+      createPlaceholderSilhouettes: false
+      imageTransformTypeSettings:
+        __assoc__:
+          -
+            - nystudio107\imageoptimizeimgix\imagetransforms\ImgixImageTransform
+            -
+              __assoc__:
+                -
+                  - domain
+                  - ''
+                -
+                  - apiKey
+                  - ''
+                -
+                  - securityToken
+                  - ''
+          -
+            - nystudio107\imageoptimizesharp\imagetransforms\SharpImageTransform
+            -
+              __assoc__:
+                -
+                  - baseUrl
+                  - $SERVERLESS_SHARP_CLOUDFRONT_URL
+          -
+            - nystudio107\imageoptimizethumbor\imagetransforms\ThumborImageTransform
+            -
+              __assoc__:
+                -
+                  - baseUrl
+                  - ''
+                -
+                  - securityKey
+                  - ''
+                -
+                  - includeBucketPrefix
+                  - ''
+      lowerQualityRetinaImageVariants: false
+      transformClass: nystudio107\imageoptimizesharp\imagetransforms\SharpImageTransform
+  mailgun:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  minify:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  position-fieldtype:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  redactor:
+    enabled: true
+    schemaVersion: 2.3.0
+  retour:
+    edition: standard
+    enabled: true
+    licenseKey: 514KT3JMO8YM0A8ZTPI1PLW3
+    schemaVersion: 3.0.10
+  seomatic:
+    enabled: true
+    licenseKey: 8LN4PPMQDNDW9TA7FLCL3WY5
+    schemaVersion: 3.0.11
+  sherlock:
+    edition: lite
+    enabled: true
+    schemaVersion: 4.1.0
+    settings:
+      apiKey: ilxpipwqgwawlmfmfoimsisjopelqjkr
+      blowfishHashCost:
+        __assoc__:
+          -
+            - threshold
+            - 13
+      contentSecurityPolicy:
+        __assoc__:
+          -
+            - canFail
+            - true
+      contentSecurityPolicySettings:
+        __assoc__:
+          -
+            - enabled
+            - ''
+          -
+            - enforce
+            - '1'
+          -
+            - header
+            - '1'
+          -
+            - directives
+            -
+              -
+                - '1'
+                - default-src
+                - '''self'''
+              -
+                - '1'
+                - script-src
+                - '''self'' ''cc4fc0daa6b8402e96f0001df44f56a106803d3b8b06d0bc42700100835290f4'' ''7ee5423273d2a18cbdd8ef6f5a4fe85e405a158f84a6bf97447c3a475e0ff838'' ''7751507cbced412d6d21de0465faead1c50a86c735aad3b3a4013bd8a8730205'' https://cdn.polyfill.io/v3/polyfill.min.js https://www.google-analytics.com/analytics.js https://www.googletagmanager.com/gtag/js'
+              -
+                - '1'
+                - style-src
+                - '''self'' ''e0bf98fa8553be29a7dc731e2cd63624ba249b793cd3986f698f2c8de3f5bc23'' https://fonts.googleapis.com;'
+              -
+                - '1'
+                - font-src
+                - '''self'' https://fonts.gstatic.com'
+              -
+                - '1'
+                - frame-src
+                - '''self'' https://player.vimeo.com'
+              -
+                - '1'
+                - img-src
+                - '''self'' data: https://dnuzs9ej922bx.cloudfront.net https://www.google-analytics.com'
+      cooldownDuration:
+        __assoc__:
+          -
+            - threshold
+            - 300
+      cors:
+        __assoc__:
+          -
+            - forceFail
+            - true
+      craftFilePermissions:
+        __assoc__:
+          -
+            - canFail
+            - true
+      craftFolderPermissions:
+        __assoc__:
+          -
+            - canFail
+            - true
+      craftFoldersAboveWebRoot:
+        __assoc__:
+          -
+            - canFail
+            - true
+      criticalCraftUpdates:
+        __assoc__:
+          -
+            - forceFail
+            - true
+      criticalPluginUpdates:
+        __assoc__:
+          -
+            - forceFail
+            - true
+      defaultDirMode:
+        __assoc__:
+          -
+            - canFail
+            - true
+          -
+            - threshold
+            - 509
+      defaultFileMode:
+        __assoc__:
+          -
+            - canFail
+            - true
+          -
+            - threshold
+            - 436
+      defaultTokenDuration:
+        __assoc__:
+          -
+            - canFail
+            - true
+          -
+            - threshold
+            - 86400
+      devMode:
+        __assoc__:
+          -
+            - forceFail
+            - true
+      disabledTests: null
+      elevatedSessionDuration:
+        __assoc__:
+          -
+            - canFail
+            - true
+          -
+            - threshold
+            - 300
+      enableCsrfProtection:
+        __assoc__:
+          -
+            - canFail
+            - true
+      expectCT:
+        __assoc__:
+          -
+            - canFail
+            - true
+      headerProtectionSettings:
+        __assoc__:
+          -
+            - enabled
+            - '1'
+          -
+            - headers
+            -
+              -
+                - '1'
+                - Referrer-Policy
+                - no-referrer-when-downgrade
+              -
+                - '1'
+                - Strict-Transport-Security
+                - max-age=15552000
+              -
+                - '1'
+                - X-Content-Type-Options
+                - nosniff
+              -
+                - '1'
+                - X-Frame-Options
+                - SAMEORIGIN
+              -
+                - '1'
+                - X-Xss-Protection
+                - '1; mode=block'
+      highSecurityLevel: true
+      httpsControlPanel:
+        __assoc__:
+          -
+            - forceFail
+            - true
+      httpsFrontEnd:
+        __assoc__:
+          -
+            - forceFail
+            - true
+      integrationSettings:
+        __assoc__:
+          -
+            - putyourlightson\sherlock\integrations\BugsnagIntegration
+            -
+              __assoc__:
+                -
+                  - apiKey
+                  - ''
+          -
+            - putyourlightson\sherlock\integrations\RollbarIntegration
+            -
+              __assoc__:
+                -
+                  - accessToken
+                  - ''
+          -
+            - putyourlightson\sherlock\integrations\SentryIntegration
+            -
+              __assoc__:
+                -
+                  - dsn
+                  - ''
+                -
+                  - tracesSampleRate
+                  - ''
+      invalidLoginWindowDuration:
+        __assoc__:
+          -
+            - threshold
+            - 3600
+      maxInvalidLogins:
+        __assoc__:
+          -
+            - canFail
+            - true
+          -
+            - threshold
+            - 5
+      monitor: false
+      notificationEmailAddresses: $SYSTEM_EMAIL
+      phpComposerVersion:
+        __assoc__:
+          -
+            - canFail
+            - true
+      phpVersion:
+        __assoc__:
+          -
+            - canFail
+            - true
+          -
+            - thresholds
+            -
+              __assoc__:
+                -
+                  - '8.0'
+                  - '2023-11-26'
+                -
+                  - '8.1'
+                  - '2024-11-25'
+      preventUserEnumeration:
+        __assoc__:
+          -
+            - canFail
+            - true
+      referrerPolicy:
+        __assoc__:
+          -
+            - canFail
+            - true
+      rememberedUserSessionDuration:
+        __assoc__:
+          -
+            - threshold
+            - 12096004
+      requireEmailVerification:
+        __assoc__:
+          -
+            - canFail
+            - true
+      sanitizeSvgUploads:
+        __assoc__:
+          -
+            - canFail
+            - true
+      sendPoweredByHeader:
+        __assoc__:
+          -
+            - canFail
+            - false
+      strictTransportSecurity:
+        __assoc__:
+          -
+            - canFail
+            - true
+          -
+            - threshold
+            - 15552000
+      testToEmailAddress:
+        __assoc__:
+          -
+            - canFail
+            - true
+      translationDebugOutput:
+        __assoc__:
+          -
+            - canFail
+            - true
+      useSecureCookies:
+        __assoc__:
+          -
+            - canFail
+            - true
+      userSessionDuration:
+        __assoc__:
+          -
+            - canFail
+            - true
+          -
+            - threshold
+            - 3600
+      verificationCodeDuration:
+        __assoc__:
+          -
+            - canFail
+            - true
+          -
+            - threshold
+            - 86400
+      webAliasInSiteBaseUrl:
+        __assoc__:
+          -
+            - forceFail
+            - true
+      webAliasInVolumeBaseUrl:
+        __assoc__:
+          -
+            - forceFail
+            - true
+      xContentTypeOptions:
+        __assoc__:
+          -
+            - canFail
+            - true
+      xFrameOptions:
+        __assoc__:
+          -
+            - canFail
+            - true
+  super-table:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0
+  timeloop:
+    edition: standard
+    enabled: true
+    licenseKey: YLR368QSFHK7JWHSZ1NBI9N3
+    schemaVersion: 1.0.0
+  typedlinkfield:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
+  typogrify:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  vite:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  width-fieldtype:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+system:
+  edition: pro
+  live: true
+  name: 'Percipio Global Ltd.'
+  retryDuration: null
+  schemaVersion: 4.0.0.9
+  timeZone: Europe/London

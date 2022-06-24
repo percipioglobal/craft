@@ -1,0 +1,61 @@
+{%- import '_macros/atoms' as render -%}
+
+{%- minify -%}
+    <header class="w-full min-h-[65vh] pt-20 pb-10 md:pb-32 md:pt-44 flex items-center justify-center">
+        <div class="flex flex-col items-center">
+
+            <div class="w-32 h-32 rounded-full overflow-hidden mb-8 relative">
+                {%- if content.pluginIcon -%}
+                    {{- render.atom('svg', 'plugin-icon', {
+                        icon: content.pluginIcon.collect().first(),
+                        utilities: 'w-32 h-32'
+                    }) -}}
+                {%- endif -%}
+
+                {%- if content.cardImage -%}
+                    {{- render.atom('image', 'card-small', {
+                            image: content.cardImage.collect().first(),
+                            sizes: ['8rem'],
+                            alt: content.title,
+                            placeholders: placeholders,
+                            ratio: 'aspect-square'
+                        })
+                    -}}
+                {%- endif -%}
+            </div>
+
+            {# heading #}
+            <h1>
+                <span class="sr-only">{{- seomatic.site.identity.genericName }} :</span>
+                {{- render.atom('text', 'title', {
+                    content: content.heading ??? entry.title,
+                    color: 'text-gray-800'
+                }) -}}
+            </h1>
+
+            {# description #}
+            <div class="px-6">
+                {%- if content.description -%}
+                    {{- render.atom('text', 'description', {
+                        content: content.description,
+                        color: 'text-gray-600',
+                        utilities: 'mt-8',
+                        alignment: 'text-center'
+                    }) -}}
+                {%- endif -%}
+
+                {# buttons #}
+                {%- if content.buttons ??? null -%}
+                    {%- include '_molecules/buttons/button--group-primary' ignore missing with {
+                        buttons: content.buttons,
+                        ga: {
+                            category: 'Hero CTA',
+                            action: 'click'
+                        },
+                        utilities: 'text-center'
+                    } -%}
+                {%- endif -%}
+            </div>
+        </div>
+    </header>
+{%- endminify -%}

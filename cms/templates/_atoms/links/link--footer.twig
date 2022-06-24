@@ -1,0 +1,49 @@
+{%- extends '_atoms/links/_link--props' -%}
+{%- import '_macros/functions' as parse -%}
+
+{#
+    ### PROPERTIES ###
+    ------------------
+
+    INHERITED FROM: `_atoms/links/link--props.twig`
+
+    ### FUNCTIONS ###
+    -----------------
+    ga: parse google analytics attributes
+#}
+
+{%- block link -%}
+
+    {%- set classes = {
+        '_default': 'inline-flex text-center',
+        'animation': 'transition-colors duration-200 ease-in-out',
+        'border': props.active ? 'border-r-4 border-white lg:border-0' : '',
+        'color': props.color ~ ' ' ~ (props.active ? 'lg:text-blue-500' : ''),
+        'focus' : 'focus:outline focus:outline-4 focus:outline-white/30',
+        'font': 'font-mono  text-sm md:text-base',
+        'hover': 'hover:text-opacity-50',
+        'padding': 'py-3 px-5',
+        'cursor': 'cursor-pointer'
+    }-%}
+
+    {%- minify -%}
+
+        <a
+            {{ props.url ? 'href=' ~ props.url : '' }}
+            {{ parse.ga(props.ga) }}
+            aria-label="{{- props.text -}}"
+            class="{{ classes._default }} {{ classes.animation }} {{ classes.border }} {{ classes.color }} {{ classes.focus }} {{ classes.font }} {{ classes.hover }} {{ classes.padding }} {{ classes.cursor }} {{ props.utilities }}"
+        >
+            <span class="sr-only">
+                Go to:
+            </span>
+
+            <span>
+                {{- props.text -}}
+            </span>
+
+        </a>
+
+    {%- endminify -%}
+
+{%- endblock -%}

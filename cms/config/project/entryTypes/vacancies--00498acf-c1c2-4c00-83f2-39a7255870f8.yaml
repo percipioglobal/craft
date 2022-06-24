@@ -1,0 +1,73 @@
+fieldLayouts:
+  2a24fd43-f0e0-40a9-97de-d4b56b0546c9:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 5164399c-f2a7-4a38-b642-d5768e1757fd
+            warning: null
+            width: 100
+          -
+            fieldUid: e691301b-7484-40be-a3d4-c3bc590de959 # Content Builder
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3672a950-cf07-4556-93cf-82ff23d470ce
+            warning: null
+            width: 100
+        name: Content
+        uid: 5c022636-8445-43e9-9344-b5dd36b16985
+      -
+        elements:
+          -
+            fieldUid: 2bcee070-9832-4e9a-a3d1-51566028022e # OG Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e7a001a5-05ef-4e97-a5c0-8404abc22703
+            warning: null
+            width: 100
+          -
+            fieldUid: 6a3feb81-50ce-467a-8aca-b5d4cc12aed0 # Description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b322758a-1e45-4ed8-b249-ad1d584dc32b
+            warning: null
+            width: 100
+        name: SEO
+        uid: db44d11f-25bd-498a-8e05-d76caae6af90
+handle: vacancies
+hasTitleField: true
+name: Vacancies
+section: 1962717b-7da2-4f6f-be49-ee640b8ddfe2 # Vacancies
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

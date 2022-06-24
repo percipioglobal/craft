@@ -1,0 +1,75 @@
+{%- do craft.eagerBeaver.eagerLoadElements(entry,
+    [
+        'pageBuilder',
+        'pageBuilder.contentCta',
+        'pageBuilder.contentCta:image',
+        'pageBuilder.highlightCards:cards',
+        'pageBuilder.highlightCards:cards.authors',
+        'pageBuilder.highlightCards:cards.blogCategories',
+        'pageBuilder.highlightCards:cards.cardImage',
+    ])
+-%}
+
+{#
+    ### COMPONENTS ###
+    ------------------
+
+    ## MOLECULES
+    header--primary: `_molecules/headers/header--primary`
+
+    ## ORGANISMS
+
+    cta--image: `_organisms/ctas/cta--image`
+    cta--text: `_organisms/ctas/cta--text`
+    grid--blog: `_organisms/grids/grid--blog`
+    grid--projects: `_organisms/grids/grid--projects`
+#}
+
+{%- minify -%}
+
+    {%- for block in content.pageBuilder.collect() -%}
+
+        {%- switch block.type -%}
+
+            {%- case 'contentCta' -%}
+
+                {%- set background = swatch(block.background) -%}
+
+                {# check which cta should be loaded #}
+                {%- set component = block.image.count() == 0 ? '_organisms/ctas/cta--text' : '_organisms/ctas/cta--image' -%}
+
+                {%- include component ignore missing with {
+                    heading: block.heading ??? '',
+                    content: block.body ??? '',
+                    button: block.target ??? null,
+                    background: background,
+                    image: block.image ??? null
+                } -%}
+
+            {%- case 'highlightCards' -%}
+
+                {%- set component = block.cards.collect().first().section.handle == 'blog' ? '_organisms/grids/grid--blogs' : '_organisms/grids/grid--projects' -%}
+
+                {%- include component ignore missing with {
+                    cards: block.cards,
+                } -%}
+
+            {%- case 'sectionHeader' -%}
+
+                {%- set background = swatch(block.background) -%}
+
+                {# check which header should be loaded #}
+                {%- set component = (block.target.getUrl() ??? null) ? '_molecules/headers/header--button' : '_molecules/headers/header--text' -%}
+
+                {%- include component ignore missing with {
+                    heading: block.heading ??? '',
+                    description: block.description ??? '',
+                    button: block.target ??? null,
+                    background: background,
+                } -%}
+
+        {%- endswitch -%}
+
+    {%- endfor -%}
+
+{%- endminify -%}

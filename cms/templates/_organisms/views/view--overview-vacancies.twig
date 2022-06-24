@@ -1,0 +1,23 @@
+{%- set vacancies =
+    craft.entries
+    .section('vacancies')
+    .with([
+        'cardImage'
+    ])
+    .collect()
+-%}
+
+{%- block content -%}
+    {%- include '_organisms/builders/builder--hero' ignore missing with {
+        content: entry,
+    } -%}
+
+    {%- include '_organisms/grids/grid--vacancies' ignore missing with {
+        cards: vacancies,
+    } -%}
+
+    {%- include '_molecules/content/content--article' ignore missing with {
+        content: "<p>Not the role you're looking for? We're always happy to keep resumes on file for the right individuals.</p><p>If you'd like to be notified for roles you may be suitable for when they become available, please email your CV with a covering note to <a href='mailto:hr@percipio.london' title='Mail your cv to hr@percipio.london'>hr@percipio.london</a>.</p>",
+        utilities: 'mb-10 lg:mb-20'
+    } -%}
+{%- endblock -%}

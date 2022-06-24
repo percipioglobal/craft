@@ -17,45 +17,47 @@
     │                                  bodyHtml                                   │
     └─────────────────────────────────────────────────────────────────────────────┘
 #}
-{%- extends "_boilerplate/_layouts/base-html-layout.twig" -%}
+{% extends '_boilerplate/_layouts/base-html-layout.twig' %}
 
 {# -- Any <meta> tags that should be included in the <head> #}
-{%- block headMeta -%}
-{%- endblock headMeta -%}
+{% block headMeta %}
+{% endblock headMeta %}
 
 {# -- Any <link> tags that should be included in the <head> #}
-{%- block headLinks -%}
-{%- endblock headLinks -%}
+{% block headLinks %}
+{% endblock headLinks %}
 
 {# -- Any CSS that should be included before </head> -- #}
-{%- block headCss -%}
-{%- endblock headCss -%}
+{% block headCss %}
+{% endblock headCss %}
 
 {# -- Page body -- #}
-{%- block bodyHtml -%}
-    <div id="page-container" class="overflow-hidden leading-tight">
-        <div id="component-container">
+{% block bodyHtml %}
+
+    {%- set navigation = craft.entries.section('navigation')
+        .with(['target'])
+        .collect()
+    -%}
+
+    <main>
+        {# -- Navigation --  #}
+        {%- include '_organisms/navigations/navigation--primary' ignore missing with {
+            navigation: navigation
+        } -%}
+
+        {# -- Primary content block with bypass id -- #}
+        <div class="page-content w-full bg-white relative transition-transform duration-500 ease-slide z-[1]" id="page">
+            {% block content %}
+            {% endblock %}
+
+            {# -- Footer -- #}
+            {%- include '_organisms/footers/footer--primary' ignore missing -%}
         </div>
-        <div id="content-container" class="bg-repeat header-background">
 
-            {# -- Info header, including _navbar.twig -- #}
-            {%- include "_organisms/sections/header.twig" -%}
-
-            <main>
-                {# -- Primary content block -- #}
-                {%- block content -%}
-                {%- endblock -%}
-            </main>
-        </div>
-
-        {# -- Content that appears below the primary content block -- #}
-        {%- block subcontent -%}
-        {%- endblock -%}
-
-        {# -- Info footer -- #}
-        {%- include "_organisms/sections/footer.twig" -%}
-
-        {# -- HTML Footer -- #}
-        {%- include "_partials/global-footer.twig" -%}
-    </div>
-{%- endblock bodyHtml -%}
+        {%- include '_organisms/navigations/navigation--mobile' ignore missing with {
+            navigation: navigation
+        } -%}
+    </main>
+    {# -- HTML Footer -- #}
+    {% include '_boilerplate/_partials/global-footer.twig' %}
+{% endblock bodyHtml %}

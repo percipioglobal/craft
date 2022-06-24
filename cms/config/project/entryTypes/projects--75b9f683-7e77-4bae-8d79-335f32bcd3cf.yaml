@@ -1,0 +1,131 @@
+fieldLayouts:
+  c4c22b8b-80a6-439d-b364-f808e0129e5a:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: e9c5999d-2303-4d43-966f-dbdbf4db81fd
+            warning: null
+            width: 100
+          -
+            fieldUid: 6aa0f4e6-667e-42b9-b9ad-1b3be7de0f68 # Subtitle
+            instructions: null
+            label: Subtitle
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 35664c0e-259d-436d-98f9-eb53756bd6ee
+            warning: null
+            width: 100
+          -
+            fieldUid: e691301b-7484-40be-a3d4-c3bc590de959 # Content Builder
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e7aa08c1-623d-4800-8e87-f8fbb7f9998d
+            warning: null
+            width: 100
+        name: Content
+        uid: 22f0b642-36c0-4336-8b40-37fe17fbaa7c
+      -
+        elements:
+          -
+            fieldUid: 6a3feb81-50ce-467a-8aca-b5d4cc12aed0 # Description
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 71dca70a-0b87-41ed-9715-3eae36990107
+            warning: null
+            width: 100
+          -
+            fieldUid: baad7fb6-18f2-4914-bc33-e1c48da96896 # Card Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4d3b5447-9fa0-4f27-98cf-18012806d4b6
+            warning: null
+            width: 100
+          -
+            fieldUid: 34000b23-2325-400f-a43f-958941335fe3 # Project Categories
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 07cd7ab7-aa13-4cd5-8d8c-52b39c57d35e
+            warning: null
+            width: 100
+          -
+            fieldUid: 10a7e511-e02a-46ff-8524-7390d3e9be19 # Client
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a010bcab-e820-47dc-ac70-b5beb9041386
+            warning: null
+            width: 100
+        name: Metadata
+        uid: c0ba43b6-2aea-41d6-8a54-2d02e3d01a35
+      -
+        elements:
+          -
+            fieldUid: ea5a623d-3c94-4cee-a74c-6159235f684e
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 34af771b-e79e-4046-9483-5e9841b5e29a
+            warning: null
+            width: 100
+        name: Options
+        uid: 50895e0c-55f1-4008-a52d-59b9550a90fd
+      -
+        elements:
+          -
+            fieldUid: 2bcee070-9832-4e9a-a3d1-51566028022e # OG Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ce13c17d-fdcc-461a-a150-5bc7adb2bf2b
+            warning: null
+            width: 100
+        name: SEO
+        uid: cc926d63-8abc-4d31-8048-248bbe2ff1b2
+handle: projects
+hasTitleField: true
+name: Projects
+section: f4a50ead-30b3-4d86-bdd1-9d5c295fb9fd # Our Work
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

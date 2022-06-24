@@ -1,0 +1,130 @@
+fieldLayouts:
+  23210242-4181-46c8-a086-7cf5d526279c:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: b78da281-f5af-4178-954a-285d1afd42f1
+            warning: null
+            width: 100
+          -
+            fieldUid: 50e67c67-8b9c-48a2-9cb1-2c3e91f38d29 # Buttons
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c4aa2fda-209a-4eab-9438-0f344a7a73cd
+            warning: null
+            width: 100
+          -
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: 4af12e41-a684-4b52-836a-5975ca05bd5f
+          -
+            fieldUid: e691301b-7484-40be-a3d4-c3bc590de959 # Content Builder
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 39402ec8-4030-408a-8293-c0e775185f9c
+            warning: null
+            width: 100
+        name: Content
+        uid: 0a9253a4-51c8-4c38-bc4f-0160c1d9f305
+      -
+        elements:
+          -
+            fieldUid: 6a3feb81-50ce-467a-8aca-b5d4cc12aed0 # Description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d37bc6e8-0cf7-4398-bcba-64754aa575b4
+            warning: null
+            width: 100
+          -
+            fieldUid: db91cdbf-486a-4cbd-a24e-fac4e2327a50 # Plugin Icon
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5f07576b-a5e6-444d-ab61-baa2cd84eca3
+            warning: null
+            width: 50
+          -
+            fieldUid: ce437437-2354-47a4-ae70-98fdb69aa175 # Version
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4f23477f-9011-4152-a918-1f3ed0314e5b
+            warning: null
+            width: 50
+          -
+            fieldUid: b9bc50d8-56c8-4a22-bc8b-f581880783e4 # Active Installs
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 08a1d976-55db-4a71-acc0-1031a1ffeb26
+            warning: null
+            width: 50
+          -
+            fieldUid: 01c92414-d375-423e-8183-4682ff91cbe4 # Price
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 625bc395-dc13-4bb1-b6cb-afe08ffb18ea
+            warning: null
+            width: 50
+        name: Meta
+        uid: 29b5f39a-66e6-4290-b80e-8875f430ac48
+      -
+        elements:
+          -
+            fieldUid: 2bcee070-9832-4e9a-a3d1-51566028022e # OG Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a7fe1a27-6a5d-4e23-a890-48d57b38ac91
+            warning: null
+            width: 100
+        name: SEO
+        uid: 34e4b803-df0a-400d-b852-0a805354b2dc
+handle: plugin
+hasTitleField: true
+name: Plugin
+section: a43f63a3-f09b-404a-8002-846873fd6fe6 # Plugins
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

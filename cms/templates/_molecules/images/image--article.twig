@@ -1,0 +1,20 @@
+{%- extends '_molecules/images/_image--props' -%}
+{%- import '_macros/atoms' as render -%}
+
+{%- block image -%}
+    {%- minify -%}
+        {%- if props.image -%}
+            <section class="container max-w-[84ch] mx-auto pb-8 {{ props.utilities -}}">
+                <div class="animate" data-animation="fadeIn">
+                    {{- render.atom('image', 'article', {
+                            image: props.image.collect().first(),
+                            sizes: ['100vw'],
+                            alt: props.image.title,
+                            placeholders: placeholders,
+                        })
+                    -}}
+                </div>
+            </section>
+        {%- endif -%}
+    {%- endminify -%}
+{%- endblock -%}

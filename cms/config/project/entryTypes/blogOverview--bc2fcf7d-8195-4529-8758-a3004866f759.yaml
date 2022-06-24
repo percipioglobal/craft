@@ -1,0 +1,73 @@
+fieldLayouts:
+  ecebb537-0462-4a94-8a09-eb3c92d6de22:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: db2a523f-05ad-4da2-9184-521796ec40c6
+            warning: null
+            width: 100
+          -
+            fieldUid: dbc7a062-ef19-48ca-bd6f-acda62a18b78 # Hero Builder
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ca827453-a4f3-48ba-ad0c-127181559aac
+            warning: null
+            width: 100
+        name: Content
+        uid: 644ca913-5629-4361-b254-0c2432a262aa
+      -
+        elements:
+          -
+            fieldUid: 6a3feb81-50ce-467a-8aca-b5d4cc12aed0 # Description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e0c271c7-343a-4f6c-9974-72eb67221116
+            warning: null
+            width: 100
+          -
+            fieldUid: 2bcee070-9832-4e9a-a3d1-51566028022e # OG Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a24a4081-4810-4487-96c8-92447017c29c
+            warning: null
+            width: 100
+        name: SEO
+        uid: c032e8f1-7ed7-4882-a88f-83cac8560877
+handle: blogOverview
+hasTitleField: true
+name: 'Blog Overview'
+section: ef841ba4-7bcd-4ef5-9c12-96377bf7fba2 # Pages
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

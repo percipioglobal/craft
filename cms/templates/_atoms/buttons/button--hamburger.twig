@@ -1,0 +1,56 @@
+{%- extends '_atoms/buttons/_button--props' -%}
+{%- import '_macros/functions' as parse -%}
+
+{#
+    ### PROPERTIES ###
+    ------------------
+
+    INHERITED FROM: `_atoms/buttons/button--props.twig`
+
+    ### FUNCTIONS ###
+    -----------------
+    ga: parse google analytics attributes
+#}
+
+{%- block button -%}
+
+    {%- set classes = {
+        '_default': 'fixed right-4 top-5 w-6 h-6 z-10',
+        'padding': '',
+    }-%}
+
+    {%- set lines = {
+        '_child': 'absolute left-0 block w-[28px] h-[3px]',
+        '_parent': 'relative w-full h-full block hamburger',
+        'animation': 'transition-all duration-500 ease-in-out',
+        'color': 'bg-blue-500',
+    } -%}
+
+    {%- minify -%}
+
+        <button
+            {{ parse.ga({
+                category: 'Hamburger button',
+                action: 'click',
+                label: 'Show the mobile site navigation'
+            }) }}
+            aria-label="Hamburger menu"
+            aria-owns="mobile-site-navigation"
+            id="hamburger-mobile-navigation"
+            class="{{ classes._default }} {{ classes.padding }} {{ props.utilities }}"
+        >
+            <span class="sr-only">
+                <span class="hamburger-sr">Open</span> Mobile Navigation
+            </span>
+
+            <span class="hamburger-parent {{ lines._parent -}}">
+                <span class="top-0 {{ lines._child }} {{ lines.animation }} {{ lines.color }}"></span>
+                <span class="-mt-0.5 top-1/2 {{ lines._child }} {{ lines.animation }} {{ lines.color }}"></span>
+                <span class="bottom-0 {{ lines._child }} {{ lines.animation }} {{ lines.color }}"></span>
+            </span>
+
+        </button>
+
+    {%- endminify -%}
+
+{%- endblock -%}

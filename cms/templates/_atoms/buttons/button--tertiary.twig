@@ -1,43 +1,72 @@
-{%- extends "_atoms/buttons/button--variables" -%}
+{%- extends '_atoms/buttons/_button--props' -%}
+{%- import '_macros/atoms' as render -%}
+{%- import '_macros/functions' as parse -%}
+{%- import '_macros/icons' as icons -%}
 
 {#
-    ### OPTIONS ###
-    ---------------
+    ### PROPERTIES ###
+    ------------------
 
-    url: (STR) -- the url for the button
-    text: (STR) -- the text for the button
-    icon: (STR) -- the icon for the button ( optional )
-    size: (STR) -- enter large / small into the value. the padding will change according to the size
-    utlities: (STR) -- the button utility from TW for the last button in the loop
-    target: (STR) -- add _blank if you want to open the button in a new window
-    inverted: (STR) -- wether the button is shown as a ghost or not
-    gaCategory: (STR) -- add a category for GTM tracking
-    gaAction: (STR) -- add an acction to GTM. This can be click / download / submit
-    gaLabel: (STR) -- add a value to the category for GTM tracking
+    INHERITED FROM: `_atoms/buttons/button--props.twig`
+
+    ### FUNCTIONS ###
+    -----------------
+    ga: parse google analytics attributes
+
+    ### LUTS ###
+    ------------
+    icon.fa_icon_lut: font-awesome class LUT
+
+    ### COMPONENTS ###
+    ------------------
+
+    ## ATOMS
+
+    render.icon: `_atoms/icons/icon--fa`
 #}
 
 {%- block button -%}
 
-        {%- set sizes = {
-            'small': 'px-4 py-2',
-            'large': 'px-8 py-4',
-        } -%}
+    {%- set classes = {
+        '_default': 'inline-flex text-center rounded-full',
+        'animation': 'transition-colors duration-200 ease-in-out',
+        'color': 'text-white border-white border',
+        'focus' : 'focus:outline focus:outline-4 focus:outline-white/30',
+        'font': 'font-primary text-sm font-semibold',
+        'hover': 'hover:bg-white hover:text-blue-700',
+        'padding': 'py-3 px-7'
+    }-%}
 
     {%- minify -%}
 
         <a
-            {{ values.url ? 'href=' ~ values.url : '' }}
-            {{ values.gaCategory ? 'data-tag-category=' ~ values.gaCategory : '' }}
-            {{ values.gaAction ? 'data-tag-action=' ~ values.gaAction : '' }}
-            {{ values.gaLabel ? 'data-tag-label=' ~ values.gaLabel : '' }}
-            {{ values.target ? 'target=' ~ values.target : '' }}
-            aria-label="{{- values.text -}}"
-            class="inline-flex border {{ sizes[values.size] is defined ? sizes[values.size] : sizes['large'] }} {{ values.inverted ? 'border-orange-600 text-orange-600' : 'border-orange-600 bg-orange-500 text-white' }} font-bold text-lg hover:text-white hover:bg-orange-600 {{ values.utilities ? values.utilities : '' -}}"
+            {{ props.url ? 'href=' ~ props.url : '' }}
+            {{ parse.ga(props.ga) }}
+            {{ props.target ? 'target=' ~ props.target : '' }}
+            aria-label="{{- props.text -}}"
+            class="{{ classes._default }} {{ classes.animation }} {{ classes.color }} {{ classes.focus }} {{ classes.font }} {{ classes.hover }} {{ classes.padding }} {{ props.utilities }}"
         >
-            {{- values.text -}}
+            <span class="sr-only">
+                {{- props.target == '_self' ? 'Go to: ' : 'Go to external page: ' -}}
+            </span>
+
+            <span>
+                {{- props.text -}}
+            </span>
+
+            {%- if props.icon -%}
+
+                {{- render.atom('icon', 'fa', {
+                    icon:  icons.fa_icon_lut(props.icon),
+                    size: 'md',
+                    parentcss: 'ml-2 inline-block',
+                    colour: 'text-white',
+                }) -}}
+
+            {%- endif -%}
+
         </a>
 
     {%- endminify -%}
 
 {%- endblock -%}
-

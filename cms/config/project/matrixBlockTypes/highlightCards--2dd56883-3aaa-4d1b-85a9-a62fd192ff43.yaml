@@ -1,0 +1,59 @@
+field: 73929e5d-0eaa-424c-8cd1-ce83b47fd733 # Page Builder
+fieldLayouts:
+  313015d1-e8ce-4279-86bc-ffc788b1d893:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 7e7008d5-deb5-4018-9fb7-52f6b2603f34 # Cards
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2d1e63a3-cd2d-4f7c-90eb-e599dbef3d07
+            warning: null
+            width: 100
+        name: Content
+        uid: ca98058f-53d1-4a03-ab90-cf16cfc61b5f
+fields:
+  7e7008d5-deb5-4018-9fb7-52f6b2603f34: # Cards
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: cards
+    instructions: 'Make sure you only select cards from the same sections'
+    name: Cards
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      localizeRelations: false
+      maxRelations: null
+      minRelations: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Entry
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\entries\EntryCondition
+      selectionLabel: 'Add a card to highlight'
+      showSiteMenu: true
+      source: null
+      sources:
+        - 'section:9de367ab-77b8-47bb-bbc3-63e79a202c3e' # Blog
+        - 'section:1ae55366-a3a6-4ed1-bf34-12ead8ae6c21' # Our Services
+        - 'section:f4a50ead-30b3-4d86-bdd1-9d5c295fb9fd' # Our Work
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+handle: highlightCards
+name: 'Highlight Cards'
+sortOrder: 3

@@ -1,0 +1,44 @@
+{%- import '_macros/atoms' as render -%}
+
+{#
+    ### PROPERTIES ###
+    ---------------
+
+    buttons: (ARR) -- Array that contains multiple buttons
+    ga: (OBJ) -- add a category / action / label for GTM tracking
+    utlities: (STR) -- the button utilities
+
+    ### COMPONENTS ###
+    ------------------
+
+    ## ATOMS
+
+    button--primary: `_atoms/buttons/button--primary.twig`
+    button--secondary: `_atoms/buttons/button--secondary.twig`
+    button--tertiary: `_atoms/buttons/button--tertiary.twig`
+#}
+
+{%- set props = {
+    buttons: buttons ??? null,
+    ga: ga ??? null,
+    utilities: utilities ??? null,
+} -%}
+
+{%- minify -%}
+    <div class="mt-11 {{ props.utilities -}}">
+
+        {%- for button in props.buttons -%}
+
+            {%- set type = loop.first ? 'primary' : 'secondary' -%}
+
+            {{- render.atom('button', type, {
+                url: button.target.getUrl() ??? null,
+                text: button.target.getText() ??? null,
+                target: button.target.getTarget() ??? '_self',
+                ga: props.ga,
+                utilities: 'my-2 md:my-0 ' ~ (not loop.last ? 'mr-2' : '')
+            }) -}}
+
+        {%- endfor -%}
+    </div>
+{%- endminify -%}

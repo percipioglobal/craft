@@ -1,25 +1,24 @@
-import App from '~/vue/App.vue'
-import { createApp, h } from 'vue'
-import { createPinia } from 'pinia'
+// import App from '@/vue/App.vue'
+// import { createApp } from 'vue'
+import './assets/icons'
+import { init as initPageAnimation } from './animations/page'
 
-import '@/css/app.pcss'
+// Import our CSS
+import '@/css/app.pcss';
 
+// App main
 const main = async () => {
-    const app = createApp({
-        render: () => h(App)
-    })
-    app.use(createPinia())
-
-    return app.mount('#page-container')
+    initPageAnimation()
 }
 
-main().then(() => {
+// Execute async function
+main().then( () => {
     console.log()
 })
 
 // Accept HMR as per: https://vitejs.dev/guide/api-hmr.html
 if (import.meta.hot) {
     import.meta.hot.accept(() => {
-        console.log("HMR")
+        console.log('HMR active')
     });
 }

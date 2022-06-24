@@ -1,0 +1,70 @@
+field: e691301b-7484-40be-a3d4-c3bc590de959 # Content Builder
+fieldLayouts:
+  5158fab7-a860-4511-90c9-3e8f068fede3:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 6325f925-feea-4e28-b6ec-7630d3e70cc8 # Embed
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9a364b70-e9be-4c39-a519-97c6c9b86de0
+            warning: null
+            width: 100
+        name: Content
+        uid: f0a95661-f4fd-4a63-b2c2-edcf21f1cd58
+fields:
+  6325f925-feea-4e28-b6ec-7630d3e70cc8: # Embed
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: embed
+    instructions: 'This can be a Youtube video, Vimeo video, Instagram post, ...'
+    name: Embed
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: false
+      allowedKinds:
+        - json
+      defaultUploadLocationSource: 'volume:b4a06662-5fb9-4347-9b76-b1e291db3b88' # Cards
+      defaultUploadLocationSubpath: null
+      localizeRelations: false
+      maxRelations: 1
+      minRelations: null
+      previewMode: full
+      restrictFiles: true
+      restrictLocation: true
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:6569339b-0b2b-4801-9b30-7599f28e1a5b' # Media
+      restrictedLocationSubpath: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Asset
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\assets\AssetCondition
+      selectionLabel: 'Add an Embed URL'
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      source: null
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+handle: media
+name: Media
+sortOrder: 14

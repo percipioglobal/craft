@@ -1,0 +1,18 @@
+{#
+    ### PROPERTIES ###
+    ---------------
+
+    content: (OBJ) -- the specific content for the card
+    color: (STR) -- the border color of the card
+    utilities: (STR) -- the specific TW spacing utilities to add
+#}
+
+{%- set props = {
+    content: content ??? null,
+    color: color ??? 'pink-500',
+    utilities: utilities ?? null,
+    imagePos: imagePos ??? 'object-left-top'
+} -%}
+
+{%- block card -%}
+{%- endblock -%}

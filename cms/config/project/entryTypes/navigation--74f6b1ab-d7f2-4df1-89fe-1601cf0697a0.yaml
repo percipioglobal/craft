@@ -1,0 +1,59 @@
+fieldLayouts:
+  b087f96c-a2d6-4652-9ed3-ab5970df7019:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: Title
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 342f8898-9765-49f0-b135-71958cfdb007
+            warning: null
+            width: 100
+          -
+            fieldUid: b1976587-c4c2-4712-b20f-35026b46a5a7 # Target
+            instructions: null
+            label: 'Navigation Item'
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 433713f7-e6fb-4d50-aef4-ff2603c6d0c9
+            warning: null
+            width: 100
+          -
+            fieldUid: b884a1be-f354-4202-8335-78016b5d035a # Show link as button
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3637bd07-5fda-49ab-beb3-8b35b83732e7
+            warning: null
+            width: 100
+        name: Content
+        uid: b2e6a815-2306-4295-9c30-5211d5307d2d
+handle: navigation
+hasTitleField: true
+name: Navigation
+section: 92164c9b-e1af-4a4e-b639-44a2b5d79bd3 # Navigation
+sortOrder: 1
+titleFormat: '{navigationButton.getText()}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

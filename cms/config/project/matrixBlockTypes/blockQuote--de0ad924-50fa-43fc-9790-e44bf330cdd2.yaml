@@ -1,0 +1,145 @@
+field: e691301b-7484-40be-a3d4-c3bc590de959 # Content Builder
+fieldLayouts:
+  3041cc5a-1802-4565-802a-5b693e59e93f:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 3ef3485e-6187-4dac-af6b-66d630852b61 # Quote
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 49bcdbba-fde0-4f64-9dbb-58467a944ede
+            warning: null
+            width: 100
+          -
+            fieldUid: f7cf0694-24fa-4e41-943b-40abaddc797a # Quote Author
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 985521fd-5c65-4da8-b186-79ece5639f65
+            warning: null
+            width: 50
+          -
+            fieldUid: 4133e37a-d625-476e-91aa-a600e0123064 # Quote Source
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 79db6bad-165a-45ce-8608-f5ebc6c05986
+            warning: null
+            width: 50
+        name: Content
+        uid: 0db162a9-f78a-40d6-8165-56823b0ce30e
+fields:
+  3ef3485e-6187-4dac-af6b-66d630852b61: # Quote
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: quote
+    instructions: 'Enter your quote.'
+    name: Quote
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: true
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  4133e37a-d625-476e-91aa-a600e0123064: # Quote Source
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: quoteSource
+    instructions: 'Select an entry or enter an external url to point to the source of the quote.'
+    name: 'Quote Source'
+    searchable: false
+    settings:
+      allowCustomText: true
+      allowTarget: false
+      autoNoReferrer: false
+      customTextMaxLength: 0
+      customTextRequired: false
+      defaultLinkName: entry
+      defaultText: ''
+      enableAllLinkTypes: false
+      enableAriaLabel: false
+      enableElementCache: false
+      enableTitle: false
+      typeSettings:
+        asset:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+        category:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+        custom:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        email:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        entry:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: true
+          sources: '*'
+        site:
+          enabled: false
+          sites: '*'
+        tel:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        url:
+          allowAliases: false
+          disableValidation: false
+          enabled: true
+        user:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+    translationKeyFormat: null
+    translationMethod: none
+    type: lenz\linkfield\fields\LinkField
+  f7cf0694-24fa-4e41-943b-40abaddc797a: # Quote Author
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: quoteAuthor
+    instructions: 'Add the author''s name to the quote'
+    name: 'Quote Author'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: blockQuote
+name: Quotation
+sortOrder: 10

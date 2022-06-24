@@ -1,0 +1,46 @@
+{%- import '_macros/atoms' as render -%}
+
+{%- set navigation = navigation|default(null) -%}
+
+{%- minify -%}
+    <div class="fixed right-0 top-0 w-screen h-screen bg-gray-900 lg:hidden">
+
+        <div aria-label="Mobile Site Navigation" aria-expanded="false" id="mobile-site-navigation" class="flex flex-col justify-center h-full">
+            <ul role="menubar" aria-label="Mobile Site Navigation" class="flex flex-col items-end">
+
+                {%- for item in navigation -%}
+                    <li role="none">
+                        {%- if item.showAsButton -%}
+                            {{- render.atom('button', 'primary', {
+                                url: item.target.collect().first().url ??? null,
+                                text: item.title ??? null,
+                                target: '_self',
+                                ga: {
+                                    category:'Navigation link',
+                                    action:'click',
+                                    label: item.title ??? null,
+                                },
+                                utilities: 'my-3 mx-3'
+                            }) -}}
+                        {%- else -%}
+                            {{- render.atom('link', 'navigation', {
+                                url: item.target.collect().first().url ??? null,
+                                text: item.title ??? null,
+                                target: '_self',
+                                active: entry.id == item.target.collect().first().id ??? null,
+                                ga: {
+                                    category:'Navigation link',
+                                    action:'click',
+                                    label: item.title ??? null,
+                                },
+                                color: 'text-white',
+                                utilities: 'py-5' ~ (loop.last ? 'pr-0 lg:pr-5' : '')
+                            }) -}}
+                        {%- endif -%}
+                    </li>
+                {%- endfor -%}
+
+            </ul>
+        </div>
+    </div>
+{%- endminify -%}

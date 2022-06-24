@@ -1,0 +1,15 @@
+defaultPlacement: end
+enableVersioning: true
+handle: navigation
+name: Navigation
+propagationMethod: all
+siteSettings:
+  5da841b1-ca0d-46ff-8bb1-04d6c889ac54: # Percipio
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+structure:
+  maxLevels: 1
+  uid: 4655ef42-86b1-41af-9618-bb95dd0d8791
+type: structure

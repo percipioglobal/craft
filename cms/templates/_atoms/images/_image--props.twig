@@ -1,0 +1,28 @@
+{#
+    ### PROPERTIES ###
+    ---------------
+
+    alt: (STR) -- The alt text
+    author: (STR) -- The author of the image ( optional )
+    caption: (STR) -- The caption text ( optional )
+    image: (OBJ) -- Pass through the image object
+    placeholders: (OBJ) -- The object that contains all placeholders ( required )
+    sizes: (ARR) -- sizes array for responsive images
+    source: (STR) -- The image source ( optional )
+    utlities: (STR) -- the image utilities
+
+#}
+
+{%- set props = {
+    alt: options.alt ??? options.image.title ??? '',
+    author: options.author ??? null,
+    caption: options.caption ??? null,
+    image: options.image ??? null,
+    placeholders: options.placeholders ??? null,
+    sizes: options.sizes ??? ['100vw'],
+    source: options.source ??? null,
+    utilities: options.utilities ??? null,
+} -%}
+
+{%- block image -%}
+{%- endblock -%}

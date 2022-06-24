@@ -1,0 +1,98 @@
+field: e691301b-7484-40be-a3d4-c3bc590de959 # Content Builder
+fieldLayouts:
+  9c47e732-acea-4391-bd41-f04e3a02a0b9:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: eb808a1d-0eb6-4d72-8f1a-4eb2ccf1fb93 # Callout
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 806a9ea4-71e0-42b4-b5ee-3fb767b6c5a0
+            warning: null
+            width: 100
+          -
+            fieldUid: 46d6543c-b83e-4b73-be6e-edcfb691204e # Grid Items
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2c348661-9bce-4625-84fa-dd5b8c2ed4b0
+            warning: null
+            width: 100
+        name: Content
+        uid: 34c3fd38-4071-411c-a93d-899f8fb42ff8
+fields:
+  46d6543c-b83e-4b73-be6e-edcfb691204e: # Grid Items
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: gridItems
+    instructions: null
+    name: 'Grid Items'
+    searchable: false
+    settings:
+      blockTypeFields: 0
+      changedFieldIndicator: 229988563
+      columns:
+        __assoc__:
+          -
+            - 4103b2f0-dd71-494b-919a-621d2a5e959e # Heading
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - a6d05f0a-f046-4a8d-bddd-dd368b675507 # Content
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+      contentTable: '{{%stc_67_griditems}}'
+      fieldLayout: matrix
+      maxRows: null
+      minRows: null
+      propagationKeyFormat: null
+      propagationMethod: all
+      selectionLabel: null
+      staticField: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: verbb\supertable\fields\SuperTableField
+  eb808a1d-0eb6-4d72-8f1a-4eb2ccf1fb93: # Callout
+    columnSuffix: rkidrpur
+    contentColumnType: text
+    fieldGroup: null
+    handle: callout
+    instructions: null
+    name: Callout
+    searchable: false
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: null
+      purifyHtml: true
+      redactorConfig: Title.json
+      removeEmptyTags: false
+      removeInlineStyles: false
+      removeNbsp: false
+      showHtmlButtonForNonAdmins: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+handle: gridContent
+name: 'Grid Content'
+sortOrder: 4

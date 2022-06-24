@@ -1,0 +1,243 @@
+field: e691301b-7484-40be-a3d4-c3bc590de959 # Content Builder
+fieldLayouts:
+  c6c05e4b-4197-45b5-96d7-7a8e76563f3b:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 020d5ff3-f24f-48ae-bd4c-ad2beb6b4d8b # Heading
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: aaaf3b03-8ea5-47df-90ff-8c7ed96bfa67
+            warning: null
+            width: 100
+          -
+            fieldUid: 83cafeab-7189-4e6a-8d08-62f9e35de063 # Content
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e15afdcf-b7a6-48ad-a3df-6370d5313d43
+            warning: null
+            width: 100
+          -
+            fieldUid: 7bc51fb0-9ad3-4518-bd25-e12e3d2d0acf # Button
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 47cd9fb4-359e-4d0b-87e7-020d2e9629a9
+            warning: null
+            width: 100
+          -
+            fieldUid: 91602cc8-0f1b-49b4-b806-9b424f7b0206 # Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 91cc28f6-c0eb-43be-851f-9a6b19c8ba9b
+            warning: null
+            width: 50
+          -
+            fieldUid: 1c70a707-ac77-4b59-b166-37219108f31b # Background
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ea197fab-37da-4689-9700-454cb56585b1
+            warning: null
+            width: 50
+        name: Content
+        uid: 6a8e4244-4354-474d-970a-2b5edfb66a2a
+fields:
+  1c70a707-ac77-4b59-b166-37219108f31b: # Background
+    columnSuffix: ikpgmuhv
+    contentColumnType: text
+    fieldGroup: null
+    handle: background
+    instructions: null
+    name: Background
+    searchable: false
+    settings:
+      default: null
+      palette: Dark/Light
+      useConfigFile: true
+    translationKeyFormat: null
+    translationMethod: none
+    type: percipiolondon\colourswatches\fields\ColourSwatches
+  7bc51fb0-9ad3-4518-bd25-e12e3d2d0acf: # Button
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: target
+    instructions: null
+    name: Button
+    searchable: false
+    settings:
+      allowCustomText: true
+      allowTarget: false
+      autoNoReferrer: false
+      customTextMaxLength: 0
+      customTextRequired: false
+      defaultLinkName: asset
+      defaultText: ''
+      enableAllLinkTypes: false
+      enableAriaLabel: false
+      enableElementCache: false
+      enableTitle: false
+      typeSettings:
+        asset:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+        category:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: true
+          sources: '*'
+        custom:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        email:
+          allowAliases: false
+          disableValidation: false
+          enabled: true
+        entry:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: true
+          sources: '*'
+        site:
+          enabled: false
+          sites: '*'
+        tel:
+          allowAliases: false
+          disableValidation: false
+          enabled: true
+        url:
+          allowAliases: false
+          disableValidation: false
+          enabled: true
+        user:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+    translationKeyFormat: null
+    translationMethod: none
+    type: lenz\linkfield\fields\LinkField
+  020d5ff3-f24f-48ae-bd4c-ad2beb6b4d8b: # Heading
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: heading
+    instructions: 'The full heading of the content CTA'
+    name: Heading
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: null
+      purifyHtml: true
+      redactorConfig: Title.json
+      removeEmptyTags: false
+      removeInlineStyles: false
+      removeNbsp: false
+      showHtmlButtonForNonAdmins: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+  83cafeab-7189-4e6a-8d08-62f9e35de063: # Content
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: body
+    instructions: 'Enter one more paragraphs to create your textual CTA content.'
+    name: Content
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes: ''
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: null
+      purifyHtml: true
+      redactorConfig: null
+      removeEmptyTags: true
+      removeInlineStyles: true
+      removeNbsp: true
+      showHtmlButtonForNonAdmins: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+  91602cc8-0f1b-49b4-b806-9b424f7b0206: # Image
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: ctaImage
+    instructions: null
+    name: Image
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: true
+      allowedKinds: null
+      defaultUploadLocationSource: 'volume:b4a06662-5fb9-4347-9b76-b1e291db3b88' # Cards
+      defaultUploadLocationSubpath: null
+      localizeRelations: false
+      maxRelations: 1
+      minRelations: null
+      previewMode: full
+      restrictFiles: false
+      restrictLocation: true
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:b4a06662-5fb9-4347-9b76-b1e291db3b88' # Cards
+      restrictedLocationSubpath: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Asset
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\assets\AssetCondition
+      selectionLabel: null
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      source: null
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+handle: contentCta
+name: 'Content CTA'
+sortOrder: 9

@@ -1,0 +1,67 @@
+field: e691301b-7484-40be-a3d4-c3bc590de959 # Content Builder
+fieldLayouts:
+  ac8c2724-7a67-4cb7-acc4-8a4ea1dd3f09:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: c77ea1bd-e263-4198-b915-5cd6ebf7f78d # Grid Items
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8e3a950d-1c60-4d86-81e8-643a4b464b6a
+            warning: null
+            width: 100
+        name: Content
+        uid: be389ced-a2b3-4eb2-a818-ebccf1de39cd
+fields:
+  c77ea1bd-e263-4198-b915-5cd6ebf7f78d: # Grid Items
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: gridItems
+    instructions: 'Show grid item with an image that fills up 50% of the space and with a background'
+    name: 'Grid Items'
+    searchable: false
+    settings:
+      blockTypeFields: 0
+      changedFieldIndicator: 1797776357
+      columns:
+        __assoc__:
+          -
+            - fb9ce4c2-c0b0-4eb5-9543-61fce2682a0e # Content
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - 211c30fd-38d1-4538-a639-0fa6572f5273 # Image
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - 0568325a-5e70-4dde-982d-1cad58a42365 # Background
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+      contentTable: '{{%stc_70_griditems}}'
+      fieldLayout: matrix
+      maxRows: null
+      minRows: null
+      propagationKeyFormat: null
+      propagationMethod: all
+      selectionLabel: null
+      staticField: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: verbb\supertable\fields\SuperTableField
+handle: gridContentImageHalfBackground
+name: 'Grid Content Image - 50% background'
+sortOrder: 8

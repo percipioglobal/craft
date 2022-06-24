@@ -1,0 +1,52 @@
+{%- extends '_organisms/grids/_grid--props' -%}
+
+{#
+    ### PROPERTIES ###
+    ------------------
+
+    INHERITED FROM: `_organisms/grids/grid--props.twig`
+
+    ## EXTENDED
+    -----------
+
+
+    ### COMPONENTS ###
+    ------------------
+
+    ## MOLECULES
+
+    card--blog-large: `_molecules/cards/card--blog-large`
+    card--blog-small: `_molecules/cards/card--blog-small`
+#}
+
+{%- block grid -%}
+
+    {%- set props = props|merge({
+        firstRow: cards.slice(0, 2) ??? null,
+        rows: cards.slice(2) ??? null,
+    }) -%}
+
+    {%- minify -%}
+        <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 gap-6 pb-12 md:pb-32 container max-w-screen-xl mx-auto {{ props.utilities -}}">
+
+            {%- for card in props.firstRow -%}
+
+                {%- include '_molecules/cards/card--blog-large' ignore missing with {
+                    content: card,
+                    utilities: ''
+                } -%}
+
+            {%- endfor -%}
+
+            {%- for card in props.rows -%}
+
+                {%- include '_molecules/cards/card--blog-small' ignore missing with {
+                    content: card,
+                    utilities: ''
+                } -%}
+
+            {%- endfor -%}
+
+        </section>
+    {%- endminify -%}
+{%- endblock -%}

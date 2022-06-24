@@ -1,0 +1,14 @@
+columnSuffix: kzalpxgy
+contentColumnType: text
+fieldGroup: 94b4d5ac-d7ea-4241-a6cb-92b39f482f99 # Common
+handle: swatch
+instructions: null
+name: Swatch
+searchable: false
+settings:
+  default: null
+  palette: Percipio
+  useConfigFile: true
+translationKeyFormat: null
+translationMethod: none
+type: percipiolondon\colourswatches\fields\ColourSwatches

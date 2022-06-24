@@ -1,0 +1,48 @@
+fieldLayouts:
+  fa922384-24f3-4e11-89b5-f7fa8af8da5a:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: c0f07903-c672-4f33-b571-4bf55e084345 # Copyright
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6540087f-7b4f-46a4-b9e4-0f97f22ad994
+            warning: null
+            width: 100
+        name: Copyright
+        uid: af51b0ae-02c9-4b23-8cc0-478e9dfb9ee4
+      -
+        elements:
+          -
+            fieldUid: 6ce968c0-0bf9-4ff9-92ed-cd3e942cf8e4 # Legal Navigation
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 027e9d2d-700d-4d9f-bbe3-4173108eeb4a
+            warning: null
+            width: 100
+        name: 'Legal Navigation'
+        uid: 589d81c7-54f5-44c1-9ac2-9e908cf81f79
+      -
+        elements:
+          -
+            fieldUid: 1755ebbe-91fc-4a2a-80cb-667cc2cf1795 # Locations
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 866378d3-3f17-401a-9e17-ed30854016ff
+            warning: null
+            width: 100
+        name: Locations
+        uid: d2e0683b-9629-4ae8-a43d-94a98bacadb6
+handle: footer
+name: Footer
+sortOrder: 8

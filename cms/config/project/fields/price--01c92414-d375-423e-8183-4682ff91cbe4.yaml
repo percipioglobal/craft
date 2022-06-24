@@ -1,0 +1,17 @@
+columnSuffix: uczvynyh
+contentColumnType: integer(10)
+fieldGroup: b692e225-204e-4347-bbca-cc383d5dee6a # Plugins
+handle: price
+instructions: null
+name: Price
+searchable: false
+settings:
+  currency: USD
+  defaultValue: null
+  max: null
+  min: 0
+  showCurrency: true
+  size: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Money

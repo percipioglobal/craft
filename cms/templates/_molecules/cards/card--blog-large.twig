@@ -1,0 +1,72 @@
+{%- extends '_molecules/cards/_card--props' -%}
+{%- import '_macros/atoms' as render -%}
+
+{#
+    ### PROPERTIES ###
+    ------------------
+
+    INHERITED FROM: `_molecules/cards/_card--props.twig`
+
+    ### COMPONENTS ###
+    ------------------
+
+    ## ATOMS
+
+    image--blog-large: `_atoms/images/image--card-large.twig`
+    text--card-description: `_atoms/texts/text--card-description.twig`
+    text--card-title: `_atoms/texts/text--card-title.twig`
+
+    ## Molecules
+
+    meta--blog: `_molecules/metas/meta--blog.twig`
+#}
+
+{%- block card -%}
+    <article class="mb-8 md:col-span-3 relative bg-white overflow-hidden {{ props.utilities -}}">
+
+        <div class="relative rounded-[20px] overflow-hidden">
+            {{- render.atom('image', 'blog-large', {
+                    image: content.cardImage.collect().first(),
+                    sizes: ['(max-width:768px) 100vw', '(min-width:768px) 66.6vw'],
+                    alt: content.title,
+                    placeholders: placeholders,
+                })
+            -}}
+        </div>
+
+        <header class="space-y-4 mt-8">
+            <h3>
+                {{- render.atom('text', 'card-title', {
+                    content: content.title ??? ''
+                }) -}}
+            </h3>
+
+            {%- include '_molecules/metas/meta--blog' ignore missing with {
+                authors: content.authors.collect(),
+                categories: content.blogCategories.collect(),
+                postDate: content.postDate,
+            } -%}
+
+            {%- if content.description ??? null -%}
+                <h4>
+                    {{- render.atom('text', 'card-description', {
+                        content: content.description,
+                        color: 'gray-800'
+                    }) -}}
+                </h4>
+            {%- endif -%}
+        </header>
+
+        {{- render.atom('link', 'card', {
+                url: content.url,
+                text: content.title,
+                ga: {
+                    category: 'Blog Card Large',
+                    action: 'click',
+                    label: content.title ??? null,
+                },
+            })
+        -}}
+
+    </article>
+{%- endblock -%}

@@ -1,17 +1,23 @@
-{%- extends "_atoms/texts/text--variables" -%}
+{%- extends '_atoms/texts/_text--props' -%}
 
 {#
-    ### OPTIONS ###
-    ---------------
+    ### PROPERTIES ###
+    ------------------
 
-    content: (STR) -- the actual content as a string
+    INHERITED FROM: `_atoms/texts/text--props.twig`
 
+    OMITTED
+    ---------
+
+    color
 #}
 
 {%- block text -%}
+
     {%- minify -%}
-        <div class="text-lg font-bold mb-8">
-            {{- values.content | typogrify(true) -}}
+        <div class="prose prose-standfirst-md lg:prose-standfirst my-12 md:my-18 lg:my-32 {{ props.alignment }} {{ props.utilities -}}">
+            <p>{{- props.content | typogrify(true) -}}</p>
         </div>
     {%- endminify -%}
+
 {%- endblock -%}

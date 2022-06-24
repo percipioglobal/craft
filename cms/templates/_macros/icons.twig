@@ -1,0 +1,17 @@
+{# fetch an icon from the Font Awesome library #}
+{%- macro fa_icon_lut(type) -%}
+	{%- set lut = {
+        'angle-right': 'far fa-angle-right',
+        'clipboard': 'far fa-clipboard',
+        'facebook': 'fab fa-facebook-f',
+        'twitter': 'fab fa-twitter',
+        'instagram': 'fab fa-instagram',
+        'linkedin': 'fab fa-linkedin-in',
+        'youtube': 'fab fa-youtube',
+        'vimeo': 'fab fa-vimeo-v',
+        'github': 'fab fa-github'
+	} -%}
+	{%- apply spaceless -%}
+		{{- lut[type] ??? 'far fa-hashtag' -}}
+	{%- endapply -%}
+{%- endmacro -%}

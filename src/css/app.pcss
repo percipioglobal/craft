@@ -1,3 +1,52 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+/**
+ * This injects Tailwind's base styles, which is a combination of
+ * Normalize.css and some additional base styles.
+ */
+@import "tailwindcss/base";
+
+/**
+  * This injects any component classes registered by plugins.
+  *
+*/
+@import "tailwindcss/components";
+
+/**
+  * This injects all of Tailwind's utility classes, generated based on your
+  * config file.
+  *
+  */
+@import "tailwindcss/utilities";
+
+
+/* Menu animation */
+.slide {
+    @apply
+        -translate-x-[95vw]
+}
+
+/* Hamburger button animation */
+.hamburger.close {
+    @apply
+        rotate-180
+}
+
+.hamburger.close span:nth-child(1) {
+    @apply
+        top-[9px]
+        rotate-45
+        translate-x-[-5px]
+}
+
+.hamburger.close span:nth-child(2) {
+    @apply
+        opacity-0
+}
+
+.hamburger.close span:nth-child(3) {
+    @apply
+        top-[9px]
+        -rotate-45
+        translate-x-[-5px]
+}
+
+

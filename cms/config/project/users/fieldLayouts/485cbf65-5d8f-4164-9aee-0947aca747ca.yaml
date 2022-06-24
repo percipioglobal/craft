@@ -1,0 +1,15 @@
+tabs:
+  -
+    elements:
+      -
+        fieldUid: 815594b4-d88f-4430-bf0c-5db890e1051f
+        instructions: null
+        label: null
+        required: false
+        tip: null
+        type: craft\fieldlayoutelements\CustomField
+        uid: de94dcc8-9a13-47cc-9960-acc8e0ef90e2
+        warning: null
+        width: 100
+    name: 'Profile Photo'
+    uid: 3794395d-e4b7-4701-8c28-c1bfd9ada805

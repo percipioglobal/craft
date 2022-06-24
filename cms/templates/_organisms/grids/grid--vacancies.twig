@@ -1,0 +1,43 @@
+{%- extends '_organisms/grids/_grid--props' -%}
+
+{#
+    ### PROPERTIES ###
+    ------------------
+
+    INHERITED FROM: `_organisms/grids/grid--props.twig`
+
+    EXTENDED
+    --------
+
+    ODD (READONLY): determines card size on the odd loop
+    EVEN (READONLY): determines card size on the even loop
+
+    ### COMPONENTS ###
+    ------------------
+
+    ## MOLECULES
+
+    card--vacancy: `_molecules/cards/card--vacancy`
+#}
+
+{%- block grid -%}
+
+    {%- minify -%}
+        <section class="grid grid-cols-1 gap-6 py-12 md:py-32 container max-w-[80ch] mx-auto">
+
+            {%- for card in props.cards -%}
+
+                {%- include '_molecules/cards/card--vacancy' ignore missing with {
+                    content: card,
+                    color: loop.index0 is even ? 'blue-500' : 'pink-500'
+                } -%}
+
+                {%- if props.cards|length  is odd -%}
+                    <div class="bg-gray-100 w-full rounded-4xl"></div>
+                {%- endif -%}
+
+            {%- endfor -%}
+
+        </section>
+    {%- endminify -%}
+{%- endblock -%}

@@ -1,0 +1,77 @@
+field: e4b2aca1-7f88-4186-92bb-f48a6f1c1c61 # Grid Items
+fieldLayouts:
+  9a18f7ce-56e1-47dd-b801-3615752eddf5:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 26759232-9c46-43b6-9279-f62bb6e4cf85 # Heading
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6d02b04f-c444-41c4-b648-c15e7344c460
+            warning: null
+            width: 100
+          -
+            fieldUid: b40e769e-e3a2-49a1-87b9-31237b6aa762 # Content
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c4355858-0821-4cc4-a636-907540ad0150
+            warning: null
+            width: 100
+        name: Content
+        uid: 327e08c0-2731-42f6-b77f-53e83fe3ef67
+fields:
+  26759232-9c46-43b6-9279-f62bb6e4cf85: # Heading
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: heading
+    instructions: 'Give a heading to the block. This is shown in the colour of the entry and in mono text'
+    name: Heading
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  b40e769e-e3a2-49a1-87b9-31237b6aa762: # Content
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: body
+    instructions: null
+    name: Content
+    searchable: false
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: null
+      purifyHtml: true
+      redactorConfig: Content.json
+      removeEmptyTags: false
+      removeInlineStyles: false
+      removeNbsp: false
+      showHtmlButtonForNonAdmins: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field

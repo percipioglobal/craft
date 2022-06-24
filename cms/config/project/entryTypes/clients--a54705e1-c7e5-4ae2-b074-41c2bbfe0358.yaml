@@ -1,0 +1,73 @@
+fieldLayouts:
+  f8b23112-8dc4-4c27-a589-c7c1a5e102a1:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 0b6f326f-ba01-489f-8330-5d8ef69f1a8c
+            warning: null
+            width: 100
+          -
+            fieldUid: e691301b-7484-40be-a3d4-c3bc590de959 # Content Builder
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 45bfdfac-4891-433b-b067-4e8aa7f676b0
+            warning: null
+            width: 100
+        name: Content
+        uid: 01c5d670-d5a7-4dbc-8630-a1bbc3da55f4
+      -
+        elements:
+          -
+            fieldUid: 2bcee070-9832-4e9a-a3d1-51566028022e # OG Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f196006b-9e26-4a47-bf99-f307882f77be
+            warning: null
+            width: 100
+          -
+            fieldUid: 6a3feb81-50ce-467a-8aca-b5d4cc12aed0 # Description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 018bd107-0787-4822-abec-f05b1e31d816
+            warning: null
+            width: 100
+        name: SEO
+        uid: c5532c55-5ee4-492c-84df-7a689b7a948a
+handle: clients
+hasTitleField: true
+name: Clients
+section: dbc716a7-2122-4b92-b942-471970256a35 # Clients
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

@@ -1,0 +1,64 @@
+{%- extends '_molecules/cards/_card--props' -%}
+{%- import '_macros/atoms' as render -%}
+
+{#
+    ### PROPERTIES ###
+    ------------------
+
+    INHERITED FROM: `_molecules/cards/_card--props.twig`
+
+    ### COMPONENTS ###
+    ------------------
+
+    ## ATOMS
+
+    image--card-large: `_atoms/images/image--card-large`
+    text--card-subtitle: `_atoms/texts/text--card-subtitle`
+    text--card-title: `_atoms/texts/text--card-title`
+#}
+
+{%- block card -%}
+
+    <article class="relative bg-white shadow-2xl rounded-4xl p-6 pb-9 overflow-hidden transition-shadow ease-in-out hover:shadow-zinc-500 {{ props.utilities -}}">
+        <div class="relative rounded-[20px] overflow-hidden -mt-4 -mx-4 md:m-0">
+            {{- render.atom('image', 'card-small', {
+                    image: props.content.cardImage.collect().first(),
+                    sizes: ['(max-width:768px) 100vw', '(min-width:768px) 33.3vw'],
+                    alt: props.content.title,
+                    placeholders: placeholders,
+                    ratio: 'aspect-16/9 lg:aspect-[auto]',
+                    utilities: 'lg:h-[320px] xl:h-[475px] ' ~ props.imagePos
+                })
+            -}}
+        </div>
+
+        <header class="space-y-4 mt-8">
+            <h3>
+                {{- render.atom('text', 'card-title', {
+                    content: props.content.title ??? ''
+                }) -}}
+            </h3>
+
+            {%- if props.content.subtitle ??? null -%}
+                <h4>
+                    {{- render.atom('text', 'card-subtitle', {
+                        content: props.content.subtitle
+                    }) -}}
+                </h4>
+            {%- endif -%}
+        </header>
+
+        <div class="bg-{{- props.color }} h-3 absolute bottom-0 left-0 w-full"></div>
+
+        {{- render.atom('link', 'card', {
+                url: props.content.url,
+                text: props.content.title,
+                ga: {
+                    category: 'Primary Card Small',
+                    action: 'click',
+                    label: props.content.title ??? null,
+                },
+            })
+        -}}
+    </article>
+{%- endblock -%}

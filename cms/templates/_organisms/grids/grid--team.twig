@@ -1,0 +1,45 @@
+{%- extends '_organisms/grids/_grid--props' -%}
+
+{#
+    ### PROPERTIES ###
+    ------------------
+
+    INHERITED FROM: `_organisms/grids/grid--props.twig`
+
+    EXTENDED
+    --------
+
+    ### COMPONENTS ###
+    ------------------
+
+    ## MOLECULES
+
+    card--primary-small: `_molecules/cards/card--primary-small`
+#}
+
+{%- block grid -%}
+
+    {%- minify -%}
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-12 md:py-32 container max-w-screen-xl mx-auto">
+
+            {%- for card in props.cards -%}
+
+                {%- set swatch = swatch(card.swatch) -%}
+                {%- set color = swatch.label != 'unset' ? swatch.primary : (loop.index0 is odd ? 'blue-500' : 'pink-500') -%}
+
+                {%- include '_molecules/cards/card--primary-small' ignore missing with {
+                    content: {
+                        title: card.title,
+                        subtitle: card.role,
+                        cardImage: card.cardImage,
+                        url: card.url
+                    },
+                    color: color,
+                    imagePos: 'object-center lg:object-top'
+                } -%}
+
+            {%- endfor -%}
+
+        </section>
+    {%- endminify -%}
+{%- endblock -%}

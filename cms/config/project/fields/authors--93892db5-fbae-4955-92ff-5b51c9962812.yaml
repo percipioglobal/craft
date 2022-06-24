@@ -1,0 +1,23 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 94b4d5ac-d7ea-4241-a6cb-92b39f482f99 # Common
+handle: authors
+instructions: 'Select one or more authors who have created this content'
+name: Authors
+searchable: false
+settings:
+  allowSelfRelations: false
+  localizeRelations: false
+  maxRelations: null
+  minRelations: null
+  selectionLabel: 'Add Author'
+  showSiteMenu: true
+  source: null
+  sources:
+    - 'section:e80a7183-56ec-49d8-81a8-405444fc3077' # The Team
+  targetSiteId: 5da841b1-ca0d-46ff-8bb1-04d6c889ac54 # Percipio
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Entries

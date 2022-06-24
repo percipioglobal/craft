@@ -1,0 +1,107 @@
+fieldLayouts:
+  2e28fd6c-9aa9-4a1c-85a5-ab8b30fb59d3:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: ff4e8f6c-e609-4d9e-abfe-3f7619379146
+            warning: null
+            width: 100
+          -
+            fieldUid: 6a3feb81-50ce-467a-8aca-b5d4cc12aed0 # Description
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 858c6e1d-e24f-487f-8cc2-fbda2d57bb1b
+            warning: null
+            width: 100
+          -
+            fieldUid: e691301b-7484-40be-a3d4-c3bc590de959 # Content Builder
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b0b4bfdf-0e5c-4ae1-a4ef-58c1c1bf5d46
+            warning: null
+            width: 100
+        name: Content
+        uid: f0f1f2ae-bcf0-4f16-a96e-a884efce7413
+      -
+        elements:
+          -
+            fieldUid: baad7fb6-18f2-4914-bc33-e1c48da96896 # Card Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 68b80f17-cae8-4c0c-aea6-9223f7131d2f
+            warning: null
+            width: 100
+          -
+            fieldUid: 8ce2faf2-a20a-4547-8145-4e3f9e75eb87 # Blog Categories
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8c364b89-212f-4b4c-b80a-d6fff8e02208
+            warning: null
+            width: 100
+          -
+            fieldUid: 93892db5-fbae-4955-92ff-5b51c9962812 # Authors
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: cff2b48d-7ad7-4e85-9f6f-8acb407ad88e
+            warning: null
+            width: 100
+        name: Metadata
+        uid: ce68961c-850b-4771-8937-dc4c6f67d499
+      -
+        elements:
+          -
+            fieldUid: 2bcee070-9832-4e9a-a3d1-51566028022e # OG Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8431638b-7db5-4320-ba46-cbe023321b77
+            warning: null
+            width: 100
+        name: SEO
+        uid: 52595672-8092-4304-a719-e1b31665d5e6
+handle: blog
+hasTitleField: true
+name: Blog
+section: 9de367ab-77b8-47bb-bbc3-63e79a202c3e # Blog
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

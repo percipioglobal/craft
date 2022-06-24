@@ -1,4 +1,4 @@
-{# -- Layout template for error pages -- #}
+{# -- Layout template for HTML pages -- #}
 {#
     ┌─────────────────────────────────────────────────────────────────────────────┐
     │ ┌─────────────────────────────────────────────────────────────────────────┐ │
@@ -17,27 +17,30 @@
     │                                  bodyHtml                                   │
     └─────────────────────────────────────────────────────────────────────────────┘
 #}
-{%- extends "_boilerplate/_layouts/generic-page-layout.twig" -%}
+{% extends '_boilerplate/_layouts/base-html-layout.twig' %}
 
-{%- block content -%}
-{%- endblock -%}
+{# -- Any <meta> tags that should be included in the <head> #}
+{% block headMeta %}
+{% endblock headMeta %}
 
-{%- block subcontent -%}
-    <section>
-        <div class="container mx-auto py-8">
-            <div class="text-center p-8 mb-8">
-                <h1 class="font-mono italic font-bold text-5xl pt-4">
-                    {{ entry.errorHeadline ?? 'Error' }}
-                </h1>
-                <p class="font-sans text-xl pt-4">
-                    {{ (entry.errorText ?? 'An error has occurred.') |nl2br }}
-                </p>
-            </div>
-        </div>
-    </section>
+{# -- Any <link> tags that should be included in the <head> #}
+{% block headLinks %}
+{% endblock headLinks %}
 
-{%- endblock -%}
+{# -- Any CSS that should be included before </head> -- #}
+{% block headCss %}
+{% endblock headCss %}
 
-{# -- Any JavaScript that should be included before </body> -- #}
-{%- block bodyJs -%}
-{%- endblock bodyJs -%}
+{% block entry %}
+{% endblock entry %}
+
+{# -- Page body -- #}
+{% block bodyHtml %}
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    {# -- HTML Footer -- #}
+    {% include '_boilerplate/_partials/global-footer.twig' %}
+{% endblock bodyHtml %}

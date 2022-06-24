@@ -1,0 +1,14 @@
+columnSuffix: null
+contentColumnType: boolean
+fieldGroup: 94b4d5ac-d7ea-4241-a6cb-92b39f482f99 # Common
+handle: showAsButton
+instructions: null
+name: 'Show link as button'
+searchable: false
+settings:
+  default: false
+  offLabel: null
+  onLabel: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Lightswitch

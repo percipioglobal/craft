@@ -1,0 +1,63 @@
+{%- extends '_organisms/ctas/_cta--props' -%}
+{% import '_macros/atoms' as render %}
+
+{#
+    ### PROPERTIES ###
+    ------------------
+
+    INHERITED FROM: `_organisms/ctas/_cta--props.twig`
+
+    ### COMPONENTS ###
+    ------------------
+
+    ## ATOMS
+
+    text--h2: `_atoms/texts/text--h2.twig`
+    text--description: `_atoms/texts/text--description.twig`
+    button--primary: `_atoms/buttons/button--primary.twig`
+    button--tertiary: `_atoms/buttons/button--tertiary.twig`
+#}
+
+{%- block cta -%}
+    {# custom #}
+    {%- set classes = {
+        background: props.background.secondary ? 'bg-gradient-to-r from-' ~ props.background.primary ~ ' to-' ~ props.background.secondary : 'bg-' ~ props.background.primary
+    } -%}
+    {%- set buttonType = props.background.secondary ? 'tertiary' : 'primary' -%}
+
+    {%- minify -%}
+        <section class="py-12 md:py-32 {{ classes.background -}}">
+            <div class="text-center container max-w-screen-xl mx-auto">
+                <h2>{{- render.atom('text', 'h2', {
+                    content: props.heading,
+                    color: props.background.primary == 'white' ? 'gray-800' : 'white',
+                }) -}}</h2>
+
+                {%- if content -%}
+                    {{- render.atom('text', 'description', {
+                        content: props.content,
+                        color: props.background.primary == 'white' ? 'text-gray-600' : 'text-white',
+                        alignment: 'text-center',
+                        utilities: 'mt-8'
+                    }) -}}
+                {%- endif -%}
+
+                {%- if props.button -%}
+                    {{- render.atom('button', buttonType, {
+                        url: props.button.getUrl() ??? null,
+                        text: props.button.getText() ??? null,
+                        target: props.button.getTarget() ??? '_self',
+                        icon: 'angle-right',
+                        ga: {
+                            category: 'Call to action',
+                            action: 'click',
+                            label: props.button.getUrl() ??? null,
+                        },
+                        utilities: 'mt-4 md:mt-8'
+                    }) -}}
+                {%- endif -%}
+            </div>
+        </section>
+    {%- endminify -%}
+
+{%- endblock -%}

@@ -1,0 +1,50 @@
+{%- extends '_atoms/links/_link--props' -%}
+{%- import '_macros/functions' as parse -%}
+
+{#
+    ### PROPERTIES ###
+    ------------------
+
+    INHERITED FROM: `_atoms/links/link--props.twig`
+
+    ### FUNCTIONS ###
+    -----------------
+    ga: parse google analytics attributes
+#}
+
+{%- block link -%}
+
+    {%- set classes = {
+        '_default': 'inline-flex text-center',
+        'animation': 'transition-colors duration-200 ease-in-out',
+        'border': props.active ? 'border-r-4 border-blue-500 lg:border-0' : '',
+        'color': props.color ~ ' ' ~ (props.active ? 'lg:text-blue-500' : ''),
+        'focus' : 'focus:outline focus:outline-4 focus:outline-blue-500/30',
+        'font': 'font-primary text-base sm:text-3xl lg:text-base font-bold',
+        'hover': 'hover:text-blue-500',
+        'padding': 'py-3 px-5',
+        'cursor': 'cursor-pointer',
+    }-%}
+
+    {%- minify -%}
+
+        <a
+            {{ props.url ? 'href=' ~ props.url : '' }}
+            {{ parse.ga(props.ga) }}
+            {{ props.target ? 'target=' ~ props.target : '' }}
+            aria-label="{{- props.text -}}"
+            class="{{ classes._default }} {{ classes.animation }} {{ classes.border }} {{ classes.color }} {{ classes.focus }} {{ classes.font }} {{ classes.hover }} {{ classes.padding }} {{ classes.cursor }} {{ props.utilities }}"
+        >
+            <span class="sr-only">
+                {{- props.target == '_self' ? 'Go to: ' : 'Go to external page: ' -}}
+            </span>
+
+            <span>
+                {{- props.text -}}
+            </span>
+
+        </a>
+
+    {%- endminify -%}
+
+{%- endblock -%}

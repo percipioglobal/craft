@@ -1,0 +1,14 @@
+{%- import '_macros/atoms' as render -%}
+{%- import '_macros/functions' as parse -%}
+
+{%- set props = {
+    authors: authors ??? null,
+    categories: categories ??? null,
+    postDate: postDate ??? null,
+} -%}
+
+<p class="my-2 font-mono text-base tracking-tighter text-gray-600">
+
+    {{- parse.categories(categories) }} by {{ parse.authors(props.authors, props.categories) }} on the <time datetime="{{- props.postDate|date('c') -}}">{{ props.postDate|date('jS F Y') -}}</time>
+
+</p>
