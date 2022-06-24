@@ -1,0 +1,148 @@
+field: dbc7a062-ef19-48ca-bd6f-acda62a18b78 # Hero Builder
+fieldLayouts:
+  89badc98-776e-4c7c-bd92-c68959f103b0:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: d9bfce22-613d-44cc-bdac-b06404b4a8ea # Heading
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c2268c87-3e98-4362-9ad0-f049a4768f49
+            warning: null
+            width: 100
+          -
+            fieldUid: 80a6157c-e287-49ae-a937-228b86f1ffa2 # Buttons
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ee5a8ebd-45fa-4672-9877-069987d93c84
+            warning: null
+            width: 100
+          -
+            fieldUid: efb7b090-ee57-4c4f-a7e9-f8cbc9b9c7ae # Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2dca7f74-c454-417a-b2b6-28e415aa03fd
+            warning: null
+            width: 100
+        name: Content
+        uid: 25e21097-6c82-4437-9970-cfefaf1a3b79
+fields:
+  80a6157c-e287-49ae-a937-228b86f1ffa2: # Buttons
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: buttons
+    instructions: null
+    name: Buttons
+    searchable: false
+    settings:
+      blockTypeFields: 0
+      changedFieldIndicator: 306958310
+      columns:
+        __assoc__:
+          -
+            - 6776ad6d-4fab-4c6f-a948-20e376cc6820 # Button
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+      contentTable: '{{%stc_72_buttons}}'
+      fieldLayout: table
+      maxRows: 2
+      minRows: null
+      propagationKeyFormat: null
+      propagationMethod: all
+      selectionLabel: null
+      staticField: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: verbb\supertable\fields\SuperTableField
+  d9bfce22-613d-44cc-bdac-b06404b4a8ea: # Heading
+    columnSuffix: mdgjldhh
+    contentColumnType: text
+    fieldGroup: null
+    handle: heading
+    instructions: null
+    name: Heading
+    searchable: false
+    settings:
+      availableTransforms: '*'
+      availableVolumes: ''
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: null
+      purifyHtml: true
+      redactorConfig: Title.json
+      removeEmptyTags: false
+      removeInlineStyles: false
+      removeNbsp: false
+      showHtmlButtonForNonAdmins: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+  efb7b090-ee57-4c4f-a7e9-f8cbc9b9c7ae: # Image
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: cardImage
+    instructions: null
+    name: Image
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: true
+      allowedKinds: null
+      defaultUploadLocationSource: 'volume:b4a06662-5fb9-4347-9b76-b1e291db3b88' # Cards
+      defaultUploadLocationSubpath: null
+      localizeRelations: false
+      maxRelations: 1
+      minRelations: null
+      previewMode: full
+      restrictFiles: false
+      restrictLocation: true
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:b4a06662-5fb9-4347-9b76-b1e291db3b88' # Cards
+      restrictedLocationSubpath: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Asset
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\assets\AssetCondition
+      selectionLabel: 'Add an image'
+      showSiteMenu: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      source: null
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: true
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+handle: heroSecondary
+name: 'Hero Secondary'
+sortOrder: 2

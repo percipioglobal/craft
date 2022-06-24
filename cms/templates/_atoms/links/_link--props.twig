@@ -1,0 +1,23 @@
+{#
+    ### PROPS ###
+    ---------------
+
+    ga: (OBJ) -- add a category / action / label for GTM tracking
+    target: (STR) -- add _blank if you want to open the button in a new window
+    text: (STR) -- the text for the button
+    url: (STR) -- the url for the button
+    utlities: (STR) -- the link utilities
+#}
+
+{%- set props = {
+    active: options.active ??? false,
+    url: options.url ??? null,
+    text: options.text ??? '',
+    utilities: options.utilities ??? null,
+    target: options.target ??? null,
+    ga: options.ga ??? null,
+    color: options.color ??? 'text-gray-900'
+} -%}
+
+{%- block link -%}
+{%- endblock -%}

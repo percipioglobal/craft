@@ -1,0 +1,37 @@
+{% do craft.eagerBeaver.eagerLoadElements(entry, [
+    'heroBuilder',
+    'heroBuilder.heroPrimary:buttons',
+    'heroBuilder.heroPrimary:buttons.target',
+    'heroBuilder.heroPrimary:heroImage',
+    'heroBuilder.heroSecondary:buttons',
+    'heroBuilder.heroSecondary:buttons.target',
+    'heroBuilder.heroSecondary:cardImage',
+    ])
+%}
+
+{%- minify -%}
+    {%- for block in content.heroBuilder -%}
+
+        {%- switch block.type -%}
+
+            {%- case 'heroPrimary' -%}
+
+                {%- include '_organisms/heroes/hero--primary' ignore missing with {
+                    content: block,
+                } -%}
+
+            {%- case 'heroSecondary' -%}
+
+                {%- include '_organisms/heroes/hero--secondary' ignore missing with {
+                    content: block,
+                } -%}
+
+            {%- default -%}
+                {%- include '_organisms/heroes/hero--primary' ignore missing with {
+                    content: block,
+                } -%}
+
+        {%- endswitch -%}
+
+    {%- endfor -%}
+{%- endminify -%}

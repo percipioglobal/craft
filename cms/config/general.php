@@ -33,6 +33,7 @@ return [
 
     // Craft config settings from constants
     'cacheDuration' => false,
+    'cpTrigger' => 'cp',
     'defaultSearchTermOptions' => [
         'subLeft' => true,
         'subRight' => true,

@@ -1,0 +1,55 @@
+{%- import '_macros/atoms' as render -%}
+
+{#
+    ### PROPERTIES ###
+    ------------------
+
+    items: list of grid items
+    utilities: TW classes
+
+    ## EXTENDED
+    -----------
+
+
+    ### COMPONENTS ###
+    ------------------
+
+    ## MOLECULES
+
+    grid-item--content: `_molecules/grid-items/grid-item--content`
+#}
+
+{%- set items = items ??? null -%}
+{%- set callout = callout ??? '' -%}
+{%- set utilities = utilities ??? '' -%}
+
+{%- minify -%}
+    <section class="container max-w-screen-xl mx-auto py-8 md:py-16 {{ utilities -}}">
+
+        <div class="md:flex">
+            <div class="w-full md:w-1/2 mb-10 md:mb-0 relative">
+                <h2 class="sticky top-1/2">
+                    <span class="animate" data-animation="fadeIn">
+                        {{- render.atom('text', 'h2', {
+                            content: callout,
+                        }) -}}
+                    </span>
+                </h2>
+            </div>
+
+            <div class="w-full md:w-1/2 md:min-h-[80vh] pl-0 md:pl-20">
+                <div class="animate" data-animation="slideInRightToLeft">
+                    {%- for item in items.collect() ??? null -%}
+
+                        {%- include '_molecules/grid-items/grid-item--content' ignore missing with {
+                            item: item,
+                            utilities: not loop.last ? 'mb-10 md:mb-18 lg:mb-24' : ''
+                        } -%}
+
+                    {%- endfor -%}
+                </div>
+            </div>
+        </div>
+
+    </section>
+{%- endminify -%}

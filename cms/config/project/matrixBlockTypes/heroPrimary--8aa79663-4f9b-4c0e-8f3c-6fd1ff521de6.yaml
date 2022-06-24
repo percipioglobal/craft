@@ -1,0 +1,118 @@
+field: dbc7a062-ef19-48ca-bd6f-acda62a18b78 # Hero Builder
+fieldLayouts:
+  49b2df8f-cf45-4beb-afd2-207579b23d01:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 2075123a-3328-41eb-a8ad-ce1987d26d66 # Overline
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: fd31995e-ab1f-4896-b250-f9f5cc28275b
+            warning: null
+            width: 100
+          -
+            fieldUid: df8a0480-96ec-4e76-bc8f-16b5e4f2fa3b # Heading
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 74a1265f-0f33-4689-8662-0f0c232da679
+            warning: null
+            width: 100
+          -
+            fieldUid: 670882de-3f12-4bfd-b44e-7f5132526ff9 # Description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 353e0594-7f1a-4074-88e9-05d9a39e461e
+            warning: null
+            width: 100
+        name: Content
+        uid: b54a377c-67b1-4122-97af-d6c7cd75fa5b
+fields:
+  670882de-3f12-4bfd-b44e-7f5132526ff9: # Description
+    columnSuffix: idtsciuz
+    contentColumnType: text
+    fieldGroup: null
+    handle: description
+    instructions: null
+    name: Description
+    searchable: false
+    settings:
+      availableTransforms: '*'
+      availableVolumes: ''
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: null
+      purifyHtml: true
+      redactorConfig: Simple.json
+      removeEmptyTags: false
+      removeInlineStyles: false
+      removeNbsp: false
+      showHtmlButtonForNonAdmins: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+  2075123a-3328-41eb-a8ad-ce1987d26d66: # Overline
+    columnSuffix: suxtbftm
+    contentColumnType: text
+    fieldGroup: null
+    handle: overline
+    instructions: null
+    name: Overline
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  df8a0480-96ec-4e76-bc8f-16b5e4f2fa3b: # Heading
+    columnSuffix: ukdeceos
+    contentColumnType: text
+    fieldGroup: null
+    handle: heading
+    instructions: null
+    name: Heading
+    searchable: false
+    settings:
+      availableTransforms: '*'
+      availableVolumes: ''
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: null
+      purifyHtml: true
+      redactorConfig: Title.json
+      removeEmptyTags: false
+      removeInlineStyles: false
+      removeNbsp: false
+      showHtmlButtonForNonAdmins: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+handle: heroPrimary
+name: 'Hero Primary'
+sortOrder: 1

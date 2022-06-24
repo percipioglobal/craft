@@ -1,0 +1,21 @@
+{%- extends '_molecules/images/_image--props' -%}
+{%- import '_macros/atoms' as render -%}
+
+{%- block image -%}
+    {%- minify -%}
+        {%- if props.image -%}
+            <div class="hidden md:block absolute right-0 top-0 w-[55vw] h-full">
+                <div class="animate w-full h-full" data-animation="fadeIn">
+                    {{- render.atom('image', 'grid-half', {
+                            image: props.image.collect().first() ??? null,
+                            sizes: ['(max-width:768px) 100vw', '(min-width:768px) 55vw'],
+                            alt: content.title,
+                            placeholders: placeholders,
+                            utilities: 'object-center object-contain w-full h-full'
+                        })
+                    -}}
+                </div>
+            </div>
+        {%- endif -%}
+    {%- endminify -%}
+{%- endblock -%}

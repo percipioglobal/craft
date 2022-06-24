@@ -1,0 +1,41 @@
+{%- import '_macros/atoms' as render -%}
+
+{#
+    ### PROPERTIES ###
+    ------------------
+
+    items: list of grid items
+    utilities: TW classes
+
+    ## EXTENDED
+    -----------
+
+
+    ### COMPONENTS ###
+    ------------------
+
+    ## MOLECULES
+
+    grid-item--content: `_molecules/grid-items/grid-item--content`
+#}
+
+{%- set items = items|default(null) -%}
+{%- set utilities = utilities|default('') -%}
+
+{%- minify -%}
+    <section class="py-8 md:py-16 overflow-x-hidden {{ utilities -}}">
+
+        {%- for item in items.gridItems.collect() ??? null -%}
+
+            {%- include '_molecules/grid-items/grid-item--content-image-half-background' ignore missing with {
+                item: item,
+                settings: {
+                    position: loop.index0 is even ? 'left' : 'right',
+                    background: swatch(item.background).primary ??? null
+                }
+            } -%}
+
+        {%- endfor -%}
+
+    </section>
+{%- endminify -%}

@@ -1,0 +1,15 @@
+{#
+    ### PROPERTIES ###
+    ---------------
+
+    image: (STR) -- The image object
+    utlities: (STR) -- the utilities
+#}
+
+{%- set props = {
+    image: image ??? null,
+    utilities: utilities ??? null,
+} -%}
+
+{% block image %}
+{% endblock %}

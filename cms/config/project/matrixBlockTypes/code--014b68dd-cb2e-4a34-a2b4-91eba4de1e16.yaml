@@ -1,0 +1,249 @@
+field: e691301b-7484-40be-a3d4-c3bc590de959 # Content Builder
+fieldLayouts:
+  fe906a3c-e79c-4f19-9559-705e392f27b8:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 633b1b96-cdb8-4c97-a045-aa63d306b41c # Language
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a343c7b5-5278-4a21-971f-e841b6fa038e
+            warning: null
+            width: 100
+          -
+            fieldUid: b43847a9-d877-4a56-ba8e-39f6c25c85cb # Code
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7750644f-7d9c-4518-ae88-72ee0e583ca6
+            warning: null
+            width: 100
+          -
+            fieldUid: 1cc6350b-c0ba-4f7f-8034-dbcec8643016 # Filename
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: fc1b2763-5b4c-4e9c-b239-2ce4bac317aa
+            warning: null
+            width: 100
+        name: Content
+        uid: e223bf44-5252-468d-9f0a-602c67369de1
+fields:
+  1cc6350b-c0ba-4f7f-8034-dbcec8643016: # Filename
+    columnSuffix: eshbcqtk
+    contentColumnType: text
+    fieldGroup: null
+    handle: filename
+    instructions: null
+    name: Filename
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  633b1b96-cdb8-4c97-a045-aa63d306b41c: # Language
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: codeLanguage
+    instructions: null
+    name: Language
+    searchable: false
+    settings:
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - Bash
+            -
+              - value
+              - bash
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - CSS
+            -
+              - value
+              - css
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Docker
+            -
+              - value
+              - docker
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Git
+            -
+              - value
+              - git
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - GraphQL
+            -
+              - value
+              - graphql
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Javascript
+            -
+              - value
+              - javascript
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - JSON
+            -
+              - value
+              - json
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Markdown
+            -
+              - value
+              - markdown
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Markup
+            -
+              - value
+              - markup
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - PHP
+            -
+              - value
+              - php
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - SQL
+            -
+              - value
+              - sql
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Twig
+            -
+              - value
+              - twig
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - TypeScript
+            -
+              - value
+              - typescript
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Yaml
+            -
+              - value
+              - yaml
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+  b43847a9-d877-4a56-ba8e-39f6c25c85cb: # Code
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: code
+    instructions: null
+    name: Code
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: true
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: code
+name: Code
+sortOrder: 15

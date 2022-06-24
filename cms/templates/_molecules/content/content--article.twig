@@ -1,37 +1,31 @@
-{%- import '_macros/atoms' as render -%}
+{%- extends '_molecules/content/_content--props' -%}
 
-{%- if block.getPrev() -%}
+{#
+    ### PROPERTIES ###
+    ------------------
 
-    {%- if block.getPrev().type == 'blockQuote' and block.getPrev().quoteType == 'pullQuote' -%}
-        {%- set quote = true -%}
-    {%- endif -%}
+    INHERITED FROM: `_molecules/content/_content--props.twig`
 
-    {%- if block.getPrev().type == 'singleImage' and (block.getPrev().position == 'left' or block.getPrev().position == 'right') -%}
-        {%- set image = true -%}
-    {%- endif -%}
+    ### COMPONENTS ###
+    ------------------
 
-{%- endif -%}
+    ## MOLECULES
 
-{%- set article = {
-    content: content.article,
-    options: {
-        hasQuote: quote ?? null,
-        hasImage: image ?? null,
-    }
-} -%}
+    content--prose: `_atoms/content/content--prose.twig`
+#}
 
-{%- set collapse = false -%}
+{%- block copy -%}
 
-{%- if article.options.hasQuote or article.options.hasImage -%}
-    {%- set collapse = true -%}
-{%- endif -%}
+    {%- minify -%}
 
-{%- minify -%}
-
-    <div class="container mx-auto max-w-screen-lg my-10">
-        <div class="prose md:prose-lg">
-            {{- render.atom('text', 'content', { content: content.article }) -}}
+        <div class="container max-w-[80ch] mx-auto my-5 md:my-10 {{ props.utilities -}}">
+            <div class="animate" data-animation="slideBottomToTop">
+                {%- include '_molecules/content/content--prose' ignore missing with {
+                    content: props.content,
+                } -%}
+            </div>
         </div>
-    </div>
 
-{%- endminify -%}
+    {%- endminify -%}
+
+{%- endblock -%}

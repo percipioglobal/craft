@@ -1,0 +1,9 @@
+baseUrl: $SITE_URL
+enabled: true
+handle: default
+hasUrls: true
+language: en-GB
+name: Percipio
+primary: true
+siteGroup: f89601e9-4ba9-4a48-9e99-350aa9914912 # Default
+sortOrder: 1

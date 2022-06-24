@@ -1,0 +1,31 @@
+{%- import '_macros/atoms' as render -%}
+
+<div class="container mx-auto max-w-screen-xl flex flex-col md:flex-row justify-center flex-nowrap md:space-x-8">
+    {%- if copyright -%}
+        {{- render.atom('text', 'copyright', {
+            alignment: 'text-center md:text-left',
+            color: 'text-white',
+            content: copyright,
+            utilities: 'py-3 order-2 md:order-1',
+        }) -}}
+    {%- endif -%}
+    {%- if legals -%}
+        <div class="flex order-1 md:order-2 w-full md:w-auto justify-center">
+            {%- for legal in legals -%}
+                {{- render.atom('link', 'footer', {
+                    url: legal.url ??? null,
+                    text: legal.title ??? null,
+                    target: '_self',
+                    active: entry.id == legal.target.collect().first().id ??? null,
+                    ga: {
+                        category:'Legal link',
+                        action:'click',
+                        label: legal.title ??? null,
+                    },
+                    color: 'text-white',
+                    utilities: 'py-3'
+                }) -}}
+            {%- endfor -%}
+        </div>
+    {%- endif -%}
+</div>

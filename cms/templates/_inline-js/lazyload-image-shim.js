@@ -16,6 +16,6 @@ if ('loading' in HTMLImageElement.prototype) {
     script.type = 'module';
     script.src =
         '{# @TODO - include lazyload shim JS script #}';
-        '{{ craft.vite.entry("src/js/utils/lazysizes-wrapper.ts") }}';
+    '{{ craft.vite.entry("src/js/utils/lazysizes-wrapper.ts") }}';
     document.body.appendChild(script);
 }

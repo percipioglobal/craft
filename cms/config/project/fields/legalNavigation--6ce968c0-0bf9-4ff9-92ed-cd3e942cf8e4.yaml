@@ -1,0 +1,34 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 91df968c-fe4d-4f3b-b3db-0abde5d64dfb # Footer
+handle: legalNavigation
+instructions: null
+name: 'Legal Navigation'
+searchable: false
+settings:
+  allowSelfRelations: false
+  localizeRelations: false
+  maxRelations: null
+  minRelations: null
+  selectionCondition:
+    __assoc__:
+      -
+        - elementType
+        - craft\elements\Entry
+      -
+        - fieldContext
+        - global
+      -
+        - class
+        - craft\elements\conditions\entries\EntryCondition
+  selectionLabel: 'Add a legal navigation item'
+  showSiteMenu: false
+  source: null
+  sources:
+    - 'section:ef841ba4-7bcd-4ef5-9c12-96377bf7fba2' # Pages
+  targetSiteId: null
+  validateRelatedElements: true
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Entries

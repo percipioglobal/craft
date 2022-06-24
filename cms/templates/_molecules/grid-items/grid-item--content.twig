@@ -1,0 +1,51 @@
+{%- extends '_molecules/grid-items/_grid-item--props' -%}
+{%- import '_macros/atoms' as render -%}
+
+{#
+    ### PROPERTIES ###
+    ------------------
+
+    INHERITED FROM: `_molecules/grid-items/_grid-item--props.twig`
+
+    ### COMPONENTS ###
+    ------------------
+
+    ## ATOMS
+    text--h2: `_atoms/texts/text--h2.twig`
+    text--h4: `_atoms/texts/text--h4.twig`
+
+    ## MOLECULES
+    content--prose: `_molecules/content/content--prose.twig`
+#}
+
+{%- block grid -%}
+    {%- minify -%}
+
+        {%- set props = props|merge({
+            item: {
+                headingCallout: props.item.headingCallout ??? '',
+                heading: props.item.heading ??? '',
+                body: props.item.body ??? '',
+                image: props.item.image ??? ''
+            },
+            settings: {
+                position: props.settings.position ??? 'right',
+            }
+        }) -%}
+
+        <article class="flex w-full {{ props.utilities -}}">
+            <div>
+                <h3 class="mb-6">
+                    {{- render.atom('text', 'h4', {
+                        content: props.item.heading,
+                        color: 'pink-500'
+                    }) -}}
+                </h3>
+
+                {%- include '_molecules/content/content--prose' ignore missing with {
+                    content: props.item.body,
+                } -%}
+            </div>
+        </article>
+    {%- endminify -%}
+{%- endblock -%}

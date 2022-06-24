@@ -1,0 +1,18 @@
+{%- set team =
+    craft.entries
+    .section('team')
+    .with([
+        'cardImage'
+    ])
+    .collect()
+-%}
+
+{%- block content -%}
+    {%- include '_organisms/builders/builder--hero' ignore missing with {
+        content: entry,
+    } -%}
+
+    {%- include '_organisms/grids/grid--team' ignore missing with {
+        cards: team,
+    } -%}
+{%- endblock -%}

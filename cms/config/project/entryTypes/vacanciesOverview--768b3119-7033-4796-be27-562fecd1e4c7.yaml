@@ -1,0 +1,73 @@
+fieldLayouts:
+  42eabe2c-60d8-43a8-83f8-051bc3027d78:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 6e71e6b6-ad47-4701-b853-a3a64995b1f7
+            warning: null
+            width: 100
+          -
+            fieldUid: dbc7a062-ef19-48ca-bd6f-acda62a18b78 # Hero Builder
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 73e2b36f-c048-498c-9d71-8e3fe2b02635
+            warning: null
+            width: 100
+        name: Content
+        uid: 695d06dc-f361-4b98-8fda-b7ba73c593ff
+      -
+        elements:
+          -
+            fieldUid: 2bcee070-9832-4e9a-a3d1-51566028022e # OG Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: da000e26-a42f-471a-894b-a69382e1d25e
+            warning: null
+            width: 100
+          -
+            fieldUid: 6a3feb81-50ce-467a-8aca-b5d4cc12aed0 # Description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5af65de8-f809-4274-814a-f4be62b11977
+            warning: null
+            width: 100
+        name: SEO
+        uid: 3d5eb2f0-13ac-49d4-bebf-daec84b5de94
+handle: vacanciesOverview
+hasTitleField: true
+name: 'Vacancies Overview'
+section: ef841ba4-7bcd-4ef5-9c12-96377bf7fba2 # Pages
+sortOrder: 8
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

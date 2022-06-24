@@ -1,0 +1,73 @@
+fieldLayouts:
+  970d22b7-dd51-485a-877c-db1f762b1347:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 7db63490-f74f-408e-b905-e84b53a0ebe1
+            warning: null
+            width: 100
+          -
+            fieldUid: dbc7a062-ef19-48ca-bd6f-acda62a18b78 # Hero Builder
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: dda328a4-8879-4f6b-9074-da6416f34e8f
+            warning: null
+            width: 100
+        name: Content
+        uid: cf72c176-2bb3-43f4-a179-fce7bbf163ba
+      -
+        elements:
+          -
+            fieldUid: 2bcee070-9832-4e9a-a3d1-51566028022e # OG Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 406ad981-dc3d-4214-a993-80fb5f101575
+            warning: null
+            width: 100
+          -
+            fieldUid: 6a3feb81-50ce-467a-8aca-b5d4cc12aed0 # Description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b80ad0b8-7dbe-47a4-8377-b89df03d9277
+            warning: null
+            width: 100
+        name: SEO
+        uid: e0daa89e-67dc-4d4d-949b-5a4b07a556f7
+handle: servicesOverview
+hasTitleField: true
+name: 'Services Overview'
+section: ef841ba4-7bcd-4ef5-9c12-96377bf7fba2 # Pages
+sortOrder: 6
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

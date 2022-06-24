@@ -1,0 +1,26 @@
+{#
+    ### PROPERTIES ###
+    ------------------
+
+    ga: (OBJ) -- add a category / action / label for GTM tracking
+    icon: (STR) -- the icon for the button ( optional )
+    iconPosition: (STR) -- the position of the icon ( optional )
+    target: (STR) -- add _blank if you want to open the button in a new window
+    text: (STR) -- the text for the button
+    url: (STR) -- the url for the button
+    utlities: (STR) -- the button utilities
+#}
+
+{%- set props = {
+    url: options.url ??? null,
+    text: options.text ??? '',
+    icon: options.icon ??? null,
+    iconPosition: options.iconPosition ??? 'right',
+    utilities: options.utilities ??? null,
+    active: options.active|default(false),
+    target: options.target ??? null,
+    ga: options.ga ??? null,
+} -%}
+
+{%- block button -%}
+{%- endblock -%}

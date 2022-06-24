@@ -1,0 +1,6 @@
+siteUid: null
+sortOrder: 2
+template: _organisms/verification/page--reset.twig
+uriParts:
+  - reset-password
+uriPattern: reset-password

@@ -1,0 +1,47 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: c014f72e-6101-4377-a9e4-bbea0f16bce8 # Placeholders
+handle: cardPlaceholder
+instructions: null
+name: 'Card Placeholder'
+searchable: false
+settings:
+  allowSelfRelations: false
+  allowSubfolders: false
+  allowUploads: true
+  allowedKinds:
+    - image
+  defaultUploadLocationSource: 'volume:b4a06662-5fb9-4347-9b76-b1e291db3b88' # Cards
+  defaultUploadLocationSubpath: null
+  localizeRelations: false
+  maxRelations: 1
+  minRelations: 1
+  previewMode: full
+  restrictFiles: true
+  restrictLocation: true
+  restrictedDefaultUploadSubpath: '{slug}'
+  restrictedLocationSource: 'volume:b4a06662-5fb9-4347-9b76-b1e291db3b88' # Cards
+  restrictedLocationSubpath: null
+  selectionCondition:
+    __assoc__:
+      -
+        - elementType
+        - craft\elements\Asset
+      -
+        - fieldContext
+        - global
+      -
+        - class
+        - craft\elements\conditions\assets\AssetCondition
+  selectionLabel: 'Add an image'
+  showSiteMenu: false
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  source: null
+  sources: '*'
+  targetSiteId: null
+  validateRelatedElements: true
+  viewMode: list
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Assets

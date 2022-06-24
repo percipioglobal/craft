@@ -1,0 +1,86 @@
+{%- extends '_molecules/cards/_card--props' -%}
+{%- import '_macros/atoms' as render -%}
+
+{#
+    ### PROPERTIES ###
+    ------------------
+
+    INHERITED FROM: `_molecules/cards/_card--props.twig`
+
+    ### COMPONENTS ###
+    ------------------
+
+    ## ATOMS
+
+    svg--plugin-icon: `_atoms/svgs/svg--plugin-icon`
+    text--card-subtitle: `_atoms/texts/text--card-subtitle`
+    text--card-title: `_atoms/texts/text--card-title`
+#}
+
+{%- block card -%}
+    <article class="relative flex bg-white mt-12 group {{ props.utilities -}}">
+
+        {{- render.atom('svg', 'plugin-icon', {
+            icon: content.pluginIcon.collect().first(),
+            utilities: 'absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24'
+        }) -}}
+
+        <div class="relative flex-auto overflow-hidden rounded-4xl p-6 pb-9 shadow-2xl transition-shadow ease-in-out duration-700 group-hover:shadow-zinc-500">
+
+            <header class="space-y-4 mt-8">
+                <h3>
+                    {{- render.atom('text', 'card-title', {
+                        content: content.title ??? ''
+                    }) -}}
+                </h3>
+
+                {%- if content.description ??? null -%}
+                    <h4>
+                        {{- render.atom('text', 'card-subtitle', {
+                            content: content.description
+                        }) -}}
+                    </h4>
+                {%- endif -%}
+            </header>
+
+            <div class="flex flex-col space-y-3 mt-3">
+
+                {%- if content.version -%}
+                    {{- render.atom('text', 'meta-plugin', {
+                        color: 'text-black',
+                        content: 'Version',
+                        data: content.version
+                    }) -}}
+                {%- endif -%}
+
+                {%- if content.activeInstalls -%}
+                    {{- render.atom('text', 'meta-plugin', {
+                        color: 'text-black',
+                        content: 'Active installs',
+                        data: content.activeInstalls
+                    }) -}}
+                {%- endif -%}
+
+                {{- render.atom('text', 'meta-plugin', {
+                    color: 'text-black',
+                    content: 'Price',
+                    data: (content.price|money ??? 'FREE')
+                }) -}}
+
+            </div>
+
+            <div class="bg-gradient-to-r from-blue-500 to-pink-500 h-3 absolute bottom-0 left-0 w-full"></div>
+
+            {{- render.atom('link', 'card', {
+                url: content.url,
+                text: content.title,
+                ga: {
+                    category: 'Plugin Card',
+                    action: 'click',
+                    label: content.title ??? null,
+                },
+            })
+        -}}
+        </div>
+    </article>
+{%- endblock -%}

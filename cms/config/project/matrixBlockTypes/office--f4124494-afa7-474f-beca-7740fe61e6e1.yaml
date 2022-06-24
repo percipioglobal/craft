@@ -1,0 +1,72 @@
+field: 1755ebbe-91fc-4a2a-80cb-667cc2cf1795 # Locations
+fieldLayouts:
+  baf243cf-7afd-4ac6-beb6-80d94a45203c:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: c2249c59-46a5-435d-ab41-42bb543e2875 # City
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2976e338-4846-471c-9267-cd07723e7e76
+            warning: null
+            width: 100
+          -
+            fieldUid: d5dde356-9f59-4da4-ad17-e3d7825da610 # Country
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 16c946af-1a49-47b6-8efd-a54248c339d8
+            warning: null
+            width: 100
+        name: Content
+        uid: 2ff610e8-7674-4579-a502-37c960213b9b
+fields:
+  c2249c59-46a5-435d-ab41-42bb543e2875: # City
+    columnSuffix: cstvrrly
+    contentColumnType: text
+    fieldGroup: null
+    handle: city
+    instructions: null
+    name: City
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  d5dde356-9f59-4da4-ad17-e3d7825da610: # Country
+    columnSuffix: igzxxybu
+    contentColumnType: text
+    fieldGroup: null
+    handle: country
+    instructions: null
+    name: Country
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: office
+name: Office
+sortOrder: 1

@@ -1,0 +1,97 @@
+fieldLayouts:
+  b11421c4-0d04-4427-8dcc-ee83412ad444:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 10020f35-5523-49b5-a959-89ad4578c701
+            warning: null
+            width: 100
+          -
+            fieldUid: e691301b-7484-40be-a3d4-c3bc590de959 # Content Builder
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 227f9f67-49a4-4fdb-8d41-e25e416f3355
+            warning: null
+            width: 100
+        name: Content
+        uid: 75e2fa2a-4fd2-43e0-89cb-0df8f8f1cdaa
+      -
+        elements:
+          -
+            fieldUid: ea5a623d-3c94-4cee-a74c-6159235f684e
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f95c9194-f139-4eca-a83e-329c461afb51
+            warning: null
+            width: 100
+          -
+            fieldUid: 6a3feb81-50ce-467a-8aca-b5d4cc12aed0 # Description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: bc59e0ac-7252-43c7-9a5f-7a29221e2f48
+            warning: null
+            width: 100
+          -
+            fieldUid: 1c23eb9d-03fe-46ea-9bee-ff46e8bd15a3
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 78e11f08-def2-4bd9-832e-a99c25f55b42
+            warning: null
+            width: 100
+        name: Metadata
+        uid: 6bc398a5-3609-4181-9fa6-6438cdccc022
+      -
+        elements:
+          -
+            fieldUid: 2bcee070-9832-4e9a-a3d1-51566028022e # OG Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4b0a21f5-c956-4a88-9e04-2a3cf5f150b6
+            warning: null
+            width: 100
+        name: SEO
+        uid: e3c8d5fa-a1aa-4d69-8223-eb94d56d71f9
+handle: services
+hasTitleField: true
+name: 'Our Services'
+section: 1ae55366-a3a6-4ed1-bf34-12ead8ae6c21 # Our Services
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

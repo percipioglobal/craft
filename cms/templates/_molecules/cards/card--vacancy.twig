@@ -1,0 +1,54 @@
+{%- extends '_molecules/cards/_card--props' -%}
+{%- import '_macros/atoms' as render -%}
+
+{#
+    ### PROPERTIES ###
+    ------------------
+
+    INHERITED FROM: `_molecules/cards/_card--props.twig`
+
+    ### COMPONENTS ###
+    ------------------
+
+    ## ATOMS
+
+    text--card-subtitle: `_atoms/texts/text--card-subtitle`
+    text--card-title: `_atoms/texts/text--card-title`
+#}
+
+{%- block card -%}
+    <article class="relative flex bg-white group {{ props.utilities -}}">
+
+        <div class="relative transition-shadow ease-in-out duration-700 flex-auto overflow-hidden rounded-4xl p-6 pb-9 shadow-2xl group-hover:shadow-zinc-500">
+
+            <header class="space-y-4">
+                <h3>
+                    {{- render.atom('text', 'card-title', {
+                        content: props.content.title ??? ''
+                    }) -}}
+                </h3>
+
+                {%- if props.content.description ??? null -%}
+                    <h4>
+                        {{- render.atom('text', 'card-subtitle', {
+                            content: props.content.description
+                        }) -}}
+                    </h4>
+                {%- endif -%}
+            </header>
+
+            <div class="bg-{{- props.color }} h-3 absolute bottom-0 left-0 w-full"></div>
+
+            {{- render.atom('link', 'card', {
+                    url: props.content.url,
+                    text: props.content.title,
+                    ga: {
+                        category: 'Plugin Card',
+                        action: 'click',
+                        label: props.content.title ??? null,
+                    },
+                })
+            -}}
+        </div>
+    </article>
+{%- endblock -%}

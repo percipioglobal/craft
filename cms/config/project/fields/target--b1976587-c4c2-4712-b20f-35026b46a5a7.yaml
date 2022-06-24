@@ -1,0 +1,34 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 94b4d5ac-d7ea-4241-a6cb-92b39f482f99 # Common
+handle: target
+instructions: null
+name: Target
+searchable: false
+settings:
+  allowSelfRelations: false
+  localizeRelations: false
+  maxRelations: 1
+  minRelations: 1
+  selectionCondition:
+    __assoc__:
+      -
+        - elementType
+        - craft\elements\Entry
+      -
+        - fieldContext
+        - global
+      -
+        - class
+        - craft\elements\conditions\entries\EntryCondition
+  selectionLabel: 'Add an entry'
+  showSiteMenu: false
+  source: null
+  sources:
+    - 'section:ef841ba4-7bcd-4ef5-9c12-96377bf7fba2' # Pages
+  targetSiteId: null
+  validateRelatedElements: true
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Entries

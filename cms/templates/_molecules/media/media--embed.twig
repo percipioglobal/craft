@@ -1,0 +1,28 @@
+{% import '_macros/atoms' as render %}
+{% import '_macros/functions' as functions %}
+
+{%- set asset = content.embed|length > 0 ? craft.embeddedAssets.get(content.embed[0]) : null -%}
+{%- set ratio = asset.width and asset.height ? getRatioClass({width: asset.width, height: asset.height}) : 'aspect-16/9' -%}
+
+{%- minify -%}
+<div class="w-full text-center">
+
+	<div class="container mx-auto max-w-screen-lg relative mb-8">
+        <div class="animate" data-animation="fadeIn">
+            <figure class="{{- ratio }} {{ ratio != 'aspect-16/9' ? 'md:w-1/2' : '' }} mx-auto shadow-xl shadow-zinc-300 rounded-4xl overflow-hidden relative">
+                {{- functions.embed(asset, ratio) -}}
+            </figure>
+        </div>
+	</div>
+
+    {# <div class="hidden aspect-[1/1]"></div>
+    <div class="hidden aspect-[1/2]"></div>
+    <div class="hidden aspect-[3/1]"></div>
+    <div class="hidden aspect-[4/3]"></div>
+    <div class="hidden aspect-[3/4]"></div>
+    <div class="hidden aspect-[7/5]"></div>
+    <div class="hidden aspect-[8/5]"></div>
+    <div class="hidden aspect-[16/9]"></div>
+    <div class="hidden aspect-[21/9]"></div> #}
+</div>
+{%- endminify -%}

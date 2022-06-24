@@ -1,0 +1,70 @@
+field: e691301b-7484-40be-a3d4-c3bc590de959 # Content Builder
+fieldLayouts:
+  1f38f42e-d515-4104-b279-6e3f7edbee7d:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: ed4b0f49-8429-4d80-846f-3d441bd3e707 # Image
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 05ada118-c676-46f6-b695-4874c1c93e7a
+            warning: null
+            width: 100
+        name: Content
+        uid: 77479288-6cfc-4be2-a68c-9fcdaae1a378
+fields:
+  ed4b0f49-8429-4d80-846f-3d441bd3e707: # Image
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: image
+    instructions: 'Select or upload an image to use in the page.'
+    name: Image
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: true
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:74ec495a-3fc7-4175-8f94-3ee08302407a' # Articles
+      defaultUploadLocationSubpath: null
+      localizeRelations: false
+      maxRelations: 1
+      minRelations: null
+      previewMode: full
+      restrictFiles: true
+      restrictLocation: false
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:74ec495a-3fc7-4175-8f94-3ee08302407a' # Articles
+      restrictedLocationSubpath: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Asset
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\assets\AssetCondition
+      selectionLabel: null
+      showSiteMenu: true
+      showUnpermittedFiles: true
+      showUnpermittedVolumes: false
+      source: null
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+handle: singleImage
+name: Image
+sortOrder: 11

@@ -1,0 +1,107 @@
+{%- import '_macros/atoms' as render -%}
+
+{#
+    ### PROPERTIES ###
+    ------------------
+
+    images: list of grid items
+    utilities: TW classes
+
+    ## EXTENDED
+    -----------
+
+    ### COMPONENTS ###
+    ------------------
+
+    ## MOLECULES
+
+    grid-item--content-info: `_molecules/grid-items/grid-item--content-info`
+    image--grid-info: `_molecules/images/image--grid-info`
+#}
+
+{# props #}
+{%- set images = images ??? [] -%}
+{%- set utilities = utilities ??? ''-%}
+
+{# internal #}
+{%- set columns = 2 -%}
+
+{%- minify -%}
+
+    <section class="py-8 md:py-16 container mx-auto max-w-screen-lg {{ utilities -}}">
+
+        <div class="w-full">
+            <div class="grid grid-cols-6 gap-4 w-full">
+                {% for image in images %}
+                    {# options #}
+                    {%- set imageSize = image.getWidth() > image.getHeight() ? "landscape" : image.getWidth() - 10 < image.getHeight() and image.getWidth() + 10 > image.getHeight() ? "square" : "portrait" -%}
+                    {%- set siblingImageSize = "" -%}
+                    {%- set colspan = "" -%}
+                    {%- set ratio = "" -%}
+                    {%- set sizes = [] -%}
+
+                    {# fetch sibling size #}
+                    {%- if loop.index0 % columns == 1 and images[loop.index0 - 1] is defined -%}
+                        {% if images[loop.index0 - 1].getWidth() - 10 < images[loop.index0 - 1].getHeight() and  images[loop.index0 - 1].getWidth() + 10 > images[loop.index0 - 1].getHeight() %}
+                            {%- set siblingImageSize = "square" -%}
+                        {% elseif images[loop.index0 - 1].getWidth() > images[loop.index0 - 1].getHeight() %}
+                            {%- set siblingImageSize = "landscape" -%}
+                        {% else %}
+                            {%- set siblingImageSize = "portrait" -%}
+                        {% endif %}
+                    {%- elseif loop.index0 % columns == 0 and images[loop.index0 + 1] is defined -%}
+                        {# {%- set siblingImageSize = images[loop.index0 + 1].getWidth() > images[loop.index0 + 1].getHeight() ? "landscape" : "portrait" -%} #}
+                        {% if images[loop.index0 + 1].getWidth() - 10 < images[loop.index0 + 1].getHeight() and  images[loop.index0 + 1].getWidth() + 10 > images[loop.index0 + 1].getHeight() %}
+                            {%- set siblingImageSize = "square" -%}
+                        {% elseif images[loop.index0 + 1].getWidth() > images[loop.index0 + 1].getHeight() %}
+                            {%- set siblingImageSize = "landscape" -%}
+                        {% else %}
+                            {%- set siblingImageSize = "portrait" -%}
+                        {% endif %}
+                    {%- endif -%}
+
+                    {# check sibling size to know which format the image should show #}
+                    {% if imageSize == siblingImageSize %}
+                        {%- set colspan = "3" -%}
+                        {%- set sizes = ['(max-width:768px) 100vw', '(min-width:768px) 50vw'] -%}
+                        {%- set ratio = (imageSize == "landscape" and siblingImageSize == "landscape") ? "aspect-16/9" : imageSize == "portrait" ? "aspect-3/4" : "aspect-square" -%}
+                    {% endif %}
+                    {% if imageSize == "landscape" and siblingImageSize == "portrait" or imageSize == "landscape" and siblingImageSize == "square" %}
+                        {%- set colspan = "4" -%}
+                        {%- set sizes = ['(max-width:768px) 100vw', '(min-width:768px) 75vw'] -%}
+                        {%- set ratio = "aspect-16/9" -%}
+                    {% endif %}
+                    {% if imageSize == "portrait" and siblingImageSize == "landscape" or imageSize == "square" and siblingImageSize == "landscape" %}
+                        {%- set colspan = "2" -%}
+                        {%- set sizes = ['(max-width:768px) 100vw', '(min-width:768px) 33vw'] -%}
+                        {%- set ratio = imageSize == "portrait" ? "aspect-3/4" : "aspect-4/3" -%}
+                    {% endif %}
+                    {% if imageSize == "portrait" and siblingImageSize == "square" or imageSize == "square" and siblingImageSize == "portrait" %}
+                        {%- set colspan = "3" -%}
+                        {%- set sizes = ['(max-width:768px) 100vw', '(min-width:768px) 50vw'] -%}
+                        {%- set ratio = "aspect-square" -%}
+                    {% endif %}
+                    {% if siblingImageSize == "" %}
+                        {%- set colspan = "6" -%}
+                        {%- set sizes = ['100vw'] -%}
+                        {%- set ratio = "aspect-16/9" -%}
+                    {% endif %}
+
+                    <div class="col-span-6 relative sm:col-span-{{- colspan -}}">
+                        {{- render.atom('image', 'gallery-' ~ imageSize, {
+                                image: image,
+                                placeholders: placeholders,
+                                alt:image.title,
+                                ratio: ratio,
+                                sizes: sizes
+                            })
+                        -}}
+                    </div>
+                {% endfor %}
+            </div>
+
+        </div>
+
+    </section>
+
+{%- endminify -%}

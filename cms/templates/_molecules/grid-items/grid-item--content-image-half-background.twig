@@ -1,0 +1,62 @@
+{%- extends '_molecules/grid-items/_grid-item--props' -%}
+{%- import '_macros/atoms' as render -%}
+
+{#
+    ### PROPERTIES ###
+    ------------------
+
+    INHERITED FROM: `_molecules/grid-items/_grid-item--props.twig`
+
+    ### COMPONENTS ###
+    ------------------
+
+    ## ATOMS
+    text--h3: `_atoms/texts/text--h3.twig`
+    image--grid-half-square: `_atoms/images/image--grid-half-square.twig`
+#}
+
+{%- set classes = {
+    box: "w-full md:w-[50vw] md:h-[50vw] lg:w-[50vw] lg:h-[45vw] lg:max-h-[100vh] flex-shrink-0 flex-grow-0"
+}-%}
+
+{%- block grid -%}
+    {%- minify -%}
+
+        {%- set props = props|merge({
+            item: {
+                body: item.body ??? '',
+                image: item.image ??? null
+            },
+            settings: {
+                position: settings.position ??? 'right',
+                background: settings.background ??? 'blue-800'
+            }
+        }) -%}
+
+        <article class="md:flex {{ props.settings.position == 'right' ? 'md:flex-row-reverse' : '' }} {{ props.utilities -}}">
+            <div class="animate" data-animation="{{- props.settings.position == 'right' ? 'slideInRightToLeft' : 'slideLeftToRight' -}}">
+                <div class="bg-{{- props.settings.background }} aspect-16/9 md:aspect-auto relative flex items-center {{ classes.box -}}">
+                    <h2 class="block px-8 py-12 md:p-16 lg:p-20 md:max-h-[50vw] md:overflow-auto">
+                        {{- render.atom('text', 'h3', {
+                            content: props.item.body,
+                            color: 'white',
+                        }) -}}
+                    </h2>
+
+                    <div class="hidden md:block bg-gradient-to-b from-transparent via-{{- props.settings.background }} to-{{- props.settings.background }} absolute bottom-0 left-0 w-full h-5 md:h-16 lg:h-20">&nbsp;</div>
+                </div>
+            </div>
+            <div class="animate" data-animation="{{- props.settings.position == 'left' ? 'slideInRightToLeft' : 'slideLeftToRight' -}}">
+                <div class="{{- classes.box }} flex items-center overflow-hidden">
+                    {{- render.atom('image', 'grid-half-square', {
+                            image: props.item.image.collect().first() ??? null,
+                            sizes: ['(max-width:768px) 100vw', '(min-width:768px) 50vw'],
+                            alt: props.item.image.collect().first().title ??? null,
+                            placeholders: placeholders,
+                        })
+                    -}}
+                </div>
+            </div>
+        </article>
+    {%- endminify -%}
+{%- endblock -%}

@@ -1,0 +1,41 @@
+{%- extends '_molecules/content/_content--props' -%}
+{%- import '_macros/atoms' as render -%}
+
+{#
+    ### PROPERTIES ###
+    ------------------
+
+    INHERITED FROM: `_molecules/content/_content--props.twig`
+
+    ### COMPONENTS ###
+    ------------------
+
+    ## ATOMS
+
+    text--h2: `_atoms/texts/text--h2.twig`
+#}
+
+{%- set classes = {
+    _default: 'block font-primary',
+    color: 'text-gray-800',
+    print: 'print:text-black print:text-lg print:leading-6 break-avoid',
+} -%}
+
+{%- block copy -%}
+
+    {%- set props = props|merge({
+        heading: props.content.heading ??? ''
+    }) -%}
+
+    {%- minify -%}
+
+        <div class="container max-w-[80ch] mx-auto my-5 md:my-10 {{ props.utilities -}}">
+            <div class="animate" data-animation="slideBottomToTop">
+                <h2 class="{{- classes._default }} {{ classes.color}} {{ classes.print }}">
+                    {{- render.atom('text', 'h2', { content: props.heading }) -}}
+                </h2>
+            </div>
+        </div>
+
+    {%- endminify -%}
+{%- endblock -%}

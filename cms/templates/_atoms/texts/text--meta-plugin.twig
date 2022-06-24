@@ -1,0 +1,26 @@
+{%- extends '_atoms/texts/_text--props' -%}
+
+{#
+    ### PROPERTIES ###
+    ------------------
+
+    INHERITED FROM: `_atoms/texts/text--props.twig`
+
+    EXTENDED
+    --------
+    data: (STR) - the actual meta data
+
+#}
+
+{%- block text -%}
+
+    {%- set props = props|merge({
+        data: options.data ??? null,
+    }) -%}
+
+    {%- minify -%}
+        <span class="font-primary md:text-base {{ props.color }} {{ props.alignment }} {{ props.utilities -}}">
+            {{- props.content | typogrify(true) -}}: <strong>{{- props.data | typogrify(true) -}}</strong>
+        </span>
+    {%- endminify -%}
+{%- endblock -%}

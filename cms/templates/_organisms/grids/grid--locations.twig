@@ -1,0 +1,40 @@
+{%- extends '_organisms/grids/_grid--props' -%}
+
+{#
+    ### PROPERTIES ###
+    ------------------
+
+    INHERITED FROM: `_organisms/grids/grid--props.twig`
+
+    ## EXTENDED
+    -----------
+    locations (Collection): Collection of locations
+
+    ### COMPONENTS ###
+    ------------------
+
+    ## MOLECULES
+
+    grid-item--location: `_molecules/grid-items/grid-item--locations.twig`
+#}
+
+{%- block grid -%}
+
+    {%- set props = props|merge({
+        locations: locations ??? null,
+    }) -%}
+
+    {%- minify -%}
+        <section class="grid grid-cols-2 lg:grid-cols-5 gap-8 md:gap-20 pb-12 md:pb-20 container max-w-screen-xl mx-auto">
+
+            {%- for location in props.locations -%}
+
+                {%- include '_molecules/grid-items/grid-item--location' ignore missing with {
+                    item: location,
+                } -%}
+
+            {%- endfor -%}
+            
+        </section>
+    {%- endminify -%}
+{%- endblock -%}

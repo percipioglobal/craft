@@ -1,59 +1,52 @@
-{%- extends "_atoms/images/image--variables" -%}
+{%- extends '_atoms/images/_image--props' -%}
 
 {#
-    ### OPTIONS ###
-    ---------------
+    ### PROPERTIES ###
+    ------------------
 
-    ## INHERITED
+    INHERITED FROM: `_atoms/images/image--props.twig`
 
-    image: (OBJ) -- Pass through the image object
-    sizes: (ARR) -- sizes array for responsive images
-    alt: (STR) -- The alt text
-    ratio: (STR) -- Give the aspect ratio in the correct format eg. is1by1 / is16by9 ( optional )
-    caption: (STR) -- The caption text ( optional )
-    author: (STR) -- The author of the image ( optional )
-    source: (STR) -- The image source ( optional )
+    EXTENDED
+    --------
 
-    ## ADDED
-
-    optimized: (OBJ) -- Add the image optimized field to the atom
-    placeholder: (OBJ) --- Add the placeholder image to the atom
-
+    ratio: (STR) -- Give the aspect ratio in the correct format eg. aspect-4/3 / aspect-16/9 ( optional )
+    optimized: (OBJ) -- The image optimizations for the image
+    placeholder: (OBJ) -- Add the placeholder image to the atom
 #}
-
-{%- import '_macros/atoms' as render -%}
 
 {%- block image -%}
 
-    {%- set values = values|merge({
+    {%- set props = props|merge({
+        ratio: options.ratio ??? 'aspect-16/9',
         optimized: options.image.optimizeHeroes ??? null,
-        placeholder: options.placeholders.heroPlaceholder[0].optimizeHeroes ??? null
+        placeholder: options.placeholders.cardPlaceholder[0].optimizeHeroes,
     }) -%}
 
     {%- minify -%}
 
-        <figure role="figure" aria-label="{{- values.alt -}}" class="w-full h-full">
+        <figure  class="w-full h-full" role="figure" aria-labelledby="{{- props.alt ~ '-' ~ props.image.id ??? props.placeholder.id -}}">
 
-            <picture class="img {{ values.ratio -}}">
+            <picture>
 
-                <source data-srcset="{{- values.optimized.srcsetWebP() ??? values.placeholder.srcsetWebP() -}}"
-                        sizes="{%- for size in values.sizes -%}{{- not loop.last ? size ~ ',' : size -}}{%- endfor -%}"
-                        type="image/webp"
+                <source
+                    data-srcset="{{- props.optimized.srcsetWebP() ??? props.placeholder.srcsetWebP() -}}"
+                    sizes="{%- for size in props.sizes -%}{{- not loop.last ? size ~ ',' : size -}}{%- endfor -%}"
+                    type="image/webp"
                 />
 
-                <source data-srcset="{{- values.optimized.srcset() ??? values.placeholder.srcset() -}}"
-                        sizes="{%- for size in values.sizes -%}{{- not loop.last ? size ~ ',' : size -}}{%- endfor -%}"
+                <source
+                    data-srcset="{{- props.optimized.srcset() ??? props.placeholder.srcset() -}}"
+                    sizes="{%- for size in props.sizes -%}{{- not loop.last ? size ~ ',' : size -}}{%- endfor -%}"
                 />
 
                 <img
-                        src="{{- values.optimized.placeholderImage() ??? values.placeholder.placeholderImage() -}}"
-                        data-src="{{- values.optimized.src() ??? values.placeholder.src() -}}"
-                        data-srcset="{{- values.optimized.srcset() ??? values.placeholder.srcset() -}}"
-                        sizes="{%- for size in values.sizes -%}{{- not loop.last ? size ~ ',' : size -}}{%- endfor -%}"
-                        class="lazyload"
-                        loading="lazy"
-                        alt="{{- values.alt -}}"
-
+                    src="{{- props.optimized.placeholderImage() ??? props.placeholder.placeholderImage() -}}"
+                    data-src="{{- props.optimized.src() ??? props.placeholder.src() -}}"
+                    data-srcset="{{- props.optimized.srcset() ??? props.placeholder.srcset() -}}"
+                    sizes="{%- for size in props.sizes -%}{{- not loop.last ? size ~ ',' : size -}}{%- endfor -%}"
+                    class="lazyload object-cover w-full h-full object-center opacity-50"
+                    loading="lazy"
+                    alt="{{- props.alt -}}"
                 />
 
             </picture>

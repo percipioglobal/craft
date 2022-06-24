@@ -1,0 +1,74 @@
+field: e691301b-7484-40be-a3d4-c3bc590de959 # Content Builder
+fieldLayouts:
+  db9a8613-5991-483e-b361-514f67a40890:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 4610a356-a212-46cd-a7a1-6286620e89ef # Grid Items
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 14e3377b-3ddf-4d7c-b60a-fe41b79dc6d9
+            warning: null
+            width: 100
+        name: Content
+        uid: 5fe5248f-0021-4ec0-8516-363d4389e227
+fields:
+  4610a356-a212-46cd-a7a1-6286620e89ef: # Grid Items
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: gridItems
+    instructions: 'Show grid item with an image that fills up 33% of the space'
+    name: 'Grid Items'
+    searchable: false
+    settings:
+      blockTypeFields: 0
+      changedFieldIndicator: 1073292218
+      columns:
+        __assoc__:
+          -
+            - d3594d38-4b2c-48a2-b77c-c0819aa700c7 # Overline
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - 33274ae4-f375-4070-b42c-f1cef4e48a81 # Heading
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - 247bfb7d-d077-42ee-b2ba-84feb1b3fd19 # Content
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - 85f7ea92-40ac-44bf-b3fe-20f8075fe802 # Image
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+      contentTable: '{{%stc_31_griditems}}'
+      fieldLayout: matrix
+      maxRows: null
+      minRows: null
+      propagationKeyFormat: null
+      propagationMethod: all
+      selectionLabel: 'Add a grid item'
+      staticField: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: verbb\supertable\fields\SuperTableField
+handle: gridContentImageThird
+name: 'Grid Content Image - 33%'
+sortOrder: 6

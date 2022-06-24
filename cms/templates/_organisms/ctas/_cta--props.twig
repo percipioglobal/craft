@@ -1,0 +1,25 @@
+{#
+    ### PROPERTIES ###
+    ------------------
+
+    heading: (STR) -- The heading of the CTA
+    content: (STR) -- The content of the CTA
+    button: (Collection) -- Button collection
+    background: (OBJ) -- background properties
+    image: (Collection) -- Collection of images
+
+#}
+
+{%- set props = {
+    heading: heading ?? '',
+    content: content ?? '',
+    button: button ??? null,
+    background: background ??? {
+        primary: 'white',
+        secondary: null,
+    },
+    image: image ??? null,
+} -%}
+
+{%- block cta -%}
+{%- endblock -%}

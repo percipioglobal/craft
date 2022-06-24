@@ -1,0 +1,16 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 07a123c0-4e8e-4c19-a79e-61829f5d88c0 # Builders
+handle: heroBuilder
+instructions: 'Use this builder to create a hero'
+name: 'Hero Builder'
+searchable: false
+settings:
+  contentTable: '{{%matrixcontent_herobuilder}}'
+  maxBlocks: 1
+  minBlocks: 1
+  propagationKeyFormat: null
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

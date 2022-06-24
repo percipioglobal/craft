@@ -1,0 +1,19 @@
+{%- extends '_atoms/texts/_text--props' -%}
+
+{#
+    ### PROPERTIES ###
+    ------------------
+
+    INHERITED FROM: `_atoms/texts/text--props.twig`
+
+#}
+
+{%- block text -%}
+
+    {%- minify -%}
+        <span class="font-mono text-sm md:text-base {{ props.color }} {{ props.alignment }} {{ props.utilities -}}">
+            {{- props.content | typogrify(true) | raw -}}
+        </span>
+    {%- endminify -%}
+
+{%- endblock -%}

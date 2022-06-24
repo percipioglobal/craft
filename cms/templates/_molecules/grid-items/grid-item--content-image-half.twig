@@ -1,0 +1,74 @@
+{%- extends '_molecules/grid-items/_grid-item--props' -%}
+{%- import '_macros/atoms' as render -%}
+
+{#
+    ### PROPERTIES ###
+    ------------------
+
+    INHERITED FROM: `_molecules/grid-items/_grid-item--props.twig`
+
+    ### COMPONENTS ###
+    ------------------
+
+    ## ATOMS
+    text--h2: `_atoms/texts/text--h2.twig`
+    text--overline: `_atoms/texts/text--overline.twig`
+    image--grid-half: `_atoms/images/image--grid-half.twig`
+
+    ## MOLECULES
+    content--pros: `_molecules/content/content--prose.twig`
+#}
+
+{%- block grid -%}
+    {%- minify -%}
+
+        {%- set props = props|merge({
+            item: {
+                overline: props.item.overline ??? '',
+                heading: props.item.heading ??? '',
+                body: props.item.body ??? '',
+                image: props.item.image ??? ''
+            },
+            settings: {
+                position: props.settings.position ??? 'right',
+                background: props.settings.background ??? 'blue-800'
+            }
+        }) -%}
+
+        <article class="sm:flex {{ props.settings.position == 'left' ? 'sm:flex-row-reverse' : '' }} {{ props.utilities -}}">
+
+            <div class="w-full mb-4 sm:mb-0 px-6 sm:px-0 sm:w-1/2 flex-shrink-0 flex-grow-0 flex items-center">
+                <div class="animate" data-animation="fadeIn">
+                    {{- render.atom('image', 'grid-half', {
+                            image: props.item.image.collect().first() ??? null,
+                            sizes: ['(max-width:768px) 100vw', '(min-width:768px) 50vw'],
+                            alt: content.title,
+                            placeholders: placeholders,
+                            utilities: 'shadow-xl shadow-zinc-300 rounded-xl'
+                        })
+                    -}}
+                </div>
+            </div>
+
+            <div class="relative flex flex-col justify-center {{ props.settings.position == 'right' ? 'sm:pl-10 lg:pl-20' : 'sm:pr-10 lg:pr-20' -}}">
+                <div class="animate" data-animation="{{- props.settings.position == 'right' ? 'slideInRightToLeft' : 'slideLeftToRight' -}}">
+                    {%- if props.item.overline -%}
+                        {{- render.atom('text', 'overline', {
+                            content: props.item.overline
+                        }) -}}
+                    {%- endif -%}
+
+                    <h2 class="mb-6">
+                        {{- render.atom('text', 'h2', {
+                                content: props.item.heading
+                        }) -}}
+                    </h2>
+
+                    {%- include '_molecules/content/content--prose' ignore missing with {
+                        content: props.item.body,
+                    } -%}
+                </div>
+            </div>
+        </article>
+    {%- endminify -%}
+{%- endblock -%}

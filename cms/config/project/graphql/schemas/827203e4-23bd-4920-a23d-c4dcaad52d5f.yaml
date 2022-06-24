@@ -1,0 +1,26 @@
+isPublic: false
+name: Navigation
+scope:
+  - 'sections.92164c9b-e1af-4a4e-b639-44a2b5d79bd3:read' # Navigation
+  - 'entrytypes.74f6b1ab-d7f2-4df1-89fe-1601cf0697a0:read' # Navigation
+  - 'sections.ef841ba4-7bcd-4ef5-9c12-96377bf7fba2:read' # Pages
+  - 'entrytypes.13d83534-d33c-4c02-8e9a-8214c5419071:read' # Landing Page
+  - 'entrytypes.58be0817-ea24-401b-98eb-4a60d7e7e34b:read' # Content Page
+  - 'entrytypes.210a0701-869d-41da-a862-26f5e894743c:read' # Projects Overview
+  - 'entrytypes.bc2fcf7d-8195-4529-8758-a3004866f759:read' # Blog Overview
+  - 'entrytypes.677c9cfd-68a9-4ee2-a78e-1835df918bb4:read' # Team Overview
+  - 'entrytypes.8c5e09a3-fcbe-484a-95c1-97e362a260e8:read' # Services Overview
+  - 'entrytypes.914b27f9-4dac-42d5-bb42-0e41ba29f93a:read' # Contact Page
+  - 'entrytypes.768b3119-7033-4796-be27-562fecd1e4c7:read' # Vacancies Overview
+  - 'sections.1962717b-7da2-4f6f-be49-ee640b8ddfe2:read' # Vacancies
+  - 'entrytypes.00498acf-c1c2-4c00-83f2-39a7255870f8:read' # Vacancies
+  - 'globalsets.64547f99-7471-496a-8b02-5d48e09a72f9:read'
+  - 'navigationNavs.all:read'
+  - 'navigationNavs.d8cef538-a756-4496-b7f6-0e0bb61c14c2:read' # Primary Navigation
+  - 'navigationNavs.46faf86d-bfa5-4356-bef1-0af3b2a87332:read' # Secondary Navigation
+  - 'navigationNavs.b51f4d5a-4d35-43f1-af05-72e206874892:read' # Footer Navigation
+  - 'navigationNavs.e0745046-9bad-4922-8da8-7f677ba84909:read' # Legal Navigation
+  - 'seomatic.all:read'
+  - 'sites.5da841b1-ca0d-46ff-8bb1-04d6c889ac54:read' # Percipio
+  - 'sites.bc99b68d-e1ef-4e2c-8670-e0edbe3cf507:read'
+  - 'retour.all:read'

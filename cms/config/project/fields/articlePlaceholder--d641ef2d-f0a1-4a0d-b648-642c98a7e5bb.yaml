@@ -1,0 +1,47 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: c014f72e-6101-4377-a9e4-bbea0f16bce8 # Placeholders
+handle: articlePlaceholder
+instructions: null
+name: 'Article Placeholder'
+searchable: false
+settings:
+  allowSelfRelations: false
+  allowSubfolders: false
+  allowUploads: true
+  allowedKinds: null
+  defaultUploadLocationSource: 'volume:74ec495a-3fc7-4175-8f94-3ee08302407a' # Articles
+  defaultUploadLocationSubpath: null
+  localizeRelations: false
+  maxRelations: null
+  minRelations: null
+  previewMode: full
+  restrictFiles: false
+  restrictLocation: false
+  restrictedDefaultUploadSubpath: null
+  restrictedLocationSource: 'volume:b4a06662-5fb9-4347-9b76-b1e291db3b88' # Cards
+  restrictedLocationSubpath: null
+  selectionCondition:
+    __assoc__:
+      -
+        - elementType
+        - craft\elements\Asset
+      -
+        - fieldContext
+        - global
+      -
+        - class
+        - craft\elements\conditions\assets\AssetCondition
+  selectionLabel: null
+  showSiteMenu: false
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  source: null
+  sources:
+    - 'volume:74ec495a-3fc7-4175-8f94-3ee08302407a' # Articles
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: list
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Assets

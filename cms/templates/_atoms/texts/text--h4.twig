@@ -1,0 +1,20 @@
+{%- extends '_atoms/texts/_text--props' -%}
+
+{#
+    ### PROPERTIES ###
+    ------------------
+
+    INHERITED FROM: `_atoms/texts/text--props.twig`
+#}
+
+{%- set strong = 'prose-strong:text-pink-500 prose-strong:font-normal' -%}
+
+{%- block text -%}
+
+    {%- minify -%}
+        <span class="text-{{- props.color }} prose text-2xl font-medium tracking-tightest {{ strong }} {{ props.alignment }} {{ props.utilities -}}">
+            {{- props.content | striptags('<strong>') | typogrify(true) | raw -}}
+        </span>
+    {%- endminify -%}
+
+{%- endblock -%}

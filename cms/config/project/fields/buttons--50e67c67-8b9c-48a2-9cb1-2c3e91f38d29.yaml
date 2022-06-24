@@ -1,0 +1,30 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 94b4d5ac-d7ea-4241-a6cb-92b39f482f99 # Common
+handle: buttons
+instructions: null
+name: Buttons
+searchable: false
+settings:
+  blockTypeFields: 0
+  changedFieldIndicator: 1515370184
+  columns:
+    __assoc__:
+      -
+        - 7ae58b62-c0ab-49a5-b8da-252b1eb96383 # Button
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+  contentTable: '{{%stc_buttons}}'
+  fieldLayout: matrix
+  maxRows: 2
+  minRows: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  selectionLabel: null
+  staticField: null
+translationKeyFormat: null
+translationMethod: site
+type: verbb\supertable\fields\SuperTableField

@@ -1,0 +1,21 @@
+{#
+    ### PROPERTIES ###
+    ------------------
+
+    firstCard: (Collection) -- The first item of the collection
+    chunks: (Collection) -- The collection divided in chunks
+    cards: (Collection) -- All the cards
+    startSize: (ENUM) -- The card size that goes first: large|small
+    utilities: -- Styling for the grid
+#}
+
+{%- set props = {
+    firstCard: cards.first() ??? null,
+    chunks: cards.slice(1).chunk(2) ??? null,
+    cards: cards ??? null,
+    startSize: startSize ??? 'large',
+    utilities: utilities ??? ''
+} -%}
+
+{%- block grid -%}
+{%- endblock -%}

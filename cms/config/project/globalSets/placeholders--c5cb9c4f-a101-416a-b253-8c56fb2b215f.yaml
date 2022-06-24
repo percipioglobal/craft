@@ -1,0 +1,60 @@
+fieldLayouts:
+  de4e4c7b-fb8e-45c9-8a6d-51a6f8b3f033:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: d641ef2d-f0a1-4a0d-b648-642c98a7e5bb # Article Placeholder
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8efb1b02-2da3-47d8-a200-3c852b6d1697
+            warning: null
+            width: 100
+          -
+            fieldUid: 1a84863b-861a-4293-b8ca-c88d90b87ae8 # Card Placeholder
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: dc933596-b952-4583-bd15-3a521badbc7b
+            warning: null
+            width: 100
+          -
+            fieldUid: ceaca46d-720d-442d-b054-f8fb3704701a # Default Placeholder
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1e93867e-3500-43d7-b273-b86532bb909e
+            warning: null
+            width: 100
+          -
+            fieldUid: 8f7046bb-5261-4213-9d49-b1244e5d458e # Grid Placeholder
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7185cba0-1df9-4ca0-855c-afeac3b20d01
+            warning: null
+            width: 100
+          -
+            fieldUid: 28688c0a-84eb-41d8-8c25-01ed4992bed8 # Gallery Placeholder
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f0487ccc-e650-4d28-98a1-a346d2e550a3
+            warning: null
+            width: 100
+        name: Placeholders
+        uid: 03603629-c89b-4a8f-816a-9c301c922225
+handle: placeholders
+name: Placeholders
+sortOrder: 7

@@ -1,0 +1,23 @@
+{#
+    ### PROPERTIES ###
+    ------------------
+
+    heading: (STR) -- The heading of the header
+    description: (STR) -- The description of the header
+    button: (Collection) -- Button collection
+    background: (OBJ) -- background properties
+
+#}
+
+{%- set props = {
+    heading: heading,
+    description: description ??? null,
+    button: button ??? null,
+    background: background ??? {
+        primary: 'white',
+        secondary: null,
+    },
+} -%}
+
+{%- block header -%}
+{%- endblock -%}

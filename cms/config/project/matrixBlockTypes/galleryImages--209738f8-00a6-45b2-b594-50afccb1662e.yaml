@@ -1,0 +1,70 @@
+field: 73929e5d-0eaa-424c-8cd1-ce83b47fd733 # Page Builder
+fieldLayouts:
+  49daed47-6cfd-4c95-bfc2-9bf1daa06085:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 1ecbeef5-820f-4123-a8db-30daae3cd4f7 # Images
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1e9c3ef5-247e-4079-a68d-0024c80fec92
+            warning: null
+            width: 100
+        name: Content
+        uid: 49da9036-d742-4608-969e-3d58f5b274ce
+fields:
+  1ecbeef5-820f-4123-a8db-30daae3cd4f7: # Images
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: images
+    instructions: 'Select images that you want to display as a grid on the page, maximum 8 images allowed.'
+    name: Images
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: true
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:b4a06662-5fb9-4347-9b76-b1e291db3b88' # Cards
+      defaultUploadLocationSubpath: null
+      localizeRelations: false
+      maxRelations: 8
+      minRelations: null
+      previewMode: full
+      restrictFiles: true
+      restrictLocation: true
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:b4a06662-5fb9-4347-9b76-b1e291db3b88' # Cards
+      restrictedLocationSubpath: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Asset
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\assets\AssetCondition
+      selectionLabel: 'Add images'
+      showSiteMenu: true
+      showUnpermittedFiles: true
+      showUnpermittedVolumes: false
+      source: null
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+handle: galleryImages
+name: 'Image Gallery'
+sortOrder: 2

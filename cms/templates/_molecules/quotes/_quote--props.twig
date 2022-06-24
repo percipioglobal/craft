@@ -1,0 +1,15 @@
+{#
+    ### PROPERTIES ###
+    ---------------
+
+    content: (STR) -- The quote object
+    utlities: (STR) -- the utilities
+#}
+
+{%- set props = {
+    content: content ??? null,
+    utilities: utilities ??? null,
+} -%}
+
+{% block quote %}
+{% endblock %}

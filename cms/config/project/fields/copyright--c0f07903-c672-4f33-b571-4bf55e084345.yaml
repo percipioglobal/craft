@@ -1,0 +1,19 @@
+columnSuffix: mdsdymew
+contentColumnType: text
+fieldGroup: 91df968c-fe4d-4f3b-b3db-0abde5d64dfb # Footer
+handle: copyright
+instructions: null
+name: Copyright
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

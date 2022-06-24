@@ -1,0 +1,43 @@
+{%- extends '_molecules/grid-items/_grid-item--props' -%}
+{%- import '_macros/atoms' as render -%}
+
+{#
+    ### PROPERTIES ###
+    ------------------
+
+    INHERITED FROM: `_molecules/grid-items/_grid-item--props.twig`
+
+    ### COMPONENTS ###
+    ------------------
+
+    ## ATOMS
+    text--h2: `_atoms/texts/text--h2.twig`
+    text--location: `_atoms/texts/text--location.twig`
+#}
+
+{%- block grid -%}
+
+    {%- set props = props|merge({
+        city: item.city ??? null,
+        country: item.country ??? null,
+    }) -%}
+
+    {%- minify -%}
+
+        <div class="flex flex-col items-center w-full">
+            {{- render.atom('text', 'h3', {
+                alignment: 'text-center',
+                content: props.city,
+                color: 'white',
+            }) -}}
+            {{- render.atom('text', 'location', {
+                alignment: 'text-center',
+                content: props.country,
+                color: 'text-white',
+                utilities: 'mt-2',
+            }) -}}
+        </div>
+
+    {%- endminify -%}
+{%- endblock -%}
+

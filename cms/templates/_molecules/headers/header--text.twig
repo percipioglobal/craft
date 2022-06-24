@@ -1,0 +1,49 @@
+{%- extends '_molecules/headers/_header--props' -%}
+{% import '_macros/atoms' as render %}
+
+{#
+    ### PROPERTIES ###
+    ------------------
+
+    INHERITED FROM: _molecules/headers/_header--props.twig`
+
+    OMITTED
+    -------
+
+    button
+#}
+
+{%- block header -%}
+
+    {# custom #}
+    {%- set classes = {
+        background: props.background.secondary ? 'bg-gradient-to-r from-' ~ props.background.primary ~ ' to-' ~ props.background.secondary : 'bg-' ~ props.background.primary
+    } -%}
+    {%- set buttonType = props.background.secondary ? 'tertiary' : 'primary' -%}
+
+    {%- minify -%}
+        <section class="py-12 md:py-16 {{ classes.background -}}">
+            <div class="container max-w-screen-xl mx-auto">
+
+                <h2>
+                    {{- render.atom('text', 'h3', {
+                        alignment: 'text-center md:text-left',
+                        content: props.heading,
+                        color: props.background.primary == 'white' ? 'gray-800' : 'white',
+                    }) -}}
+                </h2>
+
+                {%- if props.description -%}
+                    {{- render.atom('text', 'description', {
+                        alignment: 'text-center md:text-left',
+                        content: props.description,
+                        color: props.background.primary == 'white' ? 'text-gray-600' : 'text-white',
+                        utilities: 'mt-8'
+                    }) -}}
+                {%- endif -%}
+                
+            </div>
+        </section>
+    {%- endminify -%}
+
+{%- endblock -%}

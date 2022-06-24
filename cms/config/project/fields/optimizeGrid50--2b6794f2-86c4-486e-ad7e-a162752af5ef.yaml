@@ -1,0 +1,111 @@
+columnSuffix: ygdfhbgc
+contentColumnType: text
+fieldGroup: 1dd95078-7c8a-4ef7-8a16-e33a5341dadb # Image Optimisations 
+handle: optimizeGrid50
+instructions: null
+name: 'Grid 50% Optimisations'
+searchable: false
+settings:
+  displayDominantColorPalette: true
+  displayLazyLoadPlaceholderImages: true
+  displayOptimizedImageVariants: true
+  variants:
+    -
+      __assoc__:
+        -
+          - width
+          - '1200'
+        -
+          - useAspectRatio
+          - ''
+        -
+          - aspectRatioX
+          - '16'
+        -
+          - aspectRatioY
+          - '9'
+        -
+          - retinaSizes
+          -
+            - '1'
+        -
+          - quality
+          - '82'
+        -
+          - format
+          - ''
+    -
+      __assoc__:
+        -
+          - width
+          - '992'
+        -
+          - useAspectRatio
+          - ''
+        -
+          - aspectRatioX
+          - '16'
+        -
+          - aspectRatioY
+          - '9'
+        -
+          - retinaSizes
+          -
+            - '1'
+        -
+          - quality
+          - '82'
+        -
+          - format
+          - ''
+    -
+      __assoc__:
+        -
+          - width
+          - '768'
+        -
+          - useAspectRatio
+          - ''
+        -
+          - aspectRatioX
+          - '16'
+        -
+          - aspectRatioY
+          - '9'
+        -
+          - retinaSizes
+          -
+            - '1'
+        -
+          - quality
+          - '60'
+        -
+          - format
+          - ''
+    -
+      __assoc__:
+        -
+          - width
+          - '576'
+        -
+          - useAspectRatio
+          - ''
+        -
+          - aspectRatioX
+          - '16'
+        -
+          - aspectRatioY
+          - '9'
+        -
+          - retinaSizes
+          -
+            - '1'
+        -
+          - quality
+          - '60'
+        -
+          - format
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: nystudio107\imageoptimize\fields\OptimizedImages

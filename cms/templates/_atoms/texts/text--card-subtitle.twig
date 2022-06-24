@@ -1,0 +1,24 @@
+{%- extends '_atoms/texts/_text--props' -%}
+
+{#
+    ### PROPERTIES ###
+    ------------------
+
+    INHERITED FROM: `_atoms/texts/text--props.twig`
+
+    OMITTED
+    -------
+
+    alignment
+    color
+#}
+
+{%- block text -%}
+
+    {%- minify -%}
+        <span class="text-gray-600 text-base md:text-xl tracking-tightest {{ props.utilities -}}">
+            {{- props.content | typogrify(true) | raw -}}
+        </span>
+    {%- endminify -%}
+
+{%- endblock -%}

@@ -1,0 +1,34 @@
+{#
+
+    ### COMPONENTS ###
+    ------------------
+
+    ## ATOMS
+
+    header--text: `_molecules/headers/header--text.twig`
+#}
+
+<footer class="lg:mt-30 pt-10 pb-20 bg-gray-800">
+    {%- include '_molecules/headers/header--text' ignore missing with {
+        heading: 'We have five offices across Europe' ??? '',
+        description: '',
+        background: {
+            primary: 'gray-800',
+            secondary: null,
+        },
+    } -%}
+
+    {%- include '_organisms/grids/grid--locations' ignore missing with {
+        locations: footerData.locations.collect() ??? null,
+    } -%}
+
+    {%- include '_molecules/metas/meta--footer' ignore missing with {
+        copyright: footerData.copyright ??? '',
+        legals: footerData.legalNavigation.collect() ??? null,
+    } -%}
+
+    {%- include '_organisms/navigations/navigation--social' ignore missing with {
+        utilities: 'py-3 flex items-center justify-center'
+    } -%}
+
+</footer>

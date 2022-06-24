@@ -1,0 +1,284 @@
+description: ''
+handle: siteAdmins
+name: 'Site Admins'
+permissions:
+  - accesscp
+  - accesscpwhensystemisoff
+  - accessplugin-retour
+  - accessplugin-seomatic
+  - accesssitewhensystemisoff
+  - administrateusers
+  - 'assignusergroup:86f3d931-a648-4eb5-90b9-83a61fde3fdf' # Site Admins
+  - assignuserpermissions
+  - 'createentries:1962717b-7da2-4f6f-be49-ee640b8ddfe2' # Vacancies
+  - 'createentries:1ae55366-a3a6-4ed1-bf34-12ead8ae6c21' # Our Services
+  - 'createentries:92164c9b-e1af-4a4e-b639-44a2b5d79bd3' # Navigation
+  - 'createentries:9de367ab-77b8-47bb-bbc3-63e79a202c3e' # Blog
+  - 'createentries:a43f63a3-f09b-404a-8002-846873fd6fe6' # Plugins
+  - 'createentries:a72bfe0c-3389-4f9f-8ec1-ab318ec10b29' # Errors
+  - 'createentries:dbc716a7-2122-4b92-b942-471970256a35' # Clients
+  - 'createentries:e80a7183-56ec-49d8-81a8-405444fc3077' # The Team
+  - 'createentries:ef841ba4-7bcd-4ef5-9c12-96377bf7fba2' # Pages
+  - 'createentries:f4a50ead-30b3-4d86-bdd1-9d5c295fb9fd' # Our Work
+  - 'createfolders:1161e40e-4abd-42f6-ab07-1f1254de17b4' # OG
+  - 'createfolders:1f276b15-e846-4aaa-a997-41ecafa68adc' # Icons
+  - 'createfolders:4dfa8799-f095-4bd8-a821-1fb376db0278' # Grids
+  - 'createfolders:6569339b-0b2b-4801-9b30-7599f28e1a5b' # Media
+  - 'createfolders:74ec495a-3fc7-4175-8f94-3ee08302407a' # Articles
+  - 'createfolders:b4a06662-5fb9-4347-9b76-b1e291db3b88' # Cards
+  - 'createfolders:b61c0f3e-aaeb-4c6d-aab8-39448c056b8e' # CTAs
+  - 'createfolders:f2dee3a0-3c95-4b6a-9494-ffe8ce0dff46' # Gallery
+  - 'deleteassets:1161e40e-4abd-42f6-ab07-1f1254de17b4' # OG
+  - 'deleteassets:1f276b15-e846-4aaa-a997-41ecafa68adc' # Icons
+  - 'deleteassets:4dfa8799-f095-4bd8-a821-1fb376db0278' # Grids
+  - 'deleteassets:6569339b-0b2b-4801-9b30-7599f28e1a5b' # Media
+  - 'deleteassets:74ec495a-3fc7-4175-8f94-3ee08302407a' # Articles
+  - 'deleteassets:b4a06662-5fb9-4347-9b76-b1e291db3b88' # Cards
+  - 'deleteassets:b61c0f3e-aaeb-4c6d-aab8-39448c056b8e' # CTAs
+  - 'deleteassets:f2dee3a0-3c95-4b6a-9494-ffe8ce0dff46' # Gallery
+  - 'deletecategories:0536c060-0d97-421e-8c73-3ad5baec52d2' # Skills
+  - 'deletecategories:4e026396-d7ab-43ef-a817-226fb2dada30'
+  - 'deletecategories:6834194e-43c0-464b-9333-a15bd914d9d3' # Project Categories
+  - 'deletecategories:f326369d-c220-40d9-92e9-7b7b7811d8e5' # News Categories
+  - 'deleteentries:1962717b-7da2-4f6f-be49-ee640b8ddfe2' # Vacancies
+  - 'deleteentries:1ae55366-a3a6-4ed1-bf34-12ead8ae6c21' # Our Services
+  - 'deleteentries:92164c9b-e1af-4a4e-b639-44a2b5d79bd3' # Navigation
+  - 'deleteentries:9de367ab-77b8-47bb-bbc3-63e79a202c3e' # Blog
+  - 'deleteentries:a43f63a3-f09b-404a-8002-846873fd6fe6' # Plugins
+  - 'deleteentries:a72bfe0c-3389-4f9f-8ec1-ab318ec10b29' # Errors
+  - 'deleteentries:dbc716a7-2122-4b92-b942-471970256a35' # Clients
+  - 'deleteentries:e80a7183-56ec-49d8-81a8-405444fc3077' # The Team
+  - 'deleteentries:ef841ba4-7bcd-4ef5-9c12-96377bf7fba2' # Pages
+  - 'deleteentries:f4a50ead-30b3-4d86-bdd1-9d5c295fb9fd' # Our Work
+  - 'deletepeerassets:1161e40e-4abd-42f6-ab07-1f1254de17b4' # OG
+  - 'deletepeerassets:1f276b15-e846-4aaa-a997-41ecafa68adc' # Icons
+  - 'deletepeerassets:4dfa8799-f095-4bd8-a821-1fb376db0278' # Grids
+  - 'deletepeerassets:6569339b-0b2b-4801-9b30-7599f28e1a5b' # Media
+  - 'deletepeerassets:74ec495a-3fc7-4175-8f94-3ee08302407a' # Articles
+  - 'deletepeerassets:b4a06662-5fb9-4347-9b76-b1e291db3b88' # Cards
+  - 'deletepeerassets:b61c0f3e-aaeb-4c6d-aab8-39448c056b8e' # CTAs
+  - 'deletepeerassets:f2dee3a0-3c95-4b6a-9494-ffe8ce0dff46' # Gallery
+  - 'deletepeercategorydrafts:0536c060-0d97-421e-8c73-3ad5baec52d2' # Skills
+  - 'deletepeercategorydrafts:4e026396-d7ab-43ef-a817-226fb2dada30'
+  - 'deletepeercategorydrafts:6834194e-43c0-464b-9333-a15bd914d9d3' # Project Categories
+  - 'deletepeercategorydrafts:f326369d-c220-40d9-92e9-7b7b7811d8e5' # News Categories
+  - 'deletepeerentries:1962717b-7da2-4f6f-be49-ee640b8ddfe2' # Vacancies
+  - 'deletepeerentries:1ae55366-a3a6-4ed1-bf34-12ead8ae6c21' # Our Services
+  - 'deletepeerentries:92164c9b-e1af-4a4e-b639-44a2b5d79bd3' # Navigation
+  - 'deletepeerentries:9de367ab-77b8-47bb-bbc3-63e79a202c3e' # Blog
+  - 'deletepeerentries:a43f63a3-f09b-404a-8002-846873fd6fe6' # Plugins
+  - 'deletepeerentries:a72bfe0c-3389-4f9f-8ec1-ab318ec10b29' # Errors
+  - 'deletepeerentries:dbc716a7-2122-4b92-b942-471970256a35' # Clients
+  - 'deletepeerentries:e80a7183-56ec-49d8-81a8-405444fc3077' # The Team
+  - 'deletepeerentries:ef841ba4-7bcd-4ef5-9c12-96377bf7fba2' # Pages
+  - 'deletepeerentries:f4a50ead-30b3-4d86-bdd1-9d5c295fb9fd' # Our Work
+  - 'deletepeerentrydrafts:1962717b-7da2-4f6f-be49-ee640b8ddfe2' # Vacancies
+  - 'deletepeerentrydrafts:1ae55366-a3a6-4ed1-bf34-12ead8ae6c21' # Our Services
+  - 'deletepeerentrydrafts:54e60257-f31a-44aa-960e-bbd364197e28' # Homepage
+  - 'deletepeerentrydrafts:92164c9b-e1af-4a4e-b639-44a2b5d79bd3' # Navigation
+  - 'deletepeerentrydrafts:9de367ab-77b8-47bb-bbc3-63e79a202c3e' # Blog
+  - 'deletepeerentrydrafts:a43f63a3-f09b-404a-8002-846873fd6fe6' # Plugins
+  - 'deletepeerentrydrafts:a72bfe0c-3389-4f9f-8ec1-ab318ec10b29' # Errors
+  - 'deletepeerentrydrafts:dbc716a7-2122-4b92-b942-471970256a35' # Clients
+  - 'deletepeerentrydrafts:e80a7183-56ec-49d8-81a8-405444fc3077' # The Team
+  - 'deletepeerentrydrafts:ef841ba4-7bcd-4ef5-9c12-96377bf7fba2' # Pages
+  - 'deletepeerentrydrafts:f4a50ead-30b3-4d86-bdd1-9d5c295fb9fd' # Our Work
+  - deleteusers
+  - 'editglobalset:4652c972-110d-45c4-9032-c39f4c7e92cf' # Footer
+  - 'editglobalset:c5cb9c4f-a101-416a-b253-8c56fb2b215f' # Placeholders
+  - 'editglobalset:dffe2f47-18b7-4dcb-845d-2d88fa0378c3' # Organisational Information
+  - 'editimages:1161e40e-4abd-42f6-ab07-1f1254de17b4' # OG
+  - 'editimages:1f276b15-e846-4aaa-a997-41ecafa68adc' # Icons
+  - 'editimages:4dfa8799-f095-4bd8-a821-1fb376db0278' # Grids
+  - 'editimages:6569339b-0b2b-4801-9b30-7599f28e1a5b' # Media
+  - 'editimages:74ec495a-3fc7-4175-8f94-3ee08302407a' # Articles
+  - 'editimages:b4a06662-5fb9-4347-9b76-b1e291db3b88' # Cards
+  - 'editimages:b61c0f3e-aaeb-4c6d-aab8-39448c056b8e' # CTAs
+  - 'editimages:f2dee3a0-3c95-4b6a-9494-ffe8ce0dff46' # Gallery
+  - 'editpeerimages:1161e40e-4abd-42f6-ab07-1f1254de17b4' # OG
+  - 'editpeerimages:1f276b15-e846-4aaa-a997-41ecafa68adc' # Icons
+  - 'editpeerimages:4dfa8799-f095-4bd8-a821-1fb376db0278' # Grids
+  - 'editpeerimages:6569339b-0b2b-4801-9b30-7599f28e1a5b' # Media
+  - 'editpeerimages:74ec495a-3fc7-4175-8f94-3ee08302407a' # Articles
+  - 'editpeerimages:b4a06662-5fb9-4347-9b76-b1e291db3b88' # Cards
+  - 'editpeerimages:b61c0f3e-aaeb-4c6d-aab8-39448c056b8e' # CTAs
+  - 'editpeerimages:f2dee3a0-3c95-4b6a-9494-ffe8ce0dff46' # Gallery
+  - editusers
+  - impersonateusers
+  - moderateusers
+  - performupdates
+  - registerusers
+  - 'replacefiles:1161e40e-4abd-42f6-ab07-1f1254de17b4' # OG
+  - 'replacefiles:1f276b15-e846-4aaa-a997-41ecafa68adc' # Icons
+  - 'replacefiles:4dfa8799-f095-4bd8-a821-1fb376db0278' # Grids
+  - 'replacefiles:6569339b-0b2b-4801-9b30-7599f28e1a5b' # Media
+  - 'replacefiles:74ec495a-3fc7-4175-8f94-3ee08302407a' # Articles
+  - 'replacefiles:b4a06662-5fb9-4347-9b76-b1e291db3b88' # Cards
+  - 'replacefiles:b61c0f3e-aaeb-4c6d-aab8-39448c056b8e' # CTAs
+  - 'replacefiles:f2dee3a0-3c95-4b6a-9494-ffe8ce0dff46' # Gallery
+  - 'replacepeerfiles:1161e40e-4abd-42f6-ab07-1f1254de17b4' # OG
+  - 'replacepeerfiles:1f276b15-e846-4aaa-a997-41ecafa68adc' # Icons
+  - 'replacepeerfiles:4dfa8799-f095-4bd8-a821-1fb376db0278' # Grids
+  - 'replacepeerfiles:6569339b-0b2b-4801-9b30-7599f28e1a5b' # Media
+  - 'replacepeerfiles:74ec495a-3fc7-4175-8f94-3ee08302407a' # Articles
+  - 'replacepeerfiles:b4a06662-5fb9-4347-9b76-b1e291db3b88' # Cards
+  - 'replacepeerfiles:b61c0f3e-aaeb-4c6d-aab8-39448c056b8e' # CTAs
+  - 'replacepeerfiles:f2dee3a0-3c95-4b6a-9494-ffe8ce0dff46' # Gallery
+  - 'retour:dashboard'
+  - 'retour:redirects'
+  - 'retour:settings'
+  - 'saveassets:1161e40e-4abd-42f6-ab07-1f1254de17b4' # OG
+  - 'saveassets:1f276b15-e846-4aaa-a997-41ecafa68adc' # Icons
+  - 'saveassets:4dfa8799-f095-4bd8-a821-1fb376db0278' # Grids
+  - 'saveassets:6569339b-0b2b-4801-9b30-7599f28e1a5b' # Media
+  - 'saveassets:74ec495a-3fc7-4175-8f94-3ee08302407a' # Articles
+  - 'saveassets:b4a06662-5fb9-4347-9b76-b1e291db3b88' # Cards
+  - 'saveassets:b61c0f3e-aaeb-4c6d-aab8-39448c056b8e' # CTAs
+  - 'saveassets:f2dee3a0-3c95-4b6a-9494-ffe8ce0dff46' # Gallery
+  - 'savecategories:0536c060-0d97-421e-8c73-3ad5baec52d2' # Skills
+  - 'savecategories:4e026396-d7ab-43ef-a817-226fb2dada30'
+  - 'savecategories:6834194e-43c0-464b-9333-a15bd914d9d3' # Project Categories
+  - 'savecategories:f326369d-c220-40d9-92e9-7b7b7811d8e5' # News Categories
+  - 'saveentries:1962717b-7da2-4f6f-be49-ee640b8ddfe2' # Vacancies
+  - 'saveentries:1ae55366-a3a6-4ed1-bf34-12ead8ae6c21' # Our Services
+  - 'saveentries:54e60257-f31a-44aa-960e-bbd364197e28' # Homepage
+  - 'saveentries:92164c9b-e1af-4a4e-b639-44a2b5d79bd3' # Navigation
+  - 'saveentries:9de367ab-77b8-47bb-bbc3-63e79a202c3e' # Blog
+  - 'saveentries:a43f63a3-f09b-404a-8002-846873fd6fe6' # Plugins
+  - 'saveentries:a72bfe0c-3389-4f9f-8ec1-ab318ec10b29' # Errors
+  - 'saveentries:dbc716a7-2122-4b92-b942-471970256a35' # Clients
+  - 'saveentries:e80a7183-56ec-49d8-81a8-405444fc3077' # The Team
+  - 'saveentries:ef841ba4-7bcd-4ef5-9c12-96377bf7fba2' # Pages
+  - 'saveentries:f4a50ead-30b3-4d86-bdd1-9d5c295fb9fd' # Our Work
+  - 'savepeerassets:1161e40e-4abd-42f6-ab07-1f1254de17b4' # OG
+  - 'savepeerassets:1f276b15-e846-4aaa-a997-41ecafa68adc' # Icons
+  - 'savepeerassets:4dfa8799-f095-4bd8-a821-1fb376db0278' # Grids
+  - 'savepeerassets:6569339b-0b2b-4801-9b30-7599f28e1a5b' # Media
+  - 'savepeerassets:74ec495a-3fc7-4175-8f94-3ee08302407a' # Articles
+  - 'savepeerassets:b4a06662-5fb9-4347-9b76-b1e291db3b88' # Cards
+  - 'savepeerassets:b61c0f3e-aaeb-4c6d-aab8-39448c056b8e' # CTAs
+  - 'savepeerassets:f2dee3a0-3c95-4b6a-9494-ffe8ce0dff46' # Gallery
+  - 'savepeercategorydrafts:0536c060-0d97-421e-8c73-3ad5baec52d2' # Skills
+  - 'savepeercategorydrafts:4e026396-d7ab-43ef-a817-226fb2dada30'
+  - 'savepeercategorydrafts:6834194e-43c0-464b-9333-a15bd914d9d3' # Project Categories
+  - 'savepeercategorydrafts:f326369d-c220-40d9-92e9-7b7b7811d8e5' # News Categories
+  - 'savepeerentries:1962717b-7da2-4f6f-be49-ee640b8ddfe2' # Vacancies
+  - 'savepeerentries:1ae55366-a3a6-4ed1-bf34-12ead8ae6c21' # Our Services
+  - 'savepeerentries:92164c9b-e1af-4a4e-b639-44a2b5d79bd3' # Navigation
+  - 'savepeerentries:9de367ab-77b8-47bb-bbc3-63e79a202c3e' # Blog
+  - 'savepeerentries:a43f63a3-f09b-404a-8002-846873fd6fe6' # Plugins
+  - 'savepeerentries:a72bfe0c-3389-4f9f-8ec1-ab318ec10b29' # Errors
+  - 'savepeerentries:dbc716a7-2122-4b92-b942-471970256a35' # Clients
+  - 'savepeerentries:e80a7183-56ec-49d8-81a8-405444fc3077' # The Team
+  - 'savepeerentries:ef841ba4-7bcd-4ef5-9c12-96377bf7fba2' # Pages
+  - 'savepeerentries:f4a50ead-30b3-4d86-bdd1-9d5c295fb9fd' # Our Work
+  - 'savepeerentrydrafts:1962717b-7da2-4f6f-be49-ee640b8ddfe2' # Vacancies
+  - 'savepeerentrydrafts:1ae55366-a3a6-4ed1-bf34-12ead8ae6c21' # Our Services
+  - 'savepeerentrydrafts:54e60257-f31a-44aa-960e-bbd364197e28' # Homepage
+  - 'savepeerentrydrafts:92164c9b-e1af-4a4e-b639-44a2b5d79bd3' # Navigation
+  - 'savepeerentrydrafts:9de367ab-77b8-47bb-bbc3-63e79a202c3e' # Blog
+  - 'savepeerentrydrafts:a43f63a3-f09b-404a-8002-846873fd6fe6' # Plugins
+  - 'savepeerentrydrafts:a72bfe0c-3389-4f9f-8ec1-ab318ec10b29' # Errors
+  - 'savepeerentrydrafts:dbc716a7-2122-4b92-b942-471970256a35' # Clients
+  - 'savepeerentrydrafts:e80a7183-56ec-49d8-81a8-405444fc3077' # The Team
+  - 'savepeerentrydrafts:ef841ba4-7bcd-4ef5-9c12-96377bf7fba2' # Pages
+  - 'savepeerentrydrafts:f4a50ead-30b3-4d86-bdd1-9d5c295fb9fd' # Our Work
+  - 'seomatic:content-meta'
+  - 'seomatic:content-meta:facebook'
+  - 'seomatic:content-meta:general'
+  - 'seomatic:content-meta:sitemap'
+  - 'seomatic:content-meta:twitter'
+  - 'seomatic:dashboard'
+  - 'seomatic:global-meta'
+  - 'seomatic:global-meta:ads'
+  - 'seomatic:global-meta:facebook'
+  - 'seomatic:global-meta:general'
+  - 'seomatic:global-meta:humans'
+  - 'seomatic:global-meta:robots'
+  - 'seomatic:global-meta:security'
+  - 'seomatic:global-meta:twitter'
+  - 'seomatic:plugin-settings'
+  - 'seomatic:site-settings'
+  - 'seomatic:site-settings:creator'
+  - 'seomatic:site-settings:identity'
+  - 'seomatic:site-settings:miscellaneous'
+  - 'seomatic:site-settings:sitemap'
+  - 'seomatic:site-settings:social'
+  - 'seomatic:tracking-scripts'
+  - 'seomatic:tracking-scripts:facebookpixel'
+  - 'seomatic:tracking-scripts:fathom'
+  - 'seomatic:tracking-scripts:googleanalytics'
+  - 'seomatic:tracking-scripts:googletagmanager'
+  - 'seomatic:tracking-scripts:gtag'
+  - 'seomatic:tracking-scripts:hubspot'
+  - 'seomatic:tracking-scripts:linkedininsight'
+  - 'seomatic:tracking-scripts:matomo'
+  - 'seomatic:tracking-scripts:pinteresttag'
+  - 'seomatic:tracking-scripts:plausible'
+  - 'utility:asset-indexes'
+  - 'utility:blitz-hints'
+  - 'utility:clear-caches'
+  - 'utility:db-backup'
+  - 'utility:deprecation-errors'
+  - 'utility:find-replace'
+  - 'utility:migrations'
+  - 'utility:php-info'
+  - 'utility:system-messages'
+  - 'utility:system-report'
+  - 'utility:updates'
+  - 'viewassets:1161e40e-4abd-42f6-ab07-1f1254de17b4' # OG
+  - 'viewassets:1f276b15-e846-4aaa-a997-41ecafa68adc' # Icons
+  - 'viewassets:4dfa8799-f095-4bd8-a821-1fb376db0278' # Grids
+  - 'viewassets:6569339b-0b2b-4801-9b30-7599f28e1a5b' # Media
+  - 'viewassets:74ec495a-3fc7-4175-8f94-3ee08302407a' # Articles
+  - 'viewassets:b4a06662-5fb9-4347-9b76-b1e291db3b88' # Cards
+  - 'viewassets:b61c0f3e-aaeb-4c6d-aab8-39448c056b8e' # CTAs
+  - 'viewassets:f2dee3a0-3c95-4b6a-9494-ffe8ce0dff46' # Gallery
+  - 'viewcategories:0536c060-0d97-421e-8c73-3ad5baec52d2' # Skills
+  - 'viewcategories:4e026396-d7ab-43ef-a817-226fb2dada30'
+  - 'viewcategories:6834194e-43c0-464b-9333-a15bd914d9d3' # Project Categories
+  - 'viewcategories:f326369d-c220-40d9-92e9-7b7b7811d8e5' # News Categories
+  - 'viewentries:1962717b-7da2-4f6f-be49-ee640b8ddfe2' # Vacancies
+  - 'viewentries:1ae55366-a3a6-4ed1-bf34-12ead8ae6c21' # Our Services
+  - 'viewentries:54e60257-f31a-44aa-960e-bbd364197e28' # Homepage
+  - 'viewentries:92164c9b-e1af-4a4e-b639-44a2b5d79bd3' # Navigation
+  - 'viewentries:9de367ab-77b8-47bb-bbc3-63e79a202c3e' # Blog
+  - 'viewentries:a43f63a3-f09b-404a-8002-846873fd6fe6' # Plugins
+  - 'viewentries:a72bfe0c-3389-4f9f-8ec1-ab318ec10b29' # Errors
+  - 'viewentries:dbc716a7-2122-4b92-b942-471970256a35' # Clients
+  - 'viewentries:e80a7183-56ec-49d8-81a8-405444fc3077' # The Team
+  - 'viewentries:ef841ba4-7bcd-4ef5-9c12-96377bf7fba2' # Pages
+  - 'viewentries:f4a50ead-30b3-4d86-bdd1-9d5c295fb9fd' # Our Work
+  - 'viewpeerassets:1161e40e-4abd-42f6-ab07-1f1254de17b4' # OG
+  - 'viewpeerassets:1f276b15-e846-4aaa-a997-41ecafa68adc' # Icons
+  - 'viewpeerassets:4dfa8799-f095-4bd8-a821-1fb376db0278' # Grids
+  - 'viewpeerassets:6569339b-0b2b-4801-9b30-7599f28e1a5b' # Media
+  - 'viewpeerassets:74ec495a-3fc7-4175-8f94-3ee08302407a' # Articles
+  - 'viewpeerassets:b4a06662-5fb9-4347-9b76-b1e291db3b88' # Cards
+  - 'viewpeerassets:b61c0f3e-aaeb-4c6d-aab8-39448c056b8e' # CTAs
+  - 'viewpeerassets:f2dee3a0-3c95-4b6a-9494-ffe8ce0dff46' # Gallery
+  - 'viewpeercategorydrafts:0536c060-0d97-421e-8c73-3ad5baec52d2' # Skills
+  - 'viewpeercategorydrafts:4e026396-d7ab-43ef-a817-226fb2dada30'
+  - 'viewpeercategorydrafts:6834194e-43c0-464b-9333-a15bd914d9d3' # Project Categories
+  - 'viewpeercategorydrafts:f326369d-c220-40d9-92e9-7b7b7811d8e5' # News Categories
+  - 'viewpeerentries:1962717b-7da2-4f6f-be49-ee640b8ddfe2' # Vacancies
+  - 'viewpeerentries:1ae55366-a3a6-4ed1-bf34-12ead8ae6c21' # Our Services
+  - 'viewpeerentries:92164c9b-e1af-4a4e-b639-44a2b5d79bd3' # Navigation
+  - 'viewpeerentries:9de367ab-77b8-47bb-bbc3-63e79a202c3e' # Blog
+  - 'viewpeerentries:a43f63a3-f09b-404a-8002-846873fd6fe6' # Plugins
+  - 'viewpeerentries:a72bfe0c-3389-4f9f-8ec1-ab318ec10b29' # Errors
+  - 'viewpeerentries:dbc716a7-2122-4b92-b942-471970256a35' # Clients
+  - 'viewpeerentries:e80a7183-56ec-49d8-81a8-405444fc3077' # The Team
+  - 'viewpeerentries:ef841ba4-7bcd-4ef5-9c12-96377bf7fba2' # Pages
+  - 'viewpeerentries:f4a50ead-30b3-4d86-bdd1-9d5c295fb9fd' # Our Work
+  - 'viewpeerentrydrafts:1962717b-7da2-4f6f-be49-ee640b8ddfe2' # Vacancies
+  - 'viewpeerentrydrafts:1ae55366-a3a6-4ed1-bf34-12ead8ae6c21' # Our Services
+  - 'viewpeerentrydrafts:54e60257-f31a-44aa-960e-bbd364197e28' # Homepage
+  - 'viewpeerentrydrafts:92164c9b-e1af-4a4e-b639-44a2b5d79bd3' # Navigation
+  - 'viewpeerentrydrafts:9de367ab-77b8-47bb-bbc3-63e79a202c3e' # Blog
+  - 'viewpeerentrydrafts:a43f63a3-f09b-404a-8002-846873fd6fe6' # Plugins
+  - 'viewpeerentrydrafts:a72bfe0c-3389-4f9f-8ec1-ab318ec10b29' # Errors
+  - 'viewpeerentrydrafts:dbc716a7-2122-4b92-b942-471970256a35' # Clients
+  - 'viewpeerentrydrafts:e80a7183-56ec-49d8-81a8-405444fc3077' # The Team
+  - 'viewpeerentrydrafts:ef841ba4-7bcd-4ef5-9c12-96377bf7fba2' # Pages
+  - 'viewpeerentrydrafts:f4a50ead-30b3-4d86-bdd1-9d5c295fb9fd' # Our Work

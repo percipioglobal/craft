@@ -1,0 +1,73 @@
+fieldLayouts:
+  bfbe6649-9144-4fda-b557-5c224e99277c:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: a1dd1e0a-71a8-4ca6-abd9-e9d1eb112f36
+            warning: null
+            width: 100
+          -
+            fieldUid: e691301b-7484-40be-a3d4-c3bc590de959 # Content Builder
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ce526c2b-7b84-4a3c-8ea2-b06862c01840
+            warning: null
+            width: 100
+        name: Content
+        uid: 575e56c7-c903-40e8-9b4e-44e51a6502ca
+      -
+        elements:
+          -
+            fieldUid: 2bcee070-9832-4e9a-a3d1-51566028022e # OG Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: cf6b30a4-25b8-4203-b507-31eecaff76af
+            warning: null
+            width: 100
+          -
+            fieldUid: 6a3feb81-50ce-467a-8aca-b5d4cc12aed0 # Description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: be18314d-b06f-420c-8f7d-eb48c1891539
+            warning: null
+            width: 100
+        name: SEO
+        uid: 81d764f3-524f-4538-8853-979b7fc13955
+handle: legal
+hasTitleField: true
+name: 'Legal Group'
+section: ef841ba4-7bcd-4ef5-9c12-96377bf7fba2 # Pages
+sortOrder: 9
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

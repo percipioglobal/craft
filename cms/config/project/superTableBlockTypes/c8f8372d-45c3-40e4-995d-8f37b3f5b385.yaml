@@ -1,0 +1,77 @@
+field: 46d6543c-b83e-4b73-be6e-edcfb691204e # Grid Items
+fieldLayouts:
+  af8044a4-866e-4bfd-9dac-05ce4c085fe3:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 4103b2f0-dd71-494b-919a-621d2a5e959e # Heading
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: bcaa6fd4-f215-4a5c-9e69-9deab1467681
+            warning: null
+            width: 100
+          -
+            fieldUid: a6d05f0a-f046-4a8d-bddd-dd368b675507 # Content
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 21be5029-1da4-4ef0-845f-763cd0707535
+            warning: null
+            width: 100
+        name: Content
+        uid: d488e807-1725-452c-8872-825d537fa0b3
+fields:
+  4103b2f0-dd71-494b-919a-621d2a5e959e: # Heading
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: heading
+    instructions: null
+    name: Heading
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  a6d05f0a-f046-4a8d-bddd-dd368b675507: # Content
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: body
+    instructions: null
+    name: Content
+    searchable: false
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: null
+      purifyHtml: true
+      redactorConfig: Simple.json
+      removeEmptyTags: false
+      removeInlineStyles: false
+      removeNbsp: false
+      showHtmlButtonForNonAdmins: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field

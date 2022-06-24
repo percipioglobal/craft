@@ -1,0 +1,19 @@
+columnSuffix: null
+contentColumnType: text
+fieldGroup: 58eccc39-1c9e-45ac-bae8-465deff69786 # Team
+handle: role
+instructions: 'Enter the Job Role of the team member'
+name: 'Job Role'
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

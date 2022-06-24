@@ -1,0 +1,16 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 91df968c-fe4d-4f3b-b3db-0abde5d64dfb # Footer
+handle: locations
+instructions: null
+name: Locations
+searchable: false
+settings:
+  contentTable: '{{%matrixcontent_locations}}'
+  maxBlocks: null
+  minBlocks: null
+  propagationKeyFormat: null
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

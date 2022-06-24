@@ -1,3 +1,23 @@
-{%- set entry = craft.entries.section('error').slug('error503').one() -%}
+{% extends '_boilerplate/_layouts/generic-page-layout.twig' %}
 
-{%- extends "_boilerplate/_layouts/error-page-layout.twig" -%}
+{% set entry = craft.entries.section('errorPages').slug('error503').one() %}
+
+{% block headLinks %}
+    {{ parent() }}
+{% endblock headLinks %}
+
+{% block content %}
+    {%- include '_organisms/heroes/hero--primary' ignore missing with {
+        content: {
+            overline: entry.errorHeadline,
+            title: entry.title,
+            description: entry.errorText
+        },
+    } -%}
+{% endblock %}
+
+{# -- Any JavaScript that should be included before </body> -- #}
+{% block bodyJs %}
+    {{ parent() }}
+{% endblock bodyJs %}
+

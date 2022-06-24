@@ -1,26 +1,25 @@
+{%- extends '_atoms/texts/_text--props' -%}
 
-{%- extends "_atoms/texts/text--variables" -%}
+{#
+    ### PROPERTIES ###
+    ------------------
 
-{# 
-    ### OPTIONS ###
-    ---------------
+    INHERITED FROM: `_atoms/texts/text--props.twig`
 
-    content: (STR) -- the actual content as a string
+    OMITTED
+    ---------
 
-    ## ADDED
-
-    words: (INT) -- give the maximum amount of words that can be displayed in the title, default value = 60;
-
+    alignment
 #}
+
+{%- set strong = 'prose-strong:text-pink-500 prose-strong:font-normal' -%}
 
 {%- block text -%}
 
-    {%- set values = values|merge({
-        words: options.words ??? 60,
-    }) -%}
-
     {%- minify -%}
-        {{- values.content | typogrify(true) | wordLimit(values.words) | raw -}}
+        <span class="{{- props.color }} prose text-4xl md:text-7xl-md lg:text-7xl tracking-tightest {{ strong }} {{ props.utilities -}}">
+            {{- props.content | striptags('<strong>') | typogrify(true) | raw -}}
+        </span>
     {%- endminify -%}
-    
+
 {%- endblock -%}

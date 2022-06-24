@@ -1,0 +1,29 @@
+{%- extends '_atoms/links/_link--props' -%}
+{%- import '_macros/functions' as parse -%}
+
+{#
+    ### PROPERTIES ###
+    ------------------
+
+    INHERITED FROM: `_atoms/links/link--props.twig`
+
+    ### FUNCTIONS ###
+    -----------------
+    ga: parse google analytics attributes
+#}
+
+{%- block link -%}
+
+    {%- minify -%}
+        <a
+            href="{{- props.url -}}"
+            {{ parse.ga(props.ga) }}
+            title="{{- props.text -}}"
+            aria-label="{{- props.text -}}"
+            class="absolute inset-0 z-1"
+        >
+            <span class="sr-only">Read more about {{ props.text -}}</span>
+        </a>
+    {%- endminify -%}
+
+{%- endblock -%}

@@ -1,0 +1,16 @@
+{#
+    ### PROPERTIES ###
+    ---------------
+
+    title: (STR) -- the title of the embed
+    url: (STR) -- the url of the embed
+#}
+
+{%- set props = {
+    title: options.title ??? null,
+    url: options.url ??? 'gray-900',
+    utilities: options.utilities ?? null,
+} -%}
+
+{%- block media -%}
+{%- endblock -%}
