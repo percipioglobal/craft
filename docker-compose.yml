@@ -83,7 +83,7 @@ services:
     ports:
       - "5002:3306"
     volumes:
-      - percipio-data:/var/lib/mysql
+      - db-data:/var/lib/mysql
       - ./db-seed/:/docker-entrypoint-initdb.d
   # redis - key/value database for caching & php sessions
   redis:
