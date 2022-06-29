@@ -1,11 +1,11 @@
-# Craft 3 .gitignore
+# Craft 4 .gitignore
 #
 # Example .gitignore file for Craft 3 CMS projects
 #
-# @author    percipio.london
-# @copyright Copyright (c) 2021 Percipio Global Ltd.
-# @link      https://percipio.london/
-# @package   percipioglobal/craft
+# @author    nystudio107
+# @copyright Copyright (c) 2017 nystudio107
+# @link      https://nystudio107.com/
+# @package   nystudio107/craft
 # @since     1.0.0
 # @license   MIT
 
@@ -19,7 +19,6 @@
 
 # CRAFT STORAGE
 */storage/*
-!*/storage/.gitkeep
 
 # ASSETS
 /cms/web/assets/*

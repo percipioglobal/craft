@@ -1,15 +1,15 @@
-import {defineConfig} from 'vite'
+import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import legacy from '@vitejs/plugin-legacy'
 import ViteRestart from 'vite-plugin-restart'
 import viteCompression from 'vite-plugin-compression'
 import manifestSRI from 'vite-plugin-manifest-sri'
-import {visualizer} from 'rollup-plugin-visualizer'
+import { visualizer } from 'rollup-plugin-visualizer'
 import eslintPlugin from 'vite-plugin-eslint'
-import {nodeResolve} from '@rollup/plugin-node-resolve'
+import { nodeResolve } from '@rollup/plugin-node-resolve'
 import critical from 'rollup-plugin-critical'
-import {ViteFaviconsPlugin} from 'vite-plugin-favicon2'
-import * as path from 'path';
+import { ViteFaviconsPlugin } from 'vite-plugin-favicon2'
+import * as path from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig(({command}) => ({
@@ -33,7 +33,7 @@ export default defineConfig(({command}) => ({
             criticalUrl: 'https://percipio.london',
             criticalBase: '../cms/web/dist/criticalcss/',
             criticalPages: [
-                {uri: '/', template: 'index'},
+                { uri: '/', template: 'index' },
             ],
             criticalConfig: {}
         }),
@@ -82,8 +82,8 @@ export default defineConfig(({command}) => ({
             strict: false
         },
         host: '0.0.0.0',
-        origin: 'http://localhost:8002',
-        port: 8002,
+        origin: 'http://localhost:5001',
+        port: 5001,
         strictPort: true,
     }
 }));

@@ -1,14 +1,16 @@
-// import App from '@/vue/App.vue'
-// import { createApp } from 'vue'
+import App from '@/vue/App.vue'
+import { createApp } from 'vue'
+
+// Import font awesome icons
 import './assets/icons'
-import { init as initPageAnimation } from './animations/page'
 
 // Import our CSS
-import '@/css/app.pcss';
+import '@/css/app.pcss'
 
 // App main
 const main = async () => {
-    initPageAnimation()
+    const app = createApp(App)
+    return app.mount('#app-container')
 }
 
 // Execute async function

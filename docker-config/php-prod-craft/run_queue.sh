@@ -15,13 +15,13 @@
 cd /var/www/project/cms
 # Wait until the MySQL db container responds
 echo "### Waiting for MySQL database"
-until eval "mysql -h mysql -u $DB_USER -p$DB_PASSWORD $DB_DATABASE -e 'select 1' > /dev/null 2>&1"
+until eval "mysql -h mariadb -u $DB_USER -p$DB_PASSWORD $DB_DATABASE -e 'select 1' > /dev/null 2>&1"
 do
   sleep 1
 done
-# Wait until the `composer install` is done by looking for the `vendor/autoload.php` file
+# Wait until the `composer install` is done by looking for the `vendor/autoload.php` and `composer.lock` files
 echo "### Waiting for vendor/autoload.php"
-while [ ! -f vendor/autoload.php ]
+while [ ! -f "vendor/autoload.php" ] || [ ! -f "composer.lock" ]
 do
   sleep 1
 done

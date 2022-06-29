@@ -10,9 +10,9 @@ services:
       - ./cms/.env
     init: true
     ports:
-      - "8000:80"
+      - "5000:80"
     volumes:
-      - cpresources:/var/www/project/cms/web/cpresources
+      - cpresources:/var/www/project/cms/web/cpresources:delegated
       - ./cms/web:/var/www/project/cms/web:cached
   # php - run php-fpm
   php:
@@ -20,15 +20,15 @@ services:
       context: ./docker-config/php-prod-craft
       dockerfile: ./Dockerfile
     depends_on:
-      - "mysql"
+      - "mariadb"
       - "redis"
     env_file:
       *env
     expose:
       - "9000"
     init: true
+    tty: true
     volumes: &php-volumes
-      # Change the path below to map to your local plugin repositories
       - cpresources:/var/www/project/cms/web/cpresources:delegated
       - storage:/var/www/project/cms/storage:delegated
       - ./cms:/var/www/project/cms:cached
@@ -37,7 +37,6 @@ services:
       - ./cms/storage/runtime/compiled_templates:/var/www/project/cms/storage/runtime/compiled_templates:delegated
       - ./cms/storage/runtime/compiled_classes:/var/www/project/cms/storage/runtime/compiled_classes:delegated
       - ./cms/vendor:/var/www/project/cms/vendor:delegated
-      - ./cms/storage/rebrand:/var/www/project/cms/storage/rebrand:delegated
   # php - run php-fpm with xdebug
   php_xdebug:
     build:
@@ -50,6 +49,7 @@ services:
     expose:
       - "9000"
     init: true
+    tty: true
     volumes:
       *php-volumes
   # queue - runs queue jobs via php craft queue/listen
@@ -62,28 +62,27 @@ services:
     env_file:
       *env
     init: true
+    tty: true
     volumes:
       *php-volumes
-  # mysql - database
-  mysql:
+  # mariadb - database
+  mariadb:
     build:
-      context: ./docker-config/mysql
+      context: ./docker-config/mariadb
       dockerfile: ./Dockerfile
-    cap_add:
-      - SYS_NICE  # CAP_SYS_NICE
     env_file:
       *env
     environment:
       MYSQL_ROOT_PASSWORD: secret
-      MYSQL_DATABASES: project
+      MYSQL_DATABASE: project
       MYSQL_USER: project
       MYSQL_PASSWORD: project
     init: true
     ports:
-      - "8001:3306"
+      - "5002:3306"
     volumes:
-      - mysql-db-data:/var/lib/mysql
-      - ./db-seed/mysql:/docker-entrypoint-initdb.d
+      - db-data:/var/lib/mysql
+      - ./db-seed/:/docker-entrypoint-initdb.d
   # redis - key/value database for caching & php sessions
   redis:
     build:
@@ -101,7 +100,8 @@ services:
       *env
     init: true
     ports:
-      - "8002:8002"
+      - "5001:5001"
+    tty: true
     volumes:
       - ./buildchain:/var/www/project/buildchain:cached
       - ./buildchain/node_modules:/var/www/project/buildchain/node_modules:delegated
@@ -110,6 +110,6 @@ services:
       - ./cms/templates:/var/www/project/cms/templates:cached
 
 volumes:
-  mysql-db-data:
+  db-data:
   cpresources:
   storage:

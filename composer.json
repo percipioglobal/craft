@@ -1,6 +1,6 @@
 {
     "name": "craftcms/craft",
-    "description": "Percipio.London Craft 3 CMS scaffolding project",
+    "description": "Percipio.London Craft 4 CMS scaffolding project",
     "keywords": [
         "craft",
         "cms",
@@ -28,5 +28,5 @@
             "@php -r \"@unlink('README.md');\""
         ]
     },
-    "version": "2.0.0"
+    "version": "4.0.0"
 }
