@@ -20,7 +20,7 @@ services:
       context: ./docker-config/php-prod-craft
       dockerfile: ./Dockerfile
     depends_on:
-      - "mariadb"
+      - "mysql"
       - "redis"
     env_file:
       *env
@@ -65,11 +65,13 @@ services:
     tty: true
     volumes:
       *php-volumes
-  # mariadb - database
-  mariadb:
+  # mysql - database
+  mysql:
     build:
-      context: ./docker-config/mariadb
+      context: ./docker-config/mysql
       dockerfile: ./Dockerfile
+    cap_add:
+      - SYS_NICE  # CAP_SYS_NICE
     env_file:
       *env
     environment:
@@ -81,7 +83,7 @@ services:
     ports:
       - "5002:3306"
     volumes:
-      - db-data:/var/lib/mysql
+      - percipio-data:/var/lib/mysql
       - ./db-seed/:/docker-entrypoint-initdb.d
   # redis - key/value database for caching & php sessions
   redis:
