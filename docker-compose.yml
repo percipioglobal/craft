@@ -10,7 +10,7 @@ services:
       - ./cms/.env
     init: true
     ports:
-      - "5000:80"
+      - "8000:80"
     volumes:
       - cpresources:/var/www/project/cms/web/cpresources:delegated
       - ./cms/web:/var/www/project/cms/web:cached
