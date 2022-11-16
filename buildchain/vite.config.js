@@ -82,8 +82,8 @@ export default defineConfig(({command}) => ({
             strict: false
         },
         host: '0.0.0.0',
-        origin: 'http://localhost:5001',
-        port: 5001,
+        origin: 'http://localhost:8001',
+        port: 8001,
         strictPort: true,
     }
 }));
