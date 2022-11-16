@@ -50,11 +50,11 @@ The following Craft CMS plugins are used on this site:
 
 This project package works exactly the way Pixel & Tonic's [craftcms/craft](https://github.com/craftcms/craft) package works; you create a new project by first creating & installing the project:
 
-    `composer create-project percipioglobal/craft:dev-craft-vite PATH --no-install --remove-vcs`
+    `composer create-project percipioglobal/craft:dev-craft-v4-vite PATH --no-install --remove-vcs`
 
 Make sure that `PATH` is the path to your project, including the name you want for the project, e.g.:
 
-    `composer create-project percipioglobal/craft:dev-craft-vite vitecraft --no-install --remove-vcs`
+    `composer create-project percipioglobal/craft:dev-craft-v4-vite vitecraft --no-install --remove-vcs`
 
 We use `--no-install` so that the composer packages for the root project are not installed.
 
