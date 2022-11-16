@@ -81,7 +81,7 @@ services:
       MYSQL_PASSWORD: project
     init: true
     ports:
-      - "5002:3306"
+      - "8002:3306"
     volumes:
       - db-data:/var/lib/mysql
       - ./db-seed/:/docker-entrypoint-initdb.d
@@ -102,7 +102,7 @@ services:
       *env
     init: true
     ports:
-      - "5001:5001"
+      - "8001:8001"
     tty: true
     volumes:
       - ./buildchain:/var/www/project/buildchain:cached
