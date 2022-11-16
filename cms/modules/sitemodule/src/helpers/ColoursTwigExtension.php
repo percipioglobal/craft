@@ -25,7 +25,6 @@ class ColoursTwigExtension extends \Twig\Extension\AbstractExtension
             'label' => 'default',
             'primary' => 'black',
             'secondary' => 'black',
-            'text' => 'black',
         ];
 
         if(empty($swatch)){
@@ -40,8 +39,7 @@ class ColoursTwigExtension extends \Twig\Extension\AbstractExtension
             $i = 0;
             foreach ($swatch->color as $color) {
                 $key = 0 === $i ? 'primary' : 'secondary';
-                $swatches[$key] = $color->class;
-                $swatches['text'] = $color->text;
+                $swatches[$key] = $color['class'];
 
                 $i++;
             }
