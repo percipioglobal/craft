@@ -1,12 +1,15 @@
 {%- do craft.eagerBeaver.eagerLoadElements(entry,
     [
         'contentBuilder',
-        'pageBuilder.highlightCards:cards',
-        'pageBuilder.highlightCards:cards.teaserImage',
+        'contentBuilder.highlightCards:cards',
+        'contentBuilder.highlightCards:cards.teaserImage',
         'contentBuilder.galleryImages:images',
         'contentBuilder.media',
+        'contentBuilder.form:form',
         'contentBuilder.media:embed',
         'contentBuilder.singleImage:image',
+        'contentBuilder.resourceList:resources',
+        'contentBuilder.resourceList:resources.target',
     ])
 -%}
 
