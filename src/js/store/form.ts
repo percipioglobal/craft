@@ -64,12 +64,15 @@ export const useFormStore = defineStore('form', {
             this.success = false
 
             try {
-                const { data, errors } = await defaultClient.mutate({
+                const { data } = await defaultClient.mutate({
                     mutation: SUBMIT(this.config.formHandle, params, vars),
                     variables: { ...values }.values
                 })
 
-                this.success = true
+                if (data) {
+                    this.success = true
+                }
+
             } catch(error) {
                 if (error.graphQLErrors[0].message ?? null) {
                     this.errors = JSON.parse(error.graphQLErrors[0].message)
