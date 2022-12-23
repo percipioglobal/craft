@@ -1,0 +1,25 @@
+{% import '_macros/atoms' as render %}
+
+{%- set props = {
+    form: form ??? null,
+    hiddenValues: hiddenValues ??? {},
+    utilities: utilities ??? ''
+} -%}
+
+{%- minify -%}
+	<div class="w-full mb-8 print:hidden {{ props.utilities -}}">
+
+    {%- if form -%}
+        <div class="w-full mb-8">
+
+            <div class="relative ">
+
+                <form--primary handle="{{- props.form -}}" :hidden="{{ props.hiddenValues|json_encode }}"></form--primary>
+
+            </div>
+        </div>
+    {%- endif -%}
+
+    </div>
+
+{%- endminify -%}

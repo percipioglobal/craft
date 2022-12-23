@@ -2,10 +2,6 @@
 
 {%- set navigation = navigation|default(null) -%}
 
-{%- set logo -%}
-    {% include '_atoms/svgs/svg--logo.svg' %}
-{%- endset -%}
-
 {%- minify -%}
     <header class="bg-white bg-opacity-[0.95] flex items-center py-3 z-10 fixed left-0 top-0 w-full transition-transform duration-500 ease-slide" id="site-navigation">
 
@@ -18,27 +14,33 @@
 
                 {# Logo #}
                 <li role="none" class="flex-grow">
-                    <a href="/" role="menuitem" tabindex="0">
-                        {{- logo -}}
+                    <a 
+                        href="/" 
+                        role="menuitem" 
+                        aria-label="Visit our homepage" 
+                        tabindex="0"
+                        data-tag-category="navaction"
+                        data-tag-action="click"
+                        data-tag-label="home"
+                    >
+                        Home
                     </a>
                 </li>
 
                 {# Navigation items #}
                 {%- for item in navigation -%}
-                    <li role="none" class="hidden lg:inline">
+                    <li role="none">
 
-                        {%- set component = item.showAsButton ? {type: 'button', variant: 'primary'} : {type: 'link', variant: 'navigation'} -%}
-
-                        {{- render.atom(component.type, component.variant, {
-                            url: item.target.first().url ??? null,
+                        {{- render.atom('link', 'navigation', {
+                            url: item.target.one().url ??? null,
                             text: item.title ??? null,
                             target: '_self',
                             ga: {
-                                category:'Navigation link',
+                                category:'navaction',
                                 action:'click',
                                 label: item.title ??? null,
                             },
-                            active: (item.target.first().url ??? '') in craft.app.request.absoluteUrl,
+                            active: (item.target.one().url ??? '') in craft.app.request.absoluteUrl,
                             utilities: 'mx-3 ' ~ (loop.last ? 'mr-0' : '')
                         }) -}}
 
@@ -47,12 +49,4 @@
             </ul>
         </nav>
     </header>
-
-    {{- render.atom('button', 'hamburger', {
-        utilities: 'lg:hidden'
-    }) -}}
-
-    {# <div id="navigation-container">
-        <NavigationPrimary></NavigationPrimary>
-    </div> #}
 {%- endminify -%}

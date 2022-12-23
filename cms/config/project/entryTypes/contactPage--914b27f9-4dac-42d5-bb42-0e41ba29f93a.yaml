@@ -2,6 +2,7 @@ fieldLayouts:
   9e410af1-cbe3-47f3-93f7-c3c0257972ac:
     tabs:
       -
+        elementCondition: null
         elements:
           -
             autocapitalize: true
@@ -9,6 +10,7 @@ fieldLayouts:
             autocorrect: true
             class: null
             disabled: false
+            elementCondition: null
             id: null
             instructions: null
             label: null
@@ -25,9 +27,11 @@ fieldLayouts:
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
             uid: 37764a4b-6510-453a-b492-db3687150730
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: dbc7a062-ef19-48ca-bd6f-acda62a18b78 # Hero Builder
             instructions: null
             label: null
@@ -35,9 +39,11 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 939a17e8-034e-48a8-8c20-0f397403e8de
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: e691301b-7484-40be-a3d4-c3bc590de959 # Content Builder
             instructions: null
             label: null
@@ -45,34 +51,30 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 4506bf93-6fdf-443e-b217-0f6f82749202
+            userCondition: null
             warning: null
             width: 100
         name: Content
         uid: 579a24a0-b936-40e6-b52f-5840ed3fc9dc
+        userCondition: null
       -
+        elementCondition: null
         elements:
           -
-            fieldUid: 2bcee070-9832-4e9a-a3d1-51566028022e # OG Image
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: c3f6d595-0f84-4791-909b-a9ac61ac24cd
-            warning: null
-            width: 100
-          -
+            elementCondition: null
             fieldUid: 6a3feb81-50ce-467a-8aca-b5d4cc12aed0 # Description
             instructions: null
             label: null
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: aa8e67e0-459e-41d7-80ab-0855c61ad315
+            userCondition: null
             warning: null
             width: 100
         name: SEO
         uid: 16dda13f-a52f-4320-9ad0-8fb87b472900
+        userCondition: null
 handle: contactPage
 hasTitleField: true
 name: 'Contact Page'

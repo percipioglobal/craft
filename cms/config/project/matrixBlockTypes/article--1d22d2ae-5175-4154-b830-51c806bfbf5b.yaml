@@ -3,8 +3,10 @@ fieldLayouts:
   ce1931f4-9280-4231-b357-ea8750a88735:
     tabs:
       -
+        elementCondition: null
         elements:
           -
+            elementCondition: null
             fieldUid: 5053ff27-8e1b-49ea-85c6-c2a1dece3b8e # Body Content
             instructions: null
             label: null
@@ -12,10 +14,12 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 32e0e3b6-2789-45ba-9513-eb6f5d6f4381
+            userCondition: null
             warning: null
             width: 100
         name: Content
         uid: 859e1220-5465-425e-851d-59a49b69b5a6
+        userCondition: null
 fields:
   5053ff27-8e1b-49ea-85c6-c2a1dece3b8e: # Body Content
     columnSuffix: null
@@ -26,7 +30,7 @@ fields:
     name: 'Body Content'
     searchable: true
     settings:
-      availableTransforms: '*'
+      availableTransforms: ''
       availableVolumes: ''
       columnType: text
       configSelectionMode: choose
@@ -47,4 +51,4 @@ fields:
     type: craft\redactor\Field
 handle: article
 name: 'Article Body'
-sortOrder: 3
+sortOrder: 1

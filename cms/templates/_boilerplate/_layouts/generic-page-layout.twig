@@ -39,24 +39,20 @@
         .collect()
     -%}
 
-    <main>
+    <main id="app-container">
         {# -- Navigation --  #}
         {%- include '_organisms/navigations/navigation--primary' ignore missing with {
             navigation: navigation
         } -%}
 
         {# -- Primary content block with bypass id -- #}
-        <div class="page-content w-full bg-white relative transition-transform duration-500 ease-slide z-[1]" id="page">
+        <div class="page-content w-full">
             {% block content %}
             {% endblock %}
 
             {# -- Footer -- #}
             {%- include '_organisms/footers/footer--primary' ignore missing -%}
         </div>
-
-        {%- include '_organisms/navigations/navigation--mobile' ignore missing with {
-            navigation: navigation
-        } -%}
     </main>
     {# -- HTML Footer -- #}
     {% include '_boilerplate/_partials/global-footer.twig' %}

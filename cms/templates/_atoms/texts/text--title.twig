@@ -12,13 +12,16 @@
     alignment
 #}
 
-{%- set strong = 'prose-strong:text-pink-500 prose-strong:font-normal' -%}
-
 {%- block text -%}
 
+    {%- set classes = {
+        '_default': '',
+        'font': 'font-primary text-lg',
+    }-%}
+
     {%- minify -%}
-        <span class="{{- props.color }} prose text-4xl md:text-7xl-md lg:text-7xl tracking-tightest {{ strong }} {{ props.utilities -}}">
-            {{- props.content | striptags('<strong>') | typogrify(true) | raw -}}
+        <span class="{{- classes._default }} {{ props.utilities -}}">
+            {{- props.content | typogrify(true) | raw -}}
         </span>
     {%- endminify -%}
 

@@ -1,0 +1,49 @@
+field: e691301b-7484-40be-a3d4-c3bc590de959 # Content Builder
+fieldLayouts:
+  9ace5ad7-1b55-4293-9af9-c08662060d7a:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: db708cbd-06e2-4fba-82f9-c2fbf3e57e27 # Form
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e80a0b73-ea51-44af-85e8-7c3e17a27fd4
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 5572f246-4e11-4e69-9efa-288f1cf3abf2
+        userCondition: null
+fields:
+  db708cbd-06e2-4fba-82f9-c2fbf3e57e27: # Form
+    columnSuffix: hdtjanra
+    contentColumnType: string
+    fieldGroup: null
+    handle: form
+    instructions: null
+    name: Form
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      localizeRelations: false
+      maxRelations: 1
+      minRelations: null
+      selectionLabel: null
+      showSiteMenu: true
+      source: null
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: verbb\formie\fields\Forms
+handle: form
+name: Form
+sortOrder: 2

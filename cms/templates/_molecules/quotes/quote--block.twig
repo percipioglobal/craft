@@ -1,23 +1,6 @@
 {%- extends '_molecules/quotes/_quote--props' -%}
 {%- import '_macros/atoms' as render -%}
 
-{#
-    ### PROPERTIES ###
-    ------------------
-
-    INHERITED FROM: `_molecules/content/_content--props.twig`
-
-    ### LUTS ###
-    ------------
-    icon.fa_icon_lut: font-awesome class LUT
-
-    ### COMPONENTS ###
-    ------------------
-
-    ## ATOMS
-    icon--fa: `_atoms/icons/icon--fa.twig`
-#}
-
 {%- block quote -%}
 
     {%- minify -%}
@@ -28,7 +11,7 @@
             source: props.content.quoteSource ??? null
         }) -%}
 
-        <div class="container max-w-[80ch] mx-auto py-5 md:py-10 {{ props.utilities -}}">
+        <div class="max-w-[80ch] py-5 md:py-10 {{ props.utilities -}}">
             <blockquote {{ props.source ? 'cite="'~ props.source ~ '"' : '' }} class="mx-auto w-full whitespace-normal font-mono max-w-screen-md py-16">
 
                 <div class="animate" data-animation="slideBottomToTop">
@@ -39,8 +22,6 @@
                         }) -}}
                     </p>
 
-                    {# TODO: add transitions on the URLs, let's get fancy #}
-
                     <footer class="font-primary mt-8">
                         {%- if props.source.getUrl() ??? null -%}
                             <a
@@ -48,7 +29,6 @@
                                 data-tag-category="quote-source"
                                 data-tag-action="click"
                                 data-tag-label="{{- props.source.getUrl() -}}"
-                                class="text-blue-500 text-base hover:text-blue-800"
                             >
                                 {{- props.author }} &mdash; {{ props.source.getText() -}}
                             </a>

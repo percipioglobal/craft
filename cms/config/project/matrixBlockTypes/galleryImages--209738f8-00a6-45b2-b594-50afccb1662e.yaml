@@ -3,8 +3,10 @@ fieldLayouts:
   49daed47-6cfd-4c95-bfc2-9bf1daa06085:
     tabs:
       -
+        elementCondition: null
         elements:
           -
+            elementCondition: null
             fieldUid: 1ecbeef5-820f-4123-a8db-30daae3cd4f7 # Images
             instructions: null
             label: null
@@ -12,10 +14,12 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 1e9c3ef5-247e-4079-a68d-0024c80fec92
+            userCondition: null
             warning: null
             width: 100
         name: Content
         uid: 49da9036-d742-4608-969e-3d58f5b274ce
+        userCondition: null
 fields:
   1ecbeef5-820f-4123-a8db-30daae3cd4f7: # Images
     columnSuffix: null
@@ -31,7 +35,7 @@ fields:
       allowUploads: true
       allowedKinds:
         - image
-      defaultUploadLocationSource: 'volume:b4a06662-5fb9-4347-9b76-b1e291db3b88' # Cards
+      defaultUploadLocationSource: 'volume:75a0aa56-9929-4fe3-a1de-95cd59d9811e' # Articles
       defaultUploadLocationSubpath: null
       localizeRelations: false
       maxRelations: 8
@@ -40,7 +44,7 @@ fields:
       restrictFiles: true
       restrictLocation: true
       restrictedDefaultUploadSubpath: null
-      restrictedLocationSource: 'volume:b4a06662-5fb9-4347-9b76-b1e291db3b88' # Cards
+      restrictedLocationSource: 'volume:75a0aa56-9929-4fe3-a1de-95cd59d9811e' # Articles
       restrictedLocationSubpath: null
       selectionCondition:
         __assoc__:
@@ -67,4 +71,4 @@ fields:
     type: craft\fields\Assets
 handle: galleryImages
 name: 'Image Gallery'
-sortOrder: 2
+sortOrder: 1

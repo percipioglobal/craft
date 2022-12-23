@@ -1,0 +1,56 @@
+{%- import '_macros/atoms' as render -%}
+{%- import '_macros/functions' as function -%}
+
+{%- set resource = resource ??? null -%}
+{%- set label = label ??? null -%}
+{%- set description = description ??? null -%}
+
+{%- minify -%}
+
+    {%- if resource -%}
+        <article class="group flex justify-between p-4 w-full hover:shadow-xl transition-shadow ease-in-out duration-200 relative">
+            <div class="flex relative">
+                {{- render.atom('icon', 'file', {
+                    type: resource.kind,
+                    icon: "fileIcon",
+                    size: 'xl',
+                    parentcss: ''
+                }) -}}
+            </div>
+
+            <div class="relative grow px-4 md:px-8">
+                <h4 class="font-primary">
+                    {{- render.atom('text', 'content', { content: label ??? resource.filename | replace('_', ' ') }) -}}
+                </h4>
+
+                <span class="font-primary text-xs pt-2 block">
+                    {%- if description -%}
+                        {{- description -}}
+                    {%- else -%}
+                        Uploaded: <time class="whitespace-nowrap inline-block pr-1" datetime="{{ resource.dateCreated|date('c') }}">{{- function.format_date(resource.dateCreated) -}}</time>&nbsp;&bull;&nbsp;<span class="whitespace-nowrap inline-block">{{- resource.size | filesize(1) }}&nbsp;-&nbsp;<span>{{ resource.kind | lower }}</span></span>
+                    {%- endif -%}
+                </span>
+
+            </div>
+
+            <div class="shrink-0">
+                {{- render.atom('icon', 'fa', {
+                    icon: 'download',
+                    size: 'xl'
+                }) -}}
+            </div>
+
+            <a 
+                href="{{- url(resource.url, {v: 'now'|date('U') }) -}}"
+                target="_blank"
+                data-tag-category="download"
+                data-tag-action="{{ resource.kind | lower -}}"
+                data-tag-label="{{ resource.filename | lower -}}"
+                class="absolute inset-0 z-1"
+            >
+                <span class="sr-only">Download resource {{ label ??? resource.filename | replace('_', ' ') }}</span>
+            </a>
+        </article>
+
+    {%- endif -%}
+{%- endminify -%}

@@ -1,0 +1,36 @@
+{%- extends '_atoms/icons/_icon--props' -%}
+
+{#
+    ### PROPERTIES ###
+    ------------------
+
+    INHERITED FROM: `_atoms/icons/icon--props.twig`
+#}
+
+{%- import '_macros/atoms' as render -%}
+
+{%- block icon -%}
+
+    {%- set icon = props.icon -%}
+
+	{%- if props.icon == 'fileIcon' -%}
+        {%- set icon = options.type | lower -%}
+	{%- endif -%}
+
+    {%- if props.icon == 'link' -%}
+        {%- switch options.type | lower -%}
+            {%- case 'entry' -%}
+                {%- set icon = 'link' -%}
+            {%- case 'url' -%}
+                {%- set icon = 'external-link' -%}
+        {%- endswitch -%}
+    {%- endif -%}
+
+    {{- render.atom('icon', 'fa', {
+        icon:  icon,
+        parentcss: props.parentcss,
+        iconcss: props.iconcss,
+        size: props.size,
+        color: props.color,
+    }) -}}
+{%- endblock -%}

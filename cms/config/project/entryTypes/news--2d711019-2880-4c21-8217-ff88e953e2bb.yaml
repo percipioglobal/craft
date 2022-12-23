@@ -1,0 +1,85 @@
+fieldLayouts:
+  2e28fd6c-9aa9-4a1c-85a5-ab8b30fb59d3:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: ff4e8f6c-e609-4d9e-abfe-3f7619379146
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: e691301b-7484-40be-a3d4-c3bc590de959 # Content Builder
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b0b4bfdf-0e5c-4ae1-a4ef-58c1c1bf5d46
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: f0f1f2ae-bcf0-4f16-a96e-a884efce7413
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 6a3feb81-50ce-467a-8aca-b5d4cc12aed0 # Description
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 858c6e1d-e24f-487f-8cc2-fbda2d57bb1b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: e0ca6edd-575d-4d00-a85b-1127ab249026 # Teaser Image
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 61eb1491-f0e2-48b1-8558-2bf8c0dcedb6
+            userCondition: null
+            warning: null
+            width: 100
+        name: SEO
+        uid: 9f077be2-3c9e-4d05-ac3b-abc4499d7195
+        userCondition: null
+handle: news
+hasTitleField: true
+name: News
+section: 9de367ab-77b8-47bb-bbc3-63e79a202c3e # News
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

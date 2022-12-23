@@ -1,0 +1,41 @@
+{%- extends '_organisms/cards/_cards--props' -%}
+
+{%- set props = {
+    cards: cards ??? null,
+    category: category ??? null,
+    limit: limit ??? null,
+    utilities: utilities ??? ''
+} -%}
+
+{%- set cards = props.cards ??? craft.entries.section('news')
+    .with(['teaserImage', 'newsCategory'])
+    .relatedTo(props.category.id ??? null)
+    .orderBy('postDate desc')
+    .limit(props.limit)
+    .collect()
+    .all()
+-%}
+
+{%- set classes = {
+    '_default': 'grid grid-cols1 sm:grid-cols-2 md:grid-cols-4 gap-6',
+    'container': 'container max-w-screen-xl mx-auto',
+    'spacing': 'pb-12 md:pb-32'
+}-%}
+
+{%- block cards -%}
+
+    {%- minify -%}
+        <section class="{{- classes._default }} {{ classes.container }} {{ classes.spacing }} {{ props.utilities -}}">
+
+            {%- for card in cards -%}
+
+                {%- include '_molecules/cards/card--news' ignore missing with {
+                    content: card,
+                } -%}
+
+            {%- endfor -%}
+
+        </section>
+    {%- endminify -%}
+
+{%- endblock -%}

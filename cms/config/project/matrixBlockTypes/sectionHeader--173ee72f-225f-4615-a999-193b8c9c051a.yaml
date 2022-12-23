@@ -3,8 +3,10 @@ fieldLayouts:
   3817f653-c60a-4600-a22c-759add88ef6f:
     tabs:
       -
+        elementCondition: null
         elements:
           -
+            elementCondition: null
             fieldUid: 345c4093-df0a-45dd-9d5f-47fb3fac8c7d # Heading
             instructions: null
             label: null
@@ -12,119 +14,13 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 7a44e9a2-c512-4f20-91c0-594456328015
+            userCondition: null
             warning: null
             width: 100
-          -
-            fieldUid: f66247e5-1697-4e5a-976e-ff087ee0911e # Description
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 64c28df3-e7ab-423b-b50d-5f171e0e5f7d
-            warning: null
-            width: 100
-          -
-            fieldUid: 9bca25cb-2cf2-4427-baf8-44e347cc8a7a # Button
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 35b0858c-b991-427e-a5cc-a24399e8caf3
-            warning: null
-            width: 50
-          -
-            fieldUid: 1ec524ae-9191-455b-b284-ff820468b3e4 # Background
-            instructions: null
-            label: null
-            required: true
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 99535a1f-e0b0-4195-8350-483fbd5c9fd9
-            warning: null
-            width: 50
         name: Content
         uid: 18b34e3a-f594-41b2-81ca-6368fb8843c7
+        userCondition: null
 fields:
-  1ec524ae-9191-455b-b284-ff820468b3e4: # Background
-    columnSuffix: hkeibovn
-    contentColumnType: text
-    fieldGroup: null
-    handle: background
-    instructions: null
-    name: Background
-    searchable: false
-    settings:
-      default: null
-      palette: Dark/Light
-      useConfigFile: true
-    translationKeyFormat: null
-    translationMethod: none
-    type: percipiolondon\colourswatches\fields\ColourSwatches
-  9bca25cb-2cf2-4427-baf8-44e347cc8a7a: # Button
-    columnSuffix: null
-    contentColumnType: string
-    fieldGroup: null
-    handle: target
-    instructions: 'Add a cta link to the header'
-    name: Button
-    searchable: false
-    settings:
-      allowCustomText: true
-      allowTarget: false
-      autoNoReferrer: false
-      customTextMaxLength: 0
-      customTextRequired: false
-      defaultLinkName: entry
-      defaultText: ''
-      enableAllLinkTypes: false
-      enableAriaLabel: false
-      enableElementCache: false
-      enableTitle: false
-      typeSettings:
-        asset:
-          allowCrossSiteLink: false
-          allowCustomQuery: false
-          enabled: false
-          sources: '*'
-        category:
-          allowCrossSiteLink: false
-          allowCustomQuery: false
-          enabled: true
-          sources: '*'
-        custom:
-          allowAliases: false
-          disableValidation: false
-          enabled: false
-        email:
-          allowAliases: false
-          disableValidation: false
-          enabled: false
-        entry:
-          allowCrossSiteLink: false
-          allowCustomQuery: false
-          enabled: true
-          sources: '*'
-        site:
-          enabled: false
-          sites: '*'
-        tel:
-          allowAliases: false
-          disableValidation: false
-          enabled: false
-        url:
-          allowAliases: false
-          disableValidation: false
-          enabled: false
-        user:
-          allowCrossSiteLink: false
-          allowCustomQuery: false
-          enabled: false
-          sources: '*'
-    translationKeyFormat: null
-    translationMethod: none
-    type: lenz\linkfield\fields\LinkField
   345c4093-df0a-45dd-9d5f-47fb3fac8c7d: # Heading
     columnSuffix: null
     contentColumnType: text
@@ -134,53 +30,17 @@ fields:
     name: Heading
     searchable: true
     settings:
-      availableTransforms: '*'
-      availableVolumes: ''
-      columnType: text
-      configSelectionMode: choose
-      defaultTransform: ''
-      manualConfig: ''
-      purifierConfig: null
-      purifyHtml: true
-      redactorConfig: Title.json
-      removeEmptyTags: false
-      removeInlineStyles: false
-      removeNbsp: false
-      showHtmlButtonForNonAdmins: false
-      showUnpermittedFiles: false
-      showUnpermittedVolumes: false
-      uiMode: enlarged
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
     translationKeyFormat: null
     translationMethod: none
-    type: craft\redactor\Field
-  f66247e5-1697-4e5a-976e-ff087ee0911e: # Description
-    columnSuffix: null
-    contentColumnType: text
-    fieldGroup: null
-    handle: description
-    instructions: null
-    name: Description
-    searchable: true
-    settings:
-      availableTransforms: '*'
-      availableVolumes: ''
-      columnType: text
-      configSelectionMode: choose
-      defaultTransform: ''
-      manualConfig: ''
-      purifierConfig: null
-      purifyHtml: true
-      redactorConfig: Simple.json
-      removeEmptyTags: false
-      removeInlineStyles: false
-      removeNbsp: false
-      showHtmlButtonForNonAdmins: false
-      showUnpermittedFiles: false
-      showUnpermittedVolumes: false
-      uiMode: enlarged
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\redactor\Field
+    type: craft\fields\PlainText
 handle: sectionHeader
 name: 'Section Header'
-sortOrder: 1
+sortOrder: 3

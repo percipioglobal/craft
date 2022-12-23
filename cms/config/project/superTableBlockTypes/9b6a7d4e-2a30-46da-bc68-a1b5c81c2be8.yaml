@@ -1,21 +1,26 @@
+changedFieldIndicator: 763029702
 field: 80a6157c-e287-49ae-a937-228b86f1ffa2 # Buttons
 fieldLayouts:
   a6257c0c-8106-4ec0-a93e-af4e63de563f:
     tabs:
       -
+        elementCondition: null
         elements:
           -
+            elementCondition: null
             fieldUid: 6776ad6d-4fab-4c6f-a948-20e376cc6820 # Button
             instructions: null
             label: null
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 8ed1a7fb-7cd1-4a06-b60b-fb24e1f2597a
+            uid: af7927f4-2700-4283-8ba0-13055d64bfe3
+            userCondition: null
             warning: null
             width: 100
         name: Content
         uid: ad35b5ac-8b6d-4330-abbd-ce42326466d4
+        userCondition: null
 fields:
   6776ad6d-4fab-4c6f-a948-20e376cc6820: # Button
     columnSuffix: null

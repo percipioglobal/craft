@@ -3,8 +3,10 @@ fieldLayouts:
   7d15571b-c1d6-4a10-ae40-f21cdc67cf8d:
     tabs:
       -
+        elementCondition: null
         elements:
           -
+            elementCondition: null
             fieldUid: e7b63d80-91cc-438a-b670-59cbb778ca14 # Heading
             instructions: null
             label: null
@@ -12,10 +14,12 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: a238ef66-d312-4549-98e8-c47370083a80
+            userCondition: null
             warning: null
             width: 100
         name: Content
         uid: 77420046-8b89-462e-97a5-c10d770f6003
+        userCondition: null
 fields:
   e7b63d80-91cc-438a-b670-59cbb778ca14: # Heading
     columnSuffix: null
@@ -26,25 +30,17 @@ fields:
     name: Heading
     searchable: true
     settings:
-      availableTransforms: '*'
-      availableVolumes: ''
-      columnType: text
-      configSelectionMode: choose
-      defaultTransform: ''
-      manualConfig: ''
-      purifierConfig: null
-      purifyHtml: true
-      redactorConfig: Title.json
-      removeEmptyTags: false
-      removeInlineStyles: false
-      removeNbsp: false
-      showHtmlButtonForNonAdmins: false
-      showUnpermittedFiles: false
-      showUnpermittedVolumes: false
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
       uiMode: normal
     translationKeyFormat: null
     translationMethod: none
-    type: craft\redactor\Field
+    type: craft\fields\PlainText
 handle: sectionHeader
 name: 'Section Header'
-sortOrder: 1
+sortOrder: 9

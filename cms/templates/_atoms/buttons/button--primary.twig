@@ -1,50 +1,31 @@
 {%- extends '_atoms/buttons/_button--props' -%}
 {%- import '_macros/atoms' as render -%}
 {%- import '_macros/functions' as parse -%}
-{%- import '_macros/icons' as icon -%}
 
 {#
     ### PROPERTIES ###
     ------------------
 
     INHERITED FROM: `_atoms/buttons/button--props.twig`
-
-    ### FUNCTIONS ###
-    -----------------
-    ga: parse google analytics attributes
-
-    ### LUTS ###
-    ------------
-    icon.fa_icon_lut: font-awesome class LUT
-
-    ### COMPONENTS ###
-    ------------------
-
-    ## ATOMS
-
-    render.icon: `_atoms/icons/icon--fa`
 #}
 
-{%- block button -%}
+{%- set classes = {
+    '_default': 'inline-flex text-center rounded-full',
+    'font': 'font-primary text-sm',
+}-%}
 
-    {%- set classes = {
-        '_default': 'inline-flex text-center rounded-full',
-        'animation': 'transition-colors duration-200 ease-in-out',
-        'color': 'text-white bg-blue-500',
-        'focus' : 'focus:outline focus:outline-4 focus:outline-blue-500/30',
-        'font': 'font-primary text-sm font-semibold',
-        'hover': 'hover:bg-blue-700',
-        'padding': 'py-3 px-7'
-    }-%}
+{%- block button -%}
 
     {%- minify -%}
 
         <a
             {{ props.url ? 'href=' ~ props.url : '' }}
-            {{ parse.ga(props.ga) }}
+            data-tag-category="{{- props.ga.category ??? '' -}}"
+            data-tag-action="{{- props.ga.action ??? '' -}}"
+            data-tag-label="{{- props.ga.label ??? '' -}}"
             {{ props.target ? 'target=' ~ props.target : '' }}
             aria-label="{{- props.text -}}"
-            class="{{ classes._default }} {{ classes.animation }} {{ classes.color }} {{ classes.focus }} {{ classes.font }} {{ classes.hover }} {{ classes.padding }} {{ props.utilities }}"
+            class="{{ classes._default }} {{ classes.font }} {{ props.utilities }}"
         >
             <span class="sr-only">
                 {{- props.target == '_self' ? 'Go to: ' : 'Go to external page: ' -}}
@@ -57,9 +38,8 @@
             {%- if props.icon -%}
 
                 {{- render.atom('icon', 'fa', {
-                    icon: icon.fa_icon_lut(props.icon),
-                    size: "xs",
-                    parentcss: 'block mt-px ' ~ (props.iconPosition == 'right' ? 'ml-2' : 'mr-2')
+                    icon: props.icon,
+                    size: "xs"
                 }) -}}
 
             {%- endif -%}

@@ -14,7 +14,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 1a84863b-861a-4293-b8ca-c88d90b87ae8 # Card Placeholder
+            fieldUid: 1a84863b-861a-4293-b8ca-c88d90b87ae8
             instructions: null
             label: null
             required: false
@@ -24,7 +24,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: ceaca46d-720d-442d-b054-f8fb3704701a # Default Placeholder
+            fieldUid: ceaca46d-720d-442d-b054-f8fb3704701a # Teaser Placeholder
             instructions: null
             label: null
             required: false
@@ -34,7 +34,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 8f7046bb-5261-4213-9d49-b1244e5d458e # Grid Placeholder
+            fieldUid: 8f7046bb-5261-4213-9d49-b1244e5d458e
             instructions: null
             label: null
             required: false
@@ -44,7 +44,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 28688c0a-84eb-41d8-8c25-01ed4992bed8 # Gallery Placeholder
+            fieldUid: 28688c0a-84eb-41d8-8c25-01ed4992bed8
             instructions: null
             label: null
             required: false

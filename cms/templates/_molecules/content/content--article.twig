@@ -18,7 +18,7 @@
 
     {%- minify -%}
 
-        <div class="container max-w-[80ch] mx-auto my-5 md:my-10 {{ props.utilities -}}">
+        <div class="max-w-[80ch] my-5 md:my-10 {{ props.utilities -}}">
             <div class="animate" data-animation="slideBottomToTop">
                 {%- include '_molecules/content/content--prose' ignore missing with {
                     content: props.content,

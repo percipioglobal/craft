@@ -29,10 +29,10 @@
 
     {%- minify -%}
 
-        <div class="container max-w-[80ch] mx-auto my-5 md:my-10 {{ props.utilities -}}">
+        <div class="max-w-[80ch] my-5 md:my-10 {{ props.utilities -}}">
             <div class="animate" data-animation="slideBottomToTop">
                 <h2 class="{{- classes._default }} {{ classes.color}} {{ classes.print }}">
-                    {{- render.atom('text', 'h2', { content: props.heading }) -}}
+                    {{- render.atom('text', 'title', { content: props.heading }) -}}
                 </h2>
             </div>
         </div>

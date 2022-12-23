@@ -38,7 +38,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: b884a1be-f354-4202-8335-78016b5d035a # Show link as button
+            fieldUid: b884a1be-f354-4202-8335-78016b5d035a
             instructions: null
             label: null
             required: false

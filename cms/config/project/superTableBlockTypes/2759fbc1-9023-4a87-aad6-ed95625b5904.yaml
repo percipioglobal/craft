@@ -1,0 +1,135 @@
+changedFieldIndicator: 1463921955
+field: d2145471-a913-4043-8ad8-c2fe6800bb13 # Resources
+fieldLayouts:
+  0ec3b229-c093-4196-9078-8798aa1d2e6d:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 73a21c5c-2c86-4b30-aaf2-4120af4aac8c # Label
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b61496ac-5aa9-4894-a9a2-1497be88f4c0
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 62ff7240-e97a-4456-8501-69787b193afa # Description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5d871b09-8761-4ffd-8313-2484527ac880
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 21a1b5de-109f-4398-9cd5-2c8c2c245f59 # Download
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ceadac4a-4155-4ec2-9c76-af4872b63f4f
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: a05863a9-7bdd-4e83-8bd4-bfb9882e3b8a
+        userCondition: null
+fields:
+  21a1b5de-109f-4398-9cd5-2c8c2c245f59: # Download
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: target
+    instructions: 'Upload or select your file'
+    name: Download
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: true
+      allowedKinds: null
+      defaultUploadLocationSource: 'volume:916fd2eb-056d-486e-8483-bfff9c0a5520' # Teasers
+      defaultUploadLocationSubpath: null
+      localizeRelations: false
+      maxRelations: null
+      minRelations: null
+      previewMode: full
+      restrictFiles: false
+      restrictLocation: true
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:18df4b72-2c37-47c8-b163-60becb1e1076' # Documents
+      restrictedLocationSubpath: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Asset
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\assets\AssetCondition
+      selectionLabel: null
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      source: null
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  62ff7240-e97a-4456-8501-69787b193afa: # Description
+    columnSuffix: mrktkubc
+    contentColumnType: text
+    fieldGroup: null
+    handle: description
+    instructions: 'Provide a description to go with the resource'
+    name: Description
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  73a21c5c-2c86-4b30-aaf2-4120af4aac8c: # Label
+    columnSuffix: enweurwp
+    contentColumnType: text
+    fieldGroup: null
+    handle: label
+    instructions: 'Enter your label for the resource file or page. If non is provided, the filename will be used'
+    name: Label
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText

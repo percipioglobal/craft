@@ -19,18 +19,8 @@
         '2xl': 'text-5xl',
     } -%}
 
-    {%- set variantsIcon = {
-        'circle': 'fas fa-circle fa-stack-2x',
-        'square': 'fas fa-square-full fa-stack-2x',
-    } -%}
+    <span class="{{ sizes[props.size] ??? sizes['sm'] }} {{ props.parentcss }}">
 
-    <span class="{{ sizes[props.size] is defined ? sizes[props.size] : sizes['sm'] }} {{ props.parentcss }} {{ props.variant != '' ? 'fa-stack' : '' }}">
-
-        {%- if props.variant != '' -%}
-            <i class="{{ variantsIcon[props.variant] is defined ? variantsIcon[props.variant] : '' }} {{ sizes[props.size] is defined ? sizes[props.size] : sizes['sm'] -}}"></i>
-        {%- endif -%}
-
-        <i class="{{ sizes[props.size] is defined ? sizes[props.size] : sizes['sm'] }} {{ props.variant != '' ? 'fa-stack-1x ' : '' }} {{ props.icon }} {{ props.iconcss -}}"></i>
-
+        <icon--fa icon="{{- props.icon -}}" utilities="{{- props.iconcss }} {{ sizes[props.size] ??? sizes['sm'] -}}"></icon--fa>
     </span>
 {%- endblock -%}

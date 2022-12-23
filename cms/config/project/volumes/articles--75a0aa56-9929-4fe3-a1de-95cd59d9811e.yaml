@@ -1,0 +1,61 @@
+fieldLayouts:
+  ddbd3b8d-8d46-4250-91ef-d0d38afe78a7:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\assets\AssetTitleField
+            uid: f5597ff4-f9ed-413c-909f-898604f69fe7
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 62a08554-389f-4c29-b3ea-2d59aa35502a
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 5162e4ea-9d64-443b-847d-ef657925e27a # Article Optimisations
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 56d56eba-04ce-49b0-917c-9a3d0db768a3
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Optimized Images'
+        uid: 81e916d6-2e2e-44e7-9c20-cfcb973e8cb3
+        userCondition: null
+fs: articles
+handle: articles
+name: Articles
+sortOrder: 23
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+transformFs: ''
+transformSubpath: ''

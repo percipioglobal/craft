@@ -9,6 +9,11 @@ settings:
   displayDominantColorPalette: true
   displayLazyLoadPlaceholderImages: true
   displayOptimizedImageVariants: true
+  fieldVolumeSettings:
+    __assoc__:
+      -
+        - articles
+        - '*'
   ignoreFilesOfType:
     - image/svg
     - image/gif
@@ -36,7 +41,7 @@ settings:
           - '82'
         -
           - format
-          - ''
+          - png
     -
       __assoc__:
         -
@@ -60,7 +65,7 @@ settings:
           - '82'
         -
           - format
-          - ''
+          - png
     -
       __assoc__:
         -
@@ -84,7 +89,7 @@ settings:
           - '60'
         -
           - format
-          - ''
+          - png
     -
       __assoc__:
         -
@@ -108,7 +113,7 @@ settings:
           - '60'
         -
           - format
-          - ''
+          - png
 translationKeyFormat: null
 translationMethod: none
 type: nystudio107\imageoptimize\fields\OptimizedImages

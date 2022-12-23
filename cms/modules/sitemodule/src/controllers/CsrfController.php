@@ -12,12 +12,12 @@ class CsrfController extends Controller
     // Constants
     // =========================================================================
 
-    const GQL_TOKEN_NAME = 'API Token';
+    const GQL_TOKEN_NAME = 'site';
 
     // Protected Properties
     // =========================================================================
 
-    protected $allowAnonymous = [
+    protected array|int|bool $allowAnonymous = [
         'get-csrf',
         'get-gql-token',
         'get-field-options',

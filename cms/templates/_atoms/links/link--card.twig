@@ -17,7 +17,9 @@
     {%- minify -%}
         <a
             href="{{- props.url -}}"
-            {{ parse.ga(props.ga) }}
+            data-tag-category="{{- props.ga.category ??? '' -}}"
+            data-tag-action="{{- props.ga.action ??? '' -}}"
+            data-tag-label="{{- props.ga.label ??? '' -}}"
             title="{{- props.text -}}"
             aria-label="{{- props.text -}}"
             class="absolute inset-0 z-1"

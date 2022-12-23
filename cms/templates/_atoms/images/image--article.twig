@@ -9,22 +9,27 @@
     EXTENDED
     --------
 
-    ratio: (STR) -- Give the aspect ratio in the correct format eg. aspect-4/3 / aspect-16/9 ( optional )
+    ratio: (STR) -- Give the aspect ratio in the correct format eg. aspect-w-4 aspect-h-3 / aspect-w-16 aspect-h-9 ( optional )
     optimized: (OBJ) -- The image optimizations for the image
     placeholder: (OBJ) -- Add the placeholder image to the atom
 #}
 
 {%- block image -%}
+
     {%- set props = props|merge({
         optimized: options.image.optimizeArticles ??? null,
-        placeholder: options.placeholders.articlePlaceholder.first.optimizeArticles,
+        placeholder: options.placeholders.articlePlaceholder.collect().one().optimizeArticles,
     }) -%}
+
+    {%- set classes = {
+        '_default': '',
+    }-%}
 
     {%- minify -%}
 
-        <figure role="figure" class="shadow-xl shadow-zinc-300 rounded-4xl overflow-hidden" aria-labelledby="{{- props.alt ~ '-' ~ props.image.id ??? props.placeholder.id -}}">
+        <figure role="figure" class="{{- classes._default -}}" aria-labelledby="{{- props.alt ~ '-' ~ props.image.id ??? props.placeholder.id -}}">
 
-            <picture>
+            <picture class="block relative {{ props.ratio -}}">
 
                 <source
                     data-srcset="{{- props.optimized.srcsetWebP() ??? props.placeholder.srcsetWebP() -}}"

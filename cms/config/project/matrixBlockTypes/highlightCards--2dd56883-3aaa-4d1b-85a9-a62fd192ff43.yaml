@@ -3,8 +3,10 @@ fieldLayouts:
   313015d1-e8ce-4279-86bc-ffc788b1d893:
     tabs:
       -
+        elementCondition: null
         elements:
           -
+            elementCondition: null
             fieldUid: 7e7008d5-deb5-4018-9fb7-52f6b2603f34 # Cards
             instructions: null
             label: null
@@ -12,10 +14,12 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 2d1e63a3-cd2d-4f7c-90eb-e599dbef3d07
+            userCondition: null
             warning: null
             width: 100
         name: Content
         uid: ca98058f-53d1-4a03-ab90-cf16cfc61b5f
+        userCondition: null
 fields:
   7e7008d5-deb5-4018-9fb7-52f6b2603f34: # Cards
     columnSuffix: null
@@ -45,9 +49,8 @@ fields:
       showSiteMenu: true
       source: null
       sources:
-        - 'section:9de367ab-77b8-47bb-bbc3-63e79a202c3e' # Blog
-        - 'section:1ae55366-a3a6-4ed1-bf34-12ead8ae6c21' # Our Services
-        - 'section:f4a50ead-30b3-4d86-bdd1-9d5c295fb9fd' # Our Work
+        - 'section:9de367ab-77b8-47bb-bbc3-63e79a202c3e' # News
+        - 'section:ef841ba4-7bcd-4ef5-9c12-96377bf7fba2' # Pages
       targetSiteId: null
       validateRelatedElements: false
       viewMode: null
@@ -56,4 +59,4 @@ fields:
     type: craft\fields\Entries
 handle: highlightCards
 name: 'Highlight Cards'
-sortOrder: 3
+sortOrder: 2

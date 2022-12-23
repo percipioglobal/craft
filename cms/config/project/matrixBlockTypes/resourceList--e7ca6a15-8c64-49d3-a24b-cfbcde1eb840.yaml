@@ -1,0 +1,71 @@
+field: e691301b-7484-40be-a3d4-c3bc590de959 # Content Builder
+fieldLayouts:
+  2b7cf415-b58c-45f7-8f30-64555177100e:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: d2145471-a913-4043-8ad8-c2fe6800bb13 # Resources
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 563ae8fc-da83-4de4-b895-399db68fc3b8
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: f8e0d3c7-24e2-478a-97b2-27d055ed0fe6
+        userCondition: null
+fields:
+  d2145471-a913-4043-8ad8-c2fe6800bb13: # Resources
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: resources
+    instructions: null
+    name: Resources
+    searchable: false
+    settings:
+      blockTypeFields: 0
+      changedFieldIndicator: 1888711380
+      columns:
+        __assoc__:
+          -
+            - 73a21c5c-2c86-4b30-aaf2-4120af4aac8c # Label
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - 62ff7240-e97a-4456-8501-69787b193afa # Description
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - 21a1b5de-109f-4398-9cd5-2c8c2c245f59 # Download
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+      contentTable: '{{%stc_75_resources}}'
+      fieldLayout: table
+      maxRows: null
+      minRows: null
+      propagationKeyFormat: null
+      propagationMethod: all
+      selectionLabel: null
+      staticField: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: verbb\supertable\fields\SuperTableField
+handle: resourceList
+name: 'Resource List'
+sortOrder: 8

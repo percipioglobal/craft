@@ -20,8 +20,8 @@ use craft\web\UrlManager;
 use craft\events\RegisterUrlRulesEvent;
 
 use modules\sitemodule\assetbundles\SiteModule\SiteModuleAsset;
-use modules\sitemodule\helpers\ColoursTwigExtension;
-use modules\sitemodule\helpers\RatioTwigExtension;
+use modules\sitemodule\twigextensions\ColoursTwigExtension;
+use modules\sitemodule\twigextensions\RatioTwigExtension;
 use modules\sitemodule\services\Helper;
 use modules\sitemodule\variables\SiteVariable;
 

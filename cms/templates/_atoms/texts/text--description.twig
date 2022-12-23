@@ -8,8 +8,14 @@
 #}
 
 {%- block text -%}
+
+    {%- set classes = {
+        '_default': '',
+        'font': 'font-primary text-lg',
+    }-%}
+
     {%- minify -%}
-        <div class="font-primary text-lg md:text-xl {{ props.color }} {{ props.alignment }} {{ props.utilities -}}">
+        <div class="{{- classes._default }} {{ props.utilities -}}">
             {{- props.content | typogrify(true) -}}
         </div>
     {%- endminify -%}

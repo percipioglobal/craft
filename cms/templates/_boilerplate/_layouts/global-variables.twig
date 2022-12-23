@@ -24,13 +24,10 @@
     .handle('placeholders')
     .with([
         'articlePlaceholder',
-        'cardPlaceholder',
-        'defaultPlaceholder',
-        'galleryPlaceholder',
-        'gridPlaceholder',
+        'teaserPlaceholder'
     ])
     .collect()
-    .first()
+    .one()
 -%}
 
 {%- set footerData = craft.globalSets()
@@ -40,7 +37,7 @@
         'locations',
     ])
     .collect()
-    .first()
+    .one()
 -%}
 
 {%- set branding = craft.globalSets()

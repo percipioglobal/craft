@@ -26,8 +26,7 @@
         <div class="container max-w-screen-lg mx-auto {{ props.utilities -}}">
             <div class="animate" data-animation="slideBottomToTop">
                 {{- render.atom('text', 'standfirst', {
-                    content: props.standfirst,
-                    alignment: props.alignment == 'center' ? 'md:text-center' : ''
+                    content: props.standfirst
                 }) -}}
             </div>
         </div>

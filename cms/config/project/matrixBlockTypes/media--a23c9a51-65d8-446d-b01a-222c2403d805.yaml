@@ -3,8 +3,10 @@ fieldLayouts:
   5158fab7-a860-4511-90c9-3e8f068fede3:
     tabs:
       -
+        elementCondition: null
         elements:
           -
+            elementCondition: null
             fieldUid: 6325f925-feea-4e28-b6ec-7630d3e70cc8 # Embed
             instructions: null
             label: null
@@ -12,10 +14,12 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 9a364b70-e9be-4c39-a519-97c6c9b86de0
+            userCondition: null
             warning: null
             width: 100
         name: Content
         uid: f0a95661-f4fd-4a63-b2c2-edcf21f1cd58
+        userCondition: null
 fields:
   6325f925-feea-4e28-b6ec-7630d3e70cc8: # Embed
     columnSuffix: null
@@ -31,7 +35,7 @@ fields:
       allowUploads: false
       allowedKinds:
         - json
-      defaultUploadLocationSource: 'volume:b4a06662-5fb9-4347-9b76-b1e291db3b88' # Cards
+      defaultUploadLocationSource: 'volume:916fd2eb-056d-486e-8483-bfff9c0a5520' # Teasers
       defaultUploadLocationSubpath: null
       localizeRelations: false
       maxRelations: 1
@@ -40,7 +44,7 @@ fields:
       restrictFiles: true
       restrictLocation: true
       restrictedDefaultUploadSubpath: null
-      restrictedLocationSource: 'volume:6569339b-0b2b-4801-9b30-7599f28e1a5b' # Media
+      restrictedLocationSource: 'volume:1e7b8ff1-3532-4375-bd33-c7a4043dc5a6' # Media
       restrictedLocationSubpath: null
       selectionCondition:
         __assoc__:
@@ -67,4 +71,4 @@ fields:
     type: craft\fields\Assets
 handle: media
 name: Media
-sortOrder: 14
+sortOrder: 6

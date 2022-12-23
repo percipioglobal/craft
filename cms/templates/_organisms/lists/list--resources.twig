@@ -1,0 +1,22 @@
+{%- set props = {
+    resources: resources ??? null,
+    utilities: utilities ??? null
+} -%}
+
+{%- minify -%}
+
+    <div class="w-full mb-8 space-y-4 {{ props.utilities -}}">
+
+        {%- for resource in props.resources -%}
+
+            {%- include '_molecules/list-items/list-item--resource' ignore missing with {
+                label: resource.label ??? null,
+                resource: resource.target.collect().one() ??? null,
+                description: resource.description ??? null,
+            } -%}
+
+        {%- endfor -%}
+
+    </div>
+
+{%- endminify -%}

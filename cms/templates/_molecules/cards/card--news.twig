@@ -1,0 +1,60 @@
+{%- extends '_molecules/cards/_card--props' -%}
+{%- import '_macros/atoms' as render -%}
+
+{#
+    ### PROPERTIES ###
+    ------------------
+
+    INHERITED FROM: `_molecules/cards/_card--props.twig`
+#}
+
+{%- set teaserImage = props.content.teaserImage.collect().one() ??? null -%}
+
+{%- set classes = {
+    '_default': 'relative',
+    'animation': 'transition-shadow ease-in-out duration-700', 
+    'color': 'bg-white',
+    'space': 'p-6 pb-9',
+    'shadow': 'shadow-xl hover:shadow-2xl'
+}-%}
+
+{%- block card -%}
+    <article class="{{- classes._default }} {{ classes.animation }} {{ classes.color }} {{ classes.space }} {{ classes.shadow }} {{ props.utilities -}}">
+
+        {%- if teaserImage -%}
+            {{- render.atom('image', 'teaser', {
+                image: teaserImage,
+                alt: teaserImage.title,
+                ratio: 'aspect-w-16 aspect-h-9',
+                placeholders: placeholders,
+            }) -}}
+        {%- endif -%}
+
+        <header class="space-y-4">
+            <h3>
+                {{- render.atom('text', 'title', {
+                    content: props.content.title ??? ''
+                }) -}}
+            </h3>
+
+            {%- if props.content.description ??? null -%}
+                <h4>
+                    {{- render.atom('text', 'description', {
+                        content: props.content.description
+                    }) -}}
+                </h4>
+            {%- endif -%}
+        </header>
+
+        {{- render.atom('link', 'card', {
+            url: props.content.url,
+            text: props.content.title,
+            ga: {
+                category: 'card',
+                action: 'click',
+                label: props.content.title ??? null,
+            },
+        }) -}}
+
+    </article>
+{%- endblock -%}

@@ -18,7 +18,7 @@
 {# Parses authors metadata #}
 {% macro authors(authors, props) %}
 
-    {% set category = props.category.collect().first() ??? null %}
+    {% set category = props.category.collect().one() ??? null %}
 
     {% apply spaceless %}
         {% for author in authors %}
@@ -97,19 +97,6 @@
 		{{- obj ? render.atom(obj.type, obj.atom, obj.options) : lut['default'] -}}
 
 	{%- endapply -%}
-{%- endmacro -%}
-
-{# Add ga tags #}
-{%- macro ga(tags) -%}
-
-    {%- apply spaceless -%}
-
-        {{ tags.category ??? null ? 'data-tag-category=' ~ tags.category : '' }}
-        {{ tags.action ??? null ? 'data-tag-action=' ~ tags.action : '' }}
-        {{ tags.label ??? null ? 'data-tag-label=' ~ tags.label : '' }}
-
-    {%- endapply -%}
-
 {%- endmacro -%}
 
 {# Parse fa icon #}

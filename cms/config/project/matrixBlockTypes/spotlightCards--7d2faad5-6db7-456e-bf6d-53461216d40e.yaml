@@ -1,0 +1,121 @@
+field: 73929e5d-0eaa-424c-8cd1-ce83b47fd733 # Page Builder
+fieldLayouts:
+  13adee58-a452-4167-beb6-6a5bb81b25da:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 7094bca5-b1bf-4bdd-8699-baa53877dc85 # Cards
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8fdd3e09-8c54-4ff0-8012-490b075ceb62
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 4f6c2efe-5cf4-46b5-82e5-79a8796af5c5 # Filter Categories
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ca4c1681-68a4-40c6-926b-e8cbcdc2dec2
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: cd0c5467-595b-44e8-b0b0-aa3cd2e4f87e # Limit
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ea529030-bedd-406d-9dff-d7b69ea4882f
+            userCondition: null
+            warning: null
+            width: 50
+        name: Content
+        uid: c6edba34-8976-4b4e-90e3-a748f6be5da3
+        userCondition: null
+fields:
+  4f6c2efe-5cf4-46b5-82e5-79a8796af5c5: # Filter Categories
+    columnSuffix: nkevrmka
+    contentColumnType: string
+    fieldGroup: null
+    handle: filter
+    instructions: null
+    name: 'Filter Categories'
+    searchable: false
+    settings:
+      allowLimit: false
+      allowMultipleSources: false
+      allowSelfRelations: false
+      branchLimit: 1
+      localizeRelations: false
+      maxRelations: null
+      minRelations: null
+      selectionLabel: null
+      showSiteMenu: true
+      source: 'group:f326369d-c220-40d9-92e9-7b7b7811d8e5' # News Categories
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Categories
+  7094bca5-b1bf-4bdd-8699-baa53877dc85: # Cards
+    columnSuffix: ymncopxu
+    contentColumnType: string
+    fieldGroup: null
+    handle: cards
+    instructions: 'Select a channel you would like to pull entries from. Spotlight cards automatically return relevant entries, if you would like to manually select entries use the Highlight card option instead.'
+    name: Cards
+    searchable: true
+    settings:
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - News
+            -
+              - value
+              - news
+            -
+              - default
+              - '1'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+  cd0c5467-595b-44e8-b0b0-aa3cd2e4f87e: # Limit
+    columnSuffix: null
+    contentColumnType: integer(10)
+    fieldGroup: null
+    handle: limit
+    instructions: 'Leave blank to show all of the cards'
+    name: Limit
+    searchable: false
+    settings:
+      decimals: 0
+      defaultValue: null
+      max: null
+      min: 0
+      prefix: null
+      previewCurrency: null
+      previewFormat: decimal
+      size: null
+      suffix: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Number
+handle: spotlightCards
+name: 'Spotlight Cards'
+sortOrder: 4

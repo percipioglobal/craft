@@ -1,0 +1,42 @@
+{%- extends '_organisms/cards/_cards--props' -%}
+
+{%- block cards -%}
+
+    {%- if props.cards -%}
+
+        {%- set classes = {
+            '_default': 'grid grid-cols1 sm:grid-cols-2 md:grid-cols-4 gap-6',
+        }-%}
+
+        {%- minify -%}
+
+            <section class="{{- classes._default }} {{ props.utilities -}}">
+
+                {%- for card in props.cards -%}
+
+                    {%- set component = null -%}
+
+                    {%- switch card.type -%}
+
+                        {%- case "news" -%}
+                            {%- set component = '_molecules/cards/card--news' -%}
+
+                        {%- default -%}
+                            {%- set component = '_molecules/cards/card--primary' -%}
+
+                    {%- endswitch -%}
+
+                    {%- if component -%}
+                        {%- include component ignore missing with {
+                            content: card
+                        } -%}
+                    {%- endif -%}
+
+                {%- endfor -%}
+
+            </section>
+
+        {%- endminify -%}
+    {%- endif -%}
+
+{%- endblock -%}

@@ -10,16 +10,16 @@ settings:
   allowSubfolders: false
   allowUploads: true
   allowedKinds: null
-  defaultUploadLocationSource: 'volume:74ec495a-3fc7-4175-8f94-3ee08302407a' # Articles
+  defaultUploadLocationSource: 'volume:75a0aa56-9929-4fe3-a1de-95cd59d9811e' # Articles
   defaultUploadLocationSubpath: null
   localizeRelations: false
-  maxRelations: null
+  maxRelations: 1
   minRelations: null
   previewMode: full
   restrictFiles: false
   restrictLocation: false
   restrictedDefaultUploadSubpath: null
-  restrictedLocationSource: 'volume:b4a06662-5fb9-4347-9b76-b1e291db3b88' # Cards
+  restrictedLocationSource: 'volume:916fd2eb-056d-486e-8483-bfff9c0a5520' # Teasers
   restrictedLocationSubpath: null
   selectionCondition:
     __assoc__:
@@ -32,13 +32,12 @@ settings:
       -
         - class
         - craft\elements\conditions\assets\AssetCondition
-  selectionLabel: null
-  showSiteMenu: false
+  selectionLabel: 'Add a placeholder image'
+  showSiteMenu: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
   source: null
-  sources:
-    - 'volume:74ec495a-3fc7-4175-8f94-3ee08302407a' # Articles
+  sources: '*'
   targetSiteId: null
   validateRelatedElements: false
   viewMode: list

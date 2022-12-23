@@ -52,7 +52,6 @@ export const init = () => {
 }
 
 const setInitialAnimations = (animateElements: NodeListOf<HTMLElement>) => {
-
     for (const block of animateElements) {
         const animationType = block.dataset.animation ?? 'fadeIn'
         const animation = ANIMATIONS[animationType]
@@ -70,7 +69,6 @@ const animateBlocks = (animateElements: NodeListOf<HTMLElement>) => {
         const boundingBox = block.getBoundingClientRect()
 
         const isVisible = boundingBox.y < (window.innerHeight * .75)
-
         if (isVisible) {
             const animation = ANIMATIONS[animationType]
 

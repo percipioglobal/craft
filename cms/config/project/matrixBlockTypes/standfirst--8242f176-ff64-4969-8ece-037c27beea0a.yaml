@@ -3,8 +3,10 @@ fieldLayouts:
   8bc4a467-312b-471c-b5d4-4c43fd30d7a5:
     tabs:
       -
+        elementCondition: null
         elements:
           -
+            elementCondition: null
             fieldUid: bcca818c-5cb3-4998-8165-95f5c9929f23 # Standfirst
             instructions: null
             label: null
@@ -12,9 +14,11 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: e0d9eb5a-9368-42c5-a0ca-741cabf76b46
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: 9ecea484-fe9d-4944-8519-dee7181de25c # Alignment
             instructions: null
             label: null
@@ -22,10 +26,12 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: b74f8f50-d238-4afa-9d47-2dc01748546a
+            userCondition: null
             warning: null
             width: 100
         name: Content
         uid: 7b2c88a7-3d29-44b8-ba35-3539654ae3e3
+        userCondition: null
 fields:
   9ecea484-fe9d-4944-8519-dee7181de25c: # Alignment
     columnSuffix: fqltiypo
@@ -69,7 +75,7 @@ fields:
     name: Standfirst
     searchable: false
     settings:
-      availableTransforms: '*'
+      availableTransforms: ''
       availableVolumes: ''
       columnType: text
       configSelectionMode: choose
@@ -90,4 +96,4 @@ fields:
     type: craft\redactor\Field
 handle: standfirst
 name: Standfirst
-sortOrder: 2
+sortOrder: 11

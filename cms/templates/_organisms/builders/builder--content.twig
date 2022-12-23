@@ -1,20 +1,9 @@
 {%- do craft.eagerBeaver.eagerLoadElements(entry,
     [
         'contentBuilder',
-        'contentBuilder.contentCta',
-        'contentBuilder.contentCta:image',
-        'contentBuilder.highlightCards:cards',
-        'contentBuilder.highlightCards:cards.cardImage',
+        'pageBuilder.highlightCards:cards',
+        'pageBuilder.highlightCards:cards.teaserImage',
         'contentBuilder.galleryImages:images',
-        'contentBuilder.gridContent:gridItems',
-        'contentBuilder.gridContentAnimation:gridItems',
-        'contentBuilder.gridContentAnimation:gridItems.image',
-        'contentBuilder.gridContentImageHalf:gridItems',
-        'contentBuilder.gridContentImageHalf:gridItems.image',
-        'contentBuilder.gridContentImageHalfBackground:gridItems',
-        'contentBuilder.gridContentImageHalfBackground:gridItems.image',
-        'contentBuilder.gridContentImageThird:gridItems',
-        'contentBuilder.gridContentImageThird:gridItems.image',
         'contentBuilder.media',
         'contentBuilder.media:embed',
         'contentBuilder.singleImage:image',
@@ -23,10 +12,7 @@
 
 {%- minify -%}
 
-    {%- for block in content.contentBuilder -%}
-
-        {%- set prev = block.getPrev().type ??? '' -%}
-        {%- set next = block.getNext().type ??? '' -%}
+    {%- for block in content.contentBuilder.collect().all() -%}
 
         {%- switch block.type -%}
 
@@ -34,121 +20,76 @@
 
                 {%- include '_molecules/content/content--article' ignore missing with {
                     content: block.article,
-                    utilities: next ? '' : 'mb-10 lg:mb-20'
+                    utilities: 'mb-10 lg:mb-20'
                 } -%}
 
             {%- case 'blockQuote' -%}
 
                 {%- include '_molecules/quotes/quote--block' ignore missing with {
                     content: block,
-                    utilities: next ? '' : 'mb-10 lg:mb-20'
+                    utilities: 'mb-10 lg:mb-20'
                 } -%}
 
-            {%- case 'code' -%}
+            {%- case "form" -%}
 
-                {%- include '_molecules/content/content--code' ignore missing with {
-                    content: {
-                        code: block.code ??? '',
-                        language: block.codeLanguage ??? '',
-                        filename: block.filename ??? ''
-                    },
-                    utilities: (prev == 'code' ? 'mt-5 md:mt-10' : '') ~ ' ' ~ (next ? '' : 'mb-10 lg:mb-20')
-                } -%}
-
-            {%- case 'contentCta' -%}
-
-                {%- set background = swatch(block.background) -%}
-
-                {# check which cta should be loaded #}
-                {%- set component = block.image.count() == 0 ? '_organisms/ctas/cta--text' : '_organisms/ctas/cta--image' -%}
-
-                {%- include component ignore missing with {
-                    heading: block.heading ??? '',
-                    content: block.body ??? '',
-                    button: block.target ??? null,
-                    background: background,
-                    image: block.image ??? null
+                {%- include '_organisms/forms/form--primary' ignore missing with {
+                    form: block.form.one().handle ??? null,
                 } -%}
 
             {%- case 'galleryImages' -%}
 
                 {%- include '_organisms/grids/grid--gallery' ignore missing with {
                     images: block.images,
-                    utilities: next ? '' : 'mb-10 lg:mb-20'
-                } -%}
-
-            {%- case 'gridContent' -%}
-
-                {%- include '_organisms/grids/grid--content' ignore missing with {
-                    items: block.gridItems ??? null,
-                    callout: block.callout ??? '',
-                    utilities: next ? '' : 'mb-10 lg:mb-20'
-                } -%}
-
-            {%- case 'gridContentImageHalfBackground' -%}
-
-                {%- include '_organisms/grids/grid--content-image-half-background' ignore missing with {
-                    items: block,
-                    utilities: next ? '' : 'mb-10 lg:mb-20'
-                } -%}
-
-            {%- case 'gridContentImageHalf' -%}
-
-                {%- include '_organisms/grids/grid--content-image-half' ignore missing with {
-                    items: block,
-                    utilities: next ? '' : 'mb-10 lg:mb-20'
-                } -%}
-
-            {%- case 'gridContentImageThird' -%}
-
-                {%- include '_organisms/grids/grid--content-image-third' ignore missing with {
-                    items: block,
-                    utilities: next ? '' : 'mb-10 lg:mb-20'
-                } -%}
-
-            {%- case 'gridContentInfo' -%}
-
-                {%- include '_organisms/grids/grid--content-info' ignore missing with {
-                    items: block.gridItems,
-                    image: block.image,
-                    utilities: next ? '' : 'mb-10 lg:mb-20'
+                    utilities: 'mb-10 lg:mb-20'
                 } -%}
 
             {%- case 'highlightCards' -%}
 
-                {%- set component = block.cards.collect().first().section.handle == 'blog' ? '_organisms/grids/grid--blogs' : '_organisms/grids/grid--projects' -%}
-
-                {%- include component ignore missing with {
-                    cards: block.cards,
-                    utilities: next ? '' : 'mb-10 lg:mb-20'
+                {%- include '_organisms/cards/cards--highlight' ignore missing with {
+                    cards: block.cards.collect().all() ??? null,
+                    utilities: 'mb-10 lg:mb-20'
                 } -%}
 
             {%- case "media" -%}
 
                 {%- include '_molecules/media/media--embed' ignore missing with {
                     content: block,
-                    utilities: next ? '' : 'mb-10 lg:mb-20'
+                    utilities: 'mb-10 lg:mb-20'
+                } -%}
+
+            {%- case "resourceList" -%}
+                {%- include '_organisms/lists/list--resources' ignore missing with {
+                    resources: block.resources,
                 } -%}
 
             {%- case 'sectionHeader' -%}
 
                 {%- include '_molecules/content/content--section-header' ignore missing with {
                     content: block,
-                    utilities: next ? '' : 'mb-10 lg:mb-20'
+                    utilities: 'mb-10 lg:mb-20'
                 } -%}
 
             {%- case 'singleImage' -%}
 
                 {%- include '_molecules/images/image--article' ignore missing with {
-                    image: block.image,
-                    utilities: next ? '' : 'mb-10 lg:mb-20'
+                    image: block.image.collect().one(),
+                    utilities: 'mb-10 lg:mb-20'
+                } -%}
+
+            {%- case "spotlightCards" -%}
+
+                {%- include '_organisms/cards/cards--spotlight' ignore missing with {
+                    cards: block.cards,
+                    category: block.filter ??? null,
+                    limit: block.limit ??? null,
+                    utilities: 'mb-10 lg:mb-20'
                 } -%}
 
             {%- case 'standfirst' -%}
 
                 {%- include '_molecules/content/content--standfirst' ignore missing with {
                     content: block,
-                    utilities: next ? '' : 'mb-10 lg:mb-20'
+                    utilities: 'mb-10 lg:mb-20'
                 } -%}
 
         {%- endswitch -%}

@@ -15,12 +15,17 @@
     "vue/html-indent": [
       "error",
       4
+    ],
+    "@typescript-eslint/ban-ts-comment": "off",
+    "@typescript-eslint/no-explicit-any": [
+      "off"
     ]
   },
   "env": {
     "browser": true,
     "amd": true,
-    "node": true
+    "node": true,
+    "vue/setup-compiler-macros": true
   },
   "plugins": [
     "@typescript-eslint"

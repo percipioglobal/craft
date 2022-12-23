@@ -1,0 +1,33 @@
+{%- set props = {
+    cards: cards ??? null,
+    category: category ??? null,
+    limit: limit ??? null,
+    utilities: utilities ??? ''
+} -%}
+
+{%- set component = null -%}
+
+{%- if props.cards -%}
+
+    {%- minify -%}
+        <div class="w-full pb-8 {{ props.utilities -}}">
+
+            {%- switch props.cards -%}
+
+                {%- case "news" -%}
+                    {%- set component = '_organisms/cards/cards--news' -%}
+
+            {%- endswitch -%}
+
+            {%- if component -%}
+                {%- include component ignore missing with {
+                    cards: null,
+                    limit: props.limit,
+                    category: props.category,
+                } -%}
+            {%- endif -%}
+
+        </div>
+    {%- endminify -%}
+
+{%- endif -%}
