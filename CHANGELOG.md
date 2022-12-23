@@ -1,5 +1,15 @@
 # percipioglobal/craft Change Log
 
+## 4.1.0 - 23/12/2022
+### Added
+- Vue 3 script setup lang
+- Pinia store
+
+### Changed
+- Updated templates
+- Updated vite from 2 to 3
+- Updated content and page builder
+
 ## 1.5.0 - 19/10/2021
 ### Added
 - Added tailwind ratio with helper classes
