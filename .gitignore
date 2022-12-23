@@ -12,7 +12,8 @@
 # This file should be placed in your Craft 3 CMS project root directory
 
 # CRAFT ENVIRONMENT
-.env*
+/cms/.env*
+/scripts/.env*
 
 # COMPOSER
 */vendor/*
