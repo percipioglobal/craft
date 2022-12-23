@@ -1,11 +1,23 @@
 // importing and setting up Font Awesome
-import { dom, library } from '@fortawesome/fontawesome-svg-core';
+import { dom, library } from '@fortawesome/fontawesome-svg-core'
 
 import {
-    faAngleRight as farAngleRight,
-    faClipboard as farClipboard,
-    faHashtag as farHashtag
-} from '@fortawesome/free-regular-svg-icons';
+    faCircleDown as farCircleDown,
+    faEnvelope as farEnvelope,
+    faFileArchive as farFileArchive,
+    faFileExcel as farFileExcel,
+    faFilePdf as farFilePdf,
+    faFilePowerpoint as farFilePowerPoint,
+    faFileWord as farFileWord,
+    faFileZipper as farFileZipper
+} from '@fortawesome/free-regular-svg-icons'
+
+import {
+    faArrowUpRightFromSquare as fasArrowUpRightFromSquare,
+    faHashtag as fasHashtag,
+    faLink as fasLink,
+    faPrint as fasPrint
+} from '@fortawesome/free-solid-svg-icons'
 
 import {
     faFacebookF as fabFacebookF,
@@ -14,8 +26,9 @@ import {
     faLinkedinIn as fabLinkedinIn,
     faTwitter as fabTwitter,
     faVimeoV as fabVimeoV,
+    faWikipediaW as fabWikipediaW,
     faYoutube as fabYoutube,
-} from '@fortawesome/free-brands-svg-icons';
+} from '@fortawesome/free-brands-svg-icons'
 
 // load font-awesome libraries
 library.add(
@@ -25,15 +38,24 @@ library.add(
     fabLinkedinIn,
     fabTwitter,
     fabVimeoV,
+    fabWikipediaW,
     fabYoutube,
-    farAngleRight,
-    farClipboard,
-    farHashtag
-);
+    farCircleDown,
+    farEnvelope,
+    farFileArchive,
+    farFileExcel,
+    farFilePdf,
+    farFilePowerPoint,
+    farFileWord,
+    farFileZipper,
+    fasArrowUpRightFromSquare,
+    fasHashtag,
+    fasLink,
+    fasPrint
+)
 
 // convert i tags to SVG
-// dom.watch({
-//     autoReplaceSvgRoot: document,
-//     observeMutationsRoot: document.body
-// });
-dom.watch()
+dom.watch({
+    autoReplaceSvgRoot: document,
+    observeMutationsRoot: document.body
+})
