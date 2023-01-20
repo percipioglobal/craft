@@ -42,9 +42,8 @@ return [
             'throwExceptions' => App::env('DEV_MODE'),
         ],
         'queue' => [
-            'class' => yii\queue\redis\Queue::class,
-            'redis' => 'redis',
-            'channel' => 'queue',
+            'class' => craft\queue\Queue::class,
+            'ttr' => 10 * 60,
         ],
     ],
 ];
