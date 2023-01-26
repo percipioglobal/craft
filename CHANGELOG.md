@@ -1,9 +1,15 @@
 # percipioglobal/craft Change Log
 
+## 4.2.0 - 26/01/2023
+### Changed
+- Semantics for accessiblity
+- Google Analytics 4 updates
+
 ## 4.1.0 - 23/12/2022
 ### Added
 - Vue 3 script setup lang
 - Pinia store
+- Template cleanups
 
 ### Changed
 - Updated templates
