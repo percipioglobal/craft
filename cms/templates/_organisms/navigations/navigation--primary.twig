@@ -36,8 +36,9 @@
                             text: item.title ??? null,
                             target: '_self',
                             ga: {
-                                category:'navaction',
-                                action:'click',
+                                category: 'navigation',
+                                action: 'click',
+                                type: 'primary',
                                 label: item.title ??? null,
                             },
                             active: (item.target.one().url ??? '') in craft.app.request.absoluteUrl,

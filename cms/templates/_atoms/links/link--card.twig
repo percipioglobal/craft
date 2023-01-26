@@ -1,15 +1,10 @@
 {%- extends '_atoms/links/_link--props' -%}
-{%- import '_macros/functions' as parse -%}
 
 {#
     ### PROPERTIES ###
     ------------------
 
     INHERITED FROM: `_atoms/links/link--props.twig`
-
-    ### FUNCTIONS ###
-    -----------------
-    ga: parse google analytics attributes
 #}
 
 {%- block link -%}
@@ -20,6 +15,7 @@
             data-tag-category="{{- props.ga.category ??? '' -}}"
             data-tag-action="{{- props.ga.action ??? '' -}}"
             data-tag-label="{{- props.ga.label ??? '' -}}"
+            data-tag-type="{{- props.ga.type ??? '' -}}"
             title="{{- props.text -}}"
             aria-label="{{- props.text -}}"
             class="absolute inset-0 z-1"

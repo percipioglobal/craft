@@ -1,15 +1,10 @@
 {%- extends '_atoms/links/_link--props' -%}
-{%- import '_macros/functions' as parse -%}
 
 {#
     ### PROPERTIES ###
     ------------------
 
     INHERITED FROM: `_atoms/links/link--props.twig`
-
-    ### FUNCTIONS ###
-    -----------------
-    ga: parse google analytics attributes
 #}
 
 {%- block link -%}
@@ -23,12 +18,15 @@
 
         <a
             {{ props.url ? 'href=' ~ props.url : '' }}
-            {{ parse.ga(props.ga) }}
+            data-tag-category="{{- props.ga.category ??? '' -}}"
+            data-tag-action="{{- props.ga.action ??? '' -}}"
+            data-tag-label="{{- props.ga.label ??? '' -}}"
+            data-tag-type="{{- props.ga.type ??? '' -}}"
             aria-label="{{- props.text -}}"
             class="{{ classes._default }} {{ classes.font }} {{ props.utilities }}"
         >
             <span class="sr-only">
-                Go to:
+                {{- props.target == '_self' ? 'Go to: ' : 'Go to external page: ' -}}
             </span>
 
             <span>

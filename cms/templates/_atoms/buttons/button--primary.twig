@@ -1,6 +1,5 @@
 {%- extends '_atoms/buttons/_button--props' -%}
 {%- import '_macros/atoms' as render -%}
-{%- import '_macros/functions' as parse -%}
 
 {#
     ### PROPERTIES ###
@@ -23,6 +22,7 @@
             data-tag-category="{{- props.ga.category ??? '' -}}"
             data-tag-action="{{- props.ga.action ??? '' -}}"
             data-tag-label="{{- props.ga.label ??? '' -}}"
+            data-tag-type="{{- props.ga.type ??? '' -}}"
             {{ props.target ? 'target=' ~ props.target : '' }}
             aria-label="{{- props.text -}}"
             class="{{ classes._default }} {{ classes.font }} {{ props.utilities }}"
