@@ -31,27 +31,30 @@
         {%- endif -%}
 
         <header class="space-y-4">
-            <h3>
+            <h1>
                 {{- render.atom('text', 'title', {
                     content: props.content.title ??? ''
                 }) -}}
-            </h3>
+            </h1>
+        </header>
 
+        <main>
             {%- if props.content.description ??? null -%}
-                <h4>
+                <h2>
                     {{- render.atom('text', 'description', {
                         content: props.content.description
                     }) -}}
-                </h4>
+                </h2>
             {%- endif -%}
-        </header>
+        </main>
 
         {{- render.atom('link', 'card', {
             url: props.content.url,
             text: props.content.title,
             ga: {
-                category: 'card',
+                category: 'navigation',
                 action: 'click',
+                type: 'card',
                 label: props.content.title ??? null,
             },
         }) -}}

@@ -12,7 +12,7 @@
 
     ## ATOMS
 
-    text--h2: `_atoms/texts/text--h2.twig`
+    text--title: `_atoms/texts/text--title.twig`
 #}
 
 {%- set classes = {
@@ -31,9 +31,9 @@
 
         <div class="max-w-[80ch] my-5 md:my-10 {{ props.utilities -}}">
             <div class="animate" data-animation="slideBottomToTop">
-                <h2 class="{{- classes._default }} {{ classes.color}} {{ classes.print }}">
+                <h1 class="{{- classes._default }} {{ classes.color}} {{ classes.print }}">
                     {{- render.atom('text', 'title', { content: props.heading }) -}}
-                </h2>
+                </h1>
             </div>
         </div>
 
