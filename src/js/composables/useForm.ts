@@ -50,18 +50,20 @@ export const useConditionalCheck = (formValues: any, conditions: any) => {
 }
 
 const fieldEqualCheck = (formFieldValue: any, conditionValue: string, displayName: string) => {
-    let value: string|number = conditionValue
+    let value: string | number = conditionValue
     if (displayName === 'Agree') {
-        value = conditionValue.length > 0 ? 1 : 0
+        value = formFieldValue.length > 0 ? 1 : 0
+        return value > 0
     }
 
     return formFieldValue == value
 }
 
 const fieldNotEqualCheck = (formFieldValue: any, conditionValue: string, displayName: string) => {
-    let value: string|number = conditionValue
+    let value: string | number = conditionValue
     if (displayName === 'Agree') {
-        value = conditionValue.length > 0 ? 1 : 0
+        value = formFieldValue.length > 0 ? 1 : 0
+        return value == 0
     }
 
     return formFieldValue != value
